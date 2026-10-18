@@ -1,0 +1,112 @@
+﻿id,priority,value,unit,status,source_grade,source,uncertainty,blocks_stage,action
+metadata.version,P1,"""v0.4""",N/A_or_unknown,metadata_or_design_declaration,N/A,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+metadata.architecture,P1,"""independent_twin_rear_motor_drives""",N/A_or_unknown,metadata_or_design_declaration,N/A,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+metadata.status,P1,"""mixed_literature_references_and_conceptual_design_not_oem_vehicle""",N/A_or_unknown,metadata_or_design_declaration,N/A,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+metadata.study_scope,P1,"""single_rear_side_motor_reducer_inboard_disc_thermal_model""",N/A_or_unknown,metadata_or_design_declaration,N/A,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+metadata.literature_reference,P1,"""docs/REAR_DRIVE_V04_SOURCED_BASELINE.md""",N/A_or_unknown,metadata_or_design_declaration,N/A,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+vehicle.reference_body,P1,"""VW_ID3_class_reference_not_actual_modified_ID3""",N/A_or_unknown,metadata_or_design_declaration,N/A,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+vehicle.mass_kg,P1,1800.0,kg,concept_or_unverified,S3,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+vehicle.wheelbase_m,P1,2.765,m,VW_MY21_reference_only,S1,VW MY21 PDF p19 dimension L101; visually verified,see M0 report; no measured concept data,review,reference or screening only
+vehicle.cg_height_m,P1,0.55,m,concept_or_unverified,S3,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+vehicle.static_rear_axle_fraction,P1,0.55,1,concept_or_unverified,S3,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+vehicle.rear_track_width_m,P0,null,m,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+vehicle.tire_reference,P1,"""215_55_R18""",N/A_or_unknown,OEM_reference_only,S1,VW MY23 PDF p5,see M0 report; no measured concept data,review,reference or screening only
+vehicle.tire_nominal_unloaded_radius_m,P1,0.34685,m,derived_geometry,S3,215/55R18 nominal dimensions,see M0 report; no measured concept data,review,reference or screening only
+vehicle.wheel_effective_rolling_radius_m,P1,0.33,m,concept_or_unverified,S3,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+vehicle.maximum_vehicle_speed_kmh_target,P1,160.0,km/h,design_target_based_on_OEM,S3,VW MY23 PDF p9,see M0 report; no measured concept data,review,reference or screening only
+vehicle.drag_coefficient,P1,0.27,1,UNVERIFIED_origin_404_search_index_only,S3,VW technical-data-6249; retain screening assumption,see M0 report; no measured concept data,review,reference or screening only
+vehicle.frontal_area_m2,P1,2.3,m2,concept_or_unverified,S3,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+vehicle.rolling_resistance_coefficient,P1,0.012,1,concept_or_unverified,S3,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+vehicle.rotational_inertia_factor,P1,1.0,1,concept_or_unverified,S3,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+vehicle.gravity_m_s2,P1,9.81,m/s2,concept_or_unverified,S3,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+vehicle.tire_road_mu,P1,0.8,1,concept_or_unverified,S3,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+drive.driven_axle,P1,"""rear""",N/A_or_unknown,metadata_or_design_declaration,N/A,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+drive.independent_motor_count,P1,2,1,concept_or_unverified,S3,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+drive.differential_present,P1,false,1,metadata_or_design_declaration,N/A,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+drive.rear_motor_per_side.hardware_reference,P1,"""2010_Toyota_Prius_MG2_ORNL_test_data_not_the_actual_installed_product""",N/A_or_unknown,metadata_or_design_declaration,N/A,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+drive.rear_motor_per_side.motor_type,P1,"""permanent_magnet_synchronous""",N/A_or_unknown,metadata_or_design_declaration,N/A,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+drive.rear_motor_per_side.peak_mechanical_power_kw,P1,60.0,kW,reference_motor_only,S1,"Toyota launch; ORNL/TM-2010/253 Tables 2.1,2.7; Sec3.3",see M0 report; no measured concept data,review,reference or screening only
+drive.rear_motor_per_side.physical_peak_torque_nm,P1,207.0,N m,reference_motor_only,S1,"Toyota launch; ORNL/TM-2010/253 Tables 2.1,2.7; Sec3.3",see M0 report; no measured concept data,review,reference or screening only
+drive.rear_motor_per_side.max_mechanical_speed_rpm,P1,13500,rpm,reference_motor_only,S1,"Toyota launch; ORNL/TM-2010/253 Tables 2.1,2.7; Sec3.3",see M0 report; no measured concept data,review,reference or screening only
+drive.rear_motor_per_side.configured_traction_torque_limit_nm,P1,130.0,N m,concept_or_unverified,S3,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+drive.rear_motor_per_side.configured_regen_torque_limit_nm,P0,null,N m,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+drive.rear_motor_per_side.continuous_mechanical_power_kw,P0,null,kW,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+drive.rear_motor_per_side.torque_speed_map_file,P0,null,N/A_or_unknown,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+drive.rear_motor_per_side.epa_emot_map_file,P1,"""data/raw/m0/epa_mg2/7- emachine_2010_Toyota_Prius_60kW_650V_MG2_EMOT.m""",N/A_or_unknown,data_downloaded_not_validated_for_concept,S1,EPA package 2023-04,see M0 report; no measured concept data,review,reference or screening only
+drive.rear_motor_per_side.ornl_motor_only_efficiency_map_file,P1,"""data/raw/m0/epa_mg2/3c- 2010 Toyota Prius 60kW 650V MG2 EMOT - ORNL Test Data File.xlsx""",N/A_or_unknown,data_downloaded_not_validated_for_concept,S1,EPA package 2023-04,see M0 report; no measured concept data,review,reference or screening only
+drive.rear_motor_per_side.motor_inverter_efficiency_combined,P1,true,1,metadata_or_design_declaration,N/A,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+drive.rear_motor_per_side.motor_loss_map_file,P0,null,N/A_or_unknown,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+drive.rear_motor_per_side.inverter_loss_map_file,P0,null,N/A_or_unknown,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+drive.rear_motor_per_side.winding_temp_limit_c,P0,null,degC,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+drive.rear_motor_per_side.magnet_temp_limit_c,P0,null,degC,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+drive.rear_motor_per_side.coolant_inlet_temp_c,P0,null,degC,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+drive.rear_motor_per_side.coolant_mass_flow_kg_s,P0,null,kg/s,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+drive.rear_motor_per_side.stator_outer_diameter_m,P1,0.264,m,reference_motor_only,S1,"Toyota launch; ORNL/TM-2010/253 Tables 2.1,2.7; Sec3.3",see M0 report; no measured concept data,review,reference or screening only
+drive.rear_motor_per_side.motor_housing_dimensions_m,P0,null,m,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+drive.rear_gearbox_per_side.reduction_motor_to_wheel,P1,9.0,1,concept_or_unverified,S3,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+drive.rear_gearbox_per_side.stages,P1,2,1,concept_or_unverified,S3,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+drive.rear_gearbox_per_side.peak_drive_efficiency_screening,P1,0.96,1,concept_or_unverified,S3,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+drive.rear_gearbox_per_side.peak_backdrive_efficiency_screening,P1,0.96,1,concept_or_unverified,S3,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+drive.rear_gearbox_per_side.drive_loss_map_file,P0,null,N/A_or_unknown,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+drive.rear_gearbox_per_side.backdrive_loss_map_file,P0,null,N/A_or_unknown,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+drive.rear_gearbox_per_side.output_shaft_diameter_m,P0,null,m,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+drive.rear_gearbox_per_side.gearbox_housing_dimensions_m,P0,null,m,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+drive.rear_gearbox_per_side.gearbox_oil_mass_kg,P0,null,kg,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+drive.rear_gearbox_per_side.oil_temperature_limit_c,P0,null,degC,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+drive.aggregate_motor_peak_power_kw,P1,120.0,kW,concept_or_unverified,S3,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+drive.total_battery_regen_acceptance_kw,P0,null,kW,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+drive.battery_soc,P0,null,N/A_or_unknown,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+drive.battery_regen_limit_temperature_curve,P0,null,N/A_or_unknown,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+drive.inverter_limit_each_kw,P0,null,kW,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+brakes.architecture,P1,"""two_independent_inboard_friction_discs_at_rear_gearbox_outputs""",N/A_or_unknown,metadata_or_design_declaration,N/A,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+brakes.brake_detailed_model_scope,P1,"""one_rear_disc""",N/A_or_unknown,metadata_or_design_declaration,N/A,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+brakes.rear_rotor_count,P1,2,1,concept_or_unverified,S3,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+brakes.front_conventional_service_brakes_retained,P1,true,1,metadata_or_design_declaration,N/A,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+brakes.rotor_speed_to_own_wheel_speed_ratio,P1,1.0,1,concept_or_unverified,S3,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+brakes.rear_rotor_per_side.geometric_reference,P1,"""Brembo_09_9908_21_REAR_280x22_ventilated""",N/A_or_unknown,metadata_or_design_declaration,N/A,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+brakes.rear_rotor_per_side.outside_diameter_m,P1,0.28,m,catalogue_geometry_only,S1,Brembo 09.9908.21,see M0 report; no measured concept data,review,reference or screening only
+brakes.rear_rotor_per_side.thickness_m,P1,0.022,m,catalogue_geometry_only,S1,Brembo 09.9908.21,see M0 report; no measured concept data,review,reference or screening only
+brakes.rear_rotor_per_side.disc_overall_height_m,P1,0.042,m,catalogue_geometry_only,S1,Brembo 09.9908.21,see M0 report; no measured concept data,review,reference or screening only
+brakes.rear_rotor_per_side.nominal_center_bore_m,P1,0.068,m,catalogue_geometry_only,S1,Brembo 09.9908.21,see M0 report; no measured concept data,review,reference or screening only
+brakes.rear_rotor_per_side.inner_ring_diameter_m,P0,null,m,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+brakes.rear_rotor_per_side.mass_kg,P0,null,kg,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+brakes.rear_rotor_per_side.effective_friction_radius_m,P0,null,m,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+brakes.rear_rotor_per_side.mean_friction_coefficient_screening,P1,0.4,1,concept_or_unverified,S3,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+brakes.rear_rotor_per_side.pad_disc_heat_partition,P0,null,N/A_or_unknown,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+brakes.rear_rotor_per_side.brake_torque_capacity_nm,P0,null,N m,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+brakes.rear_rotor_per_side.caliper_clamping_limit_N,P0,null,N,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+brakes.rear_rotor_per_side.disc_to_gearbox_housing_min_clearance_m,P0,null,m,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+brakes.rear_rotor_per_side.disc_to_heatshield_clearance_m,P0,null,m,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+brakes.rear_rotor_per_side.disc_max_temperature_c,P0,null,degC,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+brakes.rear_rotor_per_side.caliper_max_temperature_c,P0,null,degC,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+brakes.rear_rotor_per_side.inboard_custom_mount_requires_new_strength_and_thermal_validation,P1,true,1,metadata_or_design_declaration,N/A,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+brakes.axle_brake_allocation,P1,"""dynamic_axle_load_based_reference_not_commercial_EBD""",N/A_or_unknown,metadata_or_design_declaration,N/A,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+brakes.rear_regen_and_friction_priority,P1,"""limited_by_rear_adhesion_and_battery_acceptance""",N/A_or_unknown,metadata_or_design_declaration,N/A,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+thermal.ambient_temperature_c,P1,25.0,degC,concept_or_unverified,S3,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+thermal.cold_start_initial_temperature_c,P1,25.0,degC,concept_or_unverified,S3,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+thermal.initial_preheated_motor_temperature_c,P0,null,degC,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+thermal.rotor_emissivity,P0,null,N/A_or_unknown,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+thermal.shield_emissivity,P0,null,N/A_or_unknown,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+thermal.contact_resistance_m2K_W,P0,null,m2 K/W,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+thermal.gearbox_cooling_boundary,P0,null,N/A_or_unknown,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+cases.nominal_stop_initial_speed_kmh,P1,100.0,km/h,concept_or_unverified,S3,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+cases.nominal_stop_deceleration_g,P1,0.6,g units,concept_or_unverified,S3,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+cases.stop_deceleration_g_scan,P1,"[0.3, 0.6, 0.8]",1,concept_or_unverified,S3,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+cases.total_battery_regen_acceptance_kw_screening,P1,"[0, 30, 60]",1,concept_or_unverified,S3,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+cases.repeated_stop_count,P0,null,N/A_or_unknown,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+cases.repeated_stop_interval_s,P0,null,s,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+cases.high_load_preheat_trace_file,P0,null,N/A_or_unknown,MISSING,unknown,not supplied,see M0 report; no measured concept data,M1_or_later,obtain evidence
+optimization.brake_to_shield_gap_m_bounds,P1,"[0.003, 0.01]",m,concept_or_unverified,S3,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+optimization.shield_thickness_m_bounds,P1,"[0.0005, 0.002]",m,concept_or_unverified,S3,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+optimization.guide_exit_angle_deg_bounds,P1,"[15, 60]",deg,concept_or_unverified,S3,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+optimization.guide_exit_area_ratio_bounds,P1,"[0.2, 0.8]",1,concept_or_unverified,S3,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+optimization.no_claim_of_compatibility_without_cad_check,P1,true,1,metadata_or_design_declaration,N/A,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+provenance.vw_body_source,P1,"""https://www.volkswagen.ie/idhub/content/dam/onehub_pkw/importers/ie/models/product-guides/my23/ID3_MY23.pdf""",N/A_or_unknown,metadata_or_design_declaration,N/A,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+provenance.vw_gearbox_source,P1,"""https://www.volkswagen-group.com/en/press-releases/in-brief-the-all-rounder-the-1-speed-gearbox-17030""",N/A_or_unknown,metadata_or_design_declaration,N/A,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+provenance.toyota_motor_source,P1,"""https://global.toyota/en/detail/308252""",N/A_or_unknown,metadata_or_design_declaration,N/A,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+provenance.ornl_motor_test_report,P1,"""https://info.ornl.gov/sites/publications/files/Pub26762.pdf""",N/A_or_unknown,metadata_or_design_declaration,N/A,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+provenance.vw_body_geometry_source,P1,"""https://www.volkswagen-newsroom.com/en/the-new-id3-6240/technical-data-6249""",N/A_or_unknown,metadata_or_design_declaration,N/A,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+provenance.vw_wheelbase_source,P1,"""https://www.volkswagen.ie/idhub/content/dam/onehub_pkw/importers/ie/models/product-guides/2021/my21_master/ID3_MY21.pdf""",N/A_or_unknown,metadata_or_design_declaration,N/A,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+provenance.epa_emot_map_catalogue,P1,"""https://www.epa.gov/vehicle-and-fuel-emissions-testing/combining-data-complete-emotor-alpha-maps""",N/A_or_unknown,metadata_or_design_declaration,N/A,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+provenance.brembo_disc_source,P1,"""https://www.bremboparts.com/europe/en/view-document/catalogue/disc/09-9908-21""",N/A_or_unknown,metadata_or_design_declaration,N/A,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only
+provenance.actual_test_or_oem_assembly,P1,false,1,metadata_or_design_declaration,N/A,V0.4 configuration; see report,see M0 report; no measured concept data,review,reference or screening only

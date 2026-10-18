@@ -1,0 +1,76 @@
+[
+  {
+    "file": "epa_catalogue.html",
+    "requested_url": "https://www.epa.gov/vehicle-and-fuel-emissions-testing/combining-data-complete-emotor-alpha-maps",
+    "final_url": "https://www.epa.gov/vehicle-and-fuel-emissions-testing/combining-data-complete-emotor-alpha-maps",
+    "retrieved_utc": "2026-10-18T09:37:29.024782+00:00",
+    "bytes": 59735,
+    "sha256": "68c9e0bc54b22b02cd1225e9cc701725004c80ea4b0fda58114667b25ad15b21",
+    "content_type": "text/html; charset=UTF-8",
+    "status": "downloaded"
+  },
+  {
+    "file": "epa_2010_prius_mg2_emot_2023-04-06.zip",
+    "requested_url": "https://www.epa.gov/system/files/other-files/2023-04/2010-Toyota-Prius-60kW-650V-MG2-EMOT-ALPHA-Map-Package-Dated-04-06-23.zip",
+    "final_url": "https://www.epa.gov/system/files/other-files/2023-04/2010-Toyota-Prius-60kW-650V-MG2-EMOT-ALPHA-Map-Package-Dated-04-06-23.zip",
+    "retrieved_utc": "2026-10-18T09:37:42.122739+00:00",
+    "bytes": 32352137,
+    "sha256": "9351bd93e82a58d6c2d7fd5220f4913b0966adb9e4922f34f98c0b4f957f39cd",
+    "status": "downloaded"
+  },
+  {
+    "file": "ornl_2010_prius_pub26762.pdf",
+    "requested_url": "https://info.ornl.gov/sites/publications/files/Pub26762.pdf",
+    "final_url": "https://info.ornl.gov/sites/publications/files/Pub26762.pdf",
+    "retrieved_utc": "2026-10-18T09:37:56.970995+00:00",
+    "bytes": 7483962,
+    "sha256": "4d989e77e3d9bcbcd417e630e0a10bac762a53e8db3644978bb096ecea01b8f8",
+    "content_type": "application/pdf",
+    "status": "downloaded"
+  },
+  {
+    "file": "toyota_2009_launch.html",
+    "requested_url": "https://global.toyota/en/detail/308252",
+    "final_url": "https://global.toyota/en/detail/308252",
+    "retrieved_utc": "2026-10-18T09:37:58.158260+00:00",
+    "bytes": 38296,
+    "sha256": "18d180d103ee33a0d76a79fc269c24afb460f9d65ca4c460ec62f78ef7714990",
+    "content_type": "text/html;charset=UTF-8",
+    "status": "downloaded"
+  },
+  {
+    "file": "vw_id3_my23.pdf",
+    "requested_url": "https://www.volkswagen.ie/idhub/content/dam/onehub_pkw/importers/ie/models/product-guides/my23/ID3_MY23.pdf",
+    "final_url": "https://www.volkswagen.ie/idhub/content/dam/onehub_pkw/importers/ie/models/product-guides/my23/ID3_MY23.pdf",
+    "retrieved_utc": "2026-10-18T09:38:03.266260+00:00",
+    "bytes": 3463862,
+    "sha256": "f6ac43de421635b51323a27263dad457249c4776ac6bd4b46dc5b5f967706929",
+    "content_type": "application/pdf",
+    "status": "downloaded"
+  },
+  {
+    "file": "brembo_09_9908_21.html",
+    "requested_url": "https://www.bremboparts.com/europe/en/view-document/catalogue/disc/09-9908-21",
+    "final_url": "https://www.bremboparts.com/europe/en/view-document/catalogue/disc/09-9908-21",
+    "retrieved_utc": "2026-10-18T09:38:05.154857+00:00",
+    "bytes": 22831,
+    "sha256": "ae06b8758c2536d3cf244a782b199cdd6ce6df87ea19c72cb1fa796494423acf",
+    "content_type": "text/html; charset=utf-8",
+    "status": "downloaded"
+  },
+  {
+    "file": "vw_id3_my21.pdf",
+    "requested_url": "https://www.volkswagen.ie/idhub/content/dam/onehub_pkw/importers/ie/models/product-guides/2021/my21_master/ID3_MY21.pdf",
+    "final_url": "https://www.volkswagen.ie/idhub/content/dam/onehub_pkw/importers/ie/models/product-guides/2021/my21_master/ID3_MY21.pdf",
+    "retrieved_utc": "2026-10-18T09:44:42.602801+00:00",
+    "bytes": 13244255,
+    "sha256": "ead7dd7135dc35227cdadf8ae396b87deb3a2b70bfe480131d5947eea6227744",
+    "status": "downloaded"
+  },
+  {
+    "file": "vw_id3_2020_technical.html",
+    "requested_url": "https://www.volkswagen-newsroom.com/en/the-new-id3-6240/technical-data-6249",
+    "status": "FAILED",
+    "error": "HTTP 404 from requests and browser open; search index still contains 2765 mm and Cd 0.27; not archived as verified source"
+  }
+]

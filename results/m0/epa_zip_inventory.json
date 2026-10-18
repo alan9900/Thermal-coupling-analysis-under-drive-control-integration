@@ -1,0 +1,62 @@
+[
+  {
+    "file": "1- Package Content & Revision History.docx",
+    "bytes": 28710,
+    "sha256": "abc1af5175f3cf113ea55c9ec7f377ce4c70a37097117fbcd77999551e02a637"
+  },
+  {
+    "file": "2- Related NCAT Packages.docx",
+    "bytes": 25234,
+    "sha256": "40ef4da32c4ed309815fc2dbd97fdfd12cfdf5775bdf15feb04b473285f6eb89"
+  },
+  {
+    "file": "3a- 2010 Toyota Prius 60kW 650V MG2 EMOT - ALPHA Generation Process.html",
+    "bytes": 783489,
+    "sha256": "18592513eed18d70ce1bd19de3148c29cd5c5b2cc16ed47ab72a415375a0cb6b"
+  },
+  {
+    "file": "3b- 2010 Toyota Prius 60kW 650V MG2 EMOT - NCAT Test Report.docx",
+    "bytes": 610306,
+    "sha256": "f2123f5b9decc5b97c1af794efa5962794bd2b0add0dd34f6f0c71bff5cff484"
+  },
+  {
+    "file": "3c- 2010 Toyota Prius 60kW 650V MG2 EMOT - ORNL Test Data File.xlsx",
+    "bytes": 20636,
+    "sha256": "b2df3dc83b572d3a725a0eecd7b873ac1003b9af92c1b730bcb978b3982cc101"
+  },
+  {
+    "file": "3d- Benchmarking of Competitive Technologies Presentation by ORNL May 2011.pdf",
+    "bytes": 790908,
+    "sha256": "ca84c2a553569d6da3f2f587a97281e23dec3e0bd29352baf0852064c6313ec5"
+  },
+  {
+    "file": "3e- FY2011 DOE Annual Progress Report Advanced Power Electronics and Electric Motors Program.pdf",
+    "bytes": 26146430,
+    "sha256": "bcb8c8c714153b5aa4353216bd3a858ea6bf9c6348f4ceb70cfa3c016461798b"
+  },
+  {
+    "file": "3f- Evaluation of the 2010 Toyota Prius Hybrid Synergy Drive System by ORNL March 2011.pdf",
+    "bytes": 7543383,
+    "sha256": "670c71a664f5498812b7f507bb0f637292e348949052c5772e67ed8d3960e0fe"
+  },
+  {
+    "file": "4a- 2010 Toyota Prius 60kW 650V MG2 EMOT - Efficiency.pdf",
+    "bytes": 166557,
+    "sha256": "6c51589a3e2d3eddbd872aa511b2fb4cc7c97b11af77f286e88408f7ea005826"
+  },
+  {
+    "file": "5a- 2010 Toyota Prius 60kW 650V MG2 EMOT - Power Loss.pdf",
+    "bytes": 49744,
+    "sha256": "8de8807e203547b7e7ed46b753d158d416e374cd06d8eba8841a6421e2a849b2"
+  },
+  {
+    "file": "6- 2010 Toyota Prius 60kW 650V MG2 EMOT - Electrical Power Consumption Data.xlsx",
+    "bytes": 25716,
+    "sha256": "73efa623bd40391c1be69d86b021d7e4199c65eba52dc433ba24306884ceebf2"
+  },
+  {
+    "file": "7- emachine_2010_Toyota_Prius_60kW_650V_MG2_EMOT.m",
+    "bytes": 17278,
+    "sha256": "d44d52ddab0f7784a9e342f85fd5914b094d0296a9ab066826783dca489066c0"
+  }
+]

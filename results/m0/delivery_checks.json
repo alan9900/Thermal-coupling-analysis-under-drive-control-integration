@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "official_files_hash_verified": [
+    "epa_catalogue.html",
+    "epa_2010_prius_mg2_emot_2023-04-06.zip",
+    "ornl_2010_prius_pub26762.pdf",
+    "toyota_2009_launch.html",
+    "vw_id3_my23.pdf",
+    "brembo_09_9908_21.html",
+    "vw_id3_my21.pdf"
+  ],
+  "source_unavailable": [
+    "https://www.volkswagen-newsroom.com/en/the-new-id3-6240/technical-data-6249"
+  ],
+  "configuration_hash_matches": true,
+  "braking_cases": 18,
+  "python_config_tests": "3 passed; 10 invalid input variants rejected",
+  "word_math_objects": 21,
+  "visual_qa": "All final report PDF pages visually inspected after Word export",
+  "m1_authorized": false,
+  "ansys_executed": false,
+  "optimization_executed": false
+}

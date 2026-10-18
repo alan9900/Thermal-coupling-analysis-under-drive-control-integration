@@ -12,7 +12,16 @@
 - [验证与风险](docs/VALIDATION_AND_RISKS.md)
 
 ## 公开数据线索
-Toyota 2010 Prius MG2（参考单侧永磁电机）：60kW、207Nm、13500rpm，来源Toyota与ORNL。EPA有MG2 EMOT（电机+逆变器，不含减速器）ALPHA地图数据包；本仓库**尚未下载/验证地图内容**。大众ID.3车身（2765mm轴距、160km/h目标、215/55R18轮胎）仅用于外形量级参考。Brembo 09.9908.21后制动盘280×22mm仅用于几何参考，需重新设计内移安装并验证制动力与热容量。资料URL、来源等级及推导见权威V0.4文件。
+Toyota 2010 Prius MG2（参考单侧永磁电机）：60kW、207Nm、13500rpm，来源Toyota与ORNL。EPA的MG2 EMOT（电机+逆变器，不含减速器）原始包已完成下载与M0审计：数值表0–13000rpm、−200至200Nm，**再生区域为驱动损耗镜像估计**。独立电机及逆变器有137个配对驱动效率点，绕组损耗图仍未知。大众ID.3车身（2765mm轴距、160km/h目标、215/55R18轮胎）仅用于外形量级参考。Brembo 09.9908.21后制动盘280×22mm仅用于几何参考，需重新设计内移安装并验证制动力与热容量。资料URL、来源等级及推导见权威V0.4文件。
+
+## M0交付（2026-10-18）
+
+- [参数审查报告 Markdown](reports/M0_report.md) / [Word](reports/M0_report.docx) / [PDF](reports/M0_report.pdf)
+- [运行命令与输出说明](scripts/m0/README.md)，优先MATLAB R2025a完成参数及制动积分复核
+- [官方来源和下载哈希](data/raw/m0/manifest.json)、[EPA包内文件清单](results/m0/epa_zip_inventory.json)
+- [配置参数审查CSV](results/m0/parameter_audit.csv)、[制动转矩/功率/能量CSV](results/m0/braking_review.csv)、[实际校验结果](results/m0/validation.json)
+
+0.6g、100→0km/h、无路阻及零再生时，后轴单盘752.84N·m、初始63.37kW、摩擦功149.53kJ。160km/h转速与峰值包络筛查通过，连续高速能力未验证。修正了旧V0.4稿件后驱加速附着公式的分母符号。39项配置值保持null。**当前停在M0，未经用户确认不开始M1、ANSYS或优化。**
 
 ## 历史资料
 - `configs/archive/baseline_vehicle_v01_central_motor.yaml`：单电机+差速器，废弃。

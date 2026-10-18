@@ -1,0 +1,48 @@
+{
+  "grid_shape": [
+    14,
+    39
+  ],
+  "speed_rpm_min": 0.0,
+  "speed_rpm_max": 13000.0,
+  "torque_Nm_min": -200.0,
+  "torque_Nm_max": 200.0,
+  "missing_grid_cells": 0,
+  "admissible_grid_cells": 268,
+  "min_combined_loss_W": 270.19209094948644,
+  "raw_xlsx": {
+    "650V Inv Only": {
+      "positive_torque_numeric_cells": 137,
+      "positive_torque_missing_cells": 143
+    },
+    "650V Motor Only": {
+      "positive_torque_numeric_cells": 137,
+      "positive_torque_missing_cells": 143
+    }
+  },
+  "paired_drive_points": 137,
+  "sample_xlsx_rows": 272,
+  "sample_speeds_rpm": [
+    0,
+    999.9999999999997,
+    1999.9999999999993,
+    3000.000000000001,
+    3999.999999999999,
+    5000,
+    6000.000000000001,
+    7000,
+    8000,
+    9000,
+    10000,
+    11000.000000000002,
+    12000.000000000002,
+    13000
+  ],
+  "regen_status": "EPA estimated: motoring loss mirrored with factor 1.05; not measured regen",
+  "speed_gap": "Declared max 13500 rpm; tabulated map ends at 13000 rpm; no extrapolation",
+  "voltage_V": 650,
+  "reference_gear_ratio_not_to_apply": 2.636,
+  "independent_motor_winding_loss_available": false,
+  "independent_motor_drive_efficiency_available": true,
+  "revs_constructor_execution": "NOT EXECUTED: ALPHA/REVS classes not bundled"
+}

@@ -1,0 +1,7 @@
+{
+  "rho_air_kg_m3": 1.225,
+  "eta_emot_regen": 0.9,
+  "regen_cutoff_kmh": 5,
+  "regen_torque_cap_Nm": 130,
+  "road_load_pitch_moment": "ignored; approximate load transfer based on a/g"
+}

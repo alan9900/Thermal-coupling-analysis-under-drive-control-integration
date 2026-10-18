@@ -1,10 +1,12 @@
 # V0.4 后驱分布式双电机 / 单侧驱制热耦合方案（当前权威）
 更新：2026-10-18。主配置文件：`configs/baseline_vehicle.yaml`。原V0.1中央单电机、V0.3双前驱均**失效**，只作为历史记录。所有跨车型拼接的硬件为**概念研究**，不是实际大众ID.3或丰田电驱桥的量产总成。
 
+**M0审查已完成（2026-10-18）**：见 [M0报告](../reports/M0_report.md)、[复算说明](../scripts/m0/README.md)。EPA MG2原包已下载并核验：`.m`含14×39联合电功率表，0–13000rpm、−200至200Nm；负转矩区由驱动损耗乘1.05镜像估计，**不是实测再生图**。另发现137个配对的独立电机/逆变器驱动效率点；仍没有绕组损耗图。13000–13500rpm不可直接外推。M0之后的热源、热场与优化仍须用户确认。
+
 ## 1. 来源可信度与引用
-**整车尺寸参照**：Volkswagen ID.3（2023）官方技术资料：https://www.volkswagen.ie/idhub/content/dam/onehub_pkw/importers/ie/models/product-guides/my23/ID3_MY23.pdf ，可确认后驱相关车型动力水平、160 km/h最高车速、215/55R18轮胎；本文采用轴距2765mm（需单独车型官方几何资料再次核对），概念车质量1800kg、后轴静载55%、重心高0.55m等是**工程假设**，不能归为同一版本厂商测量值。大众减速器资料：https://www.volkswagen-group.com/en/press-releases/in-brief-the-all-rounder-the-1-speed-gearbox-17030 ，公布2级单速减速器及约10倍速比（非本研究减速器9.0的真实来源）。
+**整车尺寸参照**：Volkswagen ID.3（2023）官方技术资料：https://www.volkswagen.ie/idhub/content/dam/onehub_pkw/importers/ie/models/product-guides/my23/ID3_MY23.pdf ，可确认相关车型动力水平、160 km/h最高车速、215/55R18轮胎；轴距2765mm已在MY21官方PDF第19页图示L101目视核实：https://www.volkswagen.ie/idhub/content/dam/onehub_pkw/importers/ie/models/product-guides/2021/my21_master/ID3_MY21.pdf ，属于较早版本几何参照。Cd=0.27的2020官方技术页本次直接访问404，仅搜索索引可见，保留为未验证筛查值。概念车质量1800kg、后轴静载55%、重心高0.55m等是**工程假设**，不能归为同一版本厂商测量值。大众减速器资料：https://www.volkswagen-group.com/en/press-releases/in-brief-the-all-rounder-the-1-speed-gearbox-17030 ，公布2级单速减速器及约10倍速比（非本研究减速器9.0的真实来源）。
 **电机额定能力参照**：Toyota 2009第三代Prius发布 https://global.toyota/en/detail/308252 (60kW、207Nm)；ORNL FY2009基准研究 https://info.ornl.gov/sites/publications/files/Pub21475.pdf (额定最大速度13500rpm、60kW、207Nm)；单侧电机为概念移植，**不代表此电机能在1800kg纯电后驱车中以60kW持续工作**。
-**效率数据**：美国EPA https://www.epa.gov/vehicle-and-fuel-emissions-testing/combining-data-complete-emotor-alpha-maps ，其中“2010 Toyota Prius 60kW 650V MG2 EMOT”数据包。EPA定义EMOT=电机+逆变器（不包含齿轮）；**不等于纯电机铜/铁损耗MAP**。使用时要明确电机/逆变器热损分离依据，并校验“发电/再生象限”是否被完整覆盖。当前尚未下载并核验ZIP实际数据内容：`motor_loss_map_file: null`。
+**效率数据**：美国EPA https://www.epa.gov/vehicle-and-fuel-emissions-testing/combining-data-complete-emotor-alpha-maps ，其中“2010 Toyota Prius 60kW 650V MG2 EMOT”数据包。EPA定义EMOT=电机+逆变器（不包含齿轮）；**不等于纯电机铜/铁损耗MAP**。原包已于M0下载核验，原始文件及哈希见`data/raw/m0/`。数值再生区存在但为镜像估计；`3c`有独立电机和逆变器的稀疏驱动效率。不能据此直接建立绕组发热图，`motor_loss_map_file`仍为null。
 **制动盘几何参照**：Brembo https://www.bremboparts.com/europe/en/view-document/catalogue/disc/09-9908-21 ，后轴通风盘：直径280mm、厚22mm、总高度42mm、中孔68mm。该产品是量产后制动盘几何参照，**不能直接断言可以安装于单侧电机减速器输出轴**；必须重新设计盘毂、轴承、卡钳支架并校核强度与温度。
 **原方法学借鉴**：Park et al. (2025), Energy Conversion and Management 325,119406 DOI:10.1016/j.enconman.2024.119406，原文对象是轮边EMB执行电机，不等于主牵引电机。
 文献都只支持其明确披露的参数；缺乏的重心、轴荷、负载、效率与结构尺寸全部按概念假设处理。
@@ -53,7 +55,7 @@
 | 0.8g | 0.39087 | 911.1 | 76.7 | 135.7 |
 
 **后驱与前驱必须区别**：制动时重心前移、后轴载荷比例下降；不能将先前“前盘0.6g约1132Nm”搬到后盘。此处0.8g需足够路面附着和前轴制动能力才能实现；例如假设`mu_tire=0.8`且整车理想四轮同利用率，已接近总附着极限。
-此外，对本研究后轴双电机纯后驱：仅靠后轴附着约束，干燥路面`mu=0.8`、静态后轴比例0.55时，忽略阻力的最大驱动加速度约 `a/g<=mu*0.55/(1+mu*0.55/2.765)=0.3796`。先前单前驱和双前驱时的加速度公式不能直接照搬。
+此外，对本研究后轴双电机纯后驱：加速时后轴增载，后轴附着约束应为`a/g<=mu*0.55/(1-mu*0.55/2.765)=0.52327`（`mu=0.8`，忽略路阻）。M0修正了原稿正号分母及0.3796的错误。当前130Nm/侧软件限扭对应低速约0.38551g，先受力矩而非上述附着上限约束。先前单前驱和双前驱时的公式不能直接照搬。
 
 **单盘接触热≠单盘储热，更不等于热侵入电机的能量**；需盘/片热分配、对流、辐射与输出轴导热求解。高SOC、电池低温、低速回生衰减可导致后轴摩擦热增加；也必须比较高负载驱动热浸后紧急/重复制动时的温升。
 

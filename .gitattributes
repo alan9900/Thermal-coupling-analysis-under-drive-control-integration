@@ -1,0 +1,11 @@
+* text=auto eol=lf
+# Raw-source bytes are evidence: never normalize their line endings.
+data/raw/** -text -whitespace
+*.docx binary
+*.pdf binary
+*.zip binary
+*.mat binary
+*.png binary
+*.xlsx binary
+# MATLAB's generated vector serialization contains intentional whitespace.
+results/m0/*.svg -whitespace

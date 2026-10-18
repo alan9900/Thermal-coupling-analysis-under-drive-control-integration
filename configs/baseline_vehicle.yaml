@@ -11,7 +11,7 @@ metadata:
 vehicle:
   reference_body: VW_ID3_class_reference_not_actual_modified_ID3
   mass_kg: 1800.0                    # [DESIGN]; VW early ID.3 minimum curb mass 1719kg
-  wheelbase_m: 2.765                # [VW]
+  wheelbase_m: 2.765                # [VW MY21 PDF p19 dimension L101] reference, not concept measurement
   cg_height_m: 0.55                 # [ASSUMED]
   static_rear_axle_fraction: 0.55   # [ASSUMED] NOT manufacturer measured
   rear_track_width_m: null         # obtain exact variant, wheel packaging
@@ -19,7 +19,7 @@ vehicle:
   tire_nominal_unloaded_radius_m: 0.34685 # derived from 215/55R18 nominal geometry
   wheel_effective_rolling_radius_m: 0.33  # [ASSUMED], actual measured rolling radius needed
   maximum_vehicle_speed_kmh_target: 160.0 # [VW] benchmark target, not proven by design
-  drag_coefficient: 0.27            # [VW]
+  drag_coefficient: 0.27            # [VW search-index reference only; origin URL 404] retain UNVERIFIED screening value
   frontal_area_m2: 2.30             # [ASSUMED]
   rolling_resistance_coefficient: 0.012 # [ASSUMED]
   rotational_inertia_factor: 1.0    # [ASSUMED] 1.0 = rotational inertias neglected
@@ -39,8 +39,8 @@ drive:
     configured_regen_torque_limit_nm: null    # derive from verified generator-mode map
     continuous_mechanical_power_kw: null     # not 60kW by default! 18s ORNL benchmark only
     torque_speed_map_file: null
-    epa_emot_map_file: null           # link in sources; downloaded ZIP NOT verified locally
-    ornl_motor_only_efficiency_map_file: null
+    epa_emot_map_file: data/raw/m0/epa_mg2/7- emachine_2010_Toyota_Prius_60kW_650V_MG2_EMOT.m # [EPA] audited numeric grid, 650V; regen ESTIMATED
+    ornl_motor_only_efficiency_map_file: data/raw/m0/epa_mg2/3c- 2010 Toyota Prius 60kW 650V MG2 EMOT - ORNL Test Data File.xlsx # sparse DRIVE-only motor/inverter sheets; not winding loss
     motor_inverter_efficiency_combined: true  # EPA EMOT means both motor+inverter, excludes gear
     motor_loss_map_file: null
     inverter_loss_map_file: null
@@ -48,7 +48,7 @@ drive:
     magnet_temp_limit_c: null
     coolant_inlet_temp_c: null
     coolant_mass_flow_kg_s: null
-    stator_outer_diameter_m: null      # find exact ORNL sizing before freezing CAD
+    stator_outer_diameter_m: 0.264     # [ORNL Table 2.7] reference lamination OD, NOT housing OD
     motor_housing_dimensions_m: null
   rear_gearbox_per_side:
     reduction_motor_to_wheel: 9.0       # [DESIGN], VW precedent approx 10 ratio not identical
@@ -117,8 +117,10 @@ optimization:
 provenance:
   vw_body_source: https://www.volkswagen.ie/idhub/content/dam/onehub_pkw/importers/ie/models/product-guides/my23/ID3_MY23.pdf
   vw_gearbox_source: https://www.volkswagen-group.com/en/press-releases/in-brief-the-all-rounder-the-1-speed-gearbox-17030
-  toyota_motor_source: https://global.toyota/en/newsroom/toyota/22731531.html
-  ornl_motor_test_report: https://info.ornl.gov/sites/publications/files/pub26762.pdf
+  toyota_motor_source: https://global.toyota/en/detail/308252
+  ornl_motor_test_report: https://info.ornl.gov/sites/publications/files/Pub26762.pdf
+  vw_body_geometry_source: https://www.volkswagen-newsroom.com/en/the-new-id3-6240/technical-data-6249
+  vw_wheelbase_source: https://www.volkswagen.ie/idhub/content/dam/onehub_pkw/importers/ie/models/product-guides/2021/my21_master/ID3_MY21.pdf
   epa_emot_map_catalogue: https://www.epa.gov/vehicle-and-fuel-emissions-testing/combining-data-complete-emotor-alpha-maps
   brembo_disc_source: https://www.bremboparts.com/europe/en/view-document/catalogue/disc/09-9908-21
   actual_test_or_oem_assembly: false

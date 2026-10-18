@@ -1,0 +1,19 @@
+{
+  "docx_editable_omml_objects": 21,
+  "tables": 9,
+  "embedded_images": 1,
+  "post_pandoc_changes": "formatting only: table headers, row integrity, spacing, language metadata",
+  "pdf_pages": 8,
+  "word_pdf_export": "PASS",
+  "visual_inspection": "PASS",
+  "visually_inspected_final_pdf_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ]
+}

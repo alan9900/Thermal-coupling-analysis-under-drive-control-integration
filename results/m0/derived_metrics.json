@@ -1,0 +1,14 @@
+{
+  "wheel_rpm_at_100": 803.81284389846144,
+  "motor_rpm_at_160": 11574.904952137842,
+  "speed_limit_only_kmh": 186.61060362323371,
+  "map_speed_limit_kmh": 179.69909978533619,
+  "max_ratio_at_160_hardware": 10.496846453806898,
+  "max_ratio_at_160_map": 10.10807436292516,
+  "hardware_ideal_base_speed_rpm": 2767.9120537720933,
+  "software_ideal_base_speed_rpm": 4407.3676548524863,
+  "traction_wheel_torque_each_Nm": 1123.2,
+  "rear_adhesion_acceleration_g": 0.52326881720430118,
+  "software_force_acceleration_g": 0.38550644055231209,
+  "initial_kinetic_energy_J": 694444.4444444445
+}

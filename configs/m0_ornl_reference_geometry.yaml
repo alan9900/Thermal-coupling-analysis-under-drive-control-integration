@@ -1,0 +1,33 @@
+# S1: ORNL/TM-2010/253, printed p46 / PDF p55, Table 2.7, 2010 Prius column.
+# Reference motor, NOT dimensional acceptance of a newly packaged concept drive.
+metadata:
+  version: v0.4_M0_reference_only
+  source: https://info.ornl.gov/sites/publications/files/Pub26762.pdf
+  source_table: Table_2_7
+  source_printed_page: 46
+  source_pdf_page: 55
+  actual_concept_assembly_verified: false
+motor_reference:
+  stator_lamination_outer_diameter_m: 0.264
+  stator_lamination_inner_diameter_m: 0.1619
+  stator_stack_length_m: 0.0508
+  rotor_outer_diameter_m: 0.1604
+  rotor_lamination_inner_diameter_m: 0.051
+  rotor_stack_length_m: 0.050165
+  air_gap_m: 0.00073
+  lamination_thickness_m: 0.000305
+  rotor_mass_including_shaft_kg: 6.7
+  stator_mass_kg: 15.99
+  stator_core_laminations_mass_kg: 10.36
+  stator_copper_mass_kg: 4.93
+  casing_mass_including_resolver_pump_etc_kg: 14.1
+  casing_reference_diameter_m: 0.302
+  casing_reference_axial_length_m: 0.161
+  phase_resistance_at_21c_ohm: 0.077 # average phase-to-phase / 2 in source
+  permanent_magnet_family: NdFeB
+  total_permanent_magnet_mass_kg: 0.768
+  steel_grade: null
+  magnet_grade: null
+  component_heat_capacities_J_K: null
+  winding_operating_limit_c: null # source test criterion 150 C is NOT a certified limit
+  concept_cooling_performance: null
