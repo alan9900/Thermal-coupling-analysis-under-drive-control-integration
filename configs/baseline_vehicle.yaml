@@ -1,68 +1,103 @@
-# All values are INITIAL ASSUMPTIONS, not OEM data. null = unknown. SI units.
+# V0.3 DUAL-MOTOR reference configuration. ALL values are unvalidated conceptual assumptions.
+# SI units unless included in key. Current canonical case: ONE-SIDE thermal model of a two-motor FRONT AXLE.
 metadata:
-  version: v0.1
+  version: v0.3
   status: conceptual_unverified
-  layout: front_eaxle_single_motor_differential_two_inboard_output_brakes
+  architecture: dual_independent_front_motors_no_differential
+  thermal_model_scope: single_left_or_right_motor_reducer_inboard_brake
+  assumption: straight_line_symmetric_left_and_right_until_asymmetry_check
 vehicle:
-  mass_kg: 1800
+  mass_kg: 1800.0
   wheelbase_m: 2.8
   cg_height_m: 0.55
   static_front_axle_fraction: 0.55
   wheel_rolling_radius_m: 0.32
+  gravity_m_s2: 9.81
+  tire_road_friction_mu: null
   drag_coefficient: null
   frontal_area_m2: null
   rolling_resistance_coefficient: null
 drive:
-  motor_peak_power_kw: 120
-  motor_peak_torque_nm: 260
-  motor_max_speed_rpm: null
-  total_motor_to_wheel_ratio: 9.0
-  drive_efficiency_assumption: 0.96
-  regeneration_efficiency_assumption: 0.96
-  motor_drive_loss_map: null
-  motor_regen_loss_map: null
-  gearbox_loss_map: null
-  coolant_inlet_temp_c: null
-  coolant_mass_flow_kg_s: null
+  driven_axle: front
+  independent_motor_count: 2
+  mechanical_differential_present: false
+  motor_per_side:
+    peak_mechanical_power_kw: 60.0
+    peak_mechanical_torque_nm: 130.0
+    max_mechanical_speed_rpm_screening_assumption: 14000
+    continuous_mechanical_power_kw: null
+    continuous_torque_nm: null
+    motor_torque_speed_curve: null
+    motor_drive_loss_map: null
+    motor_regen_loss_map: null
+    motor_regen_torque_speed_limit: null
+    cooling_inlet_temperature_c: null
+    coolant_mass_flow_kg_s: null
+    winding_temperature_limit_c: null
+    magnet_temperature_limit_c: null
+  gearbox_per_side:
+    reduction_motor_to_wheel: 9.0
+    reduction_stages: null
+    drive_efficiency_assumption: 0.96
+    reverse_efficiency_assumption: 0.96
+    separate_drive_and_regen_loss_maps: null
+    output_shaft_diameter_m: null
+    gearbox_housing_dimensions_m: null
+    gearbox_oil_mass_kg: null
+    gearbox_oil_max_temperature_c: null
+  aggregate_peak_power_kw: 120.0
+  aggregate_peak_motor_torque_nm: 260.0
+  battery_max_regen_electrical_power_kw: null
+  inverter_power_limit_each_kw: null
+  independent_left_right_torque_control: true
 brakes:
-  layout: two_rotors_after_differential_on_left_and_right_output
-  rotor_speed_to_corresponding_wheel_speed_ratio: 1.0
-  rotor_outer_diameter_m: 0.280
-  rotor_inner_diameter_m: null
-  rotor_thickness_m: 0.022
-  rotor_mass_each_kg: null
-  friction_effective_radius_m: null
-  pad_mu_initial_assumption: 0.40
-  pad_temp_dependent_mu_model: null
-  rotor_pad_heat_partition: null
-  axle_friction_brake_distribution_model: null
-  front_braking_fraction_demo_only: 0.65
-  left_right_independent_actuation: true
-  caliper_torque_capacity_nm: null
-  rotor_housing_clearance_m: null
-  shield_installation_clearance_m: null
-  rear_axle_conventional_brakes_retained: true
+  architecture: single_inboard_disc_after_each_independent_gearbox_at_output
+  left_right_front_discs: 2
+  rear_conventional_brakes_retained: true
+  rotor_speed_ratio_to_corresponding_wheel: 1.0
+  rotor_per_side:
+    outer_diameter_m: 0.280
+    inner_diameter_m: null
+    thickness_m: 0.022
+    mass_kg: null
+    effective_friction_radius_m: null
+    pad_reference_mu: 0.40
+    friction_coefficient_vs_temperature: null
+    fraction_friction_heat_into_rotor: null
+    friction_torque_capacity_nm: null
+    caliper_clamp_force_limit_n: null
+    rotor_material: grey_cast_iron_preliminary
+    gap_rotor_to_gearbox_housing_m: null
+    clearance_rotor_to_shield_m: null
+    rotor_temp_limit_c: null
+    caliper_temp_limit_c: null
+  front_brake_distribution_control: dynamic_axle_load_reference
+  front_brake_fraction_fixed_0p65: deprecated_demo_only
 thermal:
-  initial_temperature_c: 25
   ambient_temperature_c: 25
+  initial_cold_start_temperature_c: 25
+  preheated_state_from_previous_drive_simulation: null
+  shield_material: null
   rotor_emissivity: null
   shield_emissivity: null
-  contact_thermal_resistance_K_per_W: null
-  gearbox_oil_heat_capacity_J_per_K: null
-  allowable_winding_temp_c: null
-  allowable_magnet_temp_c: null
-  allowable_oil_temp_c: null
-  allowable_rotor_temp_c: null
-  allowable_caliper_temp_c: null
+  convection_boundary_data: null
+  shaft_bearing_contact_thermal_resistance_K_W: null
 cases:
-  single_stop_speed_kmh: 100
-  single_stop_decel_m_per_s2: null
+  speed_initial_kmh: 100.0
+  speed_final_kmh: 0.0
+  braking_deceleration_g_baseline: 0.6
+  braking_deceleration_g_scan: [0.3, 0.6, 0.8]
+  battery_regen_acceptance_power_kw_scan: [0, 30, 60]
+  battery_soc: null
   repeated_stop_count: null
-  high_load_preheat_trace: null
-  regeneration_battery_power_limit_kw: null
+  motor_preheat_drive_trace: null
 optimization:
-  shield_gap_m: [0.003, 0.010]
-  shield_thickness_m: [0.0005, 0.002]
-  duct_outlet_angle_deg: [15, 60]
-  outlet_area_ratio: [0.2, 0.8]
-  bounds_are_exploratory_only: true
+  shield_gap_m_bounds: [0.003, 0.010]
+  shield_thickness_m_bounds: [0.0005, 0.002]
+  duct_outlet_angle_deg_bounds: [15, 60]
+  outlet_area_ratio_bounds: [0.2, 0.8]
+  all_geometry_bounds_require_packaging_and_thermal_growth_check: true
+validation:
+  baseline_is_not_oem_or_experiment_data: true
+  do_not_simulate_missing_maps_as_verified: true
+  prior_single_motor_docs_obsolete: true
