@@ -1,0 +1,68 @@
+# All values are INITIAL ASSUMPTIONS, not OEM data. null = unknown. SI units.
+metadata:
+  version: v0.1
+  status: conceptual_unverified
+  layout: front_eaxle_single_motor_differential_two_inboard_output_brakes
+vehicle:
+  mass_kg: 1800
+  wheelbase_m: 2.8
+  cg_height_m: 0.55
+  static_front_axle_fraction: 0.55
+  wheel_rolling_radius_m: 0.32
+  drag_coefficient: null
+  frontal_area_m2: null
+  rolling_resistance_coefficient: null
+drive:
+  motor_peak_power_kw: 120
+  motor_peak_torque_nm: 260
+  motor_max_speed_rpm: null
+  total_motor_to_wheel_ratio: 9.0
+  drive_efficiency_assumption: 0.96
+  regeneration_efficiency_assumption: 0.96
+  motor_drive_loss_map: null
+  motor_regen_loss_map: null
+  gearbox_loss_map: null
+  coolant_inlet_temp_c: null
+  coolant_mass_flow_kg_s: null
+brakes:
+  layout: two_rotors_after_differential_on_left_and_right_output
+  rotor_speed_to_corresponding_wheel_speed_ratio: 1.0
+  rotor_outer_diameter_m: 0.280
+  rotor_inner_diameter_m: null
+  rotor_thickness_m: 0.022
+  rotor_mass_each_kg: null
+  friction_effective_radius_m: null
+  pad_mu_initial_assumption: 0.40
+  pad_temp_dependent_mu_model: null
+  rotor_pad_heat_partition: null
+  axle_friction_brake_distribution_model: null
+  front_braking_fraction_demo_only: 0.65
+  left_right_independent_actuation: true
+  caliper_torque_capacity_nm: null
+  rotor_housing_clearance_m: null
+  shield_installation_clearance_m: null
+  rear_axle_conventional_brakes_retained: true
+thermal:
+  initial_temperature_c: 25
+  ambient_temperature_c: 25
+  rotor_emissivity: null
+  shield_emissivity: null
+  contact_thermal_resistance_K_per_W: null
+  gearbox_oil_heat_capacity_J_per_K: null
+  allowable_winding_temp_c: null
+  allowable_magnet_temp_c: null
+  allowable_oil_temp_c: null
+  allowable_rotor_temp_c: null
+  allowable_caliper_temp_c: null
+cases:
+  single_stop_speed_kmh: 100
+  single_stop_decel_m_per_s2: null
+  repeated_stop_count: null
+  high_load_preheat_trace: null
+  regeneration_battery_power_limit_kw: null
+optimization:
+  shield_gap_m: [0.003, 0.010]
+  shield_thickness_m: [0.0005, 0.002]
+  duct_outlet_angle_deg: [15, 60]
+  outlet_area_ratio: [0.2, 0.8]
+  bounds_are_exploratory_only: true
