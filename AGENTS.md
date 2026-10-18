@@ -11,3 +11,6 @@
 8. **执行纪律**：优先MATLAB R2025a；未知参数保留null；记录SI单位、来源等级、适用范围、模型版本；不可伪造软件运行、实验或降温结论。每阶段原始数据/测试/图表/报告齐备；软件不可用写NOT EXECUTED。
 9. **旧文件**：`docs/RESEARCH_PLAN.md`等含历史中央电机/前驱文字，仅能借鉴通用方法，不得执行其机械拓扑部分。
 10. **当前只做M0**：实现V0.4配置校验、速度/电机限制、后轴动态载荷/后轴单盘热、总整车能量闭合、EPA地图内容获取可行性审计、缺口与来源报告；经用户许可再做M1。
+
+## 强制Git阶段版本管理（后续所有任务）
+**必须首先阅读 [docs/GIT_VERSIONING_POLICY.md](docs/GIT_VERSIONING_POLICY.md)。** 所有后续M0–M7工作均在`stage/Mx-description`分支开发，子任务定期commit并push；提交包含报告和测试证据的PR供研究者审批。**研究者批准前不得自行合并PR、创建完成Tag或继续下一阶段。** PR合并后经批准对合并的main提交创建附注Tag（如`M1-v1.0`）；修复只能创建`M1-v1.1`，禁止移动既有Tag、强推或重写main。更新`docs/STAGE_VERSIONS.md`并提供PR链接、Tag、SHA和测试状态。已有M0工作不可未经审核自动标记为M0-v1.0。若当前工具不支持tag，明确报告TAG NOT CREATED，提供准确提交SHA给用户操作。
