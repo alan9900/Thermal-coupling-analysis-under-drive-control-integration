@@ -1,20 +1,23 @@
-# 分布式双电机驱制融合热耦合研究
+# 后驱分布式双电机驱制融合热耦合研究（V0.4）
 
-**当前有效架构 V0.3：** 1800 kg 前驱概念纯电乘用车，**前轴左右各1台60 kW /130 N·m独立电机 + 9.0减速器 + 输出端内移摩擦制动器，无机械差速器**。只对**一侧电机—减速器—制动器**做详细热网络与三维热耦合仿真；整车动力学仍包含左右两台电机及后轴常规制动。
+**当前权威研究架构**：1800kg概念纯电动车，后轴左右各一套独立电驱单元（单侧60kW参考电机+两级约9:1减速器+减速器输出端内移式盘式摩擦制动器），**无机械差速器**；只对单侧电机—减速器—制动盘进行详细热网络/三维传热分析，整车制动模型保留前轴常规制动以及两侧后轴。**不等于任何真实量产车已安装此总成。**
 
-**所有基准参数是未经实车验证的工程假设**，不代表厂家车型及验证结果。
+## 首先读
+- [**V0.4有来源的基准参数及动力/制动校核（最新权威）**](docs/REAR_DRIVE_V04_SOURCED_BASELINE.md)
+- [V0.4参数文件](configs/baseline_vehicle.yaml)
+- [Codex执行约束](AGENTS.md)
+- [研究方法（旧版主体，需按V0.4替换前驱/差速器内容）](docs/RESEARCH_PLAN.md)
+- [参数缺口（旧版主体，需按V0.4替换）](docs/PARAMETER_REGISTER.md)
+- [Codex阶段规范](docs/CODEX_EXECUTION.md)
+- [验证与风险](docs/VALIDATION_AND_RISKS.md)
 
-## 当前必须阅读
-1. [V0.3双电机架构、验算与M0要求](docs/DUAL_MOTOR_V03_ARCHITECTURE.md)（**权威最新架构**）
-2. [V0.3基准配置](configs/baseline_vehicle.yaml)
-3. [Codex执行规则](AGENTS.md)
-4. [研究工作路线](docs/RESEARCH_PLAN.md)、[参数缺口](docs/PARAMETER_REGISTER.md)、[阶段验收](docs/CODEX_EXECUTION.md)、[验证风险](docs/VALIDATION_AND_RISKS.md)
+## 公开数据线索
+Toyota 2010 Prius MG2（参考单侧永磁电机）：60kW、207Nm、13500rpm，来源Toyota与ORNL。EPA有MG2 EMOT（电机+逆变器，不含减速器）ALPHA地图数据包；本仓库**尚未下载/验证地图内容**。大众ID.3车身（2765mm轴距、160km/h目标、215/55R18轮胎）仅用于外形量级参考。Brembo 09.9908.21后制动盘280×22mm仅用于几何参考，需重新设计内移安装并验证制动力与热容量。资料URL、来源等级及推导见权威V0.4文件。
 
-**历史资料：** `configs/archive/baseline_vehicle_v01_central_motor.yaml`、`docs/BASELINE_V02_AUDIT.md`、`configs/screening_scenarios_v02.yaml` 均描述或依据旧单电机+差速器概念，不作为当前单侧电驱输入；保留作设计变更追溯。
+## 历史资料
+- `configs/archive/baseline_vehicle_v01_central_motor.yaml`：单电机+差速器，废弃。
+- `configs/archive/baseline_vehicle_v03_front_dual_motor.yaml`：前驱双电机，废弃。
+- `docs/DUAL_MOTOR_V03_ARCHITECTURE.md`、`docs/BASELINE_V02_AUDIT.md`、`configs/screening_scenarios_v02.yaml`：旧轴型、旧前后制动力分配，只能用来追溯设计变化，不能被程序当作运行输入。
 
-## 推荐顺序
-M0 参数登记与运动学/能量校验 → M1 MATLAB整车制动和单侧热源 → M2单侧瞬态热网络 → M3隔热罩参数化 → M4 ANSYS瞬态热分析 → M5 Fluent局部换热 → M6代理模型优化 → M7多工况验证。缺商业软件环境时只创建未运行脚本/模板，不能声称得到求解结果。
-
-参考研究：Park et al., *Energy Conversion and Management* 325 (2025) 119406，DOI:10.1016/j.enconman.2024.119406。原论文研究轮边EMB执行电机，不能将其电机温限与参数直接用到本项目主牵引电机。
-
-目录将由Codex按需创建：`src/matlab/`、`src/python/`、`geometry/`、`simulations/`、`tests/`、`results/`、`reports/`。
+## 阶段
+M0单位和参数审计/新后轴动力学→M1 MATLAB再生/摩擦热源→M2单侧热阻网络→M3 CAD概念及安装约束→M4 ANSYS瞬态传热→M5局部Fluent→M6多目标代理优化→M7极端工况、验证及论文图表。
