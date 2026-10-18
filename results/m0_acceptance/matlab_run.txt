@@ -1,0 +1,40 @@
+    speed_kmh    motor_rpm    ideal_torque_Nm    epa_torque_Nm    allowed_torque_Nm    wheel_available_kW    road_power_kW    shaft_required_each_kW
+    _________    _________    _______________    _____________    _________________    __________________    _____________    ______________________
+
+         5        361.72            130             199.95                130                9.4545             0.29532              0.15381        
+        50        3617.2            130             162.04                130                94.545              3.9621               2.0636        
+       100        7234.3           79.2             63.577             63.577                92.475              14.038               7.3117        
+       160         11575           49.5             31.493             31.493                73.293               42.81               22.297        
+
+    road_load    deceleration_g    battery_cap_kW    initial_disc_torque_Nm    initial_disc_power_kW    disc_friction_energy_kJ
+    _________    ______________    ______________    ______________________    _____________________    _______________________
+
+      false           0.3                 0                  428.58                   36.076                     170.25        
+      false           0.3                30                  222.33                   18.715                     46.242        
+      false           0.3                60                  16.079                   1.3535                    0.66485        
+      false           0.6                 0                  752.84                    63.37                     149.53        
+      false           0.6                30                  546.59                   46.009                     79.196        
+      false           0.6                60                  340.34                   28.648                     30.933        
+      false           0.8                 0                  911.06                   76.688                     135.72        
+      false           0.8                30                  704.81                   59.327                     81.563        
+      false           0.8                60                  498.56                   41.966                     40.981        
+      true            0.3                 0                  387.69                   32.634                     158.73        
+      true            0.3                30                  181.44                   15.273                     36.648        
+      true            0.3                60                       0                        0                    0.40817        
+      true            0.6                 0                  716.93                   60.347                     144.47        
+      true            0.6                30                  510.68                   42.986                     74.369        
+      true            0.6                60                  304.43                   25.625                     26.986        
+      true            0.8                 0                  878.46                   73.945                     132.27        
+      true            0.8                30                  672.21                   56.584                     78.223        
+      true            0.8                60                  465.96                   39.222                     38.018        
+
+                          status: 'PASS'
+                          matlab: '25.1.0.2943329 (R2025a)'
+                         release: '2025a'
+                          checks: [12×1 string]
+    max_energy_residual_relative: 7.9104e-16
+    integral_refinement_relative: 7.3854e-06
+                  thermal_models: 'NOT EXECUTED; outside M0'
+                           ANSYS: 'NOT EXECUTED; outside M0'
+                    optimization: 'NOT EXECUTED; outside M0'
+
