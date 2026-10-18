@@ -28,3 +28,6 @@
 
 ## 第一条可直接交给 Codex 的命令
 “先阅读 AGENTS.md、README.md、docs/RESEARCH_PLAN.md、docs/PARAMETER_REGISTER.md、docs/CODEX_EXECUTION.md、docs/VALIDATION_AND_RISKS.md、configs/baseline_vehicle.yaml。**只做M0**：建立MATLAB R2025a兼容的配置读取、单位/数值/物理逻辑审计；生成 parameter_audit.csv 与 M0_report.md。所有未知值保持null，输出缺失的重要参数；不要开展M1、CAD或ANSYS。提交PR/commit，报告运行过和未运行的测试，并列出下一步需我确认的问题。”
+
+## 阶段成果必须存Git版本
+**强制阅读并遵守 [GIT_VERSIONING_POLICY.md](GIT_VERSIONING_POLICY.md)**：每个M0–M7阶段独立分支、分批commit、完整验收报告、PR审核、批准后合并main并创建固定Tag（例`M1-v1.0`），按`docs/STAGE_VERSIONS.md`登记。旧M0必须先确认实际完成及审核状态才能补打tag。无tag权限不得虚构结果。
