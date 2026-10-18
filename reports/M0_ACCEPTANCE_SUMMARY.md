@@ -11,8 +11,8 @@
 | 本次治理基线main | `fe434fb1f846b96474a6736d77bdc20f66dc2cb7`，不将它认作M0验收提交 |
 | 本次独立分支 | `stage/M0-parameter-audit` |
 | 复核脚本提交 | `10f16519e332dcb32ac9c8927a5a303cbf8b54a6` |
-| 复核证据提交 | 创建证据提交后登记；以STAGE_VERSIONS中的精确SHA为准 |
-| PR | 创建后登记；本次PR只申请M0验收 |
+| 复核证据提交 | `a08c46cdf5a36d649cd03e1d895c7da0e438a382`；后续登记提交不改变该证据快照 |
+| PR | [#1：M0参数资料验收与版本登记](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/1)；只申请M0验收 |
 | 拟议阶段版本 | `M0-v1.0`，只是候选版本名称，不是已存在的Git Tag |
 | 正式流程状态 | `PARTIAL`：技术交付与复核已齐备，历史流程仍待研究者正式验收 |
 | Tag及批准日期 | `NOT CREATED`；尚无批准日期 |

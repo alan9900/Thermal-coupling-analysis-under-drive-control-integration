@@ -16,7 +16,7 @@ Toyota 2010 Prius MG2（参考单侧永磁电机）：60kW、207Nm、13500rpm，
 
 ## M0交付（2026-10-18）
 
-**验收待批准**：[M0验收摘要](reports/M0_ACCEPTANCE_SUMMARY.md)。原成果提交`2ba858b`仅为历史候选；本次在`stage/M0-parameter-audit`补齐复核证据及PR，正式Tag尚未创建。技术交付完成不代表用户已批准。
+**验收待批准**：[M0验收摘要](reports/M0_ACCEPTANCE_SUMMARY.md)，[验收PR #1](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/1)。原成果提交`2ba858b`仅为历史候选；本次在`stage/M0-parameter-audit`补齐复核证据及PR，正式Tag尚未创建。技术交付完成不代表用户已批准。
 
 - [参数审查报告 Markdown](reports/M0_report.md) / [Word](reports/M0_report.docx) / [PDF](reports/M0_report.pdf)
 - [运行命令与输出说明](scripts/m0/README.md)，优先MATLAB R2025a完成参数及制动积分复核
