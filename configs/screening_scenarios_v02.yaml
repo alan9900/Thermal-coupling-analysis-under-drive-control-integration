@@ -1,0 +1,46 @@
+# Screening cases only. Retains baseline_vehicle.yaml v0.1 unchanged.
+metadata:
+  version: v0.2-screening
+  source: docs/BASELINE_V02_AUDIT.md
+  all_values_are_assumptions: true
+  not_oem_or_verified_parameters: true
+vehicle:
+  mass_kg: [1600, 1800, 2100]
+  wheelbase_m: [2.6, 2.8, 3.0]
+  cg_height_m: [0.45, 0.55, 0.65]
+  static_front_axle_fraction: [0.50, 0.55, 0.60]
+  rolling_radius_m: [0.30, 0.32, 0.34]
+motor:
+  peak_power_kw: [100, 120, 150]
+  peak_torque_nm: [220, 260, 320]
+  speed_limit_rpm: [12000, 14000, 16000]
+  total_motor_to_wheel_ratio: [8.0, 9.0, 10.0]
+gearbox:
+  gross_efficiency_for_screening: [0.94, 0.96, 0.98]
+  drive_regen_loss_maps_required_for_prediction: true
+brake:
+  disc_outer_diameter_mm: [260, 280, 320]
+  disc_thickness_mm: [20, 22, 28]
+  disc_mass_kg: [4.0, 6.0, 8.0]
+  pad_mu: [0.30, 0.40, 0.50]
+  disc_heat_fraction: [0.70, 0.85, 0.95]
+  disc_effective_radius_m_for_280mm: [0.10, 0.11, 0.12]
+  front_fraction: "dynamic_axle_load_reference_not_fixed_65pct"
+  disc_to_gearbox_housing_clearance_m: null
+thermal:
+  ambient_c: [0, 25, 40]
+  coolant_inlet_c: [35, 50, 65]
+  coolant_flow_kg_s: [0.05, 0.15, 0.25]
+  disc_surface_emissivity: [0.30, 0.60, 0.90]
+  thermal_safety_limits_source: null
+cases:
+  single_stop_100kmh_decel_in_g: [0.3, 0.6, 0.8]
+  regen_battery_acceptance_limit_kw: [0, 30, 60]
+  target_top_speed_kmh_candidates: [120, 160]
+  heat_soak_preheat_temperature: null
+optimization:
+  shield_gap_to_disc_mm: [3, 6, 10]
+  shield_thickness_mm: [0.5, 1.0, 2.0]
+  outlet_angle_deg: [15, 35, 60]
+  outlet_area_ratio: [0.2, 0.5, 0.8]
+  ranges_require_cad_feasibility_check: true
