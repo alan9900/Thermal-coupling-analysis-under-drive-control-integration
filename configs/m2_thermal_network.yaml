@@ -23,8 +23,8 @@ nodes: # SI. Mass references do not validate the assembled concept or equivalent
   - {id: output_bearing, mass_kg: 0.35, cp_J_kgK: 460, rho_kg_m3: 7800, k_W_mK: 45, emissivity: 0.6, basis: S3_aggregate_bearing_equivalent}
   - {id: gears, mass_kg: 2.5, cp_J_kgK: 460, rho_kg_m3: 7800, k_W_mK: 45, emissivity: 0.6, basis: S3_aggregate_two_stage_gears}
   - {id: oil, mass_kg: 0.8, cp_J_kgK: 2000, rho_kg_m3: 850, k_W_mK: 0.13, emissivity: 0.9, basis: S3_oil_and_other_gear_loss_equivalent}
-  - {id: gear_case, mass_kg: 4.0, cp_J_kgK: 900, rho_kg_m3: 2710, k_W_mK: 170, emissivity: 0.7, basis: S3_mass_S2_aluminium_like_properties}
-  - {id: motor_case, mass_kg: 5.0, cp_J_kgK: 900, rho_kg_m3: 2710, k_W_mK: 170, emissivity: 0.7, basis: S3_mass_S2_aluminium_like_properties}
+  - {id: gear_case, mass_kg: 4.0, cp_J_kgK: 900, rho_kg_m3: 2710, k_W_mK: 170, emissivity: 0.7, basis: S3_aluminium_like_NIST_cp_magnitude_only}
+  - {id: motor_case, mass_kg: 5.0, cp_J_kgK: 900, rho_kg_m3: 2710, k_W_mK: 170, emissivity: 0.7, basis: S3_aluminium_like_NIST_cp_magnitude_only}
   - {id: stator, mass_kg: 10.36, cp_J_kgK: 460, rho_kg_m3: 7650, k_W_mK: 25, emissivity: 0.7, basis: ORNL_Table2_7_reference_mass_S3_equivalent_properties}
   - {id: winding, mass_kg: 4.93, cp_J_kgK: 385, rho_kg_m3: 8960, k_W_mK: 390, emissivity: 0.7, basis: ORNL_Table2_7_copper_mass_NIST_cp_S3_equivalence}
   - {id: rotor_other, mass_kg: 6.7, cp_J_kgK: 460, rho_kg_m3: 7600, k_W_mK: 30, emissivity: 0.7, basis: ORNL_rotor_includes_motor_shaft_S3_other_loss_lump_not_magnets}

@@ -62,7 +62,10 @@ validation=struct('status','PASS','stage_status','CONCEPT_PREDICTION_PENDING_REV
     'M1_merge_commit',p.metadata.baseline_commit,'matlab',version,'release',version('-release'), ...
     'experimental_validation','NOT EXECUTED','M3_started',false);
 writejson(fullfile(out,'validation.json'),validation);
-save(fullfile(out,'m2_results.mat'),'results','summary','comparison','sensResults','sensitivity','tests','validation','refinedD');
+% CSV retains every edge flux/cumulative ledger. MAT avoids duplicating those
+% arrays three times, while preserving every run's temperatures and path ledgers.
+archivedResults=cellfun(@compact,results,'UniformOutput',false);refinedD=compact(refinedD);
+save(fullfile(out,'m2_results.mat'),'archivedResults','summary','comparison','sensResults','sensitivity','tests','validation','refinedD');
 % Compiled coefficients make every flow reconstructible independently.
 net=struct('ids',{c.ids},'C_J_K',c.C,'from',c.from,'to',c.to,'G0_W_K',c.G0,'Gv',c.Gv, ...
     'Rad_W_K4',c.Rad,'cut_group',c.cut,'AmbG0',c.AmbG0,'AmbGv',c.AmbGv,'AmbRad',c.AmbRad, ...
