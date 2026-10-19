@@ -19,7 +19,7 @@ def main():
     inputs=json.loads((ROOT/'results/m1/inputs.json').read_text(encoding='utf-8'))
     cfg=inputs['engineering_partition_configuration']; v={k:r[1] for k,r in cfg['parameters'].items()}
     assert cfg['metadata']['actual_internal_loss_map'] is None
-    checks=[]; max_residual=0.; max_energy=0.; scales=[]
+    checks=[]; max_residual=0.; max_energy=0.; scales=[]; artifact_hashes={}
     nominal={}
     for path in sorted((OUT/'interface').glob('*.csv')):
         q=load(path); meta=json.loads(path.with_suffix('.json').read_text(encoding='utf-8'))
@@ -61,6 +61,8 @@ def main():
         energy={k:float(np.trapezoid(q[k+'_engineering_W'],t)/1000) for k in PARTS}
         nominal[(meta['case_id'],side)]=energy
         checks.append(dict(file=path.name,rows=len(q),classification='S3_ENGINEERING_NOT_MEASURED'))
+        for artifact in [path,path.with_suffix('.json'),ROOT/meta['trace_file']]:
+            artifact_hashes[str(artifact.relative_to(ROOT)).replace('\\','/')]=hashlib.sha256(artifact.read_bytes()).hexdigest()
     assert len(checks)==46
     # Read sensitivity scenario vectors and integrated energies independently.
     parameters=np.genfromtxt(OUT/'sensitivity_parameters.csv',delimiter=',',names=True,dtype=None,encoding='utf-8')
@@ -89,6 +91,7 @@ def main():
                 normalization_diagnostic_outside_fraction=float(np.mean((scales<diagnostic[0])|(scales>diagnostic[1]))),
                 diagnostic_interpretation='large normalization reveals uncalibrated raw weights; this is a conserved allocation, not absolute 3IR copper-loss validation',
                 model_code_commit=inputs['provenance']['code_commit'],matlab_new_test_groups=tests['test_group_count'],
+                interface_and_parent_sha256=artifact_hashes,
                 M0_protected_files_unchanged=True,strict_mode='EXPECTED_REJECTION',M1_approved=False,M2_executed=False)
     (OUT/'independent_checks.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
     print('Independent source checks PASS:',len(checks),'single-side histories;',len(sensitivity),'sensitivity runs; max residual W',max_residual)

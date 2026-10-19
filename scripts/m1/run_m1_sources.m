@@ -3,7 +3,9 @@ function run_m1_sources
 root=fileparts(fileparts(fileparts(mfilename('fullpath')))); c=m1_load(root);
 out=fullfile(root,'results','m1','engineering'); dest=fullfile(out,'interface');
 if ~exist(dest,'dir'), mkdir(dest); end
-s=load(fullfile(root,'results','m1','m1_results.mat'),'traces','summary');
+s=load(fullfile(root,'results','m1','m1_results.mat'),'traces','summary','input_provenance');
+assert(isfield(s,'input_provenance'),'m1:StaleTrace','Dynamics provenance missing; re-run run_m1');
+m1_check_trace_provenance(c,s.input_provenance);
 tests=m1_source_tests(c,root,s.traces,s.summary); writejson(fullfile(out,'tests.json'),tests);
 energies={}; maxResidual=0;
 for k=1:height(s.summary)
@@ -80,7 +82,7 @@ for j=1:2
     tr=s.traces{find(strcmp(s.summary.case_id,ids{j}))}; q=m1_sources(c,tr,'left','engineering');
     nexttile; area(q.time_s,[q.copper_engineering_W q.iron_engineering_W q.rotor_other_engineering_W q.inverter_engineering_W]/1000);
     hold on; plot(q.time_s,q.emot_total_reference_W/1000,'k--','LineWidth',1.2);
-    xlabel('Time (s)'); ylabel('Single-side heat (kW)'); title({ids{j},'S3 ENGINEERING allocation; EPA reference total (regen estimated)'},'Interpreter','none');
+    xlabel('Time (s)'); ylabel('Single-side heat (kW)'); title({ids{j},'S3 ENGINEERING allocation; EPA reference/estimated total'},'Interpreter','none','FontSize',10);
     legend('Copper','Iron','Rotor/other','Inverter external','EMOT total','Location','best'); grid on;
     nexttile; plot(q.time_s,[q.gear_mesh_engineering_W q.gear_bearing_engineering_W q.gear_other_engineering_W]/1000,'LineWidth',1.4);
     xlabel('Time (s)'); ylabel('Single-side gear heat (kW)'); title('S3 ENGINEERING; fixed total gearbox-loss budget');

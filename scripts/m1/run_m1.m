@@ -54,7 +54,8 @@ validation=struct('status','PASS','stage_status','PARTIAL','case_count',height(s
     'test_groups',tests.test_group_count,'matlab',version,'release',version('-release'), ...
     'M0_baseline_commit',c.provenance.baseline_commit,'winding_sources_available',false,'M2_started',false);
 writejson(fullfile(out,'validation.json'),validation);
-save(fullfile(out,'m1_results.mat'),'summary','rows','traces','options','tests','ready','validation');
+input_provenance=c.provenance;
+save(fullfile(out,'m1_results.mat'),'summary','rows','traces','options','tests','ready','validation','input_provenance');
 plots(c,summary,traces,out);
 disp(summary(:,{'case_id','initial_left_disc_torque_Nm','left_disc_contact_energy_kJ','battery_net_energy_kJ','energy_residual_relative'}));
 disp(validation);
@@ -69,19 +70,20 @@ for k=1:3
     tr=traces{idx}; plot(tr.time_s,tr.disc_contact_power_W_left/1000,'Color',colors(k,:),'LineWidth',1.5);
 end
 xlabel('Time (s)'); ylabel('One rear disc contact power (kW)'); legend('0 kW','30 kW','60 kW');
-title('0.6g stop; total DC charge cap (SCREENING)'); grid on;
+title({'0.6g stop; total DC charge cap','EPA reference + S3 ENGINEERING (regen estimated)'}); grid on;
 nexttile; idx=find(strcmp(summary.case_id,'stop_z06_bat30_road1')); tr=traces{idx};
 plot(tr.time_s,[-tr.dc_power_total_W tr.emot_combined_heat_W_left+tr.emot_combined_heat_W_right ...
     tr.gear_heat_assumed_W_left+tr.gear_heat_assumed_W_right]/1000,'LineWidth',1.5);
 xlabel('Time (s)'); ylabel('Whole-vehicle power (kW)'); legend('Battery recovery','EMOT combined heat','Gear heat (assumed)'); grid on;
+title('EPA reference + S3 ENGINEERING; regen estimated');
 nexttile; idx=find(strcmp(summary.case_id,'short_drive_0_to_80')); tr=traces{idx};
 plot(tr.time_s,[tr.emot_combined_heat_W_left tr.motor_total_heat_estimated_W_left tr.inverter_heat_estimated_W_left]/1000,'LineWidth',1.5);
 xlabel('Time (s)'); ylabel('One-side drive heat estimate (kW)'); legend('EMOT combined','Motor total (estimated)','Inverter (estimated)');
-title('ORNL ratio split only inside sparse-data hull'); grid on;
+title('ORNL reference ratio transfer ESTIMATE; sparse-data hull'); grid on;
 nexttile; base=summary(1:18,:); E=base.left_disc_contact_energy_kJ;
 E=reshape(E,3,3,2); bar([.3 .6 .8],E(:,:,2)');
 xlabel('Deceleration (g)'); ylabel('One rear disc friction work (kJ)'); legend('0 kW','30 kW','60 kW');
-title('Road load included; mirrored regen map'); grid on;
+title('S3 ENGINEERING; road load + mirrored regen map'); grid on;
 exportgraphics(f,fullfile(out,'source_power_curves.png'),'Resolution',180);
 exportgraphics(f,fullfile(out,'source_power_curves.svg'),'ContentType','vector'); close(f);
 f=figure('Visible','off','Color','w','Position',[100 100 1100 420]); tiledlayout(1,2);
@@ -90,10 +92,10 @@ E=[nominal.front_axle_friction_energy_kJ 2*nominal.left_disc_contact_energy_kJ .
     nominal.road_energy_kJ nominal.gear_heat_energy_total_kJ nominal.emot_heat_energy_total_kJ -nominal.battery_net_energy_kJ];
 bar(x,E,'stacked'); ylabel('Whole-vehicle energy (kJ)'); xlabel('Deceleration (g)');
 legend('Front friction','Both rear discs','Road','Gear','EMOT','Recovered DC','Location','eastoutside');
-title('Energy ledger; 30 kW total DC charge cap'); grid on;
+title('EPA reference + S3 ENGINEERING; 30 kW total DC cap'); grid on;
 nexttile; idx=find(strcmp(summary.case_id,'unequal_wheel_speed_port_test')); tr=traces{idx};
 plot(tr.time_s,[tr.motor_rpm_left tr.motor_rpm_right],'LineWidth',1.5); xlabel('Time (s)'); ylabel('Motor speed (rpm)');
-legend('Left port','Right port'); title('Imposed L/R speed test; exchange power accounted'); grid on;
+legend('Left port','Right port'); title('S3 ENGINEERING: imposed L/R speed; exchange included'); grid on;
 exportgraphics(f,fullfile(out,'energy_and_independent_sides.png'),'Resolution',180);
 exportgraphics(f,fullfile(out,'energy_and_independent_sides.svg'),'ContentType','vector'); close(f);
 end

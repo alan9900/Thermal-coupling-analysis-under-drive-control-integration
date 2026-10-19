@@ -81,7 +81,10 @@ groups{end+1}='all 32 one-at-a-time parameter endpoints inside deterministic int
 assert(isempty(c.base.drive.rear_motor_per_side.motor_loss_map_file));
 assert(isempty(c.partition.metadata.actual_internal_loss_map));
 assert(exist(fullfile(root,'data','raw','m1','manifest.json'),'file')==2);
-groups{end+1}='M0 reference unknowns and actual-map nulls preserved; traceable source manifest exists';
+m1_check_trace_provenance(c,c.provenance);
+stale=c.provenance; stale.input_sha256=struct;
+mustError(@()m1_check_trace_provenance(c,stale),'m1:StaleTrace');
+groups{end+1}='M0 unknowns preserved, traceable manifest exists, mismatched dynamics-input snapshot rejected';
 result=struct('status','PASS','test_group_count',numel(groups),'test_groups',{groups}, ...
     'single_side_cases',2*numel(traces),'maximum_partition_residual_W',maxResidual, ...
     'strict_mode','EXPECTED_REJECTION','experimental_validation','NOT EXECUTED','M2_executed',false, ...
