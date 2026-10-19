@@ -33,5 +33,7 @@ Toyota 2010 Prius MG2（参考单侧永磁电机）：60kW、207Nm、13500rpm，
 ## 阶段
 M0单位和参数审计/新后轴动力学→M1 MATLAB再生/摩擦热源→M2单侧热阻网络→M3 CAD概念及安装约束→M4 ANSYS瞬态传热→M5局部Fluent→M6多目标代理优化→M7极端工况、验证及论文图表。
 
+[工作安排图片（2026-10-19，图稿v1）](reports/planning/research_work_plan_v04_2026-10-19_v1.png)：M0–M7共8阶段，列明任务、交付物和验收流程；M0待验收，M1–M7未开始。工期尚未确定。
+
 ## 阶段版本与回退
 每个阶段均使用独立开发分支、Git提交、PR人工验收与**批准后不可移动的里程碑Tag**（`M0-v1.0`到`M7-v1.0`）。详见 [Git阶段版本管理制度](docs/GIT_VERSIONING_POLICY.md) 和 [里程碑版本登记](docs/STAGE_VERSIONS.md)。未通过验收不能标记为已完成。既有M0报告与输出不代表已获用户批准打正式Tag。
