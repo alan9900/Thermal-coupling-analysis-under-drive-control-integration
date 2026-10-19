@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "test_groups": [
+    "M0 0.6g torque and initial power regression",
+    "independent stop-energy analytic solution including front and both rear sides",
+    "disc own-wheel 1:1 and each motor 9:1 speed",
+    "explicit active idle versus omitted disconnected drag",
+    "signed DC power; split closure; regen and winding losses remain unknown",
+    "no extrapolation of sparse ORNL component split",
+    "different drive and backdrive efficiencies use correct power direction",
+    "30 kW cap is total vehicle DC charge; L/R symmetry",
+    "screening SOC and temperature charge-disable fallbacks",
+    "low-speed regen fades and zero-speed power stays finite",
+    "single-side regen loss blends friction and reuses shared battery headroom",
+    "independent L/R wheel speeds include explicit non-longitudinal exchange port",
+    "unachievable braking demand is flagged, not silently declared feasible",
+    "traction battery discharge cap yields explicit unmet demand",
+    "reject speed/torque/voltage extrapolation and unsupported reverse motion",
+    "strict evidence mode rejects unsupported thermal claims and mirrored regen",
+    "grade work and load transfer have an explicit energy port",
+    "time-step refinement changes nominal disc energy by less than 0.1 percent"
+  ],
+  "test_group_count": 18,
+  "disc_energy_refinement_relative": 3.7086671220530048E-5,
+  "analytic_stop_energy_kJ": 149.53159533855739,
+  "strict_mode": "expected rejection: missing validated thermal inputs",
+  "experimental_validation": "NOT EXECUTED",
+  "matlab": "25.1.0.2943329 (R2025a)",
+  "release": "2025a"
+}

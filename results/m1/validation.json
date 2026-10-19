@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "stage_status": "PARTIAL",
+  "case_count": 23,
+  "maximum_energy_residual_relative": 7.2031980380415922E-16,
+  "maximum_point_power_residual_W": 9.0949470177292824E-11,
+  "test_groups": 18,
+  "matlab": "25.1.0.2943329 (R2025a)",
+  "release": "2025a",
+  "M0_baseline_commit": "b13f265b1ff0add1f9e8b166d2c1bfa4ac8a8d16",
+  "winding_sources_available": false,
+  "M2_started": false
+}

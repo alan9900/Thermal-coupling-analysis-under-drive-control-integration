@@ -1,0 +1,367 @@
+{
+  "status": "PASS",
+  "single_side_exports": [
+    {
+      "file": "high_soc_no_regen_left.csv",
+      "rows": 237,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "high_soc_no_regen_right.csv",
+      "rows": 237,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "left_regen_unavailable_left.csv",
+      "rows": 237,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "left_regen_unavailable_right.csv",
+      "rows": 237,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "short_drive_0_to_80_left.csv",
+      "rows": 757,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "short_drive_0_to_80_right.csv",
+      "rows": 757,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z03_bat00_road0_left.csv",
+      "rows": 473,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z03_bat00_road0_right.csv",
+      "rows": 473,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z03_bat00_road1_left.csv",
+      "rows": 473,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z03_bat00_road1_right.csv",
+      "rows": 473,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z03_bat30_road0_left.csv",
+      "rows": 473,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z03_bat30_road0_right.csv",
+      "rows": 473,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z03_bat30_road1_left.csv",
+      "rows": 473,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z03_bat30_road1_right.csv",
+      "rows": 473,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z03_bat60_road0_left.csv",
+      "rows": 473,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z03_bat60_road0_right.csv",
+      "rows": 473,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z03_bat60_road1_left.csv",
+      "rows": 473,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z03_bat60_road1_right.csv",
+      "rows": 473,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z06_bat00_road0_left.csv",
+      "rows": 237,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z06_bat00_road0_right.csv",
+      "rows": 237,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z06_bat00_road1_left.csv",
+      "rows": 237,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z06_bat00_road1_right.csv",
+      "rows": 237,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z06_bat30_road0_left.csv",
+      "rows": 237,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z06_bat30_road0_right.csv",
+      "rows": 237,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z06_bat30_road1_left.csv",
+      "rows": 237,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z06_bat30_road1_right.csv",
+      "rows": 237,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z06_bat60_road0_left.csv",
+      "rows": 237,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z06_bat60_road0_right.csv",
+      "rows": 237,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z06_bat60_road1_left.csv",
+      "rows": 237,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z06_bat60_road1_right.csv",
+      "rows": 237,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z08_bat00_road0_left.csv",
+      "rows": 178,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z08_bat00_road0_right.csv",
+      "rows": 178,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z08_bat00_road1_left.csv",
+      "rows": 178,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z08_bat00_road1_right.csv",
+      "rows": 178,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z08_bat30_road0_left.csv",
+      "rows": 178,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z08_bat30_road0_right.csv",
+      "rows": 178,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z08_bat30_road1_left.csv",
+      "rows": 178,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z08_bat30_road1_right.csv",
+      "rows": 178,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z08_bat60_road0_left.csv",
+      "rows": 178,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z08_bat60_road0_right.csv",
+      "rows": 178,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z08_bat60_road1_left.csv",
+      "rows": 178,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "stop_z08_bat60_road1_right.csv",
+      "rows": 178,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "temperature_charge_disabled_left.csv",
+      "rows": 237,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "temperature_charge_disabled_right.csv",
+      "rows": 237,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "unequal_wheel_speed_port_test_left.csv",
+      "rows": 237,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    },
+    {
+      "file": "unequal_wheel_speed_port_test_right.csv",
+      "rows": 237,
+      "classification": "S3_ENGINEERING_NOT_MEASURED"
+    }
+  ],
+  "sensitivity_runs": 322,
+  "scenario_count_per_case": 161,
+  "maximum_partition_residual_W": 1.0186340659856796e-10,
+  "maximum_partition_energy_residual_J": 2.008717412856882e-11,
+  "motor_budget_normalization_min": 0.263605182720947,
+  "motor_budget_normalization_max": 5.33270102911882,
+  "normalization_diagnostic_outside_fraction": 0.0014652840396753833,
+  "diagnostic_interpretation": "large normalization reveals uncalibrated raw weights; this is a conserved allocation, not absolute 3IR copper-loss validation",
+  "model_code_commit": "2b336e62485e0183f79428dd6009ec7aa32a1ab3",
+  "matlab_new_test_groups": 11,
+  "interface_and_parent_sha256": {
+    "results/m1/engineering/interface/high_soc_no_regen_left.csv": "3d5b7de56a120257d4691d4b6f7ce65defe089ac87eaf60ce035da0600f3fdbd",
+    "results/m1/engineering/interface/high_soc_no_regen_left.json": "c05d1ce572d9e9602aa6ed3e39ff4ea12e5e1b9ebeabfff72f92c6510337d399",
+    "results/m1/traces/high_soc_no_regen.csv": "c9f381fcad50be334e733415625dbe13c864ecde1d36fabbf37e2a543b6140ac",
+    "results/m1/engineering/interface/high_soc_no_regen_right.csv": "3d5b7de56a120257d4691d4b6f7ce65defe089ac87eaf60ce035da0600f3fdbd",
+    "results/m1/engineering/interface/high_soc_no_regen_right.json": "d0a46db0774c22ac85b13e4d89314351d4ae054c61d6e2426799fb43db570eaa",
+    "results/m1/engineering/interface/left_regen_unavailable_left.csv": "44eedae625ab04347aa8821b1fb5df40c71426f6f489bc36c9db335452d18f1f",
+    "results/m1/engineering/interface/left_regen_unavailable_left.json": "27022f2413064a76243416f3ca11d1d58dc7008de8ca5a677c79755e908050fa",
+    "results/m1/traces/left_regen_unavailable.csv": "faf86ce106e0ff2451cf1665b13dda6e31ef71e36fc9a41ed08668d972ce74de",
+    "results/m1/engineering/interface/left_regen_unavailable_right.csv": "a0fec530d4fdca78a34d3bf5835e1f1b65b53eeb645461a41f06f32028697d8d",
+    "results/m1/engineering/interface/left_regen_unavailable_right.json": "16f755cc0f523c413792e45f54af600dbf6c1d16f020b49e15579a3b791a38d9",
+    "results/m1/engineering/interface/short_drive_0_to_80_left.csv": "92a1180f367b91a558d64515bd8600ef0d598677dea40755f09ad239b1e3d08c",
+    "results/m1/engineering/interface/short_drive_0_to_80_left.json": "aa33895b68928ffd7c91e07ffd7ccea5fef1a6dc876b3736540e12ebe61cee43",
+    "results/m1/traces/short_drive_0_to_80.csv": "e638a8183847edfb7f6f4318a2595926300e1baa9f40e9cf134daa023f32bb32",
+    "results/m1/engineering/interface/short_drive_0_to_80_right.csv": "92a1180f367b91a558d64515bd8600ef0d598677dea40755f09ad239b1e3d08c",
+    "results/m1/engineering/interface/short_drive_0_to_80_right.json": "2df9843168768c7c7952b6b346547308762d43368aa46305a6f08bb9a7313289",
+    "results/m1/engineering/interface/stop_z03_bat00_road0_left.csv": "02c91af204d619c1b64e117e90c9e5130fe3e9f145d175e380f2e5f721e9b187",
+    "results/m1/engineering/interface/stop_z03_bat00_road0_left.json": "a03190f012f0a926b6e77be549b02866fd7931ecfc50e090e17e2f043db92fd8",
+    "results/m1/traces/stop_z03_bat00_road0.csv": "803f1f756f5f931e65183cc39c5596a90603881babacb87d8fcad09ff6d84eda",
+    "results/m1/engineering/interface/stop_z03_bat00_road0_right.csv": "02c91af204d619c1b64e117e90c9e5130fe3e9f145d175e380f2e5f721e9b187",
+    "results/m1/engineering/interface/stop_z03_bat00_road0_right.json": "1763307a168083f0a6e6b2686771f46a73d66ce23d6eab669d89dd453d6b3b55",
+    "results/m1/engineering/interface/stop_z03_bat00_road1_left.csv": "b3bb36ed64bda4a1c9816653d17387ce3ac6fdc401bd38fd6058c4fe7b4d9be7",
+    "results/m1/engineering/interface/stop_z03_bat00_road1_left.json": "ca9833b8774a0e5e8ee706a0ec3139d64dca9750b3e522b24eb3ed8e1d0bafd8",
+    "results/m1/traces/stop_z03_bat00_road1.csv": "0221b11c52868945db485911cb50bdc824e78b2bee89e80dcf151349953b761d",
+    "results/m1/engineering/interface/stop_z03_bat00_road1_right.csv": "b3bb36ed64bda4a1c9816653d17387ce3ac6fdc401bd38fd6058c4fe7b4d9be7",
+    "results/m1/engineering/interface/stop_z03_bat00_road1_right.json": "3a3ed1dff93b92260b85f20e53e64635a69e08508710fdc72e8621d1a47d099b",
+    "results/m1/engineering/interface/stop_z03_bat30_road0_left.csv": "54e8086de8723bec8963bc323abc15fa51a59ba4cef341950a90f7be0eec6688",
+    "results/m1/engineering/interface/stop_z03_bat30_road0_left.json": "155846363fb87abe7d17a7f405af71df1d41dd98de66d6a9f3f297b06ef46fd1",
+    "results/m1/traces/stop_z03_bat30_road0.csv": "6b3bb5882dc01fd7d4736f7b934b66cf37df849e8b483d5365d4fee86fb2b953",
+    "results/m1/engineering/interface/stop_z03_bat30_road0_right.csv": "54e8086de8723bec8963bc323abc15fa51a59ba4cef341950a90f7be0eec6688",
+    "results/m1/engineering/interface/stop_z03_bat30_road0_right.json": "d4c48e782966f6c7aa73ead7259cd8fddfaa0194098c4e44303f471cd404c38c",
+    "results/m1/engineering/interface/stop_z03_bat30_road1_left.csv": "4f1a17ccd9945e85234edd141bbd5a1898dcb2b56be6fa39456bb01196826353",
+    "results/m1/engineering/interface/stop_z03_bat30_road1_left.json": "70b62420a8b33dc3dd7d0cb07f477d77ec5ee960e218c4fdfbfb9b198b40ccee",
+    "results/m1/traces/stop_z03_bat30_road1.csv": "e0b185ec78d78369be1503b5b347b8c763d1f8dac5311f485eeb372f28202dc4",
+    "results/m1/engineering/interface/stop_z03_bat30_road1_right.csv": "4f1a17ccd9945e85234edd141bbd5a1898dcb2b56be6fa39456bb01196826353",
+    "results/m1/engineering/interface/stop_z03_bat30_road1_right.json": "4e2b2886c64b5fd4dff8fad471a5e92f4fc65048454840e9833fd520e068512e",
+    "results/m1/engineering/interface/stop_z03_bat60_road0_left.csv": "835e07f16f25613121b935634b7ca75f1d0d08696f426302cfdc2c03e015219c",
+    "results/m1/engineering/interface/stop_z03_bat60_road0_left.json": "acb6b58c6ca700b52ece6402c62034a63da1260a6a3c08bc0b472fefb1872f7b",
+    "results/m1/traces/stop_z03_bat60_road0.csv": "905946eda0bde4603c9cd1ae98e2a8dd4d5b897ad6301739f9b558794ea48b59",
+    "results/m1/engineering/interface/stop_z03_bat60_road0_right.csv": "835e07f16f25613121b935634b7ca75f1d0d08696f426302cfdc2c03e015219c",
+    "results/m1/engineering/interface/stop_z03_bat60_road0_right.json": "393463539a16230686a88fe9a6e38cb15ae187a865a9a3601b5e30a2b4de7170",
+    "results/m1/engineering/interface/stop_z03_bat60_road1_left.csv": "95946f1709918a2e066ddc94cfd6c794b4f0f458d00f15a57951e67ecfe41305",
+    "results/m1/engineering/interface/stop_z03_bat60_road1_left.json": "d0a51209d070acc1d6d7786599bad5bcd5483224ffe0584c9b34027b1b066398",
+    "results/m1/traces/stop_z03_bat60_road1.csv": "42a9dc437c6b21e416c208363b7477b5932b8589cf6f1f67f6dea64d1de853ad",
+    "results/m1/engineering/interface/stop_z03_bat60_road1_right.csv": "95946f1709918a2e066ddc94cfd6c794b4f0f458d00f15a57951e67ecfe41305",
+    "results/m1/engineering/interface/stop_z03_bat60_road1_right.json": "4220a601218946ee6addb2744cf0b4aef1ca73fe5d3db509b44de7999af52adc",
+    "results/m1/engineering/interface/stop_z06_bat00_road0_left.csv": "5dd48f12d303ed909928dac7f9af01529343321df465ac37a59e275e5162c2a2",
+    "results/m1/engineering/interface/stop_z06_bat00_road0_left.json": "6ee967cb4178e7f32b8664017e0b5431c39a66ee6d578189fec352123844d1c4",
+    "results/m1/traces/stop_z06_bat00_road0.csv": "9fc64e40cd3f5290a20c2335b9a4638ca5a1bea8fe05965019a6e1ebd98712b1",
+    "results/m1/engineering/interface/stop_z06_bat00_road0_right.csv": "5dd48f12d303ed909928dac7f9af01529343321df465ac37a59e275e5162c2a2",
+    "results/m1/engineering/interface/stop_z06_bat00_road0_right.json": "ba315a9145cde6856d75bb85aea0cf460b89742b3b54e9287e8fe849071cfcbb",
+    "results/m1/engineering/interface/stop_z06_bat00_road1_left.csv": "3d5b7de56a120257d4691d4b6f7ce65defe089ac87eaf60ce035da0600f3fdbd",
+    "results/m1/engineering/interface/stop_z06_bat00_road1_left.json": "2a71cadd191411f7ad621204fa1c05200d7b0f616f539b033a354bc1a9278ac7",
+    "results/m1/traces/stop_z06_bat00_road1.csv": "c9f381fcad50be334e733415625dbe13c864ecde1d36fabbf37e2a543b6140ac",
+    "results/m1/engineering/interface/stop_z06_bat00_road1_right.csv": "3d5b7de56a120257d4691d4b6f7ce65defe089ac87eaf60ce035da0600f3fdbd",
+    "results/m1/engineering/interface/stop_z06_bat00_road1_right.json": "82220749e6d2da548efd610eae17487c9a86e66ebb8b1a522e4754936f7f1d18",
+    "results/m1/engineering/interface/stop_z06_bat30_road0_left.csv": "284f8af9fb68b49e68b19aa5bea6e4d31ed96e79de2b4afdb7e71249e9bd1395",
+    "results/m1/engineering/interface/stop_z06_bat30_road0_left.json": "b158dd3566b0dc0a664cd13a75c45b51c30cb19885f0c40bb6cf0c5eaf8ee41b",
+    "results/m1/traces/stop_z06_bat30_road0.csv": "bc4c980cfb2e1495f61c4bdd3f629ce5d9db86174d2d89f6954c29ec6fc812e9",
+    "results/m1/engineering/interface/stop_z06_bat30_road0_right.csv": "284f8af9fb68b49e68b19aa5bea6e4d31ed96e79de2b4afdb7e71249e9bd1395",
+    "results/m1/engineering/interface/stop_z06_bat30_road0_right.json": "07448eca872faa853ae3501e35d0265f9099e4500f31dba75d09b354933ea8bd",
+    "results/m1/engineering/interface/stop_z06_bat30_road1_left.csv": "5635ec64e9ac8791823f45a6a62658b6434f62bb7f8e61971e394c07ed261020",
+    "results/m1/engineering/interface/stop_z06_bat30_road1_left.json": "c6ad676756c99a77af77d52dd799c34bf5aaae2f408e769660b65964ba253b73",
+    "results/m1/traces/stop_z06_bat30_road1.csv": "97223c2d4cebbae3bafad3592b116431d77ed37638715775053e095f3f519f23",
+    "results/m1/engineering/interface/stop_z06_bat30_road1_right.csv": "5635ec64e9ac8791823f45a6a62658b6434f62bb7f8e61971e394c07ed261020",
+    "results/m1/engineering/interface/stop_z06_bat30_road1_right.json": "437982170edc8cb9b79694480802c0d78f6ce9d85f415dd0f26b738d0f2ce903",
+    "results/m1/engineering/interface/stop_z06_bat60_road0_left.csv": "42257dabcf1d196caf8d69f98ebe329ecc6d47b3c6cf8eb418436ee531a0563e",
+    "results/m1/engineering/interface/stop_z06_bat60_road0_left.json": "808401606afe59c5bddf8aa7faf989e59911f67e3aebd3ff1d02f5aa58a93407",
+    "results/m1/traces/stop_z06_bat60_road0.csv": "6cd6df9ea0cac4244bf3df261fabefe5d45ab4902e65ecc1635d65665f0053d1",
+    "results/m1/engineering/interface/stop_z06_bat60_road0_right.csv": "42257dabcf1d196caf8d69f98ebe329ecc6d47b3c6cf8eb418436ee531a0563e",
+    "results/m1/engineering/interface/stop_z06_bat60_road0_right.json": "a8970f65b5ac4cd3d0a1892d3cbd611d076c8c1072b3a9e9aaa7ced1b8c77a94",
+    "results/m1/engineering/interface/stop_z06_bat60_road1_left.csv": "4f251834b0cc17e56832bafc5d945c9c5a2d58a2cfc14d28cdf994b44cc05ee6",
+    "results/m1/engineering/interface/stop_z06_bat60_road1_left.json": "e2e325ef559dbae991adaf8c25f219cf60f93c4b135ed75998970e87c9dfe899",
+    "results/m1/traces/stop_z06_bat60_road1.csv": "2274f966cc4e39af6377e2f2508bb9535de22d88be31a0d7ed19e155bf918409",
+    "results/m1/engineering/interface/stop_z06_bat60_road1_right.csv": "4f251834b0cc17e56832bafc5d945c9c5a2d58a2cfc14d28cdf994b44cc05ee6",
+    "results/m1/engineering/interface/stop_z06_bat60_road1_right.json": "71ca1adbfa71ffa3d29dac1ba6658f1ebe012b51985dff31c9e36d9f4f07839b",
+    "results/m1/engineering/interface/stop_z08_bat00_road0_left.csv": "88e511dbc1d7625fe46b6b391972e3930df12ea8a161e4398307643c0694877b",
+    "results/m1/engineering/interface/stop_z08_bat00_road0_left.json": "137392cc595ca98cd03220e086fe9e1f057e80a8fdbbfe3215763d4751ad0e33",
+    "results/m1/traces/stop_z08_bat00_road0.csv": "2d711109d0ee6db8acdda5e83846b892b081cab7a747e87626a0632b5f00d60a",
+    "results/m1/engineering/interface/stop_z08_bat00_road0_right.csv": "88e511dbc1d7625fe46b6b391972e3930df12ea8a161e4398307643c0694877b",
+    "results/m1/engineering/interface/stop_z08_bat00_road0_right.json": "29a30f2b013744e287d1ee7d275239e61b38210bc5b41a05c727872d3cdf77aa",
+    "results/m1/engineering/interface/stop_z08_bat00_road1_left.csv": "66552b257fa64ff6f1e537f3a2dcf3b8880dedd13f2fd29f022614fb93b67bd7",
+    "results/m1/engineering/interface/stop_z08_bat00_road1_left.json": "331d8fb2e442c25daa293e33aa0edb9adaaf49e3dc20abd160704cf154fce4c5",
+    "results/m1/traces/stop_z08_bat00_road1.csv": "c5aacb3cffbfabce7c49be7e946998a1793b271eeb9619a800dfd200c2ce57d8",
+    "results/m1/engineering/interface/stop_z08_bat00_road1_right.csv": "66552b257fa64ff6f1e537f3a2dcf3b8880dedd13f2fd29f022614fb93b67bd7",
+    "results/m1/engineering/interface/stop_z08_bat00_road1_right.json": "1dfbd180fe72a912ed0731cd4069241e1683d3bfeef5173164c5dd550f522545",
+    "results/m1/engineering/interface/stop_z08_bat30_road0_left.csv": "5188b0497b04344da68ab932ab41b30526af482a102404cb0a2b365c10141cfd",
+    "results/m1/engineering/interface/stop_z08_bat30_road0_left.json": "4656ce3cfaf52250618a14c9d698fc7c8f0af1f552fe10ece26a16881e5d748d",
+    "results/m1/traces/stop_z08_bat30_road0.csv": "d365eb46802e6e76b16fe92d617501266334974067fca1203b66dd00eedb86db",
+    "results/m1/engineering/interface/stop_z08_bat30_road0_right.csv": "5188b0497b04344da68ab932ab41b30526af482a102404cb0a2b365c10141cfd",
+    "results/m1/engineering/interface/stop_z08_bat30_road0_right.json": "71d6a7c89044cca2f4ccff0d1b8b4a85d1c51418f2d9f5c507de5d58db98953d",
+    "results/m1/engineering/interface/stop_z08_bat30_road1_left.csv": "00cd0bb144aa597fb8db977ffe02192cce0dff943a46115a37e0f5e77386b686",
+    "results/m1/engineering/interface/stop_z08_bat30_road1_left.json": "5e42b004f1ccd3819cf755640b6788a78acb4bee16ebdb7d925261e4ac1efbed",
+    "results/m1/traces/stop_z08_bat30_road1.csv": "ab5aebf4457c996eb1e1b62b7beca09c8ba1db12cddc2e83784da3ab371a148f",
+    "results/m1/engineering/interface/stop_z08_bat30_road1_right.csv": "00cd0bb144aa597fb8db977ffe02192cce0dff943a46115a37e0f5e77386b686",
+    "results/m1/engineering/interface/stop_z08_bat30_road1_right.json": "cb13bb240b1cb6c483f63c706c3ba33ff05d09a3c2aec5b32bcce68098bd55c4",
+    "results/m1/engineering/interface/stop_z08_bat60_road0_left.csv": "6f738e7ec5559e63d2ff8594fc7c1c4ed3d5af340a98d2700c0dbc317fd2cf0b",
+    "results/m1/engineering/interface/stop_z08_bat60_road0_left.json": "6f41aaf0875b5d78099551cd08063209879dbd4670df71890c39ac896ba4ccd3",
+    "results/m1/traces/stop_z08_bat60_road0.csv": "78dce1fadd784c5b7b49620f2f35bc4e7a23769ebbbd54440cf40760ec097521",
+    "results/m1/engineering/interface/stop_z08_bat60_road0_right.csv": "6f738e7ec5559e63d2ff8594fc7c1c4ed3d5af340a98d2700c0dbc317fd2cf0b",
+    "results/m1/engineering/interface/stop_z08_bat60_road0_right.json": "fad3dbb7a14621a45c862b0cc65d2a13c8267b6ec3b67a2f89feaa029dbcdb76",
+    "results/m1/engineering/interface/stop_z08_bat60_road1_left.csv": "b0889f79a607189e78c84fd8d925f140b04638004d0fdc2b4a54090e938ae5ea",
+    "results/m1/engineering/interface/stop_z08_bat60_road1_left.json": "e4ce06ee5c2b9e9667ef04cba3af82cf4f2b9bed29bd67ee83ed8e04dadae953",
+    "results/m1/traces/stop_z08_bat60_road1.csv": "04148d78886a90fc1d5524af36d1ae550d98b8e9fec47a8d6efd3188f4ceff9e",
+    "results/m1/engineering/interface/stop_z08_bat60_road1_right.csv": "b0889f79a607189e78c84fd8d925f140b04638004d0fdc2b4a54090e938ae5ea",
+    "results/m1/engineering/interface/stop_z08_bat60_road1_right.json": "c6f1385cecb67a85bdc36cbce2eed111c6249040d820d7aeb318a5a30243cfb1",
+    "results/m1/engineering/interface/temperature_charge_disabled_left.csv": "3d5b7de56a120257d4691d4b6f7ce65defe089ac87eaf60ce035da0600f3fdbd",
+    "results/m1/engineering/interface/temperature_charge_disabled_left.json": "2ad70dc717187709b46266a87377cd023a646e1cd55e2c4f462d1b6c93cc15c8",
+    "results/m1/traces/temperature_charge_disabled.csv": "c9f381fcad50be334e733415625dbe13c864ecde1d36fabbf37e2a543b6140ac",
+    "results/m1/engineering/interface/temperature_charge_disabled_right.csv": "3d5b7de56a120257d4691d4b6f7ce65defe089ac87eaf60ce035da0600f3fdbd",
+    "results/m1/engineering/interface/temperature_charge_disabled_right.json": "88c58a716375b136f77fd33d5e95014b010e8f74bcc3ce5b8390cf8a3a0fd3f8",
+    "results/m1/engineering/interface/unequal_wheel_speed_port_test_left.csv": "0bf19ab12623fecceacc7018e65d8f8bff4b786225029fecdf7bf7f19c6c3138",
+    "results/m1/engineering/interface/unequal_wheel_speed_port_test_left.json": "573b0b2222960f7288d59376a233f8278eba3f3f301655f539f491e1378f8845",
+    "results/m1/traces/unequal_wheel_speed_port_test.csv": "aebce05ee14ec6641ff57b154abe41cb1f803d4cb90f319f09dea1aed975eac3",
+    "results/m1/engineering/interface/unequal_wheel_speed_port_test_right.csv": "a1b5a6f752e7745991e70fae6c3f08b153912c7557387b8b4e784c0a04b58045",
+    "results/m1/engineering/interface/unequal_wheel_speed_port_test_right.json": "beb86ecfd7208753735fa3d4fab622a091d7483a1a4b77bff32001c9aa78c477"
+  },
+  "artifact_hash_definition": "UTF-8 text normalized to LF for portable Git checkout verification",
+  "M0_protected_files_unchanged": true,
+  "strict_mode": "EXPECTED_REJECTION",
+  "M1_approved": false,
+  "M2_executed": false
+}

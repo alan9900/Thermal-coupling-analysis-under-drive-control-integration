@@ -1,0 +1,57 @@
+                 case_id                 initial_left_disc_torque_Nm    left_disc_contact_energy_kJ    battery_net_energy_kJ    energy_residual_relative
+    _________________________________    ___________________________    ___________________________    _____________________    ________________________
+
+    {'stop_z03_bat00_road0'         }                428.58                       170.25                            0                  2.5146e-16       
+    {'stop_z03_bat30_road0'         }                227.94                        48.97                      -211.03                  5.7626e-17       
+    {'stop_z03_bat60_road0'         }                34.726                       2.1783                      -298.16                  2.0955e-17       
+    {'stop_z06_bat00_road0'         }                752.84                       149.53                            0                  8.3819e-17       
+    {'stop_z06_bat30_road0'         }                 552.2                       80.686                      -118.86                  1.0477e-16       
+    {'stop_z06_bat60_road0'         }                358.99                       35.026                      -202.71                  1.0477e-16       
+    {'stop_z08_bat00_road0'         }                911.06                       135.72                            0                           0       
+    {'stop_z08_bat30_road0'         }                710.41                       82.607                      -91.268                  2.0955e-17       
+    {'stop_z08_bat60_road0'         }                 517.2                       44.396                      -160.87                  9.4296e-17       
+    {'stop_z03_bat00_road1'         }                387.69                       158.73                            0                  8.3819e-17       
+    {'stop_z03_bat30_road1'         }                187.05                       39.304                      -207.79                  2.0955e-16       
+    {'stop_z03_bat60_road1'         }            7.5033e-14                       0.9654                      -279.34                  9.4296e-17       
+    {'stop_z06_bat00_road1'         }                716.93                       144.47                            0                   1.624e-16       
+    {'stop_z06_bat30_road1'         }                516.29                       75.868                       -118.5                  2.0955e-17       
+    {'stop_z06_bat60_road1'         }                323.07                       30.985                      -200.99                  5.2387e-17       
+    {'stop_z08_bat00_road1'         }                878.46                       132.27                            0                  1.0477e-17       
+    {'stop_z08_bat30_road1'         }                677.82                       79.274                      -91.117                  2.0955e-17       
+    {'stop_z08_bat60_road1'         }                484.61                       41.411                      -160.14                  5.7626e-17       
+    {'left_regen_unavailable'       }                716.93                       144.47                       -100.5                  2.0955e-17       
+    {'high_soc_no_regen'            }                716.93                       144.47                            0                   1.624e-16       
+    {'temperature_charge_disabled'  }                716.93                       144.47                            0                   1.624e-16       
+    {'unequal_wheel_speed_port_test'}                356.64                       52.256                       -118.9                  1.4144e-16       
+    {'short_drive_0_to_80'          }                     0                            0                        559.7                  7.2032e-16       
+
+                              status: 'PASS'
+                        stage_status: 'PARTIAL'
+                          case_count: 23
+    maximum_energy_residual_relative: 7.2032e-16
+      maximum_point_power_residual_W: 9.0949e-11
+                         test_groups: 18
+                              matlab: '25.1.0.2943329 (R2025a)'
+                             release: '2025a'
+                  M0_baseline_commit: 'b13f265b1ff0add1f9e8b166d2c1bfa4ac8a8d16'
+           winding_sources_available: 0
+                          M2_started: 0
+
+                          status: 'PASS'
+                test_group_count: 11
+                     test_groups: {1×11 cell}
+               single_side_cases: 46
+    maximum_partition_residual_W: 7.2760e-12
+                     strict_mode: 'EXPECTED_REJECTION'
+         experimental_validation: 'NOT EXECUTED'
+                     M2_executed: 0
+                          matlab: '25.1.0.2943329 (R2025a)'
+                         release: '2025a'
+
+            case_id               side                      scenario                     copper_kJ    copper_lower_kJ    copper_upper_kJ    iron_kJ    iron_lower_kJ    iron_upper_kJ    rotor_other_kJ    rotor_other_lower_kJ    rotor_other_upper_kJ    inverter_kJ    inverter_lower_kJ    inverter_upper_kJ    gear_mesh_kJ    gear_mesh_lower_kJ    gear_mesh_upper_kJ    gear_bearing_kJ    gear_bearing_lower_kJ    gear_bearing_upper_kJ    gear_other_kJ    gear_other_lower_kJ    gear_other_upper_kJ    disc_kJ    disc_lower_kJ    disc_upper_kJ    pad_kJ    pad_lower_kJ    pad_upper_kJ    motor_scale_min    motor_scale_max
+    ________________________    ________    _________________________________________    _________    _______________    _______________    _______    _____________    _____________    ______________    ____________________    ____________________    ___________    _________________    _________________    ____________    __________________    __________________    _______________    _____________________    _____________________    _____________    ___________________    ___________________    _______    _____________    _____________    ______    ____________    ____________    _______________    _______________
+
+    {'stop_z06_bat30_road1'}    {'left'}    {'nominal'                              }     4.5485          2.5184             6.0348         0.88478       0.13096          2.3159           0.18325              0.017436                0.98248             0.99116           0.33039              2.3127             2.0793             1.164                 2.5998              0.46848               0.0983                   1.2738               0.19632            0.025857                0.78167          68.282        64.488           72.075        7.5868       3.7934          11.38            0.39185            2.3044     
+    {'stop_z06_bat30_road1'}    {'left'}    {'torque_constant_Nm_per_Arms_endpoint1'}     4.9411          2.5184             6.0348         0.55955       0.13096          2.3159           0.11591              0.017436                0.98248             0.99116           0.33039              2.3127             2.0793             1.164                 2.5998              0.46848               0.0983                   1.2738               0.19632            0.025857                0.78167          68.282        64.488           72.075        7.5868       3.7934          11.38             0.2011            1.2413     
+    {'stop_z06_bat30_road1'}    {'left'}    {'torque_constant_Nm_per_Arms_endpoint3'}      4.189          2.5184             6.0348          1.1823       0.13096          2.3159           0.24527              0.017436                0.98248             0.99116           0.33039              2.3127             2.0793             1.164                 2.5998              0.46848               0.0983                   1.2738               0.19632            0.025857                0.78167          68.282        64.488           72.075        7.5868       3.7934          11.38            0.64273            3.5586     
+

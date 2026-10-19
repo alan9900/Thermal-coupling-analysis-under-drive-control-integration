@@ -1,0 +1,87 @@
+{
+  "DOI": "10.1049/joe.2018.9282",
+  "title": [
+    "Thermal modelling of a small wind turbine gearbox for condition monitoring"
+  ],
+  "author": [
+    {
+      "given": "Becky",
+      "family": "Corley",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "Wind Energy and Control Centre University of Strathclyde Glasgow UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "James",
+      "family": "Carroll",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Wind Energy and Control Centre University of Strathclyde Glasgow UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Alasdair",
+      "family": "McDonald",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Wind Energy and Control Centre University of Strathclyde Glasgow UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "container-title": [
+    "The Journal of Engineering"
+  ],
+  "published": {
+    "date-parts": [
+      [
+        2019,
+        6,
+        27
+      ]
+    ]
+  },
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2019,
+            6,
+            27
+          ]
+        ],
+        "date-time": "2019-06-27T00:00:00Z",
+        "timestamp": 1561593600000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "http://creativecommons.org/licenses/by/3.0/"
+    }
+  ],
+  "URL": "https://doi.org/10.1049/joe.2018.9282"
+}

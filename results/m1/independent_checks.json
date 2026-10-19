@@ -1,0 +1,145 @@
+{
+  "status": "PASS",
+  "stage_status": "PARTIAL",
+  "matlab_test_groups": 18,
+  "independent_python_cases": [
+    {
+      "case": "high_soc_no_regen",
+      "rows": 237,
+      "independent_energy_residual_relative": 1.3411045074462869e-15
+    },
+    {
+      "case": "left_regen_unavailable",
+      "rows": 237,
+      "independent_energy_residual_relative": 1.3411045074462869e-15
+    },
+    {
+      "case": "short_drive_0_to_80",
+      "rows": 757,
+      "independent_energy_residual_relative": 6.8102963268757e-15
+    },
+    {
+      "case": "stop_z03_bat00_road0",
+      "rows": 473,
+      "independent_energy_residual_relative": 1.3411045074462869e-15
+    },
+    {
+      "case": "stop_z03_bat00_road1",
+      "rows": 473,
+      "independent_energy_residual_relative": 1.3411045074462869e-15
+    },
+    {
+      "case": "stop_z03_bat30_road0",
+      "rows": 473,
+      "independent_energy_residual_relative": 1.3411045074462869e-15
+    },
+    {
+      "case": "stop_z03_bat30_road1",
+      "rows": 473,
+      "independent_energy_residual_relative": 1.3411045074462869e-15
+    },
+    {
+      "case": "stop_z03_bat60_road0",
+      "rows": 473,
+      "independent_energy_residual_relative": 1.3411045074462869e-15
+    },
+    {
+      "case": "stop_z03_bat60_road1",
+      "rows": 473,
+      "independent_energy_residual_relative": 1.3411045074462869e-15
+    },
+    {
+      "case": "stop_z06_bat00_road0",
+      "rows": 237,
+      "independent_energy_residual_relative": 1.5087425708770728e-15
+    },
+    {
+      "case": "stop_z06_bat00_road1",
+      "rows": 237,
+      "independent_energy_residual_relative": 1.3411045074462869e-15
+    },
+    {
+      "case": "stop_z06_bat30_road0",
+      "rows": 237,
+      "independent_energy_residual_relative": 1.3411045074462869e-15
+    },
+    {
+      "case": "stop_z06_bat30_road1",
+      "rows": 237,
+      "independent_energy_residual_relative": 1.3411045074462869e-15
+    },
+    {
+      "case": "stop_z06_bat60_road0",
+      "rows": 237,
+      "independent_energy_residual_relative": 1.3411045074462869e-15
+    },
+    {
+      "case": "stop_z06_bat60_road1",
+      "rows": 237,
+      "independent_energy_residual_relative": 1.1734664440155012e-15
+    },
+    {
+      "case": "stop_z08_bat00_road0",
+      "rows": 178,
+      "independent_energy_residual_relative": 1.5087425708770728e-15
+    },
+    {
+      "case": "stop_z08_bat00_road1",
+      "rows": 178,
+      "independent_energy_residual_relative": 1.5087425708770728e-15
+    },
+    {
+      "case": "stop_z08_bat30_road0",
+      "rows": 178,
+      "independent_energy_residual_relative": 1.3411045074462869e-15
+    },
+    {
+      "case": "stop_z08_bat30_road1",
+      "rows": 178,
+      "independent_energy_residual_relative": 1.3411045074462869e-15
+    },
+    {
+      "case": "stop_z08_bat60_road0",
+      "rows": 178,
+      "independent_energy_residual_relative": 1.5087425708770728e-15
+    },
+    {
+      "case": "stop_z08_bat60_road1",
+      "rows": 178,
+      "independent_energy_residual_relative": 1.3411045074462869e-15
+    },
+    {
+      "case": "temperature_charge_disabled",
+      "rows": 237,
+      "independent_energy_residual_relative": 1.3411045074462869e-15
+    },
+    {
+      "case": "unequal_wheel_speed_port_test",
+      "rows": 237,
+      "independent_energy_residual_relative": 1.5087425708770728e-15
+    }
+  ],
+  "maximum_independent_energy_residual_relative": 6.8102963268757e-15,
+  "model_implementation_commit": "2b336e62485e0183f79428dd6009ec7aa32a1ab3",
+  "matlab_source_sha256": {
+    "scripts/m1/m1_check_trace_provenance.m": "57ab47f8afa8bc76619a556db6eb1fe8c26526cf0824df8e7f315b4036a9d228",
+    "scripts/m1/m1_emot.m": "302ff5b84f731854c75b9ed216338f90ae033f6156c69acb140ccc7420797429",
+    "scripts/m1/m1_gear.m": "6d9a1dc10df0b4319a1697ee47a98b841eac6d0090f846e864a047402de402da",
+    "scripts/m1/m1_load.m": "2fb6956c114191770c76af3d4c78ef3ead6351fde35100e7d691103fb05c6016",
+    "scripts/m1/m1_options.m": "0524ec4fa033c9494e6fd471e0cde4b3508783b99fe8005855cda63bbbccc306",
+    "scripts/m1/m1_partition_parameters.m": "21f3b8076b1501b997688798d81677ab44c3ea6fcb9438dbb9d7f9ecb3496c61",
+    "scripts/m1/m1_point.m": "8f04ec6b0fb5abaf88e58dc6d2b83cdb516575b7e6b8444aed1acc8e6f9b1b61",
+    "scripts/m1/m1_source_tests.m": "eeefe87ffb609e8d08ea113e666396c9e76c8c1973feef12e15c0b952a413157",
+    "scripts/m1/m1_sources.m": "f7e4b4db9f100684c095a24149db77adfc30180ed6ac582f1cc20939f8b2866e",
+    "scripts/m1/m1_tests.m": "11eb52a2652803022d0f733844b451060847f3de734842da90459db4c56b1f96",
+    "scripts/m1/m1_trace.m": "1c7923ee89367b85a9ee966bb1f0ada9b6a16786d90d76195e73c78da70eb32d",
+    "scripts/m1/run_m1.m": "2fbf629e2636a47ea5e75fbd3bd30bf60756b1b9e96c19f6311a4e3004620cbb",
+    "scripts/m1/run_m1_sources.m": "fb2b3cb8c0d7444a3019fa04dd8b1860ac6c265916d9b2aa79a764f4c2f566e0"
+  },
+  "original_baseline": "M0-v1.0",
+  "M0_commit": "b13f265b1ff0add1f9e8b166d2c1bfa4ac8a8d16",
+  "winding_heat_is_unknown_in_all_traces": true,
+  "M1_approved": false,
+  "M1_tag_created": false,
+  "M2_started": false
+}

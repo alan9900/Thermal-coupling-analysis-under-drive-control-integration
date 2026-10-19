@@ -1,0 +1,51 @@
+# M1-v1.0 candidate, V0.4. All screening values are explicit S3 assumptions.
+metadata:
+  stage: M1
+  candidate_version: M1-v1.0
+  configuration_version: v0.4
+  evidence_status: PARTIAL_reference_maps_and_engineering_assumptions
+  model_scope: longitudinal_and_two_independent_rear_power_ports_no_temperature_solver
+  baseline_tag: M0-v1.0
+  baseline_commit: b13f265b1ff0add1f9e8b166d2c1bfa4ac8a8d16
+inputs:
+  baseline_vehicle: configs/baseline_vehicle.yaml
+  combined_emot_numeric: results/m0/epa_map_numeric.json
+  separate_drive_efficiencies: results/m0/ornl_paired_drive_efficiency.csv
+  source_voltage_V: 650.0
+  reject_map_extrapolation: true
+assumptions:
+  air_density_kg_m3: 1.225
+  allow_estimated_regen_map: true # EPA mirror, not measured MG2 regeneration
+  allow_constant_gear_efficiency: true # no validated directional loss maps
+  regen_torque_limit_each_Nm: 130.0 # distinct assumed regen cap, not the traction nameplate
+  regen_disable_below_kmh: 5.0
+  regen_full_above_kmh: 10.0 # linear torque fade over 5..10 km/h, S3 control assumption
+  disc_contact_heat_fraction: 0.90 # S3 example; baseline true heat partition stays null
+  disc_contact_heat_fraction_bounds: [0.85, 0.95] # illustrative sensitivity, not measured bounds
+  unpowered_emot_loss_W: 0.0 # explicit omission of cogging/drag/accessory/standby losses
+  drive_split_method: ORNL_drive_loss_ratio_scaled_to_EPA_combined_loss
+  regen_motor_inverter_split: null
+  winding_loss_fraction: null
+  electrical_auxiliary_power_W: 0.0
+  controller_is_production_EBD: false
+  maximum_traction_test_duration_s: 18.0 # source benchmark duration; not a thermal guarantee
+numerics:
+  sample_interval_s: 0.02
+  battery_bisection_iterations: 35
+  point_power_tolerance_W: 0.001
+  energy_relative_tolerance: 0.000001
+cases:
+  initial_stop_speed_kmh: 100.0
+  final_stop_speed_kmh: 0.0
+  deceleration_g: [0.3, 0.6, 0.8]
+  battery_charge_cap_total_kW: [0, 30, 60]
+  road_load_options: [false, true]
+  include_left_regen_disabled_case: true
+  include_unequal_wheel_speed_test: true # imposed power-port test; not a yaw dynamics model
+  include_drive_pulse: true
+thermal_readiness:
+  verified_motor_copper_iron_rotor_loss_map: null
+  verified_gearbox_drive_backdrive_loss_map: null
+  validated_pad_disc_heat_partition: null
+  validated_battery_soc_temperature_limit_map: null
+  ready_for_validated_component_temperature_prediction: false

@@ -1,0 +1,25 @@
+{
+  "word_export": "PASS",
+  "editable_math_objects": 52,
+  "pdf_pages": 12,
+  "embedded_figures": 5,
+  "post_pandoc_changes": "formatting only: table headers, row splitting, spacing, reference-list pagination and language metadata",
+  "visual_inspection": "PASS",
+  "inspected_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "inspection_note": "Acceptance-only text update: full-page contact sheet inspected, changed pages 1 and 11 plus references inspected at full size; numerical content unchanged.",
+  "docx_sha256": "cd7c0615a98facd9f1624c5a5d268e043f9d68f0b0a755cc20f1f2ccb73da017",
+  "pdf_sha256": "f1bcaec49851ad2fb4fa55d2e3684168eaeaa55f0a722a0e94d41c6fe98cd115"
+}
