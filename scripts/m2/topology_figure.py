@@ -36,7 +36,7 @@ def main():
         ax.text(x,y,label,ha='center',bbox=dict(boxstyle='round',fc='#fff4d9',ec='#b49b63'),fontsize=10)
         ax.annotate('',xy=pos[target],xytext=(x,y-.3),arrowprops=dict(arrowstyle='<->',color='#8c9aa8',lw=1.2))
     ax.text(.1,.5,'Other ambient convection/radiation edges are listed in the configuration.\nInverter is external; source totals are never loaded alongside their components.',fontsize=10,color='#404653')
-    ax.legend(handles=[Line2D([0],[0],color=c,label=g.title()) for g,c in colors.items()],loc='upper left',bbox_to_anchor=(0,.98),frameon=False)
+    ax.legend(handles=[Line2D([0],[0],color=c,label=g.title()) for g,c in colors.items()],loc='upper left',bbox_to_anchor=(0,1.0),ncol=3,frameon=False)
     ax.set_title('S3 CONCEPT LPTN - 13 dynamic nodes; topology/areas/contacts NOT geometrically calibrated',fontsize=13,pad=10)
     out=ROOT/'results/m2';fig.savefig(out/'thermal_topology.png',dpi=180);fig.savefig(out/'thermal_topology.svg');plt.close(fig)
     print('Topology PNG/SVG saved, 13 nodes and uniquely classified crossing edges.')

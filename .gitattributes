@@ -16,3 +16,5 @@ results/m1/*.svg -whitespace
 results/m1/matlab_run.txt -whitespace
 results/m1/engineering/*.svg -whitespace
 results/m1/engineering/matlab_run.txt -whitespace
+results/m2/*.svg -whitespace
+results/m2/*run.txt -whitespace

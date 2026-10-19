@@ -1,0 +1,55 @@
+{
+  "materials": [
+    {
+      "material": "copper",
+      "temperature_K": 298.15,
+      "cp_J_kgK": 385.08347913704597,
+      "molar_mass_kg_mol": 0.063546,
+      "shomate_A_to_E": [
+        17.72891,
+        28.0987,
+        -31.25289,
+        13.97243,
+        0.068611
+      ],
+      "source": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7440508&Mask=2",
+      "applicability": "pure solid reference, not certified concept component; room-temperature magnitude only"
+    },
+    {
+      "material": "aluminium",
+      "temperature_K": 298.15,
+      "cp_J_kgK": 897.1414261323531,
+      "molar_mass_kg_mol": 0.0269815386,
+      "shomate_A_to_E": [
+        28.0892,
+        -5.414849,
+        8.560423,
+        3.42737,
+        -0.277375
+      ],
+      "source": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7429905&Mask=2",
+      "applicability": "pure solid reference, not certified concept component; room-temperature magnitude only"
+    },
+    {
+      "material": "iron",
+      "temperature_K": 298.15,
+      "cp_J_kgK": 449.4143631007148,
+      "molar_mass_kg_mol": 0.055845,
+      "shomate_A_to_E": [
+        18.42868,
+        24.64301,
+        -8.91372,
+        9.664706,
+        -0.012643
+      ],
+      "source": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7439896&Mask=2",
+      "applicability": "pure solid reference, not certified concept component; room-temperature magnitude only"
+    }
+  ],
+  "emissivity_method": {
+    "source": "https://www.flukeprocessinstruments.com/en-us/service-and-support/knowledge-center/infrared-technology/emissivity-metals",
+    "verification": "browser full text verified",
+    "note": "spectral/temperature/surface dependent manufacturer estimates; NOT a measured total hemispherical gray coefficient for this assembly"
+  },
+  "other_limits": "Hydro direct PDF, NASA first route and direct Wiley download failed; search/browse routes documented in report; no fabricated local originals"
+}

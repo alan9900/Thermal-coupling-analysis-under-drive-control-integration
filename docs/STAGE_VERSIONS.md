@@ -6,7 +6,7 @@
 |---|---|---|---|---|---|---|
 | M0 参数审查 | APPROVED（参数与资料准备范围） | [M0-v1.0](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/releases/tag/M0-v1.0)，附注Tag已推送验证 | 验收main `b13f265b1ff0add1f9e8b166d2c1bfa4ac8a8d16`；Tag对象 `d50d3896b71480bc3793a82d274f862afac1f8ec` | [PR #1](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/1)，MERGED | V0.4 | [关卡记录](../reports/M0_GATE_ACCEPTANCE_2026-10-19.md)；Python 3项／MATLAB既有12组检查及18组制动积分通过；批准日期2026-10-19，用户授权简验后进入M1 |
 | M1 热源建模 | APPROVED（概念数值模型）；真实标定PARTIAL | [M1-v1.0](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/releases/tag/M1-v1.0)，附注Tag已推送核验 | 验收main `9d545ab39a3efcce857573af74f7e325b74a2b15`；Tag对象 `9b3c7f97c63b56b50eb7c0477a72ad03060cae39` | [PR #2](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/2)，MERGED | V0.4 | [报告](../reports/M1_report.md) / [Word](../reports/M1_report.docx) / [PDF](../reports/M1_report.pdf) / [验收表](../reports/M1_ACCEPTANCE_CHECKLIST.md)；R2025a原18+新11测试组、23整车轨迹、46单侧接口及322敏感性运行通过；Python独立复核通过；严格模式拒绝、工程模式S3；M2 NOT EXECUTED |
-| M2 热网络 | IN_PROGRESS（概念LPTN） | NOT CREATED | 基线M1-v1.0 `9d545ab39a3efcce857573af74f7e325b74a2b15` | 阶段送审时新建PR | V0.4 | 用户授权；只做单侧多热源瞬态热网络，不含M3/CAD/ANSYS/Fluent |
+| M2 热网络 | IN_PROGRESS（数值交付PASS，验收PENDING） | NOT CREATED | 数值代码 `ff818ccb35daf8d70d0cbafbf28fc6690ab457a8`；基线M1-v1.0 `9d545ab39a3efcce857573af74f7e325b74a2b15` | [PR #3](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/3)，DRAFT | V0.4 | [报告](../reports/M2_report.md) / [Word](../reports/M2_report.docx) / [PDF](../reports/M2_report.pdf) / [验收表](../reports/M2_ACCEPTANCE_CHECKLIST.md)；R2025a 11组测试、4主场景+3路径移除+18敏感性通过；Python/SciPy独立复核PASS；S3概念温度、未标定；未合并/未Tag/未开展M3 |
 | M3 几何设计 | NOT_STARTED | NOT CREATED | — | — | V0.4 | — |
 | M4 ANSYS | NOT_STARTED | NOT CREATED | — | — | V0.4 | — |
 | M5 Fluent | NOT_STARTED | NOT CREATED | — | — | V0.4 | — |
@@ -50,3 +50,9 @@ M0已于本轮合并且附注Tag实际创建成功，远端剥离Tag后的目标
 ## M1远端归档核验与M2启动
 
 PR #2已合并，M1-v1.0附注Tag对象 `9b3c7f97c63b56b50eb7c0477a72ad03060cae39`，远端剥离目标已核对为实际验收main合并提交 `9d545ab39a3efcce857573af74f7e325b74a2b15`。M0-v1.0仍为 `b13f265b1ff0add1f9e8b166d2c1bfa4ac8a8d16`。本段在之后的M2分支登记，Tag固定在真实验收提交，不移动Tag以包含后续登记文字。M2分支从该最新main创建，M2合并/正式Tag/M3仍须另行批准。
+
+## M2数值送审（2026-10-19）
+
+运行源提交`ff818ccb35daf8d70d0cbafbf28fc6690ab457a8`；后续仅完善资料说明、图稿颜色/布局及报告。13节点、4基础场景、3路径移除、18敏感性均已实际运行MATLAB25.1/R2025a。11组测试PASS；C名义/细步峰值差0.001203K，D0.001562K；全网络最大相对能量残差5.28e-14；Python独立复核7场景及自适应RK45比较PASS，最大温差0.002916K。初次12,000s无源测试未达0.1K要求，日志保留；延长至24,000s后通过，未放宽阈值。
+
+成果位置`results/m2/`，代码`scripts/m2/`，配置`configs/m2_thermal_network.yaml`，来源审查`docs/M2_SOURCE_REVIEW.md`。限S3概念预测；M1真实损耗仍PARTIAL，实际热阻/冷却/几何未知，空载拖曳、零功率搅油及温度反馈尚未建模。完整证据SHA在后续登记提交追加，避免自引用。本次没有M2验收授权，PR保持草稿、正式Tag NOT CREATED；M3/CAD/ANSYS/Fluent未开展。

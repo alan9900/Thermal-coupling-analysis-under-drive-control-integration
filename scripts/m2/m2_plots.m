@@ -1,7 +1,7 @@
 function m2_plots(c,r,sensitivity,comparison,out)
 f=figure('Visible','off','Color','w','Position',[50 50 1200 760]);tiledlayout(2,2);
 for k=1:4
-    nexttile;plot(r{k}.t,r{k}.T_K-273.15,'LineWidth',1.1);xlabel('Time (s)');ylabel('Lumped temperature (C)');
+    nexttile;colororder(turbo(c.N));plot(r{k}.t,r{k}.T_K-273.15,'LineWidth',1.1);xlabel('Time (s)');ylabel('Lumped temperature (C)');
     title({r{k}.id,'S3 CONCEPT PREDICTION - NOT CALIBRATED'},'Interpreter','none');grid on;
     if k==4,legend(strrep(c.ids,'_',' '),'Location','eastoutside','FontSize',7);end
 end
