@@ -1,0 +1,16 @@
+{
+  "numerical_implementation": "PASS",
+  "stage_status": "PARTIAL",
+  "reason": "validated internal motor losses, regen split, directional gearbox maps, heat partition and BMS limits absent",
+  "combined_emot": "EPA fitted 650 V table; regeneration mirrored with empirical 1.05 factor",
+  "drive_motor_inverter_split": "ESTIMATED: ORNL sparse drive loss ratio applied to EPA combined loss; no extrapolation",
+  "regen_motor_inverter_split": "UNKNOWN: combined heat exported as unallocated EMOT",
+  "winding_heat": "UNKNOWN: NaN in all runtime traces; never use EMOT heat as copper heat",
+  "gear_heat": "ASSUMED: constant directional efficiencies, not a validated loss map",
+  "disc_heat": "ASSUMED: 0.90 contact-to-disc share, 0.85..0.95 illustrative bounds",
+  "asymmetric_trace": "imposed independent L/R speed/force power ports, includes signed exchange; not yaw dynamics",
+  "thermal_temperature_prediction": "NOT EXECUTED; M2 not authorized",
+  "ANSYS": "NOT EXECUTED",
+  "Fluent": "NOT EXECUTED",
+  "optimization": "NOT EXECUTED"
+}

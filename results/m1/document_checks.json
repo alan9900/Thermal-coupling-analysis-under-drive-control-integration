@@ -1,0 +1,19 @@
+{
+  "word_export": "PASS",
+  "editable_math_objects": 27,
+  "pdf_pages": 6,
+  "embedded_figures": 2,
+  "post_pandoc_changes": "formatting only: table headers, row splitting, spacing and language metadata",
+  "visual_inspection": "PASS",
+  "inspected_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "inspection_note": "Final Word-export PDF: equations, tables, figures and page boundaries visually inspected; no clipped content.",
+  "docx_sha256": "ba2eb4f2978f3e963181bb86c4456251ec6c3b38ce921c7bbc62a8fe8b9d4582",
+  "pdf_sha256": "740e982d82dc1a488d775e7f2a33a708269eb8a827282c28fa92b6d5705c818e"
+}

@@ -1,0 +1,140 @@
+{
+  "status": "PASS",
+  "stage_status": "PARTIAL",
+  "matlab_test_groups": 18,
+  "independent_python_cases": [
+    {
+      "case": "high_soc_no_regen",
+      "rows": 237,
+      "independent_energy_residual_relative": 1.3411045074462869e-15
+    },
+    {
+      "case": "left_regen_unavailable",
+      "rows": 237,
+      "independent_energy_residual_relative": 1.3411045074462869e-15
+    },
+    {
+      "case": "short_drive_0_to_80",
+      "rows": 757,
+      "independent_energy_residual_relative": 6.8102963268757e-15
+    },
+    {
+      "case": "stop_z03_bat00_road0",
+      "rows": 473,
+      "independent_energy_residual_relative": 1.3411045074462869e-15
+    },
+    {
+      "case": "stop_z03_bat00_road1",
+      "rows": 473,
+      "independent_energy_residual_relative": 1.3411045074462869e-15
+    },
+    {
+      "case": "stop_z03_bat30_road0",
+      "rows": 473,
+      "independent_energy_residual_relative": 1.3411045074462869e-15
+    },
+    {
+      "case": "stop_z03_bat30_road1",
+      "rows": 473,
+      "independent_energy_residual_relative": 1.3411045074462869e-15
+    },
+    {
+      "case": "stop_z03_bat60_road0",
+      "rows": 473,
+      "independent_energy_residual_relative": 1.3411045074462869e-15
+    },
+    {
+      "case": "stop_z03_bat60_road1",
+      "rows": 473,
+      "independent_energy_residual_relative": 1.3411045074462869e-15
+    },
+    {
+      "case": "stop_z06_bat00_road0",
+      "rows": 237,
+      "independent_energy_residual_relative": 1.5087425708770728e-15
+    },
+    {
+      "case": "stop_z06_bat00_road1",
+      "rows": 237,
+      "independent_energy_residual_relative": 1.3411045074462869e-15
+    },
+    {
+      "case": "stop_z06_bat30_road0",
+      "rows": 237,
+      "independent_energy_residual_relative": 1.3411045074462869e-15
+    },
+    {
+      "case": "stop_z06_bat30_road1",
+      "rows": 237,
+      "independent_energy_residual_relative": 1.3411045074462869e-15
+    },
+    {
+      "case": "stop_z06_bat60_road0",
+      "rows": 237,
+      "independent_energy_residual_relative": 1.3411045074462869e-15
+    },
+    {
+      "case": "stop_z06_bat60_road1",
+      "rows": 237,
+      "independent_energy_residual_relative": 1.1734664440155012e-15
+    },
+    {
+      "case": "stop_z08_bat00_road0",
+      "rows": 178,
+      "independent_energy_residual_relative": 1.5087425708770728e-15
+    },
+    {
+      "case": "stop_z08_bat00_road1",
+      "rows": 178,
+      "independent_energy_residual_relative": 1.5087425708770728e-15
+    },
+    {
+      "case": "stop_z08_bat30_road0",
+      "rows": 178,
+      "independent_energy_residual_relative": 1.3411045074462869e-15
+    },
+    {
+      "case": "stop_z08_bat30_road1",
+      "rows": 178,
+      "independent_energy_residual_relative": 1.3411045074462869e-15
+    },
+    {
+      "case": "stop_z08_bat60_road0",
+      "rows": 178,
+      "independent_energy_residual_relative": 1.5087425708770728e-15
+    },
+    {
+      "case": "stop_z08_bat60_road1",
+      "rows": 178,
+      "independent_energy_residual_relative": 1.3411045074462869e-15
+    },
+    {
+      "case": "temperature_charge_disabled",
+      "rows": 237,
+      "independent_energy_residual_relative": 1.3411045074462869e-15
+    },
+    {
+      "case": "unequal_wheel_speed_port_test",
+      "rows": 237,
+      "independent_energy_residual_relative": 1.5087425708770728e-15
+    }
+  ],
+  "maximum_independent_energy_residual_relative": 6.8102963268757e-15,
+  "model_implementation_commit": "ab6040e713755c7fb5cda9e69aea1b3c742090e4",
+  "matlab_source_sha256": {
+    "scripts/m1/m1_emot.m": "302ff5b84f731854c75b9ed216338f90ae033f6156c69acb140ccc7420797429",
+    "scripts/m1/m1_gear.m": "6d9a1dc10df0b4319a1697ee47a98b841eac6d0090f846e864a047402de402da",
+    "scripts/m1/m1_load.m": "c00e209e82a0bc2d1b44f942b7d054a6452e4720e03bb53c43d40442a6ded40a",
+    "scripts/m1/m1_options.m": "0524ec4fa033c9494e6fd471e0cde4b3508783b99fe8005855cda63bbbccc306",
+    "scripts/m1/m1_point.m": "8f04ec6b0fb5abaf88e58dc6d2b83cdb516575b7e6b8444aed1acc8e6f9b1b61",
+    "scripts/m1/m1_tests.m": "11eb52a2652803022d0f733844b451060847f3de734842da90459db4c56b1f96",
+    "scripts/m1/m1_trace.m": "1c7923ee89367b85a9ee966bb1f0ada9b6a16786d90d76195e73c78da70eb32d",
+    "scripts/m1/run_m1.m": "dcb0f00af76e45e955e4575a5885eb42763f1d0451aa46ad8d09008ed8df04ab"
+  },
+  "original_baseline": "M0-v1.0",
+  "M0_commit": "b13f265b1ff0add1f9e8b166d2c1bfa4ac8a8d16",
+  "winding_heat_is_unknown_in_all_traces": true,
+  "M1_approved": false,
+  "M1_tag_created": false,
+  "M2_started": false
+}

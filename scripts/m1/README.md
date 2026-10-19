@@ -23,7 +23,7 @@ Python依赖沿用`scripts/m0/requirements.txt`；MATLAB R2025a仅用基础函�
 - `m1_trace(...)`：恒减速／短时驱动的源项时序，明确输出需求是否可实现。附着或功率不足时保留未满足需求及其功率，不能仍称给定轨迹可实现。
 - `m1_tests`：独立解析回归、物理符号、限值、严格模式拒绝、故障及步长检查。
 
-不把未知数据填零：真实绕组损耗和已验证温限保持未知。停用电驱时采用“未计入拖曳和待机耗电”的显式零损耗假设，和已通电零转矩的地图损耗区分。
+不把未知数据填零：真实绕组损耗和已验证温限保持未知。停用电驱时采用“未计入拖曳和待机耗电”的显式零损耗假设，和已通电零转矩的地图损耗区分。常数齿轮效率在未传功时也不计空载拖曳／搅油损耗，不代表真实部件无发热。
 
 ## 结果与证据
 
@@ -38,3 +38,13 @@ Python依赖沿用`scripts/m0/requirements.txt`；MATLAB R2025a仅用基础函�
 EPA图仅650V、0–13000rpm，负转矩为镜像估计。左右轮速不同的案例是强加运动学接口测试，额外的带符号功率端口`lr_kinematic_exchange_W`防止把不对称功误算入纵向动能；不宣称建立了车辆横摆模型。驱动测试短于18秒，但这不是新的热能力证明。盘片热分配0.90及0.85–0.95区间、减速器0.96效率均为工程假设。
 
 数值检查通过与真实资料齐备分开登记。阶段应保持`PARTIAL`，直至内部电机损耗、再生分配、减速器图、盘片分配和电池边界的证据达到相应要求。M1 PR未经用户批准不合并、不打M1正式Tag、不进入M2。
+
+## 报告生成
+
+```powershell
+py scripts/m1/report_qa.py reference
+& 'C:\Users\90521\.codex\skills\pandoc-report-word\scripts\Convert-PandocReport.ps1' -InputPath reports/M1_report.md -OutputPath reports/M1_report.docx -ReferenceDoc reports/M1_reference.docx
+py scripts/m1/report_qa.py render
+```
+
+作者源为Markdown，DOCX由本地pandoc-report-word技能脚本转换；也可用仓库中保存的`scripts/m0/Convert-PandocReport.ps1`。后续仅整理表头、表格分页及字体间距，不修改数据或公式。Word独立隐藏实例导出PDF后，逐页目视检查并记录`results/m1/document_checks.json`，数学对象保持可编辑。
