@@ -2,7 +2,7 @@
 
 日期：2026-10-19；配置V0.4；分支 `stage/M1-heat-sources`；[草稿PR #2](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/2)。数值代码 `2b336e62485e0183f79428dd6009ec7aa32a1ab3`。证据归档SHA在 `docs/STAGE_VERSIONS.md` 的后续登记中固定，不将候选名称当已创建Tag。
 
-结论：**概念数值关卡PASS，等待研究者验收**。真实部件标定仍为PARTIAL。没有自批准合并、打Tag或开始M2。
+结论：**概念数值关卡APPROVED（限定范围）**。真实部件标定仍为PARTIAL。研究者已明确批准合并与Tag归档，授权归档成功后开展M2，详见M1_GATE_ACCEPTANCE_2026-10-19.md。
 
 | 检查项 | 实际结果 | 证据 |
 |---|---|---|
@@ -28,7 +28,7 @@
 | 总EMOT误差、0.96效率误差、空载拖曳的不确定性 | NOT COVERED | 当前包络以现有总预算为条件，报告明确限制 |
 | 概念总成实体实验及温度精度验证 | NOT EXECUTED | 无实测温度结论 |
 | M2、ANSYS、Fluent、优化 | NOT EXECUTED | 未启动 |
-| 研究者对本轮M1的验收批准 | PENDING | PR #2仍草稿；未经用户许可不合并/打Tag/推进 |
+| 研究者对本轮M1的验收批准 | APPROVED（概念数值范围） | 本轮明确授权；真实标定仍PARTIAL，M2另行验收 |
 
 ## 建议的验收口径
 

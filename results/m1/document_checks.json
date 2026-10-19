@@ -19,7 +19,7 @@
     11,
     12
   ],
-  "inspection_note": "Final Word-export PDF inspected page by page: tables, editable equations, source labels, figures and reference pagination checked.",
-  "docx_sha256": "2d392fdd58c1a9a1a6a3eb8471c99328e5f48999e1d795272a7c3428590f2b0b",
-  "pdf_sha256": "47c405e934fe6a976285bf043d9710944c5c842954e4236182cc5a6edd7dd042"
+  "inspection_note": "Acceptance-only text update: full-page contact sheet inspected, changed pages 1 and 11 plus references inspected at full size; numerical content unchanged.",
+  "docx_sha256": "cd7c0615a98facd9f1624c5a5d268e043f9d68f0b0a755cc20f1f2ccb73da017",
+  "pdf_sha256": "f1bcaec49851ad2fb4fa55d2e3684168eaeaa55f0a722a0e94d41c6fe98cd115"
 }
