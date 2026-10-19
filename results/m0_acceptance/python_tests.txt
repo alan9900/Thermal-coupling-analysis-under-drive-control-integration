@@ -1,0 +1,8 @@
+test_missing_geometry_and_losses_remain_unknown (__main__.ConfigurationTests.test_missing_geometry_and_losses_remain_unknown) ... ok
+test_reject_stale_architecture_and_nonphysical_values (__main__.ConfigurationTests.test_reject_stale_architecture_and_nonphysical_values) ... ok
+test_valid_current_configuration (__main__.ConfigurationTests.test_valid_current_configuration) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.025s
+
+OK

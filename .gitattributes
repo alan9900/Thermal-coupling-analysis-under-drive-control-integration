@@ -9,3 +9,6 @@ data/raw/** -text -whitespace
 *.xlsx binary
 # MATLAB's generated vector serialization contains intentional whitespace.
 results/m0/*.svg -whitespace
+results/m0_acceptance/*.svg -whitespace
+# Captured MATLAB console tables retain their original padding.
+results/m0_acceptance/matlab_run.txt -whitespace

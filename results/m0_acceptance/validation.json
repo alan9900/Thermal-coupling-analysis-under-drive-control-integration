@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "matlab": "25.1.0.2943329 (R2025a)",
+  "release": "2025a",
+  "checks": [
+    "V0.4 rear independent topology",
+    "null continuous power preserved",
+    "null winding loss map preserved",
+    "EPA numeric shape finite",
+    "EPA symmetric torque bounds",
+    "front plus two rear sides plus road energy closure",
+    "nonnegative friction and battery cap",
+    "front/rear adhesion",
+    "generator torque limits and zero low-speed regen",
+    "0.6g analytic torque and energy regression",
+    "independent capped-power integral",
+    "stop-integral refinement <0.05 percent"
+  ],
+  "max_energy_residual_relative": 7.91042111814022E-16,
+  "integral_refinement_relative": 7.3853922160879857E-6,
+  "thermal_models": "NOT EXECUTED; outside M0",
+  "ANSYS": "NOT EXECUTED; outside M0",
+  "optimization": "NOT EXECUTED; outside M0"
+}

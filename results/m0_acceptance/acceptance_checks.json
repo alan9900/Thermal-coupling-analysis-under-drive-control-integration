@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "formal_acceptance": "PENDING_USER_REVIEW",
+  "candidate_commit": "2ba858b8a047566f5932a621175d360154f869e8",
+  "configuration_version": "v0.4",
+  "original_artifacts_unchanged": true,
+  "original_artifact_count": 59,
+  "numerical_comparisons": {
+    "braking_review.csv": {
+      "rows": 18,
+      "max_absolute_difference": 0.0
+    },
+    "speed_power_review.csv": {
+      "rows": 4,
+      "max_absolute_difference": 0.0
+    },
+    "geometry_assumption_sensitivity.csv": {
+      "rows": 27,
+      "max_absolute_difference": 0.0
+    },
+    "radius_speed_sensitivity.csv": {
+      "rows": 3,
+      "max_absolute_difference": 0.0
+    },
+    "regen_assumption_sensitivity.csv": {
+      "rows": 18,
+      "max_absolute_difference": 0.0
+    }
+  },
+  "python_tests_passed": 3,
+  "matlab_release": "2025a",
+  "matlab_check_groups": 12,
+  "braking_cases": 18,
+  "max_energy_residual_relative": 7.91042111814022e-16,
+  "integral_refinement_relative": 7.385392216087986e-06,
+  "unresolved_parameter_count": 39,
+  "tag_created": false,
+  "m1_started": false,
+  "ansys_executed": false,
+  "optimization_executed": false
+}
