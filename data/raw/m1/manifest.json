@@ -1,0 +1,92 @@
+{
+  "scope": "M1 engineering partition methods; not exhaustive literature review",
+  "academic_mcp": "NOT_AVAILABLE; primary official web sources and CrossRef used",
+  "crossref": "PASS",
+  "sources": [
+    {
+      "id": "ORNL",
+      "title": "Evaluation of the 2010 Toyota Prius Hybrid Synergy Drive System",
+      "url": "https://info.ornl.gov/sites/publications/files/Pub26762.pdf",
+      "retrieved_utc": "2026-10-19T04:28:13.856295+00:00",
+      "applicability": "S1 reference motor; Table 2.7 p46; pp58,62-63; no internal loss map",
+      "status": "EXISTING_M0_ORIGINAL_REUSED_NO_REDOWNLOAD",
+      "local_file": "data/raw/m0/ornl_2010_prius_pub26762.pdf",
+      "sha256": "4d989e77e3d9bcbcd417e630e0a10bac762a53e8db3644978bb096ecea01b8f8"
+    },
+    {
+      "id": "NBS",
+      "title": "Copper wire tables, NBS Handbook 100",
+      "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/hb/nbshandbook100.pdf",
+      "retrieved_utc": "2026-10-19T04:28:13.863076+00:00",
+      "applicability": "Generic copper resistance law; not MG2 material certification",
+      "status": "HTTP_OK",
+      "http_status": 200,
+      "final_url": "https://nvlpubs.nist.gov/nistpubs/Legacy/hb/nbshandbook100.pdf",
+      "sha256": "3128aaa9fac5688c4e2c4ea9e1b0bb9e20aead7c71039772790859c7fa571af0",
+      "bytes": 4767745,
+      "local_file": "data/raw/m1/nbs_copper_wire_tables.pdf"
+    },
+    {
+      "id": "CORLEY2019",
+      "title": "Thermal modelling of a small wind turbine gearbox for condition monitoring",
+      "url": "https://strathprints.strath.ac.uk/71746/1/Corley_etal_IET_JOE_2019_Thermal_modelling_of_a_small_wind_turbine.pdf",
+      "retrieved_utc": "2026-10-19T04:28:17.372175+00:00",
+      "applicability": "S2 method only, DOI 10.1049/joe.2018.9282; CC BY 3.0; not concept gearbox coefficients",
+      "status": "HTTP_OK",
+      "http_status": 200,
+      "final_url": "https://strathprints.strath.ac.uk/71746/1/Corley_etal_IET_JOE_2019_Thermal_modelling_of_a_small_wind_turbine.pdf",
+      "sha256": "97939f9ebedcabdef9b72e9a9f01f4b087cc415144c13da689f07fbb0ab8feac",
+      "bytes": 2555697,
+      "local_file": "data/raw/m1/corley2019_gearbox.pdf"
+    },
+    {
+      "id": "SKF",
+      "title": "Using a friction model as an engineering tool",
+      "url": "https://evolution.skf.com/using-a-friction-model-as-an-engineering-tool-3/",
+      "retrieved_utc": "2026-10-19T04:28:22.625350+00:00",
+      "applicability": "Primary manufacturer method: rolling/sliding/seal/drag torque; selected bearing data absent",
+      "status": "HTTP_OK",
+      "http_status": 200,
+      "final_url": "https://evolution.skf.com/using-a-friction-model-as-an-engineering-tool-3/",
+      "sha256": "ace0e200d18b5109776435013a06010eaf943c0b38425958cd52d5e2c6055ffe",
+      "bytes": 69004,
+      "archive_note": "Metadata and retrieval hash only; official live page supports method, not fitted constants"
+    },
+    {
+      "id": "MATHWORKS_PMSM",
+      "title": "FEM-Parameterized PMSM",
+      "url": "https://www.mathworks.com/help/simscape-electrical/ref/femparameterizedpmsm.html",
+      "retrieved_utc": "2026-10-19T04:28:25.591364+00:00",
+      "applicability": "Primary software method reference: current-dependent flux and iron-loss coefficients; no use of newer-version block",
+      "status": "HTTP_OK",
+      "http_status": 200,
+      "final_url": "https://www.mathworks.com/help/simscape-electrical/ref/femparameterizedpmsm.html",
+      "sha256": "4c161128f00845fed828f3ff1425f24a6dd5ddbfd01d2db96967a59ac5cc6ed8",
+      "bytes": 411732,
+      "archive_note": "Metadata and retrieval hash only; official live page supports method, not fitted constants"
+    },
+    {
+      "id": "INFINEON",
+      "title": "Calculate IGBT losses for a SPWM voltage source converter",
+      "url": "https://community.infineon.com/t5/Knowledge-Base-Articles/Calculate-IGBT-losses-for-a-SPWM-voltage-source-converter/ta-p/381757",
+      "retrieved_utc": "2026-10-19T04:28:27.179642+00:00",
+      "applicability": "Primary manufacturer method only: conduction and switching losses require device/current data",
+      "status": "DOWNLOAD_FAILED",
+      "error_type": "HTTPError",
+      "browser_verified": true
+    },
+    {
+      "id": "MATHWORKS_BRAKE",
+      "title": "Thermal and Structural Analysis of Disc Brake",
+      "url": "https://www.mathworks.com/help/pde/ug/thermal-and-structural-analysis-of-disc-brake.html",
+      "retrieved_utc": "2026-10-19T04:28:28.392631+00:00",
+      "applicability": "Primary example of effusivity partition; its material values do not identify our disc/pad",
+      "status": "HTTP_OK",
+      "http_status": 200,
+      "final_url": "https://www.mathworks.com/help/pde/ug/thermal-and-structural-analysis-of-disc-brake.html",
+      "sha256": "4158e4e3ad6393fd4c05220225e999ae71c4d5d2eaf2f39a4d5d7678b0a93584",
+      "bytes": 81316,
+      "archive_note": "Metadata and retrieval hash only; official live page supports method, not fitted constants"
+    }
+  ]
+}

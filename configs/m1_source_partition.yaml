@@ -1,0 +1,42 @@
+# Engineering allocations only. Never populate the original calibrated nulls.
+metadata:
+  schema_version: m1-source-interface-1.0
+  scenario_id: engineering_budget_normalized_v1
+  classification: S3_ENGINEERING_NOT_MEASURED
+  method: physics_shaped_weights_normalized_to_existing_total_loss
+  uncertainty: deterministic_parameter_box_not_statistical_confidence
+  actual_internal_loss_map: null
+  actual_current_trajectory: null
+  actual_gear_geometry: null
+reference:
+  phase_resistance_ohm: 0.077 # S1 ORNL Pub26762, Table 2.7, printed p46/PDF p55
+  resistance_temperature_C: 21.0 # average phase-to-phase resistance / 2
+  copper_alpha_20_per_K: 0.00393 # generic copper, NBS Handbook 100; not MG2 calibration
+  reference_speed_rpm: 6000.0 # S3 scaling coordinate, not a rated speed
+  reference_torque_Nm: 100.0 # S3 scaling coordinate
+parameters: # [lower, nominal, upper]; S3 exploratory ranges, NOT measured bounds
+  torque_constant_Nm_per_Arms: [0.50, 0.70, 0.90]
+  winding_temperature_C: [40.0, 100.0, 140.0] # prescribed parameter, no temperature feedback
+  ac_copper_speed_factor: [0.0, 0.15, 0.40]
+  field_weakening_current_factor: [0.0, 0.30, 0.80]
+  iron_hysteresis_ref_W: [80.0, 200.0, 400.0]
+  iron_eddy_ref_W: [50.0, 150.0, 350.0]
+  rotor_speed_squared_ref_W: [20.0, 70.0, 180.0]
+  motor_stray_load_ref_W: [10.0, 30.0, 100.0]
+  drive_inverter_ratio_multiplier: [0.8, 1.0, 1.2] # ORNL ratio transfer uncertainty
+  fallback_inverter_fraction: [0.05, 0.15, 0.35] # regen/outside drive hull, not fitted
+  gear_mesh_power_coefficient: [0.010, 0.020, 0.035]
+  gear_bearing_torque_Nm: [0.02, 0.06, 0.12] # aggregate torque referred to motor shaft
+  gear_bearing_load_coefficient: [0.001, 0.003, 0.006]
+  gear_churning_ref_W: [10.0, 50.0, 150.0]
+  gear_seal_torque_Nm: [0.005, 0.020, 0.050]
+  disc_heat_fraction: [0.85, 0.90, 0.95]
+controls:
+  field_weakening_start_rpm: 4500.0 # S3 proxy onset, not MG2 control calibration
+  normalized_loss_ratio_warning_bounds: [0.25, 4.0] # diagnostic only, not physical acceptance
+  sensitivity_cases: [stop_z06_bat30_road1, short_drive_0_to_80]
+  joint_parameter_samples: 128 # deterministic seeded coverage; not Monte Carlo confidence
+  random_seed: 20261019
+  interval_bounds_hold_total_emot_and_gear_fixed: true
+  no_load_gear_drag_omitted: true
+  inverter_default_thermal_destination: external_boundary_not_motor_internal

@@ -3,6 +3,7 @@ function c = m1_load(root, strict)
 if nargin<2, strict=false; end
 p=jsondecode(fileread(fullfile(root,'results','m1','inputs.json')));
 c.base=p.vehicle_configuration; c.stage=p.stage_configuration; c.provenance=p.provenance;
+if isfield(p,'engineering_partition_configuration'), c.partition=p.engineering_partition_configuration; end
 assert(strcmp(c.base.metadata.version,'v0.4') && strcmp(c.base.drive.driven_axle,'rear'),'m1:Topology','Require V0.4 rear drive');
 assert(~c.base.drive.differential_present && c.base.drive.independent_motor_count==2,'m1:Topology','No differential');
 assert(c.base.brakes.rotor_speed_to_own_wheel_speed_ratio==1,'m1:Topology','Disc must follow its own wheel');

@@ -14,3 +14,5 @@ results/m0_acceptance/*.svg -whitespace
 results/m0_acceptance/matlab_run.txt -whitespace
 results/m1/*.svg -whitespace
 results/m1/matlab_run.txt -whitespace
+results/m1/engineering/*.svg -whitespace
+results/m1/engineering/matlab_run.txt -whitespace
