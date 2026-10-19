@@ -40,3 +40,5 @@ M0已于本轮合并且附注Tag实际创建成功，远端剥离Tag后的目标
 用户已授权继续同一分支/PR，允许明确标识的工程替代模型，不批准合并/Tag/M2。代码提交 `d3dbf6c5839b9d228db8665e76da0c5d7549c0dd` 引入参数化分项；`2b336e62485e0183f79428dd6009ec7aa32a1ab3` 补充时序输入溯源保护及图表标识，最终实际运行采用后者。旧证据提交保留，可从历史恢复；本轮更新M1报告及结果，不改M0固定版本。
 
 独立工程配置 `configs/m1_source_partition.yaml`，资料审查 `docs/M1_SOURCE_REVIEW.md`，未来输入合同 `docs/M1_HEAT_SOURCE_INTERFACE.md`。46对CSV/JSON、161×2参数运行、MAT/图表/日志及检查位于 `results/m1/engineering/`。范围为固定联合/传动总损耗下的守恒分配及条件区间，非实测置信区间；真实绕组数据仍NaN/null。概念数值验收条件已具备，研究者验收PENDING；M1未合并，TAG NOT CREATED，M2–M7未开展。
+
+本轮完整证据归档SHA：`ec134044c346e10cac3f7d31e0bfc99dc641ec13`。含12页Markdown/Word/PDF报告、52个可编辑数学对象、5幅报告图、验收表、46对单侧接口、322次敏感性结果及参数矩阵、独立检查与运行日志。文档逐页视觉检查PASS；本行在后续登记提交加入，避免自引用。后续登记不改数值代码或证据内容，不表示已经批准M1。
