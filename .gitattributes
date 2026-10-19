@@ -12,3 +12,5 @@ results/m0/*.svg -whitespace
 results/m0_acceptance/*.svg -whitespace
 # Captured MATLAB console tables retain their original padding.
 results/m0_acceptance/matlab_run.txt -whitespace
+results/m1/*.svg -whitespace
+results/m1/matlab_run.txt -whitespace

@@ -4,8 +4,8 @@
 
 | 阶段 | 审核状态 | Git Tag | Commit SHA | PR | 配置版本 | 测试与成果 |
 |---|---|---|---|---|---|---|
-| M0 参数审查 | APPROVED（参数与资料准备范围） | NOT CREATED；批准后拟创建M0-v1.0 | 原成果 `2ba858b8a047566f5932a621175d360154f869e8`；复核证据 `a08c46cdf5a36d649cd03e1d895c7da0e438a382` | [PR #1](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/1)，授权复核后合并，待执行 | V0.4 | [关卡记录](../reports/M0_GATE_ACCEPTANCE_2026-10-19.md)；Python 3项／MATLAB既有12组检查及18组制动积分通过；批准依据：2026-10-19用户本轮条件授权，简验通过 |
-| M1 热源建模 | NOT_STARTED | NOT CREATED | — | — | V0.4 | — |
+| M0 参数审查 | APPROVED（参数与资料准备范围） | [M0-v1.0](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/releases/tag/M0-v1.0)，附注Tag已推送验证 | 验收main `b13f265b1ff0add1f9e8b166d2c1bfa4ac8a8d16`；Tag对象 `d50d3896b71480bc3793a82d274f862afac1f8ec` | [PR #1](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/1)，MERGED | V0.4 | [关卡记录](../reports/M0_GATE_ACCEPTANCE_2026-10-19.md)；Python 3项／MATLAB既有12组检查及18组制动积分通过；批准日期2026-10-19，用户授权简验后进入M1 |
+| M1 热源建模 | IN_PROGRESS | NOT CREATED；候选M1-v1.0 | 基线 `b13f265b1ff0add1f9e8b166d2c1bfa4ac8a8d16`，开发分支stage/M1-heat-sources | 阶段送审时创建 | V0.4 | 正在实现MATLAB多热源、独立左右动力学及能量核算；不含M2温度求解 |
 | M2 热网络 | NOT_STARTED | NOT CREATED | — | — | V0.4 | — |
 | M3 几何设计 | NOT_STARTED | NOT CREATED | — | — | V0.4 | — |
 | M4 ANSYS | NOT_STARTED | NOT CREATED | — | — | V0.4 | — |
@@ -26,3 +26,5 @@ M0本次使用`stage/M0-parameter-audit`分支补齐历史成果送审。`PARTIA
 ## 2026-10-19当前关卡更新
 
 用户已授权简单验收M0通过后进入M1，复核已通过。上方旧送审说明、验收摘要及工作安排图均为其生成时状态，保留追溯；当前状态以上表与[M0关卡记录](../reports/M0_GATE_ACCEPTANCE_2026-10-19.md)为准。合并后将验证Tag是否成功创建并在后续提交登记实际SHA；不把拟议Tag冒充现有Tag。
+
+M0已于本轮合并且附注Tag实际创建成功，远端剥离Tag后的目标SHA已核对为`b13f265b1ff0add1f9e8b166d2c1bfa4ac8a8d16`。本登记属于之后的M1开发提交，**M0-v1.0固定指向实际验收合并提交**，不移动Tag以包含后来的登记文字。M1仅被授权开发，M2–M7仍未授权。
