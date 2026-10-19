@@ -21,11 +21,11 @@ def main():
         ["git", "rev-parse", "M0-v1.0^{}"], cwd=ROOT, text=True).strip()
     input_files = ["configs/baseline_vehicle.yaml", "configs/m1_heat_sources.yaml",
                    "results/m0/epa_map_numeric.json", "results/m0/ornl_paired_drive_efficiency.csv"]
-    hashes = {name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest() for name in input_files}
+    hashes = {name: hashlib.sha256((ROOT / name).read_text(encoding="utf-8").encode("utf-8")).hexdigest() for name in input_files}
     payload = dict(vehicle_configuration=base, stage_configuration=stage,
                    provenance=dict(baseline_tag="M0-v1.0", baseline_commit=stage["metadata"]["baseline_commit"],
                                    code_commit=subprocess.check_output(["git","rev-parse","HEAD"],cwd=ROOT,text=True).strip(),
-                                   input_sha256=hashes, hash_definition="actual input bytes; Git eol=lf for source checkout",
+                                   input_sha256=hashes, hash_definition="UTF-8 text normalized to LF for portable Git checkout verification",
                                    source_classification="EPA combined fitted map; mirrored regeneration; S3 gearbox and partition",
                                    winding_heat_available=False, thermal_model_executed=False))
     out = ROOT / "results/m1"

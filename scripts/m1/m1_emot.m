@@ -1,6 +1,7 @@
 function q=m1_emot(c, rpm, torque, active)
 % Signed DC input, signed mechanical output. Heat is always dissipative.
 if nargin<4, active=true(size(rpm)); end
+assert(isequal(size(rpm),size(torque),size(active)),'m1:Dimensions','Speed, torque and active arrays must have identical shapes');
 assert(c.stage.inputs.source_voltage_V==650,'m1:Voltage','Only the 650 V reference map is supported');
 assert(all(isfinite(rpm)) && all(isfinite(torque)),'m1:Nonfinite','Finite inputs required');
 assert(all(rpm>=0 & rpm<=max(c.map.speed_rpm)),'m1:MapBounds','EPA speed map ends at 13000 rpm');
@@ -13,7 +14,7 @@ assert(all(abs(pm)<=60000+1e-5),'m1:PowerLimit','Outside declared peak power');
 if any(torque(active)<0) && ~c.stage.assumptions.allow_estimated_regen_map
     error('m1:EstimatedRegenRejected','Negative torque map is estimated, not measured');
 end
-L=c.loss(rpm,torque); assert(all(isfinite(L) & L>=0));
+L=reshape(c.loss(rpm(:),torque(:)),size(rpm)); assert(all(isfinite(L) & L>=0));
 % Inactive means an assumed disconnected inverter with omitted drag; no idle-map double counting.
 assert(all(abs(torque(~active))<1e-12),'m1:InactiveTorque','Inactive motor cannot supply commanded torque');
 L(~active)=c.stage.assumptions.unpowered_emot_loss_W;
