@@ -226,15 +226,134 @@
       "ready_for_validated_component_temperature_prediction": false
     }
   },
+  "engineering_partition_configuration": {
+    "metadata": {
+      "schema_version": "m1-source-interface-1.0",
+      "scenario_id": "engineering_budget_normalized_v1",
+      "classification": "S3_ENGINEERING_NOT_MEASURED",
+      "method": "physics_shaped_weights_normalized_to_existing_total_loss",
+      "uncertainty": "deterministic_parameter_box_not_statistical_confidence",
+      "actual_internal_loss_map": null,
+      "actual_current_trajectory": null,
+      "actual_gear_geometry": null
+    },
+    "reference": {
+      "phase_resistance_ohm": 0.077,
+      "resistance_temperature_C": 21.0,
+      "copper_alpha_20_per_K": 0.00393,
+      "reference_speed_rpm": 6000.0,
+      "reference_torque_Nm": 100.0
+    },
+    "parameters": {
+      "torque_constant_Nm_per_Arms": [
+        0.5,
+        0.7,
+        0.9
+      ],
+      "winding_temperature_C": [
+        40.0,
+        100.0,
+        140.0
+      ],
+      "ac_copper_speed_factor": [
+        0.0,
+        0.15,
+        0.4
+      ],
+      "field_weakening_current_factor": [
+        0.0,
+        0.3,
+        0.8
+      ],
+      "iron_hysteresis_ref_W": [
+        80.0,
+        200.0,
+        400.0
+      ],
+      "iron_eddy_ref_W": [
+        50.0,
+        150.0,
+        350.0
+      ],
+      "rotor_speed_squared_ref_W": [
+        20.0,
+        70.0,
+        180.0
+      ],
+      "motor_stray_load_ref_W": [
+        10.0,
+        30.0,
+        100.0
+      ],
+      "drive_inverter_ratio_multiplier": [
+        0.8,
+        1.0,
+        1.2
+      ],
+      "fallback_inverter_fraction": [
+        0.05,
+        0.15,
+        0.35
+      ],
+      "gear_mesh_power_coefficient": [
+        0.01,
+        0.02,
+        0.035
+      ],
+      "gear_bearing_torque_Nm": [
+        0.02,
+        0.06,
+        0.12
+      ],
+      "gear_bearing_load_coefficient": [
+        0.001,
+        0.003,
+        0.006
+      ],
+      "gear_churning_ref_W": [
+        10.0,
+        50.0,
+        150.0
+      ],
+      "gear_seal_torque_Nm": [
+        0.005,
+        0.02,
+        0.05
+      ],
+      "disc_heat_fraction": [
+        0.85,
+        0.9,
+        0.95
+      ]
+    },
+    "controls": {
+      "field_weakening_start_rpm": 4500.0,
+      "normalized_loss_ratio_warning_bounds": [
+        0.25,
+        4.0
+      ],
+      "sensitivity_cases": [
+        "stop_z06_bat30_road1",
+        "short_drive_0_to_80"
+      ],
+      "joint_parameter_samples": 128,
+      "random_seed": 20261019,
+      "interval_bounds_hold_total_emot_and_gear_fixed": true,
+      "no_load_gear_drag_omitted": true,
+      "inverter_default_thermal_destination": "external_boundary_not_motor_internal"
+    }
+  },
   "provenance": {
     "baseline_tag": "M0-v1.0",
     "baseline_commit": "b13f265b1ff0add1f9e8b166d2c1bfa4ac8a8d16",
-    "code_commit": "ab6040e713755c7fb5cda9e69aea1b3c742090e4",
+    "code_commit": "2b336e62485e0183f79428dd6009ec7aa32a1ab3",
     "input_sha256": {
       "configs/baseline_vehicle.yaml": "131cbe265d5644dc6db453d02e2d9d096d81210bddf102f8145acc743d24177a",
       "configs/m1_heat_sources.yaml": "10fd159349abf3b9f0b4b791a34d92ef9f04fd0ca18d07c9693c86a3018d9c6c",
       "results/m0/epa_map_numeric.json": "77ed23116038f83b1ee2c9bb04c3a796b014e5a216cce2fd7a985ecb6c2b1970",
-      "results/m0/ornl_paired_drive_efficiency.csv": "751d1cffd93476f552bf64ef204f6f78eebc5c5a7c99fd2c600d66c26637c2b9"
+      "results/m0/ornl_paired_drive_efficiency.csv": "751d1cffd93476f552bf64ef204f6f78eebc5c5a7c99fd2c600d66c26637c2b9",
+      "configs/m1_source_partition.yaml": "714c7de830849ea7517e819cae3a900328ee50533a50e3214a5d4943899a5ed6",
+      "data/raw/m1/manifest.json": "3a06b5d156162a57b9556e866c0f0edc9679f4059302a374695de25a9e1d5ad7"
     },
     "hash_definition": "UTF-8 text normalized to LF for portable Git checkout verification",
     "source_classification": "EPA combined fitted map; mirrored regeneration; S3 gearbox and partition",

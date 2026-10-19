@@ -27,7 +27,9 @@ Toyota 2010 Prius MG2（参考单侧永磁电机）：60kW、207Nm、13500rpm，
 
 ## M1数值模型交付（2026-10-19，PARTIAL）
 
-经用户授权，从M0-v1.0创建 `stage/M1-heat-sources`。已实现左右独立动力学、EPA联合损耗、有限范围的电机/逆变器估计拆分、双向减速器功率、再生直流上限和盘片接触功账本。MATLAB R2025a实际通过18组测试、23组轨迹，Python独立CSV复核通过。成果为参考地图与工程假设下的计算，绕组热源仍未知，未开展温度求解或实验验证。
+经用户授权，从M0-v1.0创建 `stage/M1-heat-sources`。已实现左右独立动力学、EPA联合损耗、有限范围的电机/逆变器估计拆分、双向减速器功率、再生直流上限和盘片接触功账本。本轮进一步提供独立S3工程铜/铁/转子其他/逆变器、齿轮/轴承/其他及盘片分项，含16参数条件区间与敏感性。R2025a实际通过原18+新11测试组、23整车轨迹、46单侧接口和322次敏感性计算，Python独立复核通过。真实绕组数据仍NaN/null，严格数据模式明确拒绝，工程输出不冒称标定。
+
+概念数值关卡已具备送审条件，真实部件标定仍为PARTIAL。接口及来源见 [输入合同](docs/M1_HEAT_SOURCE_INTERFACE.md)、[资料审查](docs/M1_SOURCE_REVIEW.md) 和 [验收表](reports/M1_ACCEPTANCE_CHECKLIST.md)。上下界以现有总损耗固定为条件，不代表真实置信区间；未开展温度求解或实验验证。
 
 - [M1报告](reports/M1_report.md) / [Word](reports/M1_report.docx) / [PDF](reports/M1_report.pdf)
 - [复现说明](scripts/m1/README.md)、[模型配置](configs/m1_heat_sources.yaml)、[运行与曲线证据](results/m1/)

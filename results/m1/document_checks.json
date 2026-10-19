@@ -1,9 +1,9 @@
 {
   "word_export": "PASS",
-  "editable_math_objects": 27,
-  "pdf_pages": 6,
-  "embedded_figures": 2,
-  "post_pandoc_changes": "formatting only: table headers, row splitting, spacing and language metadata",
+  "editable_math_objects": 52,
+  "pdf_pages": 12,
+  "embedded_figures": 5,
+  "post_pandoc_changes": "formatting only: table headers, row splitting, spacing, reference-list pagination and language metadata",
   "visual_inspection": "PASS",
   "inspected_pages": [
     1,
@@ -11,9 +11,15 @@
     3,
     4,
     5,
-    6
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
   ],
-  "inspection_note": "Final Word-export PDF: equations, tables, figures and page boundaries visually inspected; no clipped content.",
-  "docx_sha256": "ba2eb4f2978f3e963181bb86c4456251ec6c3b38ce921c7bbc62a8fe8b9d4582",
-  "pdf_sha256": "740e982d82dc1a488d775e7f2a33a708269eb8a827282c28fa92b6d5705c818e"
+  "inspection_note": "Final Word-export PDF inspected page by page: tables, editable equations, source labels, figures and reference pagination checked.",
+  "docx_sha256": "2d392fdd58c1a9a1a6a3eb8471c99328e5f48999e1d795272a7c3428590f2b0b",
+  "pdf_sha256": "47c405e934fe6a976285bf043d9710944c5c842954e4236182cc5a6edd7dd042"
 }

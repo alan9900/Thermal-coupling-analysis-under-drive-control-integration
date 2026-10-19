@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "test_group_count": 11,
+  "test_groups": [
+    "46 single-side exports: motor, inverter, gear and disc instantaneous/integral closure",
+    "engineering classification, raw NaN preservation and external inverter destination",
+    "strict mode rejects internal loss output before any file write; invalid mode rejected",
+    "independent 3*R*Irms^2 raw weight and explicit motor-budget normalization",
+    "independent backdrive mesh weight and normalization; total gear loss unchanged",
+    "disc sensitivity exact linear slope with conserved disc-plus-pad heat",
+    "low-speed fade, high SOC and temperature-disabled regeneration retain friction heating",
+    "independent left/right speed and one-side regen-failure interface, no doubling of single-side heat",
+    "missing/null/reversed/out-of-range parameters, invalid side and duplicate time rejected",
+    "all 32 one-at-a-time parameter endpoints inside deterministic interval enclosure",
+    "M0 unknowns preserved, traceable manifest exists, mismatched dynamics-input snapshot rejected"
+  ],
+  "single_side_cases": 46,
+  "maximum_partition_residual_W": 7.2759576141834259E-12,
+  "strict_mode": "EXPECTED_REJECTION",
+  "experimental_validation": "NOT EXECUTED",
+  "M2_executed": false,
+  "matlab": "25.1.0.2943329 (R2025a)",
+  "release": "2025a"
+}

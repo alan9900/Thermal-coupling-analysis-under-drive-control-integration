@@ -5,7 +5,7 @@
 | 阶段 | 审核状态 | Git Tag | Commit SHA | PR | 配置版本 | 测试与成果 |
 |---|---|---|---|---|---|---|
 | M0 参数审查 | APPROVED（参数与资料准备范围） | [M0-v1.0](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/releases/tag/M0-v1.0)，附注Tag已推送验证 | 验收main `b13f265b1ff0add1f9e8b166d2c1bfa4ac8a8d16`；Tag对象 `d50d3896b71480bc3793a82d274f862afac1f8ec` | [PR #1](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/1)，MERGED | V0.4 | [关卡记录](../reports/M0_GATE_ACCEPTANCE_2026-10-19.md)；Python 3项／MATLAB既有12组检查及18组制动积分通过；批准日期2026-10-19，用户授权简验后进入M1 |
-| M1 热源建模 | PARTIAL，草稿送审，未批准 | NOT CREATED；候选M1-v1.0 | 数值代码 `ab6040e713755c7fb5cda9e69aea1b3c742090e4`；基线为M0-v1.0；证据提交见下文 | [PR #2](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/2)，DRAFT | V0.4 | [阶段报告](../reports/M1_report.md) / [Word](../reports/M1_report.docx) / [PDF](../reports/M1_report.pdf)；MATLAB R2025a 18组测试、23组轨迹通过，Python独立CSV检查23组通过；绕组损耗等真实标定未齐；M2 NOT EXECUTED |
+| M1 热源建模 | 概念数值关卡PASS待审；真实标定PARTIAL，未批准 | NOT CREATED；候选M1-v1.0 | 本轮代码 `2b336e62485e0183f79428dd6009ec7aa32a1ab3`；基线M0-v1.0；证据见下文 | [PR #2](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/2)，DRAFT | V0.4 | [报告](../reports/M1_report.md) / [Word](../reports/M1_report.docx) / [PDF](../reports/M1_report.pdf) / [验收表](../reports/M1_ACCEPTANCE_CHECKLIST.md)；R2025a原18+新11测试组、23整车轨迹、46单侧接口及322敏感性运行通过；Python独立复核通过；严格模式拒绝、工程模式S3；M2 NOT EXECUTED |
 | M2 热网络 | NOT_STARTED | NOT CREATED | — | — | V0.4 | — |
 | M3 几何设计 | NOT_STARTED | NOT CREATED | — | — | V0.4 | — |
 | M4 ANSYS | NOT_STARTED | NOT CREATED | — | — | V0.4 | — |
@@ -34,3 +34,9 @@ M0已于本轮合并且附注Tag实际创建成功，远端剥离Tag后的目标
 分支 `stage/M1-heat-sources` 直接从已验收的M0 main提交创建。全部23组轨迹保存在 `results/m1/traces/`，配置快照、文本SHA-256、实际MATLAB日志、MAT结果、曲线和独立复核见 `results/m1/`；复现命令见 `scripts/m1/README.md`。数值代码SHA与输入哈希固定在 `inputs.json` 和 `independent_checks.json`。报告包含27个可编辑公式，Word经实际导出PDF并逐页检查。真实标定缺口使本阶段保持PARTIAL；M1未合并、TAG NOT CREATED，M2–M7未开展。
 
 证据归档提交：`2514a6d337eb5300b4f807419a3e1f7b66a72cd7`，含报告Markdown/Word/PDF、23条CSV轨迹、MAT、图表、运行日志、独立复核与文档检查；本行在后续登记提交加入，避免提交SHA自引用。送审为上述PR #2，不将草稿PR视为已验收版本。
+
+## M1 参数化与不确定性补充（2026-10-19）
+
+用户已授权继续同一分支/PR，允许明确标识的工程替代模型，不批准合并/Tag/M2。代码提交 `d3dbf6c5839b9d228db8665e76da0c5d7549c0dd` 引入参数化分项；`2b336e62485e0183f79428dd6009ec7aa32a1ab3` 补充时序输入溯源保护及图表标识，最终实际运行采用后者。旧证据提交保留，可从历史恢复；本轮更新M1报告及结果，不改M0固定版本。
+
+独立工程配置 `configs/m1_source_partition.yaml`，资料审查 `docs/M1_SOURCE_REVIEW.md`，未来输入合同 `docs/M1_HEAT_SOURCE_INTERFACE.md`。46对CSV/JSON、161×2参数运行、MAT/图表/日志及检查位于 `results/m1/engineering/`。范围为固定联合/传动总损耗下的守恒分配及条件区间，非实测置信区间；真实绕组数据仍NaN/null。概念数值验收条件已具备，研究者验收PENDING；M1未合并，TAG NOT CREATED，M2–M7未开展。

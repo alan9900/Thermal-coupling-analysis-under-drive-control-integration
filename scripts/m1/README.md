@@ -10,6 +10,9 @@
 py scripts/m1/prepare_inputs.py
 & 'F:\Program Files\MATLAB\R2025a\bin\matlab.exe' -batch "addpath('scripts/m1'); run_m1" -logfile results/m1/matlab_run.log
 py scripts/m1/check_outputs.py
+& 'F:\Program Files\MATLAB\R2025a\bin\matlab.exe' -batch "addpath('scripts/m1'); run_m1_sources" -logfile results/m1/source_run.log
+py scripts/m1/check_sources.py
+py scripts/m1/plot_sensitivity.py
 ```
 
 Python依赖沿用`scripts/m0/requirements.txt`；MATLAB R2025a仅用基础函数，程序不依赖ALPHA/REVS类。MATLAB路径按实际安装调整。不修改M0配置及原结果；所有新假设位于`configs/m1_heat_sources.yaml`。Python程序禁止用`-O`关闭审查断言。
@@ -38,6 +41,16 @@ Python依赖沿用`scripts/m0/requirements.txt`；MATLAB R2025a仅用基础函�
 EPA图仅650V、0–13000rpm，负转矩为镜像估计。左右轮速不同的案例是强加运动学接口测试，额外的带符号功率端口`lr_kinematic_exchange_W`防止把不对称功误算入纵向动能；不宣称建立了车辆横摆模型。驱动测试短于18秒，但这不是新的热能力证明。盘片热分配0.90及0.85–0.95区间、减速器0.96效率均为工程假设。
 
 数值检查通过与真实资料齐备分开登记。阶段应保持`PARTIAL`，直至内部电机损耗、再生分配、减速器图、盘片分配和电池边界的证据达到相应要求。M1 PR未经用户批准不合并、不打M1正式Tag、不进入M2。
+
+## 本轮工程分项接口
+
+新增独立配置 `configs/m1_source_partition.yaml`，保留原数据NaN/null。可选 `py scripts/m1/collect_sources.py` 重新获取公开方法资料（会更新检索时间/哈希；应在prepare_inputs之前运行）；仓库已保存可离线复算的资料登记，无需每次重下。分项层用既有总损耗约束下的物理形状权重，不能解释为已标定的绝对3RI²或磁钢损耗。
+
+`m1_sources(c,tr,'left','strict')` 当前按预期抛出 `m1:StrictEvidenceGap`；`engineering` 才能输出S3分项候选。所有16参数区间均必需，缺失/null或越界拒绝。完整接口合同见 `docs/M1_HEAT_SOURCE_INTERFACE.md`，方法与范围依据见 `docs/M1_SOURCE_REVIEW.md`。
+
+`run_m1_sources` 必须使用刚由同一输入运行的 `run_m1` 输出。原23条trace之外，保存左右46对CSV/JSON、单侧能量、161×2敏感性运行、完整参数矩阵、MAT及分项/不确定性曲线到 `results/m1/engineering/`。新增11组检查与原18组分别登记。`check_sources.py` 独立复核原始NaN、分项与总量、区间、322次敏感性及M0受保护路径。`plot_sensitivity.py` 依赖matplotlib，仅绘制保存的MATLAB结果。
+
+上下界以现有总损耗固定为条件，不是实测置信区间；各分项上界不能同时当作一个热源场景加载。需要联合场景时，把完整参数向量作为overrides传入，再输出整套守恒时序。逆变器默认外部热边界，盘/片是单盘两面合计，不能再乘2。本层不求解任何温度。
 
 ## 报告生成
 

@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "concept_numerical_gate": "PASS_PENDING_RESEARCHER_REVIEW",
+  "stage_status": "PARTIAL_REAL_COMPONENT_CALIBRATION",
+  "single_side_exports": 46,
+  "test_groups": 11,
+  "scenario_count_per_case": 161,
+  "sensitivity_case_count": 2,
+  "sensitivity_runs": 322,
+  "maximum_partition_residual_W": 7.2759576141834259E-12,
+  "interval_enclosure_checks": "PASS_ALL_RUNS",
+  "uncertainty_interpretation": "deterministic conditional box, NOT statistical confidence",
+  "strict_mode": "EXPECTED_REJECTION",
+  "M1_approved": false,
+  "M1_tag_created": false,
+  "M2_executed": false
+}

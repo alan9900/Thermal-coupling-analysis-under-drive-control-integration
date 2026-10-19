@@ -28,6 +28,14 @@ def render():
     import win32com.client
     path=ROOT/'reports/M1_report.docx'
     d=Document(path)
+    final_references=False
+    for p in d.paragraphs:
+        if p.text.startswith('13. 补充引用'):
+            final_references=True
+        if final_references:
+            p.paragraph_format.keep_with_next=True
+    if final_references:
+        d.paragraphs[-1].paragraph_format.keep_with_next=False
     for table in d.tables:
         keep_short=table.cell(0,0).text=='减速度'
         for ri,row in enumerate(table.rows):
@@ -49,7 +57,7 @@ def render():
         tree=ET.fromstring(z.read('word/document.xml'))
         equations=len(tree.findall('.//{http://schemas.openxmlformats.org/officeDocument/2006/math}oMath'))
         assert equations>=20
-        assert len([n for n in z.namelist() if n.startswith('word/media/')])==2
+        assert len([n for n in z.namelist() if n.startswith('word/media/')])==5
     word=win32com.client.DispatchEx('Word.Application')
     word.Visible=False; word.DisplayAlerts=0; word.AutomationSecurity=3; doc=None
     try:
@@ -64,8 +72,8 @@ def render():
     assert 'PARTIAL' in text and '75.87' in text and 'M0-v1.0' in text
     for i,page in enumerate(pdf):
         page.get_pixmap(matrix=pymupdf.Matrix(1.25,1.25)).save(folder/f'page_{i+1:02d}.png')
-    result=dict(word_export='PASS',editable_math_objects=equations,pdf_pages=len(pdf),embedded_figures=2,
-                post_pandoc_changes='formatting only: table headers, row splitting, spacing and language metadata',
+    result=dict(word_export='PASS',editable_math_objects=equations,pdf_pages=len(pdf),embedded_figures=5,
+                post_pandoc_changes='formatting only: table headers, row splitting, spacing, reference-list pagination and language metadata',
                 visual_inspection='PENDING')
     (ROOT/'results/m1/document_checks.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(result,indent=2))

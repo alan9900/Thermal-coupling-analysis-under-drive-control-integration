@@ -37,3 +37,21 @@
            winding_sources_available: 0
                           M2_started: 0
 
+                          status: 'PASS'
+                test_group_count: 11
+                     test_groups: {1×11 cell}
+               single_side_cases: 46
+    maximum_partition_residual_W: 7.2760e-12
+                     strict_mode: 'EXPECTED_REJECTION'
+         experimental_validation: 'NOT EXECUTED'
+                     M2_executed: 0
+                          matlab: '25.1.0.2943329 (R2025a)'
+                         release: '2025a'
+
+            case_id               side                      scenario                     copper_kJ    copper_lower_kJ    copper_upper_kJ    iron_kJ    iron_lower_kJ    iron_upper_kJ    rotor_other_kJ    rotor_other_lower_kJ    rotor_other_upper_kJ    inverter_kJ    inverter_lower_kJ    inverter_upper_kJ    gear_mesh_kJ    gear_mesh_lower_kJ    gear_mesh_upper_kJ    gear_bearing_kJ    gear_bearing_lower_kJ    gear_bearing_upper_kJ    gear_other_kJ    gear_other_lower_kJ    gear_other_upper_kJ    disc_kJ    disc_lower_kJ    disc_upper_kJ    pad_kJ    pad_lower_kJ    pad_upper_kJ    motor_scale_min    motor_scale_max
+    ________________________    ________    _________________________________________    _________    _______________    _______________    _______    _____________    _____________    ______________    ____________________    ____________________    ___________    _________________    _________________    ____________    __________________    __________________    _______________    _____________________    _____________________    _____________    ___________________    ___________________    _______    _____________    _____________    ______    ____________    ____________    _______________    _______________
+
+    {'stop_z06_bat30_road1'}    {'left'}    {'nominal'                              }     4.5485          2.5184             6.0348         0.88478       0.13096          2.3159           0.18325              0.017436                0.98248             0.99116           0.33039              2.3127             2.0793             1.164                 2.5998              0.46848               0.0983                   1.2738               0.19632            0.025857                0.78167          68.282        64.488           72.075        7.5868       3.7934          11.38            0.39185            2.3044     
+    {'stop_z06_bat30_road1'}    {'left'}    {'torque_constant_Nm_per_Arms_endpoint1'}     4.9411          2.5184             6.0348         0.55955       0.13096          2.3159           0.11591              0.017436                0.98248             0.99116           0.33039              2.3127             2.0793             1.164                 2.5998              0.46848               0.0983                   1.2738               0.19632            0.025857                0.78167          68.282        64.488           72.075        7.5868       3.7934          11.38             0.2011            1.2413     
+    {'stop_z06_bat30_road1'}    {'left'}    {'torque_constant_Nm_per_Arms_endpoint3'}      4.189          2.5184             6.0348          1.1823       0.13096          2.3159           0.24527              0.017436                0.98248             0.99116           0.33039              2.3127             2.0793             1.164                 2.5998              0.46848               0.0983                   1.2738               0.19632            0.025857                0.78167          68.282        64.488           72.075        7.5868       3.7934          11.38            0.64273            3.5586     
+

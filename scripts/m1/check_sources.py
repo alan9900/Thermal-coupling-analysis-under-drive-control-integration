@@ -62,7 +62,7 @@ def main():
         nominal[(meta['case_id'],side)]=energy
         checks.append(dict(file=path.name,rows=len(q),classification='S3_ENGINEERING_NOT_MEASURED'))
         for artifact in [path,path.with_suffix('.json'),ROOT/meta['trace_file']]:
-            artifact_hashes[str(artifact.relative_to(ROOT)).replace('\\','/')]=hashlib.sha256(artifact.read_bytes()).hexdigest()
+            artifact_hashes[str(artifact.relative_to(ROOT)).replace('\\','/')]=hashlib.sha256(artifact.read_text(encoding='utf-8').encode('utf-8')).hexdigest()
     assert len(checks)==46
     # Read sensitivity scenario vectors and integrated energies independently.
     parameters=np.genfromtxt(OUT/'sensitivity_parameters.csv',delimiter=',',names=True,dtype=None,encoding='utf-8')
@@ -92,6 +92,7 @@ def main():
                 diagnostic_interpretation='large normalization reveals uncalibrated raw weights; this is a conserved allocation, not absolute 3IR copper-loss validation',
                 model_code_commit=inputs['provenance']['code_commit'],matlab_new_test_groups=tests['test_group_count'],
                 interface_and_parent_sha256=artifact_hashes,
+                artifact_hash_definition='UTF-8 text normalized to LF for portable Git checkout verification',
                 M0_protected_files_unchanged=True,strict_mode='EXPECTED_REJECTION',M1_approved=False,M2_executed=False)
     (OUT/'independent_checks.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
     print('Independent source checks PASS:',len(checks),'single-side histories;',len(sensitivity),'sensitivity runs; max residual W',max_residual)
