@@ -20,6 +20,7 @@ for a=1:2
     nexttile;hold on;
     plot(r{k}.t,r{k}.path_net_J/1000,'LineWidth',1.4);plot(r{k}.t,r{k}.path_forward_J/1000,'--','LineWidth',1);
     xlabel('Time (s)');ylabel('Cumulative heat (kJ)');title('S3 solid = net; dashed = forward-positive');grid on;
+    legend('Radiation net','Hot-air net','Solid net','Radiation forward','Hot-air forward','Solid forward','Location','best','FontSize',7);
 end
 exportgraphics(f,fullfile(out,'path_heat_flows.png'),'Resolution',200);exportgraphics(f,fullfile(out,'path_heat_flows.svg'),'ContentType','vector');close(f);
 f=figure('Visible','off','Color','w','Position',[50 50 1200 500]);tiledlayout(1,2);
@@ -28,4 +29,10 @@ ylabel('Max instantaneous T_C - T_A (K)');title('S3 additional brake-source infl
 nexttile;nom=r{3}.summary.peak_winding_C;bar(sensitivity.peak_winding_C-nom);xticks(1:height(sensitivity));
 xticklabels(strrep(cellstr(sensitivity.case_id),'_',' '));xtickangle(65);ylabel('Peak winding change from C (K)');title('S3 parameter/loss uncertainty - NOT confidence');grid on;
 exportgraphics(f,fullfile(out,'coupling_sensitivity.png'),'Resolution',200);exportgraphics(f,fullfile(out,'coupling_sensitivity.svg'),'ContentType','vector');close(f);
+f=figure('Visible','off','Color','w','Position',[50 50 1150 430]);tiledlayout(1,2);
+nexttile;plot(r{3}.t,r{3}.T_K(:,[6 7])-r{1}.T_K(:,[6 7]),'LineWidth',1.5);
+xlabel('Time (s)');ylabel('Additional temperature (K)');legend('Gear oil','Gear case');title('S3 brake-source influence: C - A');grid on;
+nexttile;plot(r{3}.t,r{3}.T_K(:,[8 9 10 11])-r{1}.T_K(:,[8 9 10 11]),'LineWidth',1.5);
+xlabel('Time (s)');ylabel('Additional temperature (K)');legend('Motor case','Stator','Winding','Rotor/other');title('S3 delayed coupling: C - A');grid on;
+exportgraphics(f,fullfile(out,'additional_brake_influence.png'),'Resolution',200);exportgraphics(f,fullfile(out,'additional_brake_influence.svg'),'ContentType','vector');close(f);
 end

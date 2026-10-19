@@ -44,7 +44,8 @@ for k=1:2
     choose={'torque_constant_Nm_per_Arms','iron_hysteresis_ref_W','iron_eddy_ref_W','rotor_speed_squared_ref_W','fallback_inverter_fraction'};
     for j=1:numel(choose),v=params.(choose{j});if k==1,ov.(choose{j})=v(1);else,ov.(choose{j})=v(3);end,end
     ss=m2_segments(root,p,ov);ff=m2_forcing(p,ss,false,dt);id=sprintf('coherent_M1_allocation_%d',k);
-    r=m2_simulate(c,ff,[1 1 1],id);sensResults{end+1}=compact(r);z=r.summary;z.parameter='coherent_M1_allocation';z.value=k;sensRows{end+1}=z; %#ok<AGROW>
+    r=m2_simulate(c,ff,[1 1 1],id);r.source_allocation_overrides=ov;
+    sensResults{end+1}=compact(r);z=r.summary;z.parameter='coherent_M1_allocation';z.value=k;sensRows{end+1}=z; %#ok<AGROW>
 end
 sensitivity=struct2table([sensRows{:}]);writetable(sensitivity,fullfile(out,'sensitivity_summary.csv'));
 refinedD=m2_simulate(c,m2_forcing(p,s,true,dt/2),[1 1 1],'D_refined');
