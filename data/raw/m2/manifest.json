@@ -1,0 +1,66 @@
+{
+  "search_scope": "Primary material references and LPTN methods, not exhaustive; method source does not calibrate concept",
+  "sources": [
+    {
+      "id": "NIST_CU",
+      "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7440508&Mask=2&Units=SI",
+      "retrieved_utc": "2026-10-19T06:00:35.290759+00:00",
+      "status": "HTTP_OK",
+      "bytes": 28232,
+      "sha256": "00415bcf6c31d86c91c22c64dd1fa2c76a4664327db012c63335c62e650049f5"
+    },
+    {
+      "id": "NIST_AL",
+      "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7429905&Mask=2&Units=SI",
+      "retrieved_utc": "2026-10-19T06:00:37.159886+00:00",
+      "status": "HTTP_OK",
+      "bytes": 28490,
+      "sha256": "53c5f2d2e8ffb98fc37ce54c3d79a84451f30e983f2fac3eb57b3d2bd9192083"
+    },
+    {
+      "id": "NIST_FE",
+      "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7439896&Mask=2&Units=SI",
+      "retrieved_utc": "2026-10-19T06:00:38.831084+00:00",
+      "status": "HTTP_OK",
+      "bytes": 27337,
+      "sha256": "bd5989b9b98130d6098d7e058dc2a96ff2969081a601e26322c3b95e31709427"
+    },
+    {
+      "id": "HYDRO6082",
+      "url": "https://www.hydro.com/Document/Index?id=7824&name=Hydro+EN+AW+6082.PDF",
+      "retrieved_utc": "2026-10-19T06:00:45.135586+00:00",
+      "status": "DOWNLOAD_FAILED",
+      "error_type": "HTTPError"
+    },
+    {
+      "id": "NASA_EMISSIVITY",
+      "url": "https://ntrs.nasa.gov/api/citations/19690025363/downloads/19690025363.pdf",
+      "retrieved_utc": "2026-10-19T06:00:46.252713+00:00",
+      "status": "DOWNLOAD_FAILED",
+      "error_type": "HTTPError"
+    },
+    {
+      "id": "CONVECTION_METHOD",
+      "url": "https://www.comsol.com/blogs/modeling-natural-and-forced-convection-in-comsol-multiphysics/",
+      "retrieved_utc": "2026-10-19T06:00:47.642395+00:00",
+      "status": "HTTP_OK",
+      "bytes": 131537,
+      "sha256": "aaf0878cbe17a616799187dd4778028a9cd04bc99e1e52b3261009b2d346b7f6"
+    },
+    {
+      "id": "MOTOR_LPTN",
+      "url": "https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/iet-epa.2020.0119",
+      "retrieved_utc": "2026-10-19T06:00:49.284102+00:00",
+      "status": "DOWNLOAD_FAILED",
+      "error_type": "HTTPError"
+    },
+    {
+      "id": "CORLEY_METADATA",
+      "url": "https://api.crossref.org/works/10.1049/joe.2018.9282",
+      "retrieved_utc": "2026-10-19T06:00:49.893213+00:00",
+      "status": "HTTP_OK",
+      "bytes": 6775,
+      "sha256": "78b0fbef193b514baf55702d345258b133f5a0c8076e01a04cf7ae6c74e3b18b"
+    }
+  ]
+}
