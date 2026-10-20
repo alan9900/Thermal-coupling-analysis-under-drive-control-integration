@@ -25,6 +25,15 @@ def section(ax,parts,y,colors=None):
         ax.add_collection(PolyCollection(triangles,facecolors=(colors or {}).get(n,'#8d9da8'),edgecolors='none',alpha=.8,rasterized=True))
     ax.set(xlim=(-235,330),ylim=(-170,280),xlabel='x (mm)',ylabel='z (mm)',aspect='equal')
 
+def contact_graph():
+    fig,ax=plt.subplots(figsize=(12,5.5),layout='constrained');ax.axis('off')
+    nodes={'Disc':(.045,.7),'Hub':(.20,.7),'Removable\nsleeve':(.36,.7),'Output\nshaft':(.53,.7),'Rear\nbearing':(.71,.7),'Case / oil':(.91,.7),'Pads / caliper':(.12,.25),'Bracket':(.43,.25),'Adapter':(.72,.25),'Motor case':(.91,.25)}
+    for label,(x,y) in nodes.items():ax.text(x,y,label,ha='center',va='center',bbox=dict(boxstyle='round,pad=.6',fc='#edf1f3',ec='#7293a6'),transform=ax.transAxes,fontsize=11)
+    pairs=[('Disc','Hub'),('Hub','Removable\nsleeve'),('Removable\nsleeve','Output\nshaft'),('Output\nshaft','Rear\nbearing'),('Rear\nbearing','Case / oil'),('Disc','Pads / caliper'),('Pads / caliper','Bracket'),('Bracket','Case / oil'),('Case / oil','Adapter'),('Adapter','Motor case')]
+    for a,b in pairs:ax.annotate('',xy=nodes[b],xytext=nodes[a],xycoords='axes fraction',arrowprops=dict(arrowstyle='<->',color='#ac6651',shrinkA=35,shrinkB=40))
+    ax.text(.5,.03,'Bulk R candidates only; red interfaces require contact / film laws.\nSleeve pressure / thermal retention unknown. Bolts, seals and keys add parallel paths.',ha='center',transform=ax.transAxes,fontsize=11)
+    ax.set_title('Revised thermal path / node graph | S3 engineering hypothesis, not solved network');save(fig,'contact_network')
+
 def main():
     print('LOAD REVISED PART STEP',flush=True)
     mass=list(csv.DictReader((OUT/'mass_heat_capacity.csv').open(encoding='utf-8')))
@@ -58,13 +67,7 @@ def main():
     fig,ax=plt.subplots(figsize=(11,4.8),layout='constrained');x=np.arange(len(valid))
     ax.bar(x-.18,[float(r['M2_C_J_K']) for r in valid],.36,label='M2 assumed lump');ax.bar(x+.18,[float(r['M3_geometry_candidate_C_J_K']) for r in valid],.36,label='M3 CAD volume x S3 rho cp')
     ax.set_xticks(x,[r['node'] for r in valid],rotation=25,ha='right');ax.set(ylabel='Heat capacity (J/K)',title='Engineering candidates; pinions retained on separate shaft nodes');ax.legend();save(fig,'capacity_comparison')
-    fig,ax=plt.subplots(figsize=(12,5.5),layout='constrained');ax.axis('off')
-    nodes={'Disc':(.06,.7),'Hub':(.27,.7),'Output shaft':(.48,.7),'Rear bearing':(.69,.7),'Case / oil':(.9,.7),'Pads / caliper':(.12,.25),'Bracket':(.43,.25),'Adapter':(.72,.25),'Motor case':(.9,.25)}
-    for label,(x,y) in nodes.items():ax.text(x,y,label,ha='center',va='center',bbox=dict(boxstyle='round,pad=.6',fc='#edf1f3',ec='#7293a6'),transform=ax.transAxes,fontsize=10)
-    for a,b in [('Disc','Hub'),('Hub','Output shaft'),('Output shaft','Rear bearing'),('Rear bearing','Case / oil'),('Disc','Pads / caliper'),('Pads / caliper','Bracket'),('Bracket','Case / oil'),('Case / oil','Adapter'),('Adapter','Motor case')]:
-        ax.annotate('',xy=nodes[b],xytext=nodes[a],xycoords='axes fraction',arrowprops=dict(arrowstyle='<->',color='#ac6651',shrinkA=35,shrinkB=40))
-    ax.text(.5,.03,'Bulk R candidates calculated; red interfaces need contact / film laws.\nRunning pad gap is not a bonded contact. Seals and bolts add parallel paths.',ha='center',transform=ax.transAxes)
-    ax.set_title('Proposed thermal path/node refinement | conceptual graph, not solved network');save(fig,'contact_network')
+    contact_graph()
     fig,axes=plt.subplots(2,2,figsize=(11,9),layout='constrained')
     for case,ax in zip(['Case0','CaseA','CaseB','CaseC'],axes.flat):
         print('SECTION',case,flush=True)

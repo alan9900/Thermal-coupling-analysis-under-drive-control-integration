@@ -47,6 +47,9 @@ def main():
     mass=list(csv.DictReader((OUT/'mass_heat_capacity.csv').open(encoding='utf-8')))
     full={x['part']:float(x['volume_m3']) for x in mass if x['case']=='Case0' and x['diameter_mm']=='50' and x['variant']=='full'}
     simp={x['part']:float(x['volume_m3']) for x in mass if x['case']=='Case0' and x['diameter_mm']=='50' and x['variant']=='thermal'}
+    assert set(P)==set(full)
+    assert max(abs(P[n].Volume()*1e-9-v)/v for n,v in full.items())<1e-8
+    tests.append('Current editable source reproduces every exported50mm baseline body volume')
     error=max(abs(simp[n]-v)/v for n,v in full.items());assert error<1e-6,error
     assert all(not x['installed_mass_kg'] for x in mass if '_bearing_' in x['part']);tests.append('Thermal simplification conserves per-body volume; bearing envelope mass not asserted as installed mass')
     a=json.loads((OUT/'analysis_checks.json').read_text());T=a['braking_zero_regen_cases'];assert abs(T[0]['disc_torque_Nm']-752.83909)<.001 and 910<T[1]['disc_torque_Nm']<912
