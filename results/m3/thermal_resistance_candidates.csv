@@ -1,0 +1,6 @@
+path,length_m,area_m2,k_W_mK,R_bulk_K_W,M2_equivalent_K_W,R_contact_K_W,scope,classification
+hub_to_output_bearing_axial,0.0345,0.0015904312808798326,45,0.4820495395705144,3.5,,"M2 series includes disc/hub/contact; this is shaft bulk only, not a replacement",S3_GEOMETRY_CANDIDATE
+hat_radial_plate,0.05399999999999999,0.001783914121754379,45,0.6726781213099358,2,,"A is logarithmic equivalent area; R=ln(ro/ri)/(2pi*k*t), contact unknown",S3_GEOMETRY_CANDIDATE
+bearing_radial_continuum,0.020000000000000004,0.003754170736445449,45,0.11838684909287227,2.0,,"Log annular lower bound; rolling-element/contacts not continuum; equivalent area, contact unknown",S3_GEOMETRY_CANDIDATE
+bracket_axial_bridge,0.026999999999999996,0.0026999999999999997,45,0.2222222222222222,8,,"Steel bulk only; bolts, mounting contacts and caliper interface unknown",S3_GEOMETRY_CANDIDATE
+motor_flange_bulk,0.014,0.07090562052781549,170,0.001161444474548593,0.3,,Full-face area upper bound; actual clamped contact area unknown,S3_GEOMETRY_CANDIDATE

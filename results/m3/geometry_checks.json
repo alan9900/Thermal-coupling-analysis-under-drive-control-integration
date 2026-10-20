@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "cad_executed": true,
+  "cadquery": "2.8.0",
+  "python": "3.13.12",
+  "case_count": 4,
+  "exports": [
+    {
+      "case": "Case0",
+      "parts": 32,
+      "step_roundtrip_volume_relative_error": 1.115377211045424e-13,
+      "air_volume_m3": 0.03139739976842198,
+      "air_connected_solids": 1,
+      "air_valid": true,
+      "excluded_sealed_air_pockets_mm3": [
+        688.794189299562,
+        688.7941892995618
+      ]
+    },
+    {
+      "case": "CaseA",
+      "parts": 36,
+      "step_roundtrip_volume_relative_error": 1.0737881709377673e-13,
+      "air_volume_m3": 0.03135196319439129,
+      "air_connected_solids": 1,
+      "air_valid": true,
+      "excluded_sealed_air_pockets_mm3": [
+        688.794189299562,
+        688.7941892995618
+      ]
+    },
+    {
+      "case": "CaseB",
+      "parts": 40,
+      "step_roundtrip_volume_relative_error": 1.0183512585769744e-13,
+      "air_volume_m3": 0.0313102079386321,
+      "air_connected_solids": 1,
+      "air_valid": true,
+      "excluded_sealed_air_pockets_mm3": [
+        688.794189299562,
+        688.7941892995618
+      ]
+    },
+    {
+      "case": "CaseC",
+      "parts": 36,
+      "step_roundtrip_volume_relative_error": 1.0760092175792473e-13,
+      "air_volume_m3": 0.03132935609146287,
+      "air_connected_solids": 1,
+      "air_valid": true,
+      "excluded_sealed_air_pockets_mm3": [
+        688.794189299562,
+        688.7941892995618
+      ]
+    }
+  ],
+  "tested_pairs_after_AABB_cull": 283,
+  "positive_overlap_limit_mm3": 0.001,
+  "positive_interferences": 0,
+  "source_commit": "3ea9c6bd2af2cde56d17c1ce5f56ba446813477b",
+  "runtime_s": 56.54575440000008,
+  "classification": "S3_CONCEPT_CAD_NOT_MANUFACTURING_RELEASE",
+  "ANSYS": "NOT EXECUTED",
+  "Fluent": "NOT EXECUTED",
+  "SolidWorks": "NOT EXECUTED",
+  "manufacturing_validation": "NOT EXECUTED"
+}

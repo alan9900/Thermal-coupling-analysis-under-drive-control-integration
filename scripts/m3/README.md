@@ -17,7 +17,7 @@ py -m venv tmp/m3_cad
 
 资料重新核对可单独运行`py scripts/m3/collect_sources.py`，离线复现不依赖重新下载。Python依赖的完整版本另存在results/m3/environment.txt，安装曾遇TLS重试但最终成功，无需关闭证书验证。
 
-`cad/m3/base_parts/`保存共同零件一次，各Case子目录仅保存新增罩体/支柱；四个`*_assembly.step`是包含命名部件的完整装配，四个`*_air_domain.step`为连通外部局部空气域。全部有限STEP约78MB，最大装配约14MB；不提交CAD内核/环境/缓存，不无计划重复存放拓展DOE模型。后续更大场数据须另行评估LFS或受控归档。
+`cad/m3/base_parts/`保存共同零件一次，各Case子目录仅保存新增罩体/支柱；四个`*_assembly.step`是包含命名部件的完整装配，四个`*_air_domain.step`为连通外部局部空气域。全部有限STEP约78MB，最大装配约15MB；不提交CAD内核/环境/缓存，不无计划重复存放拓展DOE模型。后续更大场数据须另行评估LFS或受控归档。
 
 `results/m3/`保存质量/C、热阻候选、辐射直接视角、参数/间隙/静力检查、单元/回归测试、STEP哈希、日志及图片。体积来自B-rep，密度/cp/k为材料等效候选；轴承CAD是实心环包络，不能用其体积×钢密度冒充实物轴承质量。本轮M2输出轴承候选取两只6209目录参考质量0.404kg/只，仍不代表完成选型。
 

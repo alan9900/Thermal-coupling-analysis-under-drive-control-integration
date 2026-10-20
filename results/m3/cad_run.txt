@@ -1,0 +1,9 @@
+BUILD Case0
+PASS Case0 parts 32 air m3 0.03139739976842198
+BUILD CaseA
+PASS CaseA parts 36 air m3 0.03135196319439129
+BUILD CaseB
+PASS CaseB parts 40 air m3 0.0313102079386321
+BUILD CaseC
+PASS CaseC parts 36 air m3 0.03132935609146287
+All geometry exports and checks PASS

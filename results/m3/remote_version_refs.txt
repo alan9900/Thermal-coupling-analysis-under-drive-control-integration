@@ -1,0 +1,7 @@
+1d51c22d94577ff8f52be785300b5f6b4aadee37	refs/heads/main
+d50d3896b71480bc3793a82d274f862afac1f8ec	refs/tags/M0-v1.0
+b13f265b1ff0add1f9e8b166d2c1bfa4ac8a8d16	refs/tags/M0-v1.0^{}
+9b3c7f97c63b56b50eb7c0477a72ad03060cae39	refs/tags/M1-v1.0
+9d545ab39a3efcce857573af74f7e325b74a2b15	refs/tags/M1-v1.0^{}
+4ad89c4a220174de741b4ba48706279d3b7cb2d1	refs/tags/M2-v1.0
+1d51c22d94577ff8f52be785300b5f6b4aadee37	refs/tags/M2-v1.0^{}

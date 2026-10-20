@@ -1,0 +1,230 @@
+{
+  "count": 56,
+  "total_bytes": 78206357,
+  "files": {
+    "cad/m3/Case0_air_domain.step": {
+      "bytes": 570128,
+      "sha256": "07a04dc98a68ed10c7c4fc0c3f32a716436533c742e3084507b6847ce85c0405"
+    },
+    "cad/m3/Case0_assembly.step": {
+      "bytes": 14243054,
+      "sha256": "84f23c7befb49c067247b3e9762caa7024848cca4359c76d595a14b215c64bb5"
+    },
+    "cad/m3/CaseA_air_domain.step": {
+      "bytes": 979271,
+      "sha256": "b053e4f1674de235bab915bbf6ed93d3aa271c3ba91e8b87095be0b0f69971e1"
+    },
+    "cad/m3/CaseA_assembly.step": {
+      "bytes": 14682191,
+      "sha256": "be0c628d1bc20fac5aeefe8f406db2a7ef5ce494c786047db362f8665a87d8b8"
+    },
+    "cad/m3/CaseB_air_domain.step": {
+      "bytes": 1384523,
+      "sha256": "9140d08a0706803cf179b9837934f183e735cc3f1feba2615b7c2d02b3e6103f"
+    },
+    "cad/m3/CaseB_assembly.step": {
+      "bytes": 15121258,
+      "sha256": "cc90de5b9f9bbd48fb2004d529d46dd77409356b43863e9a3bb5ad7c4e3f1a9a"
+    },
+    "cad/m3/CaseC_air_domain.step": {
+      "bytes": 1061493,
+      "sha256": "1966668cf148a3ce6f9e565a31d7f887319bbda423421804991261e3921336b4"
+    },
+    "cad/m3/CaseC_assembly.step": {
+      "bytes": 14767918,
+      "sha256": "8349e3f3034ee866d63c88cbbf14878790225b891f6d394be4dc8aceb2d302ed"
+    },
+    "cad/m3/base_parts/brake_disc_hat.step": {
+      "bytes": 445583,
+      "sha256": "cb7b8d1783207fc290b5347b68baffe3bd5d47e9304fe43659ceb60f249c97db"
+    },
+    "cad/m3/base_parts/caliper.step": {
+      "bytes": 37922,
+      "sha256": "40b567cc730fd948f3f8d65c6eddd0d2c222805a2783a122f5ad063b8836e505"
+    },
+    "cad/m3/base_parts/caliper_mount_bolt_1.step": {
+      "bytes": 5660,
+      "sha256": "5de4182ecbf38fc5914c6ec655add5872d76c78667d3798a121d25edb08112ce"
+    },
+    "cad/m3/base_parts/caliper_mount_bolt_2.step": {
+      "bytes": 5652,
+      "sha256": "6e3ffef70c6ffde8158b12989faa0cfe30f7fc072c5ae3242b5d720ba458ccab"
+    },
+    "cad/m3/base_parts/caliper_reaction_bracket.step": {
+      "bytes": 29583,
+      "sha256": "df39801fa825818fffacbf1e13582847d9613e21d42688b6926f5dd913761a8a"
+    },
+    "cad/m3/base_parts/disc_hub.step": {
+      "bytes": 32166,
+      "sha256": "15ae072b981adfa84c4c69315a45fb5c1dd3a3927fe5b46878f5e580d3e2a071"
+    },
+    "cad/m3/base_parts/gear_case.step": {
+      "bytes": 196689,
+      "sha256": "ff648c8a72ae36577658125b77af719e9f94671563dbc4b1694e58e310b929d0"
+    },
+    "cad/m3/base_parts/input_bearing_1.step": {
+      "bytes": 9284,
+      "sha256": "8b59948533b50efc9af8f547982927f03bac3a2a35a62185ade1793f7f53df9c"
+    },
+    "cad/m3/base_parts/input_bearing_2.step": {
+      "bytes": 9313,
+      "sha256": "78f1eb6abb7751bebc83c14ae1e43ce459c803f1e3f3887a2fd2b21c799fb769"
+    },
+    "cad/m3/base_parts/input_rotor_shaft.step": {
+      "bytes": 13404,
+      "sha256": "46f1059e50320a54d6052d300e75d3db711fca8ee1cdd8642cd829c7dd21575f"
+    },
+    "cad/m3/base_parts/intermediate_bearing_1.step": {
+      "bytes": 9270,
+      "sha256": "f42f244160f7474227b9c85e735f5b1ec436e5949adfbd948e7dec9c44732d1c"
+    },
+    "cad/m3/base_parts/intermediate_bearing_2.step": {
+      "bytes": 9299,
+      "sha256": "a212c4bf0534a1b9ed59a3b71ab5a116da5955965075d78dea7b29e892f13206"
+    },
+    "cad/m3/base_parts/intermediate_shaft.step": {
+      "bytes": 5641,
+      "sha256": "651324b2659450db3da7bd5f68e687f67a814a2591513db482a725c11332833e"
+    },
+    "cad/m3/base_parts/motor_case.step": {
+      "bytes": 40802,
+      "sha256": "e9c44d68fb422645af6341d913b1293e7cd669fb3feb88d4e18a59fa254bf2f1"
+    },
+    "cad/m3/base_parts/motor_mount_bolt_1.step": {
+      "bytes": 5820,
+      "sha256": "3c680a07106e647546e7ee64f7dec0b0ec69f7dea4b9acc80042d698eed3485c"
+    },
+    "cad/m3/base_parts/motor_mount_bolt_2.step": {
+      "bytes": 5804,
+      "sha256": "34b173378e3d1c9223764faa63be8b9d7d511d87ff4f2edb57a2da306eebca5e"
+    },
+    "cad/m3/base_parts/motor_mount_bolt_3.step": {
+      "bytes": 5644,
+      "sha256": "0a6d3cea10e366106751765363934ac407668e5ee6e3d62359f262e27d3ba74c"
+    },
+    "cad/m3/base_parts/motor_mount_bolt_4.step": {
+      "bytes": 5732,
+      "sha256": "1a71044cb97a07a7ebfd2a93c122592d7a7cc0b81aa7d689a5f72b89b60c0ba3"
+    },
+    "cad/m3/base_parts/motor_rotor_other.step": {
+      "bytes": 9355,
+      "sha256": "73cfbefa78d04cee0910c0fc45aa619ef2582acb828fd6918480ecc5f4c81b8d"
+    },
+    "cad/m3/base_parts/motor_stator.step": {
+      "bytes": 817753,
+      "sha256": "5372bda59b0e8ec83b295af3b349805a98e0f7572334a5385613839171e659a0"
+    },
+    "cad/m3/base_parts/motor_water_jacket.step": {
+      "bytes": 9332,
+      "sha256": "100a80bd458cf952e3d3f42ae27b1ec8b407e9b53ca8f028f289732309dbf8d8"
+    },
+    "cad/m3/base_parts/motor_winding.step": {
+      "bytes": 869345,
+      "sha256": "fafbd9e7a2c1797cfd2b236558575648dbd25af65f1f5d61118323a6ca487b08"
+    },
+    "cad/m3/base_parts/oil_inventory.step": {
+      "bytes": 529702,
+      "sha256": "0498871a597fe3c8d420dcc115d75740a16f968db5f52063d59d475732d92fc4"
+    },
+    "cad/m3/base_parts/output_bearing_1.step": {
+      "bytes": 9346,
+      "sha256": "5cd907c3a62ee3fd9bc205e48dda5876870f1f53655fc5ddcf1e745cb4480370"
+    },
+    "cad/m3/base_parts/output_bearing_2.step": {
+      "bytes": 9375,
+      "sha256": "a2aa82e83da9cef1559ee26edd9eeb84851d4b238acd872374265ebc8fb3da4a"
+    },
+    "cad/m3/base_parts/output_shaft.step": {
+      "bytes": 5673,
+      "sha256": "a709c1db29e915f79b7f9635c00a4b4d9ea34202860179c53003c29bd33b1f51"
+    },
+    "cad/m3/base_parts/pad_far.step": {
+      "bytes": 15572,
+      "sha256": "d28f54da876394b928d0d6c7f55b99cc67bb89570a601ed58d6f5ff7c4d26105"
+    },
+    "cad/m3/base_parts/pad_near.step": {
+      "bytes": 15564,
+      "sha256": "7e51440f582d9b6454ceb3df28c9f2176e1d589330c2eec16c6a51d8796bf246"
+    },
+    "cad/m3/base_parts/stage1_gear.step": {
+      "bytes": 3843203,
+      "sha256": "380c12532df0deda917835ab9f3e188bed1b4dc687528a83c0adbbd094794805"
+    },
+    "cad/m3/base_parts/stage1_pinion.step": {
+      "bytes": 1429821,
+      "sha256": "c5425b1987e72fc20440f3bee9f69b2a9eb5b3faaf4b5c3dc3b7e00a83f68963"
+    },
+    "cad/m3/base_parts/stage2_gear.step": {
+      "bytes": 3845456,
+      "sha256": "85d264293549d0471e7daa5e376676c89e3c80db54aa84619acb0b9818381733"
+    },
+    "cad/m3/base_parts/stage2_pinion.step": {
+      "bytes": 1430211,
+      "sha256": "f1c75ab81b8a8f395f4e060846a5827eeee30916cea784edf0885d787292e34c"
+    },
+    "cad/m3/CaseA/shield_layer_1.step": {
+      "bytes": 372733,
+      "sha256": "24b4db6d86864c2d601081f3078eda5122d00831abf92da9cd3397511aad5ee4"
+    },
+    "cad/m3/CaseA/shield_standoff_0_0.step": {
+      "bytes": 9466,
+      "sha256": "ba0f07d4f68ccbb55c2f29e22b64895421918061135b73fafe421bc0e5bf9756"
+    },
+    "cad/m3/CaseA/shield_standoff_0_1.step": {
+      "bytes": 9511,
+      "sha256": "b9a085c4e735902f865e265595b37fc8008e8057de82a9a7367a9c39d580c914"
+    },
+    "cad/m3/CaseA/shield_standoff_0_2.step": {
+      "bytes": 9480,
+      "sha256": "d54f21f67496fb8456ca55821f987aa64692979f562c5b6d8843110950fa31b7"
+    },
+    "cad/m3/CaseB/shield_layer_1.step": {
+      "bytes": 372730,
+      "sha256": "82a8e962b3962bd99bc4613e70c30c5977080529771af328deb2bd652dd56154"
+    },
+    "cad/m3/CaseB/shield_layer_2.step": {
+      "bytes": 372735,
+      "sha256": "5171f324c8b81cb8d428d4d6b2cb071c362ccd56d1aac1f71cd2d17e8453e3ad"
+    },
+    "cad/m3/CaseB/shield_standoff_0_0.step": {
+      "bytes": 9462,
+      "sha256": "49177094c7641dbbf40b90b192fdb6d20d4c1d8abc9f1c2a5b2f1c6cf29d859b"
+    },
+    "cad/m3/CaseB/shield_standoff_0_1.step": {
+      "bytes": 9507,
+      "sha256": "bc7c17d01a8ff78c3d9a106168f4ba7857edbb0a53c15aaba70806a5f4188769"
+    },
+    "cad/m3/CaseB/shield_standoff_0_2.step": {
+      "bytes": 9476,
+      "sha256": "e8dd1861d43625acddfd35dcf6601983e25b4a686aacbb25e85141d9317b307a"
+    },
+    "cad/m3/CaseB/shield_standoff_1_0.step": {
+      "bytes": 9474,
+      "sha256": "10f972cedf456dabc62d9feefd0eae1088104f227fcc15e194aad48d7ccc0af2"
+    },
+    "cad/m3/CaseB/shield_standoff_1_1.step": {
+      "bytes": 9519,
+      "sha256": "a1c4f170639f8dcd84cda6f39f204344875c0390039f8498d5f6f0f8eaae3562"
+    },
+    "cad/m3/CaseB/shield_standoff_1_2.step": {
+      "bytes": 9488,
+      "sha256": "1d580979ec5a45951e562ae8d6ae6e8e94b8c4e9b765db44349496187a244b7c"
+    },
+    "cad/m3/CaseC/shield_layer_1.step": {
+      "bytes": 451501,
+      "sha256": "d9b1c1a38f6a835d315356d3c932ef768dd511cf917dfeaeddb024560307b134"
+    },
+    "cad/m3/CaseC/shield_standoff_0_0.step": {
+      "bytes": 9468,
+      "sha256": "4aab276c020e9a6974aeab396efb84adeb18a7b07712ae4cb419d5323d0a9a2f"
+    },
+    "cad/m3/CaseC/shield_standoff_0_1.step": {
+      "bytes": 9513,
+      "sha256": "f2fc7347bfe06d76f987cd4ff40dfbb00a533f1feaa6a1a84a659a868c07a594"
+    },
+    "cad/m3/CaseC/shield_standoff_0_2.step": {
+      "bytes": 9482,
+      "sha256": "eb5c6ea6388bb0753271600d6f134cd39d92bf15ce58672dc169581db0838e3d"
+    }
+  }
+}

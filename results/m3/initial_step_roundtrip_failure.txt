@@ -1,0 +1,9 @@
+BUILD Case0
+Traceback (most recent call last):
+  File "E:\ChatGPT��Ŀ\�����ں�������Ϸ���\scripts\m3\run_geometry.py", line 64, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "E:\ChatGPT��Ŀ\�����ں�������Ϸ���\scripts\m3\run_geometry.py", line 49, in main
+    assert reloaded.isValid() and err<1e-6,(case,err)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('Case0', 1.1282398782086401e-13)

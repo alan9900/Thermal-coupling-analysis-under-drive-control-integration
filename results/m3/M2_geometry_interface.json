@@ -1,0 +1,23 @@
+{
+  "classification": "S3_GEOMETRY_CANDIDATES_NOT_APPLIED_TO_M2",
+  "length_units": "m in candidate tables, mm in STEP/YAML",
+  "selected_gear_case_front_radiation_area_m2": 0.14101985729475913,
+  "disc_exposed_case_facing_area_m2": 0.037246722500960595,
+  "motor_case_outer_area_ideal_envelope_m2": 0.2945617590584739,
+  "motor_jacket_inner_wet_area_m2": 0.09038362064377835,
+  "water_equivalent_inventory_kg": 0.4601647839345666,
+  "M2_coolant_G_W_K": 25,
+  "actual_coolant_h_W_m2K": null,
+  "actual_coolant_flow_kg_s": null,
+  "thermal_contact_resistances": null,
+  "extra_nodes_recommended": [
+    "disc_hub",
+    "caliper_reaction_bracket",
+    "gearbox_input_and_intermediate_shafts",
+    "two output bearings",
+    "coolant if finite thermal capacity"
+  ],
+  "Case0_removes_M2_shield_node": true,
+  "M2_cases_are_heat_loading_cases_not_M3_design_cases": true,
+  "warning": "Selected case front face F is not full casing view factor; shield supports/re-emission and air flow remain. No independent source upper-bound combination, no inverter heat in motor, no rotor-other-to-magnet relabeling."
+}

@@ -1,0 +1,16 @@
+{
+  "brake_effective_radius_m": 0.11435320288822741,
+  "uniform_annulus_effective_radius_m": 0.11474074074074075,
+  "rear_disc_torque_Nm": 752.84,
+  "pad_tangential_force_N": 6583.462299135169,
+  "pad_normal_force_each_N": 9404.94614162167,
+  "mount_group_eccentric_m": 0.045646797111772594,
+  "mount_group_moment_Nm": 300.513967861627,
+  "mount_bolt_shear_each_N": 5993.432126078135,
+  "M10_thread_root_area_mm2_assumed": 58,
+  "mount_thread_shear_MPa": 103.33503665651958,
+  "assumed_bolt_shear_limit_MPa": 120,
+  "design_motor_torque_Nm": 130,
+  "output_traction_torque_Nm": 1123.2,
+  "limitations": "Static elementary screen only. No joint slip, preload, bolt bending, gear tooth fatigue, bearing life, fits, seals, shaft spline, steering/suspension or vehicle mounts verified."
+}

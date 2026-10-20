@@ -1,0 +1,9 @@
+BUILD Case0
+Traceback (most recent call last):
+  File "E:\ChatGPT��Ŀ\�����ں�������Ϸ���\scripts\m3\run_geometry.py", line 64, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "E:\ChatGPT��Ŀ\�����ں�������Ϸ���\scripts\m3\run_geometry.py", line 35, in main
+    assert not failures,failures
+           ^^^^^^^^^^^^
+AssertionError: [{'case': 'Case0', 'part_a': 'motor_case', 'part_b': 'output_shaft', 'common_volume_mm3': 2702.56950444558, 'status': 'INTERFERENCE'}]

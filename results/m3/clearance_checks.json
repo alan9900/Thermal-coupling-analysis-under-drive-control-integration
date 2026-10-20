@@ -1,0 +1,12 @@
+{
+  "disc_radial_expansion_mm": 0.616,
+  "disc_half_axial_expansion_mm": 0.048400000000000006,
+  "expansion_temperature_rise_K": 400,
+  "nominal_disc_case_gap_mm": 45,
+  "nominal_disc_caliper_radial_hot_clearance_mm": 3.3840000000000003,
+  "nominal_pad_hot_running_clearance_mm": 0.25160000000000005,
+  "rejected_pad_clearance_with_1mm_runout_mm": -0.6484,
+  "range_cases": 2187,
+  "rejected": 729,
+  "scope": "Thermal expansion and tolerance budget only. Disc coning, pad wear, hot runout, mount deflection and fluid boiling unverified. 400K is stress assumption, not M2 predicted disc rise."
+}
