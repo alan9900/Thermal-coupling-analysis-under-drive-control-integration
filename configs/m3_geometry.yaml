@@ -26,6 +26,7 @@ motor_reference: # ORNL table 2.7, PDF page55/printed46. Do not scale.
   rotor_lamination_id_mm: 51
   rotor_stack_mm: 50.165
 motor_design: # S3 equivalent features, not OEM water jacket or winding reconstruction.
+  mounting_angles_deg: [20, 100, 180, 300] # cardinal pattern collided with intermediate bearing; staggered after B-rep check
   stub_diameter_mm: 30
   endcap_mm: 8
   core_start_x_mm: -105

@@ -87,7 +87,7 @@ def build(p,case='Case0'):
     shell=ring(R,mr['stator_od_mm']/2,-L+end,-end,y,z)
     jacket=ring(md['jacket_outer_radius_mm'],md['jacket_inner_radius_mm'],md['jacket_start_x_mm'],md['jacket_end_x_mm'],y,z)
     caps=[ring(R,md['stub_diameter_mm']/2+.2,-L,-L+end,y,z),ring(R,md['stub_diameter_mm']/2+.2,-end,0,y,z)]
-    motor_holes=[cyl(5.5,-end-.1,16.1,y+140*math.cos(math.radians(a)),z+140*math.sin(math.radians(a))) for a in [0,90,180,270]]
+    motor_holes=[cyl(5.5,-end-.1,16.1,y+140*math.cos(math.radians(a)),z+140*math.sin(math.radians(a))) for a in md['mounting_angles_deg']]
     add('motor_case',fused([shell.cut(jacket)]+caps).cut(cq.Compound.makeCompound(motor_holes)),'aluminium')
     add('motor_water_jacket',jacket,'water_equivalent','fluid')
     x=md['core_start_x_mm'];xe=x+mr['stator_stack_mm']
@@ -125,12 +125,12 @@ def build(p,case='Case0'):
     for ax,(yy,zz) in axes.items():
         be=r[ax+'_bearing'];od=be['od_mm']/2;bw=be['width_mm']
         bosses.extend([ring(od+7,od,0,bw+3,yy,zz),ring(od+7,od,160-bw-3,160,yy,zz)])
-    mount_bosses=[cyl(12,0,16,y+140*math.cos(math.radians(a)),z+140*math.sin(math.radians(a))) for a in [0,90,180,270]]
+    mount_bosses=[cyl(12,0,16,y+140*math.cos(math.radians(a)),z+140*math.sin(math.radians(a))) for a in md['mounting_angles_deg']]
     housing=fused([housing]+bosses+mount_bosses+[box(148,160,-175,-105,-45,45)])
     housing=housing.cut(cq.Compound.makeCompound(cuts))
     holes=[cyl(5.5,147,197,-160,zz) for zz in [-30,30]]
     add('gear_case',housing.cut(cq.Compound.makeCompound(holes+motor_holes)),'aluminium')
-    for k,a in enumerate([0,90,180,270]):
+    for k,a in enumerate(md['mounting_angles_deg']):
         add(f'motor_mount_bolt_{k+1}',cyl(5,-end,16,y+140*math.cos(math.radians(a)),z+140*math.sin(math.radians(a))),'steel')
     # Oil inventory is specified independently, not all unfilled cavity volume.
     oil=box(20,140,yl+10,yh-10,zl+8,zl+28)
