@@ -1,0 +1,48 @@
+metadata:
+  version: m3-geometry-review-1.0
+  baseline_source: 79c6a4f0e95aae36e0bdb666fa22622e98ea9502
+  classification: S3_ENGINEERING_GEOMETRY_NOT_RELEASED
+  length_unit: mm
+  selected_output_shaft_mm: 50
+  comparison_output_shaft_mm: 45
+unknown_actual:
+  certified_material_allowables: null
+  OEM_motor_interface: null
+  bearing_fit_preload_life: null
+  key_and_spline_fatigue: null
+  bolt_preload_retention: null
+  contact_conductance_W_m2K: null
+  pad_caliper_displacement_mm: null
+  vehicle_halfshaft_interface: null
+  coolant_flow_and_ports: null
+  installation_envelope: null
+design: # S3 candidates, NOT OEM dimensions
+  motor_adapter_length_mm: 60
+  intermediate_shaft_mm: 40
+  output_gear_seat_diameter_increment_mm: 12
+  output_hub_seat_diameter_increment_mm: 8
+  hub_outer_radius_mm: 40
+  revised_disc_pilot_diameter_mm: 80
+  coupling_engagement_mm: 18
+  output_hub_key_length_mm: 35
+  caliper_bolt_diameter_mm: 12
+  caliper_bolt_spacing_mm: 80
+  caliper_ear_halfheight_mm: 60
+  floating_bearing_axial_clearance_mm: 0.5
+  shaft_notch_factors: [1.5, 2.0]
+  contact_h_scan_W_m2K: [100, 1000, 10000]
+  joint_friction_scan: [0.08, 0.15, 0.25]
+  bolt_preload_scan_N: [10000, 20000, 30000]
+  shaft_screen_limit_MPa: 180
+  bolt_screen_limit_MPa: 120
+  pad_friction_mu: 0.35
+  bearing_catalogue:
+    input: {designation: SKF_6206, bore_mm: 30, od_mm: 62, width_mm: 16}
+    intermediate: {designation: SKF_6208, bore_mm: 40, od_mm: 80, width_mm: 18}
+    output_45: {designation: SKF_6209, bore_mm: 45, od_mm: 85, width_mm: 19}
+    output_50: {designation: SKF_6210, bore_mm: 50, od_mm: 90, width_mm: 20}
+  # Bearing CAD annuli are equivalent envelopes, not rolling-element steel volumes.
+  bearing_density_for_mass: null
+  seal_density_kg_m3: 1200
+  seal_cp_J_kgK: 1500
+  seal_k_W_mK: 0.2
