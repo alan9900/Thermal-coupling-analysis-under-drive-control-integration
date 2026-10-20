@@ -27,3 +27,6 @@ results/m3/*.txt -whitespace
 results/m3_review/** -text -whitespace
 reports/M3_geometry_review.md -text whitespace=cr-at-eol
 configs/M3_to_M4_mapping.json -text whitespace=cr-at-eol
+results/m3_helical/** -text -whitespace
+reports/M3_helical_revision.md -text whitespace=cr-at-eol
+configs/M3_helical_to_M4_mapping.json -text whitespace=cr-at-eol

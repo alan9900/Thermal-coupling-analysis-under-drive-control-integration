@@ -1,0 +1,85 @@
+{
+  "status": "PASS_GEOMETRY_ONLY",
+  "source_commit": "225c1a217c1983fa3b654bf26c6d1365906382e7",
+  "cadquery": "2.8.0",
+  "python": "3.13.12",
+  "runs": [
+    {
+      "case": "Case0",
+      "variant": "full",
+      "parts": 129,
+      "roundtrip_valid": true,
+      "roundtrip_volume_error": 2.0417376516819476e-13,
+      "collision_pairs": 349,
+      "collisions": 0
+    },
+    {
+      "case": "Case0",
+      "variant": "thermal",
+      "parts": 129,
+      "roundtrip_valid": true,
+      "roundtrip_volume_error": 6.247449821003923e-13,
+      "collision_pairs": 347,
+      "collisions": 0
+    },
+    {
+      "case": "CaseA",
+      "variant": "full",
+      "parts": 136,
+      "roundtrip_valid": true,
+      "roundtrip_volume_error": 1.9663353082317375e-13,
+      "collision_pairs": 374,
+      "collisions": 0
+    },
+    {
+      "case": "CaseA",
+      "variant": "thermal",
+      "parts": 136,
+      "roundtrip_valid": true,
+      "roundtrip_volume_error": 6.0857315644318e-13,
+      "collision_pairs": 372,
+      "collisions": 0
+    },
+    {
+      "case": "CaseB",
+      "variant": "full",
+      "parts": 140,
+      "roundtrip_valid": true,
+      "roundtrip_volume_error": 1.912713209139265e-13,
+      "collision_pairs": 391,
+      "collisions": 0
+    },
+    {
+      "case": "CaseB",
+      "variant": "thermal",
+      "parts": 140,
+      "roundtrip_valid": true,
+      "roundtrip_volume_error": 5.888342752192512e-13,
+      "collision_pairs": 389,
+      "collisions": 0
+    },
+    {
+      "case": "CaseC",
+      "variant": "full",
+      "parts": 136,
+      "roundtrip_valid": true,
+      "roundtrip_volume_error": 2.0230623573316712e-13,
+      "collision_pairs": 393,
+      "collisions": 0
+    },
+    {
+      "case": "CaseC",
+      "variant": "thermal",
+      "parts": 136,
+      "roundtrip_valid": true,
+      "roundtrip_volume_error": 5.840807502024768e-13,
+      "collision_pairs": 391,
+      "collisions": 0
+    }
+  ],
+  "elapsed_s": 446.5889115333557,
+  "ANSYS": "NOT EXECUTED",
+  "Fluent": "NOT EXECUTED",
+  "manufacturing_release": "BLOCKED",
+  "loss_calibration": "PARTIAL_UNCHANGED_M1"
+}

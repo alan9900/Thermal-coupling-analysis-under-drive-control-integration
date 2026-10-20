@@ -1,0 +1,1 @@
+PASS 541 full/thermal C comparisons; 124 unchanged component positions; normalized independent source map

@@ -1,0 +1,10 @@
+CHECK STAGE 1
+CHECK STAGE 2
+Traceback (most recent call last):
+  File "E:\ChatGPT��Ŀ\�����ں�������Ϸ���\scripts\m3_helical\verify_helical.py", line 70, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "E:\ChatGPT��Ŀ\�����ں�������Ϸ���\scripts\m3_helical\verify_helical.py", line 61, in main
+    r=json.loads((OUT/'checks.json').read_text());assert len(r['runs'])==8
+                                                         ^^^^^^^^^^^^^^^^^
+AssertionError

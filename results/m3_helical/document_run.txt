@@ -1,0 +1,1 @@
+{'status': 'PASS_RENDER_STRUCTURE', 'editable_math_objects': 5, 'figures': 5, 'pdf_pages': 6, 'visual_inspection': 'PENDING', 'sha256': {'md': '522d9b011b03de1de28cba2877aeff22cce5357490cf879946b2a6685b4ca109', 'docx': '744d304478bd3669aa5cdbd3e5da3984cd91ed579990030a04adabe8cc48290f', 'pdf': '0674da9b3962ccc35459f564a5eef345507648b57c7cee672d3ed7f5411a1733'}}

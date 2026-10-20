@@ -1,0 +1,1 @@
+{'status': 'PASS_BOUNDED_CONCEPT_DELIVERY', 'files': 63, 'step_files': 18, 'capacity_checks': 541, 'unchanged_positions': 124, 'code_commit_at_check': '8f7387c81682e942f90169e2ab5121e01d99a6ce', 'old_spur_and_archived_M2_preserved': True, 'mechanical_release': 'BLOCKED', 'ANSYS': 'NOT EXECUTED', 'Fluent': 'NOT EXECUTED'}

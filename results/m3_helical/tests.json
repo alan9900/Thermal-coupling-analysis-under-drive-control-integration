@@ -1,0 +1,59 @@
+{
+  "status": "PASS_CONCEPT_GEOMETRY_NOT_MECHANICAL_RELEASE",
+  "assemblies": 8,
+  "mesh_phase_pairs": 14,
+  "measured_helical_edges": [
+    {
+      "stage": "1",
+      "part": "pinion",
+      "tip_vertices": "40",
+      "measured_teeth": "20",
+      "actual_edge_twist_deg": "20.853958291841263",
+      "measured_signed_beta_deg": "20.00000000000001",
+      "status": "PASS"
+    },
+    {
+      "stage": "1",
+      "part": "gear",
+      "tip_vertices": "120",
+      "measured_teeth": "60",
+      "actual_edge_twist_deg": "-6.951319430613745",
+      "measured_signed_beta_deg": "-19.999999999999986",
+      "status": "PASS"
+    },
+    {
+      "stage": "2",
+      "part": "pinion",
+      "tip_vertices": "40",
+      "measured_teeth": "20",
+      "actual_edge_twist_deg": "22.244222177964005",
+      "measured_signed_beta_deg": "20.000000000000007",
+      "status": "PASS"
+    },
+    {
+      "stage": "2",
+      "part": "gear",
+      "tip_vertices": "120",
+      "measured_teeth": "60",
+      "actual_edge_twist_deg": "-7.414740725988004",
+      "measured_signed_beta_deg": "-20.00000000000001",
+      "status": "PASS"
+    }
+  ],
+  "total_ratio": 9,
+  "axes_unchanged": true,
+  "output_shaft_diameter_mm": 50,
+  "max_thermal_capacity_relative_error": 1.8015095976372413e-10,
+  "intermediate_gears_axial_gap_mm": 37,
+  "axial_forces": {
+    "convention": "positive x axis; positive input torque; pinions RH, wheels LH",
+    "input_net_Fx_N": 1892.6452181842521,
+    "intermediate_net_Fx_N": -6624.258263644882,
+    "output_net_Fx_N": 4731.61304546063,
+    "limitation": "Ideal mesh magnitudes, no bearing capacity/life/retention redesign; signs reverse with torque."
+  },
+  "original_spur_and_M2_unchanged": true,
+  "actual_efficiency_calibration": null,
+  "ANSYS": "NOT EXECUTED",
+  "Fluent": "NOT EXECUTED"
+}
