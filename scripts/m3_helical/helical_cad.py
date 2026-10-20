@@ -16,6 +16,10 @@ def settings():
     p = yaml.safe_load((ROOT/'configs/m3_helical.yaml').read_text(encoding='utf-8'))
     assert all(v is None for v in p['unknown_actual'].values())
     assert p['helix_angle_deg'] == 20 and p['transverse_pressure_angle_deg'] == 20
+    assert p['axis_yz_mm']=={'input':[120,100],'intermediate':[120,0],'output':[0,0]}
+    for s,mt,a,w,x in zip(p['stages'],[2.5,3.0],[100,120],[25,32],[33,95]):
+        assert (s['mt_mm'],s['center_distance_mm'],s['face_width_mm'],s['start_x_mm'])==(mt,a,w,x)
+        assert (s['pinion_teeth'],s['gear_teeth'],s['pinion_hand'],s['gear_hand'])==(20,60,'RH','LH')
     return p
 
 @functools.lru_cache(maxsize=8)

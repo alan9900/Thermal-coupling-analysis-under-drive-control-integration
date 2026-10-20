@@ -1,5 +1,5 @@
 """Independent checks on actual screw edges, mesh phases and immutable history."""
-import csv,json,math,subprocess
+import csv,json,math,subprocess,sys
 import numpy as np
 import cadquery as cq
 from helical_cad import ROOT,helical_gear,old,settings
@@ -7,6 +7,7 @@ from run_geometry import csvout,writejson
 OUT=ROOT/'results/m3_helical';CACHE=ROOT/'tmp/m3_helical'
 
 def main():
+    assert len(json.loads((OUT/'checks.json').read_text())['runs'])==8, 'Run CAD generation to completion first'
     params=list(csv.DictReader((OUT/'gear_parameters.csv').open()))
     edge_checks=[];phases=[];loads=[]
     definitions=[(1,2.5,25,33,120,100,120,0,-90,87,30,50),
@@ -45,6 +46,9 @@ def main():
         loads.append(dict(stage=stage,input_torque_Nm=torque,tangential_force_N=ft,axial_force_magnitude_N=fa,
             radial_force_N=ft*math.tan(math.radians(20)),status='S3_ORDER_OF_MAGNITUDE_NOT_BEARING_RELEASE'))
     csvout(OUT/'actual_helix_checks.csv',edge_checks);csvout(OUT/'axial_force_screen.csv',loads)
+    finalize(edge_checks,phases,loads)
+
+def finalize(edge_checks,phases,loads):
     # RH pinions/LH wheels do not automatically cancel intermediate axial loads.
     # +x applied input torque => stage1 mesh resists it, driver Fa>0 and
     # driven Fa<0. Intermediate rotation reverses; stage2 driver Fa<0.
@@ -67,4 +71,14 @@ def main():
         actual_efficiency_calibration=None,ANSYS='NOT EXECUTED',Fluent='NOT EXECUTED'))
     print('PASS actual helices, tooth counts,14 meshing phases,8 assemblies, capacities and immutable history',flush=True)
 
-if __name__=='__main__':main()
+if __name__=='__main__':
+    if '--finalize-existing' in sys.argv:
+        def read(name):return list(csv.DictReader((OUT/name).open()))
+        edges=read('actual_helix_checks.csv');phases=read('mesh_phase_checks.csv');loads=read('axial_force_screen.csv')
+        assert len(edges)==4 and len(phases)==14 and all(float(r['overlap_mm3'])<.001 for r in phases)
+        for r in edges:
+            assert r['status']=='PASS' and abs(abs(float(r['measured_signed_beta_deg']))-20)<1e-5
+        for r in loads:
+            for k in ['tangential_force_N','axial_force_magnitude_N','radial_force_N']:r[k]=float(r[k])
+        finalize(edges,phases,loads)
+    else:main()

@@ -6,6 +6,8 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
+from matplotlib.colors import to_rgb
+from matplotlib.ticker import MaxNLocator
 from helical_cad import ROOT, old
 sys.path.insert(0,str(ROOT/'scripts/m3_review'))
 from plot_review import COL
@@ -16,12 +18,20 @@ def triangles(s):
     return np.array([p.toTuple() for p in v])[np.array(t)]
 
 def draw(ax,s,color,alpha=1):
-    ax.add_collection3d(Poly3DCollection(triangles(s),facecolor=color,edgecolor='none',alpha=alpha,rasterized=True))
+    tri=triangles(s)
+    normals=np.cross(tri[:,1]-tri[:,0],tri[:,2]-tri[:,0])
+    normals/=np.maximum(np.linalg.norm(normals,axis=1)[:,None],1e-14)
+    light=np.array([.6,-.3,.74]);light/=np.linalg.norm(light)
+    strength=.40+.60*np.maximum(0,normals@light)
+    colors=np.array(to_rgb(color))[None,:]*strength[:,None]
+    ax.add_collection3d(Poly3DCollection(tri,facecolor=colors,edgecolor='none',alpha=alpha,rasterized=True))
 
 def limits(ax,shapes):
     bb=cq.Compound.makeCompound(shapes).BoundingBox();a=np.array([bb.xmin,bb.ymin,bb.zmin]);b=np.array([bb.xmax,bb.ymax,bb.zmax]);span=b-a
     ax.set(xlim=(a[0]-5,b[0]+5),ylim=(a[1]-5,b[1]+5),zlim=(a[2]-5,b[2]+5),xlabel='x / mm',ylabel='y / mm',zlabel='z / mm')
-    ax.set_box_aspect(np.maximum(span,20));ax.view_init(23,-48)
+    ax.set_box_aspect(np.maximum(span,20));ax.view_init(23,45)
+    for axis in [ax.xaxis,ax.yaxis,ax.zaxis]:axis.set_major_locator(MaxNLocator(3))
+    ax.grid(False);ax.tick_params(labelsize=8)
 
 def save(fig,name):
     fig.savefig(OUT/(name+'.png'),dpi=165);plt.close(fig)
@@ -48,7 +58,7 @@ def main():
     fig=plt.figure(figsize=(12,5.5),layout='constrained')
     spur=cq.importers.importStep(str(ROOT/'cad/m3_review/revised_parts/stage2_gear.step')).val()
     for i,(shape,title) in enumerate([(spur,'Archived spur gear'),(P['stage2_gear'],'Helical gear: actual screw-swept teeth')]):
-        ax=fig.add_subplot(1,2,i+1,projection='3d');draw(ax,shape,'#638ca8');limits(ax,[shape]);ax.view_init(18,-65);ax.set_title(title,fontsize=11)
+        ax=fig.add_subplot(1,2,i+1,projection='3d');draw(ax,shape,'#638ca8');limits(ax,[shape]);ax.view_init(18,55);ax.set_title(title,fontsize=11)
     fig.suptitle('Same 60 teeth, mt=3 mm, face width=32 mm, keyed bore | S3 CAD comparison')
     save(fig,'spur_helical_comparison')
     thermal=cq.Shape.importBrep(str(CACHE/'stage2_gear_thermal.brep'))

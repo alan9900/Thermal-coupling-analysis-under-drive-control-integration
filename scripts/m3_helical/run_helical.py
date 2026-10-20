@@ -67,12 +67,13 @@ def main():
             print('PASS',name,error,flush=True)
     capacities=[]
     for case in ['Case0','CaseA','CaseB','CaseC']:
-        for n in reference:
-            if n[0]!='full':continue
-            vf=reference[n];vt=reference['thermal',n[1]]
+        by_body={(r['variant'],r['part']):r['new_volume_mm3'] for r in rows if r['case']==case}
+        for variant,name in by_body:
+            if variant!='full':continue
+            vf=by_body['full',name];vt=by_body['thermal',name]
             error=abs(vf-vt)/max(vf,1)
-            assert error<1e-7,(n,error)
-            capacities.append(dict(case=case,part=n[1],full_volume_mm3=vf,thermal_volume_mm3=vt,relative_C_error=error))
+            assert error<1e-7,(case,name,error)
+            capacities.append(dict(case=case,part=name,full_volume_mm3=vf,thermal_volume_mm3=vt,relative_C_error=error))
     csvout(OUT/'thermal_capacity_checks.csv',capacities)
     writejson(OUT/'step_manifest.json',{'files':[{ 'path':f.relative_to(ROOT).as_posix(),'bytes':f.stat().st_size,'sha256':hashlib.sha256(f.read_bytes()).hexdigest()} for f in CAD.rglob('*.step')]})
     assert len(runs)==8
