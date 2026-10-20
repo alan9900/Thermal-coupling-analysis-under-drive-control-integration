@@ -127,10 +127,12 @@ def build(p,case='Case0'):
         be=r[ax+'_bearing'];od=be['od_mm']/2;bw=be['width_mm']
         bosses.extend([ring(od+7,od,0,bw+3,yy,zz),ring(od+7,od,160-bw-3,160,yy,zz)])
     mount_bosses=[cyl(12,0,16,y+140*math.cos(math.radians(a)),z+140*math.sin(math.radians(a))) for a in md['mounting_angles_deg']]
-    housing=fused([housing]+bosses+mount_bosses+[box(148,160,-175,-105,-45,45)])
+    feet=[box(30,70,-140,-110,-110,-80),box(100,140,285,315,-110,-80)]
+    housing=fused([housing]+bosses+mount_bosses+feet+[box(148,160,-175,-105,-45,45)])
     housing=housing.cut(cq.Compound.makeCompound(cuts))
     holes=[cyl(5.5,147,197,-160,zz) for zz in [-30,30]]
-    add('gear_case',housing.cut(cq.Compound.makeCompound(holes+motor_holes)),'aluminium')
+    frame_holes=[cq.Solid.makeCylinder(7,32,cq.Vector(xx,yy,-111),cq.Vector(0,0,1)) for xx,yy in [(50,-125),(120,300)]]
+    add('gear_case',housing.cut(cq.Compound.makeCompound(holes+motor_holes+frame_holes)),'aluminium')
     for k,a in enumerate(md['mounting_angles_deg']):
         add(f'motor_mount_bolt_{k+1}',cyl(5,-end,16,y+140*math.cos(math.radians(a)),z+140*math.sin(math.radians(a))),'steel')
     # Oil inventory is specified independently, not all unfilled cavity volume.
