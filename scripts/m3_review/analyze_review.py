@@ -48,19 +48,19 @@ def main():
                     mm=x*1000
                     if 90<=mm<95:D=d+16
                     if 95<=mm<=127:D=d+12-(11 if d==50 else 10)
-                    if 175<=mm<=215 or 248<=mm<=263:D=d+8-8
+                    if 175<=mm<=215 or 221<=mm<=263:D=d+8-8
                     transmitted=T if (.111<=x<=.264 if case=='drive' else .195<=x<=.264) else 0
                     M=bending(x,[(pos,F)],a,b);values.append((vm(transmitted,M,D,K),mm,D,M,transmitted))
                 peak=max(values)
                 shaft.append(dict(shaft='output',diameter_mm=d,load_case=case,notch_factor=K,peak_von_Mises_MPa=peak[0],critical_x_mm=peak[1],critical_root_diameter_mm=peak[2],bending_Nm=peak[3],local_torque_Nm=peak[4],assumed_limit_MPa=180,status='PASS_SCREEN_ONLY' if peak[0]<=180 else 'BLOCKED'))
-        for name,seat,h,L,T in [('output_gear',d+12,11 if d==50 else 10,30,driveT),('disc_hub',d+8,8,35,max(x['disc_torque_Nm'] for x in brake)),('halfshaft',d+8,8,15,driveT)]:
+        for name,seat,h,L,T in [('output_gear',d+12,11 if d==50 else 10,30,driveT),('disc_hub',d+8,8,35,max(x['disc_torque_Nm'] for x in brake)),('halfshaft',d+8,8,42,driveT)]:
             for share in [.5,1.0]:
-                n=2 if name!='output_gear' else 1;F=2*T/(seat/1000)/(n*share);w=18 if name=='output_gear' and d==50 else 16 if name=='output_gear' else 12
+                n=2;F=2*T/(seat/1000)/(n*share);w=18 if name=='output_gear' and d==50 else 16 if name=='output_gear' else 12
                 shear=F/(w*L);bearing=F/(h/2*L)
                 keys.append(dict(interface=name,diameter_mm=d,effective_load_share=share,key_shear_MPa=shear,key_bearing_MPa=bearing,assumed_shear_limit_MPa=120,assumed_bearing_limit_MPa=240,status='PASS_SCREEN_ONLY' if shear<120 and bearing<240 else 'BLOCKED'))
     # Input shaft keyed-coupling roots remain a real unresolved issue.
     for K in r['shaft_notch_factors']:
-        val=vm(130,0,23,K);shaft.append(dict(shaft='input_coupling_root',diameter_mm=30,load_case='drive',notch_factor=K,peak_von_Mises_MPa=val,critical_x_mm=-20,critical_root_diameter_mm=23,bending_Nm=0,local_torque_Nm=130,assumed_limit_MPa=180,status='PASS_SCREEN_ONLY' if val<=180 else 'BLOCKED'))
+        val=vm(130,0,25,K);shaft.append(dict(shaft='input_coupling_root',diameter_mm=30,load_case='drive',notch_factor=K,peak_von_Mises_MPa=val,critical_x_mm=-20,critical_root_diameter_mm=25,bending_Nm=0,local_torque_Nm=130,assumed_limit_MPa=180,status='PASS_SCREEN_ONLY' if val<=180 else 'BLOCKED'))
     # Intermediate orthogonal mesh forces; exact torques depend on per-stage eta.
     a=.009;b=.151;Ti=130*3*.98
     for K in r['shaft_notch_factors']:
@@ -135,7 +135,7 @@ def main():
         geometry_import='OCCT_ROUNDTRIP_TESTED_ANSYS_NOT_EXECUTED'))
     writejson(OUT/'analysis_checks.json',dict(status='PARTIAL_WITH_EXPLICIT_BLOCKERS',braking_zero_regen_cases=brake,output_drive_torque_Nm=driveT,
         mechanical_certification='NOT EXECUTED',M4='NOT EXECUTED',M2_overwritten=False,shaft_blocked=[x for x in shaft if x['status']=='BLOCKED'],key_blocked=[x for x in keys if x['status']=='BLOCKED'],
-        required_release_items=['shaft/key fatigue and certified materials','bearing fits, rings/collar retention, cap screw preload and life','motor coupling root redesign at upper notch factor','caliper joint slip and housing compliance','pad piston travel and hot runout','axial location end float / tolerances','actual CV interface and vehicle package','measured contact laws and coolant geometry']))
+        required_release_items=['shaft/key fatigue and certified materials','bearing fits, rings/collar retention, cap screw preload and life','motor coupling alignment, fitted-key load sharing and fatigue','caliper joint slip and housing compliance','pad piston travel and hot runout','axial location end float / tolerances','actual CV interface and vehicle package','measured contact laws and coolant geometry']))
     print('Analysis completed; blockers preserved. Brake torques',[x['disc_torque_Nm'] for x in brake],flush=True)
 
 if __name__=='__main__':

@@ -42,7 +42,7 @@ def build_review(d=50,case='Case0',thermal=False,base=None):
     # Two opposed keys on each stub; normal clearance/fit remains unverified.
     for label,x0,x1 in [('motor',-52,-34),('input',-28,-12)]:
         for sign in [-1,1]:
-            key=box(x0,x1,y-4,y+4,z+sign*15-3.5,z+sign*15+3.5)
+            key=box(x0,x1,y-4,y+4,z+sign*15-2.5,z+sign*15+2.5)
             P['motor_input_coupling']=P['motor_input_coupling'].cut(key)
             if label=='motor':P['motor_rotor_shaft']=P['motor_rotor_shaft'].cut(key)
             add(f'coupling_{label}_key_{sign}',key)
@@ -66,7 +66,7 @@ def build_review(d=50,case='Case0',thermal=False,base=None):
         # Locating bearing inner-ring shoulder; rear inner ring retained by collar.
         sh=fused([sh,cyl(D/2+4,B,B+5,yy,zz),cyl(D/2+4,136,160-B,yy,zz)]) if 136<160-B else fused([sh,cyl(D/2+4,B,B+5,yy,zz)])
         if ax=='intermediate':sh=fused([sh,cyl(25,30,58,yy,zz),cyl(28,28,33,yy,zz)])
-        if ax=='output':sh=fused([sh,cyl((d+16)/2,90,95),cyl((d+12)/2,95,127),cyl((d+8)/2,175,215),cyl((d+8)/2,244,268)])
+        if ax=='output':sh=fused([sh,cyl((d+16)/2,90,95),cyl((d+12)/2,95,127),cyl((d+8)/2,175,215),cyl((d+8)/2,220,268)])
         shafts[ax]=sh
         for j,xb in enumerate([0,160-B]):
             remove(ax+f'_bearing_{j+1}');add(ax+f'_bearing_{j+1}',ring(ro,D/2,xb,xb+B,yy,zz))
@@ -84,9 +84,11 @@ def build_review(d=50,case='Case0',thermal=False,base=None):
     shafts['intermediate']=fused([shafts['intermediate'],gear(3,20,40,32,95,*axes['intermediate'],180,.15)])
     for ax,xg,w,seat,mn,phase,keyw,keyh in [('intermediate',33,25,50,2.5,87,14,9),('output',95,32,d+12,3,-3,18 if d==50 else 16,11 if d==50 else 10)]:
         yy,zz=axes[ax];g=gear(mn,60,seat,w,xg,yy,zz,phase,.15)
-        key=box(xg+1,xg+w-1,yy-keyw/2,yy+keyw/2,zz+seat/2-keyh/2,zz+seat/2+keyh/2)
-        shafts[ax]=shafts[ax].cut(key);g=g.cut(key)
-        add(ax+'_gear_key',key);add('stage1_gear' if ax=='intermediate' else 'stage2_gear',g)
+        for sign in [1,-1]:
+            key=box(xg+1,xg+w-1,yy-keyw/2,yy+keyw/2,zz+sign*seat/2-keyh/2,zz+sign*seat/2+keyh/2)
+            shafts[ax]=shafts[ax].cut(key);g=g.cut(key)
+            add(ax+'_gear_key'+('' if sign==1 else '_opposed'),key)
+        add('stage1_gear' if ax=='intermediate' else 'stage2_gear',g)
         add(ax+'_gear_retaining_collar',ring(seat/2+5,(40 if ax=='intermediate' else d)/2,xg+w,xg+w+4,yy,zz))
     # Hub pilot enlarged 68 -> 80mm; hat and hub changed together (S3).
     P['brake_disc_hat']=P['brake_disc_hat'].cut(cyl(40,184,191))
@@ -101,14 +103,14 @@ def build_review(d=50,case='Case0',thermal=False,base=None):
         add('disc_hub_bolt_'+str(k+1),cyl(5,180,190,yy,zz))
     add('disc_hub',hub)
     # Independent halfshaft mating flange, pilot, bolts and fitted drive dowels.
-    flange=ring(60,(d+8)/2,248,264)
+    flange=ring(60,(d+8)/2,220,264)
     mate=fused([cyl(60,264,272),cyl(15,272,322)])
     # Separate rotating pilot in matching recess, no overlapping solids.
     pilot=ring(35,(d+8)/2,264,266);flange=fused([flange,pilot]);mate=mate.cut(cyl(35,263.9,266))
     # Mate has central bore up to shaft end; stub starts beyond end268.
     mate=mate.cut(cyl((d+8)/2,263,268))
     for sign in [-1,1]:
-        key=box(248,263,-6,6,sign*(d+8)/2-4,sign*(d+8)/2+4)
+        key=box(221,263,-6,6,sign*(d+8)/2-4,sign*(d+8)/2+4)
         shafts['output']=shafts['output'].cut(key);flange=flange.cut(key);add('halfshaft_key_'+str(sign),key)
     for k in range(8):
         a=2*math.pi*k/8;yy=45*math.cos(a);zz=45*math.sin(a)
@@ -185,7 +187,8 @@ def build_review(d=50,case='Case0',thermal=False,base=None):
             ax='input' if n=='stage1_gear' else 'intermediate'
             # Reserve the complete pinion swept envelope plus 0.2 mm. This
             # prevents smooth gears from intersecting a toothed mating pinion.
-            cutter=cq.Compound.makeCompound([cyl(27.5+.2 if n=='stage1_gear' else 33+.2,x-.1,x+w+.1,*axes[ax]),P['oil_inventory']])
+            keyname='intermediate_gear_key' if n=='stage1_gear' else 'output_gear_key'
+            cutter=cq.Compound.makeCompound([cyl(27.5+.2 if n=='stage1_gear' else 33+.2,x-.1,x+w+.1,*axes[ax]),P['oil_inventory'],P[keyname],P[keyname+'_opposed']])
             # Correct missing keycut volume analytically via scalar bisection.
             lo,hi=ro,ro+8
             for _ in range(30):
