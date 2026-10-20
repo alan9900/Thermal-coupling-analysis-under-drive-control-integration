@@ -48,12 +48,13 @@ def main():
                     mm=x*1000
                     if 90<=mm<95:D=d+16
                     if 95<=mm<=127:D=d+12-(11 if d==50 else 10)
-                    if 175<=mm<=215 or 221<=mm<=263:D=d+8-8
+                    # Removable sleeves carry external keys; the base journal
+                    # has no key cut. Do not add sleeve stiffness to shaft stress.
                     transmitted=T if (.111<=x<=.264 if case=='drive' else .195<=x<=.264) else 0
                     M=bending(x,[(pos,F)],a,b);values.append((vm(transmitted,M,D,K),mm,D,M,transmitted))
                 peak=max(values)
                 shaft.append(dict(shaft='output',diameter_mm=d,load_case=case,notch_factor=K,peak_von_Mises_MPa=peak[0],critical_x_mm=peak[1],critical_root_diameter_mm=peak[2],bending_Nm=peak[3],local_torque_Nm=peak[4],assumed_limit_MPa=180,status='PASS_SCREEN_ONLY' if peak[0]<=180 else 'BLOCKED'))
-        for name,seat,h,L,T in [('output_gear',d+12,11 if d==50 else 10,30,driveT),('disc_hub',d+8,8,35,max(x['disc_torque_Nm'] for x in brake)),('halfshaft',d+8,8,42,driveT)]:
+        for name,seat,h,L,T in [('output_gear',d+12,11 if d==50 else 10,30,driveT),('disc_hub',d+12,8,35,max(x['disc_torque_Nm'] for x in brake)),('halfshaft',d+12,8,42,driveT)]:
             for share in [.5,1.0]:
                 n=2;F=2*T/(seat/1000)/(n*share);w=18 if name=='output_gear' and d==50 else 16 if name=='output_gear' else 12
                 shear=F/(w*L);bearing=F/(h/2*L)
@@ -61,6 +62,11 @@ def main():
     # Input shaft keyed-coupling roots remain a real unresolved issue.
     for K in r['shaft_notch_factors']:
         val=vm(130,0,25,K);shaft.append(dict(shaft='input_coupling_root',diameter_mm=30,load_case='drive',notch_factor=K,peak_von_Mises_MPa=val,critical_x_mm=-20,critical_root_diameter_mm=25,bending_Nm=0,local_torque_Nm=130,assumed_limit_MPa=180,status='PASS_SCREEN_ONLY' if val<=180 else 'BLOCKED'))
+        a=.008;b=.152;F=2*130/.050/math.cos(math.radians(20));M=F*(.0455-a)*(b-.0455)/(b-a)
+        val=vm(130,M,30,K);shaft.append(dict(shaft='input_pinion_section',diameter_mm=30,load_case='drive',notch_factor=K,peak_von_Mises_MPa=val,critical_x_mm=45.5,critical_root_diameter_mm=30,bending_Nm=M,local_torque_Nm=130,assumed_limit_MPa=180,status='PASS_SCREEN_ONLY' if val<=180 else 'BLOCKED'))
+    for share in [.5,1.0]:
+        F=2*130/.030/(2*share);shear=F/(8*16);bearing=F/(2.5*16)
+        keys.append(dict(interface='motor_input_coupling',diameter_mm=30,effective_load_share=share,key_shear_MPa=shear,key_bearing_MPa=bearing,assumed_shear_limit_MPa=120,assumed_bearing_limit_MPa=240,status='PASS_SCREEN_ONLY' if shear<120 and bearing<240 else 'BLOCKED'))
     # Intermediate orthogonal mesh forces; exact torques depend on per-stage eta.
     a=.009;b=.151;Ti=130*3*.98
     for K in r['shaft_notch_factors']:
@@ -82,6 +88,31 @@ def main():
             expansion.append(dict(disc_delta_K=delta,runout_budget_mm=runout,radial_growth_mm=dr,half_thickness_growth_mm=dx,pad_residual_gap_mm=gap,radial_caliper_residual_mm=5-1-dr,
                 status='PASS_BUDGET_ONLY' if gap>0 and 5-1-dr>0 else 'BLOCKED',load_deflection_mm=None))
     csvout(OUT/'expansion_clearances.csv',expansion)
+    floatchecks=[]
+    for Ts in [100,300,600]:
+        for Tc in [0,100,300]:
+            mismatch=.140*(12e-6*Ts-23e-6*Tc)*1000
+            floatchecks.append(dict(shaft_rise_K=Ts,case_rise_K=Tc,relative_growth_mm=mismatch,available_each_direction_mm=.5,status='PASS_BUDGET_ONLY' if abs(mismatch)<=.5 else 'BLOCKED_END_FLOAT_EXCEEDED'))
+    csvout(OUT/'bearing_axial_expansion.csv',floatchecks)
+    halfshaft=[]
+    for mu in r['joint_friction_scan']:
+        for preload in r['bolt_preload_scan_N']:
+            cap=8*mu*preload*.045
+            halfshaft.append(dict(mu=mu,preload_per_M10_N=preload,friction_only_torque_Nm=cap,drive_demand_Nm=driveT,status='PASS_FRICTION_SCREEN_ONLY' if cap>=driveT else 'BLOCKED_FRICTION_ONLY',
+                fitted_dowels_effective_count=2,dowel_shear_candidate_MPa=driveT/(2*.045)/(math.pi*12**2/4),dowel_fit_verified=False))
+    csvout(OUT/'halfshaft_joint_scan.csv',halfshaft)
+    sleeves=[]
+    for d in [45,50]:
+        for name,L,T in [('hub',.040,max(x['disc_torque_Nm'] for x in brake)),('halfshaft',.048,driveT)]:
+            for mu in r['joint_friction_scan']:
+                for pressure in r['removable_sleeve_pressure_scan_MPa']:
+                    cap=mu*pressure*1e6*math.pi*(d/1000)**2*L/2
+                    # Thick-cylinder hoop estimate at bore for isolated sleeve.
+                    ri=d/2;ro=(d+12)/2;hoop=pressure*(ro*ro+ri*ri)/(ro*ro-ri*ri)
+                    sleeves.append(dict(interface=name,diameter_mm=d,contact_length_m=L,assumed_mu=mu,assumed_pressure_MPa=pressure,torque_capacity_Nm=cap,demand_Nm=T,
+                        isolated_sleeve_hoop_MPa=hoop,assumed_limit_MPa=180,status='PASS_SCREEN_ONLY' if cap>=T and hoop<=180 else 'BLOCKED',
+                        caveat='Keycuts, elastic compound hub constraint, thermal loosening and fatigue not solved; pressure is not calibrated'))
+    csvout(OUT/'removable_sleeve_scan.csv',sleeves)
     # Aggregate CAD capacities; no double-counting integral pinions in gears.
     mass=list(csv.DictReader((OUT/'mass_heat_capacity.csv').open(encoding='utf-8')))
     rows=[x for x in mass if x['case']=='Case0' and x['diameter_mm']=='50' and x['variant']=='full']
@@ -105,9 +136,7 @@ def main():
     bulk=[]
     # Axial path through the stepped 50mm shaft from hub to rear bearing.
     for d in [45,50]:
-        lengths=[(.175-.150,math.pi*(d/1000)**2/4),(.195-.175,math.pi*((d+8)/1000)**2/4)]
-        # Key slots lower area in last segment: subtract two 12x4mm half slots.
-        lengths[-1]=(lengths[-1][0],lengths[-1][1]-2*12*4*1e-6)
+        lengths=[(.195-.150,math.pi*(d/1000)**2/4)]
         Rbulk=sum(L/(45*A) for L,A in lengths)
         bulk.append(dict(path=f'hub_to_rear_bearing_d{d}',length_m=.045,area_m2=None,k_W_mK=45,R_bulk_K_W=Rbulk,M2_equivalent_R_K_W=1.5,
             meaning='Bulk only; spreading, key interfaces, race/rolling/lubrication contacts absent'))
@@ -125,13 +154,13 @@ def main():
     for source,names in sources.items():
         V=sum(float(byname[n]['volume_m3']) for n in names)
         mapping[source]=[dict(body=n,volume_m3=float(byname[n]['volume_m3']),fraction=float(byname[n]['volume_m3'])/V,application='q_i_W_m3 = Q_source_W / sum(V_selected)') for n in names]
-    newnodes=['disc_hub','bracket','input_shaft_integral_pinion','intermediate_shaft_integral_pinion','adapter','front_output_bearing','rear_output_bearing','front_rear_case','individual_shields','seals','halfshaft_interface']
+    newnodes=['disc_hub','removable_hub_and_halfshaft_sleeves','bracket','input_shaft_integral_pinion','intermediate_shaft_integral_pinion','adapter','front_output_bearing','rear_output_bearing','front_rear_case','individual_shields','seals','halfshaft_interface']
     writejson(ROOT/'configs/M3_to_M4_mapping.json',dict(version='M3-review-1.0',status='PARTIAL_PREPARATION_NOT_SOLVER_RELEASE',M2_baseline='M2-v1.0',units=dict(length='m',heat='W',qvol='W/m3',temperature='K'),
         actual_verified_contacts=None,actual_cooling=None,measured_internal_masses=None,engineering_contact_h_scan_W_m2K=r['contact_h_scan_W_m2K'],sources=mapping,
         source_allocation_caveat='Uniform volume weighting is S3, especially integral pinions and bearing dissipation. Resolved tooth/race local flux is unknown.',
         inverter='EXTERNAL_NOT_LOADED',total_motor_and_reducer_losses='VALIDATION_ONLY_NEVER_LOAD_AGAIN',rotor_other='NOT_ALL_PERMANENT_MAGNET_HEAT',
         added_network_nodes=newnodes,bearing_mass='CAD annulus is envelope. Use verified catalogue/prototype mass or explicit effective rho, never solid steel annulus mass.',
-        contacts_csv='results/m3_review/contact_pairs.csv',boundary_status=dict(coolant_ports='BLOCKED_NO_HYDRAULIC_CONNECTION',liquid_film='UNKNOWN_REQUIRES_RANGE',pad_contact='RUNNING_GAP_REQUIRES_TRANSIENT_CONTACT_OR_HEAT_FLUX',external_air='LOCAL_CONNECTED_DOMAIN_NOT_FAR_FIELD_VALIDATED'),
+        contacts_csv='results/m3_review/contact_pairs.csv',boundary_status=dict(coolant_ports='BLOCKED_NO_HYDRAULIC_CONNECTION',liquid_film='UNKNOWN_REQUIRES_RANGE',winding_insulation='BLOCKED_ENDRING_CORE_NOMINAL_TOUCH_REQUIRES_CONTACT_R_NOT_BONDED',pad_contact='RUNNING_GAP_REQUIRES_TRANSIENT_CONTACT_OR_HEAT_FLUX',external_air='LOCAL_CONNECTED_DOMAIN_NOT_FAR_FIELD_VALIDATED'),
         geometry_import='OCCT_ROUNDTRIP_TESTED_ANSYS_NOT_EXECUTED'))
     writejson(OUT/'analysis_checks.json',dict(status='PARTIAL_WITH_EXPLICIT_BLOCKERS',braking_zero_regen_cases=brake,output_drive_torque_Nm=driveT,
         mechanical_certification='NOT EXECUTED',M4='NOT EXECUTED',M2_overwritten=False,shaft_blocked=[x for x in shaft if x['status']=='BLOCKED'],key_blocked=[x for x in keys if x['status']=='BLOCKED'],

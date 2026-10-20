@@ -66,7 +66,7 @@ def build_review(d=50,case='Case0',thermal=False,base=None):
         # Locating bearing inner-ring shoulder; rear inner ring retained by collar.
         sh=fused([sh,cyl(D/2+4,B,B+5,yy,zz),cyl(D/2+4,136,160-B,yy,zz)]) if 136<160-B else fused([sh,cyl(D/2+4,B,B+5,yy,zz)])
         if ax=='intermediate':sh=fused([sh,cyl(25,30,58,yy,zz),cyl(28,28,33,yy,zz)])
-        if ax=='output':sh=fused([sh,cyl((d+16)/2,90,95),cyl((d+12)/2,95,127),cyl((d+8)/2,175,215),cyl((d+8)/2,220,268)])
+        if ax=='output':sh=fused([sh,cyl((d+16)/2,90,95),cyl((d+12)/2,95,127)])
         shafts[ax]=sh
         for j,xb in enumerate([0,160-B]):
             remove(ax+f'_bearing_{j+1}');add(ax+f'_bearing_{j+1}',ring(ro,D/2,xb,xb+B,yy,zz))
@@ -77,6 +77,11 @@ def build_review(d=50,case='Case0',thermal=False,base=None):
         add(ax+'_rear_clamp_collar',ring(D/2+4,D/2,160,164,yy,zz))
         for label,x0,x1 in [('front',-6,0),('rear',160.5,164.5)]:
             add(ax+'_'+label+'_outer_retainer',ring(ro+10,D/2+5,x0,x1,yy,zz),'aluminium')
+        # Integral seal carriers provide an actual radial seat, not a floating
+        # lip annulus touching its cover only along a circular edge.
+        for label,x0,x1 in [('front',-10,-6),('rear',164.5,168.5)]:
+            name=ax+'_'+label+'_outer_retainer'
+            P[name]=fused([P[name],ring(D/2+8,D/2+5,x0,x1,yy,zz)])
         for label,x0,x1 in [('front',-10,-6),('rear',164.5,168.5)]:
             add(ax+'_'+label+'_seal',ring(D/2+5,D/2,x0,x1,yy,zz),'seal_equivalent')
     # Integral pinions remove weak separate pinion-bore key cuts.
@@ -92,26 +97,33 @@ def build_review(d=50,case='Case0',thermal=False,base=None):
         add(ax+'_gear_retaining_collar',ring(seat/2+5,(40 if ax=='intermediate' else d)/2,xg+w,xg+w+4,yy,zz))
     # Hub pilot enlarged 68 -> 80mm; hat and hub changed together (S3).
     P['brake_disc_hat']=P['brake_disc_hat'].cut(cyl(40,184,191))
-    hub=fused([ring(65,(d+8)/2,180,185),ring(40,(d+8)/2,175,215)])
+    # Removable expansion sleeves allow the rear bearing to slide on from the
+    # right BEFORE the larger hub/flange seats are fitted. Press fit remains S3.
+    hubseat=ring((d+12)/2,d/2,175,215)
+    cvseat=ring((d+12)/2,d/2,220,268)
+    hub=fused([ring(65,(d+12)/2,180,185),ring(40,(d+12)/2,175,215)])
     for sign in [-1,1]:
-        key=box(177,212,-6,6,sign*(d+8)/2-4,sign*(d+8)/2+4)
-        shafts['output']=shafts['output'].cut(key);hub=hub.cut(key);add('hub_key_'+str(sign),key)
+        key=box(177,212,-6,6,sign*(d+12)/2-4,sign*(d+12)/2+4)
+        hubseat=hubseat.cut(key);hub=hub.cut(key);add('hub_key_'+str(sign),key)
     disc=P['brake_disc_hat']
     for k in range(5):
         a=2*math.pi*k/5;yy=56*math.cos(a);zz=56*math.sin(a)
         hole=cyl(5.5,179,191,yy,zz);hub=hub.cut(hole)
         add('disc_hub_bolt_'+str(k+1),cyl(5,180,190,yy,zz))
+        add('disc_hub_bolt_head_'+str(k+1),cyl(8,176,180,yy,zz))
+        add('disc_hub_nut_'+str(k+1),ring(8,5,190,195,yy,zz))
     add('disc_hub',hub)
+    add('hub_front_axial_collar',ring(34,d/2,171,175));add('hub_rear_axial_collar',ring(34,d/2,215,219))
     # Independent halfshaft mating flange, pilot, bolts and fitted drive dowels.
-    flange=ring(60,(d+8)/2,220,264)
+    flange=ring(60,(d+12)/2,220,264)
     mate=fused([cyl(60,264,272),cyl(15,272,322)])
     # Separate rotating pilot in matching recess, no overlapping solids.
-    pilot=ring(35,(d+8)/2,264,266);flange=fused([flange,pilot]);mate=mate.cut(cyl(35,263.9,266))
+    pilot=ring(35,(d+12)/2,264,266);flange=fused([flange,pilot]);mate=mate.cut(cyl(35,263.9,266))
     # Mate has central bore up to shaft end; stub starts beyond end268.
-    mate=mate.cut(cyl((d+8)/2,263,268))
+    mate=mate.cut(cyl((d+12)/2,263,268))
     for sign in [-1,1]:
-        key=box(221,263,-6,6,sign*(d+8)/2-4,sign*(d+8)/2+4)
-        shafts['output']=shafts['output'].cut(key);flange=flange.cut(key);add('halfshaft_key_'+str(sign),key)
+        key=box(221,263,-6,6,sign*(d+12)/2-4,sign*(d+12)/2+4)
+        cvseat=cvseat.cut(key);flange=flange.cut(key);add('halfshaft_key_'+str(sign),key)
     for k in range(8):
         a=2*math.pi*k/8;yy=45*math.cos(a);zz=45*math.sin(a)
         hole=cyl(5.5,247,273,yy,zz);flange=flange.cut(hole);mate=mate.cut(hole)
@@ -120,17 +132,20 @@ def build_review(d=50,case='Case0',thermal=False,base=None):
         a=math.radians(22.5+90*k);yy=45*math.cos(a);zz=45*math.sin(a)
         hole=cyl(6,255,271,yy,zz);flange=flange.cut(hole);mate=mate.cut(hole)
         add('halfshaft_drive_dowel_'+str(k+1),cyl(6,255,271,yy,zz))
+    add('hub_removable_sleeve',hubseat);add('halfshaft_removable_sleeve',cvseat)
     add('output_halfshaft_flange',flange);add('wheel_halfshaft_interface',mate)
     for ax,sh in shafts.items():add(ax+'_shaft',sh)
     for sign in [-1,1]:
         key=P['coupling_input_key_'+str(sign)];P['input_shaft']=P['input_shaft'].cut(key)
     # Stronger M12 bracket, wider bolt span and matching case/caliper ears.
-    holes=[cyl(6.5,147,197,-160,zz) for zz in [-40,40]]
+    holes=[cyl(6.5,147,200,-160,zz) for zz in [-40,40]]
     caliper=box(187,245,-178,-90,-60,60).cut(box(196,236,-145,-85,-61,61))
     bracket=fused([box(160,187,-175,-145,-60,60),box(160,170,-145,-105,-60,60)])
     add('caliper',caliper.cut(cq.Compound.makeCompound(holes)),'aluminium')
     add('caliper_reaction_bracket',bracket.cut(cq.Compound.makeCompound(holes)))
-    for k,zz in enumerate([-40,40]):add('caliper_mount_bolt_'+str(k+1),cyl(6,148,196,-160,zz))
+    for k,zz in enumerate([-40,40]):
+        add('caliper_mount_bolt_'+str(k+1),cyl(6,148,199,-160,zz))
+        add('caliper_mount_bolt_head_'+str(k+1),cyl(10,144,148,-160,zz))
     # Original 30deg standoff hits the new input bearing cap. Move that anchor
     # to60deg, machining matching through holes; no ignored interference pair.
     shield_anchor_holes=[]

@@ -20,10 +20,13 @@ design: # S3 candidates, NOT OEM dimensions
   motor_adapter_length_mm: 60
   intermediate_shaft_mm: 40
   output_gear_seat_diameter_increment_mm: 12
-  output_hub_seat_diameter_increment_mm: 8
+  output_hub_seat_diameter_increment_mm: 12
+  removable_sleeve_pressure_scan_MPa: [50, 100, 150]
   hub_outer_radius_mm: 40
   revised_disc_pilot_diameter_mm: 80
-  coupling_engagement_mm: 18
+  coupling_key_engagement_mm: {motor: 18, input: 16}
+  coupling_key_width_height_mm: [8, 5]
+  halfshaft_key_length_mm: 42
   output_hub_key_length_mm: 35
   caliper_bolt_diameter_mm: 12
   caliper_bolt_spacing_mm: 80
