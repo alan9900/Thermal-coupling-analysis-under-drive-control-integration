@@ -1,0 +1,106 @@
+{
+  "sources": [
+    {
+      "id": "ORNL",
+      "url": "https://info.ornl.gov/sites/publications/files/Pub26762.pdf",
+      "use": "S1 reference only; Table2.7 printed46/PDF55",
+      "retrieval_date": "2026-10-20",
+      "local_original": "data/raw/m0/ornl_2010_prius_pub26762.pdf",
+      "sha256": "4d989e77e3d9bcbcd417e630e0a10bac762a53e8db3644978bb096ecea01b8f8",
+      "status": "REUSED_READ_ONLY"
+    },
+    {
+      "id": "Brembo",
+      "url": "https://www.bremboparts.com/europe/en/view-document/catalogue/disc/09-9908-21",
+      "use": "S1 product envelope; custom hat/vane/PCD/caliper are S3",
+      "retrieval_date": "2026-10-20",
+      "http_status": 200,
+      "sha256": "8c0e5f313c2fa1450368cab2a37c7eacc045b3a02a7fc84ca1cbdb62a5f92de4",
+      "status": "HTTP_OK"
+    },
+    {
+      "id": "SKF6209",
+      "url": "https://www.emarketplace.in.skf.com/deep-groove-ball-bearing/6209",
+      "use": "S1 boundary size only; no life/preload selection",
+      "retrieval_date": "2026-10-20",
+      "http_status": 200,
+      "sha256": "583f3de34e5dd8d5317a001eed8505569b1f145e1d814e53cec11b13f448397b",
+      "status": "HTTP_OK"
+    },
+    {
+      "id": "SKF6207",
+      "url": "https://www.emarketplace.in.skf.com/deep-groove-ball-bearing/6207",
+      "use": "S1 boundary size only",
+      "retrieval_date": "2026-10-20",
+      "http_status": 200,
+      "sha256": "5fc9227a74654f30e83c7cc394cabe19b4e177983e51feee852026ead94365d4",
+      "status": "HTTP_OK"
+    },
+    {
+      "id": "SKF6206",
+      "url": "https://www.emarketplace.in.skf.com/deep-groove-ball-bearing/6206",
+      "use": "S1 boundary size only",
+      "retrieval_date": "2026-10-20",
+      "http_status": 200,
+      "sha256": "cd947ca50abb20e8e992858713630d8f3e48da459f87c6ba92cb563bdd410c34",
+      "status": "HTTP_OK"
+    },
+    {
+      "id": "KHK",
+      "url": "https://khkgears.net/gear-knowledge/gear-technical-reference/calculation-gear-dimensions/",
+      "use": "Geometry method only; all selected modules/teeth/widths S3",
+      "retrieval_date": "2026-10-20",
+      "http_status": 200,
+      "sha256": "55d5b5f18fe2559fc17ca1c1241b804602fd4eddd81a73dfe1b96b4c14d13ecf",
+      "status": "HTTP_OK"
+    },
+    {
+      "id": "CadQuery",
+      "url": "https://cadquery.readthedocs.io/en/latest/importexport.html",
+      "use": "Parametric source is Python; STEP neutral export, not parameter history",
+      "retrieval_date": "2026-10-20",
+      "http_status": 200,
+      "sha256": "edd64c59a47beac289124cb0a8fecfaf72dba5560131750ceeea3be985b4b7e6",
+      "status": "HTTP_OK"
+    }
+  ],
+  "source_facts": {
+    "ORNL_motor_casing_mm": [
+      302,
+      161
+    ],
+    "ORNL_stator_mm": [
+      264,
+      161.9,
+      50.8
+    ],
+    "ORNL_rotor_mm": [
+      160.4,
+      51,
+      50.165
+    ],
+    "Brembo_disc_mm": {
+      "outer": 280,
+      "thickness": 22,
+      "total_height": 42,
+      "pilot": 68
+    },
+    "SKF6209_mm": [
+      45,
+      85,
+      19
+    ],
+    "SKF6207_mm": [
+      35,
+      72,
+      17
+    ],
+    "SKF6206_mm": [
+      30,
+      62,
+      16
+    ]
+  },
+  "applicability": "Reference product values verified in original table/manufacturer browser. No catalogue certification is transferred to custom assembly. Failed direct retrievals are retained; no local original claimed.",
+  "limitations": "Actual stub/mount, reducer, effective friction radius, hat/PCD, caliper, jacket/ports and vehicle envelope unknown. No finite-element or CFD execution."
+}
