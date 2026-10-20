@@ -6,9 +6,9 @@
   "post_pandoc_changes": "formatting only: repeating shaded table headers, row splitting, spacing and language metadata",
   "visual_inspection": "PASS",
   "document_sha256": {
-    "M2_report.md": "92d9d7143c6b58806351b2855c03923945029437cd6593c683d47df7faa8457b",
-    "M2_report.docx": "69191ffe879ea2e396268f67df049027cfdfa1d932948c0fbb7de63b91e1cfc4",
-    "M2_report.pdf": "093bc35e39c10fa1d1e55abe709f1621c4976ca722679d0097bbd034235f8e18"
+    "M2_report.md": "d7b921ed3c1ee6499de9550d705fb627c334975dba0e5c6a504fede1b90d7a22",
+    "M2_report.docx": "6603d4a9618e5597aad5bf1339ab9fc8ee9e3cc4803f727ae45819de632930c3",
+    "M2_report.pdf": "6d0c800c510dd1e93dd690d72e18cf7e6a9bf3ffb6da11f1072becd693371485"
   },
   "visually_inspected_pages": [
     1,

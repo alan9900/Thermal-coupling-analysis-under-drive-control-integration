@@ -1,6 +1,6 @@
 # M2 概念瞬态热网络验收检查表
 
-状态：**数值交付齐备，研究者验收PENDING**。模型为S3概念预测，未取得样机温度标定；M1真实损耗标定仍PARTIAL。不得据此认定实际总成热安全或法规符合性。
+状态：**2026-10-20研究者按概念瞬态热网络限定范围验收APPROVED**。模型为S3概念预测，未取得样机温度标定；真实几何、热阻、换热尚未标定，M1真实损耗仍PARTIAL。不得据此认定实际总成热安全或法规符合性。
 
 基线V0.4；分支 `stage/M2-thermal-network`；[PR #3](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/3)。数值运行源提交 `ff818ccb35daf8d70d0cbafbf28fc6690ab457a8`；完整成果提交在阶段登记后续记录，避免自引用。
 
@@ -23,8 +23,8 @@
 | 结果与可复算性 | PASS：CSV/MAT、输入/输出哈希、参数、PNG/SVG、测试JSON、日志、复现README齐备 |
 | 报告三格式及视觉检查 | 见reports/M2_report.md/.docx/.pdf及results/m2/document_checks.json；最终检查随证据归档 |
 | 真实温度验证 | NOT EXECUTED；需实际几何、质量、热接触、冷却/气流、损耗与温度测量 |
-| 研究者验收 | PENDING；本表为技术送审检查，不代替批准 |
-| M2合并/正式Tag | NOT DONE / NOT CREATED；须另获批准 |
+| 研究者验收 | APPROVED：具有明确工程假设、通过能量守恒及数值验证的概念瞬态热网络模型 |
+| M2合并/正式Tag | 已获授权；真实合并提交和远端Tag核验结果在后续阶段登记，不将计划冒充成功 |
 | M3/CAD/ANSYS/Fluent | NOT STARTED / NOT EXECUTED |
 
 主报告：[Markdown](M2_report.md) / [Word](M2_report.docx) / [PDF](M2_report.pdf)。数值证据：[验证](../results/m2/validation.json)、[测试](../results/m2/tests.json)、[独立复核](../results/m2/independent_checks.json)、[实际日志](../results/m2/matlab_run.txt)。
