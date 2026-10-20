@@ -1,0 +1,5 @@
+case,gear,housing,overlap_mm3,min_distance_mm,status
+Case0_d50_full_common_base_all_cases,as_exported,gear_case_front,0.0,18.646322285249216,PASS_COLD_CLEARANCE
+Case0_d50_full_common_base_all_cases,full360_swept_envelope,gear_case_front,0.0,18.601075237738275,PASS_COLD_CLEARANCE
+Case0_d50_full_common_base_all_cases,as_exported,gear_case_rear,0.0,10.0,PASS_COLD_CLEARANCE
+Case0_d50_full_common_base_all_cases,full360_swept_envelope,gear_case_rear,0.0,10.0,PASS_COLD_CLEARANCE
