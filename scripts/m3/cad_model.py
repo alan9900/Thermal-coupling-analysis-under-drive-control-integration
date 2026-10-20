@@ -87,7 +87,8 @@ def build(p,case='Case0'):
     shell=ring(R,mr['stator_od_mm']/2,-L+end,-end,y,z)
     jacket=ring(md['jacket_outer_radius_mm'],md['jacket_inner_radius_mm'],md['jacket_start_x_mm'],md['jacket_end_x_mm'],y,z)
     caps=[ring(R,md['stub_diameter_mm']/2+.2,-L,-L+end,y,z),ring(R,md['stub_diameter_mm']/2+.2,-end,0,y,z)]
-    add('motor_case',fused([shell.cut(jacket)]+caps),'aluminium')
+    motor_holes=[cyl(5.5,-end-.1,16.1,y+140*math.cos(math.radians(a)),z+140*math.sin(math.radians(a))) for a in [0,90,180,270]]
+    add('motor_case',fused([shell.cut(jacket)]+caps).cut(cq.Compound.makeCompound(motor_holes)),'aluminium')
     add('motor_water_jacket',jacket,'water_equivalent','fluid')
     x=md['core_start_x_mm'];xe=x+mr['stator_stack_mm']
     core=ring(mr['stator_od_mm']/2,mr['stator_id_mm']/2,x,xe,y,z)
@@ -102,7 +103,7 @@ def build(p,case='Case0'):
     add('motor_rotor_other',ring(mr['rotor_od_mm']/2,mr['rotor_lamination_id_mm']/2,x,x+mr['rotor_stack_mm'],y,z),'steel')
     add('input_rotor_shaft',fused([cyl(md['stub_diameter_mm']/2,-L+1,160,y,z),cyl(mr['rotor_lamination_id_mm']/2,x-3,xe+3,y,z)]),'steel')
     add('intermediate_shaft',cyl(r['intermediate_shaft_diameter_mm']/2,0,160,*axes['intermediate']),'steel')
-    add('output_shaft',cyl(r['output_shaft_diameter_mm']/2,-5,260),'steel')
+    add('output_shaft',cyl(r['output_shaft_diameter_mm']/2,r['output_shaft_start_x_mm'],260),'steel')
     gears=[('stage1_pinion',r['module_stage1_mm'],20,r['face_stage1_mm'],r['stage1_start_x_mm'],'input',-90,md['stub_diameter_mm']),
            ('stage1_gear',r['module_stage1_mm'],60,r['face_stage1_mm'],r['stage1_start_x_mm'],'intermediate',87,r['intermediate_shaft_diameter_mm']),
            ('stage2_pinion',r['module_stage2_mm'],20,r['face_stage2_mm'],r['stage2_start_x_mm'],'intermediate',180,r['intermediate_shaft_diameter_mm']),
@@ -124,10 +125,13 @@ def build(p,case='Case0'):
     for ax,(yy,zz) in axes.items():
         be=r[ax+'_bearing'];od=be['od_mm']/2;bw=be['width_mm']
         bosses.extend([ring(od+7,od,0,bw+3,yy,zz),ring(od+7,od,160-bw-3,160,yy,zz)])
-    housing=fused([housing]+bosses+[box(148,160,-175,-105,-45,45)])
+    mount_bosses=[cyl(12,0,16,y+140*math.cos(math.radians(a)),z+140*math.sin(math.radians(a))) for a in [0,90,180,270]]
+    housing=fused([housing]+bosses+mount_bosses+[box(148,160,-175,-105,-45,45)])
     housing=housing.cut(cq.Compound.makeCompound(cuts))
     holes=[cyl(5.5,147,197,-160,zz) for zz in [-30,30]]
-    add('gear_case',housing.cut(cq.Compound.makeCompound(holes)),'aluminium')
+    add('gear_case',housing.cut(cq.Compound.makeCompound(holes+motor_holes)),'aluminium')
+    for k,a in enumerate([0,90,180,270]):
+        add(f'motor_mount_bolt_{k+1}',cyl(5,-end,16,y+140*math.cos(math.radians(a)),z+140*math.sin(math.radians(a))),'steel')
     # Oil inventory is specified independently, not all unfilled cavity volume.
     oil=box(20,140,yl+10,yh-10,zl+8,zl+28)
     for shape in parts.values():
@@ -135,7 +139,9 @@ def build(p,case='Case0'):
     add('oil_inventory',oil,'oil','fluid')
     xd=b['near_face_x_mm'];th=br['thickness_mm'];ro=br['outer_diameter_mm']/2;ri=b['friction_inner_radius_mm'];f=b['face_plate_mm'];pilot=br['pilot_diameter_mm']/2
     rotor=[ring(ro,ri,xd,xd+f),ring(ro,ri,xd+th-f,xd+th),ring(88,pilot,xd-20,xd-15),ring(88,79,xd-15,xd)]
-    for k in range(b['vane_count']):rotor.append(box(xd+f,xd+th-f,ri,ro-2,-b['vane_width_mm']/2,b['vane_width_mm']/2).rotate((0,0,0),(1,0,0),360*k/b['vane_count']))
+    # Keep vanes 0.5mm off the exact bore tangency and overlap plates 0.02mm
+    # for a robust fused STEP solid; overlap is removed by Boolean union.
+    for k in range(b['vane_count']):rotor.append(box(xd+f-.02,xd+th-f+.02,ri+.5,ro-2,-b['vane_width_mm']/2,b['vane_width_mm']/2).rotate((0,0,0),(1,0,0),360*k/b['vane_count']))
     bolt_holes=[]
     for k in range(b['hub_bolt_count']):
         a=2*math.pi*k/b['hub_bolt_count'];bolt_holes.append(cyl(b['hub_bolt_hole_mm']/2,xd-26,xd-14,b['hub_pcd_mm']/2*math.cos(a),b['hub_pcd_mm']/2*math.sin(a)))

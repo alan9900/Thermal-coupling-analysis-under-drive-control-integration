@@ -52,6 +52,7 @@ reducer: # S3 new parallel-axis two-stage spur reducer, not Toyota planetary tra
   stage2_start_x_mm: 95
   intermediate_shaft_diameter_mm: 35
   output_shaft_diameter_mm: 45
+  output_shaft_start_x_mm: 0 # initial -5mm protrusion interfered with motor endcap; retracted, motor unchanged
   case_length_mm: 160
   case_wall_mm: 6
   case_y_limits_mm: [-110, 285]
@@ -76,7 +77,8 @@ brake_design:
   pad_running_gap_mm: 0.5
   rotor_hot_delta_K: 400 # expansion screening scenario, not predicted M2 temperature
   assembly_tolerance_mm: 1.0
-  axial_runout_budget_mm: 1.0
+  axial_runout_budget_mm: 0.1 # S3 candidate; 1mm runout is explicitly rejected in range checks
+  pad_axial_tolerance_mm: 0.1
 shield_design:
   thickness_mm: 1.5
   disc_gap_mm: 10
