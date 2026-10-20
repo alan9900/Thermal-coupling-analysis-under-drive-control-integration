@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "evidence_commit": "40c95c1a1eb9de5584e899df70ec887cce9488a6",
+  "verified_blob_count": 222,
+  "method": "Read actual committed Git blobs and compare SHA256 to pre-commit delivery_manifest; no newline normalization hidden."
+}

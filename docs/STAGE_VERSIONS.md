@@ -90,3 +90,5 @@ M3完整证据提交：`0dc265e7329870c92e849abe89fb9c2d12378c77`，已推送；
 补充报告`reports/M3_geometry_review.md/.docx/.pdf`：9页、8个可编辑OMML公式、7幅真实CAD/工程图，Pandoc转换与Word导出后逐页视觉检查PASS。配置/接口`configs/m3_geometry_review.yaml`、`configs/M3_to_M4_mapping.json`；结果和测试`results/m3_review`；补充验收表`reports/M3_GEOMETRY_REVIEW_CHECKLIST.md`；未来几何准备清单`docs/M4_GEOMETRY_IMPORT_PREPARATION.md`。
 
 轴承装入问题改为可拆套候选，但传扭/热松脱、预紧防滑、局部凸台/疲劳/位移、端部绝缘、滚动接触与油膜、冷却端口和装车包络仍BLOCKED。罩300K/箱100K差动膨胀约0.406mm超过0.2mm孔隙，需滑移/柔性支点复审。允许作为ANSYS导入候选，不等于可直接做可信样机温度或优化结论。原始未知值保持null，未修改旧Tag、合并M3或进入M4。
+
+本轮完整精化证据提交：`40c95c1a1eb9de5584e899df70ec887cce9488a6`，已推送并核对远端分支。其交付清单222个文件逐一读取实际Git blob核对SHA256全部通过，含144 STEP与三格式报告，见`results/m3_review/git_blob_checks.json`。后续只追加核验记录、登记及针对CR行尾的Git检查属性，不重写证据提交。远端main仍为M2合并`1d51c22d94577ff8f52be785300b5f6b4aadee37`；M0/M1/M2原附注Tag对象及剥离目标不变，M3-v1.0不存在。PR #4待复核，BLOCKED条件继续有效。

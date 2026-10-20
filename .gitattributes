@@ -25,5 +25,5 @@ results/m3/*.txt -whitespace
 # M3 review evidence uses byte-level manifests; preserve generated CSV/log/JSON
 # and authored-report/config bytes rather than changing their Windows newlines.
 results/m3_review/** -text -whitespace
-reports/M3_geometry_review.md -text
-configs/M3_to_M4_mapping.json -text
+reports/M3_geometry_review.md -text whitespace=cr-at-eol
+configs/M3_to_M4_mapping.json -text whitespace=cr-at-eol
