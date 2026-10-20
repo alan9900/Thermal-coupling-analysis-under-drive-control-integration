@@ -1,0 +1,24 @@
+metadata:
+  version: m3-helical-concept-1.0-draft
+  base_commit: a8f6489b943eae8be4b9041a6f1eaa53dbaecdf2
+  classification: S3_CONCEPT_NOT_MANUFACTURING_RELEASE
+  length_unit: mm
+helix_angle_deg: 20
+transverse_pressure_angle_deg: 20
+addendum_system: transverse_full_depth_retained_from_spur
+backlash_transverse_tooth_thinning_mm: 0.15
+phase_reference: face_midplane
+axis_yz_mm: {input: [120, 100], intermediate: [120, 0], output: [0, 0]}
+stages:
+  - {stage: 1, pinion_teeth: 20, gear_teeth: 60, mt_mm: 2.5, center_distance_mm: 100, face_width_mm: 25, start_x_mm: 33, pinion_hand: RH, gear_hand: LH}
+  - {stage: 2, pinion_teeth: 20, gear_teeth: 60, mt_mm: 3.0, center_distance_mm: 120, face_width_mm: 32, start_x_mm: 95, pinion_hand: RH, gear_hand: LH}
+loss_model: unchanged_M1_parameterized_not_recalibrated_for_helical_gears
+unknown_actual:
+  helical_mesh_efficiency_map: null
+  mesh_thermal_contact_conductance_W_K: null
+  bearing_axial_capacity_and_preload: null
+  manufactured_normal_module_and_tolerances: null
+sources:
+  KHK_helical_reference: https://khkgears.net/pdf/helical-tech.pdf
+  KHK_transverse_system_product: https://khkgears.net/pdf/khg.pdf
+  KHK_geometry: https://khkgears.net/gear-knowledge/gear-technical-reference/calculation-gear-dimensions/
