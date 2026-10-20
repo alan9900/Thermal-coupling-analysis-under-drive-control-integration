@@ -100,3 +100,17 @@ M3完整证据提交：`0dc265e7329870c92e849abe89fb9c2d12378c77`，已推送；
 见`reports/M3_OUTPUT_GEAR_CLEARANCE_RECHECK.md`及`results/m3_review/output_gear_clearance/`，带尺寸真实截面和独立运行脚本已归档。旧报告中SolidWorks未执行属历史交付快照；此次后续确已执行，不改写历史报告。其余机械/热边界BLOCKED继续有效，M3未合并/无正式Tag，M4未开展。
 
 专项复核完整证据提交`4e02ef6b544d6c336ca12e6623d5a46b98b93b05`已推送至同一开发分支/PR #4，含原STEP哈希、旋转/扫掠布尔与距离、实际SolidWorks导入位置/检测记录和显示截图。此处后续追加准确证据SHA，不移动旧Tag或修改归档模型。
+
+## M3两级斜齿限定修订（2026-10-20，待审核）
+
+版本`m3-helical-concept-1.0-draft`；分支`stage/M3-geometry`；[PR #4](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/4)。**本轮PASS_CONCEPT_GEOMETRY，M3整体PARTIAL；未批准合并，正式M3 Tag NOT CREATED；M4/ANSYS/Fluent NOT EXECUTED。**
+
+只将原两级直齿改为真实螺旋扫掠斜齿，保持三轴坐标、100/120mm中心距、20/60齿、9.0、50mm输出轴及原轴承/壳体/电机/制动器/Case0/A/B/C。端面模数2.5/3.0mm固定，20°螺旋角，法向模数2.34923155/2.81907786mm为非标准概念值；原端面20°压力角及全齿高保留，非标准法向刀具设计。小齿轮RH、大齿轮LH，齿宽中面对相；33–58/95–127mm及中间37mm间隔保持。
+
+CAD启动源`225c1a217c1983fa3b654bf26c6d1365906382e7`；主体模型/报告证据`18dee1a5d66b40ba34d0e26dc993f1270d3ec970`；映射字节保真提交`5ddb4db7da89c4f4179da42ca4517416c3eec8f2`。最终含全部18STEP回读测试的验收证据快照 **`3e26ee8ae1864135fe0427904b71f4bce28726c4`**，66个实际Git blob逐一SHA256核验通过，见`results/m3_helical/git_blob_checks.json`。后续登记提交不移动该快照或旧Tag。
+
+实际CadQuery2.8.0/OCCT7.9.3.1执行：8装配+10修订零件STEP约145.6MB；3006对AABB后精确布尔无>0.001mm³交叠；8装配回读最大相对体积误差6.25e-13，10零件回读最大2.55e-13。四真实B-rep边反算±20°、端面齿数20/60、14对旋转啮合通过；124个未改部件位置核对、541项逐体热容一致性通过，热版最大相对热容差1.80e-10。报告6页，5个可编辑OMML公式/5图，实际Word导出PDF并逐页视觉检查PASS。初次并行汇总及文档转换失败记录保留。
+
+成果：`cad/m3_helical/`、`scripts/m3_helical/`、`configs/m3_helical.yaml`、独立`configs/M3_helical_to_M4_mapping.json`、`results/m3_helical/`、`reports/M3_helical_revision.md/.docx/.pdf`、`reports/M3_HELICAL_CHECKLIST.md`；公开来源PDF与SHA位于`data/raw/m3_helical/`。原直齿、原M3映射和M2固定成果均未覆盖。M1损耗暂沿用，斜齿效率和轴向载荷附加损耗未重标定；真实接触/冷却null不变，不声称提高效率或降低温度。
+
+限定轴向力检查：130Nm输入下一级/二级约1.893/4.732kN，当前旋向使中间轴推力相加约6.624kN，反拖符号反转；轴承轴向承载、定位与旧连接套/罩支点/热接触/冷却等仍BLOCKED。本轮没有扩展疲劳、制造、预紧或热膨胀优化。M0/M1/M2原附注Tag及目标和main `1d51c22d94577ff8f52be785300b5f6b4aadee37`已核对不变；无M3正式Tag。
