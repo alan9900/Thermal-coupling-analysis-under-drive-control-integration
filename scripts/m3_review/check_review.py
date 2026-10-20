@@ -17,6 +17,13 @@ def main():
         be=m['bearings'][n];_,_,zz=P[n+'_rear_outer_retainer'].Center().toTuple()
         assert abs(P[n+'_rear_outer_retainer'].BoundingBox().xmin-160.5)<1e-6
     tests.append('Three supported shafts include shoulders, retaining parts, seals and rear0.5mm nominal end float')
+    # Right bearing can pass from the right while removable seats are absent.
+    # Gear/collar first, then bearing, seals and sleeves. Actual fits remain null.
+    out=P['output_shaft'];rear_start=140
+    swept=out.intersect(box(rear_start+.01,268.01,-100,100,-100,100))
+    assert swept.BoundingBox().ylen<=50.00001 and swept.BoundingBox().zlen<=50.00001
+    assert len(P['hub_removable_sleeve'].Solids())==1 and len(P['halfshaft_removable_sleeve'].Solids())==1
+    tests.append('Rear bearing installation envelope passes after seats become removable sleeves; fit qualification remains BLOCKED')
     for n1,n2,ax1,ax2,small in [('input_shaft','stage1_gear','input','intermediate',None),('intermediate_shaft','stage2_gear','intermediate','output',None)]:
         y,z=m['axes'][ax1];y2,z2=m['axes'][ax2]
         for a in np.linspace(0,18,9):

@@ -21,7 +21,7 @@ design: # S3 candidates, NOT OEM dimensions
   intermediate_shaft_mm: 40
   output_gear_seat_diameter_increment_mm: 12
   output_hub_seat_diameter_increment_mm: 12
-  removable_sleeve_pressure_scan_MPa: [50, 100, 150]
+  removable_sleeve_pressure_scan_MPa: [10, 20, 30, 50, 100, 150]
   hub_outer_radius_mm: 40
   revised_disc_pilot_diameter_mm: 80
   coupling_key_engagement_mm: {motor: 18, input: 16}

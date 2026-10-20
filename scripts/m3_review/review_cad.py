@@ -19,6 +19,10 @@ def review_config():
 
 def build_review(d=50,case='Case0',thermal=False,base=None):
     q=review_config();r=q['design'];p=config();p['reducer']['output_shaft_diameter_mm']=d
+    assert d in [45,50], 'Other shaft sizes require an explicit coupled design revision'
+    assert r['output_hub_seat_diameter_increment_mm']==12 and r['output_gear_seat_diameter_increment_mm']==12
+    assert r['intermediate_shaft_mm']==40 and r['revised_disc_pilot_diameter_mm']==80
+    # These coordinated layouts are discrete revisions, not unrestricted DOEs.
     m=copy.copy(base) if base else build(config(),case)
     # Fresh dictionaries: never mutate the shared concept model.
     m['parts']=dict(m['parts']);m['materials']=dict(m['materials']);m['roles']=dict(m['roles'])
@@ -59,6 +63,8 @@ def build_review(d=50,case='Case0',thermal=False,base=None):
     for n in ['gear_case','oil_inventory','intermediate_shaft','output_shaft','stage1_pinion','stage1_gear','stage2_pinion','stage2_gear','disc_hub','caliper','caliper_reaction_bracket','caliper_mount_bolt_1','caliper_mount_bolt_2']:
         remove(n)
     bearings={ax:r['bearing_catalogue'][ax if ax!='output' else f'output_{d}'] for ax in axes}
+    p['reducer']['intermediate_shaft_diameter_mm']=40
+    for ax,be in bearings.items():p['reducer'][ax+'_bearing']=dict(be)
     shafts={}
     for ax,(yy,zz) in axes.items():
         be=bearings[ax];D=be['bore_mm'];B=be['width_mm'];ro=be['od_mm']/2
