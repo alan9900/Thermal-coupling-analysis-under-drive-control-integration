@@ -1,0 +1,93 @@
+{
+  "status": "PARTIAL_WITH_EXPLICIT_BLOCKERS",
+  "braking_zero_regen_cases": [
+    {
+      "deceleration_g": 0.6,
+      "rear_dynamic_fraction": 0.43065099457504524,
+      "disc_torque_Nm": 752.8390909584089,
+      "pad_effective_radius_m": 0.11435320288822741,
+      "tangential_force_N": 6583.454349715579,
+      "normal_force_each_pad_N": 9404.93478530797,
+      "bolt_group_moment_Nm": 300.5136049960838,
+      "bolt_force_N": 4994.613046000859,
+      "M12_nominal_root_area_mm2": 84.3,
+      "bolt_shear_screen_MPa": 59.24807883749536,
+      "bracket_nominal_bending_screen_MPa": 2.4687953811433423,
+      "boss_thread_shear_screen_MPa": 13.248622585038412,
+      "shear_status": "PASS_SCREEN_ONLY",
+      "housing_local_bending_and_joint_opening": "BLOCKED_REQUIRES_MATERIAL_PRELOAD_AND_FE",
+      "certification": false
+    },
+    {
+      "deceleration_g": 0.8,
+      "rear_dynamic_fraction": 0.390867992766727,
+      "disc_torque_Nm": 911.0570061482824,
+      "pad_effective_radius_m": 0.11435320288822741,
+      "tangential_force_N": 7967.0440629352515,
+      "normal_force_each_pad_N": 11381.491518478932,
+      "bolt_group_moment_Nm": 363.67004392135783,
+      "bolt_force_N": 6044.289228878638,
+      "M12_nominal_root_area_mm2": 84.3,
+      "bolt_shear_screen_MPa": 71.6997536047288,
+      "bracket_nominal_bending_screen_MPa": 2.9876415236007188,
+      "boss_thread_shear_screen_MPa": 16.03297513755226,
+      "shear_status": "PASS_SCREEN_ONLY",
+      "housing_local_bending_and_joint_opening": "BLOCKED_REQUIRES_MATERIAL_PRELOAD_AND_FE",
+      "certification": false
+    }
+  ],
+  "output_drive_torque_Nm": 1123.2,
+  "mechanical_certification": "NOT EXECUTED",
+  "M4": "NOT EXECUTED",
+  "M2_overwritten": false,
+  "shaft_blocked": [
+    {
+      "shaft": "output",
+      "diameter_mm": 45,
+      "load_case": "drive",
+      "notch_factor": 2.0,
+      "peak_von_Mises_MPa": 222.74201227143118,
+      "critical_x_mm": 127.94,
+      "critical_root_diameter_mm": 45,
+      "bending_Nm": 215.68244287210973,
+      "local_torque_Nm": 1123.2,
+      "assumed_limit_MPa": 180,
+      "status": "BLOCKED"
+    },
+    {
+      "shaft": "output",
+      "diameter_mm": 45,
+      "load_case": "brake_0.8g",
+      "notch_factor": 2.0,
+      "peak_von_Mises_MPa": 180.25474124147541,
+      "critical_x_mm": 195.14999999999998,
+      "critical_root_diameter_mm": 45,
+      "bending_Nm": -166.11286871219988,
+      "local_torque_Nm": 911.0570061482824,
+      "assumed_limit_MPa": 180,
+      "status": "BLOCKED"
+    }
+  ],
+  "key_blocked": [
+    {
+      "interface": "output_gear",
+      "diameter_mm": 45,
+      "effective_load_share": 0.5,
+      "key_shear_MPa": 82.10526315789474,
+      "key_bearing_MPa": 262.7368421052632,
+      "assumed_shear_limit_MPa": 120,
+      "assumed_bearing_limit_MPa": 240,
+      "status": "BLOCKED"
+    }
+  ],
+  "required_release_items": [
+    "shaft/key fatigue and certified materials",
+    "bearing fits, rings/collar retention, cap screw preload and life",
+    "motor coupling alignment, fitted-key load sharing and fatigue",
+    "caliper joint slip and housing compliance",
+    "pad piston travel and hot runout",
+    "axial location end float / tolerances",
+    "actual CV interface and vehicle package",
+    "measured contact laws and coolant geometry"
+  ]
+}

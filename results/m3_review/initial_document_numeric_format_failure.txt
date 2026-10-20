@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "E:\ChatGPT��Ŀ\�����ں�������Ϸ���\scripts\m3_review\document_qa.py", line 44, in <module>
+    if __name__=='__main__':{'render':render,'record-visual':record_visual}[sys.argv[1]]()
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\ChatGPT��Ŀ\�����ں�������Ϸ���\scripts\m3_review\document_qa.py", line 34, in render
+    for expected in ['BLOCKED','752.84','911.06','NOT EXECUTED','M2']:assert expected in text,expected
+                                                                             ^^^^^^^^^^^^^^^^
+AssertionError: 752.84

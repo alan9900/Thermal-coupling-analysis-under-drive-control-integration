@@ -1,0 +1,188 @@
+{
+  "version": "M3-review-1.0",
+  "status": "PARTIAL_PREPARATION_NOT_SOLVER_RELEASE",
+  "M2_baseline": "M2-v1.0",
+  "units": {
+    "length": "m",
+    "heat": "W",
+    "qvol": "W/m3",
+    "temperature": "K"
+  },
+  "actual_verified_contacts": null,
+  "actual_cooling": null,
+  "measured_internal_masses": null,
+  "engineering_contact_h_scan_W_m2K": [
+    100,
+    1000,
+    10000
+  ],
+  "sources": {
+    "winding_copper": [
+      {
+        "body": "motor_winding",
+        "volume_m3": 0.0005311516567150179,
+        "fraction": 1.0,
+        "region": "whole_body",
+        "application": "q_i_W_m3 = Q_source_W / sum(V_selected)"
+      }
+    ],
+    "motor_iron": [
+      {
+        "body": "motor_stator",
+        "volume_m3": 0.0013431479381568864,
+        "fraction": 1.0,
+        "region": "whole_body",
+        "application": "q_i_W_m3 = Q_source_W / sum(V_selected)"
+      }
+    ],
+    "rotor_other": [
+      {
+        "body": "motor_rotor_other",
+        "volume_m3": 0.0009111985142130652,
+        "fraction": 1.0,
+        "region": "whole_body",
+        "application": "q_i_W_m3 = Q_source_W / sum(V_selected)"
+      }
+    ],
+    "reducer_gear": [
+      {
+        "body": "input_shaft",
+        "volume_m3": 4.744340577175357e-05,
+        "fraction": 0.038694968285776024,
+        "region": "input_shaft_integral_pinion",
+        "application": "q_i_W_m3 = Q_source_W / sum(V_selected)"
+      },
+      {
+        "body": "intermediate_shaft",
+        "volume_m3": 8.757530206399041e-05,
+        "fraction": 0.071426649939219,
+        "region": "intermediate_shaft_integral_pinion",
+        "application": "q_i_W_m3 = Q_source_W / sum(V_selected)"
+      },
+      {
+        "body": "stage1_gear",
+        "volume_m3": 0.00038600758677894835,
+        "fraction": 0.3148288173142311,
+        "region": "whole_body",
+        "application": "q_i_W_m3 = Q_source_W / sum(V_selected)"
+      },
+      {
+        "body": "stage2_gear",
+        "volume_m3": 0.0007050609170704871,
+        "fraction": 0.5750495644607739,
+        "region": "whole_body",
+        "application": "q_i_W_m3 = Q_source_W / sum(V_selected)"
+      }
+    ],
+    "reducer_bearing": [
+      {
+        "body": "input_bearing_1",
+        "volume_m3": 3.699539508867341e-05,
+        "fraction": 0.09593326381647552,
+        "region": "whole_body",
+        "application": "q_i_W_m3 = Q_source_W / sum(V_selected)"
+      },
+      {
+        "body": "input_bearing_2",
+        "volume_m3": 3.699539508867341e-05,
+        "fraction": 0.09593326381647552,
+        "region": "whole_body",
+        "application": "q_i_W_m3 = Q_source_W / sum(V_selected)"
+      },
+      {
+        "body": "intermediate_bearing_1",
+        "volume_m3": 6.785840131753954e-05,
+        "fraction": 0.17596454640250264,
+        "region": "whole_body",
+        "application": "q_i_W_m3 = Q_source_W / sum(V_selected)"
+      },
+      {
+        "body": "intermediate_bearing_2",
+        "volume_m3": 6.785840131753954e-05,
+        "fraction": 0.17596454640250264,
+        "region": "whole_body",
+        "application": "q_i_W_m3 = Q_source_W / sum(V_selected)"
+      },
+      {
+        "body": "output_bearing_1",
+        "volume_m3": 8.796459430051418e-05,
+        "fraction": 0.22810218978102184,
+        "region": "whole_body",
+        "application": "q_i_W_m3 = Q_source_W / sum(V_selected)"
+      },
+      {
+        "body": "output_bearing_2",
+        "volume_m3": 8.796459430051418e-05,
+        "fraction": 0.22810218978102184,
+        "region": "whole_body",
+        "application": "q_i_W_m3 = Q_source_W / sum(V_selected)"
+      }
+    ],
+    "reducer_other": [
+      {
+        "body": "oil_inventory",
+        "volume_m3": 0.0008226551020105294,
+        "fraction": 1.0,
+        "region": "whole_body",
+        "application": "q_i_W_m3 = Q_source_W / sum(V_selected)"
+      }
+    ],
+    "brake_disc": [
+      {
+        "body": "brake_disc_hat",
+        "volume_m3": 0.0006667676123072674,
+        "fraction": 1.0,
+        "region": "whole_body",
+        "application": "q_i_W_m3 = Q_source_W / sum(V_selected)"
+      }
+    ],
+    "brake_pad": [
+      {
+        "body": "pad_near",
+        "volume_m3": 1.5096e-05,
+        "fraction": 0.5,
+        "region": "whole_body",
+        "application": "q_i_W_m3 = Q_source_W / sum(V_selected)"
+      },
+      {
+        "body": "pad_far",
+        "volume_m3": 1.5096e-05,
+        "fraction": 0.5,
+        "region": "whole_body",
+        "application": "q_i_W_m3 = Q_source_W / sum(V_selected)"
+      }
+    ]
+  },
+  "source_allocation_caveat": "Uniform volume weighting is S3, especially integral pinions and bearing dissipation. Resolved tooth/race local flux is unknown.",
+  "inverter": "EXTERNAL_NOT_LOADED",
+  "total_motor_and_reducer_losses": "VALIDATION_ONLY_NEVER_LOAD_AGAIN",
+  "rotor_other": "NOT_ALL_PERMANENT_MAGNET_HEAT",
+  "added_network_nodes": [
+    "disc_hub",
+    "removable_hub_and_halfshaft_sleeves",
+    "bracket",
+    "input_shaft_integral_pinion",
+    "intermediate_shaft_integral_pinion",
+    "adapter",
+    "front_output_bearing",
+    "rear_output_bearing",
+    "front_rear_case",
+    "individual_shields",
+    "seals",
+    "halfshaft_interface"
+  ],
+  "bearing_mass": "CAD annulus is envelope. Use verified catalogue/prototype mass or explicit effective rho, never solid steel annulus mass.",
+  "contacts_csv": [
+    "results/m3_review/contact_pairs.csv",
+    "results/m3_review/supplemental_contact_pairs.csv"
+  ],
+  "boundary_status": {
+    "coolant_ports": "BLOCKED_NO_HYDRAULIC_CONNECTION",
+    "liquid_film": "UNKNOWN_REQUIRES_RANGE",
+    "sleeves": "BLOCKED_PRESS_FIT_RETENTION_AND_THERMAL_LOOSENING",
+    "winding_insulation": "BLOCKED_ENDRING_CORE_NOMINAL_TOUCH_REQUIRES_CONTACT_R_NOT_BONDED",
+    "pad_contact": "RUNNING_GAP_REQUIRES_TRANSIENT_CONTACT_OR_HEAT_FLUX",
+    "external_air": "LOCAL_CONNECTED_DOMAIN_NOT_FAR_FIELD_VALIDATED"
+  },
+  "geometry_import": "OCCT_ROUNDTRIP_TESTED_ANSYS_NOT_EXECUTED"
+}

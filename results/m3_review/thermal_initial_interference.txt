@@ -1,0 +1,7 @@
+BUILD CONCEPT TEMPLATE Case0
+BUILD REVIEW Case0 50 False
+PASS_GEOMETRY_ONLY Case0_d50_full pairs 193 volume error 2.656083568244619e-13
+BUILD REVIEW Case0 50 True
+BLOCKED Case0_d50_thermal [{'case': 'Case0', 'part_a': 'stage2_gear', 'part_b': 'oil_inventory', 'common_volume_mm3': 2793.455462246402, 'status': 'INTERFERENCE', 'variant': 'thermal', 'diameter_mm': 50}]
+BLOCKED Case0_d50_thermal pairs 191 volume error 2.349912408026698e-13
+BUILD REVIEW Case0 45 False

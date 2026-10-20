@@ -1,0 +1,5 @@
+path,length_m,area_m2,k_W_mK,R_bulk_K_W,M2_equivalent_R_K_W,meaning
+hub_to_rear_bearing_d45,0.045,,45,0.6287602690050189,1.5,"Bulk only; spreading, key interfaces, race/rolling/lubrication contacts absent"
+hub_to_rear_bearing_d50,0.045,,45,0.5092958178940652,1.5,"Bulk only; spreading, key interfaces, race/rolling/lubrication contacts absent"
+hat_radial_40_to_88,0.048,,45,0.5577194947518287,2,Annular radial body resistance; not disc-hub-shaft total
+bracket_axial_envelope,0.027,0.0036,45,0.16666666666666669,8,"Uniform body lower bound only; C bracket spreading, bolts, contact unknown"

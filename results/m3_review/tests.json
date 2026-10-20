@@ -1,0 +1,28 @@
+{
+  "status": "PASS_AUDIT_NOT_DESIGN_RELEASE",
+  "test_group_count": 16,
+  "groups": [
+    "10 full/thermal STEP assemblies valid and zero positive overlaps",
+    "STEP roundtrip and mm scale",
+    "True Case0 has no shield or new supports",
+    "Reference motor preserved, 60mm adapter translates rather than scales",
+    "Three supported shafts include shoulders, retaining parts, seals and rear0.5mm nominal end float",
+    "Rear bearing installation envelope passes after seats become removable sleeves; fit qualification remains BLOCKED",
+    "18 phases of revised integral-pinion/gear meshes have no tooth overlap",
+    "24 brake rotation / fixed-caliper pair checks",
+    "Bad caliper collision is rejected, not filtered out",
+    "Original M3 concept models/results/reports unchanged",
+    "Archived M2 unchanged",
+    "Source weights sum to1, no duplicated bodies, actual contacts remain null",
+    "Current editable source reproduces every exported50mm baseline body volume",
+    "Thermal simplification conserves per-body volume; bearing envelope mass not asserted as installed mass",
+    "Rear axle load transfer and45mm failures remain explicit",
+    "Active-slot0.2mm gap preserved; end-ring nominal touch detected, insulation/contact law remains BLOCKED"
+  ],
+  "mesh_phase_samples": 18,
+  "brake_rotation_pairs": 24,
+  "max_thermal_per_body_volume_error": 1.6936219744950193e-10,
+  "blocked_engineering_items_are_not_test_passes": true,
+  "ANSYS": "NOT EXECUTED",
+  "Fluent": "NOT EXECUTED"
+}

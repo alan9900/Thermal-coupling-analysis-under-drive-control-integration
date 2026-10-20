@@ -1,0 +1,16 @@
+{
+  "status": "PASS_SELECTED_FACE_GEOMETRY_ONLY",
+  "disk_exact": 0.6096117967977924,
+  "disk_sampled": 0.6095733642578125,
+  "disk_error": 3.8432539979926794e-05,
+  "case_count": 4,
+  "method": "Actual revised STEP B-rep obstruction intersections, seeded uniform area/cosine hemisphere rays, selected receiver plane x160 only",
+  "excluded_physics": [
+    "case side faces as receivers",
+    "multiple reflections/re-emission",
+    "emissivity and temperature dependence",
+    "convection / air direction"
+  ],
+  "legacy_M3_F_not_reused": true,
+  "thermal_prediction": "NOT EXECUTED"
+}

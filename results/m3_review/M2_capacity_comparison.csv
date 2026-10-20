@@ -1,0 +1,14 @@
+node,M2_C_J_K,M3_geometry_candidate_C_J_K,ratio,basis,difference_explanation
+disc,2250.0,2367.025023690799,1.0520111216403552,GEOMETRY_VOLUME_AND_S3_PROPERTIES,CAD volume / assumed material; not a calibrated installed mass
+pad_caliper,1400.0,901.9096345864072,0.6442211675617194,GEOMETRY_VOLUME_AND_S3_PROPERTIES,CAD volume / assumed material; not a calibrated installed mass
+output_shaft,552.0,2107.068996675293,3.8171539794842264,GEOMETRY_VOLUME_AND_S3_PROPERTIES,CAD volume / assumed material; not a calibrated installed mass
+output_bearing,161.0,,,UNRESOLVED_OR_CASE_DEPENDENT,CAD volume / assumed material; not a calibrated installed mass
+gears,1150.0,3914.7537918117746,3.404133732010239,GEOMETRY_VOLUME_AND_S3_PROPERTIES,Integral pinions stay with shaft regions; not direct original aggregate comparison
+oil,1600.0,1398.5136734179,0.8740710458861876,GEOMETRY_VOLUME_AND_S3_PROPERTIES,CAD volume / assumed material; not a calibrated installed mass
+gear_case,3600.0,8640.410099852976,2.4001139166258265,GEOMETRY_VOLUME_AND_S3_PROPERTIES,CAD volume / assumed material; not a calibrated installed mass
+motor_case,4500.0,7611.23097427494,1.6913846609499867,GEOMETRY_VOLUME_AND_S3_PROPERTIES,CAD volume / assumed material; not a calibrated installed mass
+stator,4765.599999999999,4819.214802106909,1.0112503781490074,GEOMETRY_VOLUME_AND_S3_PROPERTIES,CAD volume / assumed material; not a calibrated installed mass
+winding,1898.05,1832.2607550041255,0.9653385079445355,GEOMETRY_VOLUME_AND_S3_PROPERTIES,CAD volume / assumed material; not a calibrated installed mass
+rotor_other,3082.0,4021.129072335228,1.3047141701282376,GEOMETRY_VOLUME_AND_S3_PROPERTIES,CAD volume / assumed material; not a calibrated installed mass
+shield,200.0,,,UNRESOLVED_OR_CASE_DEPENDENT,CAD volume / assumed material; not a calibrated installed mass
+local_air,50.25,,,UNRESOLVED_OR_CASE_DEPENDENT,CAD volume / assumed material; not a calibrated installed mass

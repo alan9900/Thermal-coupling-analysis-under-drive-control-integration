@@ -1,0 +1,6 @@
+body,predicate_mm,actual_boundary_parameter,status
+brake_disc_hat,"friction near: x=205, nx<0, r>=88mm; far: x=227, nx>0, r>=85mm",,NAMED_SELECTION_PLAN_ANSYS_NOT_EXECUTED
+motor_water_jacket,wet boundary = contact to motor_case; no flow ports; apply bulk-film hypothesis only,,NAMED_SELECTION_PLAN_ANSYS_NOT_EXECUTED
+gear_case_rear,"radiation receiver SELECTED exterior plane x=160, nx>0; internal surfaces excluded",,NAMED_SELECTION_PLAN_ANSYS_NOT_EXECUTED
+pad_near,"moving friction face x=204.5, gap0.5 to disc; actual hydraulic closure unknown",,NAMED_SELECTION_PLAN_ANSYS_NOT_EXECUTED
+pad_far,"moving friction face x=227.5, gap0.5 to disc; actual hydraulic closure unknown",,NAMED_SELECTION_PLAN_ANSYS_NOT_EXECUTED

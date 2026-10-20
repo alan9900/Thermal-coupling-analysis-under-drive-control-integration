@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "E:\ChatGPT��Ŀ\�����ں�������Ϸ���\scripts\m3_review\document_qa.py", line 43, in <module>
+    if __name__=='__main__':{'render':render,'record-visual':record_visual}[sys.argv[1]]()
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\ChatGPT��Ŀ\�����ں�������Ϸ���\scripts\m3_review\document_qa.py", line 23, in render
+    xml=ET.fromstring(z.read('word/document.xml'));math=len(xml.findall('.//{http://schemas.openxmlformats.org/officeDocument/2006/math}oMath'));images=len([n for n in z.namelist() if n.startswith('word/media/')]);assert math>=12 and images==7,(math,images)
+                                                                                                                                                                                                                             ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: (8, 7)

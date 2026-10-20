@@ -78,3 +78,15 @@ PR #2已合并，M1-v1.0附注Tag对象 `9b3c7f97c63b56b50eb7c0477a72ad03060cae3
 报告9页、21个可编辑数学对象、5幅图，Word导出PDF并逐页检查PASS；M2固定文件无差异。热阻/热容/视角仅新候选，未重算M2温度、不声称降温。45mm轴余量小，40mm拒绝；轴向定位、花键、壳体分型、轴承寿命/密封、预紧/防滑、车辆包络和真实冷却仍缺。M3等待研究者验收，不合并、不创建正式Tag、不开展M4。完整证据SHA后续登记，避免自引用。
 
 M3完整证据提交：`0dc265e7329870c92e849abe89fb9c2d12378c77`，已推送；包括56 STEP、144行质量/C、283对干涉、2187解析范围、CSV/JSON/图和三格式报告。独立交付检查PASS，另逐一读取该提交的110个源/成果Git blob核对保存的SHA-256，全部一致，STEP原始字节未被Git换行转换。后续登记不改CAD几何，不把该证据SHA冒充main或正式M3版本。最终批准状态PENDING；PR #4保持草稿。
+
+## M3几何正确性复核与有限元前精化（2026-10-20）
+
+继续`stage/M3-geometry`及[PR #4](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/4)。状态**PARTIAL_WITH_BLOCKED_ITEMS**，不是M3正式验收；Tag **NOT CREATED**，M4/ANSYS/Fluent **NOT EXECUTED**。原`cad/m3`、`scripts/m3`、`results/m3`和原M3报告均保留，M2-v1.0固定文件不变。
+
+最终几何生成由提交`700edf045c03ea63ed27e197e2020048ceb98995`启动；后续断言/参数元数据和审查文档更新未改变几何，当前源对所有Case0部件体积回归通过。旧生成器在写结果时取HEAD的问题已用独立launch/result-write字段纠正，未伪称重新运行CAD。提交`c4aace5`补充罩支点差动热膨胀BLOCKED及未来导入清单；本轮完整证据SHA在之后登记，避免自引用。
+
+交付`cad/m3_review`：10份完整/热装配（4方案50mm及Case0的45mm对照）、5份局部连通空气域及共同零件，共144 STEP约152.5MB；全对筛选后3686对精确布尔无>0.001mm³交叠，最大回读误差2.28e-13；16组审查、18啮合相位、24盘/钳旋转配对通过。测试通过表示审查正确，不把失败工况当通过。50mm驱动Kt2约162.34MPa，45mm约222.74MPa（180MPa阈值为S3）；0.6g/0.8g零再生单盘752.839/911.057N·m。
+
+补充报告`reports/M3_geometry_review.md/.docx/.pdf`：9页、8个可编辑OMML公式、7幅真实CAD/工程图，Pandoc转换与Word导出后逐页视觉检查PASS。配置/接口`configs/m3_geometry_review.yaml`、`configs/M3_to_M4_mapping.json`；结果和测试`results/m3_review`；补充验收表`reports/M3_GEOMETRY_REVIEW_CHECKLIST.md`；未来几何准备清单`docs/M4_GEOMETRY_IMPORT_PREPARATION.md`。
+
+轴承装入问题改为可拆套候选，但传扭/热松脱、预紧防滑、局部凸台/疲劳/位移、端部绝缘、滚动接触与油膜、冷却端口和装车包络仍BLOCKED。罩300K/箱100K差动膨胀约0.406mm超过0.2mm孔隙，需滑移/柔性支点复审。允许作为ANSYS导入候选，不等于可直接做可信样机温度或优化结论。原始未知值保持null，未修改旧Tag、合并M3或进入M4。

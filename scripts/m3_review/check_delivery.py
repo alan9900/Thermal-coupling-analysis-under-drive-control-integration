@@ -35,8 +35,8 @@ def main():
         writejson(OUT/'geometry_checks.json',g)
     paths=[]
     for folder in [ROOT/'scripts/m3_review',ROOT/'cad/m3_review',ROOT/'data/raw/m3_review',OUT]:
-        paths += [p for p in folder.rglob('*') if p.is_file() and '__pycache__' not in p.parts and p.suffix!='.pyc' and p.name not in ['delivery_checks.json','delivery_manifest.json']]
-    paths += [ROOT/'configs/m3_geometry_review.yaml',ROOT/'configs/M3_to_M4_mapping.json',ROOT/'reports/M3_GEOMETRY_REVIEW_CHECKLIST.md']+[ROOT/'reports'/f'M3_geometry_review.{ext}' for ext in ['md','docx','pdf']]
+        paths += [p for p in folder.rglob('*') if p.is_file() and '__pycache__' not in p.parts and p.suffix!='.pyc' and p.name not in ['delivery_checks.json','delivery_manifest.json','delivery_run.txt','git_blob_checks.json']]
+    paths += [ROOT/'configs/m3_geometry_review.yaml',ROOT/'configs/M3_to_M4_mapping.json',ROOT/'reports/M3_GEOMETRY_REVIEW_CHECKLIST.md',ROOT/'docs/M4_GEOMETRY_IMPORT_PREPARATION.md']+[ROOT/'reports'/f'M3_geometry_review.{ext}' for ext in ['md','docx','pdf']]
     writejson(OUT/'delivery_manifest.json',{p.relative_to(ROOT).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in paths})
     writejson(OUT/'delivery_checks.json',dict(status='PASS_DELIVERY_WITH_ENGINEERING_BLOCKERS',file_count=len(paths),step_files=len(manifest['files']),step_bytes=total,source_snapshots=snapshots,
         geometry_regression_groups=tests['test_group_count'],archived_M2_and_original_M3_unchanged=True,document_pages=doc['pdf_pages'],editable_math=8,
