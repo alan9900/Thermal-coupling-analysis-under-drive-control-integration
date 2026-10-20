@@ -151,9 +151,14 @@ def main():
         'reducer_bearing':['input_bearing_1','input_bearing_2','intermediate_bearing_1','intermediate_bearing_2','output_bearing_1','output_bearing_2'],
         'reducer_other':['oil_inventory'],'brake_disc':['brake_disc_hat'],'brake_pad':['pad_near','pad_far']}
     mapping={}
+    regionfile=OUT/'source_regions.csv'
+    regionrows={x['body']:x for x in csv.DictReader(regionfile.open(encoding='utf-8'))} if regionfile.exists() else {}
     for source,names in sources.items():
-        V=sum(float(byname[n]['volume_m3']) for n in names)
-        mapping[source]=[dict(body=n,volume_m3=float(byname[n]['volume_m3']),fraction=float(byname[n]['volume_m3'])/V,application='q_i_W_m3 = Q_source_W / sum(V_selected)') for n in names]
+        def vol(n):return float(regionrows[n]['volume_m3']) if source=='reducer_gear' and n in regionrows else float(byname[n]['volume_m3'])
+        V=sum(vol(n) for n in names)
+        mapping[source]=[dict(body=n,volume_m3=vol(n),fraction=vol(n)/V,
+            region=regionrows[n]['region'] if source=='reducer_gear' and n in regionrows else 'whole_body',
+            application='q_i_W_m3 = Q_source_W / sum(V_selected)') for n in names]
     newnodes=['disc_hub','removable_hub_and_halfshaft_sleeves','bracket','input_shaft_integral_pinion','intermediate_shaft_integral_pinion','adapter','front_output_bearing','rear_output_bearing','front_rear_case','individual_shields','seals','halfshaft_interface']
     writejson(ROOT/'configs/M3_to_M4_mapping.json',dict(version='M3-review-1.0',status='PARTIAL_PREPARATION_NOT_SOLVER_RELEASE',M2_baseline='M2-v1.0',units=dict(length='m',heat='W',qvol='W/m3',temperature='K'),
         actual_verified_contacts=None,actual_cooling=None,measured_internal_masses=None,engineering_contact_h_scan_W_m2K=r['contact_h_scan_W_m2K'],sources=mapping,

@@ -9,6 +9,7 @@ CASES=['Case0','CaseA','CaseB','CaseC']
 def main():
     OUT.mkdir(exist_ok=True,parents=True);CAD.mkdir(exist_ok=True,parents=True)
     start=time.perf_counter();checks=[];mass=[];runs=[];basehash={};contact=[]
+    source_commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
     for case in CASES:
         print('BUILD CONCEPT TEMPLATE',case,flush=True);base=build(config(),case)
         for d in ([50,45] if case=='Case0' else [50]):
@@ -69,7 +70,7 @@ def main():
                     row.update(air_connected_solids=len(air.Solids()),air_valid=air.isValid(),closed_pockets_mm3=pockets,duct_centreline_probes=probes)
                     assert len(air.Solids())==1 and air.isValid()
                 runs.append(row);writejson(OUT/'geometry_checks.json',dict(status='BLOCKED' if any(x['interferences'] for x in runs) else 'PASS_GEOMETRY_ONLY',
-                    source_commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),executed_CAD=True,cadquery=cq.__version__,python=platform.python_version(),runs=runs,
+                    source_commit=source_commit,executed_CAD=True,cadquery=cq.__version__,python=platform.python_version(),runs=runs,
                     ANSYS='NOT EXECUTED',Fluent='NOT EXECUTED',structural_certification='NOT EXECUTED',runtime_s=time.perf_counter()-start))
                 csvout(OUT/'mass_heat_capacity.csv',mass);csvout(OUT/'contact_pairs.csv',contact)
                 print(row['status'],tag,'pairs',len(rows),'volume error',err,flush=True)
