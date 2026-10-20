@@ -54,7 +54,7 @@ def build_review(d=50,case='Case0',thermal=False,base=None):
         remove(f'motor_mount_bolt_{k+1}');add(f'motor_mount_bolt_{k+1}',cyl(5,-offset-8,16,yy,zz))
     # Real relief pockets for neighbouring front retainers and seals.
     for ax in ['intermediate','output']:
-        yy,zz=axes[ax];adapter=adapter.cut(cyl(49 if ax=='intermediate' else d/2+29,-11,.1,yy,zz))
+        yy,zz=axes[ax];adapter=adapter.cut(cyl(51 if ax=='intermediate' else d/2+31,-11,.1,yy,zz))
     add('motor_gear_adapter',adapter.cut(cq.Compound.makeCompound(motorholes)),'aluminium')
     for n in ['gear_case','oil_inventory','intermediate_shaft','output_shaft','stage1_pinion','stage1_gear','stage2_pinion','stage2_gear','disc_hub','caliper','caliper_reaction_bracket','caliper_mount_bolt_1','caliper_mount_bolt_2']:
         remove(n)
@@ -62,7 +62,7 @@ def build_review(d=50,case='Case0',thermal=False,base=None):
     shafts={}
     for ax,(yy,zz) in axes.items():
         be=bearings[ax];D=be['bore_mm'];B=be['width_mm'];ro=be['od_mm']/2
-        sh=cyl(D/2,-30 if ax=='input' else -10,168 if ax!='output' else 268,yy,zz)
+        sh=cyl(D/2,-30 if ax=='input' else -10,168.5 if ax!='output' else 268,yy,zz)
         # Locating bearing inner-ring shoulder; rear inner ring retained by collar.
         sh=fused([sh,cyl(D/2+4,B,B+5,yy,zz),cyl(D/2+4,136,160-B,yy,zz)]) if 136<160-B else fused([sh,cyl(D/2+4,B,B+5,yy,zz)])
         if ax=='intermediate':sh=fused([sh,cyl(25,30,58,yy,zz),cyl(28,28,33,yy,zz)])
@@ -75,9 +75,9 @@ def build_review(d=50,case='Case0',thermal=False,base=None):
         groove=ring(D/2+.1,D/2-1,-3,-1,yy,zz);shafts[ax]=shafts[ax].cut(groove)
         add(ax+'_front_retaining_ring',ring(D/2+3,D/2-1,-3,-1,yy,zz))
         add(ax+'_rear_clamp_collar',ring(D/2+4,D/2,160,164,yy,zz))
-        for label,x0,x1 in [('front',-6,0),('rear',160,164)]:
-            add(ax+'_'+label+'_outer_retainer',ring(ro+7,D/2+5,x0,x1,yy,zz),'aluminium')
-        for label,x0,x1 in [('front',-10,-6),('rear',164,168)]:
+        for label,x0,x1 in [('front',-6,0),('rear',160.5,164.5)]:
+            add(ax+'_'+label+'_outer_retainer',ring(ro+10,D/2+5,x0,x1,yy,zz),'aluminium')
+        for label,x0,x1 in [('front',-10,-6),('rear',164.5,168.5)]:
             add(ax+'_'+label+'_seal',ring(D/2+5,D/2,x0,x1,yy,zz),'seal_equivalent')
     # Integral pinions remove weak separate pinion-bore key cuts.
     shafts['input']=fused([shafts['input'],gear(2.5,20,30,25,33,*axes['input'],-90,.15)])
@@ -134,7 +134,8 @@ def build_review(d=50,case='Case0',thermal=False,base=None):
     bosses=[];bores=[]
     for ax,(yy,zz) in axes.items():
         be=bearings[ax];ro=be['od_mm']/2;B=be['width_mm']
-        bosses += [ring(ro+7,ro,0,B+3,yy,zz),ring(ro+7,ro,157-B,160,yy,zz)]
+        bosses += [ring(ro+10,ro,0,B+3,yy,zz),ring(ro+10,ro,157-B,160,yy,zz),
+                   ring(ro+10,ro-3,B,B+3,yy,zz),ring(ro+10,ro-3,157-B,159.5-B,yy,zz)]
         bores += [cyl(ro,-.1,B,yy,zz),cyl(ro,160-B,160.1,yy,zz)]
     bosses += [cyl(12,0,16,y+140*math.cos(math.radians(a)),z+140*math.sin(math.radians(a))) for a in p['motor_design']['mounting_angles_deg']]
     feet=[box(30,70,-140,-110,-110,-80),box(100,140,285,315,-110,-80)]
@@ -145,7 +146,16 @@ def build_review(d=50,case='Case0',thermal=False,base=None):
     for k,(yy,zz) in enumerate([(-95,-95),(270,-95),(-95,250),(270,250)]):
         housing=housing.fuse(cyl(12,0,160,yy,zz));split_holes.append(cyl(5.5,-.1,160.1,yy,zz))
         add('case_tie_bolt_'+str(k+1),cyl(5,0,160,yy,zz))
-    housing=housing.cut(cq.Compound.makeCompound(bores+holes+motorholes+frameholes+split_holes)).clean()
+    capholes=[]
+    for ax,(yy,zz) in axes.items():
+        ro=bearings[ax]['od_mm']/2
+        for label,x0,x1 in [('front',-6,6),('rear',154,164.5)]:
+            for k,a in enumerate([45,135,225,315]):
+                cy=yy+(ro+5)*math.cos(math.radians(a));cz=zz+(ro+5)*math.sin(math.radians(a))
+                cut=cyl(2.75,x0-.1,x1+.1,cy,cz);capholes.append(cut)
+                name=ax+'_'+label+'_outer_retainer';P[name]=P[name].cut(cut)
+                add(f'{ax}_{label}_cap_bolt_{k+1}',cyl(2.5,x0,x1,cy,cz))
+    housing=housing.cut(cq.Compound.makeCompound(bores+holes+motorholes+frameholes+split_holes+capholes)).clean()
     add('gear_case_front',housing.intersect(box(-1,80,-500,500,-500,500)),'aluminium')
     add('gear_case_rear',housing.intersect(box(80,161,-500,500,-500,500)),'aluminium')
     oil=box(20,140,-100,275,-102,-82)
@@ -162,7 +172,7 @@ def build_review(d=50,case='Case0',thermal=False,base=None):
             ax='input' if n=='stage1_gear' else 'intermediate'
             # Reserve the complete pinion swept envelope plus 0.2 mm. This
             # prevents smooth gears from intersecting a toothed mating pinion.
-            cutter=cyl(27.5+.2 if n=='stage1_gear' else 33+.2,x-.1,x+w+.1,*axes[ax])
+            cutter=cq.Compound.makeCompound([cyl(27.5+.2 if n=='stage1_gear' else 33+.2,x-.1,x+w+.1,*axes[ax]),P['oil_inventory']])
             # Correct missing keycut volume analytically via scalar bisection.
             lo,hi=ro,ro+8
             for _ in range(30):
