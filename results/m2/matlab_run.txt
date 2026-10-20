@@ -1,0 +1,35 @@
+[警告: 向量化内容可能需要很长时间才能创建，或者可能包含意外结果。将 'ContentType' 设置为 'image' 以提高性能。<a href="matlab:warning('off',
+'MATLAB:print:ContentTypeImageSuggested')">点击此处</a>以不再显示此消息。] 
+[警告: 向量化内容可能需要很长时间才能创建，或者可能包含意外结果。将 'ContentType' 设置为 'image' 以提高性能。<a href="matlab:warning('off',
+'MATLAB:print:ContentTypeImageSuggested')">点击此处</a>以不再显示此消息。] 
+           case_id           peak_disc_C    peak_gear_case_C    peak_winding_C    energy_residual_relative
+    _____________________    ___________    ________________    ______________    ________________________
+
+    {'A_internal_only'  }      25.932            31.385              57.61                4.672e-14       
+    {'B_brake_only'     }      109.52             26.84             25.033               5.2782e-14       
+    {'C_combined'       }      109.63            32.965             57.611                2.194e-14       
+    {'D_preheat_braking'}      110.01            40.889             75.629               1.0872e-14       
+    {'C_remove_path_1'  }       109.7            32.858             57.611               1.9487e-14       
+    {'C_remove_path_2'  }      109.67            32.801             57.611               2.3166e-14       
+    {'C_remove_path_3'  }      109.55            32.577             57.611               1.5399e-14       
+
+                                        status: 'PASS'
+                                  stage_status: 'CONCEPT_PREDICTION_PENDING_REVIEW'
+                                    node_count: 13
+                                 primary_cases: 4
+                            path_interventions: 3
+                             sensitivity_cases: 18
+                                   test_groups: 11
+                D_time_refinement_peak_error_K: 0.0016
+         maximum_main_energy_residual_relative: 5.2782e-14
+                 maximum_main_drive_residual_J: 1.4963e-08
+          high_load_preheat_motor_power_each_W: 4.1176e+04
+                 preheat_continuous_capability: 'UNVERIFIED; instantaneous envelope only, engineering stress scenario'
+    no_load_drag_and_temperature_loss_feedback: 'NOT MODELLED'
+                                        M1_tag: 'M1-v1.0'
+                               M1_merge_commit: '9d545ab39a3efcce857573af74f7e325b74a2b15'
+                                        matlab: '25.1.0.2943329 (R2025a)'
+                                       release: '2025a'
+                       experimental_validation: 'NOT EXECUTED'
+                                    M3_started: 0
+

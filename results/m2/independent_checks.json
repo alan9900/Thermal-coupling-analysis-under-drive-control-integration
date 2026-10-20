@@ -1,0 +1,85 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "case": "A_internal_only",
+      "rows": 3343,
+      "independent_relative_energy_residual": 8.042750786796339e-14
+    },
+    {
+      "case": "B_brake_only",
+      "rows": 3343,
+      "independent_relative_energy_residual": 1.453917338106745e-13
+    },
+    {
+      "case": "C_combined",
+      "rows": 3343,
+      "independent_relative_energy_residual": 6.690883913633734e-14
+    },
+    {
+      "case": "C_remove_path_1",
+      "rows": 3343,
+      "independent_relative_energy_residual": 6.759019187703325e-14
+    },
+    {
+      "case": "C_remove_path_2",
+      "rows": 3343,
+      "independent_relative_energy_residual": 6.806713879552039e-14
+    },
+    {
+      "case": "C_remove_path_3",
+      "rows": 3343,
+      "independent_relative_energy_residual": 6.200309940332688e-14
+    },
+    {
+      "case": "D_preheat_braking",
+      "rows": 3583,
+      "independent_relative_energy_residual": 3.1695925109769814e-14
+    }
+  ],
+  "maximum_independent_energy_residual_relative": 1.453917338106745e-13,
+  "scipy_method": "adaptive RK45 Dormand-Prince; same energy-preserving interval-average sources",
+  "scipy_oracle_max_temperature_error_K": 0.0029159099841535863,
+  "M0_M1_protected_files_unchanged": true,
+  "model_commit": "ff818ccb35daf8d70d0cbafbf28fc6690ab457a8",
+  "matlab_source_sha256": {
+    "scripts/m2/m2_export.m": "0edd68b140e379174e072a38430b90b89ed09f3d783996af49f78efef498b4df",
+    "scripts/m2/m2_flux.m": "c0739e57b0b1fa2ff117a8d4787b000279624c226aba09d8e39b32b07dcfbadf",
+    "scripts/m2/m2_forcing.m": "d333931525df63e2665d1e49d591bd780d7c9299e9019562df1a22e849dba3e8",
+    "scripts/m2/m2_load.m": "0d4bed3b612c91f325e8cc5a35d61b27047ad269243c706230ec106b3ad81a4c",
+    "scripts/m2/m2_network.m": "71cf36453ea29a0bc853055bb8f6a61b4176a908d1971768aaf0a05fae8566b9",
+    "scripts/m2/m2_plots.m": "b216a7c86aa762d5e94bfa44ff7fd9a71f0be0d658e0632dfe466dba4511aeb4",
+    "scripts/m2/m2_segments.m": "4c0e21c4e84c58ff426dceff4ccfc718a36bd662e03d576c29dab0e69ba6bf36",
+    "scripts/m2/m2_simulate.m": "ba98e6f21d09a3e23f46662ae30cbfbf4531cb494d466194d4d6745836570713",
+    "scripts/m2/m2_tests.m": "07e407c7e32a8aa6c09e4f65ff0ed06b65914e6b0cea4f5ed4e89b1f8928b880",
+    "scripts/m2/render_saved_plots.m": "05ecd70532c8b0ce377933a7b14e635922fcad3ff54dadb33a85613b4630af0c",
+    "scripts/m2/run_m2.m": "c23263a3b4e2248feba8f288039c2f845f0542c43e4d626a835266d630e78165"
+  },
+  "output_sha256": {
+    "results/m2/cases/A_internal_only.csv": "81b7fc32c9647e8d329f5fb4ba41b59719f4788a2bfdb13bdd73055f983bcb5d",
+    "results/m2/cases/A_internal_only.json": "177ad81dc4162718b4ad6ef7fddb3dc4101e1fca5fee97e9b7d9679cdd77b52a",
+    "results/m2/cases/A_internal_only_forcing.csv": "135f2289905a431fbe8613c38353c34e20593e2ad8ab3eb36c784a9e6188281e",
+    "results/m2/cases/B_brake_only.csv": "c0fea3d1d218bd5db00b7ca2aa426b7041ff9bf6e86532baae8a398cf20472ac",
+    "results/m2/cases/B_brake_only.json": "ddcfd6da98870372bbb3eedf5f7f4fe5e1eed9d3025ae301bf8243f18bbfd912",
+    "results/m2/cases/B_brake_only_forcing.csv": "135f2289905a431fbe8613c38353c34e20593e2ad8ab3eb36c784a9e6188281e",
+    "results/m2/cases/C_combined.csv": "de4f38583ca203e5be06bbd27392467050873bb48e7e0927830bc7a02b886f8a",
+    "results/m2/cases/C_combined.json": "858a85e09760ba040ed8077f4acee87b61a5b40f58a7d23cb7c881146b21637f",
+    "results/m2/cases/C_combined_forcing.csv": "135f2289905a431fbe8613c38353c34e20593e2ad8ab3eb36c784a9e6188281e",
+    "results/m2/cases/C_remove_path_1.csv": "36af8d013d00c685c53a2f09bfe5e8e29a8d8efa0c80029435f10a2664f33c26",
+    "results/m2/cases/C_remove_path_1.json": "c6cdad6b2ac170b1fe6b03e2df89d7ae5cbcc1fcd08802dc25ac4295e0df8224",
+    "results/m2/cases/C_remove_path_1_forcing.csv": "135f2289905a431fbe8613c38353c34e20593e2ad8ab3eb36c784a9e6188281e",
+    "results/m2/cases/C_remove_path_2.csv": "85d958ea31835474151c2372bd0702c875f861cfced9da3c5469d94536187ecd",
+    "results/m2/cases/C_remove_path_2.json": "523879810524185d553afe7be80a289089ab1bafa807183c61380d370139b556",
+    "results/m2/cases/C_remove_path_2_forcing.csv": "135f2289905a431fbe8613c38353c34e20593e2ad8ab3eb36c784a9e6188281e",
+    "results/m2/cases/C_remove_path_3.csv": "6357474dc85bf4daa7d157d510444e26ea1e771d87bee8670baac473153caf7a",
+    "results/m2/cases/C_remove_path_3.json": "f6edcc7cf4c85c41813db2aac8238b2c519d4f9c3910616689b95bf3e4961a6a",
+    "results/m2/cases/C_remove_path_3_forcing.csv": "135f2289905a431fbe8613c38353c34e20593e2ad8ab3eb36c784a9e6188281e",
+    "results/m2/cases/D_preheat_braking.csv": "1fbf0c1d3c2a151a1332aa9546a58ab3b68568e1574a5e31e8eb83b850fe23a1",
+    "results/m2/cases/D_preheat_braking.json": "f5f08f646643de96d9e716bec4ca15ad6a38537d8aa666d01fc878846a746a8c",
+    "results/m2/cases/D_preheat_braking_forcing.csv": "93f60170c50c6b188483b009b0c5c0df2a116834e7a59298d03229bac306c64f"
+  },
+  "hash_definition": "UTF-8 normalized LF",
+  "M2_approved": false,
+  "M2_tag_created": false,
+  "M3_started": false
+}

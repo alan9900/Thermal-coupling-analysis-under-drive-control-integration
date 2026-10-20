@@ -1,0 +1,10 @@
+{错误使用 assert
+断言失败。
+
+出错 m2_tests (第 25 行)
+assert(max(abs(r.T_K(end,:)-c.Tambient))<.10);
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+出错 run_m2 (第 7 行)
+tests=m2_tests(c,s,root);writejson(fullfile(out,'tests.json'),tests);
+      ^^^^^^^^^^^^^^^^^^
+} 
