@@ -7,7 +7,7 @@
 | M0 参数审查 | APPROVED（参数与资料准备范围） | [M0-v1.0](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/releases/tag/M0-v1.0)，附注Tag已推送验证 | 验收main `b13f265b1ff0add1f9e8b166d2c1bfa4ac8a8d16`；Tag对象 `d50d3896b71480bc3793a82d274f862afac1f8ec` | [PR #1](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/1)，MERGED | V0.4 | [关卡记录](../reports/M0_GATE_ACCEPTANCE_2026-10-19.md)；Python 3项／MATLAB既有12组检查及18组制动积分通过；批准日期2026-10-19，用户授权简验后进入M1 |
 | M1 热源建模 | APPROVED（概念数值模型）；真实标定PARTIAL | [M1-v1.0](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/releases/tag/M1-v1.0)，附注Tag已推送核验 | 验收main `9d545ab39a3efcce857573af74f7e325b74a2b15`；Tag对象 `9b3c7f97c63b56b50eb7c0477a72ad03060cae39` | [PR #2](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/2)，MERGED | V0.4 | [报告](../reports/M1_report.md) / [Word](../reports/M1_report.docx) / [PDF](../reports/M1_report.pdf) / [验收表](../reports/M1_ACCEPTANCE_CHECKLIST.md)；R2025a原18+新11测试组、23整车轨迹、46单侧接口及322敏感性运行通过；Python独立复核通过；严格模式拒绝、工程模式S3；M2 NOT EXECUTED |
 | M2 热网络 | APPROVED（概念瞬态网络限定范围）；实物标定未完成 | M2-v1.0，附注Tag已推送核验 | 验收main `1d51c22d94577ff8f52be785300b5f6b4aadee37`；Tag对象 `4ad89c4a220174de741b4ba48706279d3b7cb2d1` | [PR #3](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/3)，MERGED | V0.4 | [报告](../reports/M2_report.md) / [Word](../reports/M2_report.docx) / [PDF](../reports/M2_report.pdf) / [验收表](../reports/M2_ACCEPTANCE_CHECKLIST.md)；11组测试、4+3+18场景及Python/SciPy复核PASS；2026-10-20批准，真实几何/热阻/换热/温度未标定 |
-| M3 几何设计 | IN_PROGRESS | NOT CREATED | 基线M2-v1.0 `1d51c22d94577ff8f52be785300b5f6b4aadee37` | 阶段送审新建PR | V0.4 | 用户授权参数化几何、Case0/A/B/C；未经批准不合并/Tag/进入M4 |
+| M3 几何设计 | IN_PROGRESS（概念几何交付，验收PENDING） | NOT CREATED | CAD生成源 `3ea9c6bd2af2cde56d17c1ce5f56ba446813477b`；基线M2-v1.0 `1d51c22d94577ff8f52be785300b5f6b4aadee37` | [PR #4](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/4)，DRAFT | V0.4 | [报告](../reports/M3_report.md) / [Word](../reports/M3_report.docx) / [PDF](../reports/M3_report.pdf) / [验收表](../reports/M3_ACCEPTANCE_CHECKLIST.md)；实际CAD、56 STEP回读、283对干涉/18相位/8测试组；2187解析筛查中729拒绝；制造、寿命、实装未验证；不合并/Tag/进入M4 |
 | M4 ANSYS | NOT_STARTED | NOT CREATED | — | — | V0.4 | — |
 | M5 Fluent | NOT_STARTED | NOT CREATED | — | — | V0.4 | — |
 | M6 优化 | NOT_STARTED | NOT CREATED | — | — | V0.4 | — |
@@ -70,3 +70,9 @@ PR #2已合并，M1-v1.0附注Tag对象 `9b3c7f97c63b56b50eb7c0477a72ad03060cae3
 ## M2远端归档核验及M3启动
 
 实际合并提交`1d51c22d94577ff8f52be785300b5f6b4aadee37`，远端M2-v1.0附注Tag对象`4ad89c4a220174de741b4ba48706279d3b7cb2d1`，剥离目标与合并提交一致。M0/M1原Tag对象及目标不变。M3分支stage/M3-geometry从该最新main创建；本登记属于后续M3提交，不移动M2 Tag以包含后续登记。M3只做几何与热参数候选，禁止提前运行M4 ANSYS/Fluent或声称降温效果。
+
+## M3概念几何送审（2026-10-20）
+
+实际CadQuery2.8.0/OpenCascade7.9.3.1生成源`3ea9c6bd2af2cde56d17c1ce5f56ba446813477b`；4装配32/36/40/36命名部件与连通空气域、共同零件及新增结构共56 STEP，有限总量约78MB。有效Brep及回读体积误差约1e-13；283对无>0.001mm³交叠；8组回归/18齿轮相位PASS；2187解析组合中729拒绝，25mm紧凑包络实际触发干涉。原始失败/修复日志保留。
+
+报告9页、21个可编辑数学对象、5幅图，Word导出PDF并逐页检查PASS；M2固定文件无差异。热阻/热容/视角仅新候选，未重算M2温度、不声称降温。45mm轴余量小，40mm拒绝；轴向定位、花键、壳体分型、轴承寿命/密封、预紧/防滑、车辆包络和真实冷却仍缺。M3等待研究者验收，不合并、不创建正式Tag、不开展M4。完整证据SHA后续登记，避免自引用。
