@@ -87,7 +87,10 @@ shield_design:
   inner_radius_mm: 95
   outer_radius_mm: 150
   caliper_cutout_deg: 80
-  opening_fraction: 0.15 # of available annular angle after caliper cutout
+  opening_fraction: 0.15 # vent AREA / available annular area after caliper cutout; bridge bands retained
+  vent_inner_radius_mm: 105
+  vent_outer_radius_mm: 140
+  vent_angles_deg: [30, 90, 270, 330]
   outlet_angle_deg: 20
   duct_height_mm: 70
   duct_width_x_mm: 40

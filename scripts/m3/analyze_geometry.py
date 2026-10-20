@@ -10,8 +10,9 @@ def shield_mask(y,z,p):
     s=p['shield_design'];rad=np.hypot(y,z);a=np.degrees(np.arctan2(z,y))%360
     solid=(rad>=s['inner_radius_mm'])&(rad<=s['outer_radius_mm'])
     solid&=np.abs(a-180)>s['caliper_cutout_deg']/2
-    w=(360-s['caliper_cutout_deg'])*s['opening_fraction']/4
-    for angle in [10,70,290,350]:solid&=np.abs((a-angle+180)%360-180)>w/2
+    vi=s['vent_inner_radius_mm'];vo=s['vent_outer_radius_mm']
+    w=(360-s['caliper_cutout_deg'])*s['opening_fraction']*(s['outer_radius_mm']**2-s['inner_radius_mm']**2)/(vo**2-vi**2)/4
+    for angle in s['vent_angles_deg']:solid&=~((np.abs((a-angle+180)%360-180)<=w/2)&(rad>=vi)&(rad<=vo))
     for angle in [30,90,330]:
         yy,zz=145*np.cos(np.radians(angle)),145*np.sin(np.radians(angle));solid&=np.hypot(y-yy,z-zz)>2.2
     return solid

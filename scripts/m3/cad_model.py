@@ -39,10 +39,11 @@ def shield(p,x0):
     result=ring(ro,ri,x0,x0+t)
     half=s['caliper_cutout_deg']/2
     cuts=[sector(ri-.1,ro+.1,180-half,180+half,x0-.1,x0+t+.1)]
-    # Four windows, all outside the caliper cutout. Opening ratio is relative
-    # to remaining 280deg; cutout and vent openings are reported separately.
-    width=(360-s['caliper_cutout_deg'])*s['opening_fraction']/4
-    for a in [10,70,290,350]:cuts.append(sector(ri-.1,ro+.1,a-width/2,a+width/2,x0-.1,x0+t+.1))
+    # Four internal windows preserve continuous inner/outer sheet bridges.
+    # Area ratio is relative to available annulus after the caliper cutout.
+    vi=s['vent_inner_radius_mm'];vo=s['vent_outer_radius_mm']
+    width=(360-s['caliper_cutout_deg'])*s['opening_fraction']*(ro**2-ri**2)/(vo**2-vi**2)/4
+    for a in s['vent_angles_deg']:cuts.append(sector(vi,vo,a-width/2,a+width/2,x0-.1,x0+t+.1))
     for a in [30,90,330]:
         y,z=145*math.cos(math.radians(a)),145*math.sin(math.radians(a))
         cuts.append(cyl(2.2,x0-.1,x0+t+.1,y,z))
@@ -185,4 +186,8 @@ def air_domain(model):
         bb=sh.BoundingBox()
         if bb.xmax>160 and bb.xmin<290:air=air.cut(sh)
     assert air.isValid() and air.Volume()>0
-    return air
+    solids=sorted(air.Solids(),key=lambda sh:sh.Volume(),reverse=True)
+    # Blind fastener clearances can trap small air pockets. They are not part
+    # of the connected external Fluent domain; retain their volumes explicitly.
+    model['excluded_air_pockets_mm3']=[sh.Volume() for sh in solids[1:]]
+    return solids[0]

@@ -49,7 +49,7 @@ def main():
         assert reloaded.isValid() and err<1e-6,(case,err)
         air=air_domain(model);path_air=CAD/f'{case}_air_domain.step';cq.exporters.export(air,str(path_air))
         assert len(air.Solids())==1,'External local air must be connected'
-        exports.append(dict(case=case,parts=len(parts),step_roundtrip_volume_relative_error=err,air_volume_m3=air.Volume()*1e-9,air_connected_solids=len(air.Solids()),air_valid=air.isValid()))
+        exports.append(dict(case=case,parts=len(parts),step_roundtrip_volume_relative_error=err,air_volume_m3=air.Volume()*1e-9,air_connected_solids=len(air.Solids()),air_valid=air.isValid(),excluded_sealed_air_pockets_mm3=model['excluded_air_pockets_mm3']))
         if case=='Case0':base_names=set(parts)
         print('PASS',case,'parts',len(parts),'air m3',exports[-1]['air_volume_m3'],flush=True)
     csvout(OUT/'mass_heat_capacity.csv',masses)
