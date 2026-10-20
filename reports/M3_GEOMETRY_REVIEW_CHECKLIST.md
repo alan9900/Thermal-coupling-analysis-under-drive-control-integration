@@ -18,6 +18,7 @@
 | 完整与独立热版STEP，四方案同基础 | PASS_GEOMETRY | geometry_checks.json，全体积/回读/干涉 |
 | 空气域及CaseC入口-出口连通 | PASS_LOCAL_GEOMETRY | 同一流体体+8探针；远场/流动未知 |
 | 安装支柱与压盖冲突修复 | PASS_GEOMETRY | 30→60°支点，匹配孔/杆，原失败日志保留 |
+| 罩支点热态差动膨胀 | BLOCKED | 300/100K假设温升时约0.406mm超过0.2mm孔隙；需径向长孔/柔性支点再审 |
 | 质量/C/体R/接触面积与M2比较 | PASS_CANDIDATES | CSV及映射，不覆盖M2；轴承有效C仍null |
 | 端绕组绝缘/轴承/套/分型面接触R | BLOCKED | 不自动粘结；范围与真实值严格分开 |
 | 冷却端口/流量/油膜/温变 | BLOCKED | 闭合几何库存不能当真实冷却系统 |

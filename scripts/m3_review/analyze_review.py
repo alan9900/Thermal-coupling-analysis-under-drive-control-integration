@@ -94,6 +94,13 @@ def main():
             mismatch=.140*(12e-6*Ts-23e-6*Tc)*1000
             floatchecks.append(dict(shaft_rise_K=Ts,case_rise_K=Tc,relative_growth_mm=mismatch,available_each_direction_mm=.5,status='PASS_BUDGET_ONLY' if abs(mismatch)<=.5 else 'BLOCKED_END_FLOAT_EXCEEDED'))
     csvout(OUT/'bearing_axial_expansion.csv',floatchecks)
+    shields=[]
+    for Ts in [100,300,500]:
+        for Tc in [0,100,300]:
+            mismatch=145*(17e-6*Ts-23e-6*Tc)
+            shields.append(dict(shield_rise_K=Ts,case_rise_K=Tc,anchor_radius_mm=145,relative_radial_growth_mm=mismatch,bolt_hole_radial_clearance_mm=.2,
+                status='PASS_FREE_EXPANSION_BUDGET_ONLY' if abs(mismatch)<=.2 else 'BLOCKED_REQUIRES_SLIDING_MOUNT',actual_constrained_stress=None))
+    csvout(OUT/'shield_mount_expansion.csv',shields)
     halfshaft=[]
     for mu in r['joint_friction_scan']:
         for preload in r['bolt_preload_scan_N']:
