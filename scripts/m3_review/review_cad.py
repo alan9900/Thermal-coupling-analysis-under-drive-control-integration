@@ -129,6 +129,19 @@ def build_review(d=50,case='Case0',thermal=False,base=None):
     add('caliper',caliper.cut(cq.Compound.makeCompound(holes)),'aluminium')
     add('caliper_reaction_bracket',bracket.cut(cq.Compound.makeCompound(holes)))
     for k,zz in enumerate([-40,40]):add('caliper_mount_bolt_'+str(k+1),cyl(6,148,196,-160,zz))
+    # Original 30deg standoff hits the new input bearing cap. Move that anchor
+    # to60deg, machining matching through holes; no ignored interference pair.
+    shield_anchor_holes=[]
+    for k,a in enumerate([60,90,330]):
+        cy=145*math.cos(math.radians(a));cz=145*math.sin(math.radians(a))
+        shield_anchor_holes.append(cyl(2.25,153.9,160.1,cy,cz))
+        if case!='Case0':add('shield_anchor_bolt_'+str(k+1),cyl(2,154,195,cy,cz))
+    if case!='Case0':
+        for n in list(P):
+            if n.startswith('shield_standoff_') and n.endswith('_0'):P[n]=P[n].rotate((0,0,0),(1,0,0),30)
+            if n.startswith('shield_layer_'):
+                cy=145*math.cos(math.radians(60));cz=145*math.sin(math.radians(60))
+                P[n]=P[n].cut(cyl(2.2,180,196,cy,cz))
     # Rebuild case with coupled bores, bearing shoulders, split line and bolts.
     housing=box(0,160,-110,285,-110,265).cut(box(6,154,-104,279,-104,259))
     bosses=[];bores=[]
@@ -155,7 +168,7 @@ def build_review(d=50,case='Case0',thermal=False,base=None):
                 cut=cyl(2.75,x0-.1,x1+.1,cy,cz);capholes.append(cut)
                 name=ax+'_'+label+'_outer_retainer';P[name]=P[name].cut(cut)
                 add(f'{ax}_{label}_cap_bolt_{k+1}',cyl(2.5,x0,x1,cy,cz))
-    housing=housing.cut(cq.Compound.makeCompound(bores+holes+motorholes+frameholes+split_holes+capholes)).clean()
+    housing=housing.cut(cq.Compound.makeCompound(bores+holes+motorholes+frameholes+split_holes+capholes+shield_anchor_holes)).clean()
     add('gear_case_front',housing.intersect(box(-1,80,-500,500,-500,500)),'aluminium')
     add('gear_case_rear',housing.intersect(box(80,161,-500,500,-500,500)),'aluminium')
     oil=box(20,140,-100,275,-102,-82)
