@@ -1,0 +1,11 @@
+part,valid,solid_count,roundtrip_volume_relative_error,status
+input_shaft_full,True,1,6.873945753163507e-14,PASS
+input_shaft_thermal,True,1,6.873945753163507e-14,PASS
+intermediate_shaft_full,True,1,5.7324791883347e-14,PASS
+intermediate_shaft_thermal,True,1,5.7324791883347e-14,PASS
+oil_inventory_full,True,3,2.545935680701516e-13,PASS
+oil_inventory_thermal,True,3,2.545935680701516e-13,PASS
+stage1_gear_full,True,1,7.931774296298278e-14,PASS
+stage1_gear_thermal,True,1,4.207157849935146e-14,PASS
+stage2_gear_full,True,1,7.380595639479573e-14,PASS
+stage2_gear_thermal,True,1,6.340377461518389e-14,PASS

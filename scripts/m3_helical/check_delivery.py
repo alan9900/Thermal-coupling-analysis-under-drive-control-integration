@@ -17,6 +17,8 @@ def main():
     capacity=list(csv.DictReader((OUT/'thermal_capacity_checks.csv').open()))
     same=list(csv.DictReader((OUT/'unchanged_component_positions.csv').open()))
     assert len(capacity)==541 and len(same)==124
+    parts=list(csv.DictReader((OUT/'part_step_checks.csv').open()))
+    assert len(parts)==10 and all(r['status']=='PASS' for r in parts)
     for rev,paths in [('a8f6489',['cad/m3','cad/m3_review','scripts/m3','scripts/m3_review','results/m3','results/m3_review','configs/m3_geometry.yaml','configs/m3_geometry_review.yaml','configs/M3_to_M4_mapping.json','reports/M3_geometry_review.md','reports/M3_geometry_review.docx','reports/M3_geometry_review.pdf']),('M2-v1.0',['cad/m2','scripts/m2','results/m2','configs/m2_thermal_network.yaml','reports/M2_report.md','reports/M2_report.docx','reports/M2_report.pdf'])]:
         assert not subprocess.check_output(['git','diff',rev,'--name-only','--',*paths],cwd=ROOT,text=True).strip()
     files=list((ROOT/'cad/m3_helical').rglob('*'))+list((ROOT/'scripts/m3_helical').glob('*.py'))+list((ROOT/'data/raw/m3_helical').glob('*'))

@@ -5,6 +5,7 @@ Run from repository root, sequentially. Old spur files remain read-only.
 ```powershell
 tmp/m3_cad/Scripts/python.exe -u scripts/m3_helical/run_helical.py
 tmp/m3_cad/Scripts/python.exe -u scripts/m3_helical/update_interface.py
+tmp/m3_cad/Scripts/python.exe -u scripts/m3_helical/check_part_steps.py
 tmp/m3_cad/Scripts/python.exe -u scripts/m3_helical/verify_helical.py
 tmp/m3_cad/Scripts/python.exe -u scripts/m3_helical/plot_helical.py
 tmp/m3_cad/Scripts/python.exe scripts/m3_helical/write_report.py
