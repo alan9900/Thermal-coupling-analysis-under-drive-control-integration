@@ -1,0 +1,100 @@
+metadata:
+  stage: M2
+  configuration_version: v0.4
+  baseline_tag: M1-v1.0
+  baseline_commit: 9d545ab39a3efcce857573af74f7e325b74a2b15
+  model_version: m2-lptn-concept-1.0
+  classification: S3_CONCEPT_PREDICTION_NOT_CALIBRATED
+  temperature_unit: K
+  energy_unit: J
+unknown_actual: # Deliberately separate from engineering candidates; never fill baseline nulls.
+  verified_thermal_resistance_matrix: null
+  actual_component_masses: null
+  actual_contact_resistance: null
+  actual_view_factors: null
+  actual_cooling_map: null
+  calibrated_temperature_trace: null
+  no_load_drag_map: null
+  temperature_dependent_loss_feedback: null
+nodes: # SI. Mass references do not validate the assembled concept or equivalent cp.
+  - {id: disc, mass_kg: 4.5, cp_J_kgK: 500, rho_kg_m3: 7100, k_W_mK: 45, emissivity: 0.8, basis: S3_cast_iron_like_candidate}
+  - {id: pad_caliper, mass_kg: 2.0, cp_J_kgK: 700, rho_kg_m3: 3000, k_W_mK: 5, emissivity: 0.7, basis: S3_composite_equivalent_not_literal_material}
+  - {id: output_shaft, mass_kg: 1.2, cp_J_kgK: 460, rho_kg_m3: 7800, k_W_mK: 45, emissivity: 0.6, basis: S3_steel_like_candidate}
+  - {id: output_bearing, mass_kg: 0.35, cp_J_kgK: 460, rho_kg_m3: 7800, k_W_mK: 45, emissivity: 0.6, basis: S3_aggregate_bearing_equivalent}
+  - {id: gears, mass_kg: 2.5, cp_J_kgK: 460, rho_kg_m3: 7800, k_W_mK: 45, emissivity: 0.6, basis: S3_aggregate_two_stage_gears}
+  - {id: oil, mass_kg: 0.8, cp_J_kgK: 2000, rho_kg_m3: 850, k_W_mK: 0.13, emissivity: 0.9, basis: S3_oil_and_other_gear_loss_equivalent}
+  - {id: gear_case, mass_kg: 4.0, cp_J_kgK: 900, rho_kg_m3: 2710, k_W_mK: 170, emissivity: 0.7, basis: S3_aluminium_like_NIST_cp_magnitude_only}
+  - {id: motor_case, mass_kg: 5.0, cp_J_kgK: 900, rho_kg_m3: 2710, k_W_mK: 170, emissivity: 0.7, basis: S3_aluminium_like_NIST_cp_magnitude_only}
+  - {id: stator, mass_kg: 10.36, cp_J_kgK: 460, rho_kg_m3: 7650, k_W_mK: 25, emissivity: 0.7, basis: ORNL_Table2_7_reference_mass_S3_equivalent_properties}
+  - {id: winding, mass_kg: 4.93, cp_J_kgK: 385, rho_kg_m3: 8960, k_W_mK: 390, emissivity: 0.7, basis: ORNL_Table2_7_copper_mass_NIST_cp_S3_equivalence}
+  - {id: rotor_other, mass_kg: 6.7, cp_J_kgK: 460, rho_kg_m3: 7600, k_W_mK: 30, emissivity: 0.7, basis: ORNL_rotor_includes_motor_shaft_S3_other_loss_lump_not_magnets}
+  - {id: shield, mass_kg: 0.4, cp_J_kgK: 500, rho_kg_m3: 7800, k_W_mK: 15, emissivity: 0.2, basis: S3_unverified_passive_shield_no_CAD}
+  - {id: local_air, mass_kg: 0.05, cp_J_kgK: 1005, rho_kg_m3: 1.18, k_W_mK: 0.026, emissivity: 0.01, basis: S3_mixed_air_control_volume}
+drive_domain: [output_bearing, gears, oil, gear_case, motor_case, stator, winding, rotor_other]
+conduction: # Contact + geometry equivalent resistances; all S3, K/W.
+  - {from: disc, to: pad_caliper, R_K_W: 0.8, cut: 0}
+  - {from: disc, to: output_shaft, R_K_W: 2.0, cut: 0}
+  - {from: output_shaft, to: output_bearing, R_K_W: 1.5, cut: 3}
+  - {from: output_bearing, to: gear_case, R_K_W: 0.5, cut: 0}
+  - {from: output_shaft, to: gears, R_K_W: 2.5, cut: 3}
+  - {from: gears, to: oil, R_K_W: 0.25, cut: 0}
+  - {from: oil, to: gear_case, R_K_W: 0.20, cut: 0}
+  - {from: gears, to: gear_case, R_K_W: 0.8, cut: 0}
+  - {from: output_bearing, to: oil, R_K_W: 1.0, cut: 0}
+  - {from: gear_case, to: motor_case, R_K_W: 0.3, cut: 0}
+  - {from: motor_case, to: stator, R_K_W: 0.12, cut: 0}
+  - {from: stator, to: winding, R_K_W: 0.08, cut: 0}
+  - {from: stator, to: rotor_other, R_K_W: 0.6, cut: 0}
+  - {from: motor_case, to: rotor_other, R_K_W: 0.8, cut: 0}
+  - {from: pad_caliper, to: gear_case, R_K_W: 8.0, cut: 3} # explicit mounting bypass, reported separately
+convection: # h(v)=h0+hv*sqrt(vehicle_speed_m_s); all S3, not a fitted correlation.
+  - {from: disc, to: local_air, area_m2: 0.12, h0_W_m2K: 8, hv: 3, cut: 0}
+  - {from: pad_caliper, to: local_air, area_m2: 0.04, h0_W_m2K: 6, hv: 2, cut: 0}
+  - {from: shield, to: local_air, area_m2: 0.08, h0_W_m2K: 5, hv: 1, cut: 0}
+  - {from: local_air, to: gear_case, area_m2: 0.08, h0_W_m2K: 10, hv: 2, cut: 2}
+radiation: # Pair exchange approximations, not geometrically verified view factors.
+  - {from: disc, to: gear_case, area_m2: 0.04, view_factor: 0.12, cut: 1}
+  - {from: disc, to: shield, area_m2: 0.05, view_factor: 0.30, cut: 0}
+  - {from: shield, to: gear_case, area_m2: 0.05, view_factor: 0.25, cut: 1}
+ambient_convection:
+  - {node: pad_caliper, area_m2: 0.06, h0_W_m2K: 4, hv: 0}
+  - {node: gear_case, area_m2: 0.18, h0_W_m2K: 8, hv: 1.5}
+  - {node: motor_case, area_m2: 0.20, h0_W_m2K: 8, hv: 1.5}
+  - {node: shield, area_m2: 0.08, h0_W_m2K: 5, hv: 0}
+  - {node: local_air, area_m2: 1.0, h0_W_m2K: 6, hv: 2} # equivalent vent G, not a literal 1m2 surface
+ambient_radiation:
+  - {node: disc, area_m2: 0.08, view_factor: 0.60}
+  - {node: gear_case, area_m2: 0.15, view_factor: 1.0}
+  - {node: motor_case, area_m2: 0.18, view_factor: 1.0}
+  - {node: shield, area_m2: 0.08, view_factor: 0.50}
+cooling:
+  node: motor_case
+  conductance_W_K: 25.0 # S3 aggregate film/channel boundary, no measured flow map
+  ambient_temperature_K: 298.15
+  coolant_temperature_K: 298.15 # chosen equal to ambient to isolate source coupling
+numerics:
+  maximum_step_s: 0.25
+  refinement_steps_s: [0.5, 0.25, 0.125]
+  energy_relative_tolerance: 0.000001
+  convergence_temperature_tolerance_K: 0.05
+  no_source_relax_duration_s: 24000.0 # > ten approximate slow thermal time constants
+cases:
+  side: left
+  cycles: 6
+  cycle_speed_kmh: 80
+  drive_acceleration_g: 0.15
+  brake_deceleration_g: 0.6
+  rest_per_cycle_s: 20.0
+  final_cool_s: 600.0
+  charge_cap_total_kW: 30.0
+  preheat_s: 60.0
+  preheat_grade_rad: 0.18 # constant 80km/h uphill reference; NOT continuous capability validation
+sensitivity: # exploratory ranges [lower,nominal,upper], never calibrated confidence intervals
+  heat_capacity_scale: [0.6, 1.0, 1.4]
+  contact_resistance_scale: [0.3, 1.0, 3.0]
+  convection_scale: [0.5, 1.0, 2.0]
+  coolant_conductance_scale: [0.5, 1.0, 2.0]
+  radiation_exchange_scale: [0.5, 1.0, 1.5]
+  motor_total_loss_scale: [0.8, 1.0, 1.2]
+  gear_total_loss_scale: [0.7, 1.0, 1.3]
+  coolant_temperature_K: [298.15, 298.15, 333.15]

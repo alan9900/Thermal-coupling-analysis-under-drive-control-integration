@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "stage_status": "CONCEPT_PREDICTION_PENDING_REVIEW",
+  "node_count": 13,
+  "primary_cases": 4,
+  "path_interventions": 3,
+  "sensitivity_cases": 18,
+  "test_groups": 11,
+  "D_time_refinement_peak_error_K": 0.0015620804196601057,
+  "maximum_main_energy_residual_relative": 5.2782079908064523E-14,
+  "maximum_main_drive_residual_J": 1.4963006833568215E-8,
+  "high_load_preheat_motor_power_each_W": 41176.042639045925,
+  "preheat_continuous_capability": "UNVERIFIED; instantaneous envelope only, engineering stress scenario",
+  "no_load_drag_and_temperature_loss_feedback": "NOT MODELLED",
+  "M1_tag": "M1-v1.0",
+  "M1_merge_commit": "9d545ab39a3efcce857573af74f7e325b74a2b15",
+  "matlab": "25.1.0.2943329 (R2025a)",
+  "release": "2025a",
+  "experimental_validation": "NOT EXECUTED",
+  "M3_started": false
+}

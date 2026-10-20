@@ -16,3 +16,6 @@ results/m1/*.svg -whitespace
 results/m1/matlab_run.txt -whitespace
 results/m1/engineering/*.svg -whitespace
 results/m1/engineering/matlab_run.txt -whitespace
+results/m2/*.svg -whitespace
+# Raw MATLAB success/failure/diagnostic console captures retain original padding.
+results/m2/*.txt -whitespace

@@ -1,0 +1,25 @@
+{
+  "word_export": "PASS",
+  "editable_math_objects": 18,
+  "pdf_pages": 9,
+  "embedded_figures": 6,
+  "post_pandoc_changes": "formatting only: repeating shaded table headers, row splitting, spacing and language metadata",
+  "visual_inspection": "PASS",
+  "document_sha256": {
+    "M2_report.md": "d7b921ed3c1ee6499de9550d705fb627c334975dba0e5c6a504fede1b90d7a22",
+    "M2_report.docx": "6603d4a9618e5597aad5bf1339ab9fc8ee9e3cc4803f727ae45819de632930c3",
+    "M2_report.pdf": "6d0c800c510dd1e93dd690d72e18cf7e6a9bf3ffb6da11f1072becd693371485"
+  },
+  "visually_inspected_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "visual_review_scope": "All nine Word-exported pages inspected: equations, repeated table headers, six figures, pagination, Chinese text and footer; no clipping or missing content observed."
+}

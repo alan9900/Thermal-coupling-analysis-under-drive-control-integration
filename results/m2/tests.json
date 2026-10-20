@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "test_group_count": 11,
+  "test_groups": [
+    "13 passive thermal nodes; unique drive-domain cut; no sequential heat-flow double counting",
+    "absolute-K radiation oracle, antisymmetry, reverse heat flow and invalid-temperature rejection",
+    "independent single-capacitance exponential cooling solution and total stored/boundary energy closure",
+    "closed unequal-temperature network conserves total internal energy without clipping",
+    "source-free warm network relaxes to equal ambient/coolant boundaries",
+    "equal-boundary equilibrium and hotter-coolant reverse heat with signed cooling ledger",
+    "M1 9-source contract, raw NaNs, exact interval-energy preservation and original reference budgets",
+    "internal/brake/combined masks conserve applied source energy; full and drive-domain ledgers close",
+    "instantaneous signed path heat, cumulative forward ingress and net energy remain distinct",
+    "0.5/0.25/0.125s time-step convergence using node peak temperatures and preserved source energy",
+    "range-based heat-capacity/contact/convection/loss candidates; missing/NaN/strict evidence rejected"
+  ],
+  "time_steps_s": [
+    0.5,
+    0.25,
+    0.125
+  ],
+  "coarse_vs_fine_peak_error_K": 0.03863645696230833,
+  "nominal_vs_fine_peak_error_K": 0.0012031290731329136,
+  "no_source_final_max_error_K": 0.0006569911356564262,
+  "matlab": "25.1.0.2943329 (R2025a)",
+  "release": "2025a",
+  "physical_validation": "NOT EXECUTED",
+  "source_resampling_residual_J": 1.1641532182693481E-10,
+  "maximum_nominal_energy_residual_J": 9.3714334070682526E-9
+}
