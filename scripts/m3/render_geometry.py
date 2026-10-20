@@ -15,7 +15,7 @@ def preview(ax,m):
         verts,tris=sh.tessellate(2,.2);v=np.array([a.toTuple() for a in verts]);t=np.array(tris)
         alpha=.08 if name in ['motor_case','gear_case'] else .92
         ax.add_collection3d(Poly3DCollection(v[t],facecolor=COLORS[m['materials'][name]],alpha=alpha,edgecolor='none',rasterized=True))
-    ax.set(xlim=(-170,290),ylim=(-210,290),zlim=(-170,280),xlabel='Axial x (mm)',ylabel='y (mm)',zlabel='z (mm)')
+    ax.set(xlim=(-170,290),ylim=(-210,330),zlim=(-170,280),xlabel='Axial x (mm)',ylabel='y (mm)',zlabel='z (mm)')
     ax.view_init(elev=20,azim=-55);ax.set_box_aspect((460,500,450));ax.tick_params(labelsize=7);ax.set_title(m['case']+'  |  S3 concept, transparent casings',fontsize=10)
 
 def main():
@@ -31,8 +31,11 @@ def main():
     fig,axes=plt.subplots(1,2,figsize=(12,5),layout='constrained')
     ax=axes[0];m=models[0]
     for center,radius,label in [((120,100),25,'input, m2.5 z20'),((120,0),75,'stage1 gear z60'),((120,0),30,'stage2 pinion z20'),((0,0),90,'output gear z60')]:
-        ax.add_patch(plt.Circle(center,radius,fill=False,lw=1.5));ax.plot(*center,'o');ax.annotate(label,center,xytext=(center[0]+10,center[1]+10),fontsize=8)
-    ax.add_patch(plt.Circle((120,100),151,fill=False,color='#bc7a3f',ls='--'));ax.set(xlim=(-125,290),ylim=(-130,275),aspect='equal',xlabel='y (mm)',ylabel='z (mm)',title='End view: pitch circles; ratio 3 x 3 = 9')
+        ax.add_patch(plt.Circle(center,radius,fill=False,lw=1.5));ax.plot(*center,'o')
+        textpos={'input, m2.5 z20':(160,145),'stage1 gear z60':(205,35),'stage2 pinion z20':(130,-110),'output gear z60':(-105,105)}[label]
+        anchor={'stage1 gear z60':(175,35),'stage2 pinion z20':(130,-20),'output gear z60':(0,65)}.get(label,center)
+        ax.annotate(label,anchor,xytext=textpos,fontsize=8,arrowprops=dict(arrowstyle='-',color='#777'))
+    ax.add_patch(plt.Circle((120,100),151,fill=False,color='#bc7a3f',ls='--'));ax.set(xlim=(-125,330),ylim=(-130,275),aspect='equal',xlabel='y (mm)',ylabel='z (mm)',title='Pitch circles: stages separated axially; ratio9')
     ax=axes[1]
     for x0,x1,r0,r1,label,col in [(-161,0,0,151,'Motor envelope','#9bb4c6'),(0,160,0,180,'Reducer envelope','#637d97'),(205,227,85,140,'Disc','#515965'),(185,205,34,88,'Disc hat','#777')]:
         ax.add_patch(plt.Rectangle((x0,r0),x1-x0,r1-r0,fc=col,alpha=.4));ax.text((x0+x1)/2,r1+4,label,ha='center',fontsize=8)
@@ -52,6 +55,22 @@ def main():
     axes[1].axhline(180,ls='--',color='#b54c42',label='S3 screen limit');axes[1].set(xlabel='Output shaft diameter (mm)',ylabel='Static equivalent stress with S3 notch factor (MPa)',title='Elementary screen; fatigue/life not verified');axes[1].legend()
     fig.suptitle('S3 geometric/stress candidates: no cooling-performance claim')
     fig.savefig(OUT/'geometry_sensitivity.png',dpi=180);fig.savefig(OUT/'geometry_sensitivity.svg');plt.close(fig)
+    fig,axes=plt.subplots(2,2,figsize=(11,8),layout='constrained')
+    for ax,case in zip(axes.flat,['Case0','CaseA','CaseB','CaseC']):
+        ax.add_patch(plt.Rectangle((153,0),7,235,fc='#9bb4c6'));ax.text(157,237,'case',ha='center',fontsize=8)
+        ax.add_patch(plt.Rectangle((205,85),22,55,fc='#515965'));ax.text(216,143,'disc',ha='center',fontsize=8)
+        ax.add_patch(plt.Rectangle((185,34),20,54,fc='#999',alpha=.5));ax.text(195,30,'hat/hub',ha='center',fontsize=8)
+        if case!='Case0':
+            ax.add_patch(plt.Rectangle((193.5,95),1.5,55,fc='#d4ab40'))
+            ax.annotate('10mm',xy=(200,120),xytext=(233,90),fontsize=8,arrowprops=dict(arrowstyle='->'))
+        if case=='CaseB':
+            ax.add_patch(plt.Rectangle((182,95),1.5,55,fc='#d4ab40'));ax.annotate('10mm air gap',xy=(188.5,135),xytext=(165,180),fontsize=8,arrowprops=dict(arrowstyle='->'))
+        if case=='CaseC':
+            shift=70*np.tan(np.radians(20));ax.plot([196,196+shift],[145,215],color='#d4ab40',lw=2);ax.plot([236,236+shift],[145,215],color='#d4ab40',lw=2)
+            ax.text(218,225,'open duct: 20deg',fontsize=8,ha='center')
+        ax.set(xlim=(145,270),ylim=(0,245),xlabel='Axial x (mm)',ylabel='Radial section (mm)',title=case+' | S3 schematic through +z')
+    fig.suptitle('True unshielded baseline and added structures | openings/cutouts in CAD; no thermal result')
+    fig.savefig(OUT/'shield_sections.png',dpi=180);fig.savefig(OUT/'shield_sections.svg');plt.close(fig)
     print('CAD-derived previews and scientific layout figures saved.')
 
 if __name__=='__main__':main()

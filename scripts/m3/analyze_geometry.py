@@ -53,7 +53,9 @@ def rays(p,n):
 def view(p,case,n):
     o,d=rays(p,n);tc=(160-o[:,0])/d[:,0];target=o+d*tc[:,None];y,z=target[:,1],target[:,2]
     r=p['reducer'];hit=((y>=-110)&(y<=285)&(z>=-110)&(z<=265))|((y>=-175)&(y<=-105)&(np.abs(z)<=45))
-    centers=[(120,100,'input'),(120,0,'intermediate'),(0,0,'output')]
+    a1=r['module_stage1_mm']*(r['teeth_pinion']+r['teeth_gear'])/2
+    a2=r['module_stage2_mm']*(r['teeth_pinion']+r['teeth_gear'])/2
+    centers=[(a2,a1,'input'),(a2,0,'intermediate'),(0,0,'output')]
     for yy,zz,key in centers:hit&=np.hypot(y-yy,z-zz)>r[key+'_bearing']['od_mm']/2
     for zz in [-30,30]:hit&=np.hypot(y+160,z-zz)>5.5
     first=np.where(hit,tc,np.inf);label=np.where(hit,1,0)

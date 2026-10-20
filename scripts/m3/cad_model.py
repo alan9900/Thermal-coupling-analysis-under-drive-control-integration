@@ -12,6 +12,10 @@ def config():
     p=yaml.safe_load((ROOT/'configs/m3_geometry.yaml').read_text(encoding='utf-8'))
     assert p['metadata']['length_unit']=='mm'
     assert all(v is None for v in p['unknown_actual'].values())
+    assert p['reducer']['case_length_mm']==160,'Endplate layout currently requires160mm; change source layout explicitly for other lengths'
+    s=p['shield_design']
+    assert s['thickness_mm']>0 and s['disc_gap_mm']>0 and 0<s['opening_fraction']<=.3
+    assert 0<s['inner_radius_mm']<s['vent_inner_radius_mm']<s['vent_outer_radius_mm']<s['outer_radius_mm']
     return p
 
 def box(x0,x1,y0,y1,z0,z1):
@@ -105,10 +109,11 @@ def build(p,case='Case0'):
     add('input_rotor_shaft',fused([cyl(md['stub_diameter_mm']/2,-L+1,160,y,z),cyl(mr['rotor_lamination_id_mm']/2,x-3,xe+3,y,z)]),'steel')
     add('intermediate_shaft',cyl(r['intermediate_shaft_diameter_mm']/2,0,160,*axes['intermediate']),'steel')
     add('output_shaft',cyl(r['output_shaft_diameter_mm']/2,r['output_shaft_start_x_mm'],260),'steel')
-    gears=[('stage1_pinion',r['module_stage1_mm'],20,r['face_stage1_mm'],r['stage1_start_x_mm'],'input',-90,md['stub_diameter_mm']),
-           ('stage1_gear',r['module_stage1_mm'],60,r['face_stage1_mm'],r['stage1_start_x_mm'],'intermediate',87,r['intermediate_shaft_diameter_mm']),
-           ('stage2_pinion',r['module_stage2_mm'],20,r['face_stage2_mm'],r['stage2_start_x_mm'],'intermediate',180,r['intermediate_shaft_diameter_mm']),
-           ('stage2_gear',r['module_stage2_mm'],60,r['face_stage2_mm'],r['stage2_start_x_mm'],'output',-3,r['output_shaft_diameter_mm'])]
+    npinion=r['teeth_pinion'];ngear=r['teeth_gear']
+    gears=[('stage1_pinion',r['module_stage1_mm'],npinion,r['face_stage1_mm'],r['stage1_start_x_mm'],'input',-90,md['stub_diameter_mm']),
+           ('stage1_gear',r['module_stage1_mm'],ngear,r['face_stage1_mm'],r['stage1_start_x_mm'],'intermediate',90-180/ngear,r['intermediate_shaft_diameter_mm']),
+           ('stage2_pinion',r['module_stage2_mm'],npinion,r['face_stage2_mm'],r['stage2_start_x_mm'],'intermediate',180,r['intermediate_shaft_diameter_mm']),
+           ('stage2_gear',r['module_stage2_mm'],ngear,r['face_stage2_mm'],r['stage2_start_x_mm'],'output',-180/ngear,r['output_shaft_diameter_mm'])]
     for name,m,n,w,xg,ax,phase,bore in gears:add(name,gear(m,n,bore,w,xg,*axes[ax],phase,r['backlash_mm']),'steel')
     cuts=[]
     for ax in axes:
