@@ -114,3 +114,7 @@ CAD启动源`225c1a217c1983fa3b654bf26c6d1365906382e7`；主体模型/报告证�
 成果：`cad/m3_helical/`、`scripts/m3_helical/`、`configs/m3_helical.yaml`、独立`configs/M3_helical_to_M4_mapping.json`、`results/m3_helical/`、`reports/M3_helical_revision.md/.docx/.pdf`、`reports/M3_HELICAL_CHECKLIST.md`；公开来源PDF与SHA位于`data/raw/m3_helical/`。原直齿、原M3映射和M2固定成果均未覆盖。M1损耗暂沿用，斜齿效率和轴向载荷附加损耗未重标定；真实接触/冷却null不变，不声称提高效率或降低温度。
 
 限定轴向力检查：130Nm输入下一级/二级约1.893/4.732kN，当前旋向使中间轴推力相加约6.624kN，反拖符号反转；轴承轴向承载、定位与旧连接套/罩支点/热接触/冷却等仍BLOCKED。本轮没有扩展疲劳、制造、预紧或热膨胀优化。M0/M1/M2原附注Tag及目标和main `1d51c22d94577ff8f52be785300b5f6b4aadee37`已核对不变；无M3正式Tag。
+
+## M3正式批准（2026-10-21）
+
+研究者已批准限定概念模型验收并授权合并PR #4、创建M3-v1.0。最终复核见reports/M3_APPROVED_SCOPE_2026-10-21.md：66个Git blob重新SHA256通过；18 STEP及源码、参数、报告、图、测试证据齐备。验收不包括机械安全、疲劳/制造认证或真实温度标定；轴向承载、连接套、接触与冷却等限制继续保留。Tag将在实际合并提交上创建，准确合并SHA在归档成功后追加，不移动旧版本。
