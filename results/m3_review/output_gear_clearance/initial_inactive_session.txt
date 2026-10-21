@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "E:\ChatGPT��Ŀ\�����ں�������Ϸ���\scripts\m3_review\check_solidworks_gear_clearance.py", line 39, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "E:\ChatGPT��Ŀ\�����ں�������Ϸ���\scripts\m3_review\check_solidworks_gear_clearance.py", line 12, in main
+    title=get0(doc,'GetTitle');assert title=='Case0_d50_full',title
+  File "E:\ChatGPT��Ŀ\�����ں�������Ϸ���\scripts\m3_review\check_solidworks_gear_clearance.py", line 8, in get0
+    value=getattr(obj,name);return value() if callable(value) else value
+AttributeError: 'NoneType' object has no attribute 'GetTitle'

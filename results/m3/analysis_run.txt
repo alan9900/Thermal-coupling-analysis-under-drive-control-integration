@@ -1,0 +1,1 @@
+Analysis PASS; range rejects 729 of 2187 F [0.4924, 0.1435, 0.1054, 0.1421]

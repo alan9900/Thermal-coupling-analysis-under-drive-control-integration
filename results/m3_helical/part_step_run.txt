@@ -1,0 +1,1 @@
+PASS 10 individual STEP roundtrips; max relative volume error 2.545935680701516e-13

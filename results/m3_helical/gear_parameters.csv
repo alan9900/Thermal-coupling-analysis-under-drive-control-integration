@@ -1,0 +1,3 @@
+stage,z_pinion,z_gear,ratio,mt_mm,mn_mm,center_mm,beta_deg,alpha_t_deg,alpha_n_deg,pinion_hand,gear_hand,x_start_mm,x_end_mm,overlap_width_mm,pinion_twist_deg,gear_twist_deg,axial_overlap_ratio,classification
+1,20,60,3,2.5,2.3492315519647713,100.0,20,20,18.88172123090687,RH,LH,33,58,25,20.85395829184125,-6.951319430613751,1.1585532384356247,S3_TRANSVERSE_SYSTEM_NONSTANDARD_MN
+2,20,60,3,3.0,2.8190778623577253,120.0,20,20,18.88172123090687,RH,LH,95,127,32,22.244222177963998,-7.4147407259880005,1.2357901209979998,S3_TRANSVERSE_SYSTEM_NONSTANDARD_MN

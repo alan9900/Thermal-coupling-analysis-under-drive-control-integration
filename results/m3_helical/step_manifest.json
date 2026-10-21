@@ -1,0 +1,94 @@
+{
+  "files": [
+    {
+      "path": "cad/m3_helical/Case0_d50_helical_full.step",
+      "bytes": 19777237,
+      "sha256": "4f38ffe31a935fb0779a613e4759e7a06937cc738a7dd2d00dadb0996007aed9"
+    },
+    {
+      "path": "cad/m3_helical/Case0_d50_helical_thermal.step",
+      "bytes": 10604462,
+      "sha256": "5585c127116234fe87db0bd9ab2a3d20d0d1cd69968cc5f095f810c752ac86f9"
+    },
+    {
+      "path": "cad/m3_helical/CaseA_d50_helical_full.step",
+      "bytes": 20240847,
+      "sha256": "18f92a6514a0cae32e493656c35db934b745306153d37afb0ed79ba1b2b98b82"
+    },
+    {
+      "path": "cad/m3_helical/CaseA_d50_helical_thermal.step",
+      "bytes": 11067347,
+      "sha256": "140025b5a16f3519efbf88ddc1f65e85690c567b600fb70f8b9d4b304bdde411"
+    },
+    {
+      "path": "cad/m3_helical/CaseB_d50_helical_full.step",
+      "bytes": 20684466,
+      "sha256": "d22385c385a1e5534e3096597c64d254189e9e5f8e789c90cff5742b37972f55"
+    },
+    {
+      "path": "cad/m3_helical/CaseB_d50_helical_thermal.step",
+      "bytes": 11509909,
+      "sha256": "cbe6aa29519317f2985c7513948db44b99f371709fa9a210da71944353098ab7"
+    },
+    {
+      "path": "cad/m3_helical/CaseC_d50_helical_full.step",
+      "bytes": 20326950,
+      "sha256": "dfa08ddf57ca630e33f38baa165eb49e82a20106a29c0a10f74016748e2d90de"
+    },
+    {
+      "path": "cad/m3_helical/CaseC_d50_helical_thermal.step",
+      "bytes": 11153409,
+      "sha256": "0a2c60a220f7c939643e58083593cd5f58e694509d6654e79569dbce1ef34de3"
+    },
+    {
+      "path": "cad/m3_helical/parts/input_shaft_full.step",
+      "bytes": 1963819,
+      "sha256": "17a702e4e80d0102a72a2215e02b331c57dda245814c46acd64e41205cb3cd01"
+    },
+    {
+      "path": "cad/m3_helical/parts/input_shaft_thermal.step",
+      "bytes": 1963819,
+      "sha256": "254d91cf7ed622c0e59ece221f923eac27f07db31751b8ef9da4363ac27b3f89"
+    },
+    {
+      "path": "cad/m3_helical/parts/intermediate_shaft_full.step",
+      "bytes": 1974766,
+      "sha256": "a14de46d08f4d1526f730f708f12281e0d5ef92ea39aa1f5f65061c142b8e507"
+    },
+    {
+      "path": "cad/m3_helical/parts/intermediate_shaft_thermal.step",
+      "bytes": 1974766,
+      "sha256": "084633d320721bf2a20fc70fcfdb6d4e83ba2bf141ef5e7e2509059eda0f96e0"
+    },
+    {
+      "path": "cad/m3_helical/parts/oil_inventory_full.step",
+      "bytes": 863225,
+      "sha256": "4d65c4a55f4b6f11aee4e22d55fc8abc8aaf80ceffbbabe94a24155f90d511d4"
+    },
+    {
+      "path": "cad/m3_helical/parts/oil_inventory_thermal.step",
+      "bytes": 863231,
+      "sha256": "ab0c0ef6caa8f1038591b11667f20e94278689bc6c73a8904df625864bd042ac"
+    },
+    {
+      "path": "cad/m3_helical/parts/stage1_gear_full.step",
+      "bytes": 4985130,
+      "sha256": "fe35cdf3d8b0b6dc9e67f61794e17c9abd2e5f550eba8d9435b190c7229b7965"
+    },
+    {
+      "path": "cad/m3_helical/parts/stage1_gear_thermal.step",
+      "bytes": 45434,
+      "sha256": "79249e4cf72fb4f305635d2418735c43336008110a389cd7588cf34370ed5556"
+    },
+    {
+      "path": "cad/m3_helical/parts/stage2_gear_full.step",
+      "bytes": 4993421,
+      "sha256": "dbc10eca2a7d9b96953c7ac6269b71e3030b5291bc3fb2d4f9fd905ca3903ed8"
+    },
+    {
+      "path": "cad/m3_helical/parts/stage2_gear_thermal.step",
+      "bytes": 632148,
+      "sha256": "848ebb647c454d8fe29da7a86e03b953e3ca27349d53d73f62b83654e8666a03"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+LOAD REVISED PART STEP
+THERMAL COMPARISON
+SECTION Case0
+SECTION CaseA
+SECTION CaseB
+SECTION CaseC
+Seven actual-CAD / engineering review figures saved.

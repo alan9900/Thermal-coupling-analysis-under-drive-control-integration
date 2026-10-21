@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "E:\ChatGPT��Ŀ\�����ں�������Ϸ���\scripts\m3_review\check_solidworks_gear_clearance.py", line 44, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "E:\ChatGPT��Ŀ\�����ں�������Ϸ���\scripts\m3_review\check_solidworks_gear_clearance.py", line 17, in main
+    title=get0(doc,'GetTitle');assert title=='Case0_d50_full',title
+                                      ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: װ����2

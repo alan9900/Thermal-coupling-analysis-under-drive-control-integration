@@ -1,0 +1,4 @@
+case,shield_and_support_mass_kg,thickness_mm,disc_gap_mm,double_air_gap_mm,vent_open_fraction_available,caliper_cutout_fraction,vent_port_area_m2,duct_inlet_area_m2,outlet_angle_deg
+CaseA,0.35440527743940303,1.5,10,0,0.15,0.2222222222222222,0.004938845450830953,0,0
+CaseB,0.6800962723612892,1.5,10,10,0.15,0.2222222222222222,0.004938845450830953,0,0
+CaseC,0.5307406802811854,1.5,10,0,0.15,0.2222222222222222,0.004938845450830953,0.002479,20

@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "E:\ChatGPT��Ŀ\�����ں�������Ϸ���\scripts\m3_helical\document_qa.py", line 48, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "E:\ChatGPT��Ŀ\�����ں�������Ϸ���\scripts\m3_helical\document_qa.py", line 18, in main
+    d=Document(path)
+  File "C:\Users\90521\AppData\Local\Programs\Python\Python313\Lib\site-packages\docx\api.py", line 27, in Document
+    document_part = cast("DocumentPart", Package.open(docx).main_document_part)
+                                         ~~~~~~~~~~~~^^^^^^
+  File "C:\Users\90521\AppData\Local\Programs\Python\Python313\Lib\site-packages\docx\opc\package.py", line 126, in open
+    pkg_reader = PackageReader.from_file(pkg_file)
+  File "C:\Users\90521\AppData\Local\Programs\Python\Python313\Lib\site-packages\docx\opc\pkgreader.py", line 22, in from_file
+    phys_reader = PhysPkgReader(pkg_file)
+  File "C:\Users\90521\AppData\Local\Programs\Python\Python313\Lib\site-packages\docx\opc\phys_pkg.py", line 76, in __init__
+    self._zipf = ZipFile(pkg_file, "r")
+                 ~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\90521\AppData\Local\Programs\Python\Python313\Lib\zipfile\__init__.py", line 1383, in __init__
+    self.fp = io.open(file, filemode)
+              ~~~~~~~^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'E:\\ChatGPT��Ŀ\\�����ں�������Ϸ���\\reports\\M3_helical_revision.docx'

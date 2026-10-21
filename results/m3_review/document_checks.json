@@ -1,0 +1,25 @@
+{
+  "status": "PASS_RENDER_STRUCTURE",
+  "editable_math_objects": 8,
+  "figures": 7,
+  "pdf_pages": 9,
+  "visual_inspection": "PASS",
+  "post_pandoc_changes": "Table layout only: font, repeating headers, no split rows; equations unchanged.",
+  "document_sha256": {
+    "md": "a447e4052d0b34acb898f0cd5a17f216abddbc2ae640ca3e01999e40147d0e6a",
+    "docx": "f31040d493b00704b95cbed49ca2f87d09edd1fd743d1733800e3db720c0b880",
+    "pdf": "0901397e4560febf56d651408bc5def84649987876d11d5a193fac627e5a0732"
+  },
+  "visually_inspected_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "review": "All Word-rendered pages inspected, including seven CAD/engineering figures, equations, Chinese text, tables and pagination."
+}

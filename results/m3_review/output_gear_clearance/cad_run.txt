@@ -1,0 +1,57 @@
+{
+  "status": "PASS_COLD_GEOMETRY_ONLY",
+  "model": "Case0_d50_full",
+  "CAD_edited": false,
+  "checks": [
+    {
+      "case": "Case0_d50_full_common_base_all_cases",
+      "gear": "as_exported",
+      "housing": "gear_case_front",
+      "overlap_mm3": 0.0,
+      "min_distance_mm": 18.646322285249216,
+      "status": "PASS_COLD_CLEARANCE"
+    },
+    {
+      "case": "Case0_d50_full_common_base_all_cases",
+      "gear": "full360_swept_envelope",
+      "housing": "gear_case_front",
+      "overlap_mm3": 0.0,
+      "min_distance_mm": 18.601075237738275,
+      "status": "PASS_COLD_CLEARANCE"
+    },
+    {
+      "case": "Case0_d50_full_common_base_all_cases",
+      "gear": "as_exported",
+      "housing": "gear_case_rear",
+      "overlap_mm3": 0.0,
+      "min_distance_mm": 10.0,
+      "status": "PASS_COLD_CLEARANCE"
+    },
+    {
+      "case": "Case0_d50_full_common_base_all_cases",
+      "gear": "full360_swept_envelope",
+      "housing": "gear_case_rear",
+      "overlap_mm3": 0.0,
+      "min_distance_mm": 10.0,
+      "status": "PASS_COLD_CLEARANCE"
+    }
+  ],
+  "phase_pairs": 26,
+  "swept_radius_mm": 93,
+  "gear_pitch_diameter_mm": 180,
+  "gear_axial_limits_mm": [
+    95,
+    127
+  ],
+  "housing_inner_bottom_mm": -104,
+  "housing_outer_bottom_mm": -110,
+  "minimum_swept_radial_bottom_clearance_mm": 11,
+  "rear_bearing_boss_front_x_mm": 137,
+  "minimum_axial_boss_gap_mm": 10,
+  "source_files": {
+    "stage2_gear": "d6d18370606f7921066a4d5d5e301062f0a7d3ab0771ea0629717711edf12c56",
+    "gear_case_front": "0a848b9f8be120d416cdc9e8f01ab89a1f2305744db191085c54d74ddd5d9b45",
+    "gear_case_rear": "2209a065a88a96a947bfa108851a270542ac019b0adcaa61bb207cb4cbe38e2a"
+  },
+  "limitation": "Nominal cold geometry only; tolerances, deflection, bearing play, thermal differential and oil churning not certified. No ANSYS/Fluent solve."
+}

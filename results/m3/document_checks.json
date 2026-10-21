@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "word_export": "PASS",
+  "editable_math_objects": 21,
+  "pdf_pages": 9,
+  "figures": 5,
+  "visual_inspection": "PASS",
+  "document_sha256": {
+    "M3_report.md": "8a7b226b3f321fd45a7f2f5706f32099bfd70878b2dd4b96cf2e6eaf991234f3",
+    "M3_report.docx": "8457869dfecdbfa0ab122ee242a6d49f6152bd88c80b4cf9d2d91840651b763f",
+    "M3_report.pdf": "55c74f5adce0c94424afedbfc7f5e01dcf4898a9af2a5daa3f0cca62b8570e02"
+  },
+  "post_pandoc_changes": "Formatting only: repeating table headers, non-splitting rows, font spacing, language.",
+  "visually_inspected_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "review": "All rendered pages inspected after actual Word export; equations, five figures, tables, pagination and Chinese text checked."
+}

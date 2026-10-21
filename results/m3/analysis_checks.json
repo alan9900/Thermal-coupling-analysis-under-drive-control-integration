@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "geometry_range_cases": 2187,
+  "nominal_shaft_screen": true,
+  "view_factor_disk_oracle": 0.6096117967977924,
+  "view_factor_disk_sampling": 0.6095733642578125,
+  "view_factor_error": 3.8432539979926794e-05,
+  "radiation_units": "dimensionless F and m2 AF",
+  "M2_comparison_AF_m2": 0.0048,
+  "occlusion_model": "Analytic intersection of source-facing case plane, stepped hub/shaft/caliper, finite shield planes/windows and slanted duct walls; three-plane finite-thickness approximation. No diffuse multibounce radiosity or CFD.",
+  "radiative_temperature_prediction": "NOT EXECUTED; geometric direct-view reduction is not total heat reduction; shields absorb/re-emit and supports conduct."
+}

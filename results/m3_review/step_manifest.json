@@ -1,0 +1,582 @@
+{
+  "count": 144,
+  "total_bytes": 152479404,
+  "files": {
+    "cad/m3_review/Case0_d45_full.step": {
+      "bytes": 16331073,
+      "sha256": "dbca6776d6d916965b9aafdb2cfb318e85f26d8db56014f4d6f5863518f3b48e"
+    },
+    "cad/m3_review/Case0_d45_full_air.step": {
+      "bytes": 743431,
+      "sha256": "77e9feed86b019599671b3b3dbe5591457dfd7eb39b01d5b10b86fb6d96d97aa"
+    },
+    "cad/m3_review/Case0_d45_thermal.step": {
+      "bytes": 9181457,
+      "sha256": "06a3e66b3e3d3ad72523375da7561cbebc9902671829a9b4c650e7de5ca9506b"
+    },
+    "cad/m3_review/Case0_d50_full.step": {
+      "bytes": 16330448,
+      "sha256": "009f85f9c7f17862345472e000db3690faf8e019dddabd3060129384cab91476"
+    },
+    "cad/m3_review/Case0_d50_full_air.step": {
+      "bytes": 743401,
+      "sha256": "35af8da98f0858933df51901ae9d22d81e7030aa382c01d742371026636caad1"
+    },
+    "cad/m3_review/Case0_d50_thermal.step": {
+      "bytes": 9180877,
+      "sha256": "71448f69ffe5a4b62062053e7e5ec45f8fbee7381b92bea6c1f9f54b7bab9913"
+    },
+    "cad/m3_review/CaseA_d50_full.step": {
+      "bytes": 16791849,
+      "sha256": "041399a5f12f0dcc8667b661f087f177342e18168397550f8c9febe4294b9cb6"
+    },
+    "cad/m3_review/CaseA_d50_full_air.step": {
+      "bytes": 1171095,
+      "sha256": "e9421df80c3540a59400b7254dd81be5b80a8f09cdc944f2cdcf77b22542e1bd"
+    },
+    "cad/m3_review/CaseA_d50_thermal.step": {
+      "bytes": 9643074,
+      "sha256": "530b252d82797fdf0d785c79c72a5544d6e6ae7f45bcd188d382e5a1cf9bce32"
+    },
+    "cad/m3_review/CaseB_d50_full.step": {
+      "bytes": 17233306,
+      "sha256": "6186f971aa2782f864c4b23480e2dbb2df3bfd4560dac732f676c4c2e5211b91"
+    },
+    "cad/m3_review/CaseB_d50_full_air.step": {
+      "bytes": 1583141,
+      "sha256": "380a9f9d3b9fd163ffe3b1cc39aaedb1eccc3451d228ed505065b55eef31628f"
+    },
+    "cad/m3_review/CaseB_d50_thermal.step": {
+      "bytes": 10085622,
+      "sha256": "d336cd363fd64d492f926673f512a0867cc4c66d971ca0a25bc2c2a0adb62350"
+    },
+    "cad/m3_review/CaseC_d50_full.step": {
+      "bytes": 16877623,
+      "sha256": "e2b5cee842e22ae2e12fb15bb7ae7e57cbb7741d86b56edd67e6ade05ec41540"
+    },
+    "cad/m3_review/CaseC_d50_full_air.step": {
+      "bytes": 1253287,
+      "sha256": "6ac22adec936b1920e257d6252234415ade09c648bd8df0231a3354b4d14421d"
+    },
+    "cad/m3_review/CaseC_d50_thermal.step": {
+      "bytes": 9729039,
+      "sha256": "c3646300cdab26c1c2b10cec4c16b73fc64bef33e0fe09b568cc5503070af1d8"
+    },
+    "cad/m3_review/revised_parts/brake_disc_hat.step": {
+      "bytes": 445559,
+      "sha256": "6f8e321d00f7ba3f07b14db455427bb6837c28c6eb6d4e73e8e0e130c74ca1c7"
+    },
+    "cad/m3_review/revised_parts/caliper.step": {
+      "bytes": 37942,
+      "sha256": "2ef1e225fb60542038a7c4ce9076a41edea5c2599053e98cc116569a637a1242"
+    },
+    "cad/m3_review/revised_parts/caliper_mount_bolt_1.step": {
+      "bytes": 5660,
+      "sha256": "8845efb7388cbfbfe2308bc72059632c7fed14fcd0ea78c4dd5249a319a1a6d0"
+    },
+    "cad/m3_review/revised_parts/caliper_mount_bolt_2.step": {
+      "bytes": 5652,
+      "sha256": "6bf2bb1d7533fabc76e398663f5894e43a60af41251d12b822a9b7d819fcd1da"
+    },
+    "cad/m3_review/revised_parts/caliper_mount_bolt_head_1.step": {
+      "bytes": 5664,
+      "sha256": "f2d84e002f90c93fb6bc8b01a01171e9b9d9fb13c181af4fae61978bf1b8ae84"
+    },
+    "cad/m3_review/revised_parts/caliper_mount_bolt_head_2.step": {
+      "bytes": 5656,
+      "sha256": "98d4a10c7a728300f2b84b454898e71583017452cc15784ad8e6c561ac6a5753"
+    },
+    "cad/m3_review/revised_parts/caliper_reaction_bracket.step": {
+      "bytes": 29591,
+      "sha256": "d2880f009c37f82ebb390e2fdd9f6547f7511c9d727d1f0ba5e693ca83e1a24c"
+    },
+    "cad/m3_review/revised_parts/case_tie_bolt_1.step": {
+      "bytes": 5643,
+      "sha256": "aaeedf79961407f436f38641ef6151b61cd8a5a4a6d3a56d2974b5acc9ce5c5b"
+    },
+    "cad/m3_review/revised_parts/case_tie_bolt_2.step": {
+      "bytes": 5645,
+      "sha256": "4f0b2232239e9aaee3cbeb9947677d811e2f570f7ff33eda677c7038bc4aa9b5"
+    },
+    "cad/m3_review/revised_parts/case_tie_bolt_3.step": {
+      "bytes": 5645,
+      "sha256": "ef0d235663764a71a1f323f1a2c8d348ae3d2713f25ee2b503ad846226ccbf72"
+    },
+    "cad/m3_review/revised_parts/case_tie_bolt_4.step": {
+      "bytes": 5645,
+      "sha256": "54da6620340ccd9d56859b9a396d00e66c66d616be91fa74980fc9b76a40758c"
+    },
+    "cad/m3_review/revised_parts/coupling_input_key_-1.step": {
+      "bytes": 15539,
+      "sha256": "7cd8e125ad4b69249829c27a8b721f8fbb7d5c8160bc62f090bf849efc123251"
+    },
+    "cad/m3_review/revised_parts/coupling_input_key_1.step": {
+      "bytes": 15565,
+      "sha256": "78f767a20562ee604cc831999f331cadbd22cb3ad5e888689df5e1179ff84158"
+    },
+    "cad/m3_review/revised_parts/coupling_motor_key_-1.step": {
+      "bytes": 15539,
+      "sha256": "c5621481bf98f00af051383c246149efea9ec095047801913f240f8ef2f9ca32"
+    },
+    "cad/m3_review/revised_parts/coupling_motor_key_1.step": {
+      "bytes": 15565,
+      "sha256": "b1d416568f0c57848bd87c5cf4d10cc39dda05812cc1ace7dbfe34d9c6365c4a"
+    },
+    "cad/m3_review/revised_parts/disc_hub.step": {
+      "bytes": 69281,
+      "sha256": "50d86faeab917636592d4134078c4d75394b57cd4bb7b7c64098ef35ed76259a"
+    },
+    "cad/m3_review/revised_parts/disc_hub_bolt_1.step": {
+      "bytes": 5628,
+      "sha256": "458390e309738a5fa43ee4dd229a75df844c7005312a10b7b872f4a72dfc4309"
+    },
+    "cad/m3_review/revised_parts/disc_hub_bolt_2.step": {
+      "bytes": 5828,
+      "sha256": "09ea01f3e6f39653ef1c7d4a421a98853eb84ffb84d8b531f89a5155c8c985c4"
+    },
+    "cad/m3_review/revised_parts/disc_hub_bolt_3.step": {
+      "bytes": 5828,
+      "sha256": "60e8527797b744b8ee88d535a605152dff849a5b388b8b4220a5afdae18b46f5"
+    },
+    "cad/m3_review/revised_parts/disc_hub_bolt_4.step": {
+      "bytes": 5828,
+      "sha256": "11b9573379d4b0ab555e39762a186ff67f5ba6cc74a40e761c1ced946c3a6497"
+    },
+    "cad/m3_review/revised_parts/disc_hub_bolt_5.step": {
+      "bytes": 5828,
+      "sha256": "cbad0d97226c7a7f942cccc349c2f5f75860ec0fa7ec5f9582a935939f19e3f9"
+    },
+    "cad/m3_review/revised_parts/disc_hub_bolt_head_1.step": {
+      "bytes": 5627,
+      "sha256": "e98be7b8153e73b27f53ebb90522fdcb4c4f69f6904c087914d680244785200d"
+    },
+    "cad/m3_review/revised_parts/disc_hub_bolt_head_2.step": {
+      "bytes": 5827,
+      "sha256": "b459f032a1ff0acf912cba442c006e9dee418b851fdecf4ed0154df2691225fc"
+    },
+    "cad/m3_review/revised_parts/disc_hub_bolt_head_3.step": {
+      "bytes": 5827,
+      "sha256": "c8e64dd73c16539aaf90867247e430d9d88ab88a06986381fd82ce1f6b443314"
+    },
+    "cad/m3_review/revised_parts/disc_hub_bolt_head_4.step": {
+      "bytes": 5827,
+      "sha256": "4fe9c428f9a7218f53f7d01c0d0a610d73e689723d089d9aff3fc2215be5694c"
+    },
+    "cad/m3_review/revised_parts/disc_hub_bolt_head_5.step": {
+      "bytes": 5827,
+      "sha256": "810004dfb10ddabd457ce6b54678a3e2e42432e0a7271cb7e586d236b833c567"
+    },
+    "cad/m3_review/revised_parts/disc_hub_nut_1.step": {
+      "bytes": 9259,
+      "sha256": "2746fc2a2fb692358530c8e0c0d6b6c4c1f97cf76ed8aa08c6af3aa7e4ea8a1f"
+    },
+    "cad/m3_review/revised_parts/disc_hub_nut_2.step": {
+      "bytes": 9609,
+      "sha256": "c4d497f10cea7686453384199c53a3f86581e333ba3d2333d27fc4b4009b35ef"
+    },
+    "cad/m3_review/revised_parts/disc_hub_nut_3.step": {
+      "bytes": 9609,
+      "sha256": "18b65758f6cdccf940eaae65ff541b9447dce59890ec617baf2c6edf7cff0e4f"
+    },
+    "cad/m3_review/revised_parts/disc_hub_nut_4.step": {
+      "bytes": 9609,
+      "sha256": "d678e290e69f4c0089430c90a0edf25592645ff162141064a34642d55838f8ae"
+    },
+    "cad/m3_review/revised_parts/disc_hub_nut_5.step": {
+      "bytes": 9609,
+      "sha256": "010a5748d3edfddc2ee2e1dfd35d9c79d685710ccd129e3b222b0d95ae83fd88"
+    },
+    "cad/m3_review/revised_parts/gear_case_front.step": {
+      "bytes": 248616,
+      "sha256": "0a848b9f8be120d416cdc9e8f01ab89a1f2305744db191085c54d74ddd5d9b45"
+    },
+    "cad/m3_review/revised_parts/gear_case_rear.step": {
+      "bytes": 249247,
+      "sha256": "2209a065a88a96a947bfa108851a270542ac019b0adcaa61bb207cb4cbe38e2a"
+    },
+    "cad/m3_review/revised_parts/halfshaft_bolt_1.step": {
+      "bytes": 5628,
+      "sha256": "12727ec29eae42e54da453c5869ba4ea280b4a4a7cfdd8bf1e3e93fc6ca350ea"
+    },
+    "cad/m3_review/revised_parts/halfshaft_bolt_2.step": {
+      "bytes": 5828,
+      "sha256": "eaf386816b42e10ef3086557a572bea186b861d1436af3d40e20641b4ce94de9"
+    },
+    "cad/m3_review/revised_parts/halfshaft_bolt_3.step": {
+      "bytes": 5756,
+      "sha256": "a83e5e6cd5a4d04be870cf50dd2862b6ecec6376b23113cac2b6700d220f5374"
+    },
+    "cad/m3_review/revised_parts/halfshaft_bolt_4.step": {
+      "bytes": 5828,
+      "sha256": "a0dcc7de372d65665da401025ed5b0720a6b494a405b71664689abeb23db932b"
+    },
+    "cad/m3_review/revised_parts/halfshaft_bolt_5.step": {
+      "bytes": 5716,
+      "sha256": "8f42fdae613b70ee4654a5e0b95d90d25495f0ca76b638a84cd829c87de9bfe1"
+    },
+    "cad/m3_review/revised_parts/halfshaft_bolt_6.step": {
+      "bytes": 5828,
+      "sha256": "d5e1974230b657bcecbb0c893beac656c5cc195b68d5469ab3620d63f2269324"
+    },
+    "cad/m3_review/revised_parts/halfshaft_bolt_7.step": {
+      "bytes": 5772,
+      "sha256": "acc9ee6debef0867618a860ccb4d626232cf8fd8db3714b450a4699fa9d70ec3"
+    },
+    "cad/m3_review/revised_parts/halfshaft_bolt_8.step": {
+      "bytes": 5828,
+      "sha256": "6a301f86df57724b86a981efd2e38e0dd3335807cfd8370f897203dade29ae96"
+    },
+    "cad/m3_review/revised_parts/halfshaft_drive_dowel_1.step": {
+      "bytes": 5828,
+      "sha256": "a2ed997335fc3d14102b1ae9545ba17ec292a0d61f5224b95b98c563d2781583"
+    },
+    "cad/m3_review/revised_parts/halfshaft_drive_dowel_2.step": {
+      "bytes": 5828,
+      "sha256": "4bd3523a653c8cd302970ca1248cb4902994ccb9f5332a5fa5f5bd73a4576355"
+    },
+    "cad/m3_review/revised_parts/halfshaft_drive_dowel_3.step": {
+      "bytes": 5812,
+      "sha256": "c8c61c0dfd9552ed995bdfe7d3d6085eac96e05787e574d54794784db9c4d031"
+    },
+    "cad/m3_review/revised_parts/halfshaft_drive_dowel_4.step": {
+      "bytes": 5812,
+      "sha256": "15ed6293f03617c4090ba1d655e0b76cc9c00040495f9b9d0d04f2b3c1c703bf"
+    },
+    "cad/m3_review/revised_parts/halfshaft_key_-1.step": {
+      "bytes": 15508,
+      "sha256": "42dc69eb905a21431182f844feca78e869d569dc3565f829b656337e7917c085"
+    },
+    "cad/m3_review/revised_parts/halfshaft_key_1.step": {
+      "bytes": 15482,
+      "sha256": "8d169f34d1d0c2b19af333bcb1cf3976b8b742af2c27d34e7fb255162c7b4035"
+    },
+    "cad/m3_review/revised_parts/halfshaft_removable_sleeve.step": {
+      "bytes": 41361,
+      "sha256": "232f6d5cf4cbba9f5b2e23ec231085c503c65017084c6dccce67b04646c2c692"
+    },
+    "cad/m3_review/revised_parts/hub_front_axial_collar.step": {
+      "bytes": 9357,
+      "sha256": "0aa61c911d3ba56dd248c7ea151b59c5ac2f859fc37615c4cbfb32126c2af5c1"
+    },
+    "cad/m3_review/revised_parts/hub_key_-1.step": {
+      "bytes": 15508,
+      "sha256": "76b06bffb791f66d6f9bbe190d61ac2ff53c6dc9c3dd58d47f3dd9aabb777275"
+    },
+    "cad/m3_review/revised_parts/hub_key_1.step": {
+      "bytes": 15482,
+      "sha256": "2be9ba8bbba3d51e0a322fb96dda8e6d8568ff8c4d791ed6fb3867eee0d094d2"
+    },
+    "cad/m3_review/revised_parts/hub_rear_axial_collar.step": {
+      "bytes": 9357,
+      "sha256": "ba7f22eea466be8f2d78c2a932699d87be829fc79b96b9e63f56ffa343b28b89"
+    },
+    "cad/m3_review/revised_parts/hub_removable_sleeve.step": {
+      "bytes": 41457,
+      "sha256": "54e346665f156061e8cc7751a6a810a82f45d2a3792dd0dd58487ac9917f8277"
+    },
+    "cad/m3_review/revised_parts/input_bearing_1.step": {
+      "bytes": 9284,
+      "sha256": "5be2be621ff8b400d77ef02b4e0db481d233b3fdad1e61aed5c13da147fdd3ab"
+    },
+    "cad/m3_review/revised_parts/input_bearing_2.step": {
+      "bytes": 9313,
+      "sha256": "54d29f418ac284daa39ed36a823e31b85e99700ad777b0f471312410d5caee1a"
+    },
+    "cad/m3_review/revised_parts/input_front_cap_bolt_1.step": {
+      "bytes": 5824,
+      "sha256": "d8d748f44533768f03dcf41c7a477e73ef6fc5b5591cabd3fae0bbc2ec736e64"
+    },
+    "cad/m3_review/revised_parts/input_front_cap_bolt_2.step": {
+      "bytes": 5824,
+      "sha256": "0ab3ab0d2b858324a12413dd38c93716e5325c563f537e6770c38d67af1d3612"
+    },
+    "cad/m3_review/revised_parts/input_front_cap_bolt_3.step": {
+      "bytes": 5824,
+      "sha256": "ae99723b09fdf71cf0eb0450d915f31425735ee5d3d88603256cefdcf318130e"
+    },
+    "cad/m3_review/revised_parts/input_front_cap_bolt_4.step": {
+      "bytes": 5824,
+      "sha256": "338f7dfa3dd9790acedb557212c7ecc126e901571d1ae6a822c886044eb5fe12"
+    },
+    "cad/m3_review/revised_parts/input_front_outer_retainer.step": {
+      "bytes": 28427,
+      "sha256": "924245f7fe286219a1434369f016f97067e8608808e64a4e4c6a5ddf23c44643"
+    },
+    "cad/m3_review/revised_parts/input_front_retaining_ring.step": {
+      "bytes": 9285,
+      "sha256": "5a9531ec6746911d97ab6ac501c61f72effdf27562d51f790f6834ee76e33603"
+    },
+    "cad/m3_review/revised_parts/input_front_seal.step": {
+      "bytes": 9294,
+      "sha256": "b022d325f86bf6d5c21e0d69a5e4d9576ca2f3fa17c006ed81c40785f36954e7"
+    },
+    "cad/m3_review/revised_parts/input_rear_cap_bolt_1.step": {
+      "bytes": 5839,
+      "sha256": "1df9e628ccfc9990d736bcfcf49bcd6f671e457dce7773383da23f602f420622"
+    },
+    "cad/m3_review/revised_parts/input_rear_cap_bolt_2.step": {
+      "bytes": 5839,
+      "sha256": "15451cdf3738adc9d213c743dda1f57f70d0bf80142bbee09d92450993a12e9e"
+    },
+    "cad/m3_review/revised_parts/input_rear_cap_bolt_3.step": {
+      "bytes": 5839,
+      "sha256": "945fb7aa7463b3bcc6ac7495d6efe9f4e5908002414911ca3f227bad8cc14ed2"
+    },
+    "cad/m3_review/revised_parts/input_rear_cap_bolt_4.step": {
+      "bytes": 5839,
+      "sha256": "918a92bf18e2358aea56fb01f43ca9aee36bf3836e36c9f41d626665dd55f41f"
+    },
+    "cad/m3_review/revised_parts/input_rear_clamp_collar.step": {
+      "bytes": 9311,
+      "sha256": "f4b7f1505eb21562ee03757246c40b37ef2524e6813786c17ac49520ec59e917"
+    },
+    "cad/m3_review/revised_parts/input_rear_outer_retainer.step": {
+      "bytes": 28521,
+      "sha256": "4b4fe768f4c2eef3e297840bc6bb12c9aeb114dcd82d5d56b11c1683a5e284fb"
+    },
+    "cad/m3_review/revised_parts/input_rear_seal.step": {
+      "bytes": 9323,
+      "sha256": "401196a5f8cf8e28e632330ce79194779e27ed63c2d6b98a04f61ef5320ecafd"
+    },
+    "cad/m3_review/revised_parts/input_shaft.step": {
+      "bytes": 1495818,
+      "sha256": "40ef13d65e138b619091227eb59aa6a3d7122a7e27c15f38d68e396b20922432"
+    },
+    "cad/m3_review/revised_parts/intermediate_bearing_1.step": {
+      "bytes": 9262,
+      "sha256": "b4ef0ae6a6886baeee0ad1484e0b594a7c0500dd78f1f5d8711165cc27165150"
+    },
+    "cad/m3_review/revised_parts/intermediate_bearing_2.step": {
+      "bytes": 9291,
+      "sha256": "15b8a53cba8042563b7f3a9848c0ecb9fb1b27664e42f9786c700e2bc0928ccf"
+    },
+    "cad/m3_review/revised_parts/intermediate_front_cap_bolt_1.step": {
+      "bytes": 5824,
+      "sha256": "fe4bef4c14f8476eb37f99f07c8e14db26edc2abd8281a390ba63893c8305df5"
+    },
+    "cad/m3_review/revised_parts/intermediate_front_cap_bolt_2.step": {
+      "bytes": 5824,
+      "sha256": "aa24fef15591f14ee02c8d396a27d0f27194f04d77311994f5b63fd9cdc85be4"
+    },
+    "cad/m3_review/revised_parts/intermediate_front_cap_bolt_3.step": {
+      "bytes": 5824,
+      "sha256": "debba9282b21fd59f486327318d3d9a082184150711f920d25dc8a56b4794346"
+    },
+    "cad/m3_review/revised_parts/intermediate_front_cap_bolt_4.step": {
+      "bytes": 5824,
+      "sha256": "8a6a1c3f455b3b0af834c16cdc8d1c625d93bd6d043b853a4664fe6e0f3dfb77"
+    },
+    "cad/m3_review/revised_parts/intermediate_front_outer_retainer.step": {
+      "bytes": 28394,
+      "sha256": "4c696473232a4e04523a1f9a19c5c2ab6832220f855c3090babc50545da09fc5"
+    },
+    "cad/m3_review/revised_parts/intermediate_front_retaining_ring.step": {
+      "bytes": 9263,
+      "sha256": "8d92a10b228e402c1919f5dcc6fc4989d80036b2c2cdca1e675e87c75e501713"
+    },
+    "cad/m3_review/revised_parts/intermediate_front_seal.step": {
+      "bytes": 9272,
+      "sha256": "d2412e4189ee65d1318b2a137b8ef199d8d32fc69074e88d6766ce6e1c7214c4"
+    },
+    "cad/m3_review/revised_parts/intermediate_gear_key.step": {
+      "bytes": 15517,
+      "sha256": "3bc0c4f26bb586a01636c9b59f9d201525f4d429b5eed87060a065be77e66d14"
+    },
+    "cad/m3_review/revised_parts/intermediate_gear_key_opposed.step": {
+      "bytes": 15543,
+      "sha256": "37865b39dd18f4437af87ed74c81d557459e92e0abe03e1e1059acc6ad899de2"
+    },
+    "cad/m3_review/revised_parts/intermediate_gear_retaining_collar.step": {
+      "bytes": 9275,
+      "sha256": "a9b41579a329de65c1211a9b96d30b36a6b434c649ea8d1989a734bd5898b55d"
+    },
+    "cad/m3_review/revised_parts/intermediate_rear_cap_bolt_1.step": {
+      "bytes": 5839,
+      "sha256": "76b7338e46ddc886c9dfb6ec79b25620118e12a4f98916bdd31ce0be1fdc9852"
+    },
+    "cad/m3_review/revised_parts/intermediate_rear_cap_bolt_2.step": {
+      "bytes": 5839,
+      "sha256": "386cc56e30f71655967f401b46ab2d1587b48397899310c5af5c5d8ad854d648"
+    },
+    "cad/m3_review/revised_parts/intermediate_rear_cap_bolt_3.step": {
+      "bytes": 5839,
+      "sha256": "673a7813606788546d12c30f0d35b2f2d74ef07b0c70f735e33fadeac64962bf"
+    },
+    "cad/m3_review/revised_parts/intermediate_rear_cap_bolt_4.step": {
+      "bytes": 5839,
+      "sha256": "c7f57b7a668db7f9bbdc35c5c502b2eeb2593c1c36ae6d7731cc83765812a23b"
+    },
+    "cad/m3_review/revised_parts/intermediate_rear_clamp_collar.step": {
+      "bytes": 9289,
+      "sha256": "95efd9ee7fdc5f660bf97c2bd8d7fe11301ea515d50a93d5be3fa6f4430575f8"
+    },
+    "cad/m3_review/revised_parts/intermediate_rear_outer_retainer.step": {
+      "bytes": 28488,
+      "sha256": "d25e3d1d2af573ed13968969cf511a8dc9b4bd359b42f30eff87946c51fdf339"
+    },
+    "cad/m3_review/revised_parts/intermediate_rear_seal.step": {
+      "bytes": 9301,
+      "sha256": "228cf77932ede2c105d3e00d2950a6228682017c1173ab44ad4d907b442cabdb"
+    },
+    "cad/m3_review/revised_parts/intermediate_shaft.step": {
+      "bytes": 1508710,
+      "sha256": "3bb76b14b19adc1c884bf5f56e51fc2c1cd149f52f8af0e4c87b767257f7ee5e"
+    },
+    "cad/m3_review/revised_parts/motor_case.step": {
+      "bytes": 40857,
+      "sha256": "12a8e9278e60dbf51459fc4336b70080b14870c2325188de186c5d6ff7a20ba9"
+    },
+    "cad/m3_review/revised_parts/motor_gear_adapter.step": {
+      "bytes": 44196,
+      "sha256": "b11003130886f9583e9810c29ec9601c34044ffc9364a047110648b76c4be8ac"
+    },
+    "cad/m3_review/revised_parts/motor_input_coupling.step": {
+      "bytes": 70516,
+      "sha256": "63f7ad240920b2d5c6554f44a37bb479fed84ee2db00c05f0c658e7237f36e34"
+    },
+    "cad/m3_review/revised_parts/motor_mount_bolt_1.step": {
+      "bytes": 5825,
+      "sha256": "cb4ceac4a8f597db83d079e77b5b29fe1e36735d3f2223776f8eabc88671429b"
+    },
+    "cad/m3_review/revised_parts/motor_mount_bolt_2.step": {
+      "bytes": 5809,
+      "sha256": "b09a1190e6c4f2c42c9e3c882f1d11542568092ecf0ccb3f9b232a7287cd666c"
+    },
+    "cad/m3_review/revised_parts/motor_mount_bolt_3.step": {
+      "bytes": 5649,
+      "sha256": "bab1dee66c78f42cb2f2f26c0badbc7ee72bad7d15bf867bf9772cecefbf1658"
+    },
+    "cad/m3_review/revised_parts/motor_mount_bolt_4.step": {
+      "bytes": 5737,
+      "sha256": "d7e82ff006c11b7523953ffa32511cf5baec2bb535f4dabf7b38052dc0c0ca63"
+    },
+    "cad/m3_review/revised_parts/motor_rotor_other.step": {
+      "bytes": 9360,
+      "sha256": "d5653c839f46f9887673e146881ec5998a6008fc8750caee37c71b692020c19a"
+    },
+    "cad/m3_review/revised_parts/motor_rotor_shaft.step": {
+      "bytes": 45347,
+      "sha256": "9aff73b0dd29357fa2849d49095f9629b6963eb173b1df1bc9079e9d48c08916"
+    },
+    "cad/m3_review/revised_parts/motor_stator.step": {
+      "bytes": 761557,
+      "sha256": "27260bd331e84ba8cefa3d0f430657fc30a735c73abe274097d120d6e3813d43"
+    },
+    "cad/m3_review/revised_parts/motor_water_jacket.step": {
+      "bytes": 9332,
+      "sha256": "971a1bdb8b87d79b355df3d60bac02af1c188812e63f061cadfe533a3d9ea3b2"
+    },
+    "cad/m3_review/revised_parts/motor_winding.step": {
+      "bytes": 869791,
+      "sha256": "470813ecc8f67a85a6c6fdc9d82e11df2aae2ece45df8d563646fba675ecbc31"
+    },
+    "cad/m3_review/revised_parts/oil_inventory.step": {
+      "bytes": 612555,
+      "sha256": "f8b10521b0722b978be2df672cc5ec7263352d7d7a92558a15f6cce9e78b16ec"
+    },
+    "cad/m3_review/revised_parts/output_bearing_1.step": {
+      "bytes": 9330,
+      "sha256": "4de0fc937b095a7ba3bd3b8eea6d03ae886e1aa006f93644db95d787db93b422"
+    },
+    "cad/m3_review/revised_parts/output_bearing_2.step": {
+      "bytes": 9359,
+      "sha256": "c7a3f6b71a281d40f018b4ea0d7254a3ffc97ef911020feb2b276dda8a0d878a"
+    },
+    "cad/m3_review/revised_parts/output_front_cap_bolt_1.step": {
+      "bytes": 5824,
+      "sha256": "424be36ac3de061d664d81895a2dacde6ce30ebc0f89acd9c11bdd6c2124dff8"
+    },
+    "cad/m3_review/revised_parts/output_front_cap_bolt_2.step": {
+      "bytes": 5824,
+      "sha256": "23815582c2b2c110e8cd4c1e9e483679d7a95dac07d8a8f7fa710929cbfaf7ac"
+    },
+    "cad/m3_review/revised_parts/output_front_cap_bolt_3.step": {
+      "bytes": 5824,
+      "sha256": "e4f5a019ff90d9c44e133d18c83dccc069d7c087a696e0c1b57c3287b7dac337"
+    },
+    "cad/m3_review/revised_parts/output_front_cap_bolt_4.step": {
+      "bytes": 5824,
+      "sha256": "8a8fa0f6052fe5677a1189e8c886746cf3d38e1e4f08e54c8246dbdb318a3c9a"
+    },
+    "cad/m3_review/revised_parts/output_front_outer_retainer.step": {
+      "bytes": 28496,
+      "sha256": "594d535480df2714f4c0b8259fc91654908e639b0b8ebffea22fc0bf70d8a6d3"
+    },
+    "cad/m3_review/revised_parts/output_front_retaining_ring.step": {
+      "bytes": 9331,
+      "sha256": "a6e829e40b307cc347e952338cfe5ceaf24c78756241afc016faae664bc901e5"
+    },
+    "cad/m3_review/revised_parts/output_front_seal.step": {
+      "bytes": 9340,
+      "sha256": "222f9f2007aed49f4e5b9cd50e662494079cd6e3dc7d53c5f3858fcf11aa6fa1"
+    },
+    "cad/m3_review/revised_parts/output_gear_key.step": {
+      "bytes": 15495,
+      "sha256": "9e687c514eb86478ba8dc4737254732203cfbf09885ef9451d2bbb3c0a433469"
+    },
+    "cad/m3_review/revised_parts/output_gear_key_opposed.step": {
+      "bytes": 15521,
+      "sha256": "b4d5d3bed23a4b8591eda71926093db0ad369c9c5e3956c5216445d3bdc3aa9b"
+    },
+    "cad/m3_review/revised_parts/output_gear_retaining_collar.step": {
+      "bytes": 9357,
+      "sha256": "4765ff82e1c6ed66b905440ba72a75aa6a4876167c7640e0de3ba0c21c2d3987"
+    },
+    "cad/m3_review/revised_parts/output_halfshaft_flange.step": {
+      "bytes": 95662,
+      "sha256": "a3b27ed2b1c383d6a821bbfb5e171787ce40747adc1f1d944615aa079c7cbb6a"
+    },
+    "cad/m3_review/revised_parts/output_rear_cap_bolt_1.step": {
+      "bytes": 5839,
+      "sha256": "619ee74d5ef97f14041c5088d801058f2441ac016655824884f4ec7e319ad12b"
+    },
+    "cad/m3_review/revised_parts/output_rear_cap_bolt_2.step": {
+      "bytes": 5839,
+      "sha256": "27e1bc3529746b262b5225012b70e5f3876240f3fb1cd867834e7a23bed4253d"
+    },
+    "cad/m3_review/revised_parts/output_rear_cap_bolt_3.step": {
+      "bytes": 5839,
+      "sha256": "c2387038c95b527fbcaf51b477bf822eae906beb4b39d180863bef8fdb9e3ede"
+    },
+    "cad/m3_review/revised_parts/output_rear_cap_bolt_4.step": {
+      "bytes": 5839,
+      "sha256": "5a95e5977ad4de8b5c187e398cff4c38a40f8ab5e029fddf871e05f3d3eb56fb"
+    },
+    "cad/m3_review/revised_parts/output_rear_clamp_collar.step": {
+      "bytes": 9357,
+      "sha256": "f757cd5cc69af9bee1f9b3866075dd84fd1a96d64180bfb7309c3148b14055b4"
+    },
+    "cad/m3_review/revised_parts/output_rear_outer_retainer.step": {
+      "bytes": 28590,
+      "sha256": "e32833a12f14f8114c0a12ef9dbd932c636c4d61029cca5896831599f1d5f924"
+    },
+    "cad/m3_review/revised_parts/output_rear_seal.step": {
+      "bytes": 9369,
+      "sha256": "75077b6d0d713a5064f31a4db06b2f56674ca27885eef0c02e112c0b7860b0be"
+    },
+    "cad/m3_review/revised_parts/output_shaft.step": {
+      "bytes": 74065,
+      "sha256": "42499ac932d2e5e6270cf240e8cbb3f9d4bdc2bf51ea655a36c6678e402740b1"
+    },
+    "cad/m3_review/revised_parts/pad_far.step": {
+      "bytes": 15570,
+      "sha256": "d9ca0831f9d7b6fd91cf545a0842d5962dec6bfb8e4d6f1d852a928bcb66884b"
+    },
+    "cad/m3_review/revised_parts/pad_near.step": {
+      "bytes": 15562,
+      "sha256": "117232cabc8634b0d50e728d89c93b3b55119e0f98659924c42f57279fc59468"
+    },
+    "cad/m3_review/revised_parts/stage1_gear.step": {
+      "bytes": 3878300,
+      "sha256": "15fe584710d21bfa4ea44ddc2e01f46a14cff2583e743b859d6a90d90b6a86e1"
+    },
+    "cad/m3_review/revised_parts/stage2_gear.step": {
+      "bytes": 3880665,
+      "sha256": "d6d18370606f7921066a4d5d5e301062f0a7d3ab0771ea0629717711edf12c56"
+    },
+    "cad/m3_review/revised_parts/wheel_halfshaft_interface.step": {
+      "bytes": 64444,
+      "sha256": "437b11702c4ddbdee81e2eb32f076d6461b1c715141e616747f0b84b41b732b3"
+    }
+  }
+}

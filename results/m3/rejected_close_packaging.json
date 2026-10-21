@@ -1,0 +1,12 @@
+{
+  "gap_mm": 25,
+  "interferences": [
+    {
+      "case": "Case0",
+      "part_a": "caliper",
+      "part_b": "caliper_reaction_bracket",
+      "common_volume_mm3": 10800.0,
+      "status": "INTERFERENCE"
+    }
+  ]
+}

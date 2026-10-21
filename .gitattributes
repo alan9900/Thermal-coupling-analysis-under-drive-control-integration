@@ -7,6 +7,7 @@ data/raw/** -text -whitespace
 *.mat binary
 *.png binary
 *.xlsx binary
+*.step binary
 # MATLAB's generated vector serialization contains intentional whitespace.
 results/m0/*.svg -whitespace
 results/m0_acceptance/*.svg -whitespace
@@ -19,3 +20,13 @@ results/m1/engineering/matlab_run.txt -whitespace
 results/m2/*.svg -whitespace
 # Raw MATLAB success/failure/diagnostic console captures retain original padding.
 results/m2/*.txt -whitespace
+results/m3/*.svg -whitespace
+results/m3/*.txt -whitespace
+# M3 review evidence uses byte-level manifests; preserve generated CSV/log/JSON
+# and authored-report/config bytes rather than changing their Windows newlines.
+results/m3_review/** -text -whitespace
+reports/M3_geometry_review.md -text whitespace=cr-at-eol
+configs/M3_to_M4_mapping.json -text whitespace=cr-at-eol
+results/m3_helical/** -text -whitespace
+reports/M3_helical_revision.md -text whitespace=cr-at-eol
+configs/M3_helical_to_M4_mapping.json -text whitespace=cr-at-eol

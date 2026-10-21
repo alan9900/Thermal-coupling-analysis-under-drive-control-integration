@@ -16,7 +16,7 @@ Toyota 2010 Prius MG2（参考单侧永磁电机）：60kW、207Nm、13500rpm，
 
 ## M0交付（2026-10-18）
 
-**2026-10-19当前状态**：M0经用户授权简验通过，[PR #1](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/1)已合并，附注Tag `M0-v1.0`已推送并验证，固定指向`b13f265`。[历史验收摘要](reports/M0_ACCEPTANCE_SUMMARY.md)及工作安排图保留其生成时状态；新关卡记录见[验收及启动授权](reports/M0_GATE_ACCEPTANCE_2026-10-19.md)。M1已按限定概念范围批准并正式归档；M2已获开发授权，成果独立送审，未经批准不合并M2或进入M3。
+**2026-10-20当前状态**：M0经用户授权简验通过，[PR #1](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/1)已合并，附注Tag `M0-v1.0`已推送并验证，固定指向`b13f265`。[历史验收摘要](reports/M0_ACCEPTANCE_SUMMARY.md)及工作安排图保留其生成时状态。M1与M2均按限定概念范围验收并正式归档；M3已获开发授权，独立PR #4送审，未经批准不合并M3或进入M4。
 
 - [参数审查报告 Markdown](reports/M0_report.md) / [Word](reports/M0_report.docx) / [PDF](reports/M0_report.pdf)
 - [运行命令与输出说明](scripts/m0/README.md)，优先MATLAB R2025a完成参数及制动积分复核
@@ -35,13 +35,21 @@ Toyota 2010 Prius MG2（参考单侧永磁电机）：60kW、207Nm、13500rpm，
 - [复现说明](scripts/m1/README.md)、[模型配置](configs/m1_heat_sources.yaml)、[运行与曲线证据](results/m1/)
 - [PR #2](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/2)已合并；正式附注Tag `M1-v1.0`远端已核验，目标main提交`9d545ab39a3efcce857573af74f7e325b74a2b15`。
 
-## M2概念瞬态热网络（2026-10-19，数值交付待验收）
+## M2概念瞬态热网络（2026-10-20，限定概念范围APPROVED）
 
 13动态节点LPTN包含盘、片/钳、轴、轴承、齿轮、油、壳体、电机定子/绕组/转子其他、护罩和局部空气；环境与冷却液为边界。4基础场景、3路径移除、18敏感性场景已实际运行R2025a；11组测试及独立Python/SciPy复核通过。三种路径保留有符号热流、正向累计与净热量；全网络/电驱子域分别核算储热和边界。所有温度为S3概念预测，未取得实物标定。
 
 - [M2报告](reports/M2_report.md) / [Word](reports/M2_report.docx) / [PDF](reports/M2_report.pdf) / [验收检查表](reports/M2_ACCEPTANCE_CHECKLIST.md)
 - [复现说明](scripts/m2/README.md)、[配置](configs/m2_thermal_network.yaml)、[来源审查](docs/M2_SOURCE_REVIEW.md)、[结果与曲线](results/m2/)
-- [草稿PR #3](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/3)待研究者验收；未合并，M2-v1.0未创建，M3–M7未开始。
+- [PR #3](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/3)已合并；M2-v1.0已实际推送并核验，目标`1d51c22d94577ff8f52be785300b5f6b4aadee37`。真实几何/热阻/换热/温度标定仍未完成。
+
+## M3参数化几何（2026-10-20，概念CAD交付待验收）
+
+CadQuery2.8/OpenCascade7.9已实际建立单侧电机、两级9:1减速器、内移通风盘、卡钳/支架、轴承支承与可拆罩体。Case0真正没有新增罩；CaseA单层、CaseB双层、CaseC一体通道，公共32体一致。56个STEP已回读，283候选对无正体积干涉；8组测试、18齿轮相位和几何/静力/视角筛查通过。2187解析组合中729被拒绝；45mm轴静力余量很小，制造、轴承寿命、热配合和实际装车仍未验证，不声称温降。
+
+- [参数化源与复现](scripts/m3/README.md)、[配置](configs/m3_geometry.yaml)、[CAD与STEP](cad/m3/README.md)、[原始验证](results/m3/)
+- [报告](reports/M3_report.md) / [Word](reports/M3_report.docx) / [PDF](reports/M3_report.pdf) / [验收表](reports/M3_ACCEPTANCE_CHECKLIST.md)
+- [草稿PR #4](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/4)待研究者审批；未合并、未Tag，M4 ANSYS/Fluent未开展。
 
 ## 历史资料
 - `configs/archive/baseline_vehicle_v01_central_motor.yaml`：单电机+差速器，废弃。
@@ -54,4 +62,4 @@ M0单位和参数审计/新后轴动力学→M1 MATLAB再生/摩擦热源→M2�
 [工作安排图片（2026-10-19，图稿v1）](reports/planning/research_work_plan_v04_2026-10-19_v1.png)：M0–M7共8阶段，列明任务、交付物和验收流程。图中状态为生成时快照；当前以阶段登记和上文为准，工期尚未确定。
 
 ## 阶段版本与回退
-每个阶段均使用独立开发分支、Git提交、PR人工验收与**批准后不可移动的里程碑Tag**（`M0-v1.0`到`M7-v1.0`）。详见 [Git阶段版本管理制度](docs/GIT_VERSIONING_POLICY.md) 和 [里程碑版本登记](docs/STAGE_VERSIONS.md)。未通过验收不能标记为已完成；M0、M1正式验收及远端Tag已记录，M2待审。
+每个阶段均使用独立开发分支、Git提交、PR人工验收与**批准后不可移动的里程碑Tag**（`M0-v1.0`到`M7-v1.0`）。详见 [Git阶段版本管理制度](docs/GIT_VERSIONING_POLICY.md) 和 [里程碑版本登记](docs/STAGE_VERSIONS.md)。M0/M1/M2已正式归档；M3待审，未经批准不进入M4。

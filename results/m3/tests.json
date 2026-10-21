@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "groups": [
+    "True Case0 contains no shield, duct or added shield supports",
+    "Source reference envelopes and both stage ratios are preserved",
+    "18 sampled mesh phases have no positive tooth interference; no root fillet/contact stress validation",
+    "All 32 base bodies identical across cases; each shield has one connected B-rep solid",
+    "25mm tight packaging correctly rejected by actual B-rep interference",
+    "M2-v1.0 model, sources, numerical outputs and report remain unchanged",
+    "STEP roundtrip retains valid solids and millimetre assembly scale",
+    "Geometry candidates include explicit masses/heat capacities/areas and null contact/cooling parameters, without overwriting M2"
+  ],
+  "test_group_count": 8,
+  "gear_phase_samples": 18,
+  "nominal_cases": 4,
+  "M4": "NOT STARTED"
+}

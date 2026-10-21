@@ -1,0 +1,44 @@
+[
+  {
+    "id": "SKF_6208",
+    "url": "https://www.emarketplace.in.skf.com/deep-groove-ball-bearing/6208",
+    "retrieved_UTC": "2026-10-20T05:04:38.483964+00:00",
+    "status": "SNAPSHOT_PRESENT",
+    "bytes": 128933,
+    "sha256": "d7ab64e8a1f462824936295e1870e20cf9a03bc052f585e5d8b54d89d269a260",
+    "file": "data/raw/m3_review/SKF_6208.html",
+    "scope": "Boundary dimensions / catalogue mass only; bearing selection, preload, fits, life and application are not validated",
+    "provenance": "S1_MANUFACTURER_REFERENCE_ONLY"
+  },
+  {
+    "id": "SKF_6209",
+    "url": "https://www.emarketplace.in.skf.com/deep-groove-ball-bearing/6209",
+    "retrieved_UTC": "2026-10-20T05:04:42.719294+00:00",
+    "status": "SNAPSHOT_PRESENT",
+    "bytes": 128834,
+    "sha256": "fde4cc6f4bd19c33180a4f6c2258925776c3e196dd96d53182fdbbe883897296",
+    "file": "data/raw/m3_review/SKF_6209.html",
+    "scope": "Boundary dimensions / catalogue mass only; bearing selection, preload, fits, life and application are not validated",
+    "provenance": "S1_MANUFACTURER_REFERENCE_ONLY"
+  },
+  {
+    "id": "SKF_6210",
+    "url": "https://www.emarketplace.in.skf.com/deep-groove-ball-bearing/6210",
+    "retrieved_UTC": "2026-10-20T05:03:37.655924+00:00",
+    "status": "SNAPSHOT_PRESENT",
+    "bytes": 128930,
+    "sha256": "d7802257134eb5b7d49a2b5d81b6893a852759ab6e4373624d307de7fcebf2de",
+    "file": "data/raw/m3_review/SKF_6210.html",
+    "scope": "Boundary dimensions / catalogue mass only; bearing selection, preload, fits, life and application are not validated",
+    "provenance": "S1_MANUFACTURER_REFERENCE_ONLY"
+  },
+  {
+    "id": "Schaeffler_arrangements",
+    "url": "https://www.schaeffler.com/remotemedien/media/_shared_media/08_media_library/01_publications/schaeffler_2/catalogue_1/downloads_6/mh1_technical_principles_de_en.pdf",
+    "retrieved_UTC": "2026-10-20T05:07:56.104641+00:00",
+    "file": null,
+    "status": "LOCAL_DOWNLOAD_BLOCKED",
+    "note": "Primary PDF readable through web tool; local native HTTPS download failed. Do not claim an archived PDF.",
+    "provenance": "S1_PUBLIC_REFERENCE_NOT_LOCAL_SNAPSHOT"
+  }
+]

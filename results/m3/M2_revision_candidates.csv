@@ -1,0 +1,12 @@
+M2_node,M2_C_J_K,M3_mass_candidate_kg,M3_C_candidate_J_K,ratio_to_M2,classification,mapping_note
+disc,2250.0,4.78356783078748,2391.7839153937402,1.063015073508329,S3_CANDIDATE_NOT_APPLIED,Geometry material equivalent; no temperature recalculation
+pad_caliper,1400.0,0.7786148017648067,693.205321588326,0.4951466582773757,S3_CANDIDATE_NOT_APPLIED,Geometry material equivalent; no temperature recalculation
+output_shaft,552.0,3.225394637624301,1483.6815333071784,2.6878288646869173,S3_CANDIDATE_NOT_APPLIED,Geometry material equivalent; no temperature recalculation
+gears,1150.0,9.81167103330864,4513.3686753219745,3.924668413323456,S3_CANDIDATE_NOT_APPLIED,Geometry material equivalent; no temperature recalculation
+oil,1600.0,0.7544018832225018,1508.8037664450035,0.9430023540281272,S3_CANDIDATE_NOT_APPLIED,Geometry material equivalent; no temperature recalculation
+gear_case,3600.0,8.851027852088466,7965.925066879619,2.2127569630221164,S3_CANDIDATE_NOT_APPLIED,Geometry material equivalent; no temperature recalculation
+motor_case,4500.0,8.456923304749939,7611.230974274945,1.6913846609499879,S3_CANDIDATE_NOT_APPLIED,Geometry material equivalent; no temperature recalculation
+stator,4765.599999999999,10.476553917623718,4819.214802106911,1.0112503781490076,S3_CANDIDATE_NOT_APPLIED,Geometry material equivalent; no temperature recalculation
+winding,1898.05,4.759118844166563,1832.2607550041268,0.9653385079445361,S3_CANDIDATE_NOT_APPLIED,Geometry material equivalent; no temperature recalculation
+rotor_other,3082.0,8.581392354721967,3947.4404831721045,1.28080482906298,S3_CANDIDATE_NOT_APPLIED,Only motor-side shaft included; remaining gearbox input shaft requires separate node
+output_bearing,161.0,0.808,371.68,2.3085714285714287,REFERENCE_MASS_CANDIDATE_NOT_APPLIED,Two SKF6209 catalogue masses0.404kg each; solid annular CAD envelope is not true bearing mass or radial conductance

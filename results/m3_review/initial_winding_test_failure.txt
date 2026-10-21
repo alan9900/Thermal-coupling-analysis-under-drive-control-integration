@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "E:\ChatGPT��Ŀ\�����ں�������Ϸ���\scripts\m3_review\check_review.py", line 55, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "E:\ChatGPT��Ŀ\�����ں�������Ϸ���\scripts\m3_review\check_review.py", line 50, in main
+    assert P['motor_winding'].distance(P['motor_stator'])>.1;tests.append('Winding consolidation retains insulation gap; contact law is still required')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

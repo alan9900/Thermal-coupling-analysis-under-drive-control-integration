@@ -1,0 +1,40 @@
+{
+  "status": "PASS_IMPORTED_ASSEMBLY_NO_VOLUME_INTERFERENCE",
+  "software": "SOLIDWORKS Premium2023 SP0.1",
+  "document": "Case0_d50_full",
+  "imported_leaf_components": 129,
+  "interference_count": 0,
+  "ignore_hidden_bodies": false,
+  "treat_subassemblies_as_single": false,
+  "treat_coincident_faces_as_interference": false,
+  "include_multibody_part_interferences": true,
+  "component_bounding_boxes_m": {
+    "stage2_gear": [
+      0.095,
+      -0.09292365878254999,
+      -0.09292365878254999,
+      0.127,
+      0.09292365878255399,
+      0.09292365878255399
+    ],
+    "gear_case_front": [
+      0.0,
+      -0.14,
+      -0.10999999999999999,
+      0.08,
+      0.285,
+      0.265
+    ],
+    "gear_case_rear": [
+      0.07999999999999999,
+      -0.175,
+      -0.10999999999999999,
+      0.16,
+      0.315,
+      0.265
+    ]
+  },
+  "geometry_modified": false,
+  "model_saved": false,
+  "ANSYS": "NOT EXECUTED"
+}

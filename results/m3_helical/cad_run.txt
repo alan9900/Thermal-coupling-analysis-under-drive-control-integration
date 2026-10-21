@@ -1,0 +1,32 @@
+BUILD Case0 False
+INTERFERENCE Case0_d50_helical_full
+EXPORT Case0_d50_helical_full
+PASS Case0_d50_helical_full 2.0417376516819476e-13
+BUILD Case0 True
+INTERFERENCE Case0_d50_helical_thermal
+EXPORT Case0_d50_helical_thermal
+PASS Case0_d50_helical_thermal 6.247449821003923e-13
+BUILD CaseA False
+INTERFERENCE CaseA_d50_helical_full
+EXPORT CaseA_d50_helical_full
+PASS CaseA_d50_helical_full 1.9663353082317375e-13
+BUILD CaseA True
+INTERFERENCE CaseA_d50_helical_thermal
+EXPORT CaseA_d50_helical_thermal
+PASS CaseA_d50_helical_thermal 6.0857315644318e-13
+BUILD CaseB False
+INTERFERENCE CaseB_d50_helical_full
+EXPORT CaseB_d50_helical_full
+PASS CaseB_d50_helical_full 1.912713209139265e-13
+BUILD CaseB True
+INTERFERENCE CaseB_d50_helical_thermal
+EXPORT CaseB_d50_helical_thermal
+PASS CaseB_d50_helical_thermal 5.888342752192512e-13
+BUILD CaseC False
+INTERFERENCE CaseC_d50_helical_full
+EXPORT CaseC_d50_helical_full
+PASS CaseC_d50_helical_full 2.0230623573316712e-13
+BUILD CaseC True
+INTERFERENCE CaseC_d50_helical_thermal
+EXPORT CaseC_d50_helical_thermal
+PASS CaseC_d50_helical_thermal 5.840807502024768e-13

@@ -1,0 +1,15 @@
+Invoke-WebRequest: 
+Access Denied
+Access Denied
+ 
+You don't have permission to access "http&#58;&#47;&#47;www&#46;schaeffler&#46;com&#47;remotemedien&#47;media&#47;&#95;shared&#95;media&#47;08&#95;media&#95;library&#47;01&#95;publications&#47;schaeffler&#95;2&#47;catalogue&#95;1&#47;downloads&#95;6&#47;mh1&#95;technical&#95;principles&#95;de&#95;en&#46;pdf" on this server.
+Reference&#32;&#35;18&#46;dbf22217&#46;1792472619&#46;efd020b
+https&#58;&#47;&#47;errors&#46;edgesuite&#46;net&#47;18&#46;dbf22217&#46;1792472619&#46;efd020b
+Traceback (most recent call last):
+  File "E:\ChatGPT��Ŀ\�����ں�������Ϸ���\scripts\m3_review\collect_sources.py", line 18, in <module>
+    subprocess.run(['pwsh','-NoProfile','-Command',command],check=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\90521\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['pwsh', '-NoProfile', '-Command', "Invoke-WebRequest -Uri 'https://www.schaeffler.com/remotemedien/media/_shared_media/08_media_library/01_publications/schaeffler_2/catalogue_1/downloads_6/mh1_technical_principles_de_en.pdf' -OutFile 'E:\\ChatGPT��Ŀ\\�����ں�������Ϸ���\\data\\raw\\m3_review\\Schaeffler_arrangements.pdf'"]' returned non-zero exit status 1.
