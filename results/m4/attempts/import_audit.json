@@ -1,0 +1,1185 @@
+{
+  "status": "STEP_IMPORTED_ACTUALLY", 
+  "bodies": [
+    {
+      "faces": 20, 
+      "edges": 30, 
+      "object_id": 36, 
+      "volume": "0.00311374241431663 [m m m]", 
+      "name": "motor_case|motor_case", 
+      "geo_id": 331, 
+      "material": ""
+    }, 
+    {
+      "faces": 4, 
+      "edges": 6, 
+      "object_id": 39, 
+      "volume": "0.00045914511998566794 [m m m]", 
+      "name": "motor_water_jacket|motor_water_jacket", 
+      "geo_id": 349, 
+      "material": ""
+    }, 
+    {
+      "faces": 196, 
+      "edges": 582, 
+      "object_id": 42, 
+      "volume": "0.0013389515228090715 [m m m]", 
+      "name": "motor_stator|motor_stator", 
+      "geo_id": 1450, 
+      "material": ""
+    }, 
+    {
+      "faces": 296, 
+      "edges": 972, 
+      "object_id": 45, 
+      "volume": "0.00053015338295143229 [m m m]", 
+      "name": "motor_winding|motor_winding", 
+      "geo_id": 3303, 
+      "material": ""
+    }, 
+    {
+      "faces": 4, 
+      "edges": 6, 
+      "object_id": 48, 
+      "volume": "0.00090858832792551573 [m m m]", 
+      "name": "motor_rotor_other|motor_rotor_other", 
+      "geo_id": 3384, 
+      "material": ""
+    }, 
+    {
+      "faces": 115, 
+      "edges": 324, 
+      "object_id": 51, 
+      "volume": "0.000665054508444822 [m m m]", 
+      "name": "brake_disc_hat|brake_disc_hat", 
+      "geo_id": 4013, 
+      "material": ""
+    }, 
+    {
+      "faces": 6, 
+      "edges": 12, 
+      "object_id": 54, 
+      "volume": "1.5095999999999972E-05 [m m m]", 
+      "name": "pad_near|pad_near", 
+      "geo_id": 4067, 
+      "material": ""
+    }, 
+    {
+      "faces": 6, 
+      "edges": 12, 
+      "object_id": 57, 
+      "volume": "1.5096000000000052E-05 [m m m]", 
+      "name": "pad_far|pad_far", 
+      "geo_id": 4094, 
+      "material": ""
+    }, 
+    {
+      "faces": 17, 
+      "edges": 36, 
+      "object_id": 60, 
+      "volume": "0.00020733439994807015 [m m m]", 
+      "name": "motor_rotor_shaft|motor_rotor_shaft", 
+      "geo_id": 4169, 
+      "material": ""
+    }, 
+    {
+      "faces": 22, 
+      "edges": 57, 
+      "object_id": 63, 
+      "volume": "4.227967161027814E-05 [m m m]", 
+      "name": "motor_input_coupling|motor_input_coupling", 
+      "geo_id": 4287, 
+      "material": ""
+    }, 
+    {
+      "faces": 6, 
+      "edges": 12, 
+      "object_id": 66, 
+      "volume": "7.1999999999999967E-07 [m m m]", 
+      "name": "coupling_motor_key_-1|coupling_motor_key_-1", 
+      "geo_id": 4317, 
+      "material": ""
+    }, 
+    {
+      "faces": 6, 
+      "edges": 12, 
+      "object_id": 69, 
+      "volume": "7.1999999999999882E-07 [m m m]", 
+      "name": "coupling_motor_key_1|coupling_motor_key_1", 
+      "geo_id": 4344, 
+      "material": ""
+    }, 
+    {
+      "faces": 6, 
+      "edges": 12, 
+      "object_id": 72, 
+      "volume": "6.4000000000000181E-07 [m m m]", 
+      "name": "coupling_input_key_-1|coupling_input_key_-1", 
+      "geo_id": 4371, 
+      "material": ""
+    }, 
+    {
+      "faces": 6, 
+      "edges": 12, 
+      "object_id": 75, 
+      "volume": "6.4000000000000245E-07 [m m m]", 
+      "name": "coupling_input_key_1|coupling_input_key_1", 
+      "geo_id": 4398, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 78, 
+      "volume": "6.52224057358631E-06 [m m m]", 
+      "name": "motor_mount_bolt_1|motor_mount_bolt_1", 
+      "geo_id": 4407, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 81, 
+      "volume": "6.5222380734328257E-06 [m m m]", 
+      "name": "motor_mount_bolt_2|motor_mount_bolt_2", 
+      "geo_id": 4416, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 84, 
+      "volume": "6.5222400479186878E-06 [m m m]", 
+      "name": "motor_mount_bolt_3|motor_mount_bolt_3", 
+      "geo_id": 4425, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 87, 
+      "volume": "6.522242765108294E-06 [m m m]", 
+      "name": "motor_mount_bolt_4|motor_mount_bolt_4", 
+      "geo_id": 4434, 
+      "material": ""
+    }, 
+    {
+      "faces": 14, 
+      "edges": 34, 
+      "object_id": 90, 
+      "volume": "0.0037514345386461295 [m m m]", 
+      "name": "motor_gear_adapter|motor_gear_adapter", 
+      "geo_id": 4502, 
+      "material": ""
+    }, 
+    {
+      "faces": 4, 
+      "edges": 6, 
+      "object_id": 93, 
+      "volume": "3.6901413655378442E-05 [m m m]", 
+      "name": "input_bearing_1|input_bearing_1", 
+      "geo_id": 4520, 
+      "material": ""
+    }, 
+    {
+      "faces": 4, 
+      "edges": 6, 
+      "object_id": 96, 
+      "volume": "3.6901413656581195E-05 [m m m]", 
+      "name": "input_bearing_2|input_bearing_2", 
+      "geo_id": 4535, 
+      "material": ""
+    }, 
+    {
+      "faces": 4, 
+      "edges": 6, 
+      "object_id": 99, 
+      "volume": "8.0245323725865912E-07 [m m m]", 
+      "name": "input_front_retaining_ring|input_front_retaining_ring", 
+      "geo_id": 4550, 
+      "material": ""
+    }, 
+    {
+      "faces": 4, 
+      "edges": 6, 
+      "object_id": 102, 
+      "volume": "1.7049904775659424E-06 [m m m]", 
+      "name": "input_rear_clamp_collar|input_rear_clamp_collar", 
+      "geo_id": 4565, 
+      "material": ""
+    }, 
+    {
+      "faces": 10, 
+      "edges": 21, 
+      "object_id": 105, 
+      "volume": "2.5134611624012911E-05 [m m m]", 
+      "name": "input_front_outer_retainer|input_front_outer_retainer", 
+      "geo_id": 4609, 
+      "material": ""
+    }, 
+    {
+      "faces": 10, 
+      "edges": 21, 
+      "object_id": 108, 
+      "volume": "1.7294773096132722E-05 [m m m]", 
+      "name": "input_rear_outer_retainer|input_rear_outer_retainer", 
+      "geo_id": 4655, 
+      "material": ""
+    }, 
+    {
+      "faces": 4, 
+      "edges": 6, 
+      "object_id": 111, 
+      "volume": "2.1936820427419121E-06 [m m m]", 
+      "name": "input_front_seal|input_front_seal", 
+      "geo_id": 4672, 
+      "material": ""
+    }, 
+    {
+      "faces": 4, 
+      "edges": 6, 
+      "object_id": 114, 
+      "volume": "2.1936820427419167E-06 [m m m]", 
+      "name": "input_rear_seal|input_rear_seal", 
+      "geo_id": 4687, 
+      "material": ""
+    }, 
+    {
+      "faces": 4, 
+      "edges": 6, 
+      "object_id": 117, 
+      "volume": "6.76862970147608E-05 [m m m]", 
+      "name": "intermediate_bearing_1|intermediate_bearing_1", 
+      "geo_id": 4702, 
+      "material": ""
+    }, 
+    {
+      "faces": 4, 
+      "edges": 6, 
+      "object_id": 120, 
+      "volume": "6.76862970212102E-05 [m m m]", 
+      "name": "intermediate_bearing_2|intermediate_bearing_2", 
+      "geo_id": 4717, 
+      "material": ""
+    }, 
+    {
+      "faces": 4, 
+      "edges": 6, 
+      "object_id": 123, 
+      "volume": "1.0535120627365297E-06 [m m m]", 
+      "name": "intermediate_front_retaining_ring|intermediate_front_retaining_ring", 
+      "geo_id": 4732, 
+      "material": ""
+    }, 
+    {
+      "faces": 4, 
+      "edges": 6, 
+      "object_id": 126, 
+      "volume": "2.2060119872196895E-06 [m m m]", 
+      "name": "intermediate_rear_clamp_collar|intermediate_rear_clamp_collar", 
+      "geo_id": 4747, 
+      "material": ""
+    }, 
+    {
+      "faces": 10, 
+      "edges": 21, 
+      "object_id": 129, 
+      "volume": "3.6681736282912952E-05 [m m m]", 
+      "name": "intermediate_front_outer_retainer|intermediate_front_outer_retainer", 
+      "geo_id": 4791, 
+      "material": ""
+    }, 
+    {
+      "faces": 10, 
+      "edges": 21, 
+      "object_id": 132, 
+      "volume": "2.5118545585962143E-05 [m m m]", 
+      "name": "intermediate_rear_outer_retainer|intermediate_rear_outer_retainer", 
+      "geo_id": 4837, 
+      "material": ""
+    }, 
+    {
+      "faces": 4, 
+      "edges": 6, 
+      "object_id": 135, 
+      "volume": "2.8210438376422351E-06 [m m m]", 
+      "name": "intermediate_front_seal|intermediate_front_seal", 
+      "geo_id": 4854, 
+      "material": ""
+    }, 
+    {
+      "faces": 4, 
+      "edges": 6, 
+      "object_id": 138, 
+      "volume": "2.8210438376422469E-06 [m m m]", 
+      "name": "intermediate_rear_seal|intermediate_rear_seal", 
+      "geo_id": 4869, 
+      "material": ""
+    }, 
+    {
+      "faces": 4, 
+      "edges": 6, 
+      "object_id": 141, 
+      "volume": "8.7752370670797736E-05 [m m m]", 
+      "name": "output_bearing_1|output_bearing_1", 
+      "geo_id": 4884, 
+      "material": ""
+    }, 
+    {
+      "faces": 4, 
+      "edges": 6, 
+      "object_id": 144, 
+      "volume": "8.7752370673064071E-05 [m m m]", 
+      "name": "output_bearing_2|output_bearing_2", 
+      "geo_id": 4899, 
+      "material": ""
+    }, 
+    {
+      "faces": 4, 
+      "edges": 6, 
+      "object_id": 147, 
+      "volume": "1.3038841322419551E-06 [m m m]", 
+      "name": "output_front_retaining_ring|output_front_retaining_ring", 
+      "geo_id": 4914, 
+      "material": ""
+    }, 
+    {
+      "faces": 4, 
+      "edges": 6, 
+      "object_id": 150, 
+      "volume": "2.7082395584381086E-06 [m m m]", 
+      "name": "output_rear_clamp_collar|output_rear_clamp_collar", 
+      "geo_id": 4929, 
+      "material": ""
+    }, 
+    {
+      "faces": 10, 
+      "edges": 21, 
+      "object_id": 153, 
+      "volume": "4.1762056724239981E-05 [m m m]", 
+      "name": "output_front_outer_retainer|output_front_outer_retainer", 
+      "geo_id": 4973, 
+      "material": ""
+    }, 
+    {
+      "faces": 10, 
+      "edges": 21, 
+      "object_id": 156, 
+      "volume": "2.8631302190587723E-05 [m m m]", 
+      "name": "output_rear_outer_retainer|output_rear_outer_retainer", 
+      "geo_id": 5019, 
+      "material": ""
+    }, 
+    {
+      "faces": 4, 
+      "edges": 6, 
+      "object_id": 159, 
+      "volume": "3.4468931320458775E-06 [m m m]", 
+      "name": "output_front_seal|output_front_seal", 
+      "geo_id": 5036, 
+      "material": ""
+    }, 
+    {
+      "faces": 4, 
+      "edges": 6, 
+      "object_id": 162, 
+      "volume": "3.4468931320458567E-06 [m m m]", 
+      "name": "output_rear_seal|output_rear_seal", 
+      "geo_id": 5051, 
+      "material": ""
+    }, 
+    {
+      "faces": 6, 
+      "edges": 12, 
+      "object_id": 165, 
+      "volume": "2.8980000000000017E-06 [m m m]", 
+      "name": "intermediate_gear_key|intermediate_gear_key", 
+      "geo_id": 5078, 
+      "material": ""
+    }, 
+    {
+      "faces": 6, 
+      "edges": 12, 
+      "object_id": 168, 
+      "volume": "2.8980000000000017E-06 [m m m]", 
+      "name": "intermediate_gear_key_opposed|intermediate_gear_key_opposed", 
+      "geo_id": 5105, 
+      "material": ""
+    }, 
+    {
+      "faces": 15, 
+      "edges": 36, 
+      "object_id": 171, 
+      "volume": "0.00038489481645664181 [m m m]", 
+      "name": "stage1_gear|stage1_gear", 
+      "geo_id": 5178, 
+      "material": ""
+    }, 
+    {
+      "faces": 4, 
+      "edges": 6, 
+      "object_id": 174, 
+      "volume": "6.2674242473208289E-06 [m m m]", 
+      "name": "intermediate_gear_retaining_collar|intermediate_gear_retaining_collar", 
+      "geo_id": 5196, 
+      "material": ""
+    }, 
+    {
+      "faces": 6, 
+      "edges": 12, 
+      "object_id": 177, 
+      "volume": "5.9400000000000007E-06 [m m m]", 
+      "name": "output_gear_key|output_gear_key", 
+      "geo_id": 5223, 
+      "material": ""
+    }, 
+    {
+      "faces": 6, 
+      "edges": 12, 
+      "object_id": 180, 
+      "volume": "5.9400000000000007E-06 [m m m]", 
+      "name": "output_gear_key_opposed|output_gear_key_opposed", 
+      "geo_id": 5250, 
+      "material": ""
+    }, 
+    {
+      "faces": 124, 
+      "edges": 355, 
+      "object_id": 183, 
+      "volume": "0.000703450433852494 [m m m]", 
+      "name": "stage2_gear|stage2_gear", 
+      "geo_id": 5919, 
+      "material": ""
+    }, 
+    {
+      "faces": 4, 
+      "edges": 6, 
+      "object_id": 186, 
+      "volume": "8.4125708410165037E-06 [m m m]", 
+      "name": "output_gear_retaining_collar|output_gear_retaining_collar", 
+      "geo_id": 5979, 
+      "material": ""
+    }, 
+    {
+      "faces": 6, 
+      "edges": 12, 
+      "object_id": 189, 
+      "volume": "3.36E-06 [m m m]", 
+      "name": "hub_key_-1|hub_key_-1", 
+      "geo_id": 6006, 
+      "material": ""
+    }, 
+    {
+      "faces": 6, 
+      "edges": 12, 
+      "object_id": 192, 
+      "volume": "3.36E-06 [m m m]", 
+      "name": "hub_key_1|hub_key_1", 
+      "geo_id": 6033, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 195, 
+      "volume": "7.818242240469348E-07 [m m m]", 
+      "name": "disc_hub_bolt_1|disc_hub_bolt_1", 
+      "geo_id": 6042, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 198, 
+      "volume": "8.01251225442582E-07 [m m m]", 
+      "name": "disc_hub_bolt_head_1|disc_hub_bolt_head_1", 
+      "geo_id": 6051, 
+      "material": ""
+    }, 
+    {
+      "faces": 4, 
+      "edges": 6, 
+      "object_id": 201, 
+      "volume": "6.1117956353165447E-07 [m m m]", 
+      "name": "disc_hub_nut_1|disc_hub_nut_1", 
+      "geo_id": 6066, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 204, 
+      "volume": "7.8182424855265835E-07 [m m m]", 
+      "name": "disc_hub_bolt_2|disc_hub_bolt_2", 
+      "geo_id": 6075, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 207, 
+      "volume": "8.0125122378562088E-07 [m m m]", 
+      "name": "disc_hub_bolt_head_2|disc_hub_bolt_head_2", 
+      "geo_id": 6084, 
+      "material": ""
+    }, 
+    {
+      "faces": 4, 
+      "edges": 6, 
+      "object_id": 210, 
+      "volume": "6.1117958219490918E-07 [m m m]", 
+      "name": "disc_hub_nut_2|disc_hub_nut_2", 
+      "geo_id": 6099, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 213, 
+      "volume": "7.8182437827075778E-07 [m m m]", 
+      "name": "disc_hub_bolt_3|disc_hub_bolt_3", 
+      "geo_id": 6108, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 216, 
+      "volume": "8.0125123715015077E-07 [m m m]", 
+      "name": "disc_hub_bolt_head_3|disc_hub_bolt_head_3", 
+      "geo_id": 6117, 
+      "material": ""
+    }, 
+    {
+      "faces": 4, 
+      "edges": 6, 
+      "object_id": 219, 
+      "volume": "6.1117947668523012E-07 [m m m]", 
+      "name": "disc_hub_nut_3|disc_hub_nut_3", 
+      "geo_id": 6132, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 222, 
+      "volume": "7.8182437827075778E-07 [m m m]", 
+      "name": "disc_hub_bolt_4|disc_hub_bolt_4", 
+      "geo_id": 6141, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 225, 
+      "volume": "8.0125123715015077E-07 [m m m]", 
+      "name": "disc_hub_bolt_head_4|disc_hub_bolt_head_4", 
+      "geo_id": 6150, 
+      "material": ""
+    }, 
+    {
+      "faces": 4, 
+      "edges": 6, 
+      "object_id": 228, 
+      "volume": "6.1117949517427419E-07 [m m m]", 
+      "name": "disc_hub_nut_4|disc_hub_nut_4", 
+      "geo_id": 6165, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 231, 
+      "volume": "7.8182424855265835E-07 [m m m]", 
+      "name": "disc_hub_bolt_5|disc_hub_bolt_5", 
+      "geo_id": 6174, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 234, 
+      "volume": "8.0125122378562088E-07 [m m m]", 
+      "name": "disc_hub_bolt_head_5|disc_hub_bolt_head_5", 
+      "geo_id": 6183, 
+      "material": ""
+    }, 
+    {
+      "faces": 4, 
+      "edges": 6, 
+      "object_id": 237, 
+      "volume": "6.1117957312966739E-07 [m m m]", 
+      "name": "disc_hub_nut_5|disc_hub_nut_5", 
+      "geo_id": 6198, 
+      "material": ""
+    }, 
+    {
+      "faces": 23, 
+      "edges": 54, 
+      "object_id": 240, 
+      "volume": "0.00011517758224592225 [m m m]", 
+      "name": "disc_hub|disc_hub", 
+      "geo_id": 6309, 
+      "material": ""
+    }, 
+    {
+      "faces": 4, 
+      "edges": 6, 
+      "object_id": 243, 
+      "volume": "6.6584323533185644E-06 [m m m]", 
+      "name": "hub_front_axial_collar|hub_front_axial_collar", 
+      "geo_id": 6327, 
+      "material": ""
+    }, 
+    {
+      "faces": 4, 
+      "edges": 6, 
+      "object_id": 246, 
+      "volume": "6.6584323533184848E-06 [m m m]", 
+      "name": "hub_rear_axial_collar|hub_rear_axial_collar", 
+      "geo_id": 6342, 
+      "material": ""
+    }, 
+    {
+      "faces": 6, 
+      "edges": 12, 
+      "object_id": 249, 
+      "volume": "4.0320000000000005E-06 [m m m]", 
+      "name": "halfshaft_key_-1|halfshaft_key_-1", 
+      "geo_id": 6369, 
+      "material": ""
+    }, 
+    {
+      "faces": 6, 
+      "edges": 12, 
+      "object_id": 252, 
+      "volume": "4.0320000000000014E-06 [m m m]", 
+      "name": "halfshaft_key_1|halfshaft_key_1", 
+      "geo_id": 6396, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 255, 
+      "volume": "1.8712055401845532E-06 [m m m]", 
+      "name": "halfshaft_bolt_1|halfshaft_bolt_1", 
+      "geo_id": 6405, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 258, 
+      "volume": "1.8712056384121947E-06 [m m m]", 
+      "name": "halfshaft_bolt_2|halfshaft_bolt_2", 
+      "geo_id": 6414, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 261, 
+      "volume": "1.8712054224083696E-06 [m m m]", 
+      "name": "halfshaft_bolt_3|halfshaft_bolt_3", 
+      "geo_id": 6423, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 264, 
+      "volume": "1.871205638412197E-06 [m m m]", 
+      "name": "halfshaft_bolt_4|halfshaft_bolt_4", 
+      "geo_id": 6432, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 267, 
+      "volume": "1.8712055401845532E-06 [m m m]", 
+      "name": "halfshaft_bolt_5|halfshaft_bolt_5", 
+      "geo_id": 6441, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 270, 
+      "volume": "1.871205638412197E-06 [m m m]", 
+      "name": "halfshaft_bolt_6|halfshaft_bolt_6", 
+      "geo_id": 6450, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 273, 
+      "volume": "1.8712054224083696E-06 [m m m]", 
+      "name": "halfshaft_bolt_7|halfshaft_bolt_7", 
+      "geo_id": 6459, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 276, 
+      "volume": "1.871205638412196E-06 [m m m]", 
+      "name": "halfshaft_bolt_8|halfshaft_bolt_8", 
+      "geo_id": 6468, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 279, 
+      "volume": "1.800384217871347E-06 [m m m]", 
+      "name": "halfshaft_drive_dowel_1|halfshaft_drive_dowel_1", 
+      "geo_id": 6477, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 282, 
+      "volume": "1.8003842178713542E-06 [m m m]", 
+      "name": "halfshaft_drive_dowel_2|halfshaft_drive_dowel_2", 
+      "geo_id": 6486, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 285, 
+      "volume": "1.8003842178713531E-06 [m m m]", 
+      "name": "halfshaft_drive_dowel_3|halfshaft_drive_dowel_3", 
+      "geo_id": 6495, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 288, 
+      "volume": "1.8003842178713483E-06 [m m m]", 
+      "name": "halfshaft_drive_dowel_4|halfshaft_drive_dowel_4", 
+      "geo_id": 6504, 
+      "material": ""
+    }, 
+    {
+      "faces": 14, 
+      "edges": 33, 
+      "object_id": 291, 
+      "volume": "3.9001145742001219E-05 [m m m]", 
+      "name": "hub_removable_sleeve|hub_removable_sleeve", 
+      "geo_id": 6571, 
+      "material": ""
+    }, 
+    {
+      "faces": 14, 
+      "edges": 33, 
+      "object_id": 294, 
+      "volume": "4.68013748904015E-05 [m m m]", 
+      "name": "halfshaft_removable_sleeve|halfshaft_removable_sleeve", 
+      "geo_id": 6641, 
+      "material": ""
+    }, 
+    {
+      "faces": 40, 
+      "edges": 72, 
+      "object_id": 297, 
+      "volume": "0.00034439786647353981 [m m m]", 
+      "name": "output_halfshaft_flange|output_halfshaft_flange", 
+      "geo_id": 6802, 
+      "material": ""
+    }, 
+    {
+      "faces": 25, 
+      "edges": 48, 
+      "object_id": 300, 
+      "volume": "0.00010228598409345492 [m m m]", 
+      "name": "wheel_halfshaft_interface|wheel_halfshaft_interface", 
+      "geo_id": 6908, 
+      "material": ""
+    }, 
+    {
+      "faces": 388, 
+      "edges": 1131, 
+      "object_id": 303, 
+      "volume": "0.00017329040645150127 [m m m]", 
+      "name": "input_shaft|input_shaft", 
+      "geo_id": 9119, 
+      "material": ""
+    }, 
+    {
+      "faces": 394, 
+      "edges": 1140, 
+      "object_id": 306, 
+      "volume": "0.00029600865610753164 [m m m]", 
+      "name": "intermediate_shaft|intermediate_shaft", 
+      "geo_id": 11414, 
+      "material": ""
+    }, 
+    {
+      "faces": 31, 
+      "edges": 57, 
+      "object_id": 309, 
+      "volume": "0.000580742950188372 [m m m]", 
+      "name": "output_shaft|output_shaft", 
+      "geo_id": 11604, 
+      "material": ""
+    }, 
+    {
+      "faces": 14, 
+      "edges": 30, 
+      "object_id": 312, 
+      "volume": "0.0003450682469629094 [m m m]", 
+      "name": "caliper|caliper", 
+      "geo_id": 11669, 
+      "material": ""
+    }, 
+    {
+      "faces": 10, 
+      "edges": 24, 
+      "object_id": 315, 
+      "volume": "0.00013811405138450237 [m m m]", 
+      "name": "caliper_reaction_bracket|caliper_reaction_bracket", 
+      "geo_id": 11720, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 318, 
+      "volume": "5.702299994403492E-06 [m m m]", 
+      "name": "caliper_mount_bolt_1|caliper_mount_bolt_1", 
+      "geo_id": 11732, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 321, 
+      "volume": "1.2519545612941683E-06 [m m m]", 
+      "name": "caliper_mount_bolt_head_1|caliper_mount_bolt_head_1", 
+      "geo_id": 11741, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 324, 
+      "volume": "5.7022999944034971E-06 [m m m]", 
+      "name": "caliper_mount_bolt_2|caliper_mount_bolt_2", 
+      "geo_id": 11750, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 327, 
+      "volume": "1.2519545612941683E-06 [m m m]", 
+      "name": "caliper_mount_bolt_head_2|caliper_mount_bolt_head_2", 
+      "geo_id": 11759, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 330, 
+      "volume": "1.2423313495029894E-05 [m m m]", 
+      "name": "case_tie_bolt_1|case_tie_bolt_1", 
+      "geo_id": 11768, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 333, 
+      "volume": "1.2423309393912757E-05 [m m m]", 
+      "name": "case_tie_bolt_2|case_tie_bolt_2", 
+      "geo_id": 11777, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 336, 
+      "volume": "1.2423319554125748E-05 [m m m]", 
+      "name": "case_tie_bolt_3|case_tie_bolt_3", 
+      "geo_id": 11786, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 339, 
+      "volume": "1.2423315453009522E-05 [m m m]", 
+      "name": "case_tie_bolt_4|case_tie_bolt_4", 
+      "geo_id": 11795, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 342, 
+      "volume": "2.339006474102029E-07 [m m m]", 
+      "name": "input_front_cap_bolt_1|input_front_cap_bolt_1", 
+      "geo_id": 11804, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 345, 
+      "volume": "2.3390067475649336E-07 [m m m]", 
+      "name": "input_front_cap_bolt_2|input_front_cap_bolt_2", 
+      "geo_id": 11813, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 348, 
+      "volume": "2.3390067475650427E-07 [m m m]", 
+      "name": "input_front_cap_bolt_3|input_front_cap_bolt_3", 
+      "geo_id": 11822, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 351, 
+      "volume": "2.3390064741019419E-07 [m m m]", 
+      "name": "input_front_cap_bolt_4|input_front_cap_bolt_4", 
+      "geo_id": 11831, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 354, 
+      "volume": "2.0484483701793761E-07 [m m m]", 
+      "name": "input_rear_cap_bolt_1|input_rear_cap_bolt_1", 
+      "geo_id": 11840, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 357, 
+      "volume": "2.0484466168371879E-07 [m m m]", 
+      "name": "input_rear_cap_bolt_2|input_rear_cap_bolt_2", 
+      "geo_id": 11849, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 360, 
+      "volume": "2.0484466168371821E-07 [m m m]", 
+      "name": "input_rear_cap_bolt_3|input_rear_cap_bolt_3", 
+      "geo_id": 11858, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 363, 
+      "volume": "2.0484483701793806E-07 [m m m]", 
+      "name": "input_rear_cap_bolt_4|input_rear_cap_bolt_4", 
+      "geo_id": 11867, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 366, 
+      "volume": "2.3390055015130029E-07 [m m m]", 
+      "name": "intermediate_front_cap_bolt_1|intermediate_front_cap_bolt_1", 
+      "geo_id": 11876, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 369, 
+      "volume": "2.3390063257475141E-07 [m m m]", 
+      "name": "intermediate_front_cap_bolt_2|intermediate_front_cap_bolt_2", 
+      "geo_id": 11885, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 372, 
+      "volume": "2.3390063257474554E-07 [m m m]", 
+      "name": "intermediate_front_cap_bolt_3|intermediate_front_cap_bolt_3", 
+      "geo_id": 11894, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 375, 
+      "volume": "2.3390055015130203E-07 [m m m]", 
+      "name": "intermediate_front_cap_bolt_4|intermediate_front_cap_bolt_4", 
+      "geo_id": 11903, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 378, 
+      "volume": "2.0484493695388529E-07 [m m m]", 
+      "name": "intermediate_rear_cap_bolt_1|intermediate_rear_cap_bolt_1", 
+      "geo_id": 11912, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 381, 
+      "volume": "2.0484469664614033E-07 [m m m]", 
+      "name": "intermediate_rear_cap_bolt_2|intermediate_rear_cap_bolt_2", 
+      "geo_id": 11921, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 384, 
+      "volume": "2.0484469664614033E-07 [m m m]", 
+      "name": "intermediate_rear_cap_bolt_3|intermediate_rear_cap_bolt_3", 
+      "geo_id": 11930, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 387, 
+      "volume": "2.0484493695388606E-07 [m m m]", 
+      "name": "intermediate_rear_cap_bolt_4|intermediate_rear_cap_bolt_4", 
+      "geo_id": 11939, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 390, 
+      "volume": "2.3390051176515329E-07 [m m m]", 
+      "name": "output_front_cap_bolt_1|output_front_cap_bolt_1", 
+      "geo_id": 11948, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 393, 
+      "volume": "2.33900511765154E-07 [m m m]", 
+      "name": "output_front_cap_bolt_2|output_front_cap_bolt_2", 
+      "geo_id": 11957, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 396, 
+      "volume": "2.3390051176515326E-07 [m m m]", 
+      "name": "output_front_cap_bolt_3|output_front_cap_bolt_3", 
+      "geo_id": 11966, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 399, 
+      "volume": "2.33900511765154E-07 [m m m]", 
+      "name": "output_front_cap_bolt_4|output_front_cap_bolt_4", 
+      "geo_id": 11975, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 402, 
+      "volume": "2.0484483083676683E-07 [m m m]", 
+      "name": "output_rear_cap_bolt_1|output_rear_cap_bolt_1", 
+      "geo_id": 11984, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 405, 
+      "volume": "2.0484483083676667E-07 [m m m]", 
+      "name": "output_rear_cap_bolt_2|output_rear_cap_bolt_2", 
+      "geo_id": 11993, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 408, 
+      "volume": "2.0484483083676651E-07 [m m m]", 
+      "name": "output_rear_cap_bolt_3|output_rear_cap_bolt_3", 
+      "geo_id": 12002, 
+      "material": ""
+    }, 
+    {
+      "faces": 3, 
+      "edges": 3, 
+      "object_id": 411, 
+      "volume": "2.0484483083676667E-07 [m m m]", 
+      "name": "output_rear_cap_bolt_4|output_rear_cap_bolt_4", 
+      "geo_id": 12011, 
+      "material": ""
+    }, 
+    {
+      "faces": 91, 
+      "edges": 186, 
+      "object_id": 414, 
+      "volume": "0.0017318071300172525 [m m m]", 
+      "name": "gear_case_front|gear_case_front", 
+      "geo_id": 12410, 
+      "material": ""
+    }, 
+    {
+      "faces": 88, 
+      "edges": 189, 
+      "object_id": 417, 
+      "volume": "0.0018090592167938444 [m m m]", 
+      "name": "gear_case_rear|gear_case_rear", 
+      "geo_id": 12814, 
+      "material": ""
+    }, 
+    {
+      "faces": 10, 
+      "edges": 22, 
+      "object_id": 420, 
+      "volume": "1.801569251163215E-06 [m m m]", 
+      "name": "oil_inventory|oil_inventory", 
+      "geo_id": 12862, 
+      "material": ""
+    }, 
+    {
+      "faces": 159, 
+      "edges": 462, 
+      "object_id": 423, 
+      "volume": "0.00081966348144314315 [m m m]", 
+      "name": "oil_inventory|oil_inventory[2]", 
+      "geo_id": 13727, 
+      "material": ""
+    }, 
+    {
+      "faces": 10, 
+      "edges": 22, 
+      "object_id": 426, 
+      "volume": "1.8015672837244246E-06 [m m m]", 
+      "name": "oil_inventory|oil_inventory[3]", 
+      "geo_id": 13838, 
+      "material": ""
+    }
+  ], 
+  "body_count": 131
+}

@@ -1,0 +1,15 @@
+# encoding: utf-8
+import os,traceback
+run=r'E:\ansys_runs\m4_case0_20261021'
+try:
+    SetScriptVersion(Version='24.1.0')
+    Open(FilePath=os.path.join(run,'Case0_probe.wbpj'))
+    system=GetAllSystems()[0]
+    model=system.GetContainer(ComponentName='Model')
+    model.Edit(Hidden=True)
+    model.SendCommand(Language='Python',Command="execfile(r'E:\\ansys_runs\\m4_case0_20261021\\mechanical_mesh.py')")
+    model.Exit()
+    Save(FilePath=os.path.join(run,'Case0_mesh.wbpj'),Overwrite=True)
+except:
+    with open(os.path.join(run,'mesh_workbench_failure.txt'),'w') as f:f.write(traceback.format_exc())
+    raise

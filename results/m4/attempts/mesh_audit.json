@@ -1,0 +1,9 @@
+{
+  "status": "MESH_EXECUTED", 
+  "quality_min": "0.0042919822529870208", 
+  "order": "linear", 
+  "elements": 107608, 
+  "element_size_mm": 15, 
+  "quality_mean": "0.49301124893025916", 
+  "nodes": 40094
+}

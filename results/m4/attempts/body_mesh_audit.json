@@ -1,0 +1,1050 @@
+[
+  {
+    "geo_Volume": "3113742.41432", 
+    "volume": "0.00311374241431663 [m m m]", 
+    "name": "motor_case", 
+    "geo_id": 331, 
+    "suppressed": false, 
+    "geo_Centroid": "Array[float]((-140.57473822932812, 119.99090581892347, 99.921759289437347))"
+  }, 
+  {
+    "geo_Volume": "459145.119986", 
+    "volume": "0.00045914511998566794 [m m m]", 
+    "name": "motor_water_jacket", 
+    "geo_id": 349, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((-140.4999999999859, 119.99999697259145, 100.13179710537342))"
+  }, 
+  {
+    "geo_Volume": "1338951.52281", 
+    "volume": "0.0013389515228090715 [m m m]", 
+    "name": "motor_stator", 
+    "geo_id": 1450, 
+    "suppressed": false, 
+    "geo_Centroid": "Array[float]((-139.59999847410714, 120.00000472696003, 100.00863599347184))"
+  }, 
+  {
+    "geo_Volume": "530153.382951", 
+    "volume": "0.00053015338295143229 [m m m]", 
+    "name": "motor_winding", 
+    "geo_id": 3303, 
+    "suppressed": false, 
+    "geo_Centroid": "Array[float]((-139.59999847410714, 119.99999914452337, 99.99999216406087))"
+  }, 
+  {
+    "geo_Volume": "908588.327926", 
+    "volume": "0.00090858832792551573 [m m m]", 
+    "name": "motor_rotor_other", 
+    "geo_id": 3384, 
+    "suppressed": false, 
+    "geo_Centroid": "Array[float]((-139.91749954222234, 120.00000076186879, 99.999997814767354))"
+  }, 
+  {
+    "geo_Volume": "665054.508445", 
+    "volume": "0.000665054508444822 [m m m]", 
+    "name": "brake_disc_hat", 
+    "geo_id": 4013, 
+    "suppressed": false, 
+    "geo_Centroid": "Array[float]((210.01721502981903, 9.9339502841997126e-09, 0.0047549421679978559))"
+  }, 
+  {
+    "geo_Volume": "15096.0", 
+    "volume": "1.5095999999999972E-05 [m m m]", 
+    "name": "pad_near", 
+    "geo_id": 4067, 
+    "suppressed": false, 
+    "geo_Centroid": "Array[float]((200.24999999998, -113.49999999998866, -1.2852777979477064e-15))"
+  }, 
+  {
+    "geo_Volume": "15096.0000000", 
+    "volume": "1.5096000000000052E-05 [m m m]", 
+    "name": "pad_far", 
+    "geo_id": 4094, 
+    "suppressed": false, 
+    "geo_Centroid": "Array[float]((231.74999999997681, -113.49999999998866, -1.2852777979477041e-15))"
+  }, 
+  {
+    "geo_Volume": "207334.399948", 
+    "volume": "0.00020733439994807015 [m m m]", 
+    "name": "motor_rotor_shaft", 
+    "geo_id": 4169, 
+    "suppressed": false, 
+    "geo_Centroid": "Array[float]((-130.53509498548058, 119.99999730572351, 99.995886456481117))"
+  }, 
+  {
+    "geo_Volume": "42279.6716103", 
+    "volume": "4.227967161027814E-05 [m m m]", 
+    "name": "motor_input_coupling", 
+    "geo_id": 4287, 
+    "suppressed": false, 
+    "geo_Centroid": "Array[float]((-35.0980518286827, 120.00002329897258, 99.998314539742452))"
+  }, 
+  {
+    "geo_Volume": "720.0", 
+    "volume": "7.1999999999999967E-07 [m m m]", 
+    "name": "coupling_motor_key_-1", 
+    "geo_id": 4317, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((-42.9999999999957, 119.999999999988, 84.9999999999915))"
+  }, 
+  {
+    "geo_Volume": "720.000000000", 
+    "volume": "7.1999999999999882E-07 [m m m]", 
+    "name": "coupling_motor_key_1", 
+    "geo_id": 4344, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((-42.9999999999957, 119.999999999988, 114.9999999999885))"
+  }, 
+  {
+    "geo_Volume": "640.000000000", 
+    "volume": "6.4000000000000181E-07 [m m m]", 
+    "name": "coupling_input_key_-1", 
+    "geo_id": 4371, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((-19.999999999998003, 119.999999999988, 84.9999999999915))"
+  }, 
+  {
+    "geo_Volume": "640.000000000", 
+    "volume": "6.4000000000000245E-07 [m m m]", 
+    "name": "coupling_input_key_1", 
+    "geo_id": 4398, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((-19.999999999998003, 119.999999999988, 114.9999999999885))"
+  }, 
+  {
+    "geo_Volume": "6522.24057359", 
+    "volume": "6.52224057358631E-06 [m m m]", 
+    "name": "motor_mount_bolt_1", 
+    "geo_id": 4407, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((-25.999999999997421, 251.55696948634395, 147.88281924531017))"
+  }, 
+  {
+    "geo_Volume": "6522.23807343", 
+    "volume": "6.5222380734328257E-06 [m m m]", 
+    "name": "motor_mount_bolt_2", 
+    "geo_id": 4416, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((-25.999999999997371, 95.689255286815552, 237.87308798146302))"
+  }, 
+  {
+    "geo_Volume": "6522.24004792", 
+    "volume": "6.5222400479186878E-06 [m m m]", 
+    "name": "motor_mount_bolt_3", 
+    "geo_id": 4425, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((-25.999999999997403, -20.000000270058411, 99.99999999999001))"
+  }, 
+  {
+    "geo_Volume": "6522.24276511", 
+    "volume": "6.522242765108294E-06 [m m m]", 
+    "name": "motor_mount_bolt_4", 
+    "geo_id": 4434, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((-25.999999999997396, 189.99999999998101, -21.243556394451055))"
+  }, 
+  {
+    "geo_Volume": "3751434.53865", 
+    "volume": "0.0037514345386461295 [m m m]", 
+    "name": "motor_gear_adapter", 
+    "geo_id": 4502, 
+    "suppressed": false, 
+    "geo_Centroid": "Array[float]((-30.861545565838021, 121.03112799321485, 103.19717318896512))"
+  }, 
+  {
+    "geo_Volume": "36901.4136554", 
+    "volume": "3.6901413655378442E-05 [m m m]", 
+    "name": "input_bearing_1", 
+    "geo_id": 4520, 
+    "suppressed": false, 
+    "geo_Centroid": "Array[float]((7.9999999999992015, 119.99999904464391, 100.00092446573007))"
+  }, 
+  {
+    "geo_Volume": "36901.4136566", 
+    "volume": "3.6901413656581195E-05 [m m m]", 
+    "name": "input_bearing_2", 
+    "geo_id": 4535, 
+    "suppressed": false, 
+    "geo_Centroid": "Array[float]((151.99999999998482, 119.99999904464391, 100.00092446573007))"
+  }, 
+  {
+    "geo_Volume": "802.453237259", 
+    "volume": "8.0245323725865912E-07 [m m m]", 
+    "name": "input_front_retaining_ring", 
+    "geo_id": 4550, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((-1.9999999999998004, 119.99999574973633, 100.00208584959738))"
+  }, 
+  {
+    "geo_Volume": "1704.99047757", 
+    "volume": "1.7049904775659424E-06 [m m m]", 
+    "name": "input_rear_clamp_collar", 
+    "geo_id": 4565, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((161.9999999999838, 120.00000470563178, 99.99999999999))"
+  }, 
+  {
+    "geo_Volume": "25134.6116240", 
+    "volume": "2.5134611624012911E-05 [m m m]", 
+    "name": "input_front_outer_retainer", 
+    "geo_id": 4609, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((-3.321289130339065, 120.00000022922993, 99.9999995862568))"
+  }, 
+  {
+    "geo_Volume": "17294.7730961", 
+    "volume": "1.7294773096132722E-05 [m m m]", 
+    "name": "input_rear_outer_retainer", 
+    "geo_id": 4655, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((162.87354535031591, 119.99999998736605, 99.999999599135819))"
+  }, 
+  {
+    "geo_Volume": "2193.68204274", 
+    "volume": "2.1936820427419121E-06 [m m m]", 
+    "name": "input_front_seal", 
+    "geo_id": 4672, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((-7.999999999999201, 120.00000183569182, 100.0018754443212))"
+  }, 
+  {
+    "geo_Volume": "2193.68204274", 
+    "volume": "2.1936820427419167E-06 [m m m]", 
+    "name": "input_rear_seal", 
+    "geo_id": 4687, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((166.49999999998334, 120.0000018356918, 100.0018754443212))"
+  }, 
+  {
+    "geo_Volume": "67686.2970148", 
+    "volume": "6.76862970147608E-05 [m m m]", 
+    "name": "intermediate_bearing_1", 
+    "geo_id": 4702, 
+    "suppressed": false, 
+    "geo_Centroid": "Array[float]((8.999999999999101, 120.00000028256659, 1.5228498446178724e-16))"
+  }, 
+  {
+    "geo_Volume": "67686.2970212", 
+    "volume": "6.76862970212102E-05 [m m m]", 
+    "name": "intermediate_bearing_2", 
+    "geo_id": 4717, 
+    "suppressed": false, 
+    "geo_Centroid": "Array[float]((150.99999999998491, 120.00000028256659, -9.9433136913284315e-16))"
+  }, 
+  {
+    "geo_Volume": "1053.51206274", 
+    "volume": "1.0535120627365297E-06 [m m m]", 
+    "name": "intermediate_front_retaining_ring", 
+    "geo_id": 4732, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((-1.9999999999998002, 119.99999662369147, -6.695053912918618e-15))"
+  }, 
+  {
+    "geo_Volume": "2206.01198722", 
+    "volume": "2.2060119872196895E-06 [m m m]", 
+    "name": "intermediate_rear_clamp_collar", 
+    "geo_id": 4747, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((161.9999999999838, 120.00000779675081, 0.0037768426583990353))"
+  }, 
+  {
+    "geo_Volume": "36681.7362829", 
+    "volume": "3.6681736282912952E-05 [m m m]", 
+    "name": "intermediate_front_outer_retainer", 
+    "geo_id": 4791, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((-3.271547156624997, 119.9999976862413, 1.3936412398411028e-15))"
+  }, 
+  {
+    "geo_Volume": "25118.5455860", 
+    "volume": "2.5118545585962143E-05 [m m m]", 
+    "name": "intermediate_rear_outer_retainer", 
+    "geo_id": 4837, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((162.81724197237753, 119.99999763379414, -2.1664510171482628e-15))"
+  }, 
+  {
+    "geo_Volume": "2821.04383764", 
+    "volume": "2.8210438376422351E-06 [m m m]", 
+    "name": "intermediate_front_seal", 
+    "geo_id": 4854, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((-7.9999999999992015, 120.00000698528667, -1.1183130047617499e-14))"
+  }, 
+  {
+    "geo_Volume": "2821.04383764", 
+    "volume": "2.8210438376422469E-06 [m m m]", 
+    "name": "intermediate_rear_seal", 
+    "geo_id": 4869, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((166.49999999998334, 120.00000698528667, -1.2291368160444522e-14))"
+  }, 
+  {
+    "geo_Volume": "87752.3706708", 
+    "volume": "8.7752370670797736E-05 [m m m]", 
+    "name": "output_bearing_1", 
+    "geo_id": 4884, 
+    "suppressed": false, 
+    "geo_Centroid": "Array[float]((9.999999999999002, -7.2291216157568778e-16, 0.0018419119229717118))"
+  }, 
+  {
+    "geo_Volume": "87752.3706731", 
+    "volume": "8.7752370673064071E-05 [m m m]", 
+    "name": "output_bearing_2", 
+    "geo_id": 4899, 
+    "suppressed": false, 
+    "geo_Centroid": "Array[float]((149.99999999998502, -1.6418829380590011e-15, 0.0018419119229720869))"
+  }, 
+  {
+    "geo_Volume": "1303.88413224", 
+    "volume": "1.3038841322419551E-06 [m m m]", 
+    "name": "output_front_retaining_ring", 
+    "geo_id": 4914, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((-1.9999999999998004, -4.7128499683685024e-15, 0.0055195698494253957))"
+  }, 
+  {
+    "geo_Volume": "2708.23955844", 
+    "volume": "2.7082395584381086E-06 [m m m]", 
+    "name": "output_rear_clamp_collar", 
+    "geo_id": 4929, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((161.9999999999838, -3.6896154263122634e-14, 0.0060089894055774563))"
+  }, 
+  {
+    "geo_Volume": "41762.0567242", 
+    "volume": "4.1762056724239981E-05 [m m m]", 
+    "name": "output_front_outer_retainer", 
+    "geo_id": 4973, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((-3.2837256223466555, 9.4643625334567007e-16, 0.001867073270367397))"
+  }, 
+  {
+    "geo_Volume": "28631.3021906", 
+    "volume": "2.8631302190587723E-05 [m m m]", 
+    "name": "output_rear_outer_retainer", 
+    "geo_id": 5019, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((162.83107723728043, 7.6790385597854611e-15, 0.0017478013525076049))"
+  }, 
+  {
+    "geo_Volume": "3446.89313205", 
+    "volume": "3.4468931320458775E-06 [m m m]", 
+    "name": "output_front_seal", 
+    "geo_id": 5036, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((-7.9999999999992015, -3.6473046000843914e-15, 0.0047212901225735168))"
+  }, 
+  {
+    "geo_Volume": "3446.89313205", 
+    "volume": "3.4468931320458567E-06 [m m m]", 
+    "name": "output_rear_seal", 
+    "geo_id": 5051, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((166.49999999998334, -8.0738185853413352e-16, 0.0047212901225714941))"
+  }, 
+  {
+    "geo_Volume": "2898.0", 
+    "volume": "2.8980000000000017E-06 [m m m]", 
+    "name": "intermediate_gear_key", 
+    "geo_id": 5078, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((45.499999999995445, 119.99999999998799, 24.9999999999975))"
+  }, 
+  {
+    "geo_Volume": "2898.0", 
+    "volume": "2.8980000000000017E-06 [m m m]", 
+    "name": "intermediate_gear_key_opposed", 
+    "geo_id": 5105, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((45.499999999995445, 119.99999999998799, -24.9999999999975))"
+  }, 
+  {
+    "geo_Volume": "384894.816457", 
+    "volume": "0.00038489481645664181 [m m m]", 
+    "name": "stage1_gear", 
+    "geo_id": 5178, 
+    "suppressed": false, 
+    "geo_Centroid": "Array[float]((45.499999999995453, 120.00000178000649, -0.12905117510949601))"
+  }, 
+  {
+    "geo_Volume": "6267.42424732", 
+    "volume": "6.2674242473208289E-06 [m m m]", 
+    "name": "intermediate_gear_retaining_collar", 
+    "geo_id": 5196, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((59.999999999994, 119.99999564098074, 0.0018378115087477839))"
+  }, 
+  {
+    "geo_Volume": "5940.0", 
+    "volume": "5.9400000000000007E-06 [m m m]", 
+    "name": "output_gear_key", 
+    "geo_id": 5223, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((110.99999999998892, 2.0415144820937061e-16, 30.999999999996902))"
+  }, 
+  {
+    "geo_Volume": "5940.0", 
+    "volume": "5.9400000000000007E-06 [m m m]", 
+    "name": "output_gear_key_opposed", 
+    "geo_id": 5250, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((110.99999999998892, 2.0415144820937061e-16, -30.999999999996902))"
+  }, 
+  {
+    "geo_Volume": "703450.433852", 
+    "volume": "0.000703450433852494 [m m m]", 
+    "name": "stage2_gear", 
+    "geo_id": 5919, 
+    "suppressed": false, 
+    "geo_Centroid": "Array[float]((110.9999999999889, -0.1802551878388062, 0.34727480044008524))"
+  }, 
+  {
+    "geo_Volume": "8412.57084102", 
+    "volume": "8.4125708410165037E-06 [m m m]", 
+    "name": "output_gear_retaining_collar", 
+    "geo_id": 5979, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((128.9999999999871, -1.3964387870572436e-15, 0.0026736033830993271))"
+  }, 
+  {
+    "geo_Volume": "3360.0", 
+    "volume": "3.36E-06 [m m m]", 
+    "name": "hub_key_-1", 
+    "geo_id": 6006, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((194.49999999998056, 5.6392280615869683e-16, -30.999999999996902))"
+  }, 
+  {
+    "geo_Volume": "3360.0", 
+    "volume": "3.36E-06 [m m m]", 
+    "name": "hub_key_1", 
+    "geo_id": 6033, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((194.49999999998056, 1.5789838572443504e-16, 30.999999999996902))"
+  }, 
+  {
+    "geo_Volume": "781.824224047", 
+    "volume": "7.818242240469348E-07 [m m m]", 
+    "name": "disc_hub_bolt_1", 
+    "geo_id": 6042, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((184.9999999999815, 55.9999999999944, -2.1364053690866178e-15))"
+  }, 
+  {
+    "geo_Volume": "801.251225443", 
+    "volume": "8.01251225442582E-07 [m m m]", 
+    "name": "disc_hub_bolt_head_1", 
+    "geo_id": 6051, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((177.99999999998221, 55.999999999994394, 9.3482597520248253e-17))"
+  }, 
+  {
+    "geo_Volume": "611.179563532", 
+    "volume": "6.1117956353165447E-07 [m m m]", 
+    "name": "disc_hub_nut_1", 
+    "geo_id": 6066, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((192.49999999998076, 55.9999999999944, 0.00043883866776998085))"
+  }, 
+  {
+    "geo_Volume": "781.824248553", 
+    "volume": "7.8182424855265835E-07 [m m m]", 
+    "name": "disc_hub_bolt_2", 
+    "geo_id": 6075, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((184.9999999999815, 17.304951763703475, 53.2591652263467))"
+  }, 
+  {
+    "geo_Volume": "801.251223786", 
+    "volume": "8.0125122378562088E-07 [m m m]", 
+    "name": "disc_hub_bolt_head_2", 
+    "geo_id": 6084, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((177.99999999998221, 17.304951481864137, 53.259165580144987))"
+  }, 
+  {
+    "geo_Volume": "611.179582195", 
+    "volume": "6.1117958219490918E-07 [m m m]", 
+    "name": "disc_hub_nut_2", 
+    "geo_id": 6099, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((192.49999999998076, 17.304951547787589, 53.259604746178994))"
+  }, 
+  {
+    "geo_Volume": "781.824378271", 
+    "volume": "7.8182437827075778E-07 [m m m]", 
+    "name": "disc_hub_bolt_3", 
+    "geo_id": 6108, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((184.9999999999815, -45.304951471819528, 32.915974294127146))"
+  }, 
+  {
+    "geo_Volume": "801.251237150", 
+    "volume": "8.0125123715015077E-07 [m m m]", 
+    "name": "disc_hub_bolt_head_3", 
+    "geo_id": 6117, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((177.99999999998221, -45.304951326963263, 32.915974370012812))"
+  }, 
+  {
+    "geo_Volume": "611.179476685", 
+    "volume": "6.1117947668523012E-07 [m m m]", 
+    "name": "disc_hub_nut_3", 
+    "geo_id": 6132, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((192.49999999998076, -45.304951247056067, 32.916413228610168))"
+  }, 
+  {
+    "geo_Volume": "781.824378271", 
+    "volume": "7.8182437827075778E-07 [m m m]", 
+    "name": "disc_hub_bolt_4", 
+    "geo_id": 6141, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((184.9999999999815, -45.304951471819528, -32.915974294127153))"
+  }, 
+  {
+    "geo_Volume": "801.251237150", 
+    "volume": "8.0125123715015077E-07 [m m m]", 
+    "name": "disc_hub_bolt_head_4", 
+    "geo_id": 6150, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((177.99999999998221, -45.304951326963263, -32.915974370012819))"
+  }, 
+  {
+    "geo_Volume": "611.179495174", 
+    "volume": "6.1117949517427419E-07 [m m m]", 
+    "name": "disc_hub_nut_4", 
+    "geo_id": 6165, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((192.49999999998076, -45.304951247055648, -32.915535593161678))"
+  }, 
+  {
+    "geo_Volume": "781.824248553", 
+    "volume": "7.8182424855265835E-07 [m m m]", 
+    "name": "disc_hub_bolt_5", 
+    "geo_id": 6174, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((184.9999999999815, 17.304951763703478, -53.25916522634671))"
+  }, 
+  {
+    "geo_Volume": "801.251223786", 
+    "volume": "8.0125122378562088E-07 [m m m]", 
+    "name": "disc_hub_bolt_head_5", 
+    "geo_id": 6183, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((177.99999999998221, 17.304951481864133, -53.259165580144987))"
+  }, 
+  {
+    "geo_Volume": "611.179573130", 
+    "volume": "6.1117957312966739E-07 [m m m]", 
+    "name": "disc_hub_nut_5", 
+    "geo_id": 6198, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((192.49999999998076, 17.304951547788061, -53.258727061502164))"
+  }, 
+  {
+    "geo_Volume": "115177.582246", 
+    "volume": "0.00011517758224592225 [m m m]", 
+    "name": "disc_hub", 
+    "geo_id": 6309, 
+    "suppressed": false, 
+    "geo_Centroid": "Array[float]((190.80621261442184, 5.7359988380930504e-08, -0.0035592721921638673))"
+  }, 
+  {
+    "geo_Volume": "6658.43235332", 
+    "volume": "6.6584323533185644E-06 [m m m]", 
+    "name": "hub_front_axial_collar", 
+    "geo_id": 6327, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((172.99999999998269, -5.93325490864138e-16, -3.5286504013023074e-16))"
+  }, 
+  {
+    "geo_Volume": "6658.43235332", 
+    "volume": "6.6584323533184848E-06 [m m m]", 
+    "name": "hub_rear_axial_collar", 
+    "geo_id": 6342, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((216.99999999997831, -5.6771431859661568e-16, 1.6618805115810705e-15))"
+  }, 
+  {
+    "geo_Volume": "4032.0", 
+    "volume": "4.0320000000000005E-06 [m m m]", 
+    "name": "halfshaft_key_-1", 
+    "geo_id": 6369, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((241.99999999997581, 1.8797426871956572e-16, -30.999999999996902))"
+  }, 
+  {
+    "geo_Volume": "4032.0", 
+    "volume": "4.0320000000000014E-06 [m m m]", 
+    "name": "halfshaft_key_1", 
+    "geo_id": 6396, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((241.99999999997581, -1.8797426871956569e-16, 30.999999999996902))"
+  }, 
+  {
+    "geo_Volume": "1871.20554018", 
+    "volume": "1.8712055401845532E-06 [m m m]", 
+    "name": "halfshaft_bolt_1", 
+    "geo_id": 6405, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((259.999999999974, 44.9999999999955, -1.4208029591485873e-16))"
+  }, 
+  {
+    "geo_Volume": "1871.20563841", 
+    "volume": "1.8712056384121947E-06 [m m m]", 
+    "name": "halfshaft_bolt_2", 
+    "geo_id": 6414, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((259.999999999974, 31.819805714212922, 31.819805069922914))"
+  }, 
+  {
+    "geo_Volume": "1871.20542241", 
+    "volume": "1.8712054224083696E-06 [m m m]", 
+    "name": "halfshaft_bolt_3", 
+    "geo_id": 6423, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((259.999999999974, 6.8338287345040438e-16, 44.9999999999955))"
+  }, 
+  {
+    "geo_Volume": "1871.20563841", 
+    "volume": "1.871205638412197E-06 [m m m]", 
+    "name": "halfshaft_bolt_4", 
+    "geo_id": 6432, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((259.999999999974, -31.819805714212922, 31.819805069922914))"
+  }, 
+  {
+    "geo_Volume": "1871.20554018", 
+    "volume": "1.8712055401845532E-06 [m m m]", 
+    "name": "halfshaft_bolt_5", 
+    "geo_id": 6441, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((259.999999999974, -44.9999999999955, -3.1501321733461445e-16))"
+  }, 
+  {
+    "geo_Volume": "1871.20563841", 
+    "volume": "1.871205638412197E-06 [m m m]", 
+    "name": "halfshaft_bolt_6", 
+    "geo_id": 6450, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((259.999999999974, -31.819805714212922, -31.819805069922914))"
+  }, 
+  {
+    "geo_Volume": "1871.20542241", 
+    "volume": "1.8712054224083696E-06 [m m m]", 
+    "name": "halfshaft_bolt_7", 
+    "geo_id": 6459, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((259.999999999974, -9.3361578305555543e-16, -44.9999999999955))"
+  }, 
+  {
+    "geo_Volume": "1871.20563841", 
+    "volume": "1.871205638412196E-06 [m m m]", 
+    "name": "halfshaft_bolt_8", 
+    "geo_id": 6468, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((259.999999999974, 31.819805714212922, -31.819805069922914))"
+  }, 
+  {
+    "geo_Volume": "1800.38421787", 
+    "volume": "1.800384217871347E-06 [m m m]", 
+    "name": "halfshaft_drive_dowel_1", 
+    "geo_id": 6477, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((262.99999999997374, 41.574578587088119, 17.220754322660518))"
+  }, 
+  {
+    "geo_Volume": "1800.38421787", 
+    "volume": "1.8003842178713542E-06 [m m m]", 
+    "name": "halfshaft_drive_dowel_2", 
+    "geo_id": 6486, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((262.99999999997374, -17.220754322660515, 41.574578587088126))"
+  }, 
+  {
+    "geo_Volume": "1800.38421787", 
+    "volume": "1.8003842178713531E-06 [m m m]", 
+    "name": "halfshaft_drive_dowel_3", 
+    "geo_id": 6495, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((262.99999999997374, -41.574578587088119, -17.220754322660518))"
+  }, 
+  {
+    "geo_Volume": "1800.38421787", 
+    "volume": "1.8003842178713483E-06 [m m m]", 
+    "name": "halfshaft_drive_dowel_4", 
+    "geo_id": 6504, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((262.99999999997374, 17.220754322660515, -41.574578587088126))"
+  }, 
+  {
+    "geo_Volume": "39001.1457420", 
+    "volume": "3.9001145742001219E-05 [m m m]", 
+    "name": "hub_removable_sleeve", 
+    "geo_id": 6571, 
+    "suppressed": false, 
+    "geo_Centroid": "Array[float]((195.04052491707697, 3.7398955422128573e-15, 0.0005182746767057446))"
+  }, 
+  {
+    "geo_Volume": "46801.3748904", 
+    "volume": "4.68013748904015E-05 [m m m]", 
+    "name": "halfshaft_removable_sleeve", 
+    "geo_id": 6641, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((244.16209966836155, 6.2412563521644693e-15, 0.00051827467670832478))"
+  }, 
+  {
+    "geo_Volume": "344397.866474", 
+    "volume": "0.00034439786647353981 [m m m]", 
+    "name": "output_halfshaft_flange", 
+    "geo_id": 6802, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((241.4048473854678, -3.638947650981123e-15, -5.8258550443603041e-05))"
+  }, 
+  {
+    "geo_Volume": "102285.984093", 
+    "volume": "0.00010228598409345492 [m m m]", 
+    "name": "wheel_halfshaft_interface", 
+    "geo_id": 6908, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((278.20451296338553, 3.4505166644725149e-15, -0.003787090722936252))"
+  }, 
+  {
+    "geo_Volume": "173290.406452", 
+    "volume": "0.00017329040645150127 [m m m]", 
+    "name": "input_shaft", 
+    "geo_id": 9119, 
+    "suppressed": false, 
+    "geo_Centroid": "Array[float]((66.287388753114712, 120.00000080781111, 100.000076646499))"
+  }, 
+  {
+    "geo_Volume": "296008.656108", 
+    "volume": "0.00029600865610753164 [m m m]", 
+    "name": "intermediate_shaft", 
+    "geo_id": 11414, 
+    "suppressed": false, 
+    "geo_Centroid": "Array[float]((81.843056761996, 119.99999977143371, -0.001153884177475255))"
+  }, 
+  {
+    "geo_Volume": "580742.950188", 
+    "volume": "0.000580742950188372 [m m m]", 
+    "name": "output_shaft", 
+    "geo_id": 11604, 
+    "suppressed": false, 
+    "geo_Centroid": "Array[float]((127.16923336321376, -1.3497699103575314e-16, 4.7587013379967656e-05))"
+  }, 
+  {
+    "geo_Volume": "345068.246963", 
+    "volume": "0.0003450682469629094 [m m m]", 
+    "name": "caliper", 
+    "geo_id": 11669, 
+    "suppressed": false, 
+    "geo_Centroid": "Array[float]((216.22246147711934, -146.36652311370079, -3.9500284251534259e-15))"
+  }, 
+  {
+    "geo_Volume": "138114.051385", 
+    "volume": "0.00013811405138450237 [m m m]", 
+    "name": "caliper_reaction_bracket", 
+    "geo_id": 11720, 
+    "suppressed": false, 
+    "geo_Centroid": "Array[float]((170.54591978851195, -147.83614030569294, 1.4575018626039237e-15))"
+  }, 
+  {
+    "geo_Volume": "5702.29999440", 
+    "volume": "5.702299994403492E-06 [m m m]", 
+    "name": "caliper_mount_bolt_1", 
+    "geo_id": 11732, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((173.49999999998266, -159.999999999984, -39.999999999996))"
+  }, 
+  {
+    "geo_Volume": "1251.95456129", 
+    "volume": "1.2519545612941683E-06 [m m m]", 
+    "name": "caliper_mount_bolt_head_1", 
+    "geo_id": 11741, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((145.99999999998542, -159.999999999984, -39.999999912928935))"
+  }, 
+  {
+    "geo_Volume": "5702.29999440", 
+    "volume": "5.7022999944034971E-06 [m m m]", 
+    "name": "caliper_mount_bolt_2", 
+    "geo_id": 11750, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((173.49999999998266, -159.999999999984, 39.999999999996))"
+  }, 
+  {
+    "geo_Volume": "1251.95456129", 
+    "volume": "1.2519545612941683E-06 [m m m]", 
+    "name": "caliper_mount_bolt_head_2", 
+    "geo_id": 11759, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((145.99999999998542, -159.999999999984, 39.999999912928956))"
+  }, 
+  {
+    "geo_Volume": "12423.3134950", 
+    "volume": "1.2423313495029894E-05 [m m m]", 
+    "name": "case_tie_bolt_1", 
+    "geo_id": 11768, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((79.999999999991957, -94.999999999990507, -94.999999999990507))"
+  }, 
+  {
+    "geo_Volume": "12423.3093939", 
+    "volume": "1.2423309393912757E-05 [m m m]", 
+    "name": "case_tie_bolt_2", 
+    "geo_id": 11777, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((79.999999999992013, 269.999999999973, -94.999999999990507))"
+  }, 
+  {
+    "geo_Volume": "12423.3195541", 
+    "volume": "1.2423319554125748E-05 [m m m]", 
+    "name": "case_tie_bolt_3", 
+    "geo_id": 11786, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((79.999999999991957, -94.999999999990507, 249.99999999997502))"
+  }, 
+  {
+    "geo_Volume": "12423.3154530", 
+    "volume": "1.2423315453009522E-05 [m m m]", 
+    "name": "case_tie_bolt_4", 
+    "geo_id": 11795, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((79.999999999992013, 269.999999999973, 249.99999999997502))"
+  }, 
+  {
+    "geo_Volume": "233.900647410", 
+    "volume": "2.339006474102029E-07 [m m m]", 
+    "name": "input_front_cap_bolt_1", 
+    "geo_id": 11804, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((6.480626802354266e-16, 145.45584494165635, 125.45584436250989))"
+  }, 
+  {
+    "geo_Volume": "233.900674756", 
+    "volume": "2.3390067475649336E-07 [m m m]", 
+    "name": "input_front_cap_bolt_2", 
+    "geo_id": 11813, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((1.8631816465750655e-15, 94.544155950345484, 125.45584436248812))"
+  }, 
+  {
+    "geo_Volume": "233.900674757", 
+    "volume": "2.3390067475650427E-07 [m m m]", 
+    "name": "input_front_cap_bolt_3", 
+    "geo_id": 11822, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((9.7209477212612718e-15, 94.544155950345484, 74.544155637491869))"
+  }, 
+  {
+    "geo_Volume": "233.900647410", 
+    "volume": "2.3390064741019419E-07 [m m m]", 
+    "name": "input_front_cap_bolt_4", 
+    "geo_id": 11831, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((8.262799173001739e-15, 145.45584494165635, 74.5441556374701))"
+  }, 
+  {
+    "geo_Volume": "204.844837018", 
+    "volume": "2.0484483701793761E-07 [m m m]", 
+    "name": "input_rear_cap_bolt_1", 
+    "geo_id": 11840, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((159.24999999998408, 145.45584276434124, 125.45584266388823))"
+  }, 
+  {
+    "geo_Volume": "204.844661684", 
+    "volume": "2.0484466168371879E-07 [m m m]", 
+    "name": "input_rear_cap_bolt_2", 
+    "geo_id": 11849, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((159.24999999998408, 94.5441573360875, 125.45584266389062))"
+  }, 
+  {
+    "geo_Volume": "204.844661684", 
+    "volume": "2.0484466168371821E-07 [m m m]", 
+    "name": "input_rear_cap_bolt_3", 
+    "geo_id": 11858, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((159.24999999998408, 94.5441573360875, 74.54415733608937))"
+  }, 
+  {
+    "geo_Volume": "204.844837018", 
+    "volume": "2.0484483701793806E-07 [m m m]", 
+    "name": "input_rear_cap_bolt_4", 
+    "geo_id": 11867, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((159.24999999998408, 145.45584276434124, 74.544157336091772))"
+  }, 
+  {
+    "geo_Volume": "233.900550151", 
+    "volume": "2.3390055015130029E-07 [m m m]", 
+    "name": "intermediate_front_cap_bolt_1", 
+    "geo_id": 11876, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((-2.7542730044787459e-15, 151.81980454773395, 31.819804782402784))"
+  }, 
+  {
+    "geo_Volume": "233.900632575", 
+    "volume": "2.3390063257475141E-07 [m m m]", 
+    "name": "intermediate_front_cap_bolt_2", 
+    "geo_id": 11885, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((4.1314044301122281e-15, 88.180195348535122, 31.819804782406127))"
+  }, 
+  {
+    "geo_Volume": "233.900632575", 
+    "volume": "2.3390063257474554E-07 [m m m]", 
+    "name": "intermediate_front_cap_bolt_3", 
+    "geo_id": 11894, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((4.0503965001100228e-15, 88.180195348535122, -31.819804782406123))"
+  }, 
+  {
+    "geo_Volume": "233.900550151", 
+    "volume": "2.3390055015130203E-07 [m m m]", 
+    "name": "intermediate_front_cap_bolt_4", 
+    "geo_id": 11903, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((-2.5922569453917604e-15, 151.81980454773395, -31.819804782402784))"
+  }, 
+  {
+    "geo_Volume": "204.844936954", 
+    "volume": "2.0484493695388529E-07 [m m m]", 
+    "name": "intermediate_rear_cap_bolt_1", 
+    "geo_id": 11912, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((159.24999999998408, 151.81980415917758, 31.8198051449045))"
+  }, 
+  {
+    "geo_Volume": "204.844696646", 
+    "volume": "2.0484469664614033E-07 [m m m]", 
+    "name": "intermediate_rear_cap_bolt_2", 
+    "geo_id": 11921, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((159.24999999998408, 88.180192859252642, 31.8198051448987))"
+  }, 
+  {
+    "geo_Volume": "204.844696646", 
+    "volume": "2.0484469664614033E-07 [m m m]", 
+    "name": "intermediate_rear_cap_bolt_3", 
+    "geo_id": 11930, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((159.24999999998408, 88.180192859252642, -31.8198051448987))"
+  }, 
+  {
+    "geo_Volume": "204.844936954", 
+    "volume": "2.0484493695388606E-07 [m m m]", 
+    "name": "intermediate_rear_cap_bolt_4", 
+    "geo_id": 11939, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((159.24999999998408, 151.81980415917758, -31.819805144904503))"
+  }, 
+  {
+    "geo_Volume": "233.900511765", 
+    "volume": "2.3390051176515329E-07 [m m m]", 
+    "name": "output_front_cap_bolt_1", 
+    "geo_id": 11948, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((-1.6201597031077299e-16, 35.355339050289437, 35.35533905028943))"
+  }, 
+  {
+    "geo_Volume": "233.900511765", 
+    "volume": "2.33900511765154E-07 [m m m]", 
+    "name": "output_front_cap_bolt_2", 
+    "geo_id": 11957, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((-2.4302395546615958e-16, -35.355339050289437, 35.35533905028943))"
+  }, 
+  {
+    "geo_Volume": "233.900511765", 
+    "volume": "2.3390051176515326E-07 [m m m]", 
+    "name": "output_front_cap_bolt_3", 
+    "geo_id": 11966, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((-3.2403194062154618e-16, -35.35533905028943, -35.355339050289437))"
+  }, 
+  {
+    "geo_Volume": "233.900511765", 
+    "volume": "2.33900511765154E-07 [m m m]", 
+    "name": "output_front_cap_bolt_4", 
+    "geo_id": 11975, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((-8.1007985155386544e-17, 35.355339050289437, -35.355339050289437))"
+  }, 
+  {
+    "geo_Volume": "204.844830837", 
+    "volume": "2.0484483083676683E-07 [m m m]", 
+    "name": "output_rear_cap_bolt_1", 
+    "geo_id": 11984, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((159.24999999998408, 35.355339319715661, 35.355339319715654))"
+  }, 
+  {
+    "geo_Volume": "204.844830837", 
+    "volume": "2.0484483083676667E-07 [m m m]", 
+    "name": "output_rear_cap_bolt_2", 
+    "geo_id": 11993, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((159.24999999998408, -35.355339319715661, 35.355339319715654))"
+  }, 
+  {
+    "geo_Volume": "204.844830837", 
+    "volume": "2.0484483083676651E-07 [m m m]", 
+    "name": "output_rear_cap_bolt_3", 
+    "geo_id": 12002, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((159.24999999998408, -35.355339319715661, -35.355339319715654))"
+  }, 
+  {
+    "geo_Volume": "204.844830837", 
+    "volume": "2.0484483083676667E-07 [m m m]", 
+    "name": "output_rear_cap_bolt_4", 
+    "geo_id": 12011, 
+    "suppressed": true, 
+    "geo_Centroid": "Array[float]((159.24999999998408, 35.355339319715661, -35.355339319715654))"
+  }, 
+  {
+    "geo_Volume": "1731807.13002", 
+    "volume": "0.0017318071300172525 [m m m]", 
+    "name": "gear_case_front", 
+    "geo_id": 12410, 
+    "suppressed": false, 
+    "geo_Centroid": "Array[float]((22.2771741830044, 83.561238201098419, 73.422821790291252))"
+  }, 
+  {
+    "geo_Volume": "1809059.21679", 
+    "volume": "0.0018090592167938444 [m m m]", 
+    "name": "gear_case_rear", 
+    "geo_id": 12814, 
+    "suppressed": false, 
+    "geo_Centroid": "Array[float]((138.64117618743012, 79.382123647488427, 69.499535241514579))"
+  }, 
+  {
+    "geo_Volume": "1801.56925116", 
+    "volume": "1.801569251163215E-06 [m m m]", 
+    "name": "oil_inventory", 
+    "geo_id": 12862, 
+    "suppressed": false, 
+    "geo_Centroid": "Array[float]((79.999999999991743, -94.520477593040056, -94.990543130683875))"
+  }, 
+  {
+    "geo_Volume": "819663.481443", 
+    "volume": "0.00081966348144314315 [m m m]", 
+    "name": "oil_inventory", 
+    "geo_id": 13727, 
+    "suppressed": false, 
+    "geo_Centroid": "Array[float]((79.534802409819847, 88.813058818761746, -91.9979408270566))"
+  }, 
+  {
+    "geo_Volume": "1801.56728372", 
+    "volume": "1.8015672837244246E-06 [m m m]", 
+    "name": "oil_inventory", 
+    "geo_id": 13838, 
+    "suppressed": false, 
+    "geo_Centroid": "Array[float]((79.9999999999915, 269.52048110939961, -94.990544354739328))"
+  }
+]
