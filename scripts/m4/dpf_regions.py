@@ -9,7 +9,7 @@ def body_element_ids(model, name):
     if str(scope.location) == 'Nodal':
         scope = dpf.operators.scoping.transpose(
             mesh_scoping=scope, meshed_region=model.metadata.meshed_region,
-            inclusive=0, server=model._server).outputs.mesh_scoping()
+            inclusive=0, server=model._server).outputs.mesh_scoping_as_scoping()
         return np.asarray(scope.ids, dtype=int)
     raise ValueError('Unsupported body selection location: '+str(scope.location))
 

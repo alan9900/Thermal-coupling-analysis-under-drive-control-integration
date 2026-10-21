@@ -6,14 +6,18 @@ from fe_capacity import weights
 from dpf_regions import solid_regions
 ROOT=Path(__file__).resolve().parents[2];OUT=ROOT/'results/m4'
 def main():
+    print('Starting FE capacity extraction',sys.argv[1],flush=True)
     os.environ['DPF_DEFAULT_GRPC_MODE']='insecure'
     from ansys.dpf import core as dpf
     server=dpf.start_local_server(ansys_path='E:/Program Files/ANSYS Inc/v241',config=dpf.AvailableServerConfigs.GrpcServer,ip='127.0.0.1')
+    print('DPF server',server.version,flush=True)
     try:
         m=dpf.Model(sys.argv[1],server=server);mesh=m.metadata.meshed_region
+        print('Native model mesh loaded',flush=True)
         xyz=np.array(mesh.nodes.coordinates_field.data);nodeids=np.array(mesh.nodes.scoping.ids);order=np.argsort(nodeids);sortedids=nodeids[order]
         config=json.loads((ROOT/'configs/m4_case0.json').read_text(encoding='utf-8'))
         regions=solid_regions(m);names=list(regions);which={};rhocp=[]
+        print('Resolved solid regions',len(names),flush=True)
         for k,name in enumerate(names):
             for eid in regions[name]:which[int(eid)]=k
             mat=config['materials'][config['body_materials'][name[3:].lower()]];rhocp.append(mat['rho_kg_m3']*mat['cp_J_kgK'])
@@ -21,7 +25,7 @@ def main():
         pertype=collections.defaultdict(list);idsbytype=collections.defaultdict(list)
         with mesh.elements.connectivities_field.as_local_field() as conn:
             for eid in solid:
-                c=np.asarray(conn.get_entity_data_by_id(int(eid)),int)
+                c=np.array(conn.get_entity_data_by_id(int(eid)),dtype=int,copy=True)
                 pertype[len(c)].append(c);idsbytype[len(c)].append(int(eid))
         capacity=np.zeros((len(names),len(xyz)));bodyvol=np.zeros(len(names));allids=[];allvol=[]
         for count,cells in pertype.items():
@@ -31,8 +35,11 @@ def main():
                 w,v=weights(xyz[c]);allids.extend(idsbytype[count][a:a+30000]);allvol.extend(v)
                 for k in np.unique(body):
                     select=body==k;np.add.at(capacity[k],c[select].ravel(),(w[select]*rhocp[k]).ravel());bodyvol[k]+=v[select].sum()
-        field=m.results.elemental_volume(time_scoping=[1]).eval()[0]
-        fv={int(i):float(v) for i,v in zip(field.scoping.ids,np.asarray(field.data).ravel())}
+        # DPFArray views can outlive the native owner if passed through
+        # np.asarray. Copy while both FieldsContainer and Field remain alive.
+        fc=m.results.elemental_volume(time_scoping=[1]).eval();field=fc[0]
+        volume_data=np.array(field.data,copy=True).ravel();volume_ids=list(field.scoping.ids)
+        fv={int(i):float(v) for i,v in zip(volume_ids,volume_data)}
         errors=[abs(v-fv[i])/max(v,1e-30) for i,v in zip(allids,allvol)]
         assert max(errors)<1e-6,('FE quadrature differs from native element volume',max(errors))
         np.savez_compressed(OUT/'FE_capacity_weights.npz',node_ids=nodeids,weights_J_K=capacity,names=np.array(names),body_volumes_m3=bodyvol)

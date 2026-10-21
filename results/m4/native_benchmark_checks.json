@@ -1,0 +1,15 @@
+{
+  "status": "PASS_NATIVE_SINGLE_ELEMENT_BENCHMARK_ONLY",
+  "solver": "MAPDL 2024 R1",
+  "native_hot_C": 27.56410256410234,
+  "native_cold_C": 26.88939958223414,
+  "analytic_BE_hot_C": 27.564102564102562,
+  "analytic_BE_cold_C": 26.88939958223423,
+  "stored_J": 9999.999999999121,
+  "cooling_boundary_J": 2631.341629285624,
+  "cooling_balance_residual_J": -3.460627340245992e-10,
+  "warnings": 0,
+  "errors": 0,
+  "Case0_energy_balance": "NOT YET VALIDATED",
+  "limitations": "Symmetry makes this cube isothermal; checks solver units/capacity/BE convection, not spatial mesh accuracy or radiation."
+}

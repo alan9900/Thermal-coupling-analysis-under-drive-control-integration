@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "E:\ansys_runs\m4_python_ascii\Lib\site-packages\ansys\dpf\core\errors.py", line 125, in wrapper
+    out = func(*args, **kwargs)
+  File "E:\ansys_runs\m4_python_ascii\Lib\site-packages\ansys\dpf\core\model.py", line 383, in time_freq_support
+    self._time_freq_support = time_provider.get_output(0, types.time_freq_support)
+                              ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ansys_runs\m4_python_ascii\Lib\site-packages\ansys\dpf\core\dpf_operator.py", line 629, in get_output
+    internal_obj = type_tuple[1](self, pin)
+  File "E:\ansys_runs\m4_python_ascii\Lib\site-packages\ansys\dpf\gate\generated\operator_capi.py", line 644, in operator_getoutput_time_freq_support
+    raise errors.DPFServerException(sError.value)
+ansys.dpf.gate.errors.DPFServerException: Unable to open the following file: E:\ansys_runs\m4_case0_20261021\Case0_pilot_bounded_files\dp0\SYS\MECH\file.rth
+a 'data processing core error' error occurred: TimeFreqSupportProvider:5<-mapdl::rth::TimeFreqSupportProvider:6<-mapdl::rth::TimeFreqSupportProvider
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\ChatGPT��Ŀ\�����ں�������Ϸ���\scripts\m4\inspect_rth.py", line 12, in <module>
+    ts=m.metadata.time_freq_support.time_frequencies.data
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ansys_runs\m4_python_ascii\Lib\site-packages\ansys\dpf\core\errors.py", line 130, in wrapper
+    raise DPFServerException(details)
+ansys.dpf.gate.errors.DPFServerException: Unable to open the following file: E:\ansys_runs\m4_case0_20261021\Case0_pilot_bounded_files\dp0\SYS\MECH\file.rth
+
