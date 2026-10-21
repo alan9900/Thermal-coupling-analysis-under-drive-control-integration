@@ -1,0 +1,19 @@
+{
+  "case": "A_internal_only",
+  "classification": "S3_CONCEPT_NOT_CALIBRATED",
+  "duration_s": 48.877185034167695,
+  "expected_sets": 38,
+  "step_divisor": 1,
+  "original_input": "E:\\ansys_runs\\m4_case0_20261021\\face_scoped_ds.dat",
+  "original_sha256": "d377f0821e5eaf584be126e5f1dbf423557688223e67da1a4f691f65072d6e55",
+  "archived_forcing": "E:\\ChatGPT\u9879\u76ee\\\u9a71\u5236\u878d\u5408\u4e0b\u70ed\u8026\u5408\u5206\u6790\\results\\m2\\cases\\A_internal_only_forcing.csv",
+  "forcing_sha256": "135f2289905a431fbe8613c38353c34e20593e2ad8ab3eb36c784a9e6188281e",
+  "applied_energy_J": 30939.38342756897,
+  "inverter_external_J": 8625.099242110766,
+  "spatial_loss_allocation": "S3: copper to winding, iron to stator, rotor/other to equivalent rotor; gear mesh 50/50 driven wheels, bearings 1/6 each, other to oil. No calibrated tooth/pinion distribution.",
+  "status": "GENERATED_NOT_EXECUTED",
+  "cooling": "Finite h, prescribed 25C bulk; no coolant-flow/capacity calibration or hot-air feedback",
+  "comparison_scope": "First drive/optional 60s hold/first brake/30s cooling; not full six-cycle M2 peaks",
+  "capacity_weights": "E:\\ChatGPT\u9879\u76ee\\\u9a71\u5236\u878d\u5408\u4e0b\u70ed\u8026\u5408\u5206\u6790\\results\\m4\\studies\\A_internal_only_dt1\\FE_capacity_weights.npz",
+  "execution_status": "NATIVE_RUN_COMPLETED_ZERO_ERRORS"
+}

@@ -1,0 +1,23 @@
+{
+  "mesh": {
+    "status": "PENDING",
+    "required": [
+      "B_normal6_dt1",
+      "B_normal12_dt1_retry1",
+      "B_normal24_dt1"
+    ],
+    "available": [
+      "B_normal6_dt1",
+      "B_normal12_dt1_retry1"
+    ]
+  },
+  "time": {
+    "status": "PENDING",
+    "required": [
+      "B_normal24_dt1",
+      "B_normal24_dt2",
+      "B_normal24_dt4"
+    ],
+    "available": []
+  }
+}

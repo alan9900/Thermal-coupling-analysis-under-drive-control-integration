@@ -19,7 +19,7 @@ def solid_regions(model):
     solid=set(int(i) for i,t in zip(prop.scoping.ids,prop.data) if int(t)==278)
     regions={}
     for name in model.metadata.available_named_selections:
-        if name.startswith('M4_'):
+        if name.startswith('M4_') and name != 'M4_BC_RECORDS':
             ids=sorted(solid.intersection(body_element_ids(model,name)))
             if not ids:raise ValueError('Empty solid body region '+name)
             regions[name]=np.asarray(ids,dtype=int)

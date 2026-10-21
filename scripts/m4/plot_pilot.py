@@ -14,6 +14,9 @@ def main():
     ap=argparse.ArgumentParser();ap.add_argument('--study');args=ap.parse_args()
     if args.study:OUT=ROOT/'results/m4/studies'/args.study
     context='finite face contacts' if args.study else 'original whole-body contacts'
+    meta=json.loads((OUT/'study_settings.json').read_text()) if (OUT/'study_settings.json').exists() else {}
+    label=meta.get('case','B_BRAKE_ONLY_CONCEPT')
+    origin='Brake onset' if label.startswith('B') else 'Controlled-cycle start'
     plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10,'figure.dpi':150})
     hist=list(csv.DictReader((OUT/'pilot_temperature_history.csv').open()))
     groups=[('M4_BRAKE_DISC_HAT','Disc'),('M4_PAD_NEAR','Near pad'),('M4_OUTPUT_SHAFT','Output shaft'),
@@ -24,10 +27,12 @@ def main():
         ax[0].plot(t,[25]+[float(x['maximum']) for x in r],label=label)
         if name not in ['M4_PAD_NEAR','M4_BRAKE_DISC_HAT']:
             ax[1].plot(t,[0]+[float(x['maximum'])-25 for x in r],label=label)
-    ax[0].set(ylabel='Local maximum temperature [degC]',xlabel='Time after brake onset [s]')
-    ax[1].set(ylabel='Local maximum rise [K]',xlabel='Time after brake onset [s]')
-    for a in ax:a.grid(alpha=.2);a.legend(fontsize=8);a.axvline(3.775437,ls=':',color='gray',lw=1)
-    fig.suptitle('Actual ANSYS diagnostic | S3 assumptions | '+context+'\n80 km/h, 0.6g, 30 kW vehicle regen cap; convergence NOT validated',fontsize=11)
+    ax[0].set(ylabel='Local maximum temperature [degC]',xlabel=origin+' [s]')
+    ax[1].set(ylabel='Local maximum rise [K]',xlabel=origin+' [s]')
+    for a in ax:
+        a.grid(alpha=.2);a.legend(fontsize=8)
+        if label.startswith('B'):a.axvline(3.775437,ls=':',color='gray',lw=1)
+    fig.suptitle('Actual ANSYS diagnostic | S3 assumptions | '+context+'\n'+label+'; mesh / time validation tracked separately',fontsize=11)
     fig.savefig(OUT/'pilot_temperature_curves.png');plt.close(fig)
     data=np.load(OUT/'pilot_actual_FE_surface.npz');p=data['points']*1000;tri=data['triangles'];T=data['temperature'];time=float(data['time_s'])
     fig=plt.figure(figsize=(7,5.3),layout='constrained');a=fig.add_subplot(projection='3d')

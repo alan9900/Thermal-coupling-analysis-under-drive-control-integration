@@ -15,7 +15,7 @@ def main():
     name=a.name or ('B_brake_dt'+str(a.divisor));assert re.fullmatch('[A-Za-z0-9_]+',name)
     folder=RUN/'studies'/name;folder.mkdir(parents=True,exist_ok=True)
     source=json.loads((RUN/'pilot_source.json').read_text());ends=source['brake_bin_end_s']
-    commands=['! Selective records: physical quantities unchanged','allsel','esel,s,ename,,152','esel,a,ename,,252',
+    commands=['! Selective records: physical quantities unchanged','allsel','esel,s,ename,,152','esel,a,ename,,252','esel,a,ename,,174',
         'cm,M4_BC_RECORDS,elem','allsel','outres,erase','outres,all,none','outres,nsol,all','outres,rsol,all',
         'outres,veng,all','outres,fflux,all','outres,cont,all','outres,misc,all,M4_BC_RECORDS']
     prev=0
