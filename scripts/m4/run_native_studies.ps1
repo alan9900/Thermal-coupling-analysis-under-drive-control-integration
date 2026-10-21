@@ -14,7 +14,9 @@ foreach($case in $Cases) {
         if($sourceLog -notmatch 'RUN COMPLETED' -or $sourceLog -notmatch 'NUMBER OF ERROR\s+MESSAGES ENCOUNTERED=\s+0'){throw 'View-factor source is incomplete'}
         $vf=Get-Item -LiteralPath (Join-Path $source 'study.vf')
         if($vf.Length -lt 100){throw 'Invalid native view-factor file'}
-        $meta | Add-Member -NotePropertyName viewfactor_sha256 -NotePropertyValue ((Get-FileHash -LiteralPath $vf.FullName -Algorithm SHA256).Hash.ToLower()) -Force
+        $vfStream=[System.IO.File]::OpenRead($vf.FullName)
+        try { $vfDigest=[BitConverter]::ToString([System.Security.Cryptography.SHA256]::Create().ComputeHash($vfStream)).Replace('-','').ToLower() } finally { $vfStream.Dispose() }
+        $meta | Add-Member -NotePropertyName viewfactor_sha256 -NotePropertyValue $vfDigest -Force
         [System.IO.File]::WriteAllText((Join-Path $folder 'study_settings.json'), ($meta | ConvertTo-Json -Depth 20), (New-Object System.Text.UTF8Encoding($false)))
     }
     $proc=Start-Process -FilePath $solver -ArgumentList @('-b','-smp','-np',"$Cores",'-p','ansys','-j','study','-dir',('"'+$folder+'"'),'-i',('"'+(Join-Path $folder 'study.dat')+'"'),'-o',('"'+(Join-Path $folder 'study.out')+'"')) -WindowStyle Hidden -Wait -PassThru

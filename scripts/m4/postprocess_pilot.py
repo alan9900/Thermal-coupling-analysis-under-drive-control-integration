@@ -50,18 +50,19 @@ def main():
         rows=[];disc_peak=(-1e30,0)
         for k,time in enumerate(times,1):
             fc=model.results.temperature(time_scoping=[k]).eval();field=fc[0]
-            ids=np.array(field.scoping.ids);T=np.array(field.data).reshape(-1);sort=np.argsort(ids);ids=ids[sort];T=T[sort]
+            ids=np.array(field.scoping.ids);T=np.array(field.data,copy=True).reshape(-1);sort=np.argsort(ids);ids=ids[sort];T=T[sort]
+            j=np.searchsorted(ids,weight_ids);valid=j<len(ids)
+            valid[valid]=ids[j[valid]]==weight_ids[valid]
+            aligned=np.zeros(len(weight_ids));aligned[valid]=T[j[valid]]
             for n,scope in groups.items():
                 scoped=np.array(scope.ids)
                 idx=np.searchsorted(ids,scoped);valid=idx<len(ids);idx=idx[valid];scoped=scoped[valid];idx=idx[ids[idx]==scoped]
                 assert len(idx),n
-                vals=T[idx];j=np.searchsorted(ids,weight_ids);valid=j<len(ids)
-                valid[valid]=ids[j[valid]]==weight_ids[valid]
-                aligned=np.zeros(len(weight_ids));aligned[valid]=T[j[valid]]
+                vals=T[idx]
                 w=W[weight_names.index(n)];assert np.all(w[~valid]==0)
                 rows.append(dict(time_s=float(time),part=n,minimum=float(vals.min()),maximum=float(vals.max()),
-                    nodal_arithmetic_mean=float(vals.mean()),capacity_weighted_mean=float(w@aligned/w.sum()),
-                    stored_energy_above_25C_J=float(w@(aligned-25)),temperature_unit=field.unit,
+                    nodal_arithmetic_mean=float(vals.mean()),capacity_weighted_mean=float(np.sum(w*aligned)/w.sum()),
+                    stored_energy_above_25C_J=float(np.sum(w*(aligned-25))),temperature_unit=field.unit,
                     classification='ACTUAL_FE_DIAGNOSTIC_NOT_VALIDATED'))
                 if n=='M4_BRAKE_DISC_HAT' and vals.max()>disc_peak[0]:disc_peak=(float(vals.max()),k)
         with (OUT/'pilot_temperature_history.csv').open('w',newline='',encoding='utf-8') as f:
@@ -79,8 +80,8 @@ def main():
             if len(c)==3:tri.append(c)
             elif len(c)==4:tri.extend([[c[0],c[1],c[2]],[c[0],c[2],c[3]]])
             else:raise ValueError('Unimplemented skin topology: '+str(len(c)))
-        field=model.results.temperature(time_scoping=[disc_peak[1]]).eval()[0]
-        ids=np.array(field.scoping.ids);vals=np.array(field.data).reshape(-1);sort=np.argsort(ids);ids=ids[sort];vals=vals[sort]
+        disc_fc=model.results.temperature(time_scoping=[disc_peak[1]]).eval();field=disc_fc[0]
+        ids=np.array(field.scoping.ids);vals=np.array(field.data,copy=True).reshape(-1);sort=np.argsort(ids);ids=ids[sort];vals=vals[sort]
         idx=np.searchsorted(ids,point_ids);assert np.all(idx<len(ids)) and np.all(ids[idx]==point_ids)
         np.savez_compressed(OUT/'pilot_actual_FE_surface.npz',points=points,triangles=np.array(tri),temperature=vals[idx],time_s=times[disc_peak[1]-1])
         receipt=dict(status='ACTUAL_RTH_READ_DIAGNOSTIC_ONLY',server=server.version,result_file=str(path),result_bytes=path.stat().st_size,

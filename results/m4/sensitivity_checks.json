@@ -1,0 +1,12 @@
+{
+  "status": "PENDING",
+  "required": [
+    "C_normal12_rd95_dt1",
+    "C_normal12_rd95_contact_low",
+    "C_normal12_rd95_contact_high",
+    "C_normal12_rd95_cooling_low",
+    "C_normal12_rd95_cooling_high"
+  ],
+  "available": [],
+  "classification": "S3 single-factor scenarios; not measured confidence intervals"
+}

@@ -1,0 +1,22 @@
+{
+  "case": "C_combined",
+  "classification": "S3_CONCEPT_NOT_CALIBRATED",
+  "duration_s": 48.877185034167695,
+  "expected_sets": 38,
+  "step_divisor": 1,
+  "original_input": "E:\\ansys_runs\\m4_case0_20261021\\mesh_variants\\mesh_normal12\\mechanical_ds.dat",
+  "original_sha256": "27821beb3ff7b173e6c37db862d32e055a20fdb62e4a51c3c6647f45edf76d5b",
+  "archived_forcing": "E:\\ChatGPT\u6924\u572d\u6d30\\\u6939\u535e\u57d7\u94fb\u5d85\u608e\u6d93\u5b2c\u5139\u9470\ufe40\u608e\u9352\u55d8\u703d\\results\\m2\\cases\\C_combined_forcing.csv",
+  "forcing_sha256": "135f2289905a431fbe8613c38353c34e20593e2ad8ab3eb36c784a9e6188281e",
+  "applied_energy_J": 71191.29519463409,
+  "inverter_external_J": 8625.099242110766,
+  "spatial_loss_allocation": "S3: copper to winding, iron to stator, rotor/other to equivalent rotor; gear mesh 50/50 driven wheels, bearings 1/6 each, other to oil. No calibrated tooth/pinion distribution.",
+  "status": "GENERATED_NOT_EXECUTED",
+  "cooling": "Finite h, prescribed 25C bulk; no coolant-flow/capacity calibration or hot-air feedback",
+  "comparison_scope": "First drive/optional 60s hold/first brake/30s cooling; not full six-cycle M2 peaks",
+  "capacity_weights": "E:\\ChatGPT\u9879\u76ee\\\u9a71\u5236\u878d\u5408\u4e0b\u70ed\u8026\u5408\u5206\u6790\\results\\m4\\studies\\C_normal12_dt1\\FE_capacity_weights.npz",
+  "viewfactor_reuse_from": "E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal12_dt1_retry1",
+  "viewfactor_reuse_condition": "Same original Mechanical input SHA; native complete zero-error source required before execution",
+  "viewfactor_sha256": "d0a9250431b355603b959f304d28171ac8ff3f5b51336406a137e187d70e0680",
+  "execution_status": "NATIVE_RUN_COMPLETED_ZERO_ERRORS"
+}

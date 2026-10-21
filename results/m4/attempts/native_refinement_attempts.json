@@ -1,0 +1,129 @@
+[
+  {
+    "study": "B_normal24_dt1",
+    "status": "STOPPED_RADIATION_MATRIX_COST",
+    "reason": "Original binary view-factor file 48.58GB; byte-preserving NTFS compression retained it. No completed study accepted.",
+    "accepted_temperature_result": false,
+    "files": {
+      "study.dat": {
+        "local_path": "E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal24_dt1\\study.dat",
+        "bytes": 192561024,
+        "sha256": "98da9848f8731162c27771c20c2f6ca0c50d99555d75f57e38e046573215baac"
+      },
+      "study.out": {
+        "local_path": "E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal24_dt1\\study.out",
+        "bytes": 32811708,
+        "sha256": "6d5557f3a84c9323203b9a55fb12da1e9f9602b56c9c3e497edd58c744350991"
+      },
+      "study_settings.json": {
+        "local_path": "E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal24_dt1\\study_settings.json",
+        "bytes": 1280,
+        "sha256": "6fa13618cde05d784991e55e52c4bddc2b5878ca55a1ea7db2b27c4babd19f4f"
+      }
+    },
+    "native_run_completed": false,
+    "reported_errors": []
+  },
+  {
+    "study": "B_normal24_r95_dt1",
+    "status": "FAILED_NATIVE_TOPOLOGY_BREAKING",
+    "reason": "All-surface RDEC broke coarse case-face topology; replacement reduces disc only.",
+    "accepted_temperature_result": false,
+    "files": {
+      "study.dat": {
+        "local_path": "E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal24_r95_dt1\\study.dat",
+        "bytes": 192561079,
+        "sha256": "df6c13f26eef708538603e3b9982aba1aa9de9e402969741a5e810c10c49957d"
+      },
+      "study.out": {
+        "local_path": "E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal24_r95_dt1\\study.out",
+        "bytes": 32623995,
+        "sha256": "28bc5c6d78c1bdbddaf6edaba578c8fab0efd221085b3b1927c93edfa7f6a308"
+      },
+      "study_settings.json": {
+        "local_path": "E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal24_r95_dt1\\study_settings.json",
+        "bytes": 1717,
+        "sha256": "b814ff56cf9120857f56a9611008f58238c417b000c437ec7882f84e5373ff61"
+      }
+    },
+    "native_run_completed": true,
+    "reported_errors": [
+      "1"
+    ]
+  },
+  {
+    "study": "B_normal24_rd95_dt1",
+    "status": "STOPPED_EXPENSIVE_RADIOSITY_CRITERION",
+    "reason": "1e-6 radiosity-flux criterion expensive; fresh h-named studies keep heat tolerance 1e-6 and radiosity 1e-4.",
+    "accepted_temperature_result": false,
+    "files": {
+      "study.dat": {
+        "local_path": "E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal24_rd95_dt1\\study.dat",
+        "bytes": 192561194,
+        "sha256": "1669a5c0e85272bef32c09c5ebc37482bc67726a9d034940167e6fe2e74e47ae"
+      },
+      "study.out": {
+        "local_path": "E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal24_rd95_dt1\\study.out",
+        "bytes": 32809471,
+        "sha256": "d888fe3c9a39b93ef4c6bf4d7d63db931fcfab8593a881d023fd0369569b222b"
+      },
+      "study_settings.json": {
+        "local_path": "E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal24_rd95_dt1\\study_settings.json",
+        "bytes": 1844,
+        "sha256": "42d7bdf6c08b246ef391284c6416f0989f1236d2c123f0d4d6f0f9ea8bc5bbab"
+      }
+    },
+    "native_run_completed": false,
+    "reported_errors": []
+  },
+  {
+    "study": "B_mesh4_dt1",
+    "status": "STOPPED_INVALID_PAD_REFINEMENT",
+    "reason": "Face-only refinement retained one through-thickness layer; rejected convergence sequence.",
+    "accepted_temperature_result": false,
+    "files": {
+      "study.dat": {
+        "local_path": "E:\\ansys_runs\\m4_case0_20261021\\studies\\B_mesh4_dt1\\study.dat",
+        "bytes": 77258276,
+        "sha256": "b5af7a2844a665103b9dfd5328655e2380e342d702de213aeb2e8a712ad4a002"
+      },
+      "study.out": {
+        "local_path": "E:\\ansys_runs\\m4_case0_20261021\\studies\\B_mesh4_dt1\\study.out",
+        "bytes": 3645603,
+        "sha256": "e8f8b1e57e2c78e31ade403337a339b50873cdd88d3a410d9cd774263daa96ae"
+      },
+      "study_settings.json": {
+        "local_path": "E:\\ansys_runs\\m4_case0_20261021\\studies\\B_mesh4_dt1\\study_settings.json",
+        "bytes": 1208,
+        "sha256": "38b275180b6e49d8204e924c72fc78ad26561e6f16f75383a7982bd97ac2096b"
+      }
+    },
+    "native_run_completed": false,
+    "reported_errors": []
+  },
+  {
+    "study": "B_normal12_PCG_verify",
+    "status": "STOPPED_PCG_NONCONVERGENCE_FALLBACK",
+    "reason": "Native PCG reported ill-conditioning and fell back to SPARSE; stopped this redundant diagnostic. PCG was not adopted for production or claimed verified.",
+    "accepted_temperature_result": false,
+    "files": {
+      "study.dat": {
+        "local_path": "E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal12_PCG_verify\\study.dat",
+        "bytes": 99349182,
+        "sha256": "ed45f2a93a8496937c694e865db1819cacff5cccc5b98adce9f46d9cd8822537"
+      },
+      "study.out": {
+        "local_path": "E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal12_PCG_verify\\study.out",
+        "bytes": 9597960,
+        "sha256": "d7caf21150ae066aea6f7faea35a388a40e702c8d9d097f63df1abf618c1d619"
+      },
+      "study_settings.json": {
+        "local_path": "E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal12_PCG_verify\\study_settings.json",
+        "bytes": 1842,
+        "sha256": "e36f8bce1c1cfda61a9a621db812e57e5bc1098d9d87c3a1cc3567a8369bf802"
+      }
+    },
+    "native_run_completed": false,
+    "reported_errors": []
+  }
+]

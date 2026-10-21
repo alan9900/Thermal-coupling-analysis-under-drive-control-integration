@@ -15,24 +15,24 @@ def main():
     if args.study:OUT=ROOT/'results/m4/studies'/args.study
     context='finite face contacts' if args.study else 'original whole-body contacts'
     meta=json.loads((OUT/'study_settings.json').read_text()) if (OUT/'study_settings.json').exists() else {}
-    label=meta.get('case','B_BRAKE_ONLY_CONCEPT')
-    origin='Brake onset' if label.startswith('B') else 'Controlled-cycle start'
+    case_name=meta.get('case','B_BRAKE_ONLY_CONCEPT')
+    origin='Brake onset' if case_name.startswith('B') else 'Controlled-cycle start'
     plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10,'figure.dpi':150})
     hist=list(csv.DictReader((OUT/'pilot_temperature_history.csv').open()))
     groups=[('M4_BRAKE_DISC_HAT','Disc'),('M4_PAD_NEAR','Near pad'),('M4_OUTPUT_SHAFT','Output shaft'),
         ('M4_OUTPUT_BEARING_2','Output bearing rear'),('M4_GEAR_CASE_REAR','Gear case rear'),('M4_OIL_INVENTORY','Oil'),('M4_MOTOR_WINDING','Winding')]
     fig,ax=plt.subplots(1,2,figsize=(11,4.3),layout='constrained')
-    for name,label in groups:
+    for j,(name,label) in enumerate(groups):
         r=[x for x in hist if x['part']==name];t=[0]+[float(x['time_s']) for x in r]
-        ax[0].plot(t,[25]+[float(x['maximum']) for x in r],label=label)
+        ax[0].plot(t,[25]+[float(x['maximum']) for x in r],label=label,color='C'+str(j))
         if name not in ['M4_PAD_NEAR','M4_BRAKE_DISC_HAT']:
-            ax[1].plot(t,[0]+[float(x['maximum'])-25 for x in r],label=label)
+            ax[1].plot(t,[0]+[float(x['maximum'])-25 for x in r],label=label,color='C'+str(j))
     ax[0].set(ylabel='Local maximum temperature [degC]',xlabel=origin+' [s]')
     ax[1].set(ylabel='Local maximum rise [K]',xlabel=origin+' [s]')
     for a in ax:
         a.grid(alpha=.2);a.legend(fontsize=8)
-        if label.startswith('B'):a.axvline(3.775437,ls=':',color='gray',lw=1)
-    fig.suptitle('Actual ANSYS diagnostic | S3 assumptions | '+context+'\n'+label+'; mesh / time validation tracked separately',fontsize=11)
+        if case_name.startswith('B'):a.axvline(3.775437,ls=':',color='gray',lw=1)
+    fig.suptitle('Actual ANSYS diagnostic | S3 assumptions | '+context+'\n'+case_name+'; mesh / time validation tracked separately',fontsize=11)
     fig.savefig(OUT/'pilot_temperature_curves.png');plt.close(fig)
     data=np.load(OUT/'pilot_actual_FE_surface.npz');p=data['points']*1000;tri=data['triangles'];T=data['temperature'];time=float(data['time_s'])
     fig=plt.figure(figsize=(7,5.3),layout='constrained');a=fig.add_subplot(projection='3d')

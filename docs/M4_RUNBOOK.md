@@ -103,3 +103,31 @@ normal mesh. Constant material properties, stationary oil with finite film
 links, prescribed bulk coolant temperature, absent hot-air recirculation,
 partial radiative visibility, and missing idle/churning/temperature-feedback
 losses limit interpretation. Numerical convergence is not physical calibration.
+
+## Radiation cost and preserved attempts
+
+The un-decimated 24-layer/1mm-face mesh produced about 78k radiation facets
+and a 48.58GB binary view-factor matrix. That interrupted attempt is retained,
+including its input, logs and partial RTH. Byte-preserving NTFS compression
+reduced the original VF storage to about 3.28GB; the logical file is unchanged.
+
+Native RDEC on both surfaces failed with "Critical topology breaking" on the
+coarse casing face. The replacement reduces **only disc RSURF101** (90/95%),
+leaving case RSURF102 unchanged. Solid FE meshes are unchanged. Independent
+full/reduced medium and 90/95%-reduced fine comparisons are required; reducing
+radiation faces is not itself proof of mesh independence.
+
+An attempted 1e-6 radiosity-flux tolerance caused excessive first-step coupling
+iterations; no result from that interrupted attempt is accepted. Fresh h-named
+studies retain a 1e-6 thermal heat residual and native 1e-4 radiosity-flux criterion.
+Their actual energy and temperature checks remain mandatory.
+
+The trial PCG solver reported ill-conditioning and fell back to SPARSE.
+It was stopped and was **not** adopted or described as verified. Production
+calculations retain the standard direct solver; no forced matrix reuse is used.
+
+Use post_completed_studies.py / watch_completed.py only for terminal zero-error
+runs. contact_audit.py additionally validates native active-branch areas and oil
+energy; extract_paths.py checks a drive-subassembly control volume independently.
+An earlier coarse B cut balance missed its 0.5% threshold and remains BLOCKED
+even though whole-model energy closure passed.

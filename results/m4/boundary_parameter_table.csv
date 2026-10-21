@@ -1,0 +1,8 @@
+parameter,candidate_values,actual_calibrated_value,classification,note
+external_h_W_m2K,5;15;40,,S3_ENGINEERING_ASSUMPTION,Finite boundary; no actual system calibration
+jacket_h_W_m2K,100;300;800,,S3_ENGINEERING_ASSUMPTION,Finite boundary; no actual system calibration
+coolant_K,298.15;298.15;333.15,,S3_ENGINEERING_ASSUMPTION,Cooling h scenarios are varied; coolant bulk range is not yet a completed sensitivity study
+ambient_K,298.15,,S3_ENGINEERING_ASSUMPTION,Finite boundary; no actual system calibration
+initial_K,298.15,,S3_ENGINEERING_ASSUMPTION,Finite boundary; no actual system calibration
+emissivity_disc,0.8,,S3_ENGINEERING_ASSUMPTION,Finite boundary; no actual system calibration
+emissivity_case,0.7,,S3_ENGINEERING_ASSUMPTION,Finite boundary; no actual system calibration

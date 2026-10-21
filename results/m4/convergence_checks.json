@@ -4,7 +4,7 @@
     "required": [
       "B_normal6_dt1",
       "B_normal12_dt1_retry1",
-      "B_normal24_dt1"
+      "B_normal24_rd95_dt1"
     ],
     "available": [
       "B_normal6_dt1",
@@ -14,10 +14,31 @@
   "time": {
     "status": "PENDING",
     "required": [
-      "B_normal24_dt1",
-      "B_normal24_dt2",
-      "B_normal24_dt4"
+      "B_normal24_rd95_dt1",
+      "B_normal24_rd95_dt2",
+      "B_normal24_rd95_dt4"
     ],
     "available": []
+  },
+  "radiation_facets_fine": {
+    "status": "PENDING",
+    "required": [
+      "B_normal24_rd90_dt1",
+      "B_normal24_rd95_dt1"
+    ]
+  },
+  "radiation_facets_medium": {
+    "status": "PENDING",
+    "required": [
+      "B_normal12_dt1_retry1",
+      "B_normal12_rd95_dt1"
+    ]
+  },
+  "radiation_facets_combined": {
+    "status": "PENDING",
+    "required": [
+      "C_normal12_dt1",
+      "C_normal12_rd95_dt1"
+    ]
   }
 }

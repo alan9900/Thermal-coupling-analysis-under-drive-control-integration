@@ -12,6 +12,8 @@ def prepare(source, targets):
         folder=RUN/'studies'/target;assert not (folder/'study.out').exists(),'Never edit an executing or archived input'
         m=json.loads((folder/'study_settings.json').read_text())
         assert m['original_sha256']==sm['original_sha256'],'Original Mechanical geometry input must be identical'
+        assert m.get('radiation_reduction',0)==sm.get('radiation_reduction',0),'Radiation facets must use the same reduction'
+        assert m.get('case_radiation_reduction',0)==sm.get('case_radiation_reduction',0),'Case radiation facets must also be identical'
         path=folder/'study.dat';text=path.read_text();assert 'vfopt,read' not in text.lower()
         match=re.search(r'^solve\s*$',text,re.M|re.I);assert match
         command="! Identical geometry/facets: read previously computed native binary view factors\nvfopt,read,'"+str(base/'study').replace('\\','/')+"',vf\n"

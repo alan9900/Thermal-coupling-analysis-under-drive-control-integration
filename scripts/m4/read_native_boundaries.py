@@ -17,7 +17,7 @@ def surface_groups(path):
             values=line.split()
             if len(values)<9 or not all(x.lstrip('-').isdigit() for x in values):continue
             v=list(map(int,values))
-            if et.get(v[2])==152:groups.setdefault(v[2],[]).append(v[0])
+            if et.get(v[1])==152:groups.setdefault(v[1],[]).append(v[0])
     return groups,mode
 def main():
     os.environ['DPF_DEFAULT_GRPC_MODE']='insecure'

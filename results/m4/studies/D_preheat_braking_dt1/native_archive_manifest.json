@@ -1,0 +1,17 @@
+{
+  "study.dat": {
+    "local_path": "E:\\ansys_runs\\m4_case0_20261021\\studies\\D_preheat_braking_dt1\\study.dat",
+    "bytes": 71420833,
+    "sha256": "e5d69a8f6fccfc0ded2860ef46c24358b3f6036d3ea86456883773c44ce7546e"
+  },
+  "study.rth": {
+    "local_path": "E:\\ansys_runs\\m4_case0_20261021\\studies\\D_preheat_braking_dt1\\study.rth",
+    "bytes": 4047765504,
+    "sha256": "380f5ed85f638b60f85a63d18666180141b89995bb5e8f7d3e77c4a2371792a5"
+  },
+  "study.out": {
+    "local_path": "E:\\ansys_runs\\m4_case0_20261021\\studies\\D_preheat_braking_dt1\\study.out",
+    "bytes": 2403392,
+    "sha256": "bdc00162b37d44369594e974f2880dcb91284c600330f6c5041db1464f2bff05"
+  }
+}
