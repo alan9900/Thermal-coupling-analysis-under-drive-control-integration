@@ -16,5 +16,7 @@
   "capacity_weights": "E:\\ChatGPT\u9879\u76ee\\\u9a71\u5236\u878d\u5408\u4e0b\u70ed\u8026\u5408\u5206\u6790\\results\\m4\\studies\\B_normal12_dt1_retry1\\FE_capacity_weights.npz",
   "retry_of": "E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal12_dt1",
   "status": "PREPARED_RETRY_AFTER_INTERRUPTION",
-  "execution_status": "NATIVE_RUN_COMPLETED_ZERO_ERRORS"
+  "execution_status": "NATIVE_RUN_COMPLETED_ZERO_ERRORS",
+  "actual_native_input_sha256": "28e78491de0ba49e2bab0a19c2fcf62a05794b7773527e0e5ce5cc5f17767605",
+  "input_hash_basis": "SHA256 of actual native study.dat bytes, including real line endings"
 }

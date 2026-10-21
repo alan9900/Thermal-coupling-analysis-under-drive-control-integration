@@ -1,0 +1,17 @@
+{
+  "study.dat": {
+    "local_path": "E:\\ansys_runs\\m4_case0_20261021\\studies\\C_normal12_rd95_contact_low\\study.dat",
+    "bytes": 99386736,
+    "sha256": "ec35c8688f9c7d5d63d1b465cd938211a056c242edb0fd2feb7c3d88aa634070"
+  },
+  "study.rth": {
+    "local_path": "E:\\ansys_runs\\m4_case0_20261021\\studies\\C_normal12_rd95_contact_low\\study.rth",
+    "bytes": 4489281536,
+    "sha256": "355ce9b99f6d1f7b9fd7bbcd9d6b3dcb4d4260fe9af6ab8e896ec4645685b20f"
+  },
+  "study.out": {
+    "local_path": "E:\\ansys_runs\\m4_case0_20261021\\studies\\C_normal12_rd95_contact_low\\study.out",
+    "bytes": 10133404,
+    "sha256": "40969a8359b82813c6dd185f27666a4fbd048c470c9d198a702f870ff0aa2a71"
+  }
+}

@@ -7,7 +7,7 @@ foreach($case in $Cases) {
     $folder=Join-Path $run $case
     if(-not (Test-Path -LiteralPath (Join-Path $folder 'study.dat'))){throw 'Missing generated input'}
     if(Test-Path -LiteralPath (Join-Path $folder 'study.out')){throw "Existing native log must be preserved; use a new retry folder: $case"}
-    $meta=Get-Content -LiteralPath (Join-Path $folder 'study_settings.json') -Raw | ConvertFrom-Json
+    $meta=Get-Content -LiteralPath (Join-Path $folder 'study_settings.json') -Encoding UTF8 -Raw | ConvertFrom-Json
     if($meta.viewfactor_reuse_from){
         $source=$meta.viewfactor_reuse_from
         $sourceLog=Get-Content -LiteralPath (Join-Path $source 'study.out') -Raw

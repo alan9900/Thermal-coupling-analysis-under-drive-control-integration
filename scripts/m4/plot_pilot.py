@@ -14,7 +14,7 @@ def main():
     ap=argparse.ArgumentParser();ap.add_argument('--study');args=ap.parse_args()
     if args.study:OUT=ROOT/'results/m4/studies'/args.study
     context='finite face contacts' if args.study else 'original whole-body contacts'
-    meta=json.loads((OUT/'study_settings.json').read_text()) if (OUT/'study_settings.json').exists() else {}
+    meta=json.loads((OUT/'study_settings.json').read_text(encoding='utf-8-sig')) if (OUT/'study_settings.json').exists() else {}
     case_name=meta.get('case','B_BRAKE_ONLY_CONCEPT')
     origin='Brake onset' if case_name.startswith('B') else 'Controlled-cycle start'
     plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10,'figure.dpi':150})

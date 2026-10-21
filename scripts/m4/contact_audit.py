@@ -9,7 +9,7 @@ import numpy as np
 from export_native_brake import ROOT,RUN
 
 def contact_groups(path):
-    text=path.read_text();starts=list(re.finditer(r'Create Contact "(S3_[^"]+)"',text));groups={}
+    text=path.read_text(encoding='utf-8-sig');starts=list(re.finditer(r'Create Contact "(S3_[^"]+)"',text));groups={}
     for j,m in enumerate(starts):
         part=text[m.end():starts[j+1].start() if j+1<len(starts) else len(text)]
         cid=int(re.search(r'\*set,cid,(\d+)',part)[1]);tid=int(re.search(r'\*set,tid,(\d+)',part)[1]);ids={};block=False
@@ -30,7 +30,7 @@ def contact_groups(path):
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('study');a=p.parse_args();folder=RUN/'studies'/a.study;out=ROOT/'results/m4/studies'/a.study
-    log=(folder/'study.out').read_text(errors='replace');assert 'RUN COMPLETED' in log
+    log=(folder/'study.out').read_text(encoding='utf-8-sig', errors='replace');assert 'RUN COMPLETED' in log
     groups=contact_groups(folder/'study.dat');os.environ['DPF_DEFAULT_GRPC_MODE']='insecure'
     from ansys.dpf import core as dpf
     server=dpf.start_local_server(ansys_path='E:/Program Files/ANSYS Inc/v241',config=dpf.AvailableServerConfigs.GrpcServer,ip='127.0.0.1')

@@ -1,0 +1,29 @@
+{
+  "normal6": {
+    "status": "PASS_NATIVE_SHAPE_ERROR_LIMITS",
+    "error_elements": 0,
+    "warning_elements": 493,
+    "input_source": "E:\\ansys_runs\\m4_case0_20261021\\mesh_variants\\mesh_normal6\\mechanical_ds.dat",
+    "source_sha256": "e607951ee51b9d385c7634c3e3723aa1a124fe023b473d82f6dd341078bf7557",
+    "audit_input_sha256": "26ef38e490ea7e202f0d7e396dee6da31e31145e232a42a8bb8e455a53f027bb",
+    "method": "SHPP DEFAULT + ON, CHECK ESEL ERR / WARN, all SOLID278; unchanged native default limits; no thermal solve and no mesh edits"
+  },
+  "normal12": {
+    "status": "PASS_NATIVE_SHAPE_ERROR_LIMITS",
+    "error_elements": 0,
+    "warning_elements": 494,
+    "input_source": "E:\\ansys_runs\\m4_case0_20261021\\mesh_variants\\mesh_normal12\\mechanical_ds.dat",
+    "source_sha256": "27821beb3ff7b173e6c37db862d32e055a20fdb62e4a51c3c6647f45edf76d5b",
+    "audit_input_sha256": "fdccc94fad3e6c6058890c7b4dc78549d9d0579f60a68fb6489f47b06537ee15",
+    "method": "SHPP DEFAULT + ON, CHECK ESEL ERR / WARN, all SOLID278; unchanged native default limits; no thermal solve and no mesh edits"
+  },
+  "normal24": {
+    "status": "PASS_NATIVE_SHAPE_ERROR_LIMITS",
+    "error_elements": 0,
+    "warning_elements": 500,
+    "input_source": "E:\\ansys_runs\\m4_case0_20261021\\mesh_variants\\mesh_normal24\\mechanical_ds.dat",
+    "source_sha256": "8a27cdf0d8edfeb88194edf7d073dd73b682f0947fe2e0cf7b223720523c75d0",
+    "audit_input_sha256": "7cdccef9b44feede2c13f9a606d92469e297e7c747b1171f669a77ae5d521b63",
+    "method": "SHPP DEFAULT + ON, CHECK ESEL ERR / WARN, all SOLID278; unchanged native default limits; no thermal solve and no mesh edits"
+  }
+}

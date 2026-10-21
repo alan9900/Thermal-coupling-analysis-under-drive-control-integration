@@ -15,7 +15,7 @@ BRAKE={'M4_BRAKE_DISC_HAT','M4_DISC_HUB','M4_HUB_REMOVABLE_SLEEVE','M4_CALIPER',
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('study');a=p.parse_args();folder=RUN/'studies'/a.study;out=ROOT/'results/m4/studies'/a.study
-    audit=json.loads((out/'contact_output_audit.json').read_text());assert audit['status'].startswith('PASS_'),'Unverified contact extraction'
+    audit=json.loads((out/'contact_output_audit.json').read_text(encoding='utf-8-sig'));assert audit['status'].startswith('PASS_'),'Unverified contact extraction'
     contacts=list(csv.DictReader((out/'contact_path_heat_rates.csv').open()));hist=list(csv.DictReader((out/'pilot_temperature_history.csv').open()))
     os.environ['DPF_DEFAULT_GRPC_MODE']='insecure'
     from ansys.dpf import core as dpf

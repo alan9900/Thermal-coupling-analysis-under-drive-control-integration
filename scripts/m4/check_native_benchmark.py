@@ -4,10 +4,10 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2];OUT=ROOT/'results/m4'
 RUN=Path('E:/ansys_runs/m4_native_benchmark')
 def main():
-    log=(RUN/'benchmark2.out').read_text(errors='replace')
+    log=(RUN/'benchmark2.out').read_text(encoding='utf-8-sig', errors='replace')
     assert 'NUMBER OF ERROR   MESSAGES ENCOUNTERED=          0' in log
     assert 'NUMBER OF WARNING MESSAGES ENCOUNTERED=          0' in log
-    hot,cold=map(float,(RUN/'benchmark_temperatures.csv').read_text().strip().split(','))
+    hot,cold=map(float,(RUN/'benchmark_temperatures.csv').read_text(encoding='utf-8-sig').strip().split(','))
     C=7800*500*.1**3;H=2000*6*.1**2;dt=.5
     expected_hot=25+1000*10/C;expected_cold=25+(hot-25)/(1+H*dt/C)**20
     cooling=[];T=hot

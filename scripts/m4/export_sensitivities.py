@@ -10,7 +10,7 @@ from export_native_brake import ROOT,RUN
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('base');ap.add_argument('--prefix',default='C_sensitivity')
-    a=ap.parse_args();base=RUN/'studies'/a.base;text=(base/'study.dat').read_text()
+    a=ap.parse_args();base=RUN/'studies'/a.base;text=(base/'study.dat').read_text(encoding='utf-8-sig')
     pairs={}
     for match in re.finditer(r'Create Contact "(S3_[^"]+)"[^\n]*\n[\s\S]*?\*set,tid,(\d+)\s*\n\*set,cid,(\d+)',text):
         pairs[match[1]]=(int(match[2]),int(match[3]))
@@ -33,12 +33,13 @@ def main():
         variant=text[:insertion]+'\n'+'\n'.join(commands)+'\n'+text[insertion:]
         (folder/'study.dat').write_text(variant)
         shutil.copy2(base/'source_intervals.csv',folder/'source_intervals.csv')
-        meta=json.loads((base/'study_settings.json').read_text());meta.update(
+        meta=json.loads((base/'study_settings.json').read_text(encoding='utf-8-sig'));meta.update(
             case=meta['case']+'_'+label,sensitivity_base=a.base,classification='S3_UNCERTAINTY_NOT_CALIBRATED',
             variation=dict(solid_mounting_TCC_W_m2K=contact_h,external_h_W_m2K=external_h,jacket_h_W_m2K=jacket_h),
             varied_contact_pairs=selected if contact_h else {},
             capacity_weights=str(ROOT/'results/m4/studies'/folder.name/'FE_capacity_weights.npz'),status='GENERATED_NOT_EXECUTED',
-            input_sha256=hashlib.sha256(variant.encode()).hexdigest())
+            parent_input_sha256=hashlib.sha256((base/'study.dat').read_bytes()).hexdigest(),
+            input_sha256=hashlib.sha256((folder/'study.dat').read_bytes()).hexdigest())
         (folder/'study_settings.json').write_text(json.dumps(meta,indent=2)+'\n');print(folder)
 
 if __name__=='__main__':main()

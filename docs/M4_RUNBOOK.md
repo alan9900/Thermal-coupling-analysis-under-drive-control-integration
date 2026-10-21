@@ -131,3 +131,50 @@ runs. contact_audit.py additionally validates native active-branch areas and oil
 energy; extract_paths.py checks a drive-subassembly control volume independently.
 An earlier coarse B cut balance missed its 0.5% threshold and remains BLOCKED
 even though whole-model energy closure passed.
+
+## Refined standalone reproduction
+
+The finite-size packages in `results/m4/model_input/native_input_packages.json`
+identify exact executed native inputs by SHA256. Each includes the embedded mesh,
+materials, finite contacts, loads and time steps. Large RTH/WBPJ/VF files remain
+local and checksummed; they are not claimed to be uploaded remotely.
+
+Run the following with a local Python interpreter (the example environment path
+is specific to this machine). Use a **fresh ASCII output folder**:
+
+```powershell
+& 'E:/ansys_runs/m4_python_ascii/Scripts/python.exe' `
+  scripts/m4/prepare_reproduction.py C_normal12_rd95_dt1 `
+  --out E:/ansys_runs/M4_Case0_fresh_reproduction
+```
+
+The helper verifies the gzip and exact-input digests and retains
+`executed_original.dat`. If an input reads a local binary view-factor cache, it
+removes only `VFOPT,READ` in the derived `study.dat`, so the same radiation facets
+are recomputed by ANSYS. The preparation receipt is explicitly **NOT EXECUTED**;
+it is not a new thermal solution or proof of cross-version reproduction.
+
+Use the native solver command above with the new folder, wait for terminal
+`RUN COMPLETED` and zero errors, then generate **fresh** capacity weights and
+run temperature/energy extraction. Do not reuse old node weights:
+
+```powershell
+& 'E:/ansys_runs/m4_python_ascii/Scripts/python.exe' `
+  scripts/m4/prepare_fe_capacity.py `
+  E:/ansys_runs/M4_Case0_fresh_reproduction/study.rth `
+  --out results/m4/studies/M4_Case0_fresh_reproduction
+& 'E:/ansys_runs/m4_python_ascii/Scripts/python.exe' `
+  scripts/m4/postprocess_pilot.py --study E:/ansys_runs/M4_Case0_fresh_reproduction
+& 'E:/ansys_runs/m4_python_ascii/Scripts/python.exe' `
+  scripts/m4/energy_pilot.py --study E:/ansys_runs/M4_Case0_fresh_reproduction
+```
+
+Use UTF-8 explicitly for JSON. Windows PowerShell 5.1's default ANSI reader
+corrupted a Chinese metadata path in one attempt; the error and verified path
+repair are preserved. This changed metadata only, not the source bytes, native
+solver input or RTH. New runners explicitly specify `-Encoding UTF8`.
+
+`summarize_studies.py`, `plot_comparisons.py`, and `check_acceptance.py` read
+completed receipts. Missing results remain PENDING; old failed studies remain
+BLOCKED. `document_qa.py` requires current file hashes and manual inspection of
+all rendered pages before recording a visual pass.

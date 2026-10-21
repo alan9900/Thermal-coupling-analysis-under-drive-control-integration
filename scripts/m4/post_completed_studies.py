@@ -12,14 +12,19 @@ RUN = Path('E:/ansys_runs/m4_case0_20261021/studies')
 def process(name):
     assert re.fullmatch('[A-Za-z0-9_]+', name)
     folder = RUN / name
-    log = (folder / 'study.out').read_text(errors='replace')
+    log = (folder / 'study.out').read_text(encoding='utf-8-sig', errors='replace')
     if 'RUN COMPLETED' not in log or not re.search(r'NUMBER OF ERROR\s+MESSAGES ENCOUNTERED=\s+0', log):
         raise RuntimeError('Incomplete or failed native calculation: ' + name)
     out = ROOT / 'results/m4/studies' / name
     out.mkdir(parents=True, exist_ok=True)
-    metadata = json.loads((folder / 'study_settings.json').read_text())
+    metadata = json.loads((folder / 'study_settings.json').read_text(encoding='utf-8-sig'))
     metadata['capacity_weights'] = str(out / 'FE_capacity_weights.npz')
     metadata['execution_status'] = 'NATIVE_RUN_COMPLETED_ZERO_ERRORS'
+    if metadata.get('status') == 'GENERATED_NOT_EXECUTED':
+        metadata['generation_status'] = metadata['status']
+        metadata['status'] = 'ACTUAL_NATIVE_COMPLETED_NOT_MECHANICAL_TREE_SOLVED'
+    with (folder/'study.dat').open('rb') as stream:
+        metadata['actual_native_input_sha256'] = hashlib.file_digest(stream,'sha256').hexdigest()
     # Do not relabel an external solve as a Mechanical tree Solve state.
     (folder / 'study_settings.json').write_text(json.dumps(metadata, indent=2) + '\n')
     for file in ['study_settings.json', 'source_intervals.csv', 'study.out', 'study.mntr']:

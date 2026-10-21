@@ -13,18 +13,18 @@ def main():
     global OUT
     ap=argparse.ArgumentParser();ap.add_argument('--native-recovery',action='store_true');ap.add_argument('--study',type=Path)
     args=ap.parse_args();expected=None
-    s=json.loads((RUN/'pilot_solve_state.json').read_text())
+    s={} if args.study else json.loads((RUN/'pilot_solve_state.json').read_text(encoding='utf-8-sig'))
     if args.study:
-        expected=json.loads((args.study/'study_settings.json').read_text());path=args.study/'study.rth'
+        expected=json.loads((args.study/'study_settings.json').read_text(encoding='utf-8-sig'));path=args.study/'study.rth'
         OUT=ROOT/'results/m4/studies'/args.study.name;OUT.mkdir(parents=True,exist_ok=True)
-        log=(args.study/'study.out').read_text(errors='replace')
+        log=(args.study/'study.out').read_text(encoding='utf-8-sig', errors='replace')
         assert 'RUN COMPLETED' in log and 'NUMBER OF ERROR   MESSAGES ENCOUNTERED=          0' in log
         s={'state':expected.get('Mechanical_state','EXTERNAL_NATIVE_RUN_COMPLETED_NOT_MECHANICAL_SOLVED')}
     elif args.native_recovery:
         # Mechanical's result transfer failed after native completion. Do not
         # relabel its SolveFailed state: prove native completion separately.
         path=RUN/'native_archive/B_wholebody/file.rth'
-        log=(path.parent/'solve.out').read_text(errors='replace')
+        log=(path.parent/'solve.out').read_text(encoding='utf-8-sig', errors='replace')
         assert 'RUN COMPLETED' in log and 'NUMBER OF ERROR   MESSAGES ENCOUNTERED=          0' in log
     else:
         assert s['state']=='Solved','No successful solve: refuse temperature extraction'
@@ -36,7 +36,7 @@ def main():
     try:
         model=dpf.Model(str(path),server=server);mesh=model.metadata.meshed_region
         times=np.array(model.metadata.time_freq_support.time_frequencies.data)
-        expected=expected or dict(json.loads((RUN/'pilot_source.json').read_text()),expected_sets=46)
+        expected=expected or dict(json.loads((RUN/'pilot_source.json').read_text(encoding='utf-8-sig')),expected_sets=46)
         assert abs(times[-1]-expected['duration_s'])<1e-7 and len(times)==expected['expected_sets'],'Native result is incomplete'
         named=model.metadata.available_named_selections
         selected=[n for n in named if n.lower().startswith('m4_')]
@@ -51,15 +51,15 @@ def main():
         for k,time in enumerate(times,1):
             fc=model.results.temperature(time_scoping=[k]).eval();field=fc[0]
             ids=np.array(field.scoping.ids);T=np.array(field.data,copy=True).reshape(-1);sort=np.argsort(ids);ids=ids[sort];T=T[sort]
-            j=np.searchsorted(ids,weight_ids);valid=j<len(ids)
-            valid[valid]=ids[j[valid]]==weight_ids[valid]
-            aligned=np.zeros(len(weight_ids));aligned[valid]=T[j[valid]]
+            j=np.searchsorted(ids,weight_ids);weight_valid=j<len(ids)
+            weight_valid[weight_valid]=ids[j[weight_valid]]==weight_ids[weight_valid]
+            aligned=np.zeros(len(weight_ids));aligned[weight_valid]=T[j[weight_valid]]
             for n,scope in groups.items():
                 scoped=np.array(scope.ids)
                 idx=np.searchsorted(ids,scoped);valid=idx<len(ids);idx=idx[valid];scoped=scoped[valid];idx=idx[ids[idx]==scoped]
                 assert len(idx),n
                 vals=T[idx]
-                w=W[weight_names.index(n)];assert np.all(w[~valid]==0)
+                w=W[weight_names.index(n)];assert np.all(w[~weight_valid]==0)
                 rows.append(dict(time_s=float(time),part=n,minimum=float(vals.min()),maximum=float(vals.max()),
                     nodal_arithmetic_mean=float(vals.mean()),capacity_weighted_mean=float(np.sum(w*aligned)/w.sum()),
                     stored_energy_above_25C_J=float(np.sum(w*(aligned-25))),temperature_unit=field.unit,
@@ -75,11 +75,12 @@ def main():
         skin=dpf.operators.mesh.skin(mesh=disc_mesh,server=server).outputs.mesh()
         points=np.array(skin.nodes.coordinates_field.data);point_ids=np.array(skin.nodes.scoping.ids)
         tri=[]
-        for e in skin.elements:
-            c=list(e.connectivity)
-            if len(c)==3:tri.append(c)
-            elif len(c)==4:tri.extend([[c[0],c[1],c[2]],[c[0],c[2],c[3]]])
-            else:raise ValueError('Unimplemented skin topology: '+str(len(c)))
+        with skin.elements.connectivities_field.as_local_field() as connections:
+            for eid in skin.elements.scoping.ids:
+                c=list(connections.get_entity_data_by_id(int(eid)))
+                if len(c)==3:tri.append(c)
+                elif len(c)==4:tri.extend([[c[0],c[1],c[2]],[c[0],c[2],c[3]]])
+                else:raise ValueError('Unimplemented skin topology: '+str(len(c)))
         disc_fc=model.results.temperature(time_scoping=[disc_peak[1]]).eval();field=disc_fc[0]
         ids=np.array(field.scoping.ids);vals=np.array(field.data,copy=True).reshape(-1);sort=np.argsort(ids);ids=ids[sort];vals=vals[sort]
         idx=np.searchsorted(ids,point_ids);assert np.all(idx<len(ids)) and np.all(ids[idx]==point_ids)

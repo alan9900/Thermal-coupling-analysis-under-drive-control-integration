@@ -18,11 +18,11 @@ def main():
     a=radiation_W(350,300,.04,.4,.8,.7);b=radiation_W(300,350,.04,.4,.8,.7)
     assert a>0 and b==-a and radiation_W(300,300,.04,.4,.8,.7)==0;groups.append('Absolute-K radiation reverses with temperature difference')
     reject(lambda:radiation_W(-25,300,.04,.4,.8,.7));groups.append('Negative Kelvin rejected')
-    imp=json.loads((OUT/'import_checks.json').read_text());assert imp['parts']==129 and imp['solids']==131 and imp['oil_solids']==3;groups.append('Native import matches CAD part/solid counts')
-    faces=json.loads((OUT/'brake_friction_faces.json').read_text());assert .03<faces['near']['area_m2']<.04 and .03<faces['far']['area_m2']<.04
+    imp=json.loads((OUT/'import_checks.json').read_text(encoding='utf-8-sig'));assert imp['parts']==129 and imp['solids']==131 and imp['oil_solids']==3;groups.append('Native import matches CAD part/solid counts')
+    faces=json.loads((OUT/'brake_friction_faces.json').read_text(encoding='utf-8-sig'));assert .03<faces['near']['area_m2']<.04 and .03<faces['far']['area_m2']<.04
     assert sum(r['disc_power_fraction'] for r in faces.values())==1;groups.append('Only two friction annuli, SI area and power fractions sum to one')
-    src=json.loads((OUT/'input_checks.json').read_text());assert len(src['cases'])==4 and max(c['budget_residual_W'] for c in src['cases'])<1e-6;groups.append('Four accepted M1-derived source budgets close; inverter stays external')
-    pilot=json.loads((OUT/'pilot_source.json').read_text());t=np.array(pilot['time_s']);Q=np.array([pilot['disc_W'],pilot['pad_W']]).T
+    src=json.loads((OUT/'input_checks.json').read_text(encoding='utf-8-sig'));assert len(src['cases'])==4 and max(c['budget_residual_W'] for c in src['cases'])<1e-6;groups.append('Four accepted M1-derived source budgets close; inverter stays external')
+    pilot=json.loads((OUT/'pilot_source.json').read_text(encoding='utf-8-sig'));t=np.array(pilot['time_s']);Q=np.array([pilot['disc_W'],pilot['pad_W']]).T
     assert np.all(np.diff(t)>0) and np.max(np.abs(np.trapezoid(Q,t,axis=0)-pilot['source_energy_J']))<1e-7
     groups.append('Pilot table integrates exactly to archived M1-derived disc/pad energy')
     assert subprocess.check_output(['git','rev-parse','M3-v1.0^{}'],text=True).strip()=='7a6b9b1512495283fa12dd4a2a7ffdf698554d3e'

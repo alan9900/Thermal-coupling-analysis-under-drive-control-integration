@@ -1,0 +1,32 @@
+{
+  "hydro6061": {
+    "url": "https://www.hydro.com/Document/Index?id=560718&name=Alloy+6061.pdf",
+    "title": "Hydro Alloy 6061, revision 2019/01, PDF page 2",
+    "download": "BLOCKED_LOCAL_DOWNLOAD",
+    "error": "HTTP Error 403: Forbidden",
+    "sha256": null,
+    "web_content_review_date": "2026-10-21",
+    "scope": "Published reference only; actual housing grade / composite winding parameters remain unknown"
+  },
+  "kme2021": {
+    "url": "https://www.kme.com/fileadmin/DOWNLOADCENTER/COPPER%20DIVISON/4%20Industrial%20Rolled/3_Datasheets/Datasheets_NEW_2021/2021_KME_Handout_e.pdf",
+    "title": "KME 2021 handbook, PDF pages 12 and 14",
+    "download": "ACTUAL_FILE_CACHED",
+    "sha256": "0356d3c36973383b5d382ee51255b00a9bc568883aa4abe90425e5b713ed0c89",
+    "bytes": 3713010,
+    "local_cache": "E:\\ansys_runs\\m4_case0_20261021\\reference_data\\kme2021.pdf",
+    "classification": "S2_PUBLISHED_REFERENCE_NOT_ACTUAL_ASSEMBLY_MATERIAL",
+    "redistribution": "Full catalog kept locally; Git contains numerical facts, URL and checksum only",
+    "web_content_review_date": "2026-10-21",
+    "scope": "Published reference only; actual housing grade / composite winding parameters remain unknown"
+  },
+  "nist_copper": {
+    "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7440508&Mask=6&Units=CAL",
+    "title": "NIST SRD69 copper solid Shomate, Chase 1998, 298-1358 K",
+    "download": "BLOCKED_LOCAL_DOWNLOAD",
+    "error": "HTTP Error 403: Forbidden",
+    "sha256": null,
+    "web_content_review_date": "2026-10-21",
+    "scope": "Published reference only; actual housing grade / composite winding parameters remain unknown"
+  }
+}

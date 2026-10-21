@@ -14,5 +14,7 @@
   "physics_change": "None: output selection only; no whole-body contact fallback",
   "run_command": "ANSYS241.exe -b -smp -np 2 -p ansys -j study -dir \"E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal6_dt1\" -i \"E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal6_dt1\\study.dat\" -o \"E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal6_dt1\\study.out\"",
   "capacity_weights": "E:\\ChatGPT\u9879\u76ee\\\u9a71\u5236\u878d\u5408\u4e0b\u70ed\u8026\u5408\u5206\u6790\\results\\m4\\studies\\B_normal6_dt1\\FE_capacity_weights.npz",
-  "execution_status": "NATIVE_RUN_COMPLETED_ZERO_ERRORS"
+  "execution_status": "NATIVE_RUN_COMPLETED_ZERO_ERRORS",
+  "actual_native_input_sha256": "27b1505a753b502e79b041c0b5fc9bb2f8c0740dc6a032cc02293b62c5519b6a",
+  "input_hash_basis": "SHA256 of actual native study.dat bytes, including real line endings"
 }

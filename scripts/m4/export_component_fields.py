@@ -26,11 +26,12 @@ def main():
             skin=dpf.operators.mesh.skin(mesh=body,server=server).outputs.mesh()
             points=np.array(skin.nodes.coordinates_field.data,copy=True);ids=np.array(skin.nodes.scoping.ids)
             tri=[]
-            for e in skin.elements:
-                c=list(e.connectivity)
-                if len(c)==3:tri.append(c)
-                elif len(c)==4:tri.extend([[c[0],c[1],c[2]],[c[0],c[2],c[3]]])
-                else:raise ValueError('Unsupported surface topology')
+            with skin.elements.connectivities_field.as_local_field() as connections:
+                for eid in skin.elements.scoping.ids:
+                    c=list(connections.get_entity_data_by_id(int(eid)))
+                    if len(c)==3:tri.append(c)
+                    elif len(c)==4:tri.extend([[c[0],c[1],c[2]],[c[0],c[2],c[3]]])
+                    else:raise ValueError('Unsupported surface topology')
             fc=m.results.temperature(time_scoping=[k]).eval();f=fc[0]
             nids=np.array(f.scoping.ids);values=np.array(f.data,copy=True).ravel()
             order=np.argsort(nids);nids=nids[order];values=values[order]
@@ -40,6 +41,7 @@ def main():
             receipt.append(dict(part=name,time_s=time,volume_nodal_max_C=float(peak['maximum']),surface_max_C=float(values[idx].max()),
                 coordinates='m',temperature='degC',result_set=k,file=path.name,
                 classification='ACTUAL_RTH_FE_FIELD_S3; numerical qualification separate, not measured temperature'))
+            print('Actual field exported',name,flush=True)
         (out/'component_field_checks.json').write_text(json.dumps({'status':'ACTUAL_FE_SURFACES_EXPORTED','components':receipt},indent=2)+'\n')
     finally:server.shutdown()
 

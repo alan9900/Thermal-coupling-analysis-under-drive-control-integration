@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "E:\ChatGPT项目\驱制融合下热耦合分析\scripts\m4\postprocess_pilot.py", line 96, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "E:\ChatGPT项目\驱制融合下热耦合分析\scripts\m4\postprocess_pilot.py", line 62, in main
+    w=W[weight_names.index(n)];assert np.all(w[~valid]==0)
+                                             ~^^^^^^^^
+IndexError: boolean index did not match indexed array along axis 0; size of axis is 226421 but size of corresponding boolean axis is 126241

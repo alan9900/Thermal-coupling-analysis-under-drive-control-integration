@@ -7,14 +7,14 @@ def write(path,rows):
     with path.open('w',newline='',encoding='utf-8') as f:
         w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
 def main():
-    config=json.loads((ROOT/'configs/m4_case0.json').read_text())
+    config=json.loads((ROOT/'configs/m4_case0.json').read_text(encoding='utf-8-sig'))
     rows=[]
     for material,values in config['materials'].items():
         for key in ['rho_kg_m3','cp_J_kgK','k_W_mK']:
             rows.append(dict(material=material,parameter=key,engineering_candidate=values[key],actual_calibrated_value=None,
                 classification='S3_ENGINEERING_ASSUMPTION',reference='M3 engineering candidate carried into M4; no actual material grade certification'))
     write(OUT/'material_parameter_table.csv',rows)
-    contacts=json.loads((OUT/'contact_scope_resolved.json').read_text())['contacts']
+    contacts=json.loads((OUT/'contact_scope_resolved.json').read_text(encoding='utf-8-sig'))['contacts']
     write(OUT/'contact_parameter_table.csv',[dict(source=r['source'],target=r['target'],source_CAD_faces=';'.join(map(str,r['source_face_ids'])),
         target_CAD_faces=';'.join(map(str,r['target_face_ids'])),h_candidate_W_m2K=r['h_W_m2K'],
         actual_h_W_m2K=None,classification='S3_'+r['classification'],qualification='Actual native area/branch coverage audited separately; not real TCC calibration') for r in contacts])

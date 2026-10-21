@@ -10,11 +10,11 @@ ROOT=Path(__file__).resolve().parents[2];RUN=Path('E:/ansys_runs/m4_case0_202610
 def main():
     p=argparse.ArgumentParser();p.add_argument('--divisor',type=int,default=1);p.add_argument('--input',type=Path,default=RUN/'face_scoped_ds.dat');p.add_argument('--name')
     a=p.parse_args();assert a.divisor in [1,2,4]
-    original=a.input;text=original.read_text();match=re.search(r'^solve\s*$',text,re.M|re.I);assert match
+    original=a.input;text=original.read_text(encoding='utf-8-sig');match=re.search(r'^solve\s*$',text,re.M|re.I);assert match
     prefix=text[:match.start()]
     name=a.name or ('B_brake_dt'+str(a.divisor));assert re.fullmatch('[A-Za-z0-9_]+',name)
-    folder=RUN/'studies'/name;folder.mkdir(parents=True,exist_ok=True)
-    source=json.loads((RUN/'pilot_source.json').read_text());ends=source['brake_bin_end_s']
+    folder=RUN/'studies'/name;folder.mkdir(parents=True,exist_ok=False)
+    source=json.loads((RUN/'pilot_source.json').read_text(encoding='utf-8-sig'));ends=source['brake_bin_end_s']
     commands=['! Selective records: physical quantities unchanged','allsel','esel,s,ename,,152','esel,a,ename,,252','esel,a,ename,,174',
         'cm,M4_BC_RECORDS,elem','allsel','outres,erase','outres,all,none','outres,nsol,all','outres,rsol,all',
         'outres,veng,all','outres,fflux,all','outres,cont,all','outres,misc,all,M4_BC_RECORDS']

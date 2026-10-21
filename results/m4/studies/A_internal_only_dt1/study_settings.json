@@ -11,9 +11,12 @@
   "applied_energy_J": 30939.38342756897,
   "inverter_external_J": 8625.099242110766,
   "spatial_loss_allocation": "S3: copper to winding, iron to stator, rotor/other to equivalent rotor; gear mesh 50/50 driven wheels, bearings 1/6 each, other to oil. No calibrated tooth/pinion distribution.",
-  "status": "GENERATED_NOT_EXECUTED",
+  "status": "ACTUAL_NATIVE_COMPLETED_NOT_MECHANICAL_TREE_SOLVED",
   "cooling": "Finite h, prescribed 25C bulk; no coolant-flow/capacity calibration or hot-air feedback",
   "comparison_scope": "First drive/optional 60s hold/first brake/30s cooling; not full six-cycle M2 peaks",
   "capacity_weights": "E:\\ChatGPT\u9879\u76ee\\\u9a71\u5236\u878d\u5408\u4e0b\u70ed\u8026\u5408\u5206\u6790\\results\\m4\\studies\\A_internal_only_dt1\\FE_capacity_weights.npz",
-  "execution_status": "NATIVE_RUN_COMPLETED_ZERO_ERRORS"
+  "execution_status": "NATIVE_RUN_COMPLETED_ZERO_ERRORS",
+  "actual_native_input_sha256": "c286cdad437d8f5dc3ed114225734bc51e502d1e98d09b7da9407e5e4803693d",
+  "input_hash_basis": "SHA256 of actual native study.dat bytes, including real line endings",
+  "generation_status": "GENERATED_NOT_EXECUTED"
 }

@@ -7,6 +7,9 @@
     "C_normal12_rd95_cooling_low",
     "C_normal12_rd95_cooling_high"
   ],
-  "available": [],
+  "available": [
+    "C_normal12_rd95_dt1",
+    "C_normal12_rd95_contact_low"
+  ],
   "classification": "S3 single-factor scenarios; not measured confidence intervals"
 }

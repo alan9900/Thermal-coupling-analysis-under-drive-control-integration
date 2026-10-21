@@ -9,7 +9,7 @@ from export_native_brake import RUN,ROOT
 def main():
     p=argparse.ArgumentParser();p.add_argument('base');p.add_argument('name');p.add_argument('--reduction',type=float,default=.95)
     a=p.parse_args();assert a.reduction in [.9,.95];base=RUN/'studies'/a.base;folder=RUN/'studies'/a.name
-    folder.mkdir(exist_ok=False);text=(base/'study.dat').read_text()
+    folder.mkdir(exist_ok=False);text=(base/'study.dat').read_text(encoding='utf-8-sig')
     # The finely tessellated annulus decimates successfully. The already
     # coarse case face contains small holes; decimating it triggered a native
     # "Critical topology breaking" error. Preserve it without decimation.
@@ -26,9 +26,9 @@ def main():
     text=text[:first.start()]+'! Tight heat-flow tolerance; retain documented native radiosity flux tolerance\ncnvtol,heat,,1.e-6\nradopt,,1.e-4\n'+text[first.start():]
     (folder/'study.dat').write_text(text)
     if (base/'source_intervals.csv').exists():shutil.copy2(base/'source_intervals.csv',folder/'source_intervals.csv')
-    m=json.loads((base/'study_settings.json').read_text());m.pop('viewfactor_reuse_from',None);m.pop('viewfactor_reuse_condition',None)
+    m=json.loads((base/'study_settings.json').read_text(encoding='utf-8-sig'));m.pop('viewfactor_reuse_from',None);m.pop('viewfactor_reuse_condition',None)
     m.update(radiation_reduction=a.reduction,case_radiation_reduction=0.,nonlinear_heat_tolerance=1e-6,radiosity_flux_tolerance=1e-4,
-        derived_from=str(base),derived_input_sha256=hashlib.sha256(text.encode()).hexdigest(),
+        derived_from=str(base),parent_input_sha256=hashlib.sha256((base/'study.dat').read_bytes()).hexdigest(),derived_input_sha256=hashlib.sha256((folder/'study.dat').read_bytes()).hexdigest(),
         status='GENERATED_NOT_EXECUTED',capacity_weights=str(ROOT/'results/m4/studies'/a.name/'FE_capacity_weights.npz'),
         radiation_change='Native RDEC applied to disc RSURF101 only; case RSURF102 un-decimated. Solid mesh, heat sources, TCC and cooling unchanged. Requires independent facet-reduction error check.')
     (folder/'study_settings.json').write_text(json.dumps(m,indent=2)+'\n');print(folder)

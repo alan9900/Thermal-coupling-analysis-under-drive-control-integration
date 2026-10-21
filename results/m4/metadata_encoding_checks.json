@@ -1,0 +1,72 @@
+{
+  "status": "PASS_SOURCE_BYTES_VERIFIED",
+  "repairs": [
+    {
+      "study": "C_normal12_dt1",
+      "field": "archived_forcing",
+      "original_preserved": true,
+      "source_sha256": "135f2289905a431fbe8613c38353c34e20593e2ad8ab3eb36c784a9e6188281e"
+    },
+    {
+      "study": "C_normal12_r95_contact_high",
+      "field": "archived_forcing",
+      "original_preserved": true,
+      "source_sha256": "135f2289905a431fbe8613c38353c34e20593e2ad8ab3eb36c784a9e6188281e"
+    },
+    {
+      "study": "C_normal12_r95_contact_low",
+      "field": "archived_forcing",
+      "original_preserved": true,
+      "source_sha256": "135f2289905a431fbe8613c38353c34e20593e2ad8ab3eb36c784a9e6188281e"
+    },
+    {
+      "study": "C_normal12_r95_cooling_high",
+      "field": "archived_forcing",
+      "original_preserved": true,
+      "source_sha256": "135f2289905a431fbe8613c38353c34e20593e2ad8ab3eb36c784a9e6188281e"
+    },
+    {
+      "study": "C_normal12_r95_cooling_low",
+      "field": "archived_forcing",
+      "original_preserved": true,
+      "source_sha256": "135f2289905a431fbe8613c38353c34e20593e2ad8ab3eb36c784a9e6188281e"
+    },
+    {
+      "study": "C_normal12_r95_dt1",
+      "field": "archived_forcing",
+      "original_preserved": true,
+      "source_sha256": "135f2289905a431fbe8613c38353c34e20593e2ad8ab3eb36c784a9e6188281e"
+    },
+    {
+      "study": "C_normal12_rd95_contact_high",
+      "field": "archived_forcing",
+      "original_preserved": true,
+      "source_sha256": "135f2289905a431fbe8613c38353c34e20593e2ad8ab3eb36c784a9e6188281e"
+    },
+    {
+      "study": "C_normal12_rd95_contact_low",
+      "field": "archived_forcing",
+      "original_preserved": true,
+      "source_sha256": "135f2289905a431fbe8613c38353c34e20593e2ad8ab3eb36c784a9e6188281e"
+    },
+    {
+      "study": "C_normal12_rd95_cooling_high",
+      "field": "archived_forcing",
+      "original_preserved": true,
+      "source_sha256": "135f2289905a431fbe8613c38353c34e20593e2ad8ab3eb36c784a9e6188281e"
+    },
+    {
+      "study": "C_normal12_rd95_cooling_low",
+      "field": "archived_forcing",
+      "original_preserved": true,
+      "source_sha256": "135f2289905a431fbe8613c38353c34e20593e2ad8ab3eb36c784a9e6188281e"
+    },
+    {
+      "study": "C_normal12_rd95_dt1",
+      "field": "archived_forcing",
+      "original_preserved": true,
+      "source_sha256": "135f2289905a431fbe8613c38353c34e20593e2ad8ab3eb36c784a9e6188281e"
+    }
+  ],
+  "scope": "Metadata only. Native study.dat, RTH, powers and source files unchanged."
+}

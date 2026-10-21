@@ -9,9 +9,9 @@ ROOT=Path(__file__).resolve().parents[2];OUT=ROOT/'results/m4';RUN=Path('E:/ansy
 sys.path.insert(0,str(ROOT/'scripts/m3_helical'))
 from helical_cad import build
 def main():
-    native=json.loads((OUT/'face_regions_SI.json').read_text());by={}
+    native=json.loads((OUT/'face_regions_SI.json').read_text(encoding='utf-8-sig'));by={}
     for r in native:by.setdefault(r['body'],[]).append(r)
-    raw=json.loads((RUN/'pilot_contacts.json').read_text())
+    raw=json.loads((RUN/'pilot_contacts.json').read_text(encoding='utf-8-sig'))
     cache=ROOT/'tmp/m3_helical'
     names={r[k] for r in raw for k in ['from','to']}
     if all((cache/f'{n}_thermal.brep').is_file() for n in names):

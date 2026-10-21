@@ -34,12 +34,12 @@ def main():
         source.extend(aggregate(rows,(.25 if isbrake else (4 if a.case=='D' and seg==2 else 1))/a.divisor))
     source.extend([(5/a.divisor,np.zeros(9))]*(6*a.divisor))
     if a.case=='A':source=[(dt,np.r_[q[:7],0,0]) for dt,q in source]
-    text=a.input.read_text();m=re.search(r'^solve\s*$',text,re.M|re.I);assert m;prefix=text[:m.start()]
-    pilot=json.loads((RUN/'pilot_source.json').read_text())
+    text=a.input.read_text(encoding='utf-8-sig');m=re.search(r'^solve\s*$',text,re.M|re.I);assert m;prefix=text[:m.start()]
+    pilot=json.loads((RUN/'pilot_source.json').read_text(encoding='utf-8-sig'))
     areas=[]
     for table,q in [('_loadvari571',pilot['disc_W'][0]/2),('_loadvari573',pilot['disc_W'][0]/2),('_loadvari575',pilot['pad_W'][0]/2),('_loadvari577',pilot['pad_W'][0]/2)]:
         value=float(re.search(re.escape(table)+r'\(1,1,1\)\s*=\s*([\d.Ee+\-]+)',prefix)[1]);areas.append(q/value)
-    cap=json.loads((ROOT/'results/m4/FE_capacity_checks.json').read_text());vol=cap['body_volume_m3']
+    cap=json.loads((ROOT/'results/m4/FE_capacity_checks.json').read_text(encoding='utf-8-sig'));vol=cap['body_volume_m3']
     name=a.name or (case+'_dt'+str(a.divisor));assert re.fullmatch('[A-Za-z0-9_]+',name)
     folder=RUN/'studies'/name;folder.mkdir(parents=True,exist_ok=False)
     commands=['! Same actual Mechanical FE mesh/contacts; only controlled heat-source mask changes',

@@ -1,0 +1,46 @@
+{
+  "status": "PASS_DIAGNOSTIC_DISCRETE_FE_BALANCE",
+  "max_relative_residual": 2.6456407648772375e-06,
+  "tolerance": 0.005,
+  "final": {
+    "time_s": 3.7754370068335,
+    "input_W": 1552.462545578368,
+    "convection_out_W": 57.53561374159871,
+    "radiation_net_out_W": 1.9196769789595787,
+    "input_J": 40251.835031859504,
+    "stored_J": 40062.878962463416,
+    "convection_out_J": 181.15721529739972,
+    "radiation_net_out_J": 7.692362203067306,
+    "residual_J": 0.10649189562140116
+  },
+  "SURF152_type_modes": {
+    "95": 1,
+    "96": 1,
+    "97": 1,
+    "98": 1,
+    "99": 2,
+    "100": 2
+  },
+  "reported_SMISC_metadata_units": [
+    "J",
+    "J",
+    "J",
+    "J",
+    "J",
+    "J",
+    "J",
+    "J",
+    "J",
+    "J",
+    "J",
+    "J",
+    "J",
+    "J",
+    "J",
+    "J"
+  ],
+  "interpretation": "Native MKS HFCTOT is W per SURF152 definition; generic reader unit metadata retained.",
+  "quadrature": "Backward Euler right endpoints consistent with native time integration; storage integral rho cp N_i dV.",
+  "physical_contact_scopes": "Explicit finite interface faces, S3 uncalibrated conductance",
+  "mesh_time_independence": "NOT VALIDATED"
+}

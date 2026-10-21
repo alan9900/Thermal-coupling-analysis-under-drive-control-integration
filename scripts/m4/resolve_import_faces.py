@@ -8,8 +8,8 @@ import json, math
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]; OUT=ROOT/'results/m4'
 def main():
-    original=json.loads((OUT/'contact_scope_candidates.json').read_text())
-    native=json.loads((OUT/'face_regions_SI.json').read_text())
+    original=json.loads((OUT/'contact_scope_candidates.json').read_text(encoding='utf-8-sig'))
+    native=json.loads((OUT/'face_regions_SI.json').read_text(encoding='utf-8-sig'))
     records=[];remaining=[]
     for f in original['unmapped_faces']:
         name=f['body'];choices=[]

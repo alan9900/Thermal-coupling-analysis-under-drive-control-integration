@@ -3,7 +3,7 @@ import csv,json,math,collections
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2];OUT=ROOT/'results/m4';RUN=Path('E:/ansys_runs/m4_case0_20261021')
 def main():
-    native=json.loads((RUN/'body_mesh_audit.json').read_text());groups=collections.defaultdict(list)
+    native=json.loads((RUN/'body_mesh_audit.json').read_text(encoding='utf-8-sig'));groups=collections.defaultdict(list)
     for r in native:groups[r['name']].append(r)
     expected=list(csv.DictReader((ROOT/'results/m3_helical/volume_mass_capacity.csv').open()))
     expected={r['part']:float(r['new_volume_mm3'])*1e-9 for r in expected if r['case']=='Case0' and r['variant']=='thermal'}
@@ -18,7 +18,7 @@ def main():
     with (OUT/'import_volume_comparison.csv').open('w',newline='',encoding='utf-8') as f:
         w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
     # Preserve first failed attempt; write a corrected SI interface separately.
-    faces=json.loads((RUN/'face_audit.json').read_text())
+    faces=json.loads((RUN/'face_audit.json').read_text(encoding='utf-8-sig'))
     for r in faces:
         if 'centroid' in r:
             r['centroid_mm']=r.pop('centroid');r['area_m2']*=1e-6
