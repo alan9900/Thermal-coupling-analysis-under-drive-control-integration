@@ -1,0 +1,10 @@
+PROPERTIES ['connectivity', 'elprops', 'eltype', 'apdl_element_type', 'section', 'mat']
+FIRST ELEMENT DPF Element 735904
+	Index:            0
+	Nodes:            3
+	Type:          Tri6
+	Shape:        Shell
+
+apdl_element_type [(np.int32(278), 332431), (np.int32(174), 276028), (np.int32(170), 276028), (np.int32(252), 2951)]
+mat [(np.int32(10), 191507), (np.int32(41), 27440), (np.int32(42), 27440), (np.int32(39), 24698), (np.int32(40), 24698), (np.int32(1), 21084), (np.int32(22), 20026), (np.int32(67), 18168), (np.int32(68), 18168), (np.int32(37), 17002), (np.int32(38), 17002), (np.int32(21), 15983)]
+Quadrature operator unavailable: a 'invalid argument' error occurred: The operator integrate_over_elements doesn't exist in the registry. Check its spelling in the documentation or verify its availability in your loaded plugins.

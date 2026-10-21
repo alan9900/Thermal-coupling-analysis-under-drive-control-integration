@@ -1,0 +1,1 @@
+BLOCKED contacts 32 unmapped faces 24 empty []

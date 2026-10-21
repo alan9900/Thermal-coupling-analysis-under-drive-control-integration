@@ -61,7 +61,7 @@ try:
         elif name=='motor_case' and t=='GeoSurfaceCylinder':
             # Cylinder centroid is on its axis: distinguish by axial extent/area.
             if a>.13:external.append(i)
-            elif -193.01<x<-87.99 and a>.02:jacket.append(i)
+            elif -193.01<x<-87.99 and .08<a<.10:jacket.append(i)
     assert external and jacket,(len(external),len(jacket))
     for label,ids,h in [('ambient',external,15),('jacket',jacket,300)]:
         conv=analysis.AddConvection();conv.Name='S3_finite_'+label;conv.Location=sel(ids)

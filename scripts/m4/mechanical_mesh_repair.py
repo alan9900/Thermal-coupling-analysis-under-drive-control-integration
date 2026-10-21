@@ -21,8 +21,8 @@ try:
         method=Model.Mesh.AddAutomaticMethod();method.Location=sel
         method.Method=MethodType.AllTriAllTet
         method.Algorithm=MeshMethodAlgorithm.PatchIndependent
-        method.MaximumElementSize=Quantity('4 [mm]')
-        method.MinimumSizeLimit=Quantity('0.5 [mm]')
+        method.MaximumElementSize=Quantity('8 [mm]')
+        method.MinimumSizeLimit=Quantity('1.5 [mm]')
     Model.Mesh.ElementSize=Quantity('10 [mm]')
     dump('mesh_repair_started.json',{'time':time.time(),'original_failed':failed})
     Model.Mesh.GenerateMesh()
