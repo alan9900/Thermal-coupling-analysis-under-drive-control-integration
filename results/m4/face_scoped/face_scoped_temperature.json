@@ -1,0 +1,8 @@
+{
+  "validation": "Energy, mesh and time verification are separate; S3 not calibrated", 
+  "result_category": "TemperatureResult", 
+  "minimum": "24.999965667724609 [C]", 
+  "solver_state": "Solved", 
+  "maximum": "100.00422668457031 [C]", 
+  "average": "25.586011906677683 [C]"
+}

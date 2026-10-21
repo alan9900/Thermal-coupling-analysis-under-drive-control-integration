@@ -124,3 +124,11 @@ CAD启动源`225c1a217c1983fa3b654bf26c6d1365906382e7`；主体模型/报告证�
 PR #4已按研究者授权合并；main合并SHA `7a6b9b1512495283fa12dd4a2a7ffdf698554d3e`。正式附注Tag `M3-v1.0` 对象 `c958ec76330c016e0dc3f8ca141f2b139f6c53f3`，远程剥离目标经git ls-remote核验为上述合并提交。此前M0/M1/M2标签未改动。验收范围和限制见reports/M3_APPROVED_SCOPE_2026-10-21.md，历史PARTIAL/BLOCKED记录不抹除。本段为归档后的登记，Tag保持指向实际验收合并提交。
 
 M4已获开发授权，从上述最新main创建stage/M4-ansys，仅先开展Case0。M4未经批准不合并、不创建M4-v1.0、不进入M5。
+
+## M4开发记录（2026-10-21，未验收）
+
+分支`stage/M4-ansys`，草稿[PR #5](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/5)，状态PARTIAL / IN PROGRESS，无M4正式Tag。输入与网格启动证据`72332cd`、热边界复核`e4e281d`、接触面及储热积分`1492340`、首次完整原生热平衡证据`5da3d22`均已推送。后续细化提交以PR记录为准，不覆盖原阶段版本。
+
+实际运行ANSYS2024R1：导入129部件/131实体；保留28组/30实体；粗网格332431实体单元/88049实体节点。后续明确面接触版本Mechanical实际报告Solved；初次整零件接触版本发生结果转移失败，保留SolveFailed记录并独立恢复原生46时刻RTH。首次诊断热平衡最大相对残差约9.81e-6（0.000981%），但这不代表网格/时间步独立性通过。摩擦片初始自动扫掠仅一层，已拒绝将面内加密当作厚度收敛，正在执行明确6/12/24层的细化。
+
+成果入口`docs/M4_RUNBOOK.md`，源码`scripts/m4`，配置`configs/m4_case0.json`及`configs/M4_materials.xml`，证据`results/m4`。原生模型压缩输入位于`results/m4/model_input`，大体积RTH及Workbench项目留在文档登记的本地运行目录并记录校验和。全部温度为S3概念预测；真实接触、冷却、材料温变及温度标定未完成。不得用前处理12组PASS或单元基准算例代替M4整体数值验证。

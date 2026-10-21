@@ -4,13 +4,23 @@ Use an ASCII Python environment path with DPF 7.1. The 2024 local server
 uses legacy insecure gRPC on loopback only, not network access.
 """
 import csv,hashlib,json,os,sys
+import argparse
 from pathlib import Path
 import numpy as np
 from dpf_regions import solid_regions
 ROOT=Path(__file__).resolve().parents[2];RUN=Path('E:/ansys_runs/m4_case0_20261021');OUT=ROOT/'results/m4'
 def main():
+    global OUT
+    ap=argparse.ArgumentParser();ap.add_argument('--native-recovery',action='store_true');ap.add_argument('--study',type=Path)
+    args=ap.parse_args();expected=None
     s=json.loads((RUN/'pilot_solve_state.json').read_text())
-    if '--native-recovery' in sys.argv:
+    if args.study:
+        expected=json.loads((args.study/'study_settings.json').read_text());path=args.study/'study.rth'
+        OUT=ROOT/'results/m4/studies'/args.study.name;OUT.mkdir(parents=True,exist_ok=True)
+        log=(args.study/'study.out').read_text(errors='replace')
+        assert 'RUN COMPLETED' in log and 'NUMBER OF ERROR   MESSAGES ENCOUNTERED=          0' in log
+        s={'state':expected.get('Mechanical_state','EXTERNAL_NATIVE_RUN_COMPLETED_NOT_MECHANICAL_SOLVED')}
+    elif args.native_recovery:
         # Mechanical's result transfer failed after native completion. Do not
         # relabel its SolveFailed state: prove native completion separately.
         path=RUN/'native_archive/B_wholebody/file.rth'
@@ -26,8 +36,8 @@ def main():
     try:
         model=dpf.Model(str(path),server=server);mesh=model.metadata.meshed_region
         times=np.array(model.metadata.time_freq_support.time_frequencies.data)
-        expected=json.loads((RUN/'pilot_source.json').read_text())
-        assert abs(times[-1]-expected['duration_s'])<1e-7 and len(times)==46,'Native result is incomplete'
+        expected=expected or dict(json.loads((RUN/'pilot_source.json').read_text()),expected_sets=46)
+        assert abs(times[-1]-expected['duration_s'])<1e-7 and len(times)==expected['expected_sets'],'Native result is incomplete'
         named=model.metadata.available_named_selections
         selected=[n for n in named if n.lower().startswith('m4_')]
         assert selected,'Actual body named selections missing'
@@ -35,7 +45,7 @@ def main():
         for n,elems in regions.items():
             scope=dpf.Scoping(ids=elems.tolist(),location='Elemental',server=server)
             groups[n]=dpf.operators.scoping.transpose(mesh_scoping=scope,meshed_region=mesh,server=server).outputs.mesh_scoping_as_scoping()
-        capacity=np.load(OUT/'FE_capacity_weights.npz')
+        capacity=np.load(Path(expected.get('capacity_weights',ROOT/'results/m4/FE_capacity_weights.npz')))
         weight_names=capacity['names'].tolist();weight_ids=capacity['node_ids'];W=capacity['weights_J_K']
         rows=[];disc_peak=(-1e30,0)
         for k,time in enumerate(times,1):
@@ -79,7 +89,7 @@ def main():
             FE_energy_balance='NOT VALIDATED',mesh_independence='NOT VALIDATED',time_step_independence='NOT VALIDATED',
             mean_definition='Both arithmetic and integral(rho cp T dV)/integral(rho cp dV); actual FE capacity weights, not CAD volume')
         receipt['Mechanical_original_state']=s['state']
-        receipt['native_recovery']=('--native-recovery' in sys.argv)
+        receipt['native_recovery']=args.native_recovery
         (OUT/'pilot_postprocessing.json').write_text(json.dumps(receipt,indent=2)+'\n');print(receipt)
     finally:server.shutdown()
 if __name__=='__main__':main()

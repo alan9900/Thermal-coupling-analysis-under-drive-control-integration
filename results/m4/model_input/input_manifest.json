@@ -1,0 +1,11 @@
+{
+  "status": "ACTUAL_MECHANICAL_EXPORTED_SOLVED_INPUT_NOT_NUMERICAL_ACCEPTANCE",
+  "source": "E:\\ansys_runs\\m4_case0_20261021\\face_scoped_ds.dat",
+  "sha256_uncompressed": "d377f0821e5eaf584be126e5f1dbf423557688223e67da1a4f691f65072d6e55",
+  "bytes_uncompressed": 71383350,
+  "gzip_bytes": 6723490,
+  "Mechanical_state": "Solved",
+  "solver": "ANSYS 2024 R1",
+  "case": "B, one 80 km/h brake 0.6g 30kW vehicle regen, 30s cooling",
+  "boundary_sources": "S3 concept; no calibration"
+}

@@ -1,5 +1,5 @@
 """Scientific plots from actual RTH extraction, explicitly diagnostic."""
-import csv,json
+import csv,json,argparse
 from pathlib import Path
 import numpy as np
 import matplotlib
@@ -10,6 +10,10 @@ from matplotlib.cm import ScalarMappable
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 ROOT=Path(__file__).resolve().parents[2];OUT=ROOT/'results/m4'
 def main():
+    global OUT
+    ap=argparse.ArgumentParser();ap.add_argument('--study');args=ap.parse_args()
+    if args.study:OUT=ROOT/'results/m4/studies'/args.study
+    context='finite face contacts' if args.study else 'original whole-body contacts'
     plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10,'figure.dpi':150})
     hist=list(csv.DictReader((OUT/'pilot_temperature_history.csv').open()))
     groups=[('M4_BRAKE_DISC_HAT','Disc'),('M4_PAD_NEAR','Near pad'),('M4_OUTPUT_SHAFT','Output shaft'),
@@ -23,13 +27,14 @@ def main():
     ax[0].set(ylabel='Local maximum temperature [degC]',xlabel='Time after brake onset [s]')
     ax[1].set(ylabel='Local maximum rise [K]',xlabel='Time after brake onset [s]')
     for a in ax:a.grid(alpha=.2);a.legend(fontsize=8);a.axvline(3.775437,ls=':',color='gray',lw=1)
-    fig.suptitle('Actual ANSYS diagnostic | S3 assumptions | original whole-body contacts\n80 km/h, 0.6g, 30 kW vehicle regen cap; convergence NOT validated',fontsize=11)
+    fig.suptitle('Actual ANSYS diagnostic | S3 assumptions | '+context+'\n80 km/h, 0.6g, 30 kW vehicle regen cap; convergence NOT validated',fontsize=11)
     fig.savefig(OUT/'pilot_temperature_curves.png');plt.close(fig)
     data=np.load(OUT/'pilot_actual_FE_surface.npz');p=data['points']*1000;tri=data['triangles'];T=data['temperature'];time=float(data['time_s'])
     fig=plt.figure(figsize=(7,5.3),layout='constrained');a=fig.add_subplot(projection='3d')
     norm=Normalize(vmin=25,vmax=float(T.max()));col=Poly3DCollection(p[tri],linewidth=0,rasterized=True)
     col.set_facecolor(plt.get_cmap('inferno')(norm(T[tri].mean(axis=1))));a.add_collection3d(col)
     lo=p.min(axis=0);hi=p.max(axis=0);a.set(xlim=(lo[0],hi[0]),ylim=(lo[1],hi[1]),zlim=(lo[2],hi[2]),xlabel='Axial X [mm]',ylabel='Y [mm]',zlabel='Z [mm]')
+    a.set_xticks(np.round(np.linspace(lo[0],hi[0],3),1));a.set_xlabel('X [mm]',fontsize=9)
     a.set_box_aspect((.3,1,1));a.view_init(elev=23,azim=-25)
     fig.colorbar(ScalarMappable(norm=norm,cmap='inferno'),ax=a,shrink=.65,label='Temperature [degC]')
     a.set_title(f'Actual ANSYS disc FE field at {time:.3f} s\nS3 diagnostic; contact / mesh / time validation pending',fontsize=10)

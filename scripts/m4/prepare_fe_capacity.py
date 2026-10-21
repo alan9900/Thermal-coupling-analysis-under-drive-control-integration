@@ -1,18 +1,20 @@
 """Precompute true FE capacity weights, with independent element-volume checks."""
-import os,json,sys,collections
+import os,json,sys,collections,argparse
 from pathlib import Path
 import numpy as np
 from fe_capacity import weights
 from dpf_regions import solid_regions
 ROOT=Path(__file__).resolve().parents[2];OUT=ROOT/'results/m4'
 def main():
-    print('Starting FE capacity extraction',sys.argv[1],flush=True)
+    global OUT
+    ap=argparse.ArgumentParser();ap.add_argument('result');ap.add_argument('--out',type=Path,default=OUT);a=ap.parse_args();OUT=a.out;OUT.mkdir(parents=True,exist_ok=True)
+    print('Starting FE capacity extraction',a.result,flush=True)
     os.environ['DPF_DEFAULT_GRPC_MODE']='insecure'
     from ansys.dpf import core as dpf
     server=dpf.start_local_server(ansys_path='E:/Program Files/ANSYS Inc/v241',config=dpf.AvailableServerConfigs.GrpcServer,ip='127.0.0.1')
     print('DPF server',server.version,flush=True)
     try:
-        m=dpf.Model(sys.argv[1],server=server);mesh=m.metadata.meshed_region
+        m=dpf.Model(a.result,server=server);mesh=m.metadata.meshed_region
         print('Native model mesh loaded',flush=True)
         xyz=np.array(mesh.nodes.coordinates_field.data);nodeids=np.array(mesh.nodes.scoping.ids);order=np.argsort(nodeids);sortedids=nodeids[order]
         config=json.loads((ROOT/'configs/m4_case0.json').read_text(encoding='utf-8'))

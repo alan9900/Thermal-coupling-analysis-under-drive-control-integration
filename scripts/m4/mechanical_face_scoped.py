@@ -40,8 +40,8 @@ try:
     analysis.Solution.Solve(True,conf)
     dump('face_scoped_state.json',{'state':str(analysis.Solution.ObjectState),'result_file':analysis.ResultFileName,'working_dir':analysis.WorkingDir})
     assert str(analysis.Solution.ObjectState)=='Solved'
-    analysis.Solution.EvaluateAllResults()
-    t=analysis.Solution.GetChildren(DataModelObjectCategory.Temperature,True)[0];t.Activate()
+    t=analysis.Solution.AddTemperature();t.Name='M4_temperature_field_S3_not_calibrated'
+    analysis.Solution.EvaluateAllResults();t.Activate()
     ExtAPI.Graphics.Camera.SetFit();ExtAPI.Graphics.ExportImage(os.path.join(RUN,'FACE_SCOPED_temperature_NOT_VALIDATED.png'))
     dump('face_scoped_temperature.json',{'minimum':str(t.Minimum),'maximum':str(t.Maximum),'average':str(t.Average),'validation':'PENDING'})
 except:

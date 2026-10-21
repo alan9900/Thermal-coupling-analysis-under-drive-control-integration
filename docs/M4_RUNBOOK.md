@@ -1,0 +1,105 @@
+# M4 Case0 reproducibility (development / PARTIAL)
+
+M3 baseline: `M3-v1.0` → `7a6b9b1512495283fa12dd4a2a7ffdf698554d3e`.
+M4 development: `stage/M4-ansys`, [draft PR #5](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/5).
+The accepted M0–M3 files/tags are read-only. No M4 completion tag is authorized.
+
+## Actual software and inputs
+
+ANSYS Workbench/Mechanical/MAPDL **2024 R1**, installed under
+`E:/Program Files/ANSYS Inc/v241`. This is not ANSYS 2025 or a MATLAB surrogate.
+The accepted STEP was really imported into Mechanical, with 129 parts / 131
+solids (three disconnected oil inventory solids). Twenty-eight retained part
+groups / 30 solids are meshed. Minor bolts, seals, fluid inventories, etc. are
+suppressed with their missing heat capacity/paths remaining a limitation.
+
+Actual native working folder: `E:/ansys_runs/m4_case0_20261021`. ASCII paths avoid
+native DLL/path issues encountered with the Chinese workspace path. No ANSYS
+binary or license file is distributed. MATLAB M1/M2 source histories are read
+from accepted archived CSV; M4 finite element solutions use ANSYS, not MATLAB.
+
+## Embedded native solver model
+
+`results/m4/model_input/Case0_B_face_scoped.dat.gz` contains the actual complete
+Mechanical-exported input: FE mesh, material coefficients, explicit finite
+contacts, friction-ring loads, finite convection, open radiosity and load steps.
+The uncompressed SHA256 is in `input_manifest.json`. It reproduces the first
+**coarse diagnostic** B run, not a mesh-independent accepted model.
+
+Extract to a fresh ASCII directory, then run (PowerShell):
+
+```powershell
+& 'E:/Program Files/ANSYS Inc/v241/ANSYS/bin/winx64/ANSYS241.exe' `
+  -b -smp -np 2 -p ansys -j study `
+  -dir 'E:/ansys_runs/m4_reproduce' `
+  -i 'E:/ansys_runs/m4_reproduce/study.dat' `
+  -o 'E:/ansys_runs/m4_reproduce/study.out'
+```
+
+The launcher may return before the native child. Require the terminal log,
+zero solver errors, all expected result sets, and a separate FE energy audit.
+Do not read an actively written RTH: an orphan DPF reader contributed to a
+first Mechanical result-transfer failure. Preserve that failure; do not change
+its `SolveFailed` status to `Solved`. The later face-scoped run did report
+Mechanical `Solved`, and an actual Mechanical result image was exported.
+
+## Thermal mesh verification
+
+`mechanical_mesh_variants.py` and `run_mesh_variants.wbjn` add local thermal mesh
+controls without changing M3 geometry. The first attempted face-only pad
+refinements were rejected: automatic sweeping kept one element through the
+8.5mm thickness. Those exports are not a valid convergence sequence.
+
+The replacement explicitly sizes all eight axial pad edges to **6 / 12 / 24
+layers**, keeps tangential pad size 3mm, and refines disc friction faces to
+4 / 2 / 1mm. Actual mesh states, counts and quality must be recorded, then each
+variant requires native solution and its own FE capacity weights. Node numbering
+can change when contacts are regenerated even if solid volumes are unchanged;
+never reuse nodal weights merely because counts or masses agree.
+
+`export_native_brake.py` generates short native brake-only verification studies.
+`export_native_sources.py` produces controlled first-cycle A/C/D source masks:
+drive, optional 60s high-load hold, first brake, 30s cooling. They preserve M1-
+derived energy but are not the full six-cycle M2 scenario. `run_native_studies.ps1`
+runs named studies sequentially. Generated settings are not evidence of execution.
+
+## Extraction and validation
+
+Use the local DPF environment through its ASCII junction:
+`E:/ansys_runs/m4_python_ascii/Scripts/python.exe`. It contains ansys-dpf-core
+0.16.3; the installed ANSYS server is 7.1. The legacy server uses insecure gRPC
+on **127.0.0.1 only**. No global service/network security change is made.
+
+1. `prepare_fe_capacity.py RESULT --out OUTPUT` integrates rho*cp*N_i over actual
+   SOLID278 elements. Copy native DPF arrays while their owners remain alive;
+   temporary array views caused a Windows access violation in an earlier attempt.
+2. `postprocess_pilot.py --study NATIVE_STUDY_FOLDER` checks native completion,
+   expected sets/end time and exact physical-node coverage before extraction.
+   It excludes contact/radiation ghost nodes from temperatures and heat capacity.
+3. `energy_pilot.py --study NATIVE_STUDY_FOLDER` reads native signed SURF152
+   boundary powers and SURF252 net radiosity flux. It compares integrated inputs
+   with FE storage plus convection/coolant/radiation, not just source partitions.
+4. `plot_pilot.py --study NAME` produces explicitly labelled diagnostic figures.
+
+SURF152 SMISC2 is HFCTOT (W in this MKS input). DPF's generic metadata labels
+that miscellaneous result `J`; the native element definition determines the
+quantity. Preserve this mismatch in the receipt rather than silently treating
+energy as power. SURF252 NMISC4 is area and NMISC7 is signed net radiation flux.
+The diagnostic energy closure verifies this interpretation. Official methods:
+[SURF152](https://ansyshelp.ansys.com/public/Views/Secured/corp/v242/en/ans_elem/Hlp_E_SURF152.html),
+[SURF252](https://ansyshelp.ansys.com/public/Views/Secured/corp/v251/en/ans_elem/Hlp_E_SURF252.html).
+
+## Physical limitations
+
+All actual contact/cooling/temperature calibration fields remain null. M1's
+inverter heat is external. Rotor/other is an equivalent region, not magnets.
+Total losses are never added on top of their component losses. Gear mesh heat
+allocation to driven-wheel equivalents is S3, not tooth-contact calibration.
+
+Disc and pad loads prescribe the M1 candidate partition as net thermal entry;
+friction contact-temperature exchange and moving local flash temperatures are
+not resolved. The pad peak depends strongly on that uncalibrated boundary and
+normal mesh. Constant material properties, stationary oil with finite film
+links, prescribed bulk coolant temperature, absent hot-air recirculation,
+partial radiative visibility, and missing idle/churning/temperature-feedback
+losses limit interpretation. Numerical convergence is not physical calibration.
