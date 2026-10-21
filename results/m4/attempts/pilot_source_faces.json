@@ -1,0 +1,34 @@
+[
+  {
+    "fraction": 0.5, 
+    "face_ids": [
+      3832
+    ], 
+    "source": "disc_W", 
+    "body": "brake_disc_hat"
+  }, 
+  {
+    "fraction": 0.5, 
+    "face_ids": [
+      3943
+    ], 
+    "source": "disc_W", 
+    "body": "brake_disc_hat"
+  }, 
+  {
+    "fraction": 0.5, 
+    "face_ids": [
+      4062
+    ], 
+    "source": "pad_W", 
+    "body": "pad_near"
+  }, 
+  {
+    "fraction": 0.5, 
+    "face_ids": [
+      4088
+    ], 
+    "source": "pad_W", 
+    "body": "pad_far"
+  }
+]

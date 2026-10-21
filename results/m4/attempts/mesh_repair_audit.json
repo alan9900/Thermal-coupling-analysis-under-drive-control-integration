@@ -1,0 +1,220 @@
+{
+  "body_counts": [
+    {
+      "state": "FullyDefined", 
+      "elements": 18133, 
+      "name": "motor_case|motor_case", 
+      "id": 331, 
+      "nodes": 5612
+    }, 
+    {
+      "state": "FullyDefined", 
+      "elements": 3018, 
+      "name": "motor_stator|motor_stator", 
+      "id": 1450, 
+      "nodes": 5495
+    }, 
+    {
+      "state": "FullyDefined", 
+      "elements": 5948, 
+      "name": "motor_winding|motor_winding", 
+      "id": 3303, 
+      "nodes": 2615
+    }, 
+    {
+      "state": "FullyDefined", 
+      "elements": 1368, 
+      "name": "motor_rotor_other|motor_rotor_other", 
+      "id": 3384, 
+      "nodes": 1827
+    }, 
+    {
+      "state": "FullyDefined", 
+      "elements": 8710, 
+      "name": "brake_disc_hat|brake_disc_hat", 
+      "id": 4013, 
+      "nodes": 3071
+    }, 
+    {
+      "state": "FullyDefined", 
+      "elements": 20, 
+      "name": "pad_near|pad_near", 
+      "id": 4067, 
+      "nodes": 60
+    }, 
+    {
+      "state": "FullyDefined", 
+      "elements": 20, 
+      "name": "pad_far|pad_far", 
+      "id": 4094, 
+      "nodes": 60
+    }, 
+    {
+      "state": "FullyDefined", 
+      "elements": 1242, 
+      "name": "motor_rotor_shaft|motor_rotor_shaft", 
+      "id": 4169, 
+      "nodes": 402
+    }, 
+    {
+      "state": "FullyDefined", 
+      "elements": 404, 
+      "name": "motor_input_coupling|motor_input_coupling", 
+      "id": 4287, 
+      "nodes": 156
+    }, 
+    {
+      "state": "FullyDefined", 
+      "elements": 11449, 
+      "name": "motor_gear_adapter|motor_gear_adapter", 
+      "id": 4502, 
+      "nodes": 3456
+    }, 
+    {
+      "state": "FullyDefined", 
+      "elements": 70, 
+      "name": "input_bearing_1|input_bearing_1", 
+      "id": 4520, 
+      "nodes": 141
+    }, 
+    {
+      "state": "FullyDefined", 
+      "elements": 70, 
+      "name": "input_bearing_2|input_bearing_2", 
+      "id": 4535, 
+      "nodes": 141
+    }, 
+    {
+      "state": "FullyDefined", 
+      "elements": 94, 
+      "name": "intermediate_bearing_1|intermediate_bearing_1", 
+      "id": 4702, 
+      "nodes": 198
+    }, 
+    {
+      "state": "FullyDefined", 
+      "elements": 94, 
+      "name": "intermediate_bearing_2|intermediate_bearing_2", 
+      "id": 4717, 
+      "nodes": 198
+    }, 
+    {
+      "state": "FullyDefined", 
+      "elements": 106, 
+      "name": "output_bearing_1|output_bearing_1", 
+      "id": 4884, 
+      "nodes": 219
+    }, 
+    {
+      "state": "FullyDefined", 
+      "elements": 106, 
+      "name": "output_bearing_2|output_bearing_2", 
+      "id": 4899, 
+      "nodes": 219
+    }, 
+    {
+      "state": "FullyDefined", 
+      "elements": 1399, 
+      "name": "stage1_gear|stage1_gear", 
+      "id": 5178, 
+      "nodes": 483
+    }, 
+    {
+      "state": "FullyDefined", 
+      "elements": 9588, 
+      "name": "stage2_gear|stage2_gear", 
+      "id": 5919, 
+      "nodes": 2837
+    }, 
+    {
+      "state": "FullyDefined", 
+      "elements": 1164, 
+      "name": "disc_hub|disc_hub", 
+      "id": 6309, 
+      "nodes": 463
+    }, 
+    {
+      "state": "FullyDefined", 
+      "elements": 548, 
+      "name": "hub_removable_sleeve|hub_removable_sleeve", 
+      "id": 6571, 
+      "nodes": 218
+    }, 
+    {
+      "state": "FullyDefined", 
+      "elements": 15983, 
+      "name": "input_shaft|input_shaft", 
+      "id": 9119, 
+      "nodes": 4799
+    }, 
+    {
+      "state": "FullyDefined", 
+      "elements": 20026, 
+      "name": "intermediate_shaft|intermediate_shaft", 
+      "id": 11414, 
+      "nodes": 5990
+    }, 
+    {
+      "state": "FullyDefined", 
+      "elements": 4090, 
+      "name": "output_shaft|output_shaft", 
+      "id": 11604, 
+      "nodes": 1214
+    }, 
+    {
+      "state": "FullyDefined", 
+      "elements": 949, 
+      "name": "caliper|caliper", 
+      "id": 11669, 
+      "nodes": 344
+    }, 
+    {
+      "state": "FullyDefined", 
+      "elements": 484, 
+      "name": "caliper_reaction_bracket|caliper_reaction_bracket", 
+      "id": 11720, 
+      "nodes": 193
+    }, 
+    {
+      "state": "FullyDefined", 
+      "elements": 13754, 
+      "name": "gear_case_front|gear_case_front", 
+      "id": 12410, 
+      "nodes": 4339
+    }, 
+    {
+      "state": "FullyDefined", 
+      "elements": 15632, 
+      "name": "gear_case_rear|gear_case_rear", 
+      "id": 12814, 
+      "nodes": 4967
+    }, 
+    {
+      "state": "FullyDefined", 
+      "elements": 2939, 
+      "name": "oil_inventory|oil_inventory", 
+      "id": 12862, 
+      "nodes": 1050
+    }, 
+    {
+      "state": "FullyDefined", 
+      "elements": 12046, 
+      "name": "oil_inventory|oil_inventory[2]", 
+      "id": 13727, 
+      "nodes": 3295
+    }, 
+    {
+      "state": "FullyDefined", 
+      "elements": 2919, 
+      "name": "oil_inventory|oil_inventory[3]", 
+      "id": 13838, 
+      "nodes": 1046
+    }
+  ], 
+  "quality_min": "0.0020073728047926803", 
+  "state": "UnderDefined", 
+  "elements": 158165, 
+  "all_active_bodies_have_elements": true, 
+  "quality_mean": "0.56287141601183455", 
+  "nodes": 55108
+}

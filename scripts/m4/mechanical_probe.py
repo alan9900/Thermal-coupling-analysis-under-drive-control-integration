@@ -19,7 +19,7 @@ try:
         rows.append({'name':b.Name,'object_id':b.ObjectId,'geo_id':gb.Id,'volume':str(b.Volume),'material':str(b.Material),
                      'faces':len(gb.Faces),'edges':len(gb.Edges)})
     dump('import_audit.json',{'status':'STEP_IMPORTED_ACTUALLY','body_count':len(rows),'bodies':rows})
-    ExtAPI.DataModel.Project.Save(os.path.join(RUN,'case0_import.mechdat'))
+    # Workbench owns the database; launch_probe.wbjn saves the project.
     dump('probe_complete.json',{'status':'IMPORT_PASS','body_count':len(rows),'mesh':'NOT EXECUTED','solve':'NOT EXECUTED'})
 except:
     dump('probe_failure.json',{'status':'FAILED','traceback':traceback.format_exc()})

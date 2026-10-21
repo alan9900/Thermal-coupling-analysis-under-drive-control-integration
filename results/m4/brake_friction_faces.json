@@ -1,0 +1,12 @@
+{
+  "near": {
+    "face_id": 3832,
+    "area_m2": 0.03715554016113281,
+    "disc_power_fraction": 0.5
+  },
+  "far": {
+    "face_id": 3943,
+    "area_m2": 0.03878157406616211,
+    "disc_power_fraction": 0.5
+  }
+}

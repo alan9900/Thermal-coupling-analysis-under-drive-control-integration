@@ -8,19 +8,21 @@ def body_counts():
     for b in Model.Geometry.GetChildren(DataModelObjectCategory.Body,True):
         if b.Suppressed:continue
         r=data.MeshRegionById(b.GetGeoBody().Id)
-        rows.append({'name':b.Name,'id':b.GetGeoBody().Id,'nodes':len(r.NodeIds),'elements':len(r.ElementIds)})
+        rows.append({'name':b.Name,'id':b.GetGeoBody().Id,'nodes':len(r.NodeIds),'elements':len(r.ElementIds),'state':str(b.ObjectState)})
     return rows
 try:
     Model=ExtAPI.DataModel.Project.Model
     dump('mesh_previous_body_counts.json',{'state':str(Model.Mesh.ObjectState),'bodies':body_counts()})
     dump('mechanical_messages_before.json',[str(m) for m in ExtAPI.Application.Messages])
-    failed=[r for r in body_counts() if r['elements']==0]
+    failed=[r for r in body_counts() if r['elements']==0 or r['state']!='Meshed']
     if failed:
         ids=[r['id'] for r in failed]
         sel=ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities);sel.Ids=ids
         method=Model.Mesh.AddAutomaticMethod();method.Location=sel
         method.Method=MethodType.AllTriAllTet
         method.Algorithm=MeshMethodAlgorithm.PatchIndependent
+        method.MaximumElementSize=Quantity('4 [mm]')
+        method.MinimumSizeLimit=Quantity('0.5 [mm]')
     Model.Mesh.ElementSize=Quantity('10 [mm]')
     dump('mesh_repair_started.json',{'time':time.time(),'original_failed':failed})
     Model.Mesh.GenerateMesh()
@@ -30,7 +32,7 @@ try:
         'quality_min':str(Model.Mesh.Minimum),'quality_mean':str(Model.Mesh.Average),
         'all_active_bodies_have_elements':all(r['elements']>0 for r in rows)})
     dump('mechanical_messages_after.json',[str(m) for m in ExtAPI.Application.Messages])
-    assert all(r['elements']>0 for r in rows), 'BLOCKED: active body mesh missing'
+    assert all(r['elements']>0 and r['state']=='Meshed' for r in rows), 'BLOCKED: active body mesh missing or rejected'
     assert 'Error' not in state, 'BLOCKED: mesh state error'
     Model.Mesh.Activate();ExtAPI.Graphics.Camera.SetFit()
     ExtAPI.Graphics.ExportImage(os.path.join(RUN,'case0_mesh_repair.png'))

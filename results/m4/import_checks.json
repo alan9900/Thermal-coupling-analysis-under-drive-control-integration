@@ -1,0 +1,23 @@
+{
+  "status": "PASS_UNIT_AND_BODY_COUNT_AUDIT",
+  "parts": 129,
+  "solids": 131,
+  "oil_solids": 3,
+  "native_geometry_unit": "mm/mm2/mm3",
+  "source_unit": "W",
+  "SI_conversion_explicit": true,
+  "max_relative_reported_volume_difference": 0.011384450200417857,
+  "reported_volume_warning": "ANSYS geometry property differs from OCCT; do not silently equate to exact FE integrated volume. Mesh integral audit still required.",
+  "friction_faces": {
+    "near": {
+      "face_id": 3832,
+      "area_m2": 0.03715554016113281,
+      "disc_power_fraction": 0.5
+    },
+    "far": {
+      "face_id": 3943,
+      "area_m2": 0.03878157406616211,
+      "disc_power_fraction": 0.5
+    }
+  }
+}

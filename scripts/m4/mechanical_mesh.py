@@ -25,7 +25,8 @@ try:
         audit.append(row)
         if not b.Suppressed:
             for f in gb.Faces:
-                faces.append({'body':name,'id':f.Id,'area_m2':f.Area,'centroid':list(f.Centroid),'surface_type':str(f.SurfaceType)})
+                faces.append({'body':name,'id':f.Id,'area_m2':f.Area*1e-6,'centroid_mm':list(f.Centroid),'surface_type':str(f.SurfaceType),
+                              'geometry_database_length_unit':'mm'})
     dump('body_mesh_audit.json',audit);dump('face_audit.json',faces)
     mesh=model.Mesh
     mesh.ElementOrder=ElementOrder.Linear

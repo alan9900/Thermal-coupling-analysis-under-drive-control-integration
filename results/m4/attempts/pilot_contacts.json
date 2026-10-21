@@ -1,0 +1,194 @@
+[
+  {
+    "h_W_m2K": 1000, 
+    "from": "brake_disc_hat", 
+    "law": "finite imperfect thermal contact; not ideal bonded conductance", 
+    "to": "disc_hub"
+  }, 
+  {
+    "h_W_m2K": 1000, 
+    "from": "disc_hub", 
+    "law": "finite imperfect thermal contact; not ideal bonded conductance", 
+    "to": "hub_removable_sleeve"
+  }, 
+  {
+    "h_W_m2K": 1000, 
+    "from": "hub_removable_sleeve", 
+    "law": "finite imperfect thermal contact; not ideal bonded conductance", 
+    "to": "output_shaft"
+  }, 
+  {
+    "h_W_m2K": 1000, 
+    "from": "gear_case_front", 
+    "law": "finite imperfect thermal contact; not ideal bonded conductance", 
+    "to": "gear_case_rear"
+  }, 
+  {
+    "h_W_m2K": 1000, 
+    "from": "gear_case_front", 
+    "law": "finite imperfect thermal contact; not ideal bonded conductance", 
+    "to": "motor_gear_adapter"
+  }, 
+  {
+    "h_W_m2K": 1000, 
+    "from": "motor_gear_adapter", 
+    "law": "finite imperfect thermal contact; not ideal bonded conductance", 
+    "to": "motor_case"
+  }, 
+  {
+    "h_W_m2K": 500, 
+    "from": "motor_case", 
+    "law": "finite imperfect thermal contact; not ideal bonded conductance", 
+    "to": "motor_stator"
+  }, 
+  {
+    "h_W_m2K": 100, 
+    "from": "motor_stator", 
+    "law": "finite imperfect thermal contact; not ideal bonded conductance", 
+    "to": "motor_winding"
+  }, 
+  {
+    "h_W_m2K": 20, 
+    "from": "motor_rotor_other", 
+    "law": "finite imperfect thermal contact; not ideal bonded conductance", 
+    "to": "motor_stator"
+  }, 
+  {
+    "h_W_m2K": 1000, 
+    "from": "motor_rotor_shaft", 
+    "law": "finite imperfect thermal contact; not ideal bonded conductance", 
+    "to": "motor_rotor_other"
+  }, 
+  {
+    "h_W_m2K": 1000, 
+    "from": "motor_rotor_shaft", 
+    "law": "finite imperfect thermal contact; not ideal bonded conductance", 
+    "to": "motor_input_coupling"
+  }, 
+  {
+    "h_W_m2K": 1000, 
+    "from": "motor_input_coupling", 
+    "law": "finite imperfect thermal contact; not ideal bonded conductance", 
+    "to": "input_shaft"
+  }, 
+  {
+    "h_W_m2K": 1000, 
+    "from": "intermediate_shaft", 
+    "law": "finite imperfect thermal contact; not ideal bonded conductance", 
+    "to": "stage1_gear"
+  }, 
+  {
+    "h_W_m2K": 1000, 
+    "from": "output_shaft", 
+    "law": "finite imperfect thermal contact; not ideal bonded conductance", 
+    "to": "stage2_gear"
+  }, 
+  {
+    "h_W_m2K": 1000, 
+    "from": "gear_case_rear", 
+    "law": "finite imperfect thermal contact; not ideal bonded conductance", 
+    "to": "caliper_reaction_bracket"
+  }, 
+  {
+    "h_W_m2K": 1000, 
+    "from": "caliper_reaction_bracket", 
+    "law": "finite imperfect thermal contact; not ideal bonded conductance", 
+    "to": "caliper"
+  }, 
+  {
+    "h_W_m2K": 100, 
+    "from": "caliper", 
+    "law": "finite imperfect thermal contact; not ideal bonded conductance", 
+    "to": "pad_near"
+  }, 
+  {
+    "h_W_m2K": 100, 
+    "from": "caliper", 
+    "law": "finite imperfect thermal contact; not ideal bonded conductance", 
+    "to": "pad_far"
+  }, 
+  {
+    "h_W_m2K": 65, 
+    "from": "oil_inventory", 
+    "law": "finite imperfect thermal contact; not ideal bonded conductance", 
+    "to": "gear_case_rear"
+  }, 
+  {
+    "h_W_m2K": 65, 
+    "from": "oil_inventory", 
+    "law": "finite imperfect thermal contact; not ideal bonded conductance", 
+    "to": "stage2_gear"
+  }, 
+  {
+    "h_W_m2K": 1000, 
+    "from": "input_shaft", 
+    "law": "finite imperfect thermal contact; not ideal bonded conductance", 
+    "to": "input_bearing_1"
+  }, 
+  {
+    "h_W_m2K": 1000, 
+    "from": "input_bearing_1", 
+    "law": "finite imperfect thermal contact; not ideal bonded conductance", 
+    "to": "gear_case_front"
+  }, 
+  {
+    "h_W_m2K": 1000, 
+    "from": "input_shaft", 
+    "law": "finite imperfect thermal contact; not ideal bonded conductance", 
+    "to": "input_bearing_2"
+  }, 
+  {
+    "h_W_m2K": 1000, 
+    "from": "input_bearing_2", 
+    "law": "finite imperfect thermal contact; not ideal bonded conductance", 
+    "to": "gear_case_rear"
+  }, 
+  {
+    "h_W_m2K": 1000, 
+    "from": "intermediate_shaft", 
+    "law": "finite imperfect thermal contact; not ideal bonded conductance", 
+    "to": "intermediate_bearing_1"
+  }, 
+  {
+    "h_W_m2K": 1000, 
+    "from": "intermediate_bearing_1", 
+    "law": "finite imperfect thermal contact; not ideal bonded conductance", 
+    "to": "gear_case_front"
+  }, 
+  {
+    "h_W_m2K": 1000, 
+    "from": "intermediate_shaft", 
+    "law": "finite imperfect thermal contact; not ideal bonded conductance", 
+    "to": "intermediate_bearing_2"
+  }, 
+  {
+    "h_W_m2K": 1000, 
+    "from": "intermediate_bearing_2", 
+    "law": "finite imperfect thermal contact; not ideal bonded conductance", 
+    "to": "gear_case_rear"
+  }, 
+  {
+    "h_W_m2K": 1000, 
+    "from": "output_shaft", 
+    "law": "finite imperfect thermal contact; not ideal bonded conductance", 
+    "to": "output_bearing_1"
+  }, 
+  {
+    "h_W_m2K": 1000, 
+    "from": "output_bearing_1", 
+    "law": "finite imperfect thermal contact; not ideal bonded conductance", 
+    "to": "gear_case_front"
+  }, 
+  {
+    "h_W_m2K": 1000, 
+    "from": "output_shaft", 
+    "law": "finite imperfect thermal contact; not ideal bonded conductance", 
+    "to": "output_bearing_2"
+  }, 
+  {
+    "h_W_m2K": 1000, 
+    "from": "output_bearing_2", 
+    "law": "finite imperfect thermal contact; not ideal bonded conductance", 
+    "to": "gear_case_rear"
+  }
+]

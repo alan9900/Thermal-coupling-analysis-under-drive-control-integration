@@ -1,0 +1,21 @@
+{
+  "status": "PASS_PREPROCESSING_ONLY",
+  "test_groups": 12,
+  "groups": [
+    "Engineering mode accepts finite explicit candidates",
+    "Strict mode refuses unknown calibrated internal/contact/cooling parameters",
+    "Missing contact uncertainty range is rejected",
+    "Nonpositive heat capacity rejected",
+    "Raw actual unknowns remain null",
+    "Absolute-K radiation reverses with temperature difference",
+    "Negative Kelvin rejected",
+    "Native import matches CAD part/solid counts",
+    "Only two friction annuli, SI area and power fractions sum to one",
+    "Four accepted M1-derived source budgets close; inverter stays external",
+    "Pilot table integrates exactly to archived M1-derived disc/pad energy",
+    "M3 annotated tag points to approved merge; accepted helical source/CAD/results unchanged"
+  ],
+  "FE_energy_balance": "NOT VALIDATED",
+  "mesh_independence": "NOT VALIDATED",
+  "time_step_independence": "NOT VALIDATED"
+}
