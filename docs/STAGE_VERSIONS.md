@@ -172,3 +172,5 @@ GitHub连接器发布的计划证据提交为 `b82976de96d98d493097cdbf60bb5ed64
 按研究者要求交付 [项目总结Word](../reports/PROJECT_REVIEW_AND_NEXT_PLAN.docx)，保留[Markdown](../reports/PROJECT_REVIEW_AND_NEXT_PLAN.md)及PDF归档。总结M0—M4已完成工作、测试及限定验收，区分旧含再生结果与未来零再生计划；有限核对5项相关原始研究，明确潜在贡献尚未充分验证，不作全球首创、性能提升或实物标定声明。
 
 报告实际Word渲染10页，3个可编辑公式、2幅既有图、8张表，逐页视觉检查通过。源文件哈希和审阅记录在 `reports/project_review_evidence/`；格式化工具 `scripts/reporting/format_project_review.py`仅用于文档。本轮没有启动仿真或修改模型/既有阶段成果，M4仍PARTIAL且暂停，PR #5保持草稿，无正式M4 Tag。准确交付提交SHA在随后登记追加。
+
+总结报告交付证据提交为 `1bec72d63a3e39b238979758ccded62ddbea34e1`，已推送至同一M4分支；Word/PDF/Markdown及当前哈希检查记录齐备。本登记追加提交SHA，不修改报告证据快照、阶段标签或暂停状态。
