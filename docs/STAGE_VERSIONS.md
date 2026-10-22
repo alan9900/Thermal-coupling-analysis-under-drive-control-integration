@@ -148,3 +148,9 @@ M4已获开发授权，从上述最新main创建stage/M4-ansys，仅先开展Cas
 已完成A中网格重试、C/D多热源场与热流、B两档时间步及局部网格细化；C/D整体热平衡最大相对残差约0.001957%/0.000507%。同网格C−A电驱储热增量55.344 J，增量收支最大残差0.019954%；不是完整热空气耦合或温度标定。空间细化主要覆盖制动盘/片，不能宣称内部热源全部空间误差已验证。
 
 Word/PDF报告均来自Markdown；实际Word渲染9页，10个可编辑公式、7幅图，逐页视觉检查通过并登记文件哈希。报告：[Markdown](../reports/M4_report.md)、[Word](../reports/M4_report.docx)、[PDF](../reports/M4_report.pdf)；验收表：[M4_ACCEPTANCE_CHECKLIST.md](../reports/M4_ACCEPTANCE_CHECKLIST.md)。尚缺三档时间步闭合、完整接触/冷却敏感性及内部发热工况全面空间验证；详见 `results/m4/acceptance_checks.json` 和 `results/m4/attempts/user_requested_pause_20261022.json`。大容量原生结果仅本地保留并登记SHA256，未宣称全部上传。
+
+### M4云图逐图讲解补充交付（2026-10-22）
+
+成果提交 `bcf0e6377a84eef96ef7d82d49485bed40be1f5b`，继续使用 `stage/M4-ansys` 和草稿PR #5。将已有D预热后制动结果导出为29幅原生云图（整体1幅、部件28幅），不新增求解。保存截图、输出时刻、温度范围、来源哈希及导出宏至 `results/m4/contour_captures/`。
+
+图册为 [M4_contour_explained.docx](../reports/M4_contour_explained.docx)，保留Markdown源稿与PDF。Pandoc生成Word后，通过实际Word渲染检查30页、29幅图，逐页视觉检查通过；证据 `results/m4/contour_captures/document_checks.json`。整体图采用76.7535 s同步状态，各部件采用各自记录峰值时刻，分别注明独立色标及S3假设。M4仍为PARTIAL且暂停新增研究，未合并、未创建正式Tag、未进入M5。
