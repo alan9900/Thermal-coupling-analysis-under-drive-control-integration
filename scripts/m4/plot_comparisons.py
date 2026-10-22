@@ -1,5 +1,5 @@
 """Actual scenario/sensitivity/path plots; never synthesize missing studies."""
-import csv,json
+import csv,hashlib,json
 from pathlib import Path
 import numpy as np
 import matplotlib
@@ -51,8 +51,17 @@ def sensitivities():
     available=[n for n in names if load(n)]
     receipt={'status':'ACTUAL_SERIES_COMPLETE' if len(available)==len(names) else 'PENDING',
       'required':names,'available':available,'classification':'S3 single-factor scenarios; not measured confidence intervals'}
+    if len(available)<len(names):
+        (OUT/'sensitivity_checks.json').write_text(json.dumps(receipt,indent=2)+'\n');return
+    metadata=[json.loads((STUDIES/n/'study_settings.json').read_text(encoding='utf-8-sig')) for n in names]
+    assert len({m['original_sha256'] for m in metadata})==1
+    hashes=[hashlib.sha256((STUDIES/n/'source_intervals.csv').read_bytes()).hexdigest() for n in names]
+    assert len(set(hashes))==1,'Sensitivity sources must be byte-identical'
+    energy={n:json.loads((STUDIES/n/'pilot_FE_energy_checks.json').read_text(encoding='utf-8-sig')) for n in names}
+    receipt['energy_checks']={n:dict(status=r['status'],max_relative_residual=r['max_relative_residual']) for n,r in energy.items()}
+    receipt['same_native_mesh_sha256']=metadata[0]['original_sha256'];receipt['same_source_csv_sha256']=hashes[0]
+    if not all(r['status'].startswith('PASS') for r in energy.values()):receipt['status']='BLOCKED_SENSITIVITY_ENERGY'
     (OUT/'sensitivity_checks.json').write_text(json.dumps(receipt,indent=2)+'\n')
-    if len(available)<len(names):return
     fig,axes=plt.subplots(2,3,figsize=(10,7),layout='constrained');rows=[]
     baseline=load(names[0])
     for ax,(part,label) in zip(axes.flat,PARTS):
@@ -79,7 +88,7 @@ def refined_scenarios():
     assert all(m['radiation_reduction']==.95 and m['case_radiation_reduction']==0 for m in meta.values())
     # A and C differ only by disc/pad heat. Verify this before interpreting C-A.
     sources={k:list(csv.DictReader((STUDIES/names[k]/'source_intervals.csv').open())) for k in ['A','C']}
-    keys=['time_s','dt_s','copper','iron','rotor_other','gear_mesh','gear_bearing','gear_other','internal_applied_W']
+    keys=['time_s','dt_s','copper','iron','rotor_other','inverter_external','gear_mesh','gear_bearing','gear_other','internal_applied_W']
     assert len(sources['A'])==len(sources['C'])
     for a,c in zip(sources['A'],sources['C']):
         assert all(np.isclose(float(a[k]),float(c[k]),rtol=1e-12,atol=1e-10) for k in keys)
@@ -106,6 +115,9 @@ def refined_scenarios():
         mean=mc-ma;maxima=xc-xa
         ax.plot(tc,mean,label='Capacity-mean difference')
         ax.plot(tc,maxima,'--',label='Regional-max difference')
+        if max(np.max(np.abs(mean)),np.max(np.abs(maxima)))<.5:
+            ax.text(.03,.96,'Below 0.5 K peak screen;\nphysical precision unknown',transform=ax.transAxes,
+                va='top',fontsize=12,bbox=dict(facecolor='white',alpha=.8,edgecolor='none'))
         ax.set(title=label,xlabel='Common cycle time [s]',ylabel='C minus A [K]');ax.grid(alpha=.2)
         rows.extend(dict(part=part,time_s=float(t),C_minus_A_mean_K=float(m),C_minus_A_regional_max_K=float(x),
             classification='Matched S3 source-mask comparison. Difference of regional maxima is not maximum pointwise field difference.') for t,m,x in zip(tc,mean,maxima))
@@ -127,8 +139,20 @@ def paths():
         for key,label in [('solid_cut_into_drive','Solid cut'),('radiation_net_into_case','Case net rad.'),('ambient_drive_out','Air out'),('coolant_out','Coolant out')]:
             axes[0].plot(t,np.r_[0,[float(r[key+'_W']) for r in rows]],label=label)
             for axis,kind in zip(axes[1:],['net','positive']):
-                axis.plot(t,np.r_[0,[float(r[key+'_'+kind+'_J']) for r in rows]],label=label)
-        for ax,title,unit in zip(axes,['Signed instantaneous rate','Signed net integral','Positive-only integral'],['W','J','J']):
+                if key=='solid_cut_into_drive' and kind=='positive':
+                    values=[float(r['shaft_cut_into_drive_positive_J'])+float(r['bracket_cut_into_drive_positive_J']) for r in rows]
+                    axis.plot(t,np.r_[0,values],label='Solid ports gross in')
+                    axis.plot(t,np.r_[0,[float(r[key+'_positive_J']) for r in rows]],'--',label='Positive net solid cut')
+                else:axis.plot(t,np.r_[0,[float(r[key+'_'+kind+'_J']) for r in rows]],label=label)
+        positive=[dict(time_s=float(r['time_s']),
+            solid_parallel_ports_gross_in_J=float(r['shaft_cut_into_drive_positive_J'])+float(r['bracket_cut_into_drive_positive_J']),
+            positive_of_net_solid_cut_J=float(r['solid_cut_into_drive_positive_J']),
+            radiation_net_into_case_positive_J=float(r['radiation_net_into_case_positive_J']),
+            ambient_out_positive_J=float(r['ambient_drive_out_positive_J']),
+            coolant_out_positive_J=float(r['coolant_out_positive_J'])) for r in rows]
+        write_csv(folder/'positive_path_integrals.csv',positive)
+        assert all(r['solid_parallel_ports_gross_in_J']>=r['positive_of_net_solid_cut_J']-1e-9 for r in positive)
+        for ax,title,unit in zip(axes,['Signed instantaneous rate','Signed net integral','Positive-only integrals (gross ports distinguished)'],['W','J','J']):
             ax.set(title=title,xlabel='Time [s]',ylabel=unit);ax.grid(alpha=.2);ax.legend(fontsize=14,ncols=2)
         state='PASS subvolume balance' if check['status'].startswith('PASS') else 'BLOCKED subvolume balance'
         fig.suptitle('Actual ANSYS S3 | '+folder.name+'\n'+state+'; serial sections not added\nNet radiation includes environment; hot air NOT MODELLED',fontsize=15)

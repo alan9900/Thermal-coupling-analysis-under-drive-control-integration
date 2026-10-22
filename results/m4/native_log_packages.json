@@ -126,5 +126,13 @@
     "gzip_sha256": "ab7e97f9d48a62b689c8ae0e55016ee99d9f65859d6ea954185f03808b4e72f6",
     "native_original": "E:\\ansys_runs\\m4_case0_20261021\\shape_checks\\normal6\\audit.out",
     "verification": "Native original matches; gzip round-trip identical; only redundant repository plaintext copy replaced."
+  },
+  "results/m4/studies/A_normal12_rd95_dt1_retry1/study.out.gz": {
+    "raw_bytes": 10110732,
+    "raw_sha256": "28996c1c17bee54807a00cdd3680550dfb664f27332339aca6a3a60603b9c209",
+    "gzip_bytes": 1615647,
+    "gzip_sha256": "c297604003f338fdeed9b142a70fab30e107caeebc2852934c382cd60aa366b2",
+    "native_original": "E:\\ansys_runs\\m4_case0_20261021\\studies\\A_normal12_rd95_dt1_retry1\\study.out",
+    "verification": "Native original matches; gzip round-trip identical; only redundant repository plaintext copy replaced."
   }
 }

@@ -1,0 +1,24 @@
+{
+  "status": "PASS_RENDER_STRUCTURE",
+  "editable_math_objects": 10,
+  "figures": 7,
+  "pdf_pages": 9,
+  "visual_inspection": "PASS",
+  "source": "Markdown through local Pandoc skill; Word COM ExportAsFixedFormat",
+  "sha256": {
+    "md": "769e5b1d898b5f72b27aa8dcb149a67ba57fc60751251b5cd19b914d0e53aa62",
+    "docx": "88c8ff0d90fc4377a9c4f3dac642ca42beef5258fa956bb74a3f26cbb6425ab2",
+    "pdf": "c1bb7704b09b3bebb1655b0ee83cd6c3b7735e69f0b3259ae515d88ffd8033a5"
+  },
+  "pages_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ]
+}

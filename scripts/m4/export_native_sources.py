@@ -23,6 +23,7 @@ def aggregate(rows,width):
 def main():
     p=argparse.ArgumentParser();p.add_argument('--case',choices=['A','C','D'],required=True);p.add_argument('--divisor',type=int,default=1)
     p.add_argument('--input',type=Path,default=RUN/'face_scoped_ds.dat');p.add_argument('--name')
+    p.add_argument('--capacity-json',type=Path,default=ROOT/'results/m4/FE_capacity_checks.json')
     a=p.parse_args();assert a.divisor in [1,2]
     case={'A':'A_internal_only','C':'C_combined','D':'D_preheat_braking'}[a.case]
     path=ROOT/'results/m2/cases'/f'{case}_forcing.csv';raw=list(csv.DictReader(path.open()))
@@ -39,7 +40,7 @@ def main():
     areas=[]
     for table,q in [('_loadvari571',pilot['disc_W'][0]/2),('_loadvari573',pilot['disc_W'][0]/2),('_loadvari575',pilot['pad_W'][0]/2),('_loadvari577',pilot['pad_W'][0]/2)]:
         value=float(re.search(re.escape(table)+r'\(1,1,1\)\s*=\s*([\d.Ee+\-]+)',prefix)[1]);areas.append(q/value)
-    cap=json.loads((ROOT/'results/m4/FE_capacity_checks.json').read_text(encoding='utf-8-sig'));vol=cap['body_volume_m3']
+    cap=json.loads(a.capacity_json.read_text(encoding='utf-8-sig'));vol=cap['body_volume_m3']
     name=a.name or (case+'_dt'+str(a.divisor));assert re.fullmatch('[A-Za-z0-9_]+',name)
     folder=RUN/'studies'/name;folder.mkdir(parents=True,exist_ok=False)
     commands=['! Same actual Mechanical FE mesh/contacts; only controlled heat-source mask changes',
@@ -65,6 +66,7 @@ def main():
         w=csv.DictWriter(f,fieldnames=list(record[0]));w.writeheader();w.writerows(record)
     settings=dict(case=case,classification='S3_CONCEPT_NOT_CALIBRATED',duration_s=t,expected_sets=len(source),step_divisor=a.divisor,
         original_input=str(a.input),original_sha256=hashlib.sha256(a.input.read_bytes()).hexdigest(),
+        source_volume_basis=str(a.capacity_json),source_volume_basis_sha256=hashlib.sha256(a.capacity_json.read_bytes()).hexdigest(),
         archived_forcing=str(path),forcing_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
         applied_energy_J=sum(r['dt_s']*r['source_applied_W'] for r in record),
         inverter_external_J=sum(r['dt_s']*r['inverter_external'] for r in record),

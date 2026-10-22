@@ -9,6 +9,7 @@ def weights(x):
     x=np.asarray(x,float);n,k,_=x.shape
     if k==4:
         v=np.abs(np.linalg.det(np.stack([x[:,1]-x[:,0],x[:,2]-x[:,0],x[:,3]-x[:,0]],axis=2)))/6
+        if np.any(v<=0):raise ValueError('Degenerate tetrahedral volume')
         return np.repeat(v[:,None]/4,4,axis=1),v
     if k not in [5,6,8]:raise ValueError('Unsupported solid connectivity '+str(k))
     out=np.zeros((n,k));vol=np.zeros(n);sign=None
@@ -49,5 +50,9 @@ def self_test():
         w,vol=weights(x[None,:,:]);assert abs(vol[0]-v)<1e-12
         assert abs(w[0]@x[:,2]-v*z)<1e-12
         w2,v2=weights((2*x+np.array([3,4,5]))[None,:,:]);assert abs(v2[0]-8*v)<1e-11 and np.max(abs(w2-8*w))<1e-11
-    print('PASS four topology analytic volume, linear-temperature integration, partition unity and affine scaling')
+    for invalid in [np.zeros((1,4,3)),np.zeros((1,7,3))]:
+        try:weights(invalid)
+        except ValueError:pass
+        else:raise AssertionError('Invalid volume/topology must be rejected')
+    print('PASS four topology analytic volume, linear-temperature integration, partition unity and affine scaling; degenerate/unsupported cells rejected')
 if __name__=='__main__':self_test()

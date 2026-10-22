@@ -50,7 +50,7 @@ def main():
         add(name,'数值细化 '+name,status,'results/m4/convergence_checks.json','预先登记的工程阈值；不是GCI或实验精度')
     sensitivity=read(OUT/'sensitivity_checks.json') or {}
     add('sensitivity','相同输入的安装接触/冷却范围计算',
-        'PASS' if sensitivity.get('status')=='ACTUAL_SERIES_COMPLETE' else 'PENDING',
+        'PASS' if sensitivity.get('status')=='ACTUAL_SERIES_COMPLETE' else 'BLOCKED' if sensitivity.get('status','').startswith('BLOCKED') else 'PENDING',
         'results/m4/sensitivity_checks.json','只扫安装链TCC与对流h；内部绕组接触、油膜、冷却体温及材料方向性未全面覆盖')
     for name in PATH_CASES:
         p=STUDIES/name;contact=read(p/'contact_output_audit.json');paths=read(p/'heat_path_checks.json')

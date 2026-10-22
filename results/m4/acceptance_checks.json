@@ -1,19 +1,15 @@
 {
   "status": "PARTIAL",
-  "generated_at": "2026-10-22T14:03:06+08:00",
-  "evidence_head": "099e84a57b63c6bca9750206e0b47a5daa8e93b8",
+  "generated_at": "2026-10-22T14:32:12+08:00",
+  "evidence_head": "0c8abb857163b0ff83200f442dc5c19ffc87532c",
   "blockers": [],
   "pending": [
-    "solve_A",
-    "energy_A",
     "solve_B",
     "energy_B",
     "time",
     "sensitivity",
     "paths_B_normal12_rd95h_dt4_retry1",
-    "matched_sources",
-    "inputs_archive",
-    "reports"
+    "inputs_archive"
   ],
   "items": [
     {
@@ -54,16 +50,16 @@
     {
       "id": "solve_A",
       "item": "A真实原生瞬态求解及预期时刻",
-      "status": "PENDING",
+      "status": "PASS",
       "evidence": "results/m4/studies/A_normal12_rd95_dt1_retry1/native_archive_manifest.json",
       "detail": ""
     },
     {
       "id": "energy_A",
       "item": "A总体储热/散热/冷却/辐射收支",
-      "status": "PENDING",
+      "status": "PASS",
       "evidence": "results/m4/studies/A_normal12_rd95_dt1_retry1/pilot_FE_energy_checks.json",
-      "detail": ""
+      "detail": "最大相对残差 1.3967499e-05；阈值 0.005"
     },
     {
       "id": "solve_B",
@@ -173,7 +169,7 @@
     {
       "id": "matched_sources",
       "item": "相同网格时序的C-A制动附加响应",
-      "status": "PENDING",
+      "status": "PASS",
       "evidence": "results/m4/source_mask_comparison_checks.json",
       "detail": "区域最大值之差不等于逐点温差最大值"
     },
@@ -194,7 +190,7 @@
     {
       "id": "reports",
       "item": "MD/Word/PDF、可编辑公式与逐页视觉检查",
-      "status": "PENDING",
+      "status": "PASS",
       "evidence": "results/m4/document_checks.json",
       "detail": "正文更新后旧文档哈希自动失效，不能沿用旧视觉通过记录"
     },

@@ -1,0 +1,37 @@
+{
+  "status": "PARTIAL_PAUSED_AT_USER_REQUEST",
+  "recorded_at": "2026-10-22T14:29:21+08:00",
+  "request": "Summarize promptly; temporarily stop further research to conserve token budget.",
+  "stopped": [
+    {
+      "study": "B_normal12_rd95h_dt4_retry1",
+      "status": "STOPPED_AT_USER_REQUEST_NOT_COMPLETED",
+      "native_folder": "E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal12_rd95h_dt4_retry1",
+      "log_sha256": "3e085e5e4cd37ba333ecb1bcd27f9cb7035490cd3d6f56c552f9ef57f5c5755f",
+      "log_bytes": 9824981,
+      "tail": "results\\m4\\attempts\\B_normal12_rd95h_dt4_retry1_user_pause_tail.txt",
+      "partial_results": "Retained locally; not accepted as completed production results."
+    },
+    {
+      "study": "C_normal12_rd95_contact_high",
+      "status": "STOPPED_AT_USER_REQUEST_NOT_COMPLETED",
+      "native_folder": "E:\\ansys_runs\\m4_case0_20261021\\studies\\C_normal12_rd95_contact_high",
+      "log_sha256": "d6a831d4f18c749fe799da4b9d26b578214114eb5bc63cec2b56df51e839eded",
+      "log_bytes": 10091110,
+      "tail": "results\\m4\\attempts\\C_normal12_rd95_contact_high_user_pause_tail.txt",
+      "partial_results": "Retained locally; not accepted as completed production results."
+    }
+  ],
+  "not_executed": [
+    "C_normal12_rd95_cooling_low",
+    "C_normal12_rd95_cooling_high"
+  ],
+  "proposed_scripts_not_executed": [
+    "scripts/m4/mechanical_heated_mesh.py",
+    "scripts/m4/run_heated_mesh.wbjn",
+    "scripts/m4/export_zero_probe.py",
+    "scripts/m4/refine_same_source_time.py",
+    "scripts/m4/finish_heated_verification.py"
+  ],
+  "restrictions": "No additional solves, no M4 merge/tag, no M5. Existing completed results preserved."
+}

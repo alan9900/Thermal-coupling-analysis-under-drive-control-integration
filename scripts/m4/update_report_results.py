@@ -63,7 +63,8 @@ def main():
             values=[f[k+'_net_J'] for k in ['solid_cut_into_drive','radiation_net_into_case','ambient_drive_out','coolant_out']]
             paths.append('| '+name+' | '+' | '.join('%.5g'%v for v in values)+' | '+('PASS' if r['status'].startswith('PASS') else 'BLOCKED')+' |')
     if not selected:paths.append('| 待完成 | — | — | — | — | PENDING |')
-    paths+=['','瞬时有符号功率、累计正向流入与净积分独立保存在 signed_heat_paths.csv。负数表示反向传热，不能把绝对值强计为热侵入。外部对流是环境散热；**热空气回流为 NOT MODELLED，不是物理零值**。旧粗网格 B 子控制体残差约 0.72% 超过 0.5% 阈值，历史 BLOCKED 保留。','']
+    paths+=['','瞬时有符号功率、累计正向流入与净积分独立保存在 signed_heat_paths.csv。两个并联固体入口的累计正向流入为各入口正向积分之和；它与“合计净热流取正后的积分”不同。两者另列于 positive_path_integrals.csv，串联轴承截面不计为额外入口。负数表示反向传热，不能把绝对值强计为热侵入。环境/冷却曲线表示流出热量，不与正向侵入直接相加。','',
+      '外部对流是环境散热；**热空气回流为 NOT MODELLED，不是物理零值**。旧粗网格 B 子控制体残差约 0.72% 超过 0.5% 阈值，历史 BLOCKED 保留。','']
     if selected:
         name=selected[-1]
         if (STUDIES/name/'signed_heat_paths.png').exists():paths+=['![实际路径；符号、正向与净积分分开，辐射含开口环境。](../results/m4/studies/'+name+'/signed_heat_paths.png){width=15cm}','']
@@ -81,7 +82,7 @@ def main():
         r=json.loads(incremental.read_text(encoding='utf-8-sig'));f=r['final']
         paths+=['## 6.2 相同内部热源的增量收支','',
           '比较 C−A 后，终点电驱总成储热增加 %.5g J；固体跨界净输入增加 %.5g J，壳体净辐射输入增加 %.5g J，环境对流流出增加 %.5g J，冷却带走增加 %.5g J。增量收支状态 %s，最大相对残差 %.5g%%。'%(f['delta_drive_stored_J'],f['delta_solid_cut_into_drive_net_J'],f['delta_radiation_net_into_case_net_J'],f['delta_ambient_drive_out_net_J'],f['delta_coolant_out_net_J'],r['status'],100*r['relative_residual']),'',
-          '壳体净辐射差仍包含壳体温度改变后与环境交换的变化；它不是完全分离的盘—壳体两体交换。未模拟热空气回流，不能据当前短窗口给真实系统三条路径作完整排序。','',
+          '净输入的变化也可能反映反向散热的改变，不能全部称为始终正向的热侵入。壳体净辐射差仍包含壳体温度改变后与环境交换的变化；它不是完全分离的盘—壳体两体交换。未模拟热空气回流，不能据当前短窗口给真实系统三条路径作完整排序。','',
           '![相同时间轴C减A的路径功率与净能量差，非累计绝对热流。](../results/m4/added_brake_heat_paths.png){width=15cm}','']
     block=marker+'\n'+'\n'.join(paths)+'\n'+stop
     if marker in text:text=text[:text.index(marker)]+block+text[text.index(stop)+len(stop):]

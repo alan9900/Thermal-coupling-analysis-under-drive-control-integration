@@ -22,5 +22,13 @@
     "gzip_bytes": 10095939,
     "gzip_sha256": "04c010fc1b778dce33401652841fd84807b0d0ca11ceb28d54e9232d4501094c",
     "qualification": "Exact executed native input; numerical acceptance is separate"
+  },
+  "A_normal12_rd95_dt1_retry1": {
+    "file": "A_normal12_rd95_dt1_retry1.dat.gz",
+    "raw_sha256": "76580a287a902c1c08ec8a7a8c5b13b6ee7e680369c9aa5ec30ddeb9f650c1e2",
+    "raw_bytes": 99384714,
+    "gzip_bytes": 10094938,
+    "gzip_sha256": "9efe94f3ae7ecec0cfabe434657c6b531ef1993461e661da3b91a659b5b92d3f",
+    "qualification": "Exact executed native input; numerical acceptance is separate"
   }
 }
