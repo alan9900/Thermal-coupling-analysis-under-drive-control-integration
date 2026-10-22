@@ -134,6 +134,13 @@ even though whole-model energy closure passed.
 
 ## Refined standalone reproduction
 
+Large completed plaintext log copies in this development tree are stored as
+byte-preserving `.out.gz` files to avoid millions of native listing lines in the
+PR. `results/m4/native_log_packages.json` records both digests and the unchanged
+native original path. Every compressed log was decompressed and verified before
+replacing its redundant repository plaintext copy. Native originals and all
+previous Git commits remain intact.
+
 The finite-size packages in `results/m4/model_input/native_input_packages.json`
 identify exact executed native inputs by SHA256. Each includes the embedded mesh,
 materials, finite contacts, loads and time steps. Large RTH/WBPJ/VF files remain

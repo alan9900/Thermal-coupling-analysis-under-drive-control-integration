@@ -7,12 +7,22 @@
       "Mechanical_state": "EXTERNAL_NATIVE_NOT_MECHANICAL_TREE_SOLVED"
     },
     {
+      "study": "B_face_scoped_full",
+      "native_complete": true,
+      "Mechanical_state": "Solved"
+    },
+    {
       "study": "B_normal12_dt1_retry1",
       "native_complete": true,
       "Mechanical_state": "EXTERNAL_NATIVE_NOT_MECHANICAL_TREE_SOLVED"
     },
     {
       "study": "B_normal12_rd95h_dt1",
+      "native_complete": true,
+      "Mechanical_state": "EXTERNAL_NATIVE_NOT_MECHANICAL_TREE_SOLVED"
+    },
+    {
+      "study": "B_normal12_rd95h_dt2",
       "native_complete": true,
       "Mechanical_state": "EXTERNAL_NATIVE_NOT_MECHANICAL_TREE_SOLVED"
     },
@@ -48,6 +58,11 @@
     },
     {
       "study": "C_normal12_rd95_dt1",
+      "native_complete": true,
+      "Mechanical_state": "EXTERNAL_NATIVE_NOT_MECHANICAL_TREE_SOLVED"
+    },
+    {
+      "study": "D_normal12_rd95_dt1",
       "native_complete": true,
       "Mechanical_state": "EXTERNAL_NATIVE_NOT_MECHANICAL_TREE_SOLVED"
     },

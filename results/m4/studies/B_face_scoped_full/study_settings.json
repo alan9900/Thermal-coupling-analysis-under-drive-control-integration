@@ -143,5 +143,6 @@
   "capacity_weights": "E:\\ChatGPT\u9879\u76ee\\\u9a71\u5236\u878d\u5408\u4e0b\u70ed\u8026\u5408\u5206\u6790\\results\\m4\\face_scoped\\FE_capacity_weights.npz",
   "Mechanical_state": "Solved",
   "actual_native_input_sha256": "d377f0821e5eaf584be126e5f1dbf423557688223e67da1a4f691f65072d6e55",
-  "input_hash_basis": "SHA256 of actual native study.dat bytes, including real line endings"
+  "input_hash_basis": "SHA256 of actual native study.dat bytes, including real line endings",
+  "execution_status": "NATIVE_RUN_COMPLETED_ZERO_ERRORS"
 }

@@ -1,0 +1,52 @@
+{
+  "status": "PASS_NATIVE_RADIOSITY_UNITS_AND_DIRECTION",
+  "solver": "MAPDL 2024 R1",
+  "cases": [
+    {
+      "prescribed_node_C": 100.0,
+      "native_surface_C": 99.982421875,
+      "reaction_input_W": 5.207468749807593,
+      "native_radiation_out_W": 5.207470586728959,
+      "analytic_radiation_out_W": 5.207471251186212,
+      "absolute_difference_W": 6.644572536629312e-07
+    },
+    {
+      "prescribed_node_C": 0.0,
+      "native_surface_C": 0.003573946887627244,
+      "reaction_input_W": -1.058949491849387,
+      "native_radiation_out_W": -1.058950476818893,
+      "analytic_radiation_out_W": -1.058950811565929,
+      "absolute_difference_W": 3.3474703586833243e-07
+    },
+    {
+      "prescribed_node_C": 25.0,
+      "native_surface_C": 25.0,
+      "reaction_input_W": 1.332180334483553e-08,
+      "native_radiation_out_W": -3.74172442029101e-07,
+      "analytic_radiation_out_W": 0.0,
+      "absolute_difference_W": 3.74172442029101e-07
+    }
+  ],
+  "absolute_tolerance_W": 1e-05,
+  "errors": 0,
+  "warnings": 1,
+  "files": {
+    "check.dat": {
+      "bytes": 934,
+      "sha256": "dc75dfe0851650e04fc5654a5d45f2c1f43057fc1e0673e10555f1af53e98e18"
+    },
+    "check.out": {
+      "bytes": 156262,
+      "sha256": "40e21c4082c489903f380a19ee0bf8164f3d0f3317706a655b5879a6945f45db"
+    },
+    "check.rth": {
+      "bytes": 327680,
+      "sha256": "07ca17cd0b2c1fefd86cf4e3089e65cb04459593d62849cce4efd657eed70a52"
+    },
+    "radiation_check.csv": {
+      "bytes": 303,
+      "sha256": "56d31c17033561b4e930b6f439c1cab015a0cf5c23e9f19145a9072a77357853"
+    }
+  },
+  "limitations": "Single exposed surface to 25C space node, no geometric obstruction. Does not validate Case0 view factors, complete shielding or actual emissivities. Failed high-conductivity/over-tight-reference attempt preserved separately."
+}

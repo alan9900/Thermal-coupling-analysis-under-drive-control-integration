@@ -1,0 +1,6 @@
+{
+  "status": "PASS_EXISTING_RESULTS_HASH_RECHECKED",
+  "new_solve": false,
+  "old_temperature_CSV_changed": false,
+  "qualification": "Adds missing index only; prior coarse mesh/pad and subvolume BLOCKED limits remain."
+}

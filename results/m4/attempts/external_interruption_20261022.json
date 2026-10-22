@@ -1,0 +1,63 @@
+{
+  "studies": [
+    {
+      "study": "B_normal12_rd95h_dt4",
+      "status": "INTERRUPTED_NO_TERMINAL_NATIVE_LOG",
+      "accepted_results": false,
+      "reason": "Observed no running process and no terminal completion after interruption. Specific external cause unknown.",
+      "files": {
+        "study.dat": {
+          "bytes": 99351070,
+          "sha256": "82ac77e37476fae7ed86677dd09e90a00449541ff02dc0b2368256f50e744c74",
+          "modified_at": "2026-10-21T19:18:39.543589+08:00"
+        },
+        "study.mntr": {
+          "bytes": 4775,
+          "sha256": "833e729ed8232f98954a9919166ed8f2f6e40b8573c3a1c0ed77f22ff28892ac",
+          "modified_at": "2026-10-21T20:39:40.344184+08:00"
+        },
+        "study.out": {
+          "bytes": 9687086,
+          "sha256": "85abc75d86bca3ed3d78db134c8a8263063f74db0ef0499c557803f1c9078d91",
+          "modified_at": "2026-10-21T20:39:41.015853+08:00"
+        },
+        "study.rth": {
+          "bytes": 2404974592,
+          "sha256": "433e2bdf9316ed167000e9c587286da3b1e878d8c0b9bc7cfa2d866859caefac",
+          "modified_at": "2026-10-21T20:39:40.342959+08:00"
+        }
+      },
+      "retry": "B_normal12_rd95h_dt4_retry1"
+    },
+    {
+      "study": "A_normal12_rd95_dt1",
+      "status": "INTERRUPTED_NO_TERMINAL_NATIVE_LOG",
+      "accepted_results": false,
+      "reason": "Observed no running process and no terminal completion after interruption. Specific external cause unknown.",
+      "files": {
+        "study.dat": {
+          "bytes": 99384714,
+          "sha256": "76580a287a902c1c08ec8a7a8c5b13b6ee7e680369c9aa5ec30ddeb9f650c1e2",
+          "modified_at": "2026-10-21T19:29:03.381557+08:00"
+        },
+        "study.mntr": {
+          "bytes": 4549,
+          "sha256": "7b28f1a3ba13231126a1499255ffa1b0b8c466d7bdc6bdff34e096a7947974eb",
+          "modified_at": "2026-10-21T20:39:31.324200+08:00"
+        },
+        "study.out": {
+          "bytes": 10069547,
+          "sha256": "cfb367119c164964482f570ff32ae87bed3b4434634ea74f36cf09bb77005447",
+          "modified_at": "2026-10-21T20:39:37.426967+08:00"
+        },
+        "study.rth": {
+          "bytes": 4014669824,
+          "sha256": "bb661205099716f57df0cd90d1face2cb3aeb0c467fff22c21a446345872dd07",
+          "modified_at": "2026-10-21T20:39:31.322696+08:00"
+        }
+      },
+      "retry": "A_normal12_rd95_dt1_retry1"
+    }
+  ],
+  "native_inputs_unchanged": true
+}

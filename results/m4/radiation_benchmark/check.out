@@ -1,0 +1,3565 @@
+
+ Ansys Mechanical Enterprise                       
+
+
+ *------------------------------------------------------------------*
+ |                                                                  |
+ |   W E L C O M E   T O   T H E   A N S Y S (R)  P R O G R A M     |
+ |                                                                  |
+ *------------------------------------------------------------------*
+
+
+
+
+ ***************************************************************
+ *         ANSYS MAPDL 2024 R1          LEGAL NOTICES          *
+ ***************************************************************
+ *                                                             *
+ * Copyright 1971-2024 Ansys, Inc.  All rights reserved.       *
+ * Unauthorized use, distribution or duplication is            *
+ * prohibited.                                                 *
+ *                                                             *
+ * Ansys is a registered trademark of Ansys, Inc. or its       *
+ * subsidiaries in the United States or other countries.       *
+ * See the Ansys, Inc. online documentation or the Ansys, Inc. *
+ * documentation CD or online help for the complete Legal      *
+ * Notice.                                                     *
+ *                                                             *
+ ***************************************************************
+ *                                                             *
+ * THIS ANSYS SOFTWARE PRODUCT AND PROGRAM DOCUMENTATION       *
+ * INCLUDE TRADE SECRETS AND CONFIDENTIAL AND PROPRIETARY      *
+ * PRODUCTS OF ANSYS, INC., ITS SUBSIDIARIES, OR LICENSORS.    *
+ * The software products and documentation are furnished by    *
+ * Ansys, Inc. or its subsidiaries under a software license    *
+ * agreement that contains provisions concerning               *
+ * non-disclosure, copying, length and nature of use,          *
+ * compliance with exporting laws, warranties, disclaimers,    *
+ * limitations of liability, and remedies, and other           *
+ * provisions.  The software products and documentation may be *
+ * used, disclosed, transferred, or copied only in accordance  *
+ * with the terms and conditions of that software license      *
+ * agreement.                                                  *
+ *                                                             *
+ * Ansys, Inc. is a UL registered                              *
+ * ISO 9001:2015 company.                                      *
+ *                                                             *
+ ***************************************************************
+ *                                                             *
+ * This product is subject to U.S. laws governing export and   *
+ * re-export.                                                  *
+ *                                                             *
+ * For U.S. Government users, except as specifically granted   *
+ * by the Ansys, Inc. software license agreement, the use,     *
+ * duplication, or disclosure by the United States Government  *
+ * is subject to restrictions stated in the Ansys, Inc.        *
+ * software license agreement and FAR 12.212 (for non-DOD      *
+ * licenses).                                                  *
+ *                                                             *
+ ***************************************************************
+
+ 2024 R1 
+     
+ Point Releases and Patches installed:   
+     
+ Ansys, Inc. License Manager 2024 R1 
+ Viewer 2024 R1  
+ Discovery 2024 R1   
+ SpaceClaim 2024 R1  
+ Icepak (includes CFD-Post) 2024 R1  
+ Fluids 2024 R1  
+ CFD-Post only 2024 R1   
+ CFX (includes CFD-Post) 2024 R1 
+ Chemkin 2024 R1 
+ EnSight 2024 R1 
+ FENSAP-ICE 2024 R1  
+ Fluent (includes CFD-Post) 2024 R1  
+ Polyflow (includes CFD-Post) 2024 R1
+ Forte (includes EnSight) 2024 R1
+ ICEM CFD 2024 R1
+ TurboGrid 2024 R1   
+ ACIS Geometry Interface 2024 R1 
+ AutoCAD Geometry Interface 2024 R1  
+ Catia, Version 4 Geometry Interface 2024 R1 
+ Catia, Version 5 Geometry Interface 2024 R1 
+ Catia, Version 6 Geometry Interface 2024 R1 
+ Creo Elements/Direct Modeling Geometry Interface 2024 R1
+ Creo Parametric Geometry Interface 2024 R1  
+ Inventor Geometry Interface 2024 R1 
+ JTOpen Geometry Interface 2024 R1   
+ NX Geometry Interface 2024 R1   
+ Parasolid Geometry Interface  2024 R1   
+ Solid Edge Geometry Interface 2024 R1   
+ SOLIDWORKS Geometry Interface 2024 R1   
+ Speos 2024 R1   
+ Speos HPC 2024 R1   
+ optiSLang 2024 R1   
+ Remote Solve Manager Standalone Services 2024 R1
+ Additive 2024 R1
+ Aqwa 2024 R1
+ Autodyn 2024 R1 
+ Customization Files for User Programmable Features 2024 R1  
+ LS-DYNA 2024 R1 
+ Mechanical Products 2024 R1 
+ Motion 2024 R1  
+ Sherlock 2024 R1
+ Sound - SAS 2024 R1 
+
+
+          *****  MAPDL COMMAND LINE ARGUMENTS  *****
+  INITIAL JOBNAME              = check                                                                                                                                                                                                                                                   
+  BATCH MODE REQUESTED (-b)    = LIST
+  INPUT FILE COPY MODE (-c)    = COPY
+  SHARED MEMORY PARALLEL REQUESTED
+    SINGLE PROCESS WITH SINGLE THREAD REQUESTED
+    TOTAL OF     1 CORES REQUESTED
+  INPUT FILE NAME              = E:\ansys_runs\m4_case0_20261021\radiation_benchmark_retry1\check.dat
+  OUTPUT FILE NAME             = E:\ansys_runs\m4_case0_20261021\radiation_benchmark_retry1\check.out
+  INITIAL DIRECTORY = E:\ansys_runs\m4_case0_20261021\radiation_benchmark_retry1
+
+ RELEASE= 2024 R1              BUILD= 24.1      UP20231106   VERSION=WINDOWS x64 
+ CURRENT JOBNAME=check  20:15:43  OCT 21, 2026 CP=      0.172
+
+     1  /batch  
+     2  ! Independent units/sign benchmark, NOT the Case0 vehicle model.
+     3  /prep7  
+     4  /units,MKS  
+     5  toffst,273.15   
+     6  stef,5.669e-8   
+     7  et,1,278
+     8  mp,kxx,1,1e4
+     9  mp,dens,1,7800  
+    10  mp,c,1,500  
+    11  n,1,0,0,0   
+    12  n,2,.1,0,0  
+    13  n,3,.1,.1,0 
+    14  n,4,0,.1,0  
+    15  n,5,0,0,.1  
+    16  n,6,.1,0,.1 
+    17  n,7,.1,.1,.1
+    18  n,8,0,.1,.1 
+    19  e,1,2,3,4,5,6,7,8   
+    20  n,9,1,1,1   
+    21  finish  
+    22  /solu   
+    23  antype,static   
+    24  kbc,1   
+    25  tunif,25
+    26  spcnod,1,9  
+    27  d,9,temp,25 
+    28  sfe,1,6,rdsf,1,.8   
+    29  sfe,1,6,rdsf,2,1
+    30  allsel  
+    31  rdec,define,0   
+    32  rsurf,,,101 
+    33  radopt,,1e-8
+    34  cnvtol,heat,,1e-6,,1
+    35  autots,off  
+    36  nsubst,1,1,1
+    37  outres,all,all  
+    38  d,1,temp,100
+    39  time,1  
+    40  solve   
+    41  d,1,temp,0  
+    42  time,2  
+    43  solve   
+    44  d,1,temp,25 
+    45  time,3  
+    46  solve   
+    47  finish  
+    48  /post1  
+    49  *cfopen,radiation_check,csv 
+    50  *do,j,1,3   
+    51  set,j,last  
+    52  allsel  
+    53  *get,tp,node,1,temp 
+    54  *get,qr,node,1,rf,heat  
+    55  esel,s,type,,101
+    56  etable,eras 
+    57  etable,area,nmisc,4 
+    58  etable,flux,nmisc,7 
+    59  etable,tsu,nmisc,5  
+    60  smult,qw,area,flux  
+    61  ssum
+    62  *get,qs,ssum,0,item,qw  
+    63  *get,ts,ssum,0,item,tsu 
+    64  *vwrite,tp,ts,qr,qs 
+    65  (E24.16,',',E24.16,',',E24.16,',',E24.16)   
+    66  *enddo  
+    67  *cfclos 
+    68  finish  
+    69  /exit,nosa  
+
+ RUN SETUP PROCEDURE FROM FILE= E:\Program Files\ANSYS Inc\v241\ANSYS\apdl\start.ans
+
+ /INPUT FILE= E:\Program Files\ANSYS Inc\v241\ANSYS\apdl\start.ans  LINE=       0
+
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2024 R1          24.1     ***
+ Ansys Mechanical Enterprise                       
+ 20230322  VERSION=WINDOWS x64   20:15:43  OCT 21, 2026 CP=      0.234
+
+                                                                               
+
+
+
+          ***** MAPDL ANALYSIS DEFINITION (PREP7) *****
+
+ MKS UNITS SPECIFIED FOR INTERNAL    
+  LENGTH        (l)  = METER (M)
+  MASS          (M)  = KILOGRAM (KG)
+  TIME          (t)  = SECOND (SEC)
+  TEMPERATURE   (T)  = CELSIUS (C)
+  TOFFSET            = 273.0
+  CHARGE        (Q)  = COULOMB
+  FORCE         (f)  = NEWTON (N) (KG-M/SEC2)
+  HEAT               = JOULE (N-M)
+
+  PRESSURE           = PASCAL (NEWTON/M**2)
+  ENERGY        (W)  = JOULE (N-M)
+  POWER         (P)  = WATT (N-M/SEC)
+  CURRENT       (i)  = AMPERE (COULOMBS/SEC)
+  CAPACITANCE   (C)  = FARAD
+  INDUCTANCE    (L)  = HENRY
+  MAGNETIC FLUX      = WEBER
+  RESISTANCE    (R)  = OHM
+  ELECTRIC POTENTIAL = VOLT
+
+ INPUT  UNITS ARE ALSO SET TO MKS 
+
+ TEMPERATURE OFFSET FROM ABSOLUTE ZERO= 273.150
+
+ STEFAN-BOLTZMANN CONSTANT= 0.56690E-07
+
+ ELEMENT TYPE          1 IS SOLID278     3-D THERMAL SOLID           
+  KEYOPT( 1- 6)=        0      0      0        0      0      0
+  KEYOPT( 7-12)=        0      0      0        0      0      0
+  KEYOPT(13-18)=        0      0      0        0      0      0
+
+ CURRENT NODAL DOF SET IS  TEMP
+  THREE-DIMENSIONAL MODEL
+
+ MATERIAL          1     KXX  =   10000.00      
+
+ MATERIAL          1     DENS =   7800.000      
+
+ MATERIAL          1     C    =   500.0000      
+
+ NODE          1  KCS=      0  X,Y,Z=  0.0000       0.0000       0.0000     
+
+ NODE          2  KCS=      0  X,Y,Z= 0.10000       0.0000       0.0000     
+
+ NODE          3  KCS=      0  X,Y,Z= 0.10000      0.10000       0.0000     
+
+ NODE          4  KCS=      0  X,Y,Z=  0.0000      0.10000       0.0000     
+
+ NODE          5  KCS=      0  X,Y,Z=  0.0000       0.0000      0.10000     
+
+ NODE          6  KCS=      0  X,Y,Z= 0.10000       0.0000      0.10000     
+
+ NODE          7  KCS=      0  X,Y,Z= 0.10000      0.10000      0.10000     
+
+ NODE          8  KCS=      0  X,Y,Z=  0.0000      0.10000      0.10000     
+
+ ELEMENT      1       1      2      3      4      5      6      7      8
+
+
+ NODE          9  KCS=      0  X,Y,Z=  1.0000       1.0000       1.0000     
+
+
+ ***** ROUTINE COMPLETED *****  CP =         0.234
+
+
+
+ *****  MAPDL SOLUTION ROUTINE  *****
+
+
+ PERFORM A STATIC ANALYSIS
+  THIS WILL BE A NEW ANALYSIS
+
+ STEP BOUNDARY CONDITION KEY= 1
+
+ UNIFORM TEMPERATURE=    25.000  (TREF=     0.000)
+
+ ENCLOSURE=  1 SPACE NODE NUMBER=      9
+
+ SPECIFIED CONSTRAINT TEMP FOR SELECTED NODES            9 TO           9 BY           1
+ REAL=  25.0000000       IMAG=  0.00000000    
+
+ SPECIFIED SURFACE LOAD RDSF FOR ELEMENT         1  LKEY = 6   KVAL = 1
+     VALUES =    0.80000        0.80000        0.80000        0.80000    
+
+ SPECIFIED SURFACE LOAD RDSF FOR ELEMENT         1  LKEY = 6   KVAL = 2
+     VALUES =     1.0000         1.0000         1.0000         1.0000    
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+ CURRENT DEGREE OF DECIMATION =    0.000
+
+PLACEMENT POLICY FOR RADIATION NODES IS SET TO OPTIMAL
+
+BEFORE SYMMETRIZATION:
+
+NUMBER OF RADIATION NODES CREATED =          4
+
+NUMBER OF RADIOSITY SURFACE ELEMENTS CREATED =          1
+
+AFTER SYMMETRIZATION:
+
+FULL NUMBER OF RADIATION NODES CREATED =          4
+
+FULL NUMBER OF RADIOSITY SURFACE ELEMENTS CREATED =         1
+
+ UNDER RELAXATION FOR RADIATION FLUX=   0.10000
+
+ TOLERENCE FOR RADIOSITY FLUX=   0.00000
+
+ USING JACOBI ITERATIVE SOLVER FOR RADIOSITY SOLUTION
+ FOR 3D ENCLOSURES.
+ USING GSEIDEL ITERATIVE SOLVER FOR RADIOSITY SOLUTION
+ FOR 2D ENCLOSURES.
+
+ MAXIMUM NUMBER OF ITERATIONS=  1000
+ TOLERENCE FOR ITERATIVE SOLVER=   0.10000
+ RELAXATION FOR ITERATIVE SOLVER=   0.10000
+
+ CONVERGENCE ON HEAT BASED ON THE NORM OF THE N-R LOAD
+   WITH A TOLERANCE OF 0.1000E-05 AND A MINIMUM REFERENCE VALUE OF  1.000    
+   USING THE L2 NORM (CHECK THE SRSS VALUE)
+
+ DO NOT USE AUTOMATIC TIME STEPPING THIS LOAD STEP
+
+ USE       1 SUBSTEPS INITIALLY THIS LOAD STEP FOR ALL  DEGREES OF FREEDOM
+ FOR AUTOMATIC TIME STEPPING:
+   USE      1 SUBSTEPS AS A MAXIMUM
+   USE      1 SUBSTEPS AS A MINIMUM
+
+ WRITE ALL  ITEMS TO THE DATABASE WITH A FREQUENCY OF ALL 
+   FOR ALL APPLICABLE ENTITIES
+
+ SPECIFIED CONSTRAINT TEMP FOR SELECTED NODES            1 TO           1 BY           1
+ REAL=  100.000000       IMAG=  0.00000000    
+
+ TIME=  1.0000    
+
+ *****  MAPDL SOLVE    COMMAND  *****
+
+ CALCULATING VIEW FACTORS USING HEMICUBE METHOD
+
+ RETRIEVED    1 ENCLOSURES.
+ TOTAL OF        1 DEFINED ELEMENT FACES.
+
+ # ENCLOSURE =     1 # SURFACES =     1 # NODES =     4
+
+TIME OF CALCULATION FOR THIS ENCLOSURE =    0.00000    
+
+ CHECKING VIEW FACTOR SUM
+
+ *** NOTE ***                            CP =       0.234   TIME= 20:15:43
+ Some of the rows in the viewfactor matrix have all zeros for enclosure  
+ 1.                                                                      
+
+ VIEW FACTOR CALCULATION COMPLETE
+
+ WRITING VIEW FACTORS TO FILE check.vf                                                                                                                                                                                                                                                            
+ VIEW FACTORS WERE WRITTEN TO FILE check.vf                                                                                                                                                                                                                                                            
+
+ *** NOTE ***                            CP =       0.234   TIME= 20:15:43
+ There is no title defined for this analysis.                            
+
+ *** WARNING ***                         CP =       0.234   TIME= 20:15:43
+ No shape testing has been performed on 1 of the 2 selected elements.    
+ To perform shape testing on these elements and see any warning          
+ messages about the others, please issue the CHECK command.              
+
+ *** NOTE ***                            CP =       0.234   TIME= 20:15:43
+ The model data was checked and warning messages were found.             
+  Please review output or errors file (                                  
+ E:\ansys_runs\m4_case0_20261021\radiation_benchmark_retry1\check.err )  
+ for these warning messages.                                             
+
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2024 R1          24.1     ***
+ Ansys Mechanical Enterprise                       
+ 20230322  VERSION=WINDOWS x64   20:15:43  OCT 21, 2026 CP=      0.234
+
+                                                                               
+
+
+
+                       S O L U T I O N   O P T I O N S
+
+   PROBLEM DIMENSIONALITY. . . . . . . . . . . . .3-D                  
+   DEGREES OF FREEDOM. . . . . . TEMP
+   ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
+   OFFSET TEMPERATURE FROM ABSOLUTE ZERO . . . . .  273.15    
+   GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
+
+ *** NOTE ***                            CP =       0.250   TIME= 20:15:43
+ This nonlinear analysis defaults to using the full Newton-Raphson       
+ solution procedure.  This can be modified using the NROPT command.      
+
+ *** NOTE ***                            CP =       0.250   TIME= 20:15:43
+ The conditions for direct assembly have been met.  No .emat or .erot    
+ files will be produced.                                                 
+
+                      L O A D   S T E P   O P T I O N S
+
+   LOAD STEP NUMBER. . . . . . . . . . . . . . . .     1
+   TIME AT END OF THE LOAD STEP. . . . . . . . . .  1.0000    
+   NUMBER OF SUBSTEPS. . . . . . . . . . . . . . .     1
+   MAXIMUM NUMBER OF EQUILIBRIUM ITERATIONS. . . .    15
+   STEP CHANGE BOUNDARY CONDITIONS . . . . . . . .   YES
+   TERMINATE ANALYSIS IF NOT CONVERGED . . . . . .YES (EXIT)  
+   CONVERGENCE CONTROLS
+      LABEL   REFERENCE    TOLERANCE  NORM     MINREF
+       HEAT    0.000       0.1000E-05   2      1.000    
+   PRINT OUTPUT CONTROLS . . . . . . . . . . . . .NO PRINTOUT
+   DATABASE OUTPUT CONTROLS
+      ITEM     FREQUENCY   COMPONENT
+       ALL        ALL               
+
+
+ SOLUTION MONITORING INFO IS WRITTEN TO FILE= check.mntr                                                                                                                                                                                                                                                          
+ MAXIMUM NUMBER OF EQUILIBRIUM ITERATIONS HAS BEEN MODIFIED              
+  TO BE, NEQIT = 1000, BY SOLUTION CONTROL LOGIC.                        
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER   59 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=   1.00000     CRITERION=  0.100000E-07
+
+
+
+
+
+            **** CENTER OF MASS, MASS, AND MASS MOMENTS OF INERTIA ****
+
+  CALCULATIONS ASSUME ELEMENT MASS AT ELEMENT CENTROID
+
+  TOTAL MASS =   7.8000    
+
+                           MOM. OF INERTIA         MOM. OF INERTIA
+  CENTER OF MASS            ABOUT ORIGIN        ABOUT CENTER OF MASS
+
+  XC =  0.50000E-01      IXX =   0.3900E-01      IXX =    0.000    
+  YC =  0.50000E-01      IYY =   0.3900E-01      IYY =    0.000    
+  ZC =  0.50000E-01      IZZ =   0.3900E-01      IZZ =    0.000    
+                         IXY =  -0.1950E-01      IXY =    0.000    
+                         IYZ =  -0.1950E-01      IYZ =    0.000    
+                         IZX =  -0.1950E-01      IZX =    0.000    
+
+
+  *** MASS SUMMARY BY ELEMENT TYPE ***
+
+  TYPE      MASS
+     1   7.80000    
+
+ Range of element maximum matrix coefficients in global coordinates
+ Maximum = 333.333333 at element 1.                                      
+ Minimum = 333.333333 at element 1.                                      
+
+   *** ELEMENT MATRIX FORMULATION TIMES
+     TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
+
+        1         1  SOLID278      0.000   0.000000
+      101         1  SURF252       0.000   0.000000
+ Time at end of element matrix formulation CP = 0.734375.                
+
+ ALL CURRENT MAPDL DATA WRITTEN TO FILE NAME= check.rdb
+  FOR POSSIBLE RESUME FROM THIS POINT
+
+ *** NOTE ***                            CP =       0.797   TIME= 20:15:43
+ SURF251 or SURF252 Element types exist in database.  Map file will be   
+ created.                                                                
+ WRITING SURF 251/252 MAP FILE check.rsm                                                                                                                                                                                                                                                           
+     HT FLOW CONVERGENCE VALUE=  0.1250E+05  CRITERION=  0.1250E-01
+
+ SPARSE MATRIX DIRECT SOLVER.
+  Number of equations =           7,    Maximum wavefront =      7
+  Memory allocated for solver              =     0.063 MB
+  Memory required for in-core solution     =     0.060 MB
+  Memory required for out-of-core solution =     0.053 MB
+
+ *** NOTE ***                            CP =       0.797   TIME= 20:15:43
+ The Sparse Matrix Solver is currently running in the in-core memory     
+ mode.  This memory mode uses the most amount of memory in order to      
+ avoid using the hard drive as much as possible, which most often        
+ results in the fastest solution time.  This mode is recommended if      
+ enough physical memory is present to accommodate all of the solver      
+ data.                                                                   
+ Sparse solver maximum pivot= 333.333333 at node 3 TEMP.                 
+ Sparse solver minimum pivot= 192.307692 at node 7 TEMP.                 
+ Sparse solver minimum pivot in absolute value= 192.307692 at node 7     
+ TEMP.                                                                   
+    EQUIL ITER   1 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=   75.00    
+     HT FLOW CONVERGENCE VALUE=  0.1538E-07  CRITERION=  0.1000E-05 <<< CONVERGED
+     The calculated reference HT FLOW CONVERGENCE VALUE=  0.3997E-07
+      is less than MINREF (which can be modified on the CNVTOL command).
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER   61 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.538165     CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=   2.600      CRITERION=  0.1000E-05
+    EQUIL ITER   2 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.2080E-01
+     HT FLOW CONVERGENCE VALUE=  0.1040E-10  CRITERION=  0.5271E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   2
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.700890E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.9477E-03  CRITERION=  0.5271E-05
+    EQUIL ITER   3 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.7579E-05
+     HT FLOW CONVERGENCE VALUE=  0.7677E-11  CRITERION=  0.5273E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   3
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.630699E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.3055E-03  CRITERION=  0.5273E-05
+    EQUIL ITER   4 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.2444E-05
+     HT FLOW CONVERGENCE VALUE=  0.8778E-11  CRITERION=  0.5274E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   4
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.567577E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.2748E-03  CRITERION=  0.5274E-05
+    EQUIL ITER   5 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.2198E-05
+     HT FLOW CONVERGENCE VALUE=  0.9652E-11  CRITERION=  0.5274E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   5
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.510775E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.2473E-03  CRITERION=  0.5274E-05
+    EQUIL ITER   6 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.1978E-05
+     HT FLOW CONVERGENCE VALUE=  0.9069E-11  CRITERION=  0.5275E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   6
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.459660E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.2226E-03  CRITERION=  0.5275E-05
+    EQUIL ITER   7 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.1780E-05
+     HT FLOW CONVERGENCE VALUE=  0.6654E-11  CRITERION=  0.5275E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   7
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.413662E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.2003E-03  CRITERION=  0.5275E-05
+    EQUIL ITER   8 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.1602E-05
+     HT FLOW CONVERGENCE VALUE=  0.8679E-11  CRITERION=  0.5276E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   8
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.372269E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1803E-03  CRITERION=  0.5276E-05
+    EQUIL ITER   9 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.1442E-05
+     HT FLOW CONVERGENCE VALUE=  0.9292E-11  CRITERION=  0.5276E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   9
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.335019E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1623E-03  CRITERION=  0.5276E-05
+    EQUIL ITER  10 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.1298E-05
+     HT FLOW CONVERGENCE VALUE=  0.9894E-11  CRITERION=  0.5276E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  10
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.301498E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1460E-03  CRITERION=  0.5276E-05
+    EQUIL ITER  11 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.1168E-05
+     HT FLOW CONVERGENCE VALUE=  0.6771E-11  CRITERION=  0.5277E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  11
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.271331E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1314E-03  CRITERION=  0.5277E-05
+    EQUIL ITER  12 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.1051E-05
+     HT FLOW CONVERGENCE VALUE=  0.7037E-11  CRITERION=  0.5277E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  12
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.244183E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1183E-03  CRITERION=  0.5277E-05
+    EQUIL ITER  13 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.9460E-06
+     HT FLOW CONVERGENCE VALUE=  0.8466E-11  CRITERION=  0.5277E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  13
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.219752E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1064E-03  CRITERION=  0.5277E-05
+    EQUIL ITER  14 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.8513E-06
+     HT FLOW CONVERGENCE VALUE=  0.5988E-11  CRITERION=  0.5277E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  14
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.197766E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.9580E-04  CRITERION=  0.5277E-05
+    EQUIL ITER  15 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.7662E-06
+     HT FLOW CONVERGENCE VALUE=  0.7629E-11  CRITERION=  0.5278E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  15
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.177980E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.8621E-04  CRITERION=  0.5278E-05
+    EQUIL ITER  16 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.6895E-06
+     HT FLOW CONVERGENCE VALUE=  0.7516E-11  CRITERION=  0.5278E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  16
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.160174E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.7759E-04  CRITERION=  0.5278E-05
+    EQUIL ITER  17 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.6206E-06
+     HT FLOW CONVERGENCE VALUE=  0.7640E-11  CRITERION=  0.5278E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  17
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.144149E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.6983E-04  CRITERION=  0.5278E-05
+    EQUIL ITER  18 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.5585E-06
+     HT FLOW CONVERGENCE VALUE=  0.9993E-11  CRITERION=  0.5278E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  18
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.129728E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.6284E-04  CRITERION=  0.5278E-05
+    EQUIL ITER  19 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.5026E-06
+     HT FLOW CONVERGENCE VALUE=  0.7761E-11  CRITERION=  0.5278E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  19
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.116750E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5656E-04  CRITERION=  0.5278E-05
+    EQUIL ITER  20 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.4523E-06
+     HT FLOW CONVERGENCE VALUE=  0.1056E-10  CRITERION=  0.5278E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  20
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.105070E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5090E-04  CRITERION=  0.5278E-05
+    EQUIL ITER  21 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.4071E-06
+     HT FLOW CONVERGENCE VALUE=  0.5020E-11  CRITERION=  0.5278E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  21
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.945588E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.4581E-04  CRITERION=  0.5278E-05
+    EQUIL ITER  22 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.3664E-06
+     HT FLOW CONVERGENCE VALUE=  0.8184E-11  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  22
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.850991E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.4123E-04  CRITERION=  0.5279E-05
+    EQUIL ITER  23 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.3297E-06
+     HT FLOW CONVERGENCE VALUE=  0.5306E-11  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  23
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.765859E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.3710E-04  CRITERION=  0.5279E-05
+    EQUIL ITER  24 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.2967E-06
+     HT FLOW CONVERGENCE VALUE=  0.1346E-10  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  24
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.689244E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.3339E-04  CRITERION=  0.5279E-05
+    EQUIL ITER  25 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.2671E-06
+     HT FLOW CONVERGENCE VALUE=  0.6929E-11  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  25
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.620294E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.3005E-04  CRITERION=  0.5279E-05
+    EQUIL ITER  26 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.2403E-06
+     HT FLOW CONVERGENCE VALUE=  0.9285E-11  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  26
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.558242E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.2704E-04  CRITERION=  0.5279E-05
+    EQUIL ITER  27 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.2163E-06
+     HT FLOW CONVERGENCE VALUE=  0.3105E-11  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  27
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.502397E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.2434E-04  CRITERION=  0.5279E-05
+    EQUIL ITER  28 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.1947E-06
+     HT FLOW CONVERGENCE VALUE=  0.3962E-11  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  28
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.452140E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.2190E-04  CRITERION=  0.5279E-05
+    EQUIL ITER  29 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.1752E-06
+     HT FLOW CONVERGENCE VALUE=  0.5571E-11  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  29
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.406910E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1971E-04  CRITERION=  0.5279E-05
+    EQUIL ITER  30 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.1577E-06
+     HT FLOW CONVERGENCE VALUE=  0.4158E-11  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  30
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.366204E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1774E-04  CRITERION=  0.5279E-05
+    EQUIL ITER  31 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.1419E-06
+     HT FLOW CONVERGENCE VALUE=  0.5133E-11  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  31
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.329571E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1597E-04  CRITERION=  0.5279E-05
+    EQUIL ITER  32 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.1277E-06
+     HT FLOW CONVERGENCE VALUE=  0.7713E-11  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  32
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.296603E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1437E-04  CRITERION=  0.5279E-05
+    EQUIL ITER  33 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.1149E-06
+     HT FLOW CONVERGENCE VALUE=  0.6455E-11  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  33
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.266932E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1293E-04  CRITERION=  0.5279E-05
+    EQUIL ITER  34 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.1034E-06
+     HT FLOW CONVERGENCE VALUE=  0.5086E-11  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  34
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.240230E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1164E-04  CRITERION=  0.5279E-05
+    EQUIL ITER  35 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.9308E-07
+     HT FLOW CONVERGENCE VALUE=  0.6947E-11  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  35
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.216199E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1047E-04  CRITERION=  0.5279E-05
+    EQUIL ITER  36 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.8377E-07
+     HT FLOW CONVERGENCE VALUE=  0.7729E-11  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  36
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.194572E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.9427E-05  CRITERION=  0.5279E-05
+    EQUIL ITER  37 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.7539E-07
+     HT FLOW CONVERGENCE VALUE=  0.1031E-10  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  37
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.175108E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.8484E-05  CRITERION=  0.5279E-05
+    EQUIL ITER  38 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.6785E-07
+     HT FLOW CONVERGENCE VALUE=  0.5587E-11  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  38
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.157591E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.7635E-05  CRITERION=  0.5279E-05
+    EQUIL ITER  39 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.6106E-07
+     HT FLOW CONVERGENCE VALUE=  0.9235E-11  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  39
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.141827E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.6871E-05  CRITERION=  0.5279E-05
+    EQUIL ITER  40 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.5496E-07
+     HT FLOW CONVERGENCE VALUE=  0.5685E-11  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  40
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.127640E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.6184E-05  CRITERION=  0.5279E-05
+    EQUIL ITER  41 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.4946E-07
+     HT FLOW CONVERGENCE VALUE=  0.6930E-11  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  41
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.114872E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5565E-05  CRITERION=  0.5279E-05
+    EQUIL ITER  42 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.4451E-07
+     HT FLOW CONVERGENCE VALUE=  0.3829E-11  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  42
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.103381E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5009E-05  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  42
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.930425E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.9515E-05  CRITERION=  0.5279E-05
+    EQUIL ITER  43 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.7610E-07
+     HT FLOW CONVERGENCE VALUE=  0.4663E-11  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  43
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.837319E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.4058E-05  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  43
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.753587E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.7708E-05  CRITERION=  0.5279E-05
+    EQUIL ITER  44 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.6165E-07
+     HT FLOW CONVERGENCE VALUE=  0.3523E-11  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  44
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.678177E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.3287E-05  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  44
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.610359E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.6243E-05  CRITERION=  0.5279E-05
+    EQUIL ITER  45 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.4993E-07
+     HT FLOW CONVERGENCE VALUE=  0.6210E-11  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  45
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.549282E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.2662E-05  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  45
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.494353E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5056E-05  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  45
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.444918E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.7211E-05  CRITERION=  0.5279E-05
+    EQUIL ITER  46 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.5768E-07
+     HT FLOW CONVERGENCE VALUE=  0.1047E-10  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  46
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.400378E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1941E-05  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  46
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.360340E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.3686E-05  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  46
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.324306E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5257E-05  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  46
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.291876E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.6671E-05  CRITERION=  0.5279E-05
+    EQUIL ITER  47 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.5335E-07
+     HT FLOW CONVERGENCE VALUE=  0.6961E-11  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  47
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.262644E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1274E-05  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  47
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.236380E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.2419E-05  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  47
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.212742E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.3449E-05  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  47
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.191467E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.4376E-05  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  47
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.172321E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5211E-05  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  47
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.155089E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5962E-05  CRITERION=  0.5279E-05
+    EQUIL ITER  48 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.4769E-07
+     HT FLOW CONVERGENCE VALUE=  0.2612E-11  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  48
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.139541E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.6773E-06  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  48
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.125587E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1286E-05  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  48
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.113028E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1833E-05  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  48
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.101725E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.2326E-05  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  48
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.915525E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.2769E-05  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  48
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.823973E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.3168E-05  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  48
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.741575E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.3527E-05  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  48
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.667418E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.3851E-05  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  48
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.600676E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.4142E-05  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  48
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.540608E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.4404E-05  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  48
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.486548E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.4639E-05  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  48
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.437893E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.4851E-05  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  48
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.394103E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5042E-05  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  48
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.354693E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5214E-05  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  48
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.319224E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5369E-05  CRITERION=  0.5279E-05
+    EQUIL ITER  49 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.4294E-07
+     HT FLOW CONVERGENCE VALUE=  0.1338E-10  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  49
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.286949E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1403E-06  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  49
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.258254E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.2653E-06  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  49
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.232429E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.3779E-06  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  49
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.209186E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.4792E-06  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  49
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.188267E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5704E-06  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  49
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.169440E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.6525E-06  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  49
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.152496E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.7264E-06  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  49
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.137247E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.7928E-06  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  49
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.123522E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.8527E-06  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  49
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.111170E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.9065E-06  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  49
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.100053E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.9550E-06  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  49
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.900476E-08 CRITERION=  0.100000E-07
+
+ RADIOSITY FLUX CONVERGED AFTER ITERATION=   88 SUBSTEP=    1
+
+     HT FLOW CONVERGENCE VALUE=  0.9986E-06  CRITERION=  0.5279E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  49
+
+   *** ELEMENT RESULT CALCULATION TIMES
+     TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
+
+        1         1  SOLID278      0.000   0.000000
+      101         1  SURF252       0.000   0.000000
+
+   *** NODAL LOAD CALCULATION TIMES
+     TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
+
+        1         1  SOLID278      0.000   0.000000
+      101         1  SURF252       0.000   0.000000
+ *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =     49
+ *** TIME =   1.00000         TIME INC =   1.00000    
+
+
+ *** MAPDL BINARY FILE STATISTICS
+  BUFFER SIZE USED= 16384
+        0.062 MB WRITTEN ON ELEMENT SAVED DATA FILE: check.esav
+        0.062 MB WRITTEN ON ASSEMBLED MATRIX FILE: check.full
+        0.312 MB WRITTEN ON RESULTS FILE: check.rth
+
+ SPECIFIED CONSTRAINT TEMP FOR SELECTED NODES            1 TO           1 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ TIME=  2.0000    
+
+ *****  MAPDL SOLVE    COMMAND  *****
+
+ *** NOTE ***                            CP =       0.984   TIME= 20:15:44
+ This nonlinear analysis defaults to using the full Newton-Raphson       
+ solution procedure.  This can be modified using the NROPT command.      
+
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2024 R1          24.1     ***
+ Ansys Mechanical Enterprise                       
+ 20230322  VERSION=WINDOWS x64   20:15:44  OCT 21, 2026 CP=      0.984
+
+                                                                               
+
+
+
+                      L O A D   S T E P   O P T I O N S
+
+   LOAD STEP NUMBER. . . . . . . . . . . . . . . .     2
+   TIME AT END OF THE LOAD STEP. . . . . . . . . .  2.0000    
+   NUMBER OF SUBSTEPS. . . . . . . . . . . . . . .     1
+   MAXIMUM NUMBER OF EQUILIBRIUM ITERATIONS. . . .    15
+   STEP CHANGE BOUNDARY CONDITIONS . . . . . . . .   YES
+   TERMINATE ANALYSIS IF NOT CONVERGED . . . . . .YES (EXIT)  
+   CONVERGENCE CONTROLS
+      LABEL   REFERENCE    TOLERANCE  NORM     MINREF
+       HEAT    0.000       0.1000E-05   2      1.000    
+   PRINT OUTPUT CONTROLS . . . . . . . . . . . . .NO PRINTOUT
+   DATABASE OUTPUT CONTROLS
+      ITEM     FREQUENCY   COMPONENT
+       ALL        ALL               
+
+
+ SOLUTION MONITORING INFO IS WRITTEN TO FILE= check.mntr                                                                                                                                                                                                                                                          
+ MAXIMUM NUMBER OF EQUILIBRIUM ITERATIONS HAS BEEN MODIFIED              
+  TO BE, NEQIT = 1000, BY SOLUTION CONTROL LOGIC.                        
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.810428E-08 CRITERION=  0.100000E-07
+
+ RADIOSITY FLUX CONVERGED AFTER ITERATION=    1 SUBSTEP=    1
+
+
+     HT FLOW CONVERGENCE VALUE=  0.1667E+05  CRITERION=  0.1667E-01
+    EQUIL ITER   1 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  -100.0    
+     HT FLOW CONVERGENCE VALUE=  0.2051E-07  CRITERION=  0.1941E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER   63 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=   1.82505     CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.3426      CRITERION=  0.1814E-05
+    EQUIL ITER   2 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.2740E-02
+     HT FLOW CONVERGENCE VALUE=  0.4630E-12  CRITERION=  0.1175E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   2
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.241951E-03 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.3661E-03  CRITERION=  0.1175E-05
+    EQUIL ITER   3 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.2929E-05
+     HT FLOW CONVERGENCE VALUE=  0.4019E-15  CRITERION=  0.1176E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   3
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.217801E-03 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.3733E-03  CRITERION=  0.1176E-05
+    EQUIL ITER   4 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.2986E-05
+     HT FLOW CONVERGENCE VALUE=  0.7296E-15  CRITERION=  0.1176E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   4
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.196056E-03 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.3360E-03  CRITERION=  0.1177E-05
+    EQUIL ITER   5 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.2687E-05
+     HT FLOW CONVERGENCE VALUE=  0.4471E-15  CRITERION=  0.1177E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   5
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.176479E-03 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.3024E-03  CRITERION=  0.1177E-05
+    EQUIL ITER   6 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.2419E-05
+     HT FLOW CONVERGENCE VALUE=  0.6119E-15  CRITERION=  0.1178E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   6
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.158854E-03 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.2721E-03  CRITERION=  0.1178E-05
+    EQUIL ITER   7 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.2177E-05
+     HT FLOW CONVERGENCE VALUE=  0.4852E-15  CRITERION=  0.1179E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   7
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.142987E-03 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.2449E-03  CRITERION=  0.1179E-05
+    EQUIL ITER   8 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.1959E-05
+     HT FLOW CONVERGENCE VALUE=  0.6506E-15  CRITERION=  0.1179E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   8
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.128703E-03 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.2204E-03  CRITERION=  0.1179E-05
+    EQUIL ITER   9 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.1763E-05
+     HT FLOW CONVERGENCE VALUE=  0.5501E-15  CRITERION=  0.1180E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   9
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.115845E-03 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1984E-03  CRITERION=  0.1180E-05
+    EQUIL ITER  10 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.1587E-05
+     HT FLOW CONVERGENCE VALUE=  0.3952E-15  CRITERION=  0.1180E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  10
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.104270E-03 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1785E-03  CRITERION=  0.1180E-05
+    EQUIL ITER  11 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.1428E-05
+     HT FLOW CONVERGENCE VALUE=  0.3448E-15  CRITERION=  0.1180E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  11
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.938504E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1607E-03  CRITERION=  0.1180E-05
+    EQUIL ITER  12 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.1285E-05
+     HT FLOW CONVERGENCE VALUE=  0.3872E-15  CRITERION=  0.1181E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  12
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.844713E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1446E-03  CRITERION=  0.1181E-05
+    EQUIL ITER  13 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.1157E-05
+     HT FLOW CONVERGENCE VALUE=  0.3539E-15  CRITERION=  0.1181E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  13
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.760289E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1301E-03  CRITERION=  0.1181E-05
+    EQUIL ITER  14 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.1041E-05
+     HT FLOW CONVERGENCE VALUE=  0.2201E-15  CRITERION=  0.1181E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  14
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.684298E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1171E-03  CRITERION=  0.1181E-05
+    EQUIL ITER  15 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.9369E-06
+     HT FLOW CONVERGENCE VALUE=  0.2698E-15  CRITERION=  0.1182E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  15
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.615897E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1054E-03  CRITERION=  0.1182E-05
+    EQUIL ITER  16 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.8432E-06
+     HT FLOW CONVERGENCE VALUE=  0.2429E-15  CRITERION=  0.1182E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  16
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.554330E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.9487E-04  CRITERION=  0.1182E-05
+    EQUIL ITER  17 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.7589E-06
+     HT FLOW CONVERGENCE VALUE=  0.3174E-15  CRITERION=  0.1182E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  17
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.498915E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.8538E-04  CRITERION=  0.1182E-05
+    EQUIL ITER  18 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.6830E-06
+     HT FLOW CONVERGENCE VALUE=  0.3280E-15  CRITERION=  0.1182E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  18
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.449038E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.7684E-04  CRITERION=  0.1182E-05
+    EQUIL ITER  19 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.6147E-06
+     HT FLOW CONVERGENCE VALUE=  0.4720E-15  CRITERION=  0.1182E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  19
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.404145E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.6916E-04  CRITERION=  0.1182E-05
+    EQUIL ITER  20 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.5532E-06
+     HT FLOW CONVERGENCE VALUE=  0.4369E-15  CRITERION=  0.1183E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  20
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.363738E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.6224E-04  CRITERION=  0.1183E-05
+    EQUIL ITER  21 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.4979E-06
+     HT FLOW CONVERGENCE VALUE=  0.2031E-15  CRITERION=  0.1183E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  21
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.327371E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5602E-04  CRITERION=  0.1183E-05
+    EQUIL ITER  22 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.4481E-06
+     HT FLOW CONVERGENCE VALUE=  0.2897E-15  CRITERION=  0.1183E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  22
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.294638E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5042E-04  CRITERION=  0.1183E-05
+    EQUIL ITER  23 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.4033E-06
+     HT FLOW CONVERGENCE VALUE=  0.2328E-15  CRITERION=  0.1183E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  23
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.265178E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.4537E-04  CRITERION=  0.1183E-05
+    EQUIL ITER  24 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.3629E-06
+     HT FLOW CONVERGENCE VALUE=  0.2826E-15  CRITERION=  0.1183E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  24
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.238662E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.4084E-04  CRITERION=  0.1183E-05
+    EQUIL ITER  25 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.3266E-06
+     HT FLOW CONVERGENCE VALUE=  0.2454E-15  CRITERION=  0.1183E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  25
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.214798E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.3675E-04  CRITERION=  0.1183E-05
+    EQUIL ITER  26 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.2940E-06
+     HT FLOW CONVERGENCE VALUE=  0.2308E-15  CRITERION=  0.1183E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  26
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.193319E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.3308E-04  CRITERION=  0.1183E-05
+    EQUIL ITER  27 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.2646E-06
+     HT FLOW CONVERGENCE VALUE=  0.3470E-15  CRITERION=  0.1183E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  27
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.173988E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.2977E-04  CRITERION=  0.1183E-05
+    EQUIL ITER  28 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.2381E-06
+     HT FLOW CONVERGENCE VALUE=  0.4067E-15  CRITERION=  0.1183E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  28
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.156589E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.2679E-04  CRITERION=  0.1183E-05
+    EQUIL ITER  29 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.2143E-06
+     HT FLOW CONVERGENCE VALUE=  0.2852E-15  CRITERION=  0.1183E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  29
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.140930E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.2411E-04  CRITERION=  0.1183E-05
+    EQUIL ITER  30 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.1929E-06
+     HT FLOW CONVERGENCE VALUE=  0.3776E-15  CRITERION=  0.1183E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  30
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.126837E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.2170E-04  CRITERION=  0.1184E-05
+    EQUIL ITER  31 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.1736E-06
+     HT FLOW CONVERGENCE VALUE=  0.2766E-15  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  31
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.114153E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1953E-04  CRITERION=  0.1184E-05
+    EQUIL ITER  32 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.1562E-06
+     HT FLOW CONVERGENCE VALUE=  0.3169E-15  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  32
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.102738E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1758E-04  CRITERION=  0.1184E-05
+    EQUIL ITER  33 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.1406E-06
+     HT FLOW CONVERGENCE VALUE=  0.3391E-15  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  33
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.924633E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1582E-04  CRITERION=  0.1184E-05
+    EQUIL ITER  34 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.1265E-06
+     HT FLOW CONVERGENCE VALUE=  0.4570E-15  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  34
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.832166E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1424E-04  CRITERION=  0.1184E-05
+    EQUIL ITER  35 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.1139E-06
+     HT FLOW CONVERGENCE VALUE=  0.3737E-15  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  35
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.748944E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1281E-04  CRITERION=  0.1184E-05
+    EQUIL ITER  36 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.1025E-06
+     HT FLOW CONVERGENCE VALUE=  0.3323E-15  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  36
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.674045E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1153E-04  CRITERION=  0.1184E-05
+    EQUIL ITER  37 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.9223E-07
+     HT FLOW CONVERGENCE VALUE=  0.2753E-15  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  37
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.606636E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1038E-04  CRITERION=  0.1184E-05
+    EQUIL ITER  38 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.8301E-07
+     HT FLOW CONVERGENCE VALUE=  0.2475E-15  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  38
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.545968E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.9340E-05  CRITERION=  0.1184E-05
+    EQUIL ITER  39 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.7471E-07
+     HT FLOW CONVERGENCE VALUE=  0.3557E-15  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  39
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.491366E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.8406E-05  CRITERION=  0.1184E-05
+    EQUIL ITER  40 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.6724E-07
+     HT FLOW CONVERGENCE VALUE=  0.4568E-15  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  40
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.442226E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.7565E-05  CRITERION=  0.1184E-05
+    EQUIL ITER  41 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.6051E-07
+     HT FLOW CONVERGENCE VALUE=  0.2986E-15  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  41
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.397999E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.6809E-05  CRITERION=  0.1184E-05
+    EQUIL ITER  42 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.5446E-07
+     HT FLOW CONVERGENCE VALUE=  0.3055E-15  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  42
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.358196E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.6128E-05  CRITERION=  0.1184E-05
+    EQUIL ITER  43 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.4901E-07
+     HT FLOW CONVERGENCE VALUE=  0.3185E-15  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  43
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.322373E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5515E-05  CRITERION=  0.1184E-05
+    EQUIL ITER  44 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.4411E-07
+     HT FLOW CONVERGENCE VALUE=  0.4041E-15  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  44
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.290132E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.4963E-05  CRITERION=  0.1184E-05
+    EQUIL ITER  45 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.3970E-07
+     HT FLOW CONVERGENCE VALUE=  0.3216E-15  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  45
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.261116E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.4467E-05  CRITERION=  0.1184E-05
+    EQUIL ITER  46 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.3573E-07
+     HT FLOW CONVERGENCE VALUE=  0.3523E-15  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  46
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.235002E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.4020E-05  CRITERION=  0.1184E-05
+    EQUIL ITER  47 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.3216E-07
+     HT FLOW CONVERGENCE VALUE=  0.2320E-15  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  47
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.211499E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.3618E-05  CRITERION=  0.1184E-05
+    EQUIL ITER  48 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.2894E-07
+     HT FLOW CONVERGENCE VALUE=  0.2364E-15  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  48
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.190347E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.3256E-05  CRITERION=  0.1184E-05
+    EQUIL ITER  49 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.2605E-07
+     HT FLOW CONVERGENCE VALUE=  0.1058E-15  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  49
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.171310E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.2931E-05  CRITERION=  0.1184E-05
+    EQUIL ITER  50 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.2344E-07
+     HT FLOW CONVERGENCE VALUE=  0.2746E-15  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  50
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.154177E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.2637E-05  CRITERION=  0.1184E-05
+    EQUIL ITER  51 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.2110E-07
+     HT FLOW CONVERGENCE VALUE=  0.3027E-15  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  51
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.138758E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.2374E-05  CRITERION=  0.1184E-05
+    EQUIL ITER  52 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.1899E-07
+     HT FLOW CONVERGENCE VALUE=  0.3628E-15  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  52
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.124880E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.2136E-05  CRITERION=  0.1184E-05
+    EQUIL ITER  53 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.1709E-07
+     HT FLOW CONVERGENCE VALUE=  0.2356E-15  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  53
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.112391E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1923E-05  CRITERION=  0.1184E-05
+    EQUIL ITER  54 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.1538E-07
+     HT FLOW CONVERGENCE VALUE=  0.2083E-15  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  54
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.101150E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1730E-05  CRITERION=  0.1184E-05
+    EQUIL ITER  55 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.1384E-07
+     HT FLOW CONVERGENCE VALUE=  0.2673E-15  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  55
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.910343E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1557E-05  CRITERION=  0.1184E-05
+    EQUIL ITER  56 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.1246E-07
+     HT FLOW CONVERGENCE VALUE=  0.4434E-15  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  56
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.819298E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1402E-05  CRITERION=  0.1184E-05
+    EQUIL ITER  57 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.1121E-07
+     HT FLOW CONVERGENCE VALUE=  0.2525E-15  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  57
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.737358E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1261E-05  CRITERION=  0.1184E-05
+    EQUIL ITER  58 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.1009E-07
+     HT FLOW CONVERGENCE VALUE=  0.3314E-15  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  58
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.663614E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1135E-05  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  58
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.597253E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.2157E-05  CRITERION=  0.1184E-05
+    EQUIL ITER  59 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.1725E-07
+     HT FLOW CONVERGENCE VALUE=  0.2460E-15  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  59
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.537512E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.9197E-06  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  59
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.483761E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1747E-05  CRITERION=  0.1184E-05
+    EQUIL ITER  60 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.1397E-07
+     HT FLOW CONVERGENCE VALUE=  0.3555E-15  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  60
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.435372E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.7449E-06  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  60
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.391835E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1415E-05  CRITERION=  0.1184E-05
+    EQUIL ITER  61 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.1132E-07
+     HT FLOW CONVERGENCE VALUE=  0.4395E-15  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  61
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.352642E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.6033E-06  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  61
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.317377E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1146E-05  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  61
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.285640E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1635E-05  CRITERION=  0.1184E-05
+    EQUIL ITER  62 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.1308E-07
+     HT FLOW CONVERGENCE VALUE=  0.4473E-15  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  62
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.257064E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.4399E-06  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  62
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.231358E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.8356E-06  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  62
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.208222E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1192E-05  CRITERION=  0.1184E-05
+    EQUIL ITER  63 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.9532E-08
+     HT FLOW CONVERGENCE VALUE=  0.3590E-15  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  63
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.187391E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.3207E-06  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  63
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.168652E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.6091E-06  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  63
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.151787E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.8687E-06  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  63
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.136608E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1102E-05  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  63
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.122947E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1313E-05  CRITERION=  0.1184E-05
+    EQUIL ITER  64 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.1050E-07
+     HT FLOW CONVERGENCE VALUE=  0.3067E-15  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  64
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.110643E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1894E-06  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  64
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.995788E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.3597E-06  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  64
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.896209E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5130E-06  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  64
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.806588E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.6510E-06  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  64
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.725929E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.7751E-06  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  64
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.653336E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.8869E-06  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  64
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.588003E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.9875E-06  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  64
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.529203E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1078E-05  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  64
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.476282E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1159E-05  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  64
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.428654E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1233E-05  CRITERION=  0.1184E-05
+    EQUIL ITER  65 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.9860E-08
+     HT FLOW CONVERGENCE VALUE=  0.1675E-15  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  65
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.385699E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.6614E-07  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  65
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.347129E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1255E-06  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  65
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.312416E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.1790E-06  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  65
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.281174E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.2270E-06  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  65
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.253057E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.2703E-06  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  65
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.227751E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.3093E-06  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  65
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.204976E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.3443E-06  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  65
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.184479E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.3759E-06  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  65
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.166031E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.4043E-06  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  65
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.149428E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.4298E-06  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  65
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.134485E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.4528E-06  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  65
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.121036E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.4735E-06  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  65
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.108933E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.4922E-06  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  65
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.980395E-08 CRITERION=  0.100000E-07
+
+ RADIOSITY FLUX CONVERGED AFTER ITERATION=   99 SUBSTEP=    1
+
+     HT FLOW CONVERGENCE VALUE=  0.5089E-06  CRITERION=  0.1184E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  65
+ *** LOAD STEP     2   SUBSTEP     1  COMPLETED.    CUM ITER =    114
+ *** TIME =   2.00000         TIME INC =   1.00000    
+
+ SPECIFIED CONSTRAINT TEMP FOR SELECTED NODES            1 TO           1 BY           1
+ REAL=  25.0000000       IMAG=  0.00000000    
+
+ TIME=  3.0000    
+
+ *****  MAPDL SOLVE    COMMAND  *****
+
+ *** NOTE ***                            CP =       1.125   TIME= 20:15:44
+ This nonlinear analysis defaults to using the full Newton-Raphson       
+ solution procedure.  This can be modified using the NROPT command.      
+
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2024 R1          24.1     ***
+ Ansys Mechanical Enterprise                       
+ 20230322  VERSION=WINDOWS x64   20:15:44  OCT 21, 2026 CP=      1.141
+
+                                                                               
+
+
+
+                      L O A D   S T E P   O P T I O N S
+
+   LOAD STEP NUMBER. . . . . . . . . . . . . . . .     3
+   TIME AT END OF THE LOAD STEP. . . . . . . . . .  3.0000    
+   NUMBER OF SUBSTEPS. . . . . . . . . . . . . . .     1
+   MAXIMUM NUMBER OF EQUILIBRIUM ITERATIONS. . . .    15
+   STEP CHANGE BOUNDARY CONDITIONS . . . . . . . .   YES
+   TERMINATE ANALYSIS IF NOT CONVERGED . . . . . .YES (EXIT)  
+   CONVERGENCE CONTROLS
+      LABEL   REFERENCE    TOLERANCE  NORM     MINREF
+       HEAT    0.000       0.1000E-05   2      1.000    
+   PRINT OUTPUT CONTROLS . . . . . . . . . . . . .NO PRINTOUT
+   DATABASE OUTPUT CONTROLS
+      ITEM     FREQUENCY   COMPONENT
+       ALL        ALL               
+
+
+ SOLUTION MONITORING INFO IS WRITTEN TO FILE= check.mntr                                                                                                                                                                                                                                                          
+ MAXIMUM NUMBER OF EQUILIBRIUM ITERATIONS HAS BEEN MODIFIED              
+  TO BE, NEQIT = 1000, BY SOLUTION CONTROL LOGIC.                        
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.882355E-08 CRITERION=  0.100000E-07
+
+ RADIOSITY FLUX CONVERGED AFTER ITERATION=    1 SUBSTEP=    1
+
+
+     HT FLOW CONVERGENCE VALUE=   4167.      CRITERION=  0.4167E-02
+    EQUIL ITER   1 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=   25.00    
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+     The calculated reference HT FLOW CONVERGENCE VALUE=  0.5296    
+      is less than MINREF (which can be modified on the CNVTOL command).
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER   46 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.234970     CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.185999E-03 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.167372E-03 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.150612E-03 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.135532E-03 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.121964E-03 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.109756E-03 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.987703E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.888854E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.799904E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.719862E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.647834E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.583016E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.524687E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.472196E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.424959E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.382448E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.344191E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.309763E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.278779E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.250894E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.225800E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.203216E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.182891E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.164599E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.148137E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.133322E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.119988E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.107988E-04 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.971882E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.874686E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.787211E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.708485E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.637633E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.573866E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.516477E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.464827E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.418343E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.376507E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.338855E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.304969E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.274471E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.247023E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.222320E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.200088E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.180079E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.162071E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.145863E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.131277E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.118149E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.106334E-05 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.957006E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.861304E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.775173E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.697656E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.627890E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.565100E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.508590E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.457731E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.411958E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.370762E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.333685E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.300317E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.270285E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.243256E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.218931E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.197038E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.177334E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.159600E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.143640E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.129276E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.116349E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.104714E-06 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.942424E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.848182E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.763363E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.687027E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.618324E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.556492E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.500843E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.450758E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.405682E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.365114E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.328603E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.295742E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.266168E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.239551E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.215596E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.194037E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.174633E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.157170E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.141453E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.127307E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.114577E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.103119E-07 CRITERION=  0.100000E-07
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.928071E-08 CRITERION=  0.100000E-07
+
+ RADIOSITY FLUX CONVERGED AFTER ITERATION=   97 SUBSTEP=    1
+
+     HT FLOW CONVERGENCE VALUE=  0.5128E-08  CRITERION=  0.1000E-05 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+ *** LOAD STEP     3   SUBSTEP     1  COMPLETED.    CUM ITER =    115
+ *** TIME =   3.00000         TIME INC =   1.00000    
+
+ FINISH SOLUTION PROCESSING
+
+
+ ***** ROUTINE COMPLETED *****  CP =         1.203
+
+
+
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2024 R1          24.1     ***
+ Ansys Mechanical Enterprise                       
+ 20230322  VERSION=WINDOWS x64   20:15:45  OCT 21, 2026 CP=      1.250
+
+                                                                               
+
+
+
+          ***** MAPDL RESULTS INTERPRETATION (POST1) *****
+
+ *** NOTE ***                            CP =       1.250   TIME= 20:15:45
+ Reading results into the database (SET command) will update the current 
+ displacement and force boundary conditions in the database with the     
+ values from the results file for that load set.  Note that any          
+ subsequent solutions will use these values unless action is taken to    
+ either SAVE the current values or not overwrite them (/EXIT,NOSAVE).    
+
+ OPENED FILE= radiation_check.csv FOR COMMAND FILE DATA 
+
+
+ *DO LOOP ON PARAMETER= J FROM  1.0000     TO  3.0000     BY  1.0000    
+
+
+ USE LOAD STEP     1  SUBSTEP  LAST    FOR LOAD CASE 0 
+
+ SET COMMAND GOT LOAD STEP=     1  SUBSTEP=     1  CUMULATIVE ITERATION=    49
+   TIME/FREQUENCY=  1.0000    
+ TITLE=                                                                         
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+ *GET  TP        FROM  NODE      1  ITEM=TEMP       VALUE=  100.000000    
+
+ *GET  QR        FROM  NODE         1  ITEM=RF   HEAT  VALUE=  5.20746875     
+
+ SELECT       FOR ITEM=TYPE COMPONENT=    
+  IN RANGE       101 TO        101 STEP          1
+
+          1  ELEMENTS (OF          2  DEFINED) SELECTED BY  ESEL  COMMAND.
+
+ ALL ELEMENT TABLE ITEMS ERASED
+
+ STORE AREA     FROM ITEM=NMIS COMP=   4  FOR ALL SELECTED ELEMENTS
+
+ STORE FLUX     FROM ITEM=NMIS COMP=   7  FOR ALL SELECTED ELEMENTS
+
+ STORE TSU      FROM ITEM=NMIS COMP=   5  FOR ALL SELECTED ELEMENTS
+
+ OPERATION SMUL  RESULT= QW        OPERAND1= AREA      OPERAND2= FLUX    
+  FACTOR1=  1.0000       FACTOR2=  1.0000       CONSTANT=  0.0000    
+
+ SUM ALL THE ACTIVE ENTRIES IN THE ELEMENT TABLE 
+
+ TABLE LABEL     TOTAL
+ AREA      0.100000E-01
+ FLUX       520.747    
+ TSU        99.9824    
+ QW         5.20747    
+
+ *GET  QS        FROM  SSUM  ITEM=ITEM QW        VALUE=  5.20747059    
+
+ *GET  TS        FROM  SSUM  ITEM=ITEM TSU       VALUE=  99.9824219    
+
+ *ENDDO  INDEX= J                               
+
+ SUM ALL THE ACTIVE ENTRIES IN THE ELEMENT TABLE 
+
+ TABLE LABEL     TOTAL
+ AREA      0.100000E-01
+ FLUX      -105.895    
+ TSU       0.357395E-02
+ QW        -1.05895    
+
+ SUM ALL THE ACTIVE ENTRIES IN THE ELEMENT TABLE 
+
+ TABLE LABEL     TOTAL
+ AREA      0.100000E-01
+ FLUX     -0.374172E-04
+ TSU        25.0000    
+ QW       -0.374172E-06
+
+  COMMAND FILE CLOSED 
+
+
+ EXIT THE MAPDL POST1 DATABASE PROCESSOR
+
+
+ ***** ROUTINE COMPLETED *****  CP =         1.250
+
+
+
+ EXIT MAPDL WITHOUT SAVING DATABASE
+
+
+ NUMBER OF WARNING MESSAGES ENCOUNTERED=          1
+ NUMBER OF ERROR   MESSAGES ENCOUNTERED=          0
+
++--------------------- M A P D L   S T A T I S T I C S ------------------------+
+
+Release: 2024 R1            Build: 24.1       Update: UP20231106   Platform: WINDOWS x64 
+Date Run: 10/21/2026   Time: 20:15     Process ID: 52376
+Operating System: Windows 11  (Build: 26300)
+
+Processor Model: AMD Ryzen 7 5800H with Radeon Graphics
+
+Compiler: Intel(R) Fortran Compiler Classic Version 2021.9  (Build: 20230302)
+          Intel(R) C/C++ Compiler Classic Version 2021.9  (Build: 20230302)
+          Intel(R) Math Kernel Library Version 2020.0.0 Product Build 20191125
+          BLAS Library supplied by AMD BLIS
+
+Number of machines requested            :    1
+Total number of cores available         :   16
+Number of physical cores available      :    8
+Number of processes requested           :    1
+Number of threads per process requested :    1
+Total number of cores requested         :    1 (Shared Memory Parallel)                    
+
+GPU Acceleration: Not Requested
+
+Job Name: check
+Input File: E:/ansys_runs/m4_case0_20261021/radiation_benchmark_retry1/check.dat
+Working Directory: E:\ChatGPT项目\驱制融合下热耦合分析
+
+Total CPU time for main thread                    :        1.6 seconds
+Total CPU time summed for all threads             :        1.3 seconds
+
+Elapsed time spent obtaining a license            :        1.7 seconds
+Elapsed time spent pre-processing model (/PREP7)  :        0.0 seconds
+Elapsed time spent solution - preprocessing       :        0.0 seconds
+Elapsed time spent computing solution             :        1.8 seconds
+Elapsed time spent solution - postprocessing      :        0.0 seconds
+Elapsed time spent post-processing model (/POST1) :        0.0 seconds
+ 
+Equation solver used                              :            Sparse (symmetric)
+
+Sum of disk space used on all processes           :        0.3 MB
+
+Sum of memory used on all processes               :       38.0 MB
+Sum of memory allocated on all processes          :     2112.0 MB
+Physical memory available                         :         16 GB
+Total amount of I/O written to disk               :        0.0 GB
+Total amount of I/O read from disk                :        0.0 GB
+
++------------------ E N D   M A P D L   S T A T I S T I C S -------------------+
+
+
+ *-----------------------------------------------------------------------------*
+ |                                                                             |
+ |                               RUN COMPLETED                                 |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |  Ansys MAPDL 2024 R1         Build 24.1         UP20231106    WINDOWS x64   |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |  Database Requested(-db)  1024 MB     Scratch Memory Requested      1024 MB |
+ |  Maximum Database Used       1 MB     Maximum Scratch Memory Used     37 MB |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |        CP Time      (sec) =          1.266       Time  =  20:15:45          |
+ |        Elapsed Time (sec) =          5.000       Date  =  10/21/2026        |
+ |                                                                             |
+ *-----------------------------------------------------------------------------*

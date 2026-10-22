@@ -14,7 +14,7 @@ def main():
     folder=ROOT/'results/m4/studies'/a.study
     checks=json.loads((folder/'component_field_checks.json').read_text(encoding='utf-8-sig'))
     plt.rcParams.update({'font.family':'DejaVu Sans','font.size':16,'figure.dpi':150})
-    fig=plt.figure(figsize=(12,8),layout='constrained')
+    fig=plt.figure(figsize=(10,8.6),layout='constrained')
     for i,r in enumerate(checks['components'],1):
         d=np.load(folder/r['file']);points=d['points']*1000;tri=d['triangles'];T=d['temperature']
         ax=fig.add_subplot(2,3,i,projection='3d')
@@ -23,9 +23,9 @@ def main():
         c.set_facecolor(plt.get_cmap('inferno')(norm(T[tri].mean(axis=1))));ax.add_collection3d(c)
         lo=points.min(axis=0);hi=points.max(axis=0);span=hi-lo
         ax.set(xlim=(lo[0],hi[0]),ylim=(lo[1],hi[1]),zlim=(lo[2],hi[2]))
-        ax.set_box_aspect(np.maximum(span,.3*span.max()));ax.view_init(elev=24,azim=-30)
+        ax.set_box_aspect(np.maximum(span,.3*span.max()),zoom=.84);ax.view_init(elev=24,azim=-30)
         ax.set_axis_off()
-        ax.text2D(.04,.02,'X/Y/Z: %.0f / %.0f / %.0f mm'%tuple(span),transform=ax.transAxes,fontsize=14)
+        ax.text2D(.04,.02,'X/Y/Z: %g / %g / %g mm'%tuple(span),transform=ax.transAxes,fontsize=14)
         ax.set_title(r['part'].replace('M4_','').replace('_',' ')+'\nat %.3f s; max %.4g C'%(r['time_s'],r['volume_nodal_max_C']),fontsize=15)
         fig.colorbar(ScalarMappable(norm=norm,cmap='inferno'),ax=ax,shrink=.5,label='degC',pad=.02,format='%.2f')
     fig.suptitle('Actual ANSYS FE fields | '+a.study+'\nS3 concept; own peak times / independent scales; numerical qualification separate',fontsize=17)

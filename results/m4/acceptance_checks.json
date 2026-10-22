@@ -1,19 +1,16 @@
 {
   "status": "PARTIAL",
-  "generated_at": "2026-10-21T20:08:51+08:00",
-  "evidence_head": "6f9bc4180f3ef3da5c8dd53ed661305f6e08ba36",
+  "generated_at": "2026-10-22T14:03:06+08:00",
+  "evidence_head": "099e84a57b63c6bca9750206e0b47a5daa8e93b8",
   "blockers": [],
   "pending": [
     "solve_A",
     "energy_A",
     "solve_B",
     "energy_B",
-    "solve_D",
-    "energy_D",
     "time",
     "sensitivity",
-    "paths_B_normal12_rd95h_dt4",
-    "paths_D_normal12_rd95_dt1",
+    "paths_B_normal12_rd95h_dt4_retry1",
     "matched_sources",
     "inputs_archive",
     "reports"
@@ -41,31 +38,45 @@
       "detail": "单单元等温基准；不验证空间网格或辐射"
     },
     {
+      "id": "rad_units",
+      "item": "实际原生辐射K偏置、方向及W单位",
+      "status": "PASS",
+      "evidence": "results/m4/native_radiation_checks.json",
+      "detail": "单开放面100/0/25°C对25°C；不验证Case0全部遮挡"
+    },
+    {
+      "id": "native_materials",
+      "item": "原生材料常数与28个RTH材料区核对",
+      "status": "PASS",
+      "evidence": "results/m4/native_material_region_checks.json",
+      "detail": "核对实际DENS/C/KXX赋值，不把S3材料升级为实物牌号"
+    },
+    {
       "id": "solve_A",
       "item": "A真实原生瞬态求解及预期时刻",
       "status": "PENDING",
-      "evidence": "results/m4/studies/A_normal12_rd95_dt1/native_archive_manifest.json",
+      "evidence": "results/m4/studies/A_normal12_rd95_dt1_retry1/native_archive_manifest.json",
       "detail": ""
     },
     {
       "id": "energy_A",
       "item": "A总体储热/散热/冷却/辐射收支",
       "status": "PENDING",
-      "evidence": "results/m4/studies/A_normal12_rd95_dt1/pilot_FE_energy_checks.json",
+      "evidence": "results/m4/studies/A_normal12_rd95_dt1_retry1/pilot_FE_energy_checks.json",
       "detail": ""
     },
     {
       "id": "solve_B",
       "item": "B真实原生瞬态求解及预期时刻",
       "status": "PENDING",
-      "evidence": "results/m4/studies/B_normal12_rd95h_dt4/native_archive_manifest.json",
+      "evidence": "results/m4/studies/B_normal12_rd95h_dt4_retry1/native_archive_manifest.json",
       "detail": ""
     },
     {
       "id": "energy_B",
       "item": "B总体储热/散热/冷却/辐射收支",
       "status": "PENDING",
-      "evidence": "results/m4/studies/B_normal12_rd95h_dt4/pilot_FE_energy_checks.json",
+      "evidence": "results/m4/studies/B_normal12_rd95h_dt4_retry1/pilot_FE_energy_checks.json",
       "detail": ""
     },
     {
@@ -85,16 +96,16 @@
     {
       "id": "solve_D",
       "item": "D真实原生瞬态求解及预期时刻",
-      "status": "PENDING",
+      "status": "PASS",
       "evidence": "results/m4/studies/D_normal12_rd95_dt1/native_archive_manifest.json",
       "detail": ""
     },
     {
       "id": "energy_D",
       "item": "D总体储热/散热/冷却/辐射收支",
-      "status": "PENDING",
+      "status": "PASS",
       "evidence": "results/m4/studies/D_normal12_rd95_dt1/pilot_FE_energy_checks.json",
-      "detail": ""
+      "detail": "最大相对残差 5.0699705e-06；阈值 0.005"
     },
     {
       "id": "mesh",
@@ -139,10 +150,10 @@
       "detail": "只扫安装链TCC与对流h；内部绕组接触、油膜、冷却体温及材料方向性未全面覆盖"
     },
     {
-      "id": "paths_B_normal12_rd95h_dt4",
-      "item": "32对连接覆盖/油液/电驱子控制体 B_normal12_rd95h_dt4",
+      "id": "paths_B_normal12_rd95h_dt4_retry1",
+      "item": "32对连接覆盖/油液/电驱子控制体 B_normal12_rd95h_dt4_retry1",
       "status": "PENDING",
-      "evidence": "results/m4/studies/B_normal12_rd95h_dt4/heat_path_checks.json",
+      "evidence": "results/m4/studies/B_normal12_rd95h_dt4_retry1/heat_path_checks.json",
       "detail": "有符号功率、净积分与正向积分分开；不把串联轴承截面重复加总"
     },
     {
@@ -155,7 +166,7 @@
     {
       "id": "paths_D_normal12_rd95_dt1",
       "item": "32对连接覆盖/油液/电驱子控制体 D_normal12_rd95_dt1",
-      "status": "PENDING",
+      "status": "PASS",
       "evidence": "results/m4/studies/D_normal12_rd95_dt1/heat_path_checks.json",
       "detail": "有符号功率、净积分与正向积分分开；不把串联轴承截面重复加总"
     },
@@ -201,6 +212,7 @@
     "只含部分辐射面与开口环境；未求解制动热空气回流，不能排序真实总成全部传热路径。",
     "固定90/10盘片热量分配，无移动摩擦接触/闪温；约400°C摩擦片预测不代表测量或安全认证。",
     "首周期/预热窗口不是六周期耐久峰值；高负载预热是给定热负荷。",
+    "空间细化主要覆盖盘面/片厚，时间细化只覆盖B制动及冷却；内部热源工况的全部空间与D预热阶段时间误差未独立证明。",
     "电机内部损耗真实标定PARTIAL；斜齿损耗、空载拖曳、搅油与温度反馈未重新标定。",
     "未经研究者批准不合并M4、不创建M4-v1.0、不进入M5。"
   ],

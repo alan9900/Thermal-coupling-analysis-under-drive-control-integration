@@ -4,7 +4,7 @@ from datetime import datetime
 from pathlib import Path
 from summarize_studies import ROOT, OUT, STUDIES, load
 
-CASES={'A':'A_normal12_rd95_dt1','B':'B_normal12_rd95h_dt4',
+CASES={'A':'A_normal12_rd95_dt1_retry1','B':'B_normal12_rd95h_dt4_retry1',
        'C':'C_normal12_rd95_dt1','D':'D_normal12_rd95_dt1'}
 PATH_CASES=[CASES[k] for k in ['B','C','D']]
 
@@ -25,6 +25,13 @@ def main():
     bench=read(OUT/'native_benchmark_checks.json')
     add('units','实际原生热容/后向欧拉对流基准','PASS' if bench and bench['status'].startswith('PASS') else 'PENDING',
         'results/m4/native_benchmark_checks.json','单单元等温基准；不验证空间网格或辐射')
+    rad=read(OUT/'native_radiation_checks.json')
+    add('rad_units','实际原生辐射K偏置、方向及W单位','PASS' if rad and rad['status'].startswith('PASS') else 'PENDING',
+        'results/m4/native_radiation_checks.json','单开放面100/0/25°C对25°C；不验证Case0全部遮挡')
+    mats=read(OUT/'native_material_region_checks.json') or {}
+    add('native_materials','原生材料常数与28个RTH材料区核对',
+        'PASS' if all(n in mats and mats[n]['status'].startswith('PASS') for n in ['B_normal24_rd95h_dt1','C_normal12_rd95_dt1','D_normal12_rd95_dt1']) else 'PENDING',
+        'results/m4/native_material_region_checks.json','核对实际DENS/C/KXX赋值，不把S3材料升级为实物牌号')
     for case,name in CASES.items():
         p=STUDIES/name;manifest=read(p/'native_archive_manifest.json')
         data=load(name)
@@ -82,6 +89,7 @@ def main():
         '只含部分辐射面与开口环境；未求解制动热空气回流，不能排序真实总成全部传热路径。',
         '固定90/10盘片热量分配，无移动摩擦接触/闪温；约400°C摩擦片预测不代表测量或安全认证。',
         '首周期/预热窗口不是六周期耐久峰值；高负载预热是给定热负荷。',
+        '空间细化主要覆盖盘面/片厚，时间细化只覆盖B制动及冷却；内部热源工况的全部空间与D预热阶段时间误差未独立证明。',
         '电机内部损耗真实标定PARTIAL；斜齿损耗、空载拖曳、搅油与温度反馈未重新标定。',
         '未经研究者批准不合并M4、不创建M4-v1.0、不进入M5。']
     result=dict(status=status,generated_at=datetime.now().astimezone().isoformat(timespec='seconds'),

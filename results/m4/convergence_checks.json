@@ -570,10 +570,11 @@
     "required": [
       "B_normal12_rd95h_dt1",
       "B_normal12_rd95h_dt2",
-      "B_normal12_rd95h_dt4"
+      "B_normal12_rd95h_dt4_retry1"
     ],
     "available": [
-      "B_normal12_rd95h_dt1"
+      "B_normal12_rd95h_dt1",
+      "B_normal12_rd95h_dt2"
     ]
   },
   "radiation_facets_fine": {

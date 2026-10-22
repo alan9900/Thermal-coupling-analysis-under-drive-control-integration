@@ -1,0 +1,1064 @@
+{
+  "B_normal24_rd95h_dt1": {
+    "status": "PASS_NATIVE_REGION_MATERIAL_CONSTANTS",
+    "regions": {
+      "M4_BRAKE_DISC_HAT": {
+        "material_ids": [
+          5
+        ],
+        "constants": {
+          "5": {
+            "KXX": 45.0,
+            "DENS": 7100.0,
+            "C": 500.0
+          }
+        }
+      },
+      "M4_CALIPER": {
+        "material_ids": [
+          24
+        ],
+        "constants": {
+          "24": {
+            "KXX": 170.0,
+            "DENS": 2710.0,
+            "C": 900.0
+          }
+        }
+      },
+      "M4_CALIPER_REACTION_BRACKET": {
+        "material_ids": [
+          25
+        ],
+        "constants": {
+          "25": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_DISC_HUB": {
+        "material_ids": [
+          19
+        ],
+        "constants": {
+          "19": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_GEAR_CASE_FRONT": {
+        "material_ids": [
+          26
+        ],
+        "constants": {
+          "26": {
+            "KXX": 170.0,
+            "DENS": 2710.0,
+            "C": 900.0
+          }
+        }
+      },
+      "M4_GEAR_CASE_REAR": {
+        "material_ids": [
+          27
+        ],
+        "constants": {
+          "27": {
+            "KXX": 170.0,
+            "DENS": 2710.0,
+            "C": 900.0
+          }
+        }
+      },
+      "M4_HUB_REMOVABLE_SLEEVE": {
+        "material_ids": [
+          20
+        ],
+        "constants": {
+          "20": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_INPUT_BEARING_1": {
+        "material_ids": [
+          11
+        ],
+        "constants": {
+          "11": {
+            "KXX": 20.0,
+            "DENS": 5406.07823002362,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_INPUT_BEARING_2": {
+        "material_ids": [
+          12
+        ],
+        "constants": {
+          "12": {
+            "KXX": 20.0,
+            "DENS": 5406.07823002362,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_INPUT_SHAFT": {
+        "material_ids": [
+          21
+        ],
+        "constants": {
+          "21": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_INTERMEDIATE_BEARING_1": {
+        "material_ids": [
+          13
+        ],
+        "constants": {
+          "13": {
+            "KXX": 20.0,
+            "DENS": 5452.5304577779,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_INTERMEDIATE_BEARING_2": {
+        "material_ids": [
+          14
+        ],
+        "constants": {
+          "14": {
+            "KXX": 20.0,
+            "DENS": 5452.5304577779,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_INTERMEDIATE_SHAFT": {
+        "material_ids": [
+          22
+        ],
+        "constants": {
+          "22": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_MOTOR_CASE": {
+        "material_ids": [
+          1
+        ],
+        "constants": {
+          "1": {
+            "KXX": 170.0,
+            "DENS": 2710.0,
+            "C": 900.0
+          }
+        }
+      },
+      "M4_MOTOR_GEAR_ADAPTER": {
+        "material_ids": [
+          10
+        ],
+        "constants": {
+          "10": {
+            "KXX": 170.0,
+            "DENS": 2710.0,
+            "C": 900.0
+          }
+        }
+      },
+      "M4_MOTOR_INPUT_COUPLING": {
+        "material_ids": [
+          9
+        ],
+        "constants": {
+          "9": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_MOTOR_ROTOR_OTHER": {
+        "material_ids": [
+          4
+        ],
+        "constants": {
+          "4": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_MOTOR_ROTOR_SHAFT": {
+        "material_ids": [
+          8
+        ],
+        "constants": {
+          "8": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_MOTOR_STATOR": {
+        "material_ids": [
+          2
+        ],
+        "constants": {
+          "2": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_MOTOR_WINDING": {
+        "material_ids": [
+          3
+        ],
+        "constants": {
+          "3": {
+            "KXX": 390.0,
+            "DENS": 8960.0,
+            "C": 385.0
+          }
+        }
+      },
+      "M4_OIL_INVENTORY": {
+        "material_ids": [
+          28,
+          29,
+          30
+        ],
+        "constants": {
+          "28": {
+            "KXX": 0.13,
+            "DENS": 850.0,
+            "C": 2000.0
+          },
+          "29": {
+            "KXX": 0.13,
+            "DENS": 850.0,
+            "C": 2000.0
+          },
+          "30": {
+            "KXX": 0.13,
+            "DENS": 850.0,
+            "C": 2000.0
+          }
+        }
+      },
+      "M4_OUTPUT_BEARING_1": {
+        "material_ids": [
+          15
+        ],
+        "constants": {
+          "15": {
+            "KXX": 20.0,
+            "DENS": 5024.74891761555,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_OUTPUT_BEARING_2": {
+        "material_ids": [
+          16
+        ],
+        "constants": {
+          "16": {
+            "KXX": 20.0,
+            "DENS": 5024.74891761555,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_OUTPUT_SHAFT": {
+        "material_ids": [
+          23
+        ],
+        "constants": {
+          "23": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_PAD_FAR": {
+        "material_ids": [
+          7
+        ],
+        "constants": {
+          "7": {
+            "KXX": 2.0,
+            "DENS": 2500.0,
+            "C": 800.0
+          }
+        }
+      },
+      "M4_PAD_NEAR": {
+        "material_ids": [
+          6
+        ],
+        "constants": {
+          "6": {
+            "KXX": 2.0,
+            "DENS": 2500.0,
+            "C": 800.0
+          }
+        }
+      },
+      "M4_STAGE1_GEAR": {
+        "material_ids": [
+          17
+        ],
+        "constants": {
+          "17": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_STAGE2_GEAR": {
+        "material_ids": [
+          18
+        ],
+        "constants": {
+          "18": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      }
+    },
+    "native_input_sha256": "828e5201b253f375c37de66ed709ccc2ce67100ac99e4f713238b1d05949cf23"
+  },
+  "C_normal12_rd95_dt1": {
+    "status": "PASS_NATIVE_REGION_MATERIAL_CONSTANTS",
+    "regions": {
+      "M4_BRAKE_DISC_HAT": {
+        "material_ids": [
+          5
+        ],
+        "constants": {
+          "5": {
+            "KXX": 45.0,
+            "DENS": 7100.0,
+            "C": 500.0
+          }
+        }
+      },
+      "M4_CALIPER": {
+        "material_ids": [
+          24
+        ],
+        "constants": {
+          "24": {
+            "KXX": 170.0,
+            "DENS": 2710.0,
+            "C": 900.0
+          }
+        }
+      },
+      "M4_CALIPER_REACTION_BRACKET": {
+        "material_ids": [
+          25
+        ],
+        "constants": {
+          "25": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_DISC_HUB": {
+        "material_ids": [
+          19
+        ],
+        "constants": {
+          "19": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_GEAR_CASE_FRONT": {
+        "material_ids": [
+          26
+        ],
+        "constants": {
+          "26": {
+            "KXX": 170.0,
+            "DENS": 2710.0,
+            "C": 900.0
+          }
+        }
+      },
+      "M4_GEAR_CASE_REAR": {
+        "material_ids": [
+          27
+        ],
+        "constants": {
+          "27": {
+            "KXX": 170.0,
+            "DENS": 2710.0,
+            "C": 900.0
+          }
+        }
+      },
+      "M4_HUB_REMOVABLE_SLEEVE": {
+        "material_ids": [
+          20
+        ],
+        "constants": {
+          "20": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_INPUT_BEARING_1": {
+        "material_ids": [
+          11
+        ],
+        "constants": {
+          "11": {
+            "KXX": 20.0,
+            "DENS": 5406.07823002362,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_INPUT_BEARING_2": {
+        "material_ids": [
+          12
+        ],
+        "constants": {
+          "12": {
+            "KXX": 20.0,
+            "DENS": 5406.07823002362,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_INPUT_SHAFT": {
+        "material_ids": [
+          21
+        ],
+        "constants": {
+          "21": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_INTERMEDIATE_BEARING_1": {
+        "material_ids": [
+          13
+        ],
+        "constants": {
+          "13": {
+            "KXX": 20.0,
+            "DENS": 5452.5304577779,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_INTERMEDIATE_BEARING_2": {
+        "material_ids": [
+          14
+        ],
+        "constants": {
+          "14": {
+            "KXX": 20.0,
+            "DENS": 5452.5304577779,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_INTERMEDIATE_SHAFT": {
+        "material_ids": [
+          22
+        ],
+        "constants": {
+          "22": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_MOTOR_CASE": {
+        "material_ids": [
+          1
+        ],
+        "constants": {
+          "1": {
+            "KXX": 170.0,
+            "DENS": 2710.0,
+            "C": 900.0
+          }
+        }
+      },
+      "M4_MOTOR_GEAR_ADAPTER": {
+        "material_ids": [
+          10
+        ],
+        "constants": {
+          "10": {
+            "KXX": 170.0,
+            "DENS": 2710.0,
+            "C": 900.0
+          }
+        }
+      },
+      "M4_MOTOR_INPUT_COUPLING": {
+        "material_ids": [
+          9
+        ],
+        "constants": {
+          "9": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_MOTOR_ROTOR_OTHER": {
+        "material_ids": [
+          4
+        ],
+        "constants": {
+          "4": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_MOTOR_ROTOR_SHAFT": {
+        "material_ids": [
+          8
+        ],
+        "constants": {
+          "8": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_MOTOR_STATOR": {
+        "material_ids": [
+          2
+        ],
+        "constants": {
+          "2": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_MOTOR_WINDING": {
+        "material_ids": [
+          3
+        ],
+        "constants": {
+          "3": {
+            "KXX": 390.0,
+            "DENS": 8960.0,
+            "C": 385.0
+          }
+        }
+      },
+      "M4_OIL_INVENTORY": {
+        "material_ids": [
+          28,
+          29,
+          30
+        ],
+        "constants": {
+          "28": {
+            "KXX": 0.13,
+            "DENS": 850.0,
+            "C": 2000.0
+          },
+          "29": {
+            "KXX": 0.13,
+            "DENS": 850.0,
+            "C": 2000.0
+          },
+          "30": {
+            "KXX": 0.13,
+            "DENS": 850.0,
+            "C": 2000.0
+          }
+        }
+      },
+      "M4_OUTPUT_BEARING_1": {
+        "material_ids": [
+          15
+        ],
+        "constants": {
+          "15": {
+            "KXX": 20.0,
+            "DENS": 5024.74891761555,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_OUTPUT_BEARING_2": {
+        "material_ids": [
+          16
+        ],
+        "constants": {
+          "16": {
+            "KXX": 20.0,
+            "DENS": 5024.74891761555,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_OUTPUT_SHAFT": {
+        "material_ids": [
+          23
+        ],
+        "constants": {
+          "23": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_PAD_FAR": {
+        "material_ids": [
+          7
+        ],
+        "constants": {
+          "7": {
+            "KXX": 2.0,
+            "DENS": 2500.0,
+            "C": 800.0
+          }
+        }
+      },
+      "M4_PAD_NEAR": {
+        "material_ids": [
+          6
+        ],
+        "constants": {
+          "6": {
+            "KXX": 2.0,
+            "DENS": 2500.0,
+            "C": 800.0
+          }
+        }
+      },
+      "M4_STAGE1_GEAR": {
+        "material_ids": [
+          17
+        ],
+        "constants": {
+          "17": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_STAGE2_GEAR": {
+        "material_ids": [
+          18
+        ],
+        "constants": {
+          "18": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      }
+    },
+    "native_input_sha256": "7dc05613ca12a8a598abdfe68d0d004b428666852790280f6063ac0eee26ede7"
+  },
+  "D_normal12_rd95_dt1": {
+    "status": "PASS_NATIVE_REGION_MATERIAL_CONSTANTS",
+    "regions": {
+      "M4_BRAKE_DISC_HAT": {
+        "material_ids": [
+          5
+        ],
+        "constants": {
+          "5": {
+            "KXX": 45.0,
+            "DENS": 7100.0,
+            "C": 500.0
+          }
+        }
+      },
+      "M4_CALIPER": {
+        "material_ids": [
+          24
+        ],
+        "constants": {
+          "24": {
+            "KXX": 170.0,
+            "DENS": 2710.0,
+            "C": 900.0
+          }
+        }
+      },
+      "M4_CALIPER_REACTION_BRACKET": {
+        "material_ids": [
+          25
+        ],
+        "constants": {
+          "25": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_DISC_HUB": {
+        "material_ids": [
+          19
+        ],
+        "constants": {
+          "19": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_GEAR_CASE_FRONT": {
+        "material_ids": [
+          26
+        ],
+        "constants": {
+          "26": {
+            "KXX": 170.0,
+            "DENS": 2710.0,
+            "C": 900.0
+          }
+        }
+      },
+      "M4_GEAR_CASE_REAR": {
+        "material_ids": [
+          27
+        ],
+        "constants": {
+          "27": {
+            "KXX": 170.0,
+            "DENS": 2710.0,
+            "C": 900.0
+          }
+        }
+      },
+      "M4_HUB_REMOVABLE_SLEEVE": {
+        "material_ids": [
+          20
+        ],
+        "constants": {
+          "20": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_INPUT_BEARING_1": {
+        "material_ids": [
+          11
+        ],
+        "constants": {
+          "11": {
+            "KXX": 20.0,
+            "DENS": 5406.07823002362,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_INPUT_BEARING_2": {
+        "material_ids": [
+          12
+        ],
+        "constants": {
+          "12": {
+            "KXX": 20.0,
+            "DENS": 5406.07823002362,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_INPUT_SHAFT": {
+        "material_ids": [
+          21
+        ],
+        "constants": {
+          "21": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_INTERMEDIATE_BEARING_1": {
+        "material_ids": [
+          13
+        ],
+        "constants": {
+          "13": {
+            "KXX": 20.0,
+            "DENS": 5452.5304577779,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_INTERMEDIATE_BEARING_2": {
+        "material_ids": [
+          14
+        ],
+        "constants": {
+          "14": {
+            "KXX": 20.0,
+            "DENS": 5452.5304577779,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_INTERMEDIATE_SHAFT": {
+        "material_ids": [
+          22
+        ],
+        "constants": {
+          "22": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_MOTOR_CASE": {
+        "material_ids": [
+          1
+        ],
+        "constants": {
+          "1": {
+            "KXX": 170.0,
+            "DENS": 2710.0,
+            "C": 900.0
+          }
+        }
+      },
+      "M4_MOTOR_GEAR_ADAPTER": {
+        "material_ids": [
+          10
+        ],
+        "constants": {
+          "10": {
+            "KXX": 170.0,
+            "DENS": 2710.0,
+            "C": 900.0
+          }
+        }
+      },
+      "M4_MOTOR_INPUT_COUPLING": {
+        "material_ids": [
+          9
+        ],
+        "constants": {
+          "9": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_MOTOR_ROTOR_OTHER": {
+        "material_ids": [
+          4
+        ],
+        "constants": {
+          "4": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_MOTOR_ROTOR_SHAFT": {
+        "material_ids": [
+          8
+        ],
+        "constants": {
+          "8": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_MOTOR_STATOR": {
+        "material_ids": [
+          2
+        ],
+        "constants": {
+          "2": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_MOTOR_WINDING": {
+        "material_ids": [
+          3
+        ],
+        "constants": {
+          "3": {
+            "KXX": 390.0,
+            "DENS": 8960.0,
+            "C": 385.0
+          }
+        }
+      },
+      "M4_OIL_INVENTORY": {
+        "material_ids": [
+          28,
+          29,
+          30
+        ],
+        "constants": {
+          "28": {
+            "KXX": 0.13,
+            "DENS": 850.0,
+            "C": 2000.0
+          },
+          "29": {
+            "KXX": 0.13,
+            "DENS": 850.0,
+            "C": 2000.0
+          },
+          "30": {
+            "KXX": 0.13,
+            "DENS": 850.0,
+            "C": 2000.0
+          }
+        }
+      },
+      "M4_OUTPUT_BEARING_1": {
+        "material_ids": [
+          15
+        ],
+        "constants": {
+          "15": {
+            "KXX": 20.0,
+            "DENS": 5024.74891761555,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_OUTPUT_BEARING_2": {
+        "material_ids": [
+          16
+        ],
+        "constants": {
+          "16": {
+            "KXX": 20.0,
+            "DENS": 5024.74891761555,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_OUTPUT_SHAFT": {
+        "material_ids": [
+          23
+        ],
+        "constants": {
+          "23": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_PAD_FAR": {
+        "material_ids": [
+          7
+        ],
+        "constants": {
+          "7": {
+            "KXX": 2.0,
+            "DENS": 2500.0,
+            "C": 800.0
+          }
+        }
+      },
+      "M4_PAD_NEAR": {
+        "material_ids": [
+          6
+        ],
+        "constants": {
+          "6": {
+            "KXX": 2.0,
+            "DENS": 2500.0,
+            "C": 800.0
+          }
+        }
+      },
+      "M4_STAGE1_GEAR": {
+        "material_ids": [
+          17
+        ],
+        "constants": {
+          "17": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      },
+      "M4_STAGE2_GEAR": {
+        "material_ids": [
+          18
+        ],
+        "constants": {
+          "18": {
+            "KXX": 45.0,
+            "DENS": 7800.0,
+            "C": 460.0
+          }
+        }
+      }
+    },
+    "native_input_sha256": "660b38e1c2d6056d8288e31e20888767c02a61ca7efd29a25c818e6175dc22f0"
+  }
+}

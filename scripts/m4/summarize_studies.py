@@ -10,7 +10,7 @@ ROOT=Path(__file__).resolve().parents[2];OUT=ROOT/'results/m4';STUDIES=OUT/'stud
 
 def load(name):
     path=STUDIES/name/'pilot_temperature_history.csv'
-    if not path.exists():return None
+    if not path.exists() or not (STUDIES/name/'native_archive_manifest.json').exists():return None
     rows=list(csv.DictReader(path.open()));receipt=STUDIES/name/'pilot_postprocessing.json'
     if not receipt.exists():return None
     expected=json.loads((STUDIES/name/'study_settings.json').read_text(encoding='utf-8-sig'))
@@ -35,7 +35,7 @@ def main():
                 classification='ACTUAL_ANSYS_S3_CONCEPT; convergence in separate receipt'))
     write_csv(OUT/'all_study_temperature_summary.csv',summaries)
     groups={'mesh':['B_normal6_dt1','B_normal12_dt1_retry1','B_normal24_rd95h_dt1'],
-            'time':['B_normal12_rd95h_dt1','B_normal12_rd95h_dt2','B_normal12_rd95h_dt4']}
+            'time':['B_normal12_rd95h_dt1','B_normal12_rd95h_dt2','B_normal12_rd95h_dt4_retry1']}
     policy=json.loads((ROOT/'configs/M4_validation_policy.json').read_text(encoding='utf-8-sig'));checks={}
     for label,names in groups.items():
         data=[load(name) for name in names]
@@ -86,9 +86,9 @@ def main():
             if data:
                 labels={'B_face_scoped_full':'1 layer (rejected)','B_normal6_dt1':'6 layers','B_normal12_dt1_retry1':'12 layers','B_normal24_rd95h_dt1':'24 layers'}
                 t,T=series(data,part,'maximum');mask=t<=3.77543701;ax.plot(t[mask],T[mask],label=labels[name])
-        ax.set(xlabel='Brake time [s]',ylabel='Local maximum [degC]',title=label);ax.grid(alpha=.2);ax.legend(fontsize=11)
+        ax.set(xlabel='Brake time [s]',ylabel='Local maximum [degC]',title=label);ax.grid(alpha=.2);ax.legend(fontsize=13)
     fig.suptitle('Actual ANSYS | S3 concept | thickness / disc-face refinement\nOne-layer pad peak rejected; radiation approximation checked separately',fontsize=13)
-    fig.savefig(OUT/'mesh_refinement_actual.png');plt.close(fig)
+    save_figure(fig,OUT/'mesh_refinement_actual.png');plt.close(fig)
     time_plot(groups['time'])
     capacity_comparison()
     compare_M2()
@@ -99,10 +99,14 @@ def write_csv(path,rows):
     with path.open('w',newline='',encoding='utf-8') as stream:
         w=csv.DictWriter(stream,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
 
+def save_figure(fig,path):
+    fig.savefig(path)
+    fig.savefig(path.with_suffix('.svg'))
+
 
 def time_plot(names):
     if any(load(n) is None for n in names):return
-    fig,axes=plt.subplots(1,3,figsize=(12,4.2),layout='constrained')
+    fig,axes=plt.subplots(1,3,figsize=(10,4.2),layout='constrained')
     for ax,(part,label) in zip(axes,[('M4_BRAKE_DISC_HAT','Disc'),('M4_PAD_NEAR','Near pad'),('M4_GEAR_CASE_REAR','Gear case rear')]):
         for divisor,name in zip([1,2,4],names):
             t,T=series(load(name),part,'maximum')
@@ -110,9 +114,9 @@ def time_plot(names):
         ax.set(xlabel='Time from brake onset [s]',ylabel='Local maximum [degC]',title=label)
         ax.grid(alpha=.2)
     h,l=axes[0].get_legend_handles_labels()
-    fig.legend(h,l,loc='outside lower center',ncols=1,fontsize=12)
+    fig.legend(h,l,loc='outside lower center',ncols=1,fontsize=13)
     fig.suptitle('Actual ANSYS | S3 concept | identical solid mesh and radiation discretization\nFirst brake plus 30 s cooling; numerical screen, not calibrated error',fontsize=14)
-    fig.savefig(OUT/'time_refinement_actual.png');plt.close(fig)
+    save_figure(fig,OUT/'time_refinement_actual.png');plt.close(fig)
 
 def capacity_comparison():
     c=json.loads((OUT/'face_scoped/FE_capacity_checks.json').read_text(encoding='utf-8-sig'))['body_C_J_K']
@@ -133,7 +137,7 @@ def compare_M2():
     onset=min(float(r['start_s']) for r in forcing if int(r['segment_id'])==2)
     reference=list(csv.DictReader((ROOT/'results/m2/cases/B_brake_only.csv').open()))
     tm=np.array([float(r['time_s'])-onset for r in reference])
-    choice=next((n for n in ['B_normal12_rd95h_dt4','B_normal12_rd95h_dt2','B_normal24_rd95h_dt1','B_normal12_dt1_retry1','B_normal6_dt1'] if load(n)),None)
+    choice=next((n for n in ['B_normal12_rd95h_dt4_retry1','B_normal12_rd95h_dt2','B_normal24_rd95h_dt1','B_normal12_dt1_retry1','B_normal6_dt1'] if load(n)),None)
     if not choice:return
     actual=load(choice);rows=[]
     fig,ax=plt.subplots(1,2,figsize=(10,3.7),layout='constrained')
@@ -142,11 +146,12 @@ def compare_M2():
         old=np.interp(t,tm,[float(r[node+'_K'])-273.15 for r in reference])
         offset=25 if node=='output_bearing' else 0
         axis.plot(t,T-offset,label='M4 FE capacity mean');axis.plot(t,Tmax-offset,label='M4 FE local max');axis.plot(t,old-offset,'--',label='Archived M2 lumped')
-        axis.set(xlabel='First-brake time [s]',ylabel='Temperature rise [K]' if offset else 'Temperature [degC]',title=node);axis.grid(alpha=.2);axis.legend(fontsize=10)
-        if offset:axis.text(.03,.48,'Tiny coupling signal;\nno calibrated precision',transform=axis.transAxes,fontsize=10)
+        axis.set(xlabel='First-brake time [s]',ylabel='Temperature rise [K]' if offset else 'Temperature [degC]',title=node);axis.grid(alpha=.2)
+        if offset:axis.text(.03,.48,'Tiny coupling signal;\nno calibrated precision',transform=axis.transAxes,fontsize=12)
         rows.extend(dict(time_s=float(time),node=node,M4_mean_C=float(mean),M4_max_C=float(peak),M2_lumped_C=float(oldT),
             M4_study=choice,warning='Different C/contact/boundaries; M2 includes shield/hot air, M4 Case0 has neither. Not validation against measurements.') for time,mean,peak,oldT in zip(t,T,Tmax,old))
+    h,l=ax[0].get_legend_handles_labels();fig.legend(h,l,loc='outside lower center',ncols=3,fontsize=13)
     fig.suptitle('Model comparison, not experimental validation | S3 concepts\nDifferent heat capacity, shield and hot-air boundaries',fontsize=13)
-    fig.savefig(OUT/'M2_M4_first_brake_comparison.png');plt.close(fig);write_csv(OUT/'M2_M4_first_brake_comparison.csv',rows)
+    save_figure(fig,OUT/'M2_M4_first_brake_comparison.png');plt.close(fig);write_csv(OUT/'M2_M4_first_brake_comparison.csv',rows)
 
 if __name__=='__main__':main()

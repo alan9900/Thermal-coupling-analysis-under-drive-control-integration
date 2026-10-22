@@ -4,6 +4,7 @@ from pathlib import Path
 import numpy as np
 from fe_capacity import weights
 from dpf_regions import solid_regions
+from native_materials import validate_material_regions
 ROOT=Path(__file__).resolve().parents[2];OUT=ROOT/'results/m4'
 def main():
     global OUT
@@ -19,6 +20,8 @@ def main():
         xyz=np.array(mesh.nodes.coordinates_field.data);nodeids=np.array(mesh.nodes.scoping.ids);order=np.argsort(nodeids);sortedids=nodeids[order]
         config=json.loads((ROOT/'configs/m4_case0.json').read_text(encoding='utf-8'))
         regions=solid_regions(m);names=list(regions);which={};rhocp=[]
+        native_input=Path(a.result).parent/'study.dat'
+        if native_input.exists():validate_material_regions(mesh,regions,native_input,config)
         print('Resolved solid regions',len(names),flush=True)
         for k,name in enumerate(names):
             for eid in regions[name]:which[int(eid)]=k
