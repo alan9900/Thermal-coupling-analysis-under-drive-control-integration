@@ -1,0 +1,203 @@
+[
+  {
+    "part": "M4_OUTPUT_BEARING_2",
+    "time_s": 75.10174802733398,
+    "max_C": 31.942378962117846,
+    "result_set": 31,
+    "image": "view000.png"
+  },
+  {
+    "part": "M4_GEAR_CASE_REAR",
+    "time_s": 83.877185034168,
+    "max_C": 29.527960691738397,
+    "result_set": 48,
+    "image": "view001.png"
+  },
+  {
+    "part": "M4_OIL_INVENTORY",
+    "time_s": 108.87718503417,
+    "max_C": 40.14415773496155,
+    "result_set": 53,
+    "image": "view002.png"
+  },
+  {
+    "part": "M4_MOTOR_WINDING",
+    "time_s": 78.64122022124103,
+    "max_C": 69.00005932660558,
+    "result_set": 46,
+    "image": "view003.png"
+  },
+  {
+    "part": "M4_OUTPUT_SHAFT",
+    "time_s": 108.87718503417,
+    "max_C": 32.052980089462494,
+    "result_set": 53,
+    "image": "view004.png"
+  },
+  {
+    "part": "M4_BRAKE_DISC_HAT",
+    "time_s": 76.75350171782398,
+    "max_C": 53.25293046734733,
+    "result_set": 38,
+    "image": "view005.png"
+  },
+  {
+    "part": "M4_PAD_NEAR",
+    "time_s": 76.51753690489701,
+    "max_C": 400.41289110047984,
+    "result_set": 37,
+    "image": "view006.png"
+  },
+  {
+    "part": "M4_CALIPER",
+    "time_s": 108.87718503417,
+    "max_C": 26.628582366136314,
+    "result_set": 53,
+    "image": "view007.png"
+  },
+  {
+    "part": "M4_CALIPER_REACTION_BRACKET",
+    "time_s": 108.87718503417,
+    "max_C": 25.22914361570549,
+    "result_set": 53,
+    "image": "view008.png"
+  },
+  {
+    "part": "M4_DISC_HUB",
+    "time_s": 108.87718503417,
+    "max_C": 25.99018006515232,
+    "result_set": 53,
+    "image": "view009.png"
+  },
+  {
+    "part": "M4_GEAR_CASE_FRONT",
+    "time_s": 78.877185034168,
+    "max_C": 28.87660504448027,
+    "result_set": 47,
+    "image": "view010.png"
+  },
+  {
+    "part": "M4_HUB_REMOVABLE_SLEEVE",
+    "time_s": 108.87718503417,
+    "max_C": 25.53974527700023,
+    "result_set": 53,
+    "image": "view011.png"
+  },
+  {
+    "part": "M4_INPUT_BEARING_1",
+    "time_s": 75.10174802733398,
+    "max_C": 37.197041236900496,
+    "result_set": 31,
+    "image": "view012.png"
+  },
+  {
+    "part": "M4_INPUT_BEARING_2",
+    "time_s": 75.10174802733398,
+    "max_C": 38.077435689488496,
+    "result_set": 31,
+    "image": "view013.png"
+  },
+  {
+    "part": "M4_INPUT_SHAFT",
+    "time_s": 88.877185034168,
+    "max_C": 31.143618138054514,
+    "result_set": 49,
+    "image": "view014.png"
+  },
+  {
+    "part": "M4_INTERMEDIATE_BEARING_1",
+    "time_s": 75.10174802733398,
+    "max_C": 33.62748200508384,
+    "result_set": 31,
+    "image": "view015.png"
+  },
+  {
+    "part": "M4_INTERMEDIATE_BEARING_2",
+    "time_s": 75.10174802733398,
+    "max_C": 33.65710201576472,
+    "result_set": 31,
+    "image": "view016.png"
+  },
+  {
+    "part": "M4_INTERMEDIATE_SHAFT",
+    "time_s": 108.87718503417,
+    "max_C": 38.17217769617179,
+    "result_set": 53,
+    "image": "view017.png"
+  },
+  {
+    "part": "M4_MOTOR_CASE",
+    "time_s": 108.87718503417,
+    "max_C": 27.477888314041063,
+    "result_set": 53,
+    "image": "view018.png"
+  },
+  {
+    "part": "M4_MOTOR_GEAR_ADAPTER",
+    "time_s": 108.87718503417,
+    "max_C": 25.556305094384612,
+    "result_set": 53,
+    "image": "view019.png"
+  },
+  {
+    "part": "M4_MOTOR_INPUT_COUPLING",
+    "time_s": 108.87718503417,
+    "max_C": 25.99552301118683,
+    "result_set": 53,
+    "image": "view020.png"
+  },
+  {
+    "part": "M4_MOTOR_ROTOR_OTHER",
+    "time_s": 108.87718503417,
+    "max_C": 25.934447907932668,
+    "result_set": 53,
+    "image": "view021.png"
+  },
+  {
+    "part": "M4_MOTOR_ROTOR_SHAFT",
+    "time_s": 108.87718503417,
+    "max_C": 25.43523260355276,
+    "result_set": 53,
+    "image": "view022.png"
+  },
+  {
+    "part": "M4_MOTOR_STATOR",
+    "time_s": 108.87718503417,
+    "max_C": 38.83232561360292,
+    "result_set": 53,
+    "image": "view023.png"
+  },
+  {
+    "part": "M4_OUTPUT_BEARING_1",
+    "time_s": 75.10174802733398,
+    "max_C": 31.521656066341,
+    "result_set": 31,
+    "image": "view024.png"
+  },
+  {
+    "part": "M4_PAD_FAR",
+    "time_s": 76.51753690489701,
+    "max_C": 400.41287570755026,
+    "result_set": 37,
+    "image": "view025.png"
+  },
+  {
+    "part": "M4_STAGE1_GEAR",
+    "time_s": 78.64122022124103,
+    "max_C": 56.016090342410365,
+    "result_set": 46,
+    "image": "view026.png"
+  },
+  {
+    "part": "M4_STAGE2_GEAR",
+    "time_s": 78.64122022124103,
+    "max_C": 42.15853811520877,
+    "result_set": 46,
+    "image": "view027.png"
+  },
+  {
+    "part": "WHOLE_ASSEMBLY",
+    "time_s": 76.75350171782398,
+    "image": "view028.png"
+  }
+]

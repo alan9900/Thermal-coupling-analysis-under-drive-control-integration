@@ -1,0 +1,243 @@
+finish
+/post1
+file,'E:/ansys_runs/m4_case0_20261021/studies/D_normal12_rd95_dt1/study','rth'
+/uis,msgpop,3
+/graphics,power
+/eshape,1
+/edge,1,0
+/view,1,1,1,1
+/gfile,1600
+set,,,,,,,31
+cmsel,s,M4_OUTPUT_BEARING_2
+nsle,s
+/title,D - OUTPUT_BEARING_2 | S3 concept - not calibrated
+/show,png
+plnsol,temp
+/show,close
+set,,,,,,,48
+cmsel,s,M4_GEAR_CASE_REAR
+nsle,s
+/title,D - GEAR_CASE_REAR | S3 concept - not calibrated
+/show,png
+plnsol,temp
+/show,close
+set,,,,,,,53
+cmsel,s,M4_OIL_INVENTORY
+nsle,s
+/title,D - OIL_INVENTORY | S3 concept - not calibrated
+/show,png
+plnsol,temp
+/show,close
+set,,,,,,,46
+cmsel,s,M4_MOTOR_WINDING
+nsle,s
+/title,D - MOTOR_WINDING | S3 concept - not calibrated
+/show,png
+plnsol,temp
+/show,close
+set,,,,,,,53
+cmsel,s,M4_OUTPUT_SHAFT
+nsle,s
+/title,D - OUTPUT_SHAFT | S3 concept - not calibrated
+/show,png
+plnsol,temp
+/show,close
+set,,,,,,,38
+cmsel,s,M4_BRAKE_DISC_HAT
+nsle,s
+/title,D - BRAKE_DISC_HAT | S3 concept - not calibrated
+/show,png
+plnsol,temp
+/show,close
+set,,,,,,,37
+cmsel,s,M4_PAD_NEAR
+nsle,s
+/title,D - PAD_NEAR | S3 concept - not calibrated
+/show,png
+plnsol,temp
+/show,close
+set,,,,,,,53
+cmsel,s,M4_CALIPER
+nsle,s
+/title,D - CALIPER | S3 concept - not calibrated
+/show,png
+plnsol,temp
+/show,close
+set,,,,,,,53
+cmsel,s,M4_CALIPER_REACTION_BRACKET
+nsle,s
+/title,D - CALIPER_REACTION_BRACKET | S3 concept - not calibrated
+/show,png
+plnsol,temp
+/show,close
+set,,,,,,,53
+cmsel,s,M4_DISC_HUB
+nsle,s
+/title,D - DISC_HUB | S3 concept - not calibrated
+/show,png
+plnsol,temp
+/show,close
+set,,,,,,,47
+cmsel,s,M4_GEAR_CASE_FRONT
+nsle,s
+/title,D - GEAR_CASE_FRONT | S3 concept - not calibrated
+/show,png
+plnsol,temp
+/show,close
+set,,,,,,,53
+cmsel,s,M4_HUB_REMOVABLE_SLEEVE
+nsle,s
+/title,D - HUB_REMOVABLE_SLEEVE | S3 concept - not calibrated
+/show,png
+plnsol,temp
+/show,close
+set,,,,,,,31
+cmsel,s,M4_INPUT_BEARING_1
+nsle,s
+/title,D - INPUT_BEARING_1 | S3 concept - not calibrated
+/show,png
+plnsol,temp
+/show,close
+set,,,,,,,31
+cmsel,s,M4_INPUT_BEARING_2
+nsle,s
+/title,D - INPUT_BEARING_2 | S3 concept - not calibrated
+/show,png
+plnsol,temp
+/show,close
+set,,,,,,,49
+cmsel,s,M4_INPUT_SHAFT
+nsle,s
+/title,D - INPUT_SHAFT | S3 concept - not calibrated
+/show,png
+plnsol,temp
+/show,close
+set,,,,,,,31
+cmsel,s,M4_INTERMEDIATE_BEARING_1
+nsle,s
+/title,D - INTERMEDIATE_BEARING_1 | S3 concept - not calibrated
+/show,png
+plnsol,temp
+/show,close
+set,,,,,,,31
+cmsel,s,M4_INTERMEDIATE_BEARING_2
+nsle,s
+/title,D - INTERMEDIATE_BEARING_2 | S3 concept - not calibrated
+/show,png
+plnsol,temp
+/show,close
+set,,,,,,,53
+cmsel,s,M4_INTERMEDIATE_SHAFT
+nsle,s
+/title,D - INTERMEDIATE_SHAFT | S3 concept - not calibrated
+/show,png
+plnsol,temp
+/show,close
+set,,,,,,,53
+cmsel,s,M4_MOTOR_CASE
+nsle,s
+/title,D - MOTOR_CASE | S3 concept - not calibrated
+/show,png
+plnsol,temp
+/show,close
+set,,,,,,,53
+cmsel,s,M4_MOTOR_GEAR_ADAPTER
+nsle,s
+/title,D - MOTOR_GEAR_ADAPTER | S3 concept - not calibrated
+/show,png
+plnsol,temp
+/show,close
+set,,,,,,,53
+cmsel,s,M4_MOTOR_INPUT_COUPLING
+nsle,s
+/title,D - MOTOR_INPUT_COUPLING | S3 concept - not calibrated
+/show,png
+plnsol,temp
+/show,close
+set,,,,,,,53
+cmsel,s,M4_MOTOR_ROTOR_OTHER
+nsle,s
+/title,D - MOTOR_ROTOR_OTHER | S3 concept - not calibrated
+/show,png
+plnsol,temp
+/show,close
+set,,,,,,,53
+cmsel,s,M4_MOTOR_ROTOR_SHAFT
+nsle,s
+/title,D - MOTOR_ROTOR_SHAFT | S3 concept - not calibrated
+/show,png
+plnsol,temp
+/show,close
+set,,,,,,,53
+cmsel,s,M4_MOTOR_STATOR
+nsle,s
+/title,D - MOTOR_STATOR | S3 concept - not calibrated
+/show,png
+plnsol,temp
+/show,close
+set,,,,,,,31
+cmsel,s,M4_OUTPUT_BEARING_1
+nsle,s
+/title,D - OUTPUT_BEARING_1 | S3 concept - not calibrated
+/show,png
+plnsol,temp
+/show,close
+set,,,,,,,37
+cmsel,s,M4_PAD_FAR
+nsle,s
+/title,D - PAD_FAR | S3 concept - not calibrated
+/show,png
+plnsol,temp
+/show,close
+set,,,,,,,46
+cmsel,s,M4_STAGE1_GEAR
+nsle,s
+/title,D - STAGE1_GEAR | S3 concept - not calibrated
+/show,png
+plnsol,temp
+/show,close
+set,,,,,,,46
+cmsel,s,M4_STAGE2_GEAR
+nsle,s
+/title,D - STAGE2_GEAR | S3 concept - not calibrated
+/show,png
+plnsol,temp
+/show,close
+set,,,,,,,38
+cmsel,s,M4_OUTPUT_BEARING_2
+cmsel,a,M4_GEAR_CASE_REAR
+cmsel,a,M4_OIL_INVENTORY
+cmsel,a,M4_MOTOR_WINDING
+cmsel,a,M4_OUTPUT_SHAFT
+cmsel,a,M4_BRAKE_DISC_HAT
+cmsel,a,M4_PAD_NEAR
+cmsel,a,M4_CALIPER
+cmsel,a,M4_CALIPER_REACTION_BRACKET
+cmsel,a,M4_DISC_HUB
+cmsel,a,M4_GEAR_CASE_FRONT
+cmsel,a,M4_HUB_REMOVABLE_SLEEVE
+cmsel,a,M4_INPUT_BEARING_1
+cmsel,a,M4_INPUT_BEARING_2
+cmsel,a,M4_INPUT_SHAFT
+cmsel,a,M4_INTERMEDIATE_BEARING_1
+cmsel,a,M4_INTERMEDIATE_BEARING_2
+cmsel,a,M4_INTERMEDIATE_SHAFT
+cmsel,a,M4_MOTOR_CASE
+cmsel,a,M4_MOTOR_GEAR_ADAPTER
+cmsel,a,M4_MOTOR_INPUT_COUPLING
+cmsel,a,M4_MOTOR_ROTOR_OTHER
+cmsel,a,M4_MOTOR_ROTOR_SHAFT
+cmsel,a,M4_MOTOR_STATOR
+cmsel,a,M4_OUTPUT_BEARING_1
+cmsel,a,M4_PAD_FAR
+cmsel,a,M4_STAGE1_GEAR
+cmsel,a,M4_STAGE2_GEAR
+nsle,s
+/title,D - WHOLE ASSEMBLY at 76.7535 s | S3 concept - not calibrated
+/show,png
+plnsol,temp
+/show,close
+/show,win32
+plnsol,temp
+/gopr
+/com,VIEWER_EXPORT_FINISHED_NO_SOLVE
