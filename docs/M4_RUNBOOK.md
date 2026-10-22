@@ -4,6 +4,18 @@ M3 baseline: `M3-v1.0` → `7a6b9b1512495283fa12dd4a2a7ffdf698554d3e`.
 M4 development: `stage/M4-ansys`, [draft PR #5](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/5).
 The accepted M0–M3 files/tags are read-only. No M4 completion tag is authorized.
 
+## Current execution scope — 2026-10-22
+
+The researcher has moved all future simulation work to **no regenerative braking**;
+see [the current work plan](NO_REGEN_WORK_PLAN.md). Research remains paused. This
+revision authorizes documentation and GitHub updates only, not model changes or
+solver execution. Commands below reproduce **historical inputs**, including the
+30 kW regeneration-limited sources; do not run them as the new default baseline.
+The stopped B time-refinement and C contact/cooling queues are historical, not a
+resume queue for the revised plan. Fresh zero-regeneration sources, provenance
+and numerical verification will be required after a new execution instruction.
+Do not relabel existing fields or temperature values as no-regeneration results.
+
 ## Actual software and inputs
 
 ANSYS Workbench/Mechanical/MAPDL **2024 R1**, installed under

@@ -2,7 +2,14 @@
 
 **当前权威研究架构**：1800kg概念纯电动车，后轴左右各一套独立电驱单元（单侧60kW参考电机+两级约9:1减速器+减速器输出端内移式盘式摩擦制动器），**无机械差速器**；只对单侧电机—减速器—制动盘进行详细热网络/三维传热分析，整车制动模型保留前轴常规制动以及两侧后轴。**不等于任何真实量产车已安装此总成。**
 
+## 当前工作安排（2026-10-22）
+
+**后续仿真等工作暂不考虑再生制动。** 当前计划为[无再生制动热耦合研究工作计划](docs/NO_REGEN_WORK_PLAN.md)，重点是驱动预热后零再生摩擦制动下，各部件温升、制动附加热影响及传热路径。先完成Case0数值验证，再按批准的阶段开展空气换热与结构比较。现有三轴、两级斜齿9:1、50mm输出轴及Case0/A/B/C几何保持。
+
+M0—M3已限定验收并归档；M4仍为PARTIAL，位于`stage/M4-ansys`和草稿[PR #5](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/5)。**当前仅更新计划和GitHub，仿真继续暂停，等待研究者新的执行命令。** 没有新增零再生热源或温度场；既有30kW再生限制下的报告/云图保留历史含义，不改名或覆盖。当前[M4报告](reports/M4_report.md)、[云图Word讲解](reports/M4_contour_explained.docx)及[阶段登记](docs/STAGE_VERSIONS.md)可供回顾。下文按交付时序保留历史介绍，当前状态以上述安排及最新阶段登记为准。
+
 ## 首先读
+- [**当前无再生制动工作计划及暂停执行边界**](docs/NO_REGEN_WORK_PLAN.md)
 - [**V0.4有来源的基准参数及动力/制动校核（最新权威）**](docs/REAR_DRIVE_V04_SOURCED_BASELINE.md)
 - [V0.4参数文件](configs/baseline_vehicle.yaml)
 - [Codex执行约束](AGENTS.md)
@@ -57,9 +64,9 @@ CadQuery2.8/OpenCascade7.9已实际建立单侧电机、两级9:1减速器、内
 - `docs/DUAL_MOTOR_V03_ARCHITECTURE.md`、`docs/BASELINE_V02_AUDIT.md`、`configs/screening_scenarios_v02.yaml`：旧轴型、旧前后制动力分配，只能用来追溯设计变化，不能被程序当作运行输入。
 
 ## 阶段
-M0单位和参数审计/新后轴动力学→M1 MATLAB再生/摩擦热源→M2单侧热阻网络→M3 CAD概念及安装约束→M4 ANSYS瞬态传热→M5局部Fluent→M6多目标代理优化→M7极端工况、验证及论文图表。
+M0参数审查→M1热源接口→M2单侧热网络→M3参数化几何→M4零再生Case0瞬态热耦合及数值验证→M5零再生热负荷下局部空气换热→M6隔热导流优化→M7综合验证及论文。后续热源和对照采用零再生场景，历史M0—M3版本不覆盖。
 
 [工作安排图片（2026-10-19，图稿v1）](reports/planning/research_work_plan_v04_2026-10-19_v1.png)：M0–M7共8阶段，列明任务、交付物和验收流程。图中状态为生成时快照；当前以阶段登记和上文为准，工期尚未确定。
 
 ## 阶段版本与回退
-每个阶段均使用独立开发分支、Git提交、PR人工验收与**批准后不可移动的里程碑Tag**（`M0-v1.0`到`M7-v1.0`）。详见 [Git阶段版本管理制度](docs/GIT_VERSIONING_POLICY.md) 和 [里程碑版本登记](docs/STAGE_VERSIONS.md)。M0/M1/M2已正式归档；M3待审，未经批准不进入M4。
+每个阶段均使用独立开发分支、Git提交、PR人工验收与**批准后不可移动的里程碑Tag**（`M0-v1.0`到`M7-v1.0`）。详见 [Git阶段版本管理制度](docs/GIT_VERSIONING_POLICY.md) 和 [里程碑版本登记](docs/STAGE_VERSIONS.md)。M0—M3已正式归档；M4草稿待审且暂停计算，未经批准不合并M4、不创建M4正式Tag、不进入M5。

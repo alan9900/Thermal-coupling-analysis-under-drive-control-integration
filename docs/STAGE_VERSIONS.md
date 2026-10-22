@@ -8,10 +8,10 @@
 | M1 热源建模 | APPROVED（概念数值模型）；真实标定PARTIAL | [M1-v1.0](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/releases/tag/M1-v1.0)，附注Tag已推送核验 | 验收main `9d545ab39a3efcce857573af74f7e325b74a2b15`；Tag对象 `9b3c7f97c63b56b50eb7c0477a72ad03060cae39` | [PR #2](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/2)，MERGED | V0.4 | [报告](../reports/M1_report.md) / [Word](../reports/M1_report.docx) / [PDF](../reports/M1_report.pdf) / [验收表](../reports/M1_ACCEPTANCE_CHECKLIST.md)；R2025a原18+新11测试组、23整车轨迹、46单侧接口及322敏感性运行通过；Python独立复核通过；严格模式拒绝、工程模式S3；M2 NOT EXECUTED |
 | M2 热网络 | APPROVED（概念瞬态网络限定范围）；实物标定未完成 | M2-v1.0，附注Tag已推送核验 | 验收main `1d51c22d94577ff8f52be785300b5f6b4aadee37`；Tag对象 `4ad89c4a220174de741b4ba48706279d3b7cb2d1` | [PR #3](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/3)，MERGED | V0.4 | [报告](../reports/M2_report.md) / [Word](../reports/M2_report.docx) / [PDF](../reports/M2_report.pdf) / [验收表](../reports/M2_ACCEPTANCE_CHECKLIST.md)；11组测试、4+3+18场景及Python/SciPy复核PASS；2026-10-20批准，真实几何/热阻/换热/温度未标定 |
 | M3 几何设计 | APPROVED（参数化概念几何及传热准备）；机械认证未完成 | [M3-v1.0](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/releases/tag/M3-v1.0)，附注Tag已推送核验 | 验收main `7a6b9b1512495283fa12dd4a2a7ffdf698554d3e`；Tag对象 `c958ec76330c016e0dc3f8ca141f2b139f6c53f3` | [PR #4](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/4)，MERGED | V0.4 | [斜齿修订报告](../reports/M3_helical_revision.md) / [Word](../reports/M3_helical_revision.docx) / [PDF](../reports/M3_helical_revision.pdf) / [验收表](../reports/M3_HELICAL_CHECKLIST.md)；[批准范围](../reports/M3_APPROVED_SCOPE_2026-10-21.md)；2026-10-21批准，18 STEP及66个Git blob核验；轴向承载、连接、实际接触与冷却等限制保留 |
-| M4 ANSYS | PARTIAL（Case0开发与数值验证；待审） | NOT CREATED，未经批准不创建 | 已推送证据 `0c8abb857163b0ff83200f442dc5c19ffc87532c`；后续完整交付SHA另行登记 | [PR #5](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/5)，DRAFT | V0.4 | [报告](../reports/M4_report.md) / [验收表](../reports/M4_ACCEPTANCE_CHECKLIST.md) / [复算入口](M4_RUNBOOK.md)；实际ANSYS2024R1，多热源与能量收支、局部网格/辐射检查；时间步及敏感性继续完成，不把局部检查泛化为全模型标定 |
-| M5 Fluent | NOT_STARTED | NOT CREATED | — | — | V0.4 | — |
-| M6 优化 | NOT_STARTED | NOT CREATED | — | — | V0.4 | — |
-| M7 验证 | NOT_STARTED | NOT CREATED | — | — | V0.4 | — |
+| M4 ANSYS | PARTIAL（暂停求解；后续零再生计划待执行） | NOT CREATED，未经批准不创建 | 既有云图交付登记 `602e72e34301bd2ae27c0c7abde84e27c06ea863`；本轮计划更新另见最新登记 | [PR #5](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/5)，DRAFT | V0.4 | [历史报告](../reports/M4_report.md) / [验收表](../reports/M4_ACCEPTANCE_CHECKLIST.md) / [当前零再生计划](NO_REGEN_WORK_PLAN.md)；原含再生证据保留，未生成新零再生结果，数值与敏感性验证待后续授权 |
+| M5 Fluent | NOT_STARTED | NOT CREATED | — | — | V0.4 | 后续采用零再生热负荷，需前序归档及独立授权 |
+| M6 优化 | NOT_STARTED | NOT CREATED | — | — | V0.4 | 零再生条件下隔热导流比较；未经批准不开展 |
+| M7 验证 | NOT_STARTED | NOT CREATED | — | — | V0.4 | 零再生单次/重复制动与预热组合；未经批准不开展 |
 
 正式完成时需将Git Tag、PR URL、Git commit SHA、配置版本、批准日期、测试通过/失败/未运行项目写入此表。禁止将本次增加管理制度的Git commit SHA冒充M0正式版本。
 
@@ -154,3 +154,13 @@ Word/PDF报告均来自Markdown；实际Word渲染9页，10个可编辑公式、
 成果提交 `bcf0e6377a84eef96ef7d82d49485bed40be1f5b`，继续使用 `stage/M4-ansys` 和草稿PR #5。将已有D预热后制动结果导出为29幅原生云图（整体1幅、部件28幅），不新增求解。保存截图、输出时刻、温度范围、来源哈希及导出宏至 `results/m4/contour_captures/`。
 
 图册为 [M4_contour_explained.docx](../reports/M4_contour_explained.docx)，保留Markdown源稿与PDF。Pandoc生成Word后，通过实际Word渲染检查30页、29幅图，逐页视觉检查通过；证据 `results/m4/contour_captures/document_checks.json`。整体图采用76.7535 s同步状态，各部件采用各自记录峰值时刻，分别注明独立色标及S3假设。M4仍为PARTIAL且暂停新增研究，未合并、未创建正式Tag、未进入M5。
+
+### 后续无再生制动工作计划调整（2026-10-22）
+
+研究者明确决定后续仿真等工作暂不考虑再生制动，以电机内部热源、摩擦制动热及各部件热耦合为主线。计划版本 `no-regen-plan-1.0`，见 [NO_REGEN_WORK_PLAN.md](NO_REGEN_WORK_PLAN.md)。本轮仅授权调整计划与更新GitHub，继续使用 `stage/M4-ansys` 和草稿PR #5；未授权恢复模型实施、生成新热源或运行MATLAB/ANSYS/Fluent/优化。
+
+后续顺序为：独立零再生M1派生时序与整车能量检查→相同工况M2对照→Case0单次及驱动预热后零再生制动→网格、时间步及热源/接触/冷却不确定性→匹配热源归因与重复零再生制动→M4验收。重点为盘、轴承、油液、壳体、定子和绕组的最高/平均温度、峰值时刻及制动附加温升。M5—M7后续亦使用零再生边界并等待各阶段授权。
+
+旧B时间步重试和C接触/冷却队列不再作为默认续算任务；旧30kW再生限制下的53.25°C盘峰值和云图继续保留其历史含义，不改名为零再生结果。模型源码、运行配置、CAD、原始数据、结果及三格式报告未改动；M0—M3标签保持不变，无M4正式Tag。本轮验证限于Markdown链接、计划入口/授权一致性、Git差异及历史文件保护，不把文档检查称为模型测试通过。计划提交SHA在后续登记中追加。
+
+本地准备提交为 `f55509692bb1781a67eabb0f60739188b9e5b0e0`，共8份Markdown文档；Git传输中断后改用GitHub连接器发布相同计划，远程证据SHA在随后登记追加。95个本地链接存在性检查及文档限定范围检查通过，`configs/scripts/cad/data/results/reports`与本轮开始时一致。本登记只追加证据SHA，不修改任何阶段Tag或正式验收状态；PR仍为#5草稿。
