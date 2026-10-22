@@ -1,0 +1,27 @@
+{
+  "status": "PASS_STRUCTURE_AND_WORD_RENDER",
+  "pages": 10,
+  "editable_math_objects": 3,
+  "figures": 2,
+  "tables": 8,
+  "visual_inspection": "PASS",
+  "renderer": "Installed Word COM ExportAsFixedFormat plus PyMuPDF page images",
+  "skill_renderer_limitation": "Bundled render_docx.py unavailable: pdf2image missing; Word native rendering used.",
+  "sha256": {
+    "md": "acb0b144ffc0f275ea030e085aae0549ff5c37892b1b3fe3dedf9b2507ca2f6e",
+    "docx": "e136b15aba17f19761044c14775c59d19f6676a79bd1895d4e7005a87bf5fb9b",
+    "pdf": "7709dc084a09cd9155d54dc09c2729955d27272cfc94bd4c093f6af6d7ccbcb2"
+  },
+  "pages_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ]
+}

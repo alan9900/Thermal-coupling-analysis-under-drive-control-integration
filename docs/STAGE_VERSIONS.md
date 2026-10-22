@@ -166,3 +166,9 @@ Word/PDF报告均来自Markdown；实际Word渲染9页，10个可编辑公式、
 本地准备提交为 `f55509692bb1781a67eabb0f60739188b9e5b0e0`，共8份Markdown文档；Git传输中断后改用GitHub连接器发布相同计划，远程证据SHA在随后登记追加。95个本地链接存在性检查及文档限定范围检查通过，`configs/scripts/cad/data/results/reports`与本轮开始时一致。本登记只追加证据SHA，不修改任何阶段Tag或正式验收状态；PR仍为#5草稿。
 
 GitHub连接器发布的计划证据提交为 `b82976de96d98d493097cdbf60bb5ed6437743fa`，父提交为原远端 `602e72e34301bd2ae27c0c7abde84e27c06ea863`；只包含上述文档变更，原本地准备提交另保留备份引用。此处登记不构成M4验收或恢复仿真授权。
+
+### 项目总结与创新评估报告（2026-10-22）
+
+按研究者要求交付 [项目总结Word](../reports/PROJECT_REVIEW_AND_NEXT_PLAN.docx)，保留[Markdown](../reports/PROJECT_REVIEW_AND_NEXT_PLAN.md)及PDF归档。总结M0—M4已完成工作、测试及限定验收，区分旧含再生结果与未来零再生计划；有限核对5项相关原始研究，明确潜在贡献尚未充分验证，不作全球首创、性能提升或实物标定声明。
+
+报告实际Word渲染10页，3个可编辑公式、2幅既有图、8张表，逐页视觉检查通过。源文件哈希和审阅记录在 `reports/project_review_evidence/`；格式化工具 `scripts/reporting/format_project_review.py`仅用于文档。本轮没有启动仿真或修改模型/既有阶段成果，M4仍PARTIAL且暂停，PR #5保持草稿，无正式M4 Tag。准确交付提交SHA在随后登记追加。
