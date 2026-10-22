@@ -140,3 +140,11 @@ M4已获开发授权，从上述最新main创建stage/M4-ansys，仅先开展Cas
 已推送证据提交 `099e84a57b63c6bca9750206e0b47a5daa8e93b8`：三套35.2/43.9/81.8万实体单元实际网格，原生默认形状检查0错误限值单元、493/494/500警告；全部28区域中/细网格温差通过工程阈值；三个独立辐射面简化检查通过。时间步及剩余敏感性仍在运行，不提前判为阶段通过。
 
 报告 `reports/M4_report.md`，验收表 `reports/M4_ACCEPTANCE_CHECKLIST.md`，状态自动证据 `results/m4/acceptance_checks.json`。一层摩擦片峰值已拒绝；局部低于初值的数值欠冲原样保留；安装链TCC扫描不覆盖全部电机内部/油膜与材料不确定性。真实标定仍PARTIAL；无M4正式Tag，PR #5保持草稿，不进入M5。后续追加准确完整交付SHA，不把本登记当成正式验收版本。
+
+### M4暂停总结交付（2026-10-22，PARTIAL，未验收）
+
+成果提交 `d3945de9c7963b0794095f6a8e1c9dd09b0f9faf`；分支 `stage/M4-ansys`，草稿 [PR #5](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/5)。按研究者要求暂停进一步研究，队列及剩余两个原生求解已停止，未完成结果不计通过。没有合并M4、创建M4正式Tag或进入M5；M0–M3归档版本未覆盖。
+
+已完成A中网格重试、C/D多热源场与热流、B两档时间步及局部网格细化；C/D整体热平衡最大相对残差约0.001957%/0.000507%。同网格C−A电驱储热增量55.344 J，增量收支最大残差0.019954%；不是完整热空气耦合或温度标定。空间细化主要覆盖制动盘/片，不能宣称内部热源全部空间误差已验证。
+
+Word/PDF报告均来自Markdown；实际Word渲染9页，10个可编辑公式、7幅图，逐页视觉检查通过并登记文件哈希。报告：[Markdown](../reports/M4_report.md)、[Word](../reports/M4_report.docx)、[PDF](../reports/M4_report.pdf)；验收表：[M4_ACCEPTANCE_CHECKLIST.md](../reports/M4_ACCEPTANCE_CHECKLIST.md)。尚缺三档时间步闭合、完整接触/冷却敏感性及内部发热工况全面空间验证；详见 `results/m4/acceptance_checks.json` 和 `results/m4/attempts/user_requested_pause_20261022.json`。大容量原生结果仅本地保留并登记SHA256，未宣称全部上传。
