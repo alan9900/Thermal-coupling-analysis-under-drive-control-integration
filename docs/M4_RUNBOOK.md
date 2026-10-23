@@ -1,5 +1,14 @@
 # M4 Case0 reproducibility (development / PARTIAL)
 
+**2026-10-23 storage maintenance:** the researcher authorized archive-then-delete
+of the existing ANSYS model/result files. Core evidence and exact compressed
+inputs were verified and preserved; the historical native working/viewer and
+prepared-reproduction folders were removed. See [storage cleanup](M4_STORAGE_CLEANUP.md).
+Commands and absolute native paths below describe historical runs, not currently
+openable projects. Full fields now require reconstruction and a new solve, which
+remains paused pending separate authorization. Existing screenshots/CSV/reports
+remain usable. The local archive does not contain the deleted full RTH fields.
+
 M3 baseline: `M3-v1.0` → `7a6b9b1512495283fa12dd4a2a7ffdf698554d3e`.
 M4 development: `stage/M4-ansys`, [draft PR #5](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/5).
 The accepted M0–M3 files/tags are read-only. No M4 completion tag is authorized.

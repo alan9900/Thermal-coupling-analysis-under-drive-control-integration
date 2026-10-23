@@ -1,5 +1,15 @@
 # M4 actual execution evidence — development, not accepted
 
+**Storage update, 2026-10-23:** at the researcher's request, core results were
+archived and verified before the large native projects, full RTH fields and
+solver caches were deleted. The former working folder below no longer exists.
+See [cleanup record](../../docs/M4_STORAGE_CLEANUP.md) and
+`storage_cleanup_20261023/deletion_receipt.json`. The 29 contours, Word/PDF reports,
+component histories, selected FE fields, energy/path data and exact compressed
+inputs remain available. Full arbitrary-time 3D browsing requires recomputation.
+Earlier local-path/hash records below are historical provenance, not a claim
+that their native files are still present. No simulation was run for cleanup.
+
 ANSYS Workbench/Mechanical 2024 R1 is installed and has been executed. The native
 working directory is `E:/ansys_runs/m4_case0_20261021`; large project/scratch files
 are outside Git. Reproducible journals and source scripts are in `scripts/m4`.

@@ -174,3 +174,11 @@ GitHub连接器发布的计划证据提交为 `b82976de96d98d493097cdbf60bb5ed64
 报告实际Word渲染10页，3个可编辑公式、2幅既有图、8张表，逐页视觉检查通过。源文件哈希和审阅记录在 `reports/project_review_evidence/`；格式化工具 `scripts/reporting/format_project_review.py`仅用于文档。本轮没有启动仿真或修改模型/既有阶段成果，M4仍PARTIAL且暂停，PR #5保持草稿，无正式M4 Tag。准确交付提交SHA在随后登记追加。
 
 总结报告交付证据提交为 `1bec72d63a3e39b238979758ccded62ddbea34e1`，已推送至同一M4分支；Word/PDF/Markdown及当前哈希检查记录齐备。本登记追加提交SHA，不修改报告证据快照、阶段标签或暂停状态。
+
+### M4存储清理：先保留核心结果，再删除原生模型（2026-10-23）
+
+研究者明确授权保存现有核心结果后删除占空间的ANSYS模型文件。归档前核验29张原生云图、9份三格式报告文件及4个精确执行输入包；独立ZIP逐成员回读SHA256/大小通过，共1934个成员。归档准备及删除清单证据提交为`863e78a`；[完整记录](M4_STORAGE_CLEANUP.md)、[归档凭证](../results/m4/storage_cleanup_20261023/archive_verification.json)、[实际删除回执](../results/m4/storage_cleanup_20261023/deletion_receipt.json)。最终清理证据提交在PR及Git日志中登记。
+
+本地归档`E:/ansys_runs_archives/M4_core_results_20261023.zip`，391,664,998字节，SHA256 `444e0f781eb2b5f8fd13935e6b254f4923e65ec905b233390d8eb43acffbf067`；未声称上传该ZIP。删除五个已核对的本项目原生工程/完整场/缓存目录，共1028个文件、逻辑大小156.27 GiB，E盘实测空闲增加约106.07 GiB。原有Git受控文件、报告、29张云图、温度与热流时序、选定场子集、CAD、可复算输入、代码和M0—M3标签均保留。
+
+删除的完整RTH与Workbench工程不在ZIP内，后续任意时刻完整三维场浏览需重新求解。旧清单中的原生路径和哈希继续作为历史记录，不代表文件仍存在。历史结果保留30kW再生限制的工况含义，未改名为零再生；本次不运行仿真、不改变模型及验收状态。M4仍PARTIAL且暂停，分支`stage/M4-ansys`、草稿PR #5，不合并、不打M4正式Tag、不进入M5。

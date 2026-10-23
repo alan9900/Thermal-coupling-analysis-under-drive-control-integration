@@ -1,0 +1,15 @@
+{
+  "status": "PASS_STORAGE_MAINTENANCE_ONLY",
+  "deleted_roots_absent": 5,
+  "original_29_contours_and_9_reports_match_verified_archive": true,
+  "archive_sha256_matches": true,
+  "peak_index_rows": 140,
+  "peak_index_parts_per_scenario": 28,
+  "tag_refs_unchanged": true,
+  "prior_CAD_config_data_reports_results_unchanged_except_README": true,
+  "local_markdown_links": "PASS",
+  "native_ANSYS_full_fields_recoverable_without_resolve": false,
+  "simulation_executed": false,
+  "M4_stage": "PARTIAL_PAUSED",
+  "drive_free_bytes_now": 143357841408
+}
