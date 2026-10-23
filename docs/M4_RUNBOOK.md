@@ -1,5 +1,13 @@
 # M4 Case0 reproducibility (development / PARTIAL)
 
+**2026-10-23 P1-A only:** explicit researcher authorization allowed one new
+80-to-0 km/h, 0.6g, no-regeneration M1 source trace and independent Python audit.
+See [P1-A report](../reports/M4_NO_REGEN_BASELINE.md) for actual commands, inputs,
+thresholds, results and safe reproduction in a separate pre-delivery workspace.
+Outputs are isolated in `results/m4/no_regen_baseline/`. No temperature solver,
+ANSYS, Fluent, preheat or repeated-braking execution is authorized by this task.
+P1-A is now delivered for review; all further work remains paused.
+
 **2026-10-23 storage maintenance:** the researcher authorized archive-then-delete
 of the existing ANSYS model/result files. Core evidence and exact compressed
 inputs were verified and preserved; the historical native working/viewer and

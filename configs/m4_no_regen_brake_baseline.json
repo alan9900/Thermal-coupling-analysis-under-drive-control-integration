@@ -1,0 +1,64 @@
+{
+  "schema_version": "m4-p1a-no-regen-brake-1.0",
+  "scenario_id": "M4_P1A_NR_SINGLE_80KMH_06G_CASE0",
+  "classification": "S3_CONCEPT_SOURCE_BASELINE_NOT_CALIBRATED",
+  "required_branch": "stage/M4-ansys",
+  "output_directory": "results/m4/no_regen_baseline",
+  "m1_prepared_inputs": "results/m1/inputs.json",
+  "vehicle_configuration": "configs/baseline_vehicle.yaml",
+  "m1_configuration": "configs/m1_heat_sources.yaml",
+  "partition_configuration": "configs/m1_source_partition.yaml",
+  "initial_speed_kmh": 80.0,
+  "final_speed_kmh": 0.0,
+  "deceleration_g": 0.6,
+  "sampling": {
+    "source": "configs/m1_heat_sources.yaml:numerics.sample_interval_s",
+    "expected_configured_interval_s": 0.02,
+    "policy": "Unmodified m1_trace linspace: ceil(duration/configured_dt) intervals, exact stop endpoint"
+  },
+  "options": {
+    "road_load": true,
+    "grade_rad": 0.0,
+    "wheel_speed_ratio": [1.0, 1.0],
+    "rear_force_share": [0.5, 0.5],
+    "regen_available": [false, false],
+    "battery_charge_cap_total_kW": 0.0
+  },
+  "source_mode": "engineering",
+  "partition_overrides": {},
+  "scope": {
+    "single_braking_segment_only": true,
+    "preheat": false,
+    "cooldown": false,
+    "M2_temperature_solve": false,
+    "ANSYS": false,
+    "Fluent": false,
+    "optimization": false
+  },
+  "unknowns": {
+    "calibrated_winding_heat_W": null,
+    "actual_unpowered_motor_drag_W": null,
+    "actual_inverter_standby_W": null,
+    "actual_no_load_gear_churning_W": null,
+    "actual_brake_torque_capacity_Nm": null
+  },
+  "omission_policy": "Reuse M1 inactive EMOT and zero-transmitted-power gearbox budgets; their zero values are modelling omissions, NOT measured zero losses. Raw loss calibration remains null/NaN.",
+  "thresholds_registered_before_execution": {
+    "point_power_tolerance_W": 0.001,
+    "energy_relative_tolerance": 0.000001,
+    "source_partition_tolerance_W": 0.0000001,
+    "force_tolerance_N": 0.000001,
+    "kinematics_absolute_tolerance": 0.00000001,
+    "symmetry_absolute_tolerance": 0.00000001,
+    "adhesion_utilization_tolerance": 0.0000000001,
+    "zero_regen_absolute_tolerance": 0.0,
+    "source": "M1 numerics point/energy tolerances; m1_sources 1e-7 W; m1_point 1e-6 N feasibility; existing m1_tests/check_outputs kinematic and adhesion tolerances. Exact zero required for disabled regenerative ports."
+  },
+  "parameter_sources": {
+    "vehicle": "V0.4 baseline, mixed public dimensional references and S3 concept assumptions",
+    "brake_allocation": "Existing M1 ideal equal-adhesion-utilization allocation, not production EBD/ABS",
+    "disc_pad_partition": "Unmodified M1 nominal 0.90/0.10; conditional 0.85-0.95 disc enclosure, not measured confidence bounds",
+    "battery_cap": "Zero is a scenario disable command, not measured battery acceptance",
+    "partition_winding_temperature_C": "Inherited shape-weight parameter only; no physical initial temperature, preheat or temperature feedback is simulated"
+  }
+}

@@ -1,0 +1,560 @@
+{
+  "schema_version": "m4-p1a-no-regen-brake-1.0",
+  "scenario_id": "M4_P1A_NR_SINGLE_80KMH_06G_CASE0",
+  "status": "GENERATED_PENDING_INDEPENDENT_AUDIT",
+  "matlab_version": "25.1.0.2943329 (R2025a)",
+  "matlab_release": "2025a",
+  "workspace_head_before_run": "9eb27e074ce218da9843e241ea7e4cf21f49819b",
+  "input_files": [
+    {
+      "path": "configs/baseline_vehicle.yaml",
+      "sha256": "ac7359bbc714082d97b464a280b293af6f9e28430b6abdffa5fb7ea76915eb7b"
+    },
+    {
+      "path": "configs/m1_heat_sources.yaml",
+      "sha256": "10fd159349abf3b9f0b4b791a34d92ef9f04fd0ca18d07c9693c86a3018d9c6c"
+    },
+    {
+      "path": "configs/m1_source_partition.yaml",
+      "sha256": "714c7de830849ea7517e819cae3a900328ee50533a50e3214a5d4943899a5ed6"
+    },
+    {
+      "path": "configs/m4_no_regen_brake_baseline.json",
+      "sha256": "9ebb69870f2e4cdb8e05924bbae49620415b1e4e551196b9b1b55b4468bd3c48"
+    },
+    {
+      "path": "data/raw/m1/manifest.json",
+      "sha256": "f5c1c4fb81624984007b7dfcce77dd44e0cbe47f54f37e6c383dd1b8eecd4eed"
+    },
+    {
+      "path": "docs/M1_HEAT_SOURCE_INTERFACE.md",
+      "sha256": "53ba4cf0c3e7886e91e0407e9679550835454ec577b125398cda6825a05746fc"
+    },
+    {
+      "path": "results/m0/epa_map_numeric.json",
+      "sha256": "591b31ce47dbc9ecc68ac7de2966ee530c6c3ea9b7c041405b10902f2765b9d5"
+    },
+    {
+      "path": "results/m0/ornl_paired_drive_efficiency.csv",
+      "sha256": "ecaf524db926e14c0ee150f6b2ed8dfa8f025e958e9a02ed56e05d8a983425f3"
+    },
+    {
+      "path": "results/m1/inputs.json",
+      "sha256": "94864cf20039b0ae06e1d06a3e5fd1f50473cf2f22fb2b6bfe0a0f651aece5f6"
+    },
+    {
+      "path": "scripts/m1/m1_check_trace_provenance.m",
+      "sha256": "57ab47f8afa8bc76619a556db6eb1fe8c26526cf0824df8e7f315b4036a9d228"
+    },
+    {
+      "path": "scripts/m1/m1_emot.m",
+      "sha256": "302ff5b84f731854c75b9ed216338f90ae033f6156c69acb140ccc7420797429"
+    },
+    {
+      "path": "scripts/m1/m1_gear.m",
+      "sha256": "6d9a1dc10df0b4319a1697ee47a98b841eac6d0090f846e864a047402de402da"
+    },
+    {
+      "path": "scripts/m1/m1_load.m",
+      "sha256": "2fb6956c114191770c76af3d4c78ef3ead6351fde35100e7d691103fb05c6016"
+    },
+    {
+      "path": "scripts/m1/m1_options.m",
+      "sha256": "0524ec4fa033c9494e6fd471e0cde4b3508783b99fe8005855cda63bbbccc306"
+    },
+    {
+      "path": "scripts/m1/m1_partition_parameters.m",
+      "sha256": "21f3b8076b1501b997688798d81677ab44c3ea6fcb9438dbb9d7f9ecb3496c61"
+    },
+    {
+      "path": "scripts/m1/m1_point.m",
+      "sha256": "8f04ec6b0fb5abaf88e58dc6d2b83cdb516575b7e6b8444aed1acc8e6f9b1b61"
+    },
+    {
+      "path": "scripts/m1/m1_source_tests.m",
+      "sha256": "eeefe87ffb609e8d08ea113e666396c9e76c8c1973feef12e15c0b952a413157"
+    },
+    {
+      "path": "scripts/m1/m1_sources.m",
+      "sha256": "f7e4b4db9f100684c095a24149db77adfc30180ed6ac582f1cc20939f8b2866e"
+    },
+    {
+      "path": "scripts/m1/m1_tests.m",
+      "sha256": "11eb52a2652803022d0f733844b451060847f3de734842da90459db4c56b1f96"
+    },
+    {
+      "path": "scripts/m1/m1_trace.m",
+      "sha256": "1c7923ee89367b85a9ee966bb1f0ada9b6a16786d90d76195e73c78da70eb32d"
+    },
+    {
+      "path": "scripts/m1/run_m1.m",
+      "sha256": "2fbf629e2636a47ea5e75fbd3bd30bf60756b1b9e96c19f6311a4e3004620cbb"
+    },
+    {
+      "path": "scripts/m1/run_m1_sources.m",
+      "sha256": "fb2b3cb8c0d7444a3019fa04dd8b1860ac6c265916d9b2aa79a764f4c2f566e0"
+    },
+    {
+      "path": "scripts/m4/check_no_regen_brake.py",
+      "sha256": "2159bb5bc4fa7575674455f9098b3aaeef6c4811c3d33b3a79d846828cd06750"
+    },
+    {
+      "path": "scripts/m4/prepare_no_regen_brake.m",
+      "sha256": "979d6c258a8cf1cf2e0e7e42ce181eb0d9b11976f49901b85e9a470447809dfb"
+    }
+  ],
+  "preflight_sha256": "882347b975c42e144a3fcbee1410a262352f3afbb32069b09bd3a4ff5c6a4950",
+  "scenario": {
+    "schema_version": "m4-p1a-no-regen-brake-1.0",
+    "scenario_id": "M4_P1A_NR_SINGLE_80KMH_06G_CASE0",
+    "classification": "S3_CONCEPT_SOURCE_BASELINE_NOT_CALIBRATED",
+    "required_branch": "stage/M4-ansys",
+    "output_directory": "results/m4/no_regen_baseline",
+    "m1_prepared_inputs": "results/m1/inputs.json",
+    "vehicle_configuration": "configs/baseline_vehicle.yaml",
+    "m1_configuration": "configs/m1_heat_sources.yaml",
+    "partition_configuration": "configs/m1_source_partition.yaml",
+    "initial_speed_kmh": 80,
+    "final_speed_kmh": 0,
+    "deceleration_g": 0.6,
+    "sampling": {
+      "source": "configs/m1_heat_sources.yaml:numerics.sample_interval_s",
+      "expected_configured_interval_s": 0.02,
+      "policy": "Unmodified m1_trace linspace: ceil(duration/configured_dt) intervals, exact stop endpoint"
+    },
+    "options": {
+      "road_load": true,
+      "grade_rad": 0,
+      "wheel_speed_ratio": [
+        1,
+        1
+      ],
+      "rear_force_share": [
+        0.5,
+        0.5
+      ],
+      "regen_available": [
+        false,
+        false
+      ],
+      "battery_charge_cap_total_kW": 0
+    },
+    "source_mode": "engineering",
+    "partition_overrides": {},
+    "scope": {
+      "single_braking_segment_only": true,
+      "preheat": false,
+      "cooldown": false,
+      "M2_temperature_solve": false,
+      "ANSYS": false,
+      "Fluent": false,
+      "optimization": false
+    },
+    "unknowns": {
+      "calibrated_winding_heat_W": null,
+      "actual_unpowered_motor_drag_W": null,
+      "actual_inverter_standby_W": null,
+      "actual_no_load_gear_churning_W": null,
+      "actual_brake_torque_capacity_Nm": null
+    },
+    "omission_policy": "Reuse M1 inactive EMOT and zero-transmitted-power gearbox budgets; their zero values are modelling omissions, NOT measured zero losses. Raw loss calibration remains null/NaN.",
+    "thresholds_registered_before_execution": {
+      "point_power_tolerance_W": 0.001,
+      "energy_relative_tolerance": 1E-6,
+      "source_partition_tolerance_W": 1E-7,
+      "force_tolerance_N": 1E-6,
+      "kinematics_absolute_tolerance": 1E-8,
+      "symmetry_absolute_tolerance": 1E-8,
+      "adhesion_utilization_tolerance": 1E-10,
+      "zero_regen_absolute_tolerance": 0,
+      "source": "M1 numerics point/energy tolerances; m1_sources 1e-7 W; m1_point 1e-6 N feasibility; existing m1_tests/check_outputs kinematic and adhesion tolerances. Exact zero required for disabled regenerative ports."
+    },
+    "parameter_sources": {
+      "vehicle": "V0.4 baseline, mixed public dimensional references and S3 concept assumptions",
+      "brake_allocation": "Existing M1 ideal equal-adhesion-utilization allocation, not production EBD/ABS",
+      "disc_pad_partition": "Unmodified M1 nominal 0.90/0.10; conditional 0.85-0.95 disc enclosure, not measured confidence bounds",
+      "battery_cap": "Zero is a scenario disable command, not measured battery acceptance",
+      "partition_winding_temperature_C": "Inherited shape-weight parameter only; no physical initial temperature, preheat or temperature feedback is simulated"
+    }
+  },
+  "vehicle_configuration": {
+    "metadata": {
+      "version": "v0.4",
+      "architecture": "independent_twin_rear_motor_drives",
+      "status": "mixed_literature_references_and_conceptual_design_not_oem_vehicle",
+      "study_scope": "single_rear_side_motor_reducer_inboard_disc_thermal_model",
+      "literature_reference": "docs/REAR_DRIVE_V04_SOURCED_BASELINE.md"
+    },
+    "vehicle": {
+      "reference_body": "VW_ID3_class_reference_not_actual_modified_ID3",
+      "mass_kg": 1800,
+      "wheelbase_m": 2.765,
+      "cg_height_m": 0.55,
+      "static_rear_axle_fraction": 0.55,
+      "rear_track_width_m": null,
+      "tire_reference": "215_55_R18",
+      "tire_nominal_unloaded_radius_m": 0.34685,
+      "wheel_effective_rolling_radius_m": 0.33,
+      "maximum_vehicle_speed_kmh_target": 160,
+      "drag_coefficient": 0.27,
+      "frontal_area_m2": 2.3,
+      "rolling_resistance_coefficient": 0.012,
+      "rotational_inertia_factor": 1,
+      "gravity_m_s2": 9.81,
+      "tire_road_mu": 0.8
+    },
+    "drive": {
+      "driven_axle": "rear",
+      "independent_motor_count": 2,
+      "differential_present": false,
+      "rear_motor_per_side": {
+        "hardware_reference": "2010_Toyota_Prius_MG2_ORNL_test_data_not_the_actual_installed_product",
+        "motor_type": "permanent_magnet_synchronous",
+        "peak_mechanical_power_kw": 60,
+        "physical_peak_torque_nm": 207,
+        "max_mechanical_speed_rpm": 13500,
+        "configured_traction_torque_limit_nm": 130,
+        "configured_regen_torque_limit_nm": null,
+        "continuous_mechanical_power_kw": null,
+        "torque_speed_map_file": null,
+        "epa_emot_map_file": "data/raw/m0/epa_mg2/7- emachine_2010_Toyota_Prius_60kW_650V_MG2_EMOT.m",
+        "ornl_motor_only_efficiency_map_file": "data/raw/m0/epa_mg2/3c- 2010 Toyota Prius 60kW 650V MG2 EMOT - ORNL Test Data File.xlsx",
+        "motor_inverter_efficiency_combined": true,
+        "motor_loss_map_file": null,
+        "inverter_loss_map_file": null,
+        "winding_temp_limit_c": null,
+        "magnet_temp_limit_c": null,
+        "coolant_inlet_temp_c": null,
+        "coolant_mass_flow_kg_s": null,
+        "stator_outer_diameter_m": 0.264,
+        "motor_housing_dimensions_m": null
+      },
+      "rear_gearbox_per_side": {
+        "reduction_motor_to_wheel": 9,
+        "stages": 2,
+        "peak_drive_efficiency_screening": 0.96,
+        "peak_backdrive_efficiency_screening": 0.96,
+        "drive_loss_map_file": null,
+        "backdrive_loss_map_file": null,
+        "output_shaft_diameter_m": null,
+        "gearbox_housing_dimensions_m": null,
+        "gearbox_oil_mass_kg": null,
+        "oil_temperature_limit_c": null
+      },
+      "aggregate_motor_peak_power_kw": 120,
+      "total_battery_regen_acceptance_kw": null,
+      "battery_soc": null,
+      "battery_regen_limit_temperature_curve": null,
+      "inverter_limit_each_kw": null
+    },
+    "brakes": {
+      "architecture": "two_independent_inboard_friction_discs_at_rear_gearbox_outputs",
+      "brake_detailed_model_scope": "one_rear_disc",
+      "rear_rotor_count": 2,
+      "front_conventional_service_brakes_retained": true,
+      "rotor_speed_to_own_wheel_speed_ratio": 1,
+      "rear_rotor_per_side": {
+        "geometric_reference": "Brembo_09_9908_21_REAR_280x22_ventilated",
+        "outside_diameter_m": 0.28,
+        "thickness_m": 0.022,
+        "disc_overall_height_m": 0.042,
+        "nominal_center_bore_m": 0.068,
+        "inner_ring_diameter_m": null,
+        "mass_kg": null,
+        "effective_friction_radius_m": null,
+        "mean_friction_coefficient_screening": 0.4,
+        "pad_disc_heat_partition": null,
+        "brake_torque_capacity_nm": null,
+        "caliper_clamping_limit_N": null,
+        "disc_to_gearbox_housing_min_clearance_m": null,
+        "disc_to_heatshield_clearance_m": null,
+        "disc_max_temperature_c": null,
+        "caliper_max_temperature_c": null,
+        "inboard_custom_mount_requires_new_strength_and_thermal_validation": true
+      },
+      "axle_brake_allocation": "dynamic_axle_load_based_reference_not_commercial_EBD",
+      "rear_regen_and_friction_priority": "limited_by_rear_adhesion_and_battery_acceptance"
+    },
+    "thermal": {
+      "ambient_temperature_c": 25,
+      "cold_start_initial_temperature_c": 25,
+      "initial_preheated_motor_temperature_c": null,
+      "rotor_emissivity": null,
+      "shield_emissivity": null,
+      "contact_resistance_m2K_W": null,
+      "gearbox_cooling_boundary": null
+    },
+    "cases": {
+      "nominal_stop_initial_speed_kmh": 100,
+      "nominal_stop_deceleration_g": 0.6,
+      "stop_deceleration_g_scan": [
+        0.3,
+        0.6,
+        0.8
+      ],
+      "total_battery_regen_acceptance_kw_screening": [
+        0,
+        30,
+        60
+      ],
+      "repeated_stop_count": null,
+      "repeated_stop_interval_s": null,
+      "high_load_preheat_trace_file": null
+    },
+    "optimization": {
+      "brake_to_shield_gap_m_bounds": [
+        0.003,
+        0.01
+      ],
+      "shield_thickness_m_bounds": [
+        0.0005,
+        0.002
+      ],
+      "guide_exit_angle_deg_bounds": [
+        15,
+        60
+      ],
+      "guide_exit_area_ratio_bounds": [
+        0.2,
+        0.8
+      ],
+      "no_claim_of_compatibility_without_cad_check": true
+    },
+    "provenance": {
+      "vw_body_source": "https://www.volkswagen.ie/idhub/content/dam/onehub_pkw/importers/ie/models/product-guides/my23/ID3_MY23.pdf",
+      "vw_gearbox_source": "https://www.volkswagen-group.com/en/press-releases/in-brief-the-all-rounder-the-1-speed-gearbox-17030",
+      "toyota_motor_source": "https://global.toyota/en/detail/308252",
+      "ornl_motor_test_report": "https://info.ornl.gov/sites/publications/files/Pub26762.pdf",
+      "vw_body_geometry_source": "https://www.volkswagen-newsroom.com/en/the-new-id3-6240/technical-data-6249",
+      "vw_wheelbase_source": "https://www.volkswagen.ie/idhub/content/dam/onehub_pkw/importers/ie/models/product-guides/2021/my21_master/ID3_MY21.pdf",
+      "epa_emot_map_catalogue": "https://www.epa.gov/vehicle-and-fuel-emissions-testing/combining-data-complete-emotor-alpha-maps",
+      "brembo_disc_source": "https://www.bremboparts.com/europe/en/view-document/catalogue/disc/09-9908-21",
+      "actual_test_or_oem_assembly": false
+    }
+  },
+  "m1_configuration": {
+    "metadata": {
+      "stage": "M1",
+      "candidate_version": "M1-v1.0",
+      "configuration_version": "v0.4",
+      "evidence_status": "PARTIAL_reference_maps_and_engineering_assumptions",
+      "model_scope": "longitudinal_and_two_independent_rear_power_ports_no_temperature_solver",
+      "baseline_tag": "M0-v1.0",
+      "baseline_commit": "b13f265b1ff0add1f9e8b166d2c1bfa4ac8a8d16"
+    },
+    "inputs": {
+      "baseline_vehicle": "configs/baseline_vehicle.yaml",
+      "combined_emot_numeric": "results/m0/epa_map_numeric.json",
+      "separate_drive_efficiencies": "results/m0/ornl_paired_drive_efficiency.csv",
+      "source_voltage_V": 650,
+      "reject_map_extrapolation": true
+    },
+    "assumptions": {
+      "air_density_kg_m3": 1.225,
+      "allow_estimated_regen_map": true,
+      "allow_constant_gear_efficiency": true,
+      "regen_torque_limit_each_Nm": 130,
+      "regen_disable_below_kmh": 5,
+      "regen_full_above_kmh": 10,
+      "disc_contact_heat_fraction": 0.9,
+      "disc_contact_heat_fraction_bounds": [
+        0.85,
+        0.95
+      ],
+      "unpowered_emot_loss_W": 0,
+      "drive_split_method": "ORNL_drive_loss_ratio_scaled_to_EPA_combined_loss",
+      "regen_motor_inverter_split": null,
+      "winding_loss_fraction": null,
+      "electrical_auxiliary_power_W": 0,
+      "controller_is_production_EBD": false,
+      "maximum_traction_test_duration_s": 18
+    },
+    "numerics": {
+      "sample_interval_s": 0.02,
+      "battery_bisection_iterations": 35,
+      "point_power_tolerance_W": 0.001,
+      "energy_relative_tolerance": 1E-6
+    },
+    "cases": {
+      "initial_stop_speed_kmh": 100,
+      "final_stop_speed_kmh": 0,
+      "deceleration_g": [
+        0.3,
+        0.6,
+        0.8
+      ],
+      "battery_charge_cap_total_kW": [
+        0,
+        30,
+        60
+      ],
+      "road_load_options": [
+        false,
+        true
+      ],
+      "include_left_regen_disabled_case": true,
+      "include_unequal_wheel_speed_test": true,
+      "include_drive_pulse": true
+    },
+    "thermal_readiness": {
+      "verified_motor_copper_iron_rotor_loss_map": null,
+      "verified_gearbox_drive_backdrive_loss_map": null,
+      "validated_pad_disc_heat_partition": null,
+      "validated_battery_soc_temperature_limit_map": null,
+      "ready_for_validated_component_temperature_prediction": false
+    }
+  },
+  "partition_configuration": {
+    "metadata": {
+      "schema_version": "m1-source-interface-1.0",
+      "scenario_id": "engineering_budget_normalized_v1",
+      "classification": "S3_ENGINEERING_NOT_MEASURED",
+      "method": "physics_shaped_weights_normalized_to_existing_total_loss",
+      "uncertainty": "deterministic_parameter_box_not_statistical_confidence",
+      "actual_internal_loss_map": null,
+      "actual_current_trajectory": null,
+      "actual_gear_geometry": null
+    },
+    "reference": {
+      "phase_resistance_ohm": 0.077,
+      "resistance_temperature_C": 21,
+      "copper_alpha_20_per_K": 0.00393,
+      "reference_speed_rpm": 6000,
+      "reference_torque_Nm": 100
+    },
+    "parameters": {
+      "torque_constant_Nm_per_Arms": [
+        0.5,
+        0.7,
+        0.9
+      ],
+      "winding_temperature_C": [
+        40,
+        100,
+        140
+      ],
+      "ac_copper_speed_factor": [
+        0,
+        0.15,
+        0.4
+      ],
+      "field_weakening_current_factor": [
+        0,
+        0.3,
+        0.8
+      ],
+      "iron_hysteresis_ref_W": [
+        80,
+        200,
+        400
+      ],
+      "iron_eddy_ref_W": [
+        50,
+        150,
+        350
+      ],
+      "rotor_speed_squared_ref_W": [
+        20,
+        70,
+        180
+      ],
+      "motor_stray_load_ref_W": [
+        10,
+        30,
+        100
+      ],
+      "drive_inverter_ratio_multiplier": [
+        0.8,
+        1,
+        1.2
+      ],
+      "fallback_inverter_fraction": [
+        0.05,
+        0.15,
+        0.35
+      ],
+      "gear_mesh_power_coefficient": [
+        0.01,
+        0.02,
+        0.035
+      ],
+      "gear_bearing_torque_Nm": [
+        0.02,
+        0.06,
+        0.12
+      ],
+      "gear_bearing_load_coefficient": [
+        0.001,
+        0.003,
+        0.006
+      ],
+      "gear_churning_ref_W": [
+        10,
+        50,
+        150
+      ],
+      "gear_seal_torque_Nm": [
+        0.005,
+        0.02,
+        0.05
+      ],
+      "disc_heat_fraction": [
+        0.85,
+        0.9,
+        0.95
+      ]
+    },
+    "controls": {
+      "field_weakening_start_rpm": 4500,
+      "normalized_loss_ratio_warning_bounds": [
+        0.25,
+        4
+      ],
+      "sensitivity_cases": [
+        "stop_z06_bat30_road1",
+        "short_drive_0_to_80"
+      ],
+      "joint_parameter_samples": 128,
+      "random_seed": 2.0261019E+7,
+      "interval_bounds_hold_total_emot_and_gear_fixed": true,
+      "no_load_gear_drag_omitted": true,
+      "inverter_default_thermal_destination": "external_boundary_not_motor_internal"
+    }
+  },
+  "options": {
+    "road_load": true,
+    "grade_rad": 0,
+    "battery_charge_cap_total_kW": 0,
+    "battery_discharge_cap_total_kW": null,
+    "battery_soc": 0.5,
+    "soc_charge_disable_at": 0.9,
+    "temperature_charge_factor": 1,
+    "wheel_speed_ratio": [
+      1,
+      1
+    ],
+    "rear_force_share": [
+      0.5,
+      0.5
+    ],
+    "regen_available": [
+      false,
+      false
+    ],
+    "rear_mu": [
+      0.8,
+      0.8
+    ],
+    "front_mu": 0.8
+  },
+  "configured_dt_s": 0.02,
+  "actual_uniform_dt_s": 0.019975857179013443,
+  "sample_count": 190,
+  "omission_policy": "Reuse M1 inactive EMOT and zero-transmitted-power gearbox budgets; their zero values are modelling omissions, NOT measured zero losses. Raw loss calibration remains null/NaN.",
+  "strict_data_mode_executed": false,
+  "temperature_solver_executed": false,
+  "ANSYS_executed": false,
+  "Fluent_executed": false,
+  "preheat_executed": false,
+  "cooldown_executed": false
+}

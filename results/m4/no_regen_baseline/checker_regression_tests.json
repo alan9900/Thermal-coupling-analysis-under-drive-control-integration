@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "tests": [
+    {
+      "test": "nonzero_regen",
+      "status": "PASS_EXPECTED_REJECTION",
+      "reason": "regeneration/nonzero port: rear_regen_force_N"
+    },
+    {
+      "test": "double_disc_heat",
+      "status": "PASS_EXPECTED_REJECTION",
+      "reason": "left disc partition conservation"
+    },
+    {
+      "test": "fake_calibrated_winding",
+      "status": "PASS_EXPECTED_REJECTION",
+      "reason": "calibrated winding must remain unknown"
+    },
+    {
+      "test": "infeasible_trace",
+      "status": "PASS_EXPECTED_REJECTION",
+      "reason": "infeasible flag"
+    },
+    {
+      "test": "wrong_motor_ratio",
+      "status": "PASS_EXPECTED_REJECTION",
+      "reason": "left motor ratio"
+    }
+  ],
+  "real_output_files_modified": false
+}

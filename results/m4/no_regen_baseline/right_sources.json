@@ -1,0 +1,223 @@
+{
+  "schema_version": "m1-source-interface-1.0",
+  "mode": "engineering",
+  "side": "right",
+  "scenario_id": "M4_P1A_NR_SINGLE_80KMH_06G_CASE0",
+  "classification": "S3_ENGINEERING_NOT_MEASURED",
+  "parameter_values": {
+    "torque_constant_Nm_per_Arms": 0.7,
+    "winding_temperature_C": 100,
+    "ac_copper_speed_factor": 0.15,
+    "field_weakening_current_factor": 0.3,
+    "iron_hysteresis_ref_W": 200,
+    "iron_eddy_ref_W": 150,
+    "rotor_speed_squared_ref_W": 70,
+    "motor_stray_load_ref_W": 30,
+    "drive_inverter_ratio_multiplier": 1,
+    "fallback_inverter_fraction": 0.15,
+    "gear_mesh_power_coefficient": 0.02,
+    "gear_bearing_torque_Nm": 0.06,
+    "gear_bearing_load_coefficient": 0.003,
+    "gear_churning_ref_W": 50,
+    "gear_seal_torque_Nm": 0.02,
+    "disc_heat_fraction": 0.9
+  },
+  "original_calibrated_data_modified": false,
+  "inverter_thermal_destination": "external_boundary_not_motor_internal",
+  "rotor_other_destination": "lumped_rotor_plus_other_motor_loss_requires_M2_node_choice",
+  "gear_other_destination": "oil_seal_and_drag_lump_not_motor_winding",
+  "bounds_definition": "conditional component-wise enclosure over configured independent box; not simultaneous extrema or confidence intervals",
+  "total_loss_uncertainty_included": false,
+  "no_load_gear_drag_included": false,
+  "temperature_feedback_executed": false,
+  "M2_executed": false,
+  "source_registry": "docs/M1_SOURCE_REVIEW.md",
+  "input_provenance": {
+    "baseline_tag": "M0-v1.0",
+    "baseline_commit": "b13f265b1ff0add1f9e8b166d2c1bfa4ac8a8d16",
+    "code_commit": "2b336e62485e0183f79428dd6009ec7aa32a1ab3",
+    "input_sha256": {
+      "configs_baseline_vehicle_yaml": "131cbe265d5644dc6db453d02e2d9d096d81210bddf102f8145acc743d24177a",
+      "configs_m1_heat_sources_yaml": "10fd159349abf3b9f0b4b791a34d92ef9f04fd0ca18d07c9693c86a3018d9c6c",
+      "results_m0_epa_map_numeric_json": "77ed23116038f83b1ee2c9bb04c3a796b014e5a216cce2fd7a985ecb6c2b1970",
+      "results_m0_ornl_paired_drive_efficiency_csv": "751d1cffd93476f552bf64ef204f6f78eebc5c5a7c99fd2c600d66c26637c2b9",
+      "configs_m1_source_partition_yaml": "714c7de830849ea7517e819cae3a900328ee50533a50e3214a5d4943899a5ed6",
+      "data_raw_m1_manifest_json": "3a06b5d156162a57b9556e866c0f0edc9679f4059302a374695de25a9e1d5ad7"
+    },
+    "hash_definition": "UTF-8 text normalized to LF for portable Git checkout verification",
+    "source_classification": "EPA combined fitted map; mirrored regeneration; S3 gearbox and partition",
+    "winding_heat_available": false,
+    "thermal_model_executed": false
+  },
+  "case_id": "M4_P1A_NR_SINGLE_80KMH_06G_CASE0",
+  "partition_scenario_id": "engineering_budget_normalized_v1",
+  "trace_file": "results/m4/no_regen_baseline/vehicle_trace.csv",
+  "csv_file": "results/m4/no_regen_baseline/right_sources.csv",
+  "csv_sha256": "7991e8b6e116858f23add546d604e7a80bbd032aba025c4ce0698551363789cd",
+  "trace_sha256": "4a03e2a5dce9040aee91529c91522c4346544a588bb706fdd4110bbcd1e67326",
+  "source_config": "configs/m4_no_regen_brake_baseline.json",
+  "source_config_sha256": "9ebb69870f2e4cdb8e05924bbae49620415b1e4e551196b9b1b55b4468bd3c48",
+  "input_files": [
+    {
+      "path": "configs/baseline_vehicle.yaml",
+      "sha256": "ac7359bbc714082d97b464a280b293af6f9e28430b6abdffa5fb7ea76915eb7b"
+    },
+    {
+      "path": "configs/m1_heat_sources.yaml",
+      "sha256": "10fd159349abf3b9f0b4b791a34d92ef9f04fd0ca18d07c9693c86a3018d9c6c"
+    },
+    {
+      "path": "configs/m1_source_partition.yaml",
+      "sha256": "714c7de830849ea7517e819cae3a900328ee50533a50e3214a5d4943899a5ed6"
+    },
+    {
+      "path": "configs/m4_no_regen_brake_baseline.json",
+      "sha256": "9ebb69870f2e4cdb8e05924bbae49620415b1e4e551196b9b1b55b4468bd3c48"
+    },
+    {
+      "path": "data/raw/m1/manifest.json",
+      "sha256": "f5c1c4fb81624984007b7dfcce77dd44e0cbe47f54f37e6c383dd1b8eecd4eed"
+    },
+    {
+      "path": "docs/M1_HEAT_SOURCE_INTERFACE.md",
+      "sha256": "53ba4cf0c3e7886e91e0407e9679550835454ec577b125398cda6825a05746fc"
+    },
+    {
+      "path": "results/m0/epa_map_numeric.json",
+      "sha256": "591b31ce47dbc9ecc68ac7de2966ee530c6c3ea9b7c041405b10902f2765b9d5"
+    },
+    {
+      "path": "results/m0/ornl_paired_drive_efficiency.csv",
+      "sha256": "ecaf524db926e14c0ee150f6b2ed8dfa8f025e958e9a02ed56e05d8a983425f3"
+    },
+    {
+      "path": "results/m1/inputs.json",
+      "sha256": "94864cf20039b0ae06e1d06a3e5fd1f50473cf2f22fb2b6bfe0a0f651aece5f6"
+    },
+    {
+      "path": "scripts/m1/m1_check_trace_provenance.m",
+      "sha256": "57ab47f8afa8bc76619a556db6eb1fe8c26526cf0824df8e7f315b4036a9d228"
+    },
+    {
+      "path": "scripts/m1/m1_emot.m",
+      "sha256": "302ff5b84f731854c75b9ed216338f90ae033f6156c69acb140ccc7420797429"
+    },
+    {
+      "path": "scripts/m1/m1_gear.m",
+      "sha256": "6d9a1dc10df0b4319a1697ee47a98b841eac6d0090f846e864a047402de402da"
+    },
+    {
+      "path": "scripts/m1/m1_load.m",
+      "sha256": "2fb6956c114191770c76af3d4c78ef3ead6351fde35100e7d691103fb05c6016"
+    },
+    {
+      "path": "scripts/m1/m1_options.m",
+      "sha256": "0524ec4fa033c9494e6fd471e0cde4b3508783b99fe8005855cda63bbbccc306"
+    },
+    {
+      "path": "scripts/m1/m1_partition_parameters.m",
+      "sha256": "21f3b8076b1501b997688798d81677ab44c3ea6fcb9438dbb9d7f9ecb3496c61"
+    },
+    {
+      "path": "scripts/m1/m1_point.m",
+      "sha256": "8f04ec6b0fb5abaf88e58dc6d2b83cdb516575b7e6b8444aed1acc8e6f9b1b61"
+    },
+    {
+      "path": "scripts/m1/m1_source_tests.m",
+      "sha256": "eeefe87ffb609e8d08ea113e666396c9e76c8c1973feef12e15c0b952a413157"
+    },
+    {
+      "path": "scripts/m1/m1_sources.m",
+      "sha256": "f7e4b4db9f100684c095a24149db77adfc30180ed6ac582f1cc20939f8b2866e"
+    },
+    {
+      "path": "scripts/m1/m1_tests.m",
+      "sha256": "11eb52a2652803022d0f733844b451060847f3de734842da90459db4c56b1f96"
+    },
+    {
+      "path": "scripts/m1/m1_trace.m",
+      "sha256": "1c7923ee89367b85a9ee966bb1f0ada9b6a16786d90d76195e73c78da70eb32d"
+    },
+    {
+      "path": "scripts/m1/run_m1.m",
+      "sha256": "2fbf629e2636a47ea5e75fbd3bd30bf60756b1b9e96c19f6311a4e3004620cbb"
+    },
+    {
+      "path": "scripts/m1/run_m1_sources.m",
+      "sha256": "fb2b3cb8c0d7444a3019fa04dd8b1860ac6c265916d9b2aa79a764f4c2f566e0"
+    },
+    {
+      "path": "scripts/m4/check_no_regen_brake.py",
+      "sha256": "2159bb5bc4fa7575674455f9098b3aaeef6c4811c3d33b3a79d846828cd06750"
+    },
+    {
+      "path": "scripts/m4/prepare_no_regen_brake.m",
+      "sha256": "979d6c258a8cf1cf2e0e7e42ce181eb0d9b11976f49901b85e9a470447809dfb"
+    }
+  ],
+  "source_code_commit": "9eb27e074ce218da9843e241ea7e4cf21f49819b",
+  "source_code_identity": "Commit plus preflight SHA256 of new scripts; final delivery commit recorded by Git/PR",
+  "regen_available": [
+    false,
+    false
+  ],
+  "battery_regen_recovery_W": 0,
+  "loss_budget_zero_interpretation": "Reuse M1 inactive EMOT and zero-transmitted-power gearbox budgets; their zero values are modelling omissions, NOT measured zero losses. Raw loss calibration remains null/NaN.",
+  "actual_unpowered_motor_drag_W": null,
+  "actual_inverter_standby_W": null,
+  "actual_no_load_gear_churning_W": null,
+  "unknown_representation": "Unmeasured physical losses remain JSON null; calibrated winding samples remain CSV NaN",
+  "single_disc_and_pad_pair_both_faces_combined": true,
+  "single_side_only_not_two_rear_sides": true,
+  "units": {
+    "time_s": "s",
+    "vehicle_speed_m_s": "m/s",
+    "motor_speed_rpm": "rpm",
+    "motor_torque_Nm": "N*m",
+    "disc_speed_rad_s": "rad/s",
+    "emot_total_reference_W": "W",
+    "gear_total_assumed_W": "W",
+    "disc_contact_W": "W",
+    "calibrated_winding_heat_W": "W",
+    "copper_engineering_W": "W",
+    "copper_lower_W": "W",
+    "copper_upper_W": "W",
+    "iron_engineering_W": "W",
+    "iron_lower_W": "W",
+    "iron_upper_W": "W",
+    "rotor_other_engineering_W": "W",
+    "rotor_other_lower_W": "W",
+    "rotor_other_upper_W": "W",
+    "inverter_engineering_W": "W",
+    "inverter_lower_W": "W",
+    "inverter_upper_W": "W",
+    "gear_mesh_engineering_W": "W",
+    "gear_mesh_lower_W": "W",
+    "gear_mesh_upper_W": "W",
+    "gear_bearing_engineering_W": "W",
+    "gear_bearing_lower_W": "W",
+    "gear_bearing_upper_W": "W",
+    "gear_other_engineering_W": "W",
+    "gear_other_lower_W": "W",
+    "gear_other_upper_W": "W",
+    "disc_engineering_W": "W",
+    "disc_lower_W": "W",
+    "disc_upper_W": "W",
+    "pad_engineering_W": "W",
+    "pad_lower_W": "W",
+    "pad_upper_W": "W",
+    "current_proxy_Arms": "A_RMS_proxy_not_measured",
+    "copper_raw_weight_W": "W",
+    "iron_raw_weight_W": "W",
+    "rotor_other_raw_weight_W": "W",
+    "motor_budget_normalization": "1",
+    "gear_budget_normalization": "1",
+    "drive_ratio_covered": "1",
+    "regen_map_is_estimated": "1",
+    "emot_partition_residual_W": "W",
+    "gear_partition_residual_W": "W",
+    "disc_partition_residual_W": "W",
+    "vehicle_power_residual_W": "W",
+    "source_class_code": "1"
+  }
+}
