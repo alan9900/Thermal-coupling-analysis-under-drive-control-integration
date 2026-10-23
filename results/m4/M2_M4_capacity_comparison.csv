@@ -1,0 +1,12 @@
+M2_node,M2_C_J_K,M4_C_J_K,M4_parts,difference_percent,basis
+disc,2250.0,2368.9800843188427,BRAKE_DISC_HAT,5.288003747504111,Actual FE volume times S3 rho cp; grouping equivalence is approximate
+pad_caliper,1400.0,1403.1294565415567,PAD_NEAR;PAD_FAR;CALIPER;CALIPER_REACTION_BRACKET,0.22353261011118786,Actual FE volume times S3 rho cp; grouping equivalence is approximate
+output_shaft,552.0,2061.3720575615107,OUTPUT_SHAFT,273.436966949549,Actual FE volume times S3 rho cp; grouping equivalence is approximate
+output_bearing,161.0,406.97937890117885,OUTPUT_BEARING_1;OUTPUT_BEARING_2,152.78222291998685,Actual FE volume times S3 rho cp; grouping equivalence is approximate
+gears,1150.0,3913.941969058484,STAGE1_GEAR;STAGE2_GEAR,240.34277991812905,Actual FE volume times S3 rho cp; grouping equivalence is approximate
+oil,1600.0,1403.5989068409474,OIL_INVENTORY,-12.275068322440784,Actual FE volume times S3 rho cp; grouping equivalence is approximate
+gear_case,3600.0,8644.070210792765,GEAR_CASE_FRONT;GEAR_CASE_REAR,140.11306141091012,Actual FE volume times S3 rho cp; grouping equivalence is approximate
+motor_case,4500.0,16786.735808458823,MOTOR_CASE;MOTOR_GEAR_ADAPTER,273.03857352130717,Actual FE volume times S3 rho cp; grouping equivalence is approximate
+stator,4765.599999999999,4812.060724170868,MOTOR_STATOR,0.9749186706997648,Actual FE volume times S3 rho cp; grouping equivalence is approximate
+winding,1898.05,1831.6010430436143,MOTOR_WINDING,-3.50090655969999,Actual FE volume times S3 rho cp; grouping equivalence is approximate
+rotor_other,3082.0,3988.6744110068535,MOTOR_ROTOR_OTHER;MOTOR_ROTOR_SHAFT,29.418378033966697,Actual FE volume times S3 rho cp; grouping equivalence is approximate

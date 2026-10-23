@@ -1,0 +1,216 @@
+{
+  "status": "PARTIAL",
+  "generated_at": "2026-10-22T14:32:12+08:00",
+  "evidence_head": "0c8abb857163b0ff83200f442dc5c19ffc87532c",
+  "blockers": [],
+  "pending": [
+    "solve_B",
+    "energy_B",
+    "time",
+    "sensitivity",
+    "paths_B_normal12_rd95h_dt4_retry1",
+    "inputs_archive"
+  ],
+  "items": [
+    {
+      "id": "inputs",
+      "item": "配置、未知值、M1接口与来源边界",
+      "status": "PASS",
+      "evidence": "results/m4/input_tests.json",
+      "detail": "12组前处理检查；不代替有限元数值验证"
+    },
+    {
+      "id": "mesh_shape",
+      "item": "三套原生网格默认形状检查",
+      "status": "PASS_WITH_WARNINGS",
+      "evidence": "results/m4/meshes/native_shape_checks.json",
+      "detail": "0错误；警告单元仍保留，不能称全部优质网格"
+    },
+    {
+      "id": "units",
+      "item": "实际原生热容/后向欧拉对流基准",
+      "status": "PASS",
+      "evidence": "results/m4/native_benchmark_checks.json",
+      "detail": "单单元等温基准；不验证空间网格或辐射"
+    },
+    {
+      "id": "rad_units",
+      "item": "实际原生辐射K偏置、方向及W单位",
+      "status": "PASS",
+      "evidence": "results/m4/native_radiation_checks.json",
+      "detail": "单开放面100/0/25°C对25°C；不验证Case0全部遮挡"
+    },
+    {
+      "id": "native_materials",
+      "item": "原生材料常数与28个RTH材料区核对",
+      "status": "PASS",
+      "evidence": "results/m4/native_material_region_checks.json",
+      "detail": "核对实际DENS/C/KXX赋值，不把S3材料升级为实物牌号"
+    },
+    {
+      "id": "solve_A",
+      "item": "A真实原生瞬态求解及预期时刻",
+      "status": "PASS",
+      "evidence": "results/m4/studies/A_normal12_rd95_dt1_retry1/native_archive_manifest.json",
+      "detail": ""
+    },
+    {
+      "id": "energy_A",
+      "item": "A总体储热/散热/冷却/辐射收支",
+      "status": "PASS",
+      "evidence": "results/m4/studies/A_normal12_rd95_dt1_retry1/pilot_FE_energy_checks.json",
+      "detail": "最大相对残差 1.3967499e-05；阈值 0.005"
+    },
+    {
+      "id": "solve_B",
+      "item": "B真实原生瞬态求解及预期时刻",
+      "status": "PENDING",
+      "evidence": "results/m4/studies/B_normal12_rd95h_dt4_retry1/native_archive_manifest.json",
+      "detail": ""
+    },
+    {
+      "id": "energy_B",
+      "item": "B总体储热/散热/冷却/辐射收支",
+      "status": "PENDING",
+      "evidence": "results/m4/studies/B_normal12_rd95h_dt4_retry1/pilot_FE_energy_checks.json",
+      "detail": ""
+    },
+    {
+      "id": "solve_C",
+      "item": "C真实原生瞬态求解及预期时刻",
+      "status": "PASS",
+      "evidence": "results/m4/studies/C_normal12_rd95_dt1/native_archive_manifest.json",
+      "detail": ""
+    },
+    {
+      "id": "energy_C",
+      "item": "C总体储热/散热/冷却/辐射收支",
+      "status": "PASS",
+      "evidence": "results/m4/studies/C_normal12_rd95_dt1/pilot_FE_energy_checks.json",
+      "detail": "最大相对残差 1.9574223e-05；阈值 0.005"
+    },
+    {
+      "id": "solve_D",
+      "item": "D真实原生瞬态求解及预期时刻",
+      "status": "PASS",
+      "evidence": "results/m4/studies/D_normal12_rd95_dt1/native_archive_manifest.json",
+      "detail": ""
+    },
+    {
+      "id": "energy_D",
+      "item": "D总体储热/散热/冷却/辐射收支",
+      "status": "PASS",
+      "evidence": "results/m4/studies/D_normal12_rd95_dt1/pilot_FE_energy_checks.json",
+      "detail": "最大相对残差 5.0699705e-06；阈值 0.005"
+    },
+    {
+      "id": "mesh",
+      "item": "数值细化 mesh",
+      "status": "PASS",
+      "evidence": "results/m4/convergence_checks.json",
+      "detail": "预先登记的工程阈值；不是GCI或实验精度"
+    },
+    {
+      "id": "time",
+      "item": "数值细化 time",
+      "status": "PENDING",
+      "evidence": "results/m4/convergence_checks.json",
+      "detail": "预先登记的工程阈值；不是GCI或实验精度"
+    },
+    {
+      "id": "radiation_facets_fine",
+      "item": "数值细化 radiation_facets_fine",
+      "status": "PASS",
+      "evidence": "results/m4/convergence_checks.json",
+      "detail": "预先登记的工程阈值；不是GCI或实验精度"
+    },
+    {
+      "id": "radiation_facets_medium",
+      "item": "数值细化 radiation_facets_medium",
+      "status": "PASS",
+      "evidence": "results/m4/convergence_checks.json",
+      "detail": "预先登记的工程阈值；不是GCI或实验精度"
+    },
+    {
+      "id": "radiation_facets_combined",
+      "item": "数值细化 radiation_facets_combined",
+      "status": "PASS",
+      "evidence": "results/m4/convergence_checks.json",
+      "detail": "预先登记的工程阈值；不是GCI或实验精度"
+    },
+    {
+      "id": "sensitivity",
+      "item": "相同输入的安装接触/冷却范围计算",
+      "status": "PENDING",
+      "evidence": "results/m4/sensitivity_checks.json",
+      "detail": "只扫安装链TCC与对流h；内部绕组接触、油膜、冷却体温及材料方向性未全面覆盖"
+    },
+    {
+      "id": "paths_B_normal12_rd95h_dt4_retry1",
+      "item": "32对连接覆盖/油液/电驱子控制体 B_normal12_rd95h_dt4_retry1",
+      "status": "PENDING",
+      "evidence": "results/m4/studies/B_normal12_rd95h_dt4_retry1/heat_path_checks.json",
+      "detail": "有符号功率、净积分与正向积分分开；不把串联轴承截面重复加总"
+    },
+    {
+      "id": "paths_C_normal12_rd95_dt1",
+      "item": "32对连接覆盖/油液/电驱子控制体 C_normal12_rd95_dt1",
+      "status": "PASS",
+      "evidence": "results/m4/studies/C_normal12_rd95_dt1/heat_path_checks.json",
+      "detail": "有符号功率、净积分与正向积分分开；不把串联轴承截面重复加总"
+    },
+    {
+      "id": "paths_D_normal12_rd95_dt1",
+      "item": "32对连接覆盖/油液/电驱子控制体 D_normal12_rd95_dt1",
+      "status": "PASS",
+      "evidence": "results/m4/studies/D_normal12_rd95_dt1/heat_path_checks.json",
+      "detail": "有符号功率、净积分与正向积分分开；不把串联轴承截面重复加总"
+    },
+    {
+      "id": "matched_sources",
+      "item": "相同网格时序的C-A制动附加响应",
+      "status": "PASS",
+      "evidence": "results/m4/source_mask_comparison_checks.json",
+      "detail": "区域最大值之差不等于逐点温差最大值"
+    },
+    {
+      "id": "M2_compare",
+      "item": "M2热容与首次制动比较",
+      "status": "PASS",
+      "evidence": "results/m4/M2_M4_first_brake_comparison.csv",
+      "detail": "边界、热容和拓扑不同；不是样机验证或降温效果认证"
+    },
+    {
+      "id": "inputs_archive",
+      "item": "四个生产候选原生输入压缩包与校验和",
+      "status": "PENDING",
+      "evidence": "results/m4/model_input/native_input_packages.json",
+      "detail": "大容量RTH/WBPJ/VF仅本地留存及哈希，不声称已作远程大文件归档"
+    },
+    {
+      "id": "reports",
+      "item": "MD/Word/PDF、可编辑公式与逐页视觉检查",
+      "status": "PASS",
+      "evidence": "results/m4/document_checks.json",
+      "detail": "正文更新后旧文档哈希自动失效，不能沿用旧视觉通过记录"
+    },
+    {
+      "id": "frozen",
+      "item": "M0–M3固定研究模型及结果未覆盖",
+      "status": "PASS",
+      "evidence": "git diff M3-v1.0 -- archived source/CAD/results",
+      "detail": ""
+    }
+  ],
+  "limitations": [
+    "所有温度均为S3概念预测；实际温度标定仍BLOCKED，不属于本轮数值通过的内容。",
+    "真实材料牌号、绕组复合/铁心方向性、温变、热接触、油膜及实际冷却未知。",
+    "只含部分辐射面与开口环境；未求解制动热空气回流，不能排序真实总成全部传热路径。",
+    "固定90/10盘片热量分配，无移动摩擦接触/闪温；约400°C摩擦片预测不代表测量或安全认证。",
+    "首周期/预热窗口不是六周期耐久峰值；高负载预热是给定热负荷。",
+    "空间细化主要覆盖盘面/片厚，时间细化只覆盖B制动及冷却；内部热源工况的全部空间与D预热阶段时间误差未独立证明。",
+    "电机内部损耗真实标定PARTIAL；斜齿损耗、空载拖曳、搅油与温度反馈未重新标定。",
+    "未经研究者批准不合并M4、不创建M4-v1.0、不进入M5。"
+  ],
+  "acceptance": "RESEARCHER_REVIEW_PENDING"
+}

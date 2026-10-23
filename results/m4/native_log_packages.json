@@ -1,0 +1,138 @@
+{
+  "results/m4/studies/A_internal_only_dt1/study.out.gz": {
+    "raw_bytes": 2189209,
+    "raw_sha256": "56201b3d09f276f33edaa2d6ed4612a2f717987abe76725d4e4314a33d2a12c0",
+    "gzip_bytes": 264044,
+    "gzip_sha256": "86eb01d4ac1d1781537efe724a4d3fdb86452722efa70dce623a1e23979a74ab",
+    "native_original": "E:\\ansys_runs\\m4_case0_20261021\\studies\\A_internal_only_dt1\\study.out",
+    "verification": "Native original matches; gzip round-trip identical; only redundant repository plaintext copy replaced."
+  },
+  "results/m4/studies/B_normal12_dt1_retry1/study.out.gz": {
+    "raw_bytes": 9686570,
+    "raw_sha256": "b2bca5d7f149562cb18b35bcb098cf3911b557aae4d7b52c753223017c10d1a2",
+    "gzip_bytes": 1594898,
+    "gzip_sha256": "61c9800db35dd109d61911047f500df421a33022405b9e5eb2d6d1dad6a558d7",
+    "native_original": "E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal12_dt1_retry1\\study.out",
+    "verification": "Native original matches; gzip round-trip identical; only redundant repository plaintext copy replaced."
+  },
+  "results/m4/studies/B_normal12_rd95h_dt1/study.out.gz": {
+    "raw_bytes": 9718056,
+    "raw_sha256": "a0287326475b57c72e388c0671730d0aa3ec613410a004c95d81dcd0b8a25c7c",
+    "gzip_bytes": 1597021,
+    "gzip_sha256": "2b1f5d0534ef0c4923ff9edef4da5f47db030575d522c748340dcebac924c4b7",
+    "native_original": "E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal12_rd95h_dt1\\study.out",
+    "verification": "Native original matches; gzip round-trip identical; only redundant repository plaintext copy replaced."
+  },
+  "results/m4/studies/B_normal12_rd95h_dt2/study.out.gz": {
+    "raw_bytes": 9773794,
+    "raw_sha256": "15440da7533734395ba8deac4c10a36c51274fac2ce38c9a80b9802084d036a7",
+    "gzip_bytes": 1600273,
+    "gzip_sha256": "a35ea27459d6bfd21513067389c581000e6c1aba3c31f7762fdd4ffe5442f19a",
+    "native_original": "E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal12_rd95h_dt2\\study.out",
+    "verification": "Native original matches; gzip round-trip identical; only redundant repository plaintext copy replaced."
+  },
+  "results/m4/studies/B_normal24_rd90h_dt1/study.out.gz": {
+    "raw_bytes": 32886205,
+    "raw_sha256": "0c6ac80ae16d3060d9faff7cf47e4dd2f3e583c2fe51de298f548d6a78519ef7",
+    "gzip_bytes": 4830093,
+    "gzip_sha256": "c4631eca025d761ae7cace4dffdd177fd2f00f8bbce78178eaa185d6ca944a5d",
+    "native_original": "E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal24_rd90h_dt1\\study.out",
+    "verification": "Native original matches; gzip round-trip identical; only redundant repository plaintext copy replaced."
+  },
+  "results/m4/studies/B_normal24_rd95h_dt1/study.out.gz": {
+    "raw_bytes": 32883645,
+    "raw_sha256": "021de3998ddab8a900bc9e2afa7fd910153ea024cda5deae93c70a59df1566f5",
+    "gzip_bytes": 4829957,
+    "gzip_sha256": "43167a19137a1d8efb1a3bec8b65c635a16627b1f056e65f4b697df66b6296e5",
+    "native_original": "E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal24_rd95h_dt1\\study.out",
+    "verification": "Native original matches; gzip round-trip identical; only redundant repository plaintext copy replaced."
+  },
+  "results/m4/studies/B_normal6_dt1/study.out.gz": {
+    "raw_bytes": 3588286,
+    "raw_sha256": "13a85397d9591cf76e4ae3ff87dd87deee0d9cb3544936ed4db4283422a739be",
+    "gzip_bytes": 544651,
+    "gzip_sha256": "3fd40eee475ddc95e82c6f2c1918c5d5b964f25932203e8467686d268b91672e",
+    "native_original": "E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal6_dt1\\study.out",
+    "verification": "Native original matches; gzip round-trip identical; only redundant repository plaintext copy replaced."
+  },
+  "results/m4/studies/C_combined_dt1_retry1/study.out.gz": {
+    "raw_bytes": 2199003,
+    "raw_sha256": "3029931a28825cd4f01af4855c8cf69733a51c83d3999d74d58e4c807387ce10",
+    "gzip_bytes": 265922,
+    "gzip_sha256": "2247fd95482aae96c6f94e583a8a8905683fba76389cfac6213f2a819b93c213",
+    "native_original": "E:\\ansys_runs\\m4_case0_20261021\\studies\\C_combined_dt1_retry1\\study.out",
+    "verification": "Native original matches; gzip round-trip identical; only redundant repository plaintext copy replaced."
+  },
+  "results/m4/studies/C_normal12_dt1/study.out.gz": {
+    "raw_bytes": 10126820,
+    "raw_sha256": "845b55b35a82b512cd7c4720ea3bc4dccdcc8b68afe23c383185475d4737d6a7",
+    "gzip_bytes": 1617310,
+    "gzip_sha256": "d7db2c159d58285a43671b79fc70d48692c4e02fd7dcd73ecffba90d354e1f87",
+    "native_original": "E:\\ansys_runs\\m4_case0_20261021\\studies\\C_normal12_dt1\\study.out",
+    "verification": "Native original matches; gzip round-trip identical; only redundant repository plaintext copy replaced."
+  },
+  "results/m4/studies/C_normal12_rd95_contact_low/study.out.gz": {
+    "raw_bytes": 10133404,
+    "raw_sha256": "40969a8359b82813c6dd185f27666a4fbd048c470c9d198a702f870ff0aa2a71",
+    "gzip_bytes": 1618568,
+    "gzip_sha256": "fd1d9a2cec9ed180b55e5d835d22b5a30aeddae1a79c0676aa84d9dccf6ff657",
+    "native_original": "E:\\ansys_runs\\m4_case0_20261021\\studies\\C_normal12_rd95_contact_low\\study.out",
+    "verification": "Native original matches; gzip round-trip identical; only redundant repository plaintext copy replaced."
+  },
+  "results/m4/studies/C_normal12_rd95_dt1/study.out.gz": {
+    "raw_bytes": 10122972,
+    "raw_sha256": "f2b25396d44e2f2aca7cb80c579b8f3143d6d81686169dcfc5290a0fe3146b3e",
+    "gzip_bytes": 1617508,
+    "gzip_sha256": "9c20e100900b96e574add8fd79912311cd447cf6147764f88c217db90d28b677",
+    "native_original": "E:\\ansys_runs\\m4_case0_20261021\\studies\\C_normal12_rd95_dt1\\study.out",
+    "verification": "Native original matches; gzip round-trip identical; only redundant repository plaintext copy replaced."
+  },
+  "results/m4/studies/D_normal12_rd95_dt1/study.out.gz": {
+    "raw_bytes": 10333728,
+    "raw_sha256": "35d9433983ea3fbb651b80e1cc09bc0ced39cefba7963a1c4c25f271e22605fa",
+    "gzip_bytes": 1625670,
+    "gzip_sha256": "5c3bc8f1f90a825109670b731a6d58bca2106e93338c6db93393848938c41244",
+    "native_original": "E:\\ansys_runs\\m4_case0_20261021\\studies\\D_normal12_rd95_dt1\\study.out",
+    "verification": "Native original matches; gzip round-trip identical; only redundant repository plaintext copy replaced."
+  },
+  "results/m4/studies/D_preheat_braking_dt1/study.out.gz": {
+    "raw_bytes": 2403392,
+    "raw_sha256": "bdc00162b37d44369594e974f2880dcb91284c600330f6c5041db1464f2bff05",
+    "gzip_bytes": 272736,
+    "gzip_sha256": "e3c62dd1efabdb3db43d28142c6627ed8ec6119c16f43f12a8c6a9a1e3062d10",
+    "native_original": "E:\\ansys_runs\\m4_case0_20261021\\studies\\D_preheat_braking_dt1\\study.out",
+    "verification": "Native original matches; gzip round-trip identical; only redundant repository plaintext copy replaced."
+  },
+  "results/m4/meshes/native_shape_normal12.out.gz": {
+    "raw_bytes": 9523389,
+    "raw_sha256": "e727091d5c8240e8fb5f201164adebd80bc96efbe6746f4082fa0f3889ef09de",
+    "gzip_bytes": 1580243,
+    "gzip_sha256": "4a9c75867f6915e9c370be2af9de8c631495b4107c4f60b13aac6b284374e113",
+    "native_original": "E:\\ansys_runs\\m4_case0_20261021\\shape_checks\\normal12\\audit.out",
+    "verification": "Native original matches; gzip round-trip identical; only redundant repository plaintext copy replaced."
+  },
+  "results/m4/meshes/native_shape_normal24.out.gz": {
+    "raw_bytes": 32717446,
+    "raw_sha256": "8a28ca5cb2206e08c70aa423c8c050907e6022ca81bd30a827dc676bf724d2d6",
+    "gzip_bytes": 4814755,
+    "gzip_sha256": "cfa4ab5cfa7a1f8aa7bdf399dfb838c6bca9763db974d9f3eec6cb40b33575f2",
+    "native_original": "E:\\ansys_runs\\m4_case0_20261021\\shape_checks\\normal24\\audit.out",
+    "verification": "Native original matches; gzip round-trip identical; only redundant repository plaintext copy replaced."
+  },
+  "results/m4/meshes/native_shape_normal6.out.gz": {
+    "raw_bytes": 3428914,
+    "raw_sha256": "c72d33c7bbaa91d48131d2e250ebb2b6291f0f7341518326b862f175155f4475",
+    "gzip_bytes": 530502,
+    "gzip_sha256": "ab7e97f9d48a62b689c8ae0e55016ee99d9f65859d6ea954185f03808b4e72f6",
+    "native_original": "E:\\ansys_runs\\m4_case0_20261021\\shape_checks\\normal6\\audit.out",
+    "verification": "Native original matches; gzip round-trip identical; only redundant repository plaintext copy replaced."
+  },
+  "results/m4/studies/A_normal12_rd95_dt1_retry1/study.out.gz": {
+    "raw_bytes": 10110732,
+    "raw_sha256": "28996c1c17bee54807a00cdd3680550dfb664f27332339aca6a3a60603b9c209",
+    "gzip_bytes": 1615647,
+    "gzip_sha256": "c297604003f338fdeed9b142a70fab30e107caeebc2852934c382cd60aa366b2",
+    "native_original": "E:\\ansys_runs\\m4_case0_20261021\\studies\\A_normal12_rd95_dt1_retry1\\study.out",
+    "verification": "Native original matches; gzip round-trip identical; only redundant repository plaintext copy replaced."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "version": "M4-Case0-numerical-checks-1",
+  "classification": "engineering_acceptance_thresholds_not_experimental_accuracy",
+  "declared_before_finest_results": "2026-10-21T18:35:00+08:00",
+  "energy_max_residual_fraction_of_total_input": 0.005,
+  "mesh_minimum_quality_screen": 0.01,
+  "mesh_mean_quality_screen": 0.5,
+  "peak_temperature_difference": {
+    "absolute_floor_K": 0.5,
+    "fraction_of_reference_rise": 0.03
+  },
+  "capacity_mean_temperature_difference": {
+    "absolute_floor_K": 0.25,
+    "fraction_of_reference_rise": 0.01
+  },
+  "rule": "Require three actual mesh levels and three actual time resolutions. Compare medium to finest for every retained solid region; a reference rise below the absolute floor does not establish accurate tiny coupling signals. Thresholds are engineering screens, not an observed formal asymptotic order or calibrated temperature error.",
+  "radiation_reduction_check": {
+    "temperature": "same as mesh criterion",
+    "net_radiation_energy_fraction": 0.05,
+    "absolute_floor_J": 0.1,
+    "scope": "Disc-only RDEC; case faces unreduced. Compare full/reduced medium and 90/95% reduced fine."
+  }
+}

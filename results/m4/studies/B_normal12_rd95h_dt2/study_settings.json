@@ -1,0 +1,45 @@
+{
+  "case": "B_BRAKE_ONLY_CONCEPT",
+  "classification": "S3_NOT_CALIBRATED",
+  "source_model": "Mechanical Case0 face-scoped",
+  "original_input": "E:\\ansys_runs\\m4_case0_20261021\\mesh_variants\\mesh_normal12\\mechanical_ds.dat",
+  "original_sha256": "27821beb3ff7b173e6c37db862d32e055a20fdb62e4a51c3c6647f45edf76d5b",
+  "duration_s": 33.7754370068335,
+  "expected_sets": 44,
+  "step_divisor": 2,
+  "source_energy_J": [
+    36226.72059035861,
+    4025.191176706512
+  ],
+  "physics_change": "None: output selection only; no whole-body contact fallback",
+  "run_command": "ANSYS241.exe -b -smp -np 2 -p ansys -j study -dir \"E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal12_time_base_dt2\" -i \"E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal12_time_base_dt2\\study.dat\" -o \"E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal12_time_base_dt2\\study.out\"",
+  "capacity_weights": "E:\\ChatGPT\u9879\u76ee\\\u9a71\u5236\u878d\u5408\u4e0b\u70ed\u8026\u5408\u5206\u6790\\results\\m4\\studies\\B_normal12_rd95h_dt2\\FE_capacity_weights.npz",
+  "radiation_reduction": 0.95,
+  "case_radiation_reduction": 0.0,
+  "nonlinear_heat_tolerance": 1e-06,
+  "radiosity_flux_tolerance": 0.0001,
+  "derived_from": "E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal12_time_base_dt2",
+  "derived_input_sha256": "aaa559850211bec0d2ced1a0c275a447068cd77854cdbe7a2fe2a65f71029c5d",
+  "status": "ACTUAL_NATIVE_COMPLETED_NOT_MECHANICAL_TREE_SOLVED",
+  "radiation_change": "Native RDEC applied to disc RSURF101 only; case RSURF102 un-decimated. Solid mesh, heat sources, TCC and cooling unchanged. Requires independent facet-reduction error check.",
+  "viewfactor_reuse_from": "E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal12_rd95h_dt1",
+  "viewfactor_reuse_condition": "Same original Mechanical input SHA; native complete zero-error source required before execution",
+  "cooldown_appended_s": 30,
+  "cooldown_step_s": 2.5,
+  "brake_duration_s": 3.7754370068334993,
+  "input_sha256": "aaa559850211bec0d2ced1a0c275a447068cd77854cdbe7a2fe2a65f71029c5d",
+  "legacy_input_hash_records": [
+    {
+      "values": {
+        "input_sha256": "d522af202c00d4a1c9b26d7049d1cf74e58b6f1a5cf5e0dc45204189fbe950d4",
+        "derived_input_sha256": "41aecd5f998b82dc09d60d3e14b15dec828bf18c0e1c2629d0ed4f102310a15e"
+      },
+      "reason": "Earlier generator used normalized text or retained a pre-edit digest; corrected to immutable current native input bytes."
+    }
+  ],
+  "actual_native_input_sha256": "aaa559850211bec0d2ced1a0c275a447068cd77854cdbe7a2fe2a65f71029c5d",
+  "input_hash_basis": "SHA256 of actual native study.dat bytes, including real line endings",
+  "viewfactor_sha256": "3e010d4b99f5f3688e551a9595ed8655d983a765853a3e29391aad62fc41d370",
+  "execution_status": "NATIVE_RUN_COMPLETED_ZERO_ERRORS",
+  "generation_status": "GENERATED_NOT_EXECUTED"
+}

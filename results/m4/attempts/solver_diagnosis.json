@@ -1,0 +1,640 @@
+{
+  "bodies": [
+    {
+      "state": "Meshed", 
+      "Material": "M4_S3_aluminium", 
+      "name": "motor_case|motor_case", 
+      "Suppressed": "False", 
+      "State": "Unknown", 
+      "type": "Body"
+    }, 
+    {
+      "state": "Meshed", 
+      "Material": "M4_S3_steel", 
+      "name": "motor_stator|motor_stator", 
+      "Suppressed": "False", 
+      "State": "Unknown", 
+      "type": "Body"
+    }, 
+    {
+      "state": "Meshed", 
+      "Material": "M4_S3_copper", 
+      "name": "motor_winding|motor_winding", 
+      "Suppressed": "False", 
+      "State": "Unknown", 
+      "type": "Body"
+    }, 
+    {
+      "state": "Meshed", 
+      "Material": "M4_S3_steel", 
+      "name": "motor_rotor_other|motor_rotor_other", 
+      "Suppressed": "False", 
+      "State": "Unknown", 
+      "type": "Body"
+    }, 
+    {
+      "state": "Meshed", 
+      "Material": "M4_S3_cast_iron", 
+      "name": "brake_disc_hat|brake_disc_hat", 
+      "Suppressed": "False", 
+      "State": "Unknown", 
+      "type": "Body"
+    }, 
+    {
+      "state": "Meshed", 
+      "Material": "M4_S3_pad", 
+      "name": "pad_near|pad_near", 
+      "Suppressed": "False", 
+      "State": "Unknown", 
+      "type": "Body"
+    }, 
+    {
+      "state": "Meshed", 
+      "Material": "M4_S3_pad", 
+      "name": "pad_far|pad_far", 
+      "Suppressed": "False", 
+      "State": "Unknown", 
+      "type": "Body"
+    }, 
+    {
+      "state": "Meshed", 
+      "Material": "M4_S3_steel", 
+      "name": "motor_rotor_shaft|motor_rotor_shaft", 
+      "Suppressed": "False", 
+      "State": "Unknown", 
+      "type": "Body"
+    }, 
+    {
+      "state": "Meshed", 
+      "Material": "M4_S3_steel", 
+      "name": "motor_input_coupling|motor_input_coupling", 
+      "Suppressed": "False", 
+      "State": "Unknown", 
+      "type": "Body"
+    }, 
+    {
+      "state": "FullyDefined", 
+      "Material": "M4_S3_aluminium", 
+      "name": "motor_gear_adapter|motor_gear_adapter", 
+      "Suppressed": "False", 
+      "State": "UpToDate", 
+      "type": "Body"
+    }, 
+    {
+      "state": "Meshed", 
+      "Material": "M4_S3_bearing_input", 
+      "name": "input_bearing_1|input_bearing_1", 
+      "Suppressed": "False", 
+      "State": "Unknown", 
+      "type": "Body"
+    }, 
+    {
+      "state": "Meshed", 
+      "Material": "M4_S3_bearing_input", 
+      "name": "input_bearing_2|input_bearing_2", 
+      "Suppressed": "False", 
+      "State": "Unknown", 
+      "type": "Body"
+    }, 
+    {
+      "state": "Meshed", 
+      "Material": "M4_S3_bearing_intermediate", 
+      "name": "intermediate_bearing_1|intermediate_bearing_1", 
+      "Suppressed": "False", 
+      "State": "Unknown", 
+      "type": "Body"
+    }, 
+    {
+      "state": "Meshed", 
+      "Material": "M4_S3_bearing_intermediate", 
+      "name": "intermediate_bearing_2|intermediate_bearing_2", 
+      "Suppressed": "False", 
+      "State": "Unknown", 
+      "type": "Body"
+    }, 
+    {
+      "state": "Meshed", 
+      "Material": "M4_S3_bearing_output", 
+      "name": "output_bearing_1|output_bearing_1", 
+      "Suppressed": "False", 
+      "State": "Unknown", 
+      "type": "Body"
+    }, 
+    {
+      "state": "Meshed", 
+      "Material": "M4_S3_bearing_output", 
+      "name": "output_bearing_2|output_bearing_2", 
+      "Suppressed": "False", 
+      "State": "Unknown", 
+      "type": "Body"
+    }, 
+    {
+      "state": "Meshed", 
+      "Material": "M4_S3_steel", 
+      "name": "stage1_gear|stage1_gear", 
+      "Suppressed": "False", 
+      "State": "Unknown", 
+      "type": "Body"
+    }, 
+    {
+      "state": "Meshed", 
+      "Material": "M4_S3_steel", 
+      "name": "stage2_gear|stage2_gear", 
+      "Suppressed": "False", 
+      "State": "Unknown", 
+      "type": "Body"
+    }, 
+    {
+      "state": "Meshed", 
+      "Material": "M4_S3_steel", 
+      "name": "disc_hub|disc_hub", 
+      "Suppressed": "False", 
+      "State": "Unknown", 
+      "type": "Body"
+    }, 
+    {
+      "state": "Meshed", 
+      "Material": "M4_S3_steel", 
+      "name": "hub_removable_sleeve|hub_removable_sleeve", 
+      "Suppressed": "False", 
+      "State": "Unknown", 
+      "type": "Body"
+    }, 
+    {
+      "state": "Meshed", 
+      "Material": "M4_S3_steel", 
+      "name": "input_shaft|input_shaft", 
+      "Suppressed": "False", 
+      "State": "Unknown", 
+      "type": "Body"
+    }, 
+    {
+      "state": "Meshed", 
+      "Material": "M4_S3_steel", 
+      "name": "intermediate_shaft|intermediate_shaft", 
+      "Suppressed": "False", 
+      "State": "Unknown", 
+      "type": "Body"
+    }, 
+    {
+      "state": "Meshed", 
+      "Material": "M4_S3_steel", 
+      "name": "output_shaft|output_shaft", 
+      "Suppressed": "False", 
+      "State": "Unknown", 
+      "type": "Body"
+    }, 
+    {
+      "state": "Meshed", 
+      "Material": "M4_S3_aluminium", 
+      "name": "caliper|caliper", 
+      "Suppressed": "False", 
+      "State": "Unknown", 
+      "type": "Body"
+    }, 
+    {
+      "state": "Meshed", 
+      "Material": "M4_S3_steel", 
+      "name": "caliper_reaction_bracket|caliper_reaction_bracket", 
+      "Suppressed": "False", 
+      "State": "Unknown", 
+      "type": "Body"
+    }, 
+    {
+      "state": "Meshed", 
+      "Material": "M4_S3_aluminium", 
+      "name": "gear_case_front|gear_case_front", 
+      "Suppressed": "False", 
+      "State": "Unknown", 
+      "type": "Body"
+    }, 
+    {
+      "state": "Meshed", 
+      "Material": "M4_S3_aluminium", 
+      "name": "gear_case_rear|gear_case_rear", 
+      "Suppressed": "False", 
+      "State": "Unknown", 
+      "type": "Body"
+    }, 
+    {
+      "state": "Meshed", 
+      "Material": "M4_S3_oil", 
+      "name": "oil_inventory|oil_inventory", 
+      "Suppressed": "False", 
+      "State": "Unknown", 
+      "type": "Body"
+    }, 
+    {
+      "state": "Meshed", 
+      "Material": "M4_S3_oil", 
+      "name": "oil_inventory|oil_inventory[2]", 
+      "Suppressed": "False", 
+      "State": "Unknown", 
+      "type": "Body"
+    }, 
+    {
+      "state": "Meshed", 
+      "Material": "M4_S3_oil", 
+      "name": "oil_inventory|oil_inventory[3]", 
+      "Suppressed": "False", 
+      "State": "Unknown", 
+      "type": "Body"
+    }
+  ], 
+  "mesh": {
+    "state": "NotSolved", 
+    "name": "\u7f51\u683c", 
+    "State": "OutOfDate", 
+    "type": "Mesh"
+  }, 
+  "analyses": [
+    {
+      "state": "NotSolved", 
+      "name": "M4_Case0_brake_only_DIAGNOSTIC", 
+      "AnalysisType": "Transient", 
+      "State": "OutOfDate", 
+      "type": "Analysis", 
+      "children": [
+        {
+          "state": "FullyDefined", 
+          "name": "\u521d\u59cb\u6e29\u5ea6", 
+          "Suppressed": "False", 
+          "State": "UpToDate", 
+          "type": "InitialCondition"
+        }, 
+        {
+          "state": "FullyDefined", 
+          "name": "\u5206\u6790\u8bbe\u7f6e", 
+          "State": "UpToDate", 
+          "type": "ANSYSAnalysisSettings"
+        }, 
+        {
+          "state": "FullyDefined", 
+          "name": "M1_brake_disc_hat_205", 
+          "Suppressed": "False", 
+          "State": "UpToDate", 
+          "type": "HeatFlow"
+        }, 
+        {
+          "state": "FullyDefined", 
+          "name": "M1_brake_disc_hat_227", 
+          "Suppressed": "False", 
+          "State": "UpToDate", 
+          "type": "HeatFlow"
+        }, 
+        {
+          "state": "FullyDefined", 
+          "name": "M1_pad_near_204.5", 
+          "Suppressed": "False", 
+          "State": "UpToDate", 
+          "type": "HeatFlow"
+        }, 
+        {
+          "state": "FullyDefined", 
+          "name": "M1_pad_far_227.5", 
+          "Suppressed": "False", 
+          "State": "UpToDate", 
+          "type": "HeatFlow"
+        }, 
+        {
+          "state": "FullyDefined", 
+          "name": "S3_finite_ambient", 
+          "Suppressed": "False", 
+          "State": "UpToDate", 
+          "type": "Convection"
+        }, 
+        {
+          "state": "FullyDefined", 
+          "name": "S3_finite_jacket", 
+          "Suppressed": "False", 
+          "State": "UpToDate", 
+          "type": "Convection"
+        }, 
+        {
+          "state": "FullyDefined", 
+          "name": "Open_pair_disc", 
+          "Suppressed": "False", 
+          "State": "UpToDate", 
+          "type": "Radiation"
+        }, 
+        {
+          "state": "FullyDefined", 
+          "name": "Open_pair_case", 
+          "Suppressed": "False", 
+          "State": "UpToDate", 
+          "type": "Radiation"
+        }, 
+        {
+          "state": "NotSolved", 
+          "name": "\u6c42\u89e3", 
+          "State": "OutOfDate", 
+          "type": "Solution"
+        }
+      ]
+    }, 
+    {
+      "state": "UnderDefined", 
+      "name": "\u77ac\u6001\u70ed 2", 
+      "AnalysisType": "Transient", 
+      "State": "Unfulfilled", 
+      "type": "Analysis", 
+      "children": [
+        {
+          "state": "FullyDefined", 
+          "name": "\u521d\u59cb\u6e29\u5ea6", 
+          "Suppressed": "False", 
+          "State": "UpToDate", 
+          "type": "InitialCondition"
+        }, 
+        {
+          "state": "FullyDefined", 
+          "name": "\u5206\u6790\u8bbe\u7f6e", 
+          "State": "UpToDate", 
+          "type": "ANSYSAnalysisSettings"
+        }, 
+        {
+          "state": "UnderDefined", 
+          "name": "\u6c42\u89e3", 
+          "State": "Unfulfilled", 
+          "type": "Solution"
+        }
+      ]
+    }
+  ], 
+  "messages": [
+    {
+      "severity": "Error", 
+      "text": "\u7f51\u683c\u5256\u5206\u5668\u672a\u80fd\u751f\u6210\u5408\u683c\u8d28\u91cf\u7684\u7f51\u683c\u3002\u5c1d\u8bd5\u4f7f\u7528\u4e0d\u540c\u7684\u5355\u5143\u5c3a\u5bf8\u6216\u865a\u62df\u62d3\u6251\u3002"
+    }, 
+    {
+      "severity": "Error", 
+      "text": "\u8868\u9762\u7f51\u683c\u5256\u5206\u6210\u529f\uff0c\u4f46\u56db\u9762\u4f53\u7f51\u683c\u5256\u5206\u5931\u8d25\u3002"
+    }, 
+    {
+      "severity": "Error", 
+      "text": "\u95ee\u9898\u51e0\u4f55\u4f53\u4e0a\u7684\u4e00\u4e9b\u5355\u5143\u4e0d\u7b26\u5408\u6307\u5b9a\u7684\u76ee\u6807\u6307\u6807\u3002\u8bf7\u68c0\u67e5\u5355\u5143\u5e76\u5c1d\u8bd5\u6539\u53d8\u7f51\u683c\u5c3a\u5bf8\u8bbe\u7f6e\uff0c\u4ee5\u6ee1\u8db3\u6240\u9700\u7684\u7f51\u683c\u8d28\u91cf\u3002"
+    }, 
+    {
+      "severity": "Error", 
+      "text": "\u5f53\u524d\u7f51\u683c\u5256\u5206\u9009\u9879\u4e0e\u8bbe\u7f6e\u65e0\u6cd5\u751f\u6210\u7f51\u683c\u3002"
+    }
+  ], 
+  "contacts": [
+    {
+      "state": "FullyDefined", 
+      "Material": "", 
+      "name": "\u7ed1\u5b9a - brake_disc_hat|brake_disc_hat \u81f3 disc_hub|disc_hub", 
+      "Suppressed": "False", 
+      "State": "UpToDate", 
+      "type": "ContactRegion"
+    }, 
+    {
+      "state": "FullyDefined", 
+      "Material": "", 
+      "name": "\u7ed1\u5b9a - disc_hub|disc_hub \u81f3 hub_removable_sleeve|hub_removable_sleeve", 
+      "Suppressed": "False", 
+      "State": "UpToDate", 
+      "type": "ContactRegion"
+    }, 
+    {
+      "state": "FullyDefined", 
+      "Material": "", 
+      "name": "\u7ed1\u5b9a - hub_removable_sleeve|hub_removable_sleeve \u81f3 output_shaft|output_shaft", 
+      "Suppressed": "False", 
+      "State": "UpToDate", 
+      "type": "ContactRegion"
+    }, 
+    {
+      "state": "FullyDefined", 
+      "Material": "", 
+      "name": "\u7ed1\u5b9a - gear_case_front|gear_case_front \u81f3 gear_case_rear|gear_case_rear", 
+      "Suppressed": "False", 
+      "State": "UpToDate", 
+      "type": "ContactRegion"
+    }, 
+    {
+      "state": "FullyDefined", 
+      "Material": "", 
+      "name": "\u7ed1\u5b9a - gear_case_front|gear_case_front \u81f3 motor_gear_adapter|motor_gear_adapter", 
+      "Suppressed": "False", 
+      "State": "UpToDate", 
+      "type": "ContactRegion"
+    }, 
+    {
+      "state": "FullyDefined", 
+      "Material": "", 
+      "name": "\u7ed1\u5b9a - motor_gear_adapter|motor_gear_adapter \u81f3 motor_case|motor_case", 
+      "Suppressed": "False", 
+      "State": "UpToDate", 
+      "type": "ContactRegion"
+    }, 
+    {
+      "state": "FullyDefined", 
+      "Material": "", 
+      "name": "\u7ed1\u5b9a - motor_case|motor_case \u81f3 motor_stator|motor_stator", 
+      "Suppressed": "False", 
+      "State": "UpToDate", 
+      "type": "ContactRegion"
+    }, 
+    {
+      "state": "FullyDefined", 
+      "Material": "", 
+      "name": "\u7ed1\u5b9a - motor_stator|motor_stator \u81f3 motor_winding|motor_winding", 
+      "Suppressed": "False", 
+      "State": "UpToDate", 
+      "type": "ContactRegion"
+    }, 
+    {
+      "state": "FullyDefined", 
+      "Material": "", 
+      "name": "\u7ed1\u5b9a - motor_rotor_other|motor_rotor_other \u81f3 motor_stator|motor_stator", 
+      "Suppressed": "False", 
+      "State": "UpToDate", 
+      "type": "ContactRegion"
+    }, 
+    {
+      "state": "FullyDefined", 
+      "Material": "", 
+      "name": "\u7ed1\u5b9a - motor_rotor_shaft|motor_rotor_shaft \u81f3 motor_rotor_other|motor_rotor_other", 
+      "Suppressed": "False", 
+      "State": "UpToDate", 
+      "type": "ContactRegion"
+    }, 
+    {
+      "state": "FullyDefined", 
+      "Material": "", 
+      "name": "\u7ed1\u5b9a - motor_rotor_shaft|motor_rotor_shaft \u81f3 motor_input_coupling|motor_input_coupling", 
+      "Suppressed": "False", 
+      "State": "UpToDate", 
+      "type": "ContactRegion"
+    }, 
+    {
+      "state": "FullyDefined", 
+      "Material": "", 
+      "name": "\u7ed1\u5b9a - motor_input_coupling|motor_input_coupling \u81f3 input_shaft|input_shaft", 
+      "Suppressed": "False", 
+      "State": "UpToDate", 
+      "type": "ContactRegion"
+    }, 
+    {
+      "state": "FullyDefined", 
+      "Material": "", 
+      "name": "\u7ed1\u5b9a - intermediate_shaft|intermediate_shaft \u81f3 stage1_gear|stage1_gear", 
+      "Suppressed": "False", 
+      "State": "UpToDate", 
+      "type": "ContactRegion"
+    }, 
+    {
+      "state": "FullyDefined", 
+      "Material": "", 
+      "name": "\u7ed1\u5b9a - output_shaft|output_shaft \u81f3 stage2_gear|stage2_gear", 
+      "Suppressed": "False", 
+      "State": "UpToDate", 
+      "type": "ContactRegion"
+    }, 
+    {
+      "state": "FullyDefined", 
+      "Material": "", 
+      "name": "\u7ed1\u5b9a - gear_case_rear|gear_case_rear \u81f3 caliper_reaction_bracket|caliper_reaction_bracket", 
+      "Suppressed": "False", 
+      "State": "UpToDate", 
+      "type": "ContactRegion"
+    }, 
+    {
+      "state": "FullyDefined", 
+      "Material": "", 
+      "name": "\u7ed1\u5b9a - caliper_reaction_bracket|caliper_reaction_bracket \u81f3 caliper|caliper", 
+      "Suppressed": "False", 
+      "State": "UpToDate", 
+      "type": "ContactRegion"
+    }, 
+    {
+      "state": "FullyDefined", 
+      "Material": "", 
+      "name": "\u7ed1\u5b9a - caliper|caliper \u81f3 pad_near|pad_near", 
+      "Suppressed": "False", 
+      "State": "UpToDate", 
+      "type": "ContactRegion"
+    }, 
+    {
+      "state": "FullyDefined", 
+      "Material": "", 
+      "name": "\u7ed1\u5b9a - caliper|caliper \u81f3 pad_far|pad_far", 
+      "Suppressed": "False", 
+      "State": "UpToDate", 
+      "type": "ContactRegion"
+    }, 
+    {
+      "state": "FullyDefined", 
+      "Material": "", 
+      "name": "\u7ed1\u5b9a - \u591a\u4e2a \u81f3 gear_case_rear|gear_case_rear", 
+      "Suppressed": "False", 
+      "State": "UpToDate", 
+      "type": "ContactRegion"
+    }, 
+    {
+      "state": "FullyDefined", 
+      "Material": "", 
+      "name": "\u7ed1\u5b9a - \u591a\u4e2a \u81f3 stage2_gear|stage2_gear", 
+      "Suppressed": "False", 
+      "State": "UpToDate", 
+      "type": "ContactRegion"
+    }, 
+    {
+      "state": "FullyDefined", 
+      "Material": "", 
+      "name": "\u7ed1\u5b9a - input_shaft|input_shaft \u81f3 input_bearing_1|input_bearing_1", 
+      "Suppressed": "False", 
+      "State": "UpToDate", 
+      "type": "ContactRegion"
+    }, 
+    {
+      "state": "FullyDefined", 
+      "Material": "", 
+      "name": "\u7ed1\u5b9a - input_bearing_1|input_bearing_1 \u81f3 gear_case_front|gear_case_front", 
+      "Suppressed": "False", 
+      "State": "UpToDate", 
+      "type": "ContactRegion"
+    }, 
+    {
+      "state": "FullyDefined", 
+      "Material": "", 
+      "name": "\u7ed1\u5b9a - input_shaft|input_shaft \u81f3 input_bearing_2|input_bearing_2", 
+      "Suppressed": "False", 
+      "State": "UpToDate", 
+      "type": "ContactRegion"
+    }, 
+    {
+      "state": "FullyDefined", 
+      "Material": "", 
+      "name": "\u7ed1\u5b9a - input_bearing_2|input_bearing_2 \u81f3 gear_case_rear|gear_case_rear", 
+      "Suppressed": "False", 
+      "State": "UpToDate", 
+      "type": "ContactRegion"
+    }, 
+    {
+      "state": "FullyDefined", 
+      "Material": "", 
+      "name": "\u7ed1\u5b9a - intermediate_shaft|intermediate_shaft \u81f3 intermediate_bearing_1|intermediate_bearing_1", 
+      "Suppressed": "False", 
+      "State": "UpToDate", 
+      "type": "ContactRegion"
+    }, 
+    {
+      "state": "FullyDefined", 
+      "Material": "", 
+      "name": "\u7ed1\u5b9a - intermediate_bearing_1|intermediate_bearing_1 \u81f3 gear_case_front|gear_case_front", 
+      "Suppressed": "False", 
+      "State": "UpToDate", 
+      "type": "ContactRegion"
+    }, 
+    {
+      "state": "FullyDefined", 
+      "Material": "", 
+      "name": "\u7ed1\u5b9a - intermediate_shaft|intermediate_shaft \u81f3 intermediate_bearing_2|intermediate_bearing_2", 
+      "Suppressed": "False", 
+      "State": "UpToDate", 
+      "type": "ContactRegion"
+    }, 
+    {
+      "state": "FullyDefined", 
+      "Material": "", 
+      "name": "\u7ed1\u5b9a - intermediate_bearing_2|intermediate_bearing_2 \u81f3 gear_case_rear|gear_case_rear", 
+      "Suppressed": "False", 
+      "State": "UpToDate", 
+      "type": "ContactRegion"
+    }, 
+    {
+      "state": "FullyDefined", 
+      "Material": "", 
+      "name": "\u7ed1\u5b9a - output_shaft|output_shaft \u81f3 output_bearing_1|output_bearing_1", 
+      "Suppressed": "False", 
+      "State": "UpToDate", 
+      "type": "ContactRegion"
+    }, 
+    {
+      "state": "FullyDefined", 
+      "Material": "", 
+      "name": "\u7ed1\u5b9a - output_bearing_1|output_bearing_1 \u81f3 gear_case_front|gear_case_front", 
+      "Suppressed": "False", 
+      "State": "UpToDate", 
+      "type": "ContactRegion"
+    }, 
+    {
+      "state": "FullyDefined", 
+      "Material": "", 
+      "name": "\u7ed1\u5b9a - output_shaft|output_shaft \u81f3 output_bearing_2|output_bearing_2", 
+      "Suppressed": "False", 
+      "State": "UpToDate", 
+      "type": "ContactRegion"
+    }, 
+    {
+      "state": "FullyDefined", 
+      "Material": "", 
+      "name": "\u7ed1\u5b9a - output_bearing_2|output_bearing_2 \u81f3 gear_case_rear|gear_case_rear", 
+      "Suppressed": "False", 
+      "State": "UpToDate", 
+      "type": "ContactRegion"
+    }
+  ]
+}

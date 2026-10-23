@@ -1,0 +1,2137 @@
+{
+  "mesh": {
+    "status": "PASS_ENGINEERING_THRESHOLD",
+    "comparison": [
+      {
+        "part": "M4_BRAKE_DISC_HAT",
+        "metric": "maximum",
+        "coarse_C": 54.285857881987276,
+        "medium_C": 53.25182947810711,
+        "fine_C": 53.06164541659909,
+        "delta_K": 0.19018406150802036,
+        "limit_K": 0.8418493624979727,
+        "passed": true
+      },
+      {
+        "part": "M4_BRAKE_DISC_HAT",
+        "metric": "capacity_weighted_mean",
+        "coarse_C": 40.20582874866535,
+        "medium_C": 40.202914252747405,
+        "fine_C": 40.206808982129644,
+        "delta_K": 0.003894729382238893,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_CALIPER",
+        "metric": "maximum",
+        "coarse_C": 25.01099907608847,
+        "medium_C": 25.00823866559596,
+        "fine_C": 25.0075070649191,
+        "delta_K": 0.0007316006768611771,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_CALIPER",
+        "metric": "capacity_weighted_mean",
+        "coarse_C": 25.00095539558742,
+        "medium_C": 25.000695896172743,
+        "fine_C": 25.000628107418006,
+        "delta_K": 6.77887547375633e-05,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_CALIPER_REACTION_BRACKET",
+        "metric": "maximum",
+        "coarse_C": 25.0006485681552,
+        "medium_C": 25.000687788749897,
+        "fine_C": 25.000718789221246,
+        "delta_K": 3.100047134907413e-05,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_CALIPER_REACTION_BRACKET",
+        "metric": "capacity_weighted_mean",
+        "coarse_C": 25.000113724480435,
+        "medium_C": 25.00012263367286,
+        "fine_C": 25.000129886138907,
+        "delta_K": 7.2524660481576575e-06,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_DISC_HUB",
+        "metric": "maximum",
+        "coarse_C": 25.004513224994188,
+        "medium_C": 25.003926501764425,
+        "fine_C": 25.00304887907395,
+        "delta_K": 0.0008776226904743112,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_DISC_HUB",
+        "metric": "capacity_weighted_mean",
+        "coarse_C": 25.000183181374926,
+        "medium_C": 25.0001416143266,
+        "fine_C": 25.00011724784423,
+        "delta_K": 2.4366482371362963e-05,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_GEAR_CASE_FRONT",
+        "metric": "maximum",
+        "coarse_C": 25.00000019221711,
+        "medium_C": 25.000000227815562,
+        "fine_C": 25.00000026363173,
+        "delta_K": 3.5816167809343824e-08,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_GEAR_CASE_FRONT",
+        "metric": "capacity_weighted_mean",
+        "coarse_C": 25.000000000608242,
+        "medium_C": 25.000000000820403,
+        "fine_C": 25.000000001038405,
+        "delta_K": 2.1800161675855634e-10,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_GEAR_CASE_REAR",
+        "metric": "maximum",
+        "coarse_C": 25.00978226608518,
+        "medium_C": 25.010217100628815,
+        "fine_C": 25.010457482875108,
+        "delta_K": 0.00024038224629308047,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_GEAR_CASE_REAR",
+        "metric": "capacity_weighted_mean",
+        "coarse_C": 25.001624811182005,
+        "medium_C": 25.001698268558805,
+        "fine_C": 25.001749322209058,
+        "delta_K": 5.105365025315223e-05,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_HUB_REMOVABLE_SLEEVE",
+        "metric": "maximum",
+        "coarse_C": 25.000000026001842,
+        "medium_C": 25.00000001234149,
+        "fine_C": 25.000000006020045,
+        "delta_K": 6.3214464773864165e-09,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_HUB_REMOVABLE_SLEEVE",
+        "metric": "capacity_weighted_mean",
+        "coarse_C": 24.999999999999883,
+        "medium_C": 24.999999999999982,
+        "fine_C": 24.999999999999947,
+        "delta_K": 3.552713678800501e-14,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_INPUT_BEARING_1",
+        "metric": "maximum",
+        "coarse_C": 25.0,
+        "medium_C": 25.0,
+        "fine_C": 25.0,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_INPUT_BEARING_1",
+        "metric": "capacity_weighted_mean",
+        "coarse_C": 24.999999999999996,
+        "medium_C": 24.999999999999993,
+        "fine_C": 25.000000000000004,
+        "delta_K": 1.0658141036401503e-14,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_INPUT_BEARING_2",
+        "metric": "maximum",
+        "coarse_C": 25.00080890782437,
+        "medium_C": 25.000864491154697,
+        "fine_C": 25.000914413119183,
+        "delta_K": 4.992196448583286e-05,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_INPUT_BEARING_2",
+        "metric": "capacity_weighted_mean",
+        "coarse_C": 25.00011287262803,
+        "medium_C": 25.000123551845913,
+        "fine_C": 25.000132977450402,
+        "delta_K": 9.425604488910722e-06,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_INPUT_SHAFT",
+        "metric": "maximum",
+        "coarse_C": 25.000001521873678,
+        "medium_C": 25.000001758971983,
+        "fine_C": 25.000001979238156,
+        "delta_K": 2.2026617330084264e-07,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_INPUT_SHAFT",
+        "metric": "capacity_weighted_mean",
+        "coarse_C": 25.000000035771716,
+        "medium_C": 25.000000042044245,
+        "fine_C": 25.000000048133128,
+        "delta_K": 6.088882287258457e-09,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_INTERMEDIATE_BEARING_1",
+        "metric": "maximum",
+        "coarse_C": 25.0,
+        "medium_C": 25.0,
+        "fine_C": 25.0,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_INTERMEDIATE_BEARING_1",
+        "metric": "capacity_weighted_mean",
+        "coarse_C": 24.999999999999996,
+        "medium_C": 24.999999999999996,
+        "fine_C": 24.999999999999996,
+        "delta_K": 0.0,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_INTERMEDIATE_BEARING_2",
+        "metric": "maximum",
+        "coarse_C": 25.00075962964232,
+        "medium_C": 25.000811351222698,
+        "fine_C": 25.000853724560898,
+        "delta_K": 4.237333820000799e-05,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_INTERMEDIATE_BEARING_2",
+        "metric": "capacity_weighted_mean",
+        "coarse_C": 25.000107740698397,
+        "medium_C": 25.000117609106784,
+        "fine_C": 25.00012609134385,
+        "delta_K": 8.482237067397591e-06,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_INTERMEDIATE_SHAFT",
+        "metric": "maximum",
+        "coarse_C": 25.000000599343895,
+        "medium_C": 25.000000700176056,
+        "fine_C": 25.000000785066177,
+        "delta_K": 8.489012159884624e-08,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_INTERMEDIATE_SHAFT",
+        "metric": "capacity_weighted_mean",
+        "coarse_C": 25.000000013398655,
+        "medium_C": 25.000000015742387,
+        "fine_C": 25.000000018001813,
+        "delta_K": 2.259426423734112e-09,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_CASE",
+        "metric": "maximum",
+        "coarse_C": 25.00000000001453,
+        "medium_C": 25.00000000001453,
+        "fine_C": 25.00000000001453,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_CASE",
+        "metric": "capacity_weighted_mean",
+        "coarse_C": 25.000000000004537,
+        "medium_C": 25.000000000004537,
+        "fine_C": 25.000000000004537,
+        "delta_K": 0.0,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_GEAR_ADAPTER",
+        "metric": "maximum",
+        "coarse_C": 25.00000000000006,
+        "medium_C": 25.00000000000006,
+        "fine_C": 25.00000000000006,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_GEAR_ADAPTER",
+        "metric": "capacity_weighted_mean",
+        "coarse_C": 25.000000000000004,
+        "medium_C": 25.000000000000007,
+        "fine_C": 25.000000000000004,
+        "delta_K": 3.552713678800501e-15,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_INPUT_COUPLING",
+        "metric": "maximum",
+        "coarse_C": 25.0,
+        "medium_C": 25.0,
+        "fine_C": 25.0,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_INPUT_COUPLING",
+        "metric": "capacity_weighted_mean",
+        "coarse_C": 24.999999999999996,
+        "medium_C": 24.999999999999996,
+        "fine_C": 25.000000000000004,
+        "delta_K": 7.105427357601002e-15,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_ROTOR_OTHER",
+        "metric": "maximum",
+        "coarse_C": 25.0,
+        "medium_C": 25.0,
+        "fine_C": 25.0,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_ROTOR_OTHER",
+        "metric": "capacity_weighted_mean",
+        "coarse_C": 25.000000000000004,
+        "medium_C": 25.000000000000004,
+        "fine_C": 25.0,
+        "delta_K": 3.552713678800501e-15,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_ROTOR_SHAFT",
+        "metric": "maximum",
+        "coarse_C": 25.0,
+        "medium_C": 25.0,
+        "fine_C": 25.0,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_ROTOR_SHAFT",
+        "metric": "capacity_weighted_mean",
+        "coarse_C": 24.999999999999996,
+        "medium_C": 24.999999999999996,
+        "fine_C": 24.999999999999993,
+        "delta_K": 3.552713678800501e-15,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_STATOR",
+        "metric": "maximum",
+        "coarse_C": 25.000000000000696,
+        "medium_C": 25.000000000000696,
+        "fine_C": 25.000000000000696,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_STATOR",
+        "metric": "capacity_weighted_mean",
+        "coarse_C": 25.000000000000117,
+        "medium_C": 25.000000000000114,
+        "fine_C": 25.000000000000117,
+        "delta_K": 3.552713678800501e-15,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_WINDING",
+        "metric": "maximum",
+        "coarse_C": 25.000000000000004,
+        "medium_C": 25.000000000000004,
+        "fine_C": 25.000000000000004,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_WINDING",
+        "metric": "capacity_weighted_mean",
+        "coarse_C": 25.0,
+        "medium_C": 25.0,
+        "fine_C": 25.000000000000004,
+        "delta_K": 3.552713678800501e-15,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_OIL_INVENTORY",
+        "metric": "maximum",
+        "coarse_C": 25.00002654212196,
+        "medium_C": 25.000030097787423,
+        "fine_C": 25.000033247709762,
+        "delta_K": 3.1499223389630515e-06,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_OIL_INVENTORY",
+        "metric": "capacity_weighted_mean",
+        "coarse_C": 25.000000257716756,
+        "medium_C": 25.00000029178838,
+        "fine_C": 25.000000323184732,
+        "delta_K": 3.139635396109952e-08,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_OUTPUT_BEARING_1",
+        "metric": "maximum",
+        "coarse_C": 25.0,
+        "medium_C": 25.0,
+        "fine_C": 25.0,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_OUTPUT_BEARING_1",
+        "metric": "capacity_weighted_mean",
+        "coarse_C": 25.000000000000004,
+        "medium_C": 25.0,
+        "fine_C": 25.000000000000004,
+        "delta_K": 3.552713678800501e-15,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_OUTPUT_BEARING_2",
+        "metric": "maximum",
+        "coarse_C": 25.00040222950458,
+        "medium_C": 25.00044463903824,
+        "fine_C": 25.000456783504085,
+        "delta_K": 1.2144465845409513e-05,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_OUTPUT_BEARING_2",
+        "metric": "capacity_weighted_mean",
+        "coarse_C": 25.000076575499733,
+        "medium_C": 25.00008490365349,
+        "fine_C": 25.000090943518966,
+        "delta_K": 6.039865475315764e-06,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_OUTPUT_SHAFT",
+        "metric": "maximum",
+        "coarse_C": 25.00000032705262,
+        "medium_C": 25.0000003855563,
+        "fine_C": 25.000000431192095,
+        "delta_K": 4.5635793810561154e-08,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_OUTPUT_SHAFT",
+        "metric": "capacity_weighted_mean",
+        "coarse_C": 25.000000006266156,
+        "medium_C": 25.00000000750502,
+        "fine_C": 25.000000008525213,
+        "delta_K": 1.020193707290673e-09,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_PAD_FAR",
+        "metric": "maximum",
+        "coarse_C": 382.06414429505554,
+        "medium_C": 400.4123384363038,
+        "fine_C": 401.69570054777734,
+        "delta_K": 1.2833621114735365,
+        "limit_K": 11.30087101643332,
+        "passed": true
+      },
+      {
+        "part": "M4_PAD_FAR",
+        "metric": "capacity_weighted_mean",
+        "coarse_C": 91.64642627082806,
+        "medium_C": 91.65005088260322,
+        "fine_C": 91.65099770686082,
+        "delta_K": 0.0009468242575962904,
+        "limit_K": 0.6665099770686083,
+        "passed": true
+      },
+      {
+        "part": "M4_PAD_NEAR",
+        "metric": "maximum",
+        "coarse_C": 382.06414429506265,
+        "medium_C": 400.41233843630533,
+        "fine_C": 401.6957005477803,
+        "delta_K": 1.2833621114749576,
+        "limit_K": 11.300871016433408,
+        "passed": true
+      },
+      {
+        "part": "M4_PAD_NEAR",
+        "metric": "capacity_weighted_mean",
+        "coarse_C": 91.64642686212837,
+        "medium_C": 91.6500512905324,
+        "fine_C": 91.65099806815734,
+        "delta_K": 0.0009467776249323379,
+        "limit_K": 0.6665099806815734,
+        "passed": true
+      },
+      {
+        "part": "M4_STAGE1_GEAR",
+        "metric": "maximum",
+        "coarse_C": 25.000000000000004,
+        "medium_C": 25.000000000000004,
+        "fine_C": 25.000000000000004,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_STAGE1_GEAR",
+        "metric": "capacity_weighted_mean",
+        "coarse_C": 25.000000000000004,
+        "medium_C": 25.000000000000004,
+        "fine_C": 25.000000000000004,
+        "delta_K": 0.0,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_STAGE2_GEAR",
+        "metric": "maximum",
+        "coarse_C": 25.0000000000443,
+        "medium_C": 25.000000000056104,
+        "fine_C": 25.00000000006439,
+        "delta_K": 8.284928298962768e-12,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_STAGE2_GEAR",
+        "metric": "capacity_weighted_mean",
+        "coarse_C": 25.000000000000227,
+        "medium_C": 25.000000000000284,
+        "fine_C": 25.000000000000338,
+        "delta_K": 5.3290705182007514e-14,
+        "limit_K": 0.25,
+        "passed": true
+      }
+    ],
+    "definition": "Require three actual mesh levels and three actual time resolutions. Compare medium to finest for every retained solid region; a reference rise below the absolute floor does not establish accurate tiny coupling signals. Thresholds are engineering screens, not an observed formal asymptotic order or calibrated temperature error."
+  },
+  "time": {
+    "status": "PENDING",
+    "required": [
+      "B_normal12_rd95h_dt1",
+      "B_normal12_rd95h_dt2",
+      "B_normal12_rd95h_dt4_retry1"
+    ],
+    "available": [
+      "B_normal12_rd95h_dt1",
+      "B_normal12_rd95h_dt2"
+    ]
+  },
+  "radiation_facets_fine": {
+    "status": "PASS_ENGINEERING_THRESHOLD",
+    "comparison": [
+      {
+        "part": "M4_BRAKE_DISC_HAT",
+        "metric": "maximum",
+        "reference_C": 53.061632060777804,
+        "reduced_C": 53.06164541659909,
+        "delta_K": 1.3355821288030256e-05,
+        "limit_K": 0.8418493624979727,
+        "passed": true
+      },
+      {
+        "part": "M4_BRAKE_DISC_HAT",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 40.20680792805817,
+        "reduced_C": 40.206808982129644,
+        "delta_K": 1.0540714754370129e-06,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_CALIPER",
+        "metric": "maximum",
+        "reference_C": 25.007507064922066,
+        "reduced_C": 25.0075070649191,
+        "delta_K": 2.9665159217984183e-12,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_CALIPER",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.000628107460905,
+        "reduced_C": 25.000628107418006,
+        "delta_K": 4.289901767151605e-11,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_CALIPER_REACTION_BRACKET",
+        "metric": "maximum",
+        "reference_C": 25.000720218797486,
+        "reduced_C": 25.000718789221246,
+        "delta_K": 1.4295762404969992e-06,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_CALIPER_REACTION_BRACKET",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.00013037645944,
+        "reduced_C": 25.000129886138907,
+        "delta_K": 4.903205308437464e-07,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_DISC_HUB",
+        "metric": "maximum",
+        "reference_C": 25.003048879231372,
+        "reduced_C": 25.00304887907395,
+        "delta_K": 1.574207431076502e-10,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_DISC_HUB",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.000117247834893,
+        "reduced_C": 25.00011724784423,
+        "delta_K": 9.336531547887716e-12,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_GEAR_CASE_FRONT",
+        "metric": "maximum",
+        "reference_C": 25.000000264104944,
+        "reduced_C": 25.00000026363173,
+        "delta_K": 4.732143565888691e-10,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_GEAR_CASE_FRONT",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.00000000104224,
+        "reduced_C": 25.000000001038405,
+        "delta_K": 3.8333780594257405e-12,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_GEAR_CASE_REAR",
+        "metric": "maximum",
+        "reference_C": 25.010504023006956,
+        "reduced_C": 25.010457482875108,
+        "delta_K": 4.6540131847905286e-05,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_GEAR_CASE_REAR",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.001754288686275,
+        "reduced_C": 25.001749322209058,
+        "delta_K": 4.9664772170388005e-06,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_HUB_REMOVABLE_SLEEVE",
+        "metric": "maximum",
+        "reference_C": 25.00000000602027,
+        "reduced_C": 25.000000006020045,
+        "delta_K": 2.2382096176443156e-13,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_HUB_REMOVABLE_SLEEVE",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 24.99999999999995,
+        "reduced_C": 24.999999999999947,
+        "delta_K": 3.552713678800501e-15,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_INPUT_BEARING_1",
+        "metric": "maximum",
+        "reference_C": 25.0,
+        "reduced_C": 25.0,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_INPUT_BEARING_1",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.0,
+        "reduced_C": 25.000000000000004,
+        "delta_K": 3.552713678800501e-15,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_INPUT_BEARING_2",
+        "metric": "maximum",
+        "reference_C": 25.00091254454736,
+        "reduced_C": 25.000914413119183,
+        "delta_K": 1.8685718217170688e-06,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_INPUT_BEARING_2",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.000132957122776,
+        "reduced_C": 25.000132977450402,
+        "delta_K": 2.0327625804839045e-08,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_INPUT_SHAFT",
+        "metric": "maximum",
+        "reference_C": 25.00000198218632,
+        "reduced_C": 25.000001979238156,
+        "delta_K": 2.948162602933735e-09,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_INPUT_SHAFT",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.000000048135536,
+        "reduced_C": 25.000000048133128,
+        "delta_K": 2.4087398742267396e-12,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_INTERMEDIATE_BEARING_1",
+        "metric": "maximum",
+        "reference_C": 25.0,
+        "reduced_C": 25.0,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_INTERMEDIATE_BEARING_1",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 24.999999999999996,
+        "reduced_C": 24.999999999999996,
+        "delta_K": 0.0,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_INTERMEDIATE_BEARING_2",
+        "metric": "maximum",
+        "reference_C": 25.000850542095115,
+        "reduced_C": 25.000853724560898,
+        "delta_K": 3.182465782458621e-06,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_INTERMEDIATE_BEARING_2",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.000126842420386,
+        "reduced_C": 25.00012609134385,
+        "delta_K": 7.510765342999548e-07,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_INTERMEDIATE_SHAFT",
+        "metric": "maximum",
+        "reference_C": 25.000000787351144,
+        "reduced_C": 25.000000785066177,
+        "delta_K": 2.284966882371009e-09,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_INTERMEDIATE_SHAFT",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.00000001813759,
+        "reduced_C": 25.000000018001813,
+        "delta_K": 1.3577761137639754e-10,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_CASE",
+        "metric": "maximum",
+        "reference_C": 25.00000000001453,
+        "reduced_C": 25.00000000001453,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_CASE",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.000000000004537,
+        "reduced_C": 25.000000000004537,
+        "delta_K": 0.0,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_GEAR_ADAPTER",
+        "metric": "maximum",
+        "reference_C": 25.00000000000006,
+        "reduced_C": 25.00000000000006,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_GEAR_ADAPTER",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.000000000000007,
+        "reduced_C": 25.000000000000004,
+        "delta_K": 3.552713678800501e-15,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_INPUT_COUPLING",
+        "metric": "maximum",
+        "reference_C": 25.0,
+        "reduced_C": 25.0,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_INPUT_COUPLING",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 24.999999999999996,
+        "reduced_C": 25.000000000000004,
+        "delta_K": 7.105427357601002e-15,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_ROTOR_OTHER",
+        "metric": "maximum",
+        "reference_C": 25.0,
+        "reduced_C": 25.0,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_ROTOR_OTHER",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.0,
+        "reduced_C": 25.0,
+        "delta_K": 0.0,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_ROTOR_SHAFT",
+        "metric": "maximum",
+        "reference_C": 25.0,
+        "reduced_C": 25.0,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_ROTOR_SHAFT",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.000000000000004,
+        "reduced_C": 24.999999999999993,
+        "delta_K": 1.0658141036401503e-14,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_STATOR",
+        "metric": "maximum",
+        "reference_C": 25.000000000000696,
+        "reduced_C": 25.000000000000696,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_STATOR",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.000000000000114,
+        "reduced_C": 25.000000000000117,
+        "delta_K": 3.552713678800501e-15,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_WINDING",
+        "metric": "maximum",
+        "reference_C": 25.000000000000004,
+        "reduced_C": 25.000000000000004,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_WINDING",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.000000000000007,
+        "reduced_C": 25.000000000000004,
+        "delta_K": 3.552713678800501e-15,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_OIL_INVENTORY",
+        "metric": "maximum",
+        "reference_C": 25.000033277287926,
+        "reduced_C": 25.000033247709762,
+        "delta_K": 2.9578163918131395e-08,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_OIL_INVENTORY",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.000000324217407,
+        "reduced_C": 25.000000323184732,
+        "delta_K": 1.0326743904442992e-09,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_OUTPUT_BEARING_1",
+        "metric": "maximum",
+        "reference_C": 25.0,
+        "reduced_C": 25.0,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_OUTPUT_BEARING_1",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.0,
+        "reduced_C": 25.000000000000004,
+        "delta_K": 3.552713678800501e-15,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_OUTPUT_BEARING_2",
+        "metric": "maximum",
+        "reference_C": 25.00046607985771,
+        "reduced_C": 25.000456783504085,
+        "delta_K": 9.296353624677067e-06,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_OUTPUT_BEARING_2",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.000091472943335,
+        "reduced_C": 25.000090943518966,
+        "delta_K": 5.294243692333112e-07,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_OUTPUT_SHAFT",
+        "metric": "maximum",
+        "reference_C": 25.000000437309826,
+        "reduced_C": 25.000000431192095,
+        "delta_K": 6.117730322330317e-09,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_OUTPUT_SHAFT",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.000000008589762,
+        "reduced_C": 25.000000008525213,
+        "delta_K": 6.45492548301263e-11,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_PAD_FAR",
+        "metric": "maximum",
+        "reference_C": 401.6957005477774,
+        "reduced_C": 401.69570054777734,
+        "delta_K": 5.684341886080802e-14,
+        "limit_K": 11.30087101643332,
+        "passed": true
+      },
+      {
+        "part": "M4_PAD_FAR",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 91.65099770686082,
+        "reduced_C": 91.65099770686082,
+        "delta_K": 0.0,
+        "limit_K": 0.6665099770686083,
+        "passed": true
+      },
+      {
+        "part": "M4_PAD_NEAR",
+        "metric": "maximum",
+        "reference_C": 401.69570054778035,
+        "reduced_C": 401.6957005477803,
+        "delta_K": 5.684341886080802e-14,
+        "limit_K": 11.300871016433408,
+        "passed": true
+      },
+      {
+        "part": "M4_PAD_NEAR",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 91.6509980681574,
+        "reduced_C": 91.65099806815734,
+        "delta_K": 7.105427357601002e-14,
+        "limit_K": 0.6665099806815734,
+        "passed": true
+      },
+      {
+        "part": "M4_STAGE1_GEAR",
+        "metric": "maximum",
+        "reference_C": 25.000000000000004,
+        "reduced_C": 25.000000000000004,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_STAGE1_GEAR",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.0,
+        "reduced_C": 25.000000000000004,
+        "delta_K": 3.552713678800501e-15,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_STAGE2_GEAR",
+        "metric": "maximum",
+        "reference_C": 25.00000000006497,
+        "reduced_C": 25.00000000006439,
+        "delta_K": 5.790923296444817e-13,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_STAGE2_GEAR",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.000000000000338,
+        "reduced_C": 25.000000000000338,
+        "delta_K": 0.0,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "metric": "final_net_radiation_J",
+        "reference_J": 7.727319906872837,
+        "reduced_J": 7.692362203067306,
+        "delta_J": 0.03495770380553065,
+        "limit_J": 0.38636599534364185,
+        "passed": true
+      }
+    ],
+    "common_end_s": 3.7754370068335,
+    "definition": "Common time window. Temperature policy plus net-radiation energy difference <= max(0.1 J, 5% reference). Includes changed heat convergence tolerance where applicable. Engineering screen, not calibrated error."
+  },
+  "radiation_facets_medium": {
+    "status": "PASS_ENGINEERING_THRESHOLD",
+    "comparison": [
+      {
+        "part": "M4_BRAKE_DISC_HAT",
+        "metric": "maximum",
+        "reference_C": 53.25182947810711,
+        "reduced_C": 53.25180243809389,
+        "delta_K": 2.7040013222290327e-05,
+        "limit_K": 0.8475540731428166,
+        "passed": true
+      },
+      {
+        "part": "M4_BRAKE_DISC_HAT",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 40.202914252747405,
+        "reduced_C": 40.20291556269139,
+        "delta_K": 1.3099439826191883e-06,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_CALIPER",
+        "metric": "maximum",
+        "reference_C": 25.00823866559596,
+        "reduced_C": 25.008238665649912,
+        "delta_K": 5.395150992626441e-11,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_CALIPER",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.000695896172743,
+        "reduced_C": 25.000695896404917,
+        "delta_K": 2.3217339162329154e-10,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_CALIPER_REACTION_BRACKET",
+        "metric": "maximum",
+        "reference_C": 25.000687788749897,
+        "reduced_C": 25.000698919613132,
+        "delta_K": 1.1130863235564448e-05,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_CALIPER_REACTION_BRACKET",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.00012263367286,
+        "reduced_C": 25.00012677820099,
+        "delta_K": 4.144528130467506e-06,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_DISC_HUB",
+        "metric": "maximum",
+        "reference_C": 25.003926501764425,
+        "reduced_C": 25.00392651018906,
+        "delta_K": 8.424635211667919e-09,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_DISC_HUB",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.0001416143266,
+        "reduced_C": 25.000141614496492,
+        "delta_K": 1.6989076812023995e-10,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_GEAR_CASE_FRONT",
+        "metric": "maximum",
+        "reference_C": 25.000000227815562,
+        "reduced_C": 25.0000002474305,
+        "delta_K": 1.961493723001695e-08,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_GEAR_CASE_FRONT",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.000000000820403,
+        "reduced_C": 25.000000000951715,
+        "delta_K": 1.3131185028214531e-10,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_GEAR_CASE_REAR",
+        "metric": "maximum",
+        "reference_C": 25.010217100628815,
+        "reduced_C": 25.010234469408278,
+        "delta_K": 1.7368779463566852e-05,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_GEAR_CASE_REAR",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.001698268558805,
+        "reduced_C": 25.001708351712477,
+        "delta_K": 1.0083153672013623e-05,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_HUB_REMOVABLE_SLEEVE",
+        "metric": "maximum",
+        "reference_C": 25.00000001234149,
+        "reduced_C": 25.000000012343232,
+        "delta_K": 1.7408297026122455e-12,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_HUB_REMOVABLE_SLEEVE",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 24.999999999999982,
+        "reduced_C": 24.999999999999975,
+        "delta_K": 7.105427357601002e-15,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_INPUT_BEARING_1",
+        "metric": "maximum",
+        "reference_C": 25.0,
+        "reduced_C": 25.0,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_INPUT_BEARING_1",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 24.999999999999993,
+        "reduced_C": 25.0,
+        "delta_K": 7.105427357601002e-15,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_INPUT_BEARING_2",
+        "metric": "maximum",
+        "reference_C": 25.000864491154697,
+        "reduced_C": 25.00088245149209,
+        "delta_K": 1.796033739154268e-05,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_INPUT_BEARING_2",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.000123551845913,
+        "reduced_C": 25.00012804095374,
+        "delta_K": 4.489107826799454e-06,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_INPUT_SHAFT",
+        "metric": "maximum",
+        "reference_C": 25.000001758971983,
+        "reduced_C": 25.000001882618154,
+        "delta_K": 1.236461706355385e-07,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_INPUT_SHAFT",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.000000042044245,
+        "reduced_C": 25.000000045534904,
+        "delta_K": 3.4906584289728926e-09,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_INTERMEDIATE_BEARING_1",
+        "metric": "maximum",
+        "reference_C": 25.0,
+        "reduced_C": 25.0,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_INTERMEDIATE_BEARING_1",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 24.999999999999996,
+        "reduced_C": 24.999999999999993,
+        "delta_K": 3.552713678800501e-15,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_INTERMEDIATE_BEARING_2",
+        "metric": "maximum",
+        "reference_C": 25.000811351222698,
+        "reduced_C": 25.000830712152485,
+        "delta_K": 1.936092978738202e-05,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_INTERMEDIATE_BEARING_2",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.000117609106784,
+        "reduced_C": 25.000121708839732,
+        "delta_K": 4.0997329477932e-06,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_INTERMEDIATE_SHAFT",
+        "metric": "maximum",
+        "reference_C": 25.000000700176056,
+        "reduced_C": 25.000000748603316,
+        "delta_K": 4.8427260423977714e-08,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_INTERMEDIATE_SHAFT",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.000000015742387,
+        "reduced_C": 25.000000017044844,
+        "delta_K": 1.3024568090713728e-09,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_CASE",
+        "metric": "maximum",
+        "reference_C": 25.00000000001453,
+        "reduced_C": 25.00000000001453,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_CASE",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.000000000004537,
+        "reduced_C": 25.000000000004537,
+        "delta_K": 0.0,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_GEAR_ADAPTER",
+        "metric": "maximum",
+        "reference_C": 25.00000000000006,
+        "reduced_C": 25.00000000000006,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_GEAR_ADAPTER",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.000000000000007,
+        "reduced_C": 25.0,
+        "delta_K": 7.105427357601002e-15,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_INPUT_COUPLING",
+        "metric": "maximum",
+        "reference_C": 25.0,
+        "reduced_C": 25.0,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_INPUT_COUPLING",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 24.999999999999996,
+        "reduced_C": 24.999999999999993,
+        "delta_K": 3.552713678800501e-15,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_ROTOR_OTHER",
+        "metric": "maximum",
+        "reference_C": 25.0,
+        "reduced_C": 25.0,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_ROTOR_OTHER",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.000000000000004,
+        "reduced_C": 25.0,
+        "delta_K": 3.552713678800501e-15,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_ROTOR_SHAFT",
+        "metric": "maximum",
+        "reference_C": 25.0,
+        "reduced_C": 25.0,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_ROTOR_SHAFT",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 24.999999999999996,
+        "reduced_C": 25.0,
+        "delta_K": 3.552713678800501e-15,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_STATOR",
+        "metric": "maximum",
+        "reference_C": 25.000000000000696,
+        "reduced_C": 25.000000000000696,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_STATOR",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.000000000000114,
+        "reduced_C": 25.000000000000117,
+        "delta_K": 3.552713678800501e-15,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_WINDING",
+        "metric": "maximum",
+        "reference_C": 25.000000000000004,
+        "reduced_C": 25.000000000000004,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_WINDING",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.0,
+        "reduced_C": 25.0,
+        "delta_K": 0.0,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_OIL_INVENTORY",
+        "metric": "maximum",
+        "reference_C": 25.000030097787423,
+        "reduced_C": 25.000031971918858,
+        "delta_K": 1.8741314349313143e-06,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_OIL_INVENTORY",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.00000029178838,
+        "reduced_C": 25.000000310520388,
+        "delta_K": 1.873200972113409e-08,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_OUTPUT_BEARING_1",
+        "metric": "maximum",
+        "reference_C": 25.0,
+        "reduced_C": 25.0,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_OUTPUT_BEARING_1",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.0,
+        "reduced_C": 25.000000000000004,
+        "delta_K": 3.552713678800501e-15,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_OUTPUT_BEARING_2",
+        "metric": "maximum",
+        "reference_C": 25.00044463903824,
+        "reduced_C": 25.000438765674467,
+        "delta_K": 5.873363772224138e-06,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_OUTPUT_BEARING_2",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.00008490365349,
+        "reduced_C": 25.000086617059033,
+        "delta_K": 1.7134055418921434e-06,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_OUTPUT_SHAFT",
+        "metric": "maximum",
+        "reference_C": 25.0000003855563,
+        "reduced_C": 25.000000405947706,
+        "delta_K": 2.039140412080087e-08,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_OUTPUT_SHAFT",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.00000000750502,
+        "reduced_C": 25.000000007975476,
+        "delta_K": 4.704574507741199e-10,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_PAD_FAR",
+        "metric": "maximum",
+        "reference_C": 400.4123384363038,
+        "reduced_C": 400.4123384363038,
+        "delta_K": 0.0,
+        "limit_K": 11.262370153089114,
+        "passed": true
+      },
+      {
+        "part": "M4_PAD_FAR",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 91.65005088260322,
+        "reduced_C": 91.65005088260325,
+        "delta_K": 2.842170943040401e-14,
+        "limit_K": 0.6665005088260325,
+        "passed": true
+      },
+      {
+        "part": "M4_PAD_NEAR",
+        "metric": "maximum",
+        "reference_C": 400.41233843630533,
+        "reduced_C": 400.4123384363053,
+        "delta_K": 5.684341886080802e-14,
+        "limit_K": 11.262370153089158,
+        "passed": true
+      },
+      {
+        "part": "M4_PAD_NEAR",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 91.6500512905324,
+        "reduced_C": 91.65005129053367,
+        "delta_K": 1.2647660696529783e-12,
+        "limit_K": 0.6665005129053367,
+        "passed": true
+      },
+      {
+        "part": "M4_STAGE1_GEAR",
+        "metric": "maximum",
+        "reference_C": 25.000000000000004,
+        "reduced_C": 25.000000000000004,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_STAGE1_GEAR",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.000000000000004,
+        "reduced_C": 25.000000000000004,
+        "delta_K": 0.0,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_STAGE2_GEAR",
+        "metric": "maximum",
+        "reference_C": 25.000000000056104,
+        "reduced_C": 25.00000000006047,
+        "delta_K": 4.366285111245816e-12,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_STAGE2_GEAR",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.000000000000284,
+        "reduced_C": 25.000000000000306,
+        "delta_K": 2.1316282072803006e-14,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "metric": "final_net_radiation_J",
+        "reference_J": 7.677820169473415,
+        "reduced_J": 7.51642355017931,
+        "delta_J": 0.16139661929410565,
+        "limit_J": 0.3838910084736708,
+        "passed": true
+      }
+    ],
+    "common_end_s": 3.7754370068335,
+    "definition": "Common time window. Temperature policy plus net-radiation energy difference <= max(0.1 J, 5% reference). Includes changed heat convergence tolerance where applicable. Engineering screen, not calibrated error."
+  },
+  "radiation_facets_combined": {
+    "status": "PASS_ENGINEERING_THRESHOLD",
+    "comparison": [
+      {
+        "part": "M4_BRAKE_DISC_HAT",
+        "metric": "maximum",
+        "reference_C": 53.25181231375469,
+        "reduced_C": 53.25178618565286,
+        "delta_K": 2.612810182966996e-05,
+        "limit_K": 0.8475535855695858,
+        "passed": true
+      },
+      {
+        "part": "M4_BRAKE_DISC_HAT",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 40.20293293988705,
+        "reduced_C": 40.202933964120255,
+        "delta_K": 1.0242332066923154e-06,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_CALIPER",
+        "metric": "maximum",
+        "reference_C": 26.62750719690465,
+        "reduced_C": 26.627507075024116,
+        "delta_K": 1.218805323333072e-07,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_CALIPER",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.477057520435114,
+        "reduced_C": 25.477056468652446,
+        "delta_K": 1.051782668071155e-06,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_CALIPER_REACTION_BRACKET",
+        "metric": "maximum",
+        "reference_C": 25.085165042821675,
+        "reduced_C": 25.085133980816003,
+        "delta_K": 3.1062005671600446e-05,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_CALIPER_REACTION_BRACKET",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.02855850895768,
+        "reduced_C": 25.028461574224732,
+        "delta_K": 9.693473294802857e-05,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_DISC_HUB",
+        "metric": "maximum",
+        "reference_C": 25.960010058740952,
+        "reduced_C": 25.96001202903616,
+        "delta_K": 1.970295208764128e-06,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_DISC_HUB",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.28356048096395,
+        "reduced_C": 25.283560368988162,
+        "delta_K": 1.1197578686505949e-07,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_GEAR_CASE_FRONT",
+        "metric": "maximum",
+        "reference_C": 25.551419152521827,
+        "reduced_C": 25.551419152530304,
+        "delta_K": 8.476774837617995e-12,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_GEAR_CASE_FRONT",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.07460768409923,
+        "reduced_C": 25.074606463314044,
+        "delta_K": 1.2207851867174213e-06,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_GEAR_CASE_REAR",
+        "metric": "maximum",
+        "reference_C": 25.595020860313852,
+        "reduced_C": 25.59455211527765,
+        "delta_K": 0.00046874503620131236,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_GEAR_CASE_REAR",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.104951841684628,
+        "reduced_C": 25.10466979720304,
+        "delta_K": 0.00028204448158675177,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_HUB_REMOVABLE_SLEEVE",
+        "metric": "maximum",
+        "reference_C": 25.075244642212127,
+        "reduced_C": 25.075244312484607,
+        "delta_K": 3.297275199543037e-07,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_HUB_REMOVABLE_SLEEVE",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.0422880497372,
+        "reduced_C": 25.042287906977627,
+        "delta_K": 1.427595712755192e-07,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_INPUT_BEARING_1",
+        "metric": "maximum",
+        "reference_C": 27.923231593542827,
+        "reduced_C": 27.923231593542827,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_INPUT_BEARING_1",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 27.630317096224086,
+        "reduced_C": 27.630317096224097,
+        "delta_K": 1.0658141036401503e-14,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_INPUT_BEARING_2",
+        "metric": "maximum",
+        "reference_C": 27.94189939909819,
+        "reduced_C": 27.941899719662555,
+        "delta_K": 3.2056436438665514e-07,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_INPUT_BEARING_2",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 27.69297904944001,
+        "reduced_C": 27.692982930130537,
+        "delta_K": 3.880690528035302e-06,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_INPUT_SHAFT",
+        "metric": "maximum",
+        "reference_C": 25.77280300482918,
+        "reduced_C": 25.772787741589436,
+        "delta_K": 1.5263239742324686e-05,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_INPUT_SHAFT",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.272184514856225,
+        "reduced_C": 25.272182268561156,
+        "delta_K": 2.246295068175641e-06,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_INTERMEDIATE_BEARING_1",
+        "metric": "maximum",
+        "reference_C": 26.70200906232311,
+        "reduced_C": 26.702009062323242,
+        "delta_K": 1.3145040611561853e-13,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_INTERMEDIATE_BEARING_1",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 26.528482177188433,
+        "reduced_C": 26.52848217718877,
+        "delta_K": 3.375077994860476e-13,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_INTERMEDIATE_BEARING_2",
+        "metric": "maximum",
+        "reference_C": 26.70549820534862,
+        "reduced_C": 26.705499521868667,
+        "delta_K": 1.3165200485332207e-06,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_INTERMEDIATE_BEARING_2",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 26.551877387424046,
+        "reduced_C": 26.5518809229575,
+        "delta_K": 3.5355334553344164e-06,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_INTERMEDIATE_SHAFT",
+        "metric": "maximum",
+        "reference_C": 26.24871522489245,
+        "reduced_C": 26.248715224638627,
+        "delta_K": 2.538236287819018e-10,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_INTERMEDIATE_SHAFT",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.424794352410018,
+        "reduced_C": 25.4247930950716,
+        "delta_K": 1.2573384182701375e-06,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_CASE",
+        "metric": "maximum",
+        "reference_C": 25.227917256534198,
+        "reduced_C": 25.22791725653579,
+        "delta_K": 1.5916157281026244e-12,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_CASE",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.034709204504953,
+        "reduced_C": 25.034709204509053,
+        "delta_K": 4.099831585335778e-12,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_GEAR_ADAPTER",
+        "metric": "maximum",
+        "reference_C": 25.063341973682846,
+        "reduced_C": 25.063341973641585,
+        "delta_K": 4.126121666558902e-11,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_GEAR_ADAPTER",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.013618399222157,
+        "reduced_C": 25.01361839917862,
+        "delta_K": 4.353850613370014e-11,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_INPUT_COUPLING",
+        "metric": "maximum",
+        "reference_C": 25.076227451011643,
+        "reduced_C": 25.076227451011665,
+        "delta_K": 2.1316282072803006e-14,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_INPUT_COUPLING",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.03253751490076,
+        "reduced_C": 25.03253751490077,
+        "delta_K": 1.0658141036401503e-14,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_ROTOR_OTHER",
+        "metric": "maximum",
+        "reference_C": 25.10640411323084,
+        "reduced_C": 25.10640411323084,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_ROTOR_OTHER",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.093651540518604,
+        "reduced_C": 25.093651540518607,
+        "delta_K": 3.552713678800501e-15,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_ROTOR_SHAFT",
+        "metric": "maximum",
+        "reference_C": 25.039775160466775,
+        "reduced_C": 25.039775160466775,
+        "delta_K": 0.0,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_ROTOR_SHAFT",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.021317495925555,
+        "reduced_C": 25.02131749592555,
+        "delta_K": 3.552713678800501e-15,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_STATOR",
+        "metric": "maximum",
+        "reference_C": 26.781977986356114,
+        "reduced_C": 26.781977986356118,
+        "delta_K": 3.552713678800501e-15,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_STATOR",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 26.25225345306719,
+        "reduced_C": 26.25225345306724,
+        "delta_K": 4.973799150320701e-14,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_WINDING",
+        "metric": "maximum",
+        "reference_C": 33.45443062939663,
+        "reduced_C": 33.454430629396626,
+        "delta_K": 7.105427357601002e-15,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_MOTOR_WINDING",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 33.41098236759886,
+        "reduced_C": 33.410982367598855,
+        "delta_K": 7.105427357601002e-15,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_OIL_INVENTORY",
+        "metric": "maximum",
+        "reference_C": 26.613942413888225,
+        "reduced_C": 26.61394241367802,
+        "delta_K": 2.1020341023358924e-10,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_OIL_INVENTORY",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.37564896888252,
+        "reduced_C": 25.375648982911326,
+        "delta_K": 1.4028806560872908e-08,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_OUTPUT_BEARING_1",
+        "metric": "maximum",
+        "reference_C": 26.3951224191159,
+        "reduced_C": 26.39512241911674,
+        "delta_K": 8.384404281969182e-13,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_OUTPUT_BEARING_1",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 26.251628945122214,
+        "reduced_C": 26.251628945123134,
+        "delta_K": 9.201528428093297e-13,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_OUTPUT_BEARING_2",
+        "metric": "maximum",
+        "reference_C": 26.40700415295523,
+        "reduced_C": 26.407004368669153,
+        "delta_K": 2.1571392139208e-07,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_OUTPUT_BEARING_2",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 26.278593686278494,
+        "reduced_C": 26.27859514714847,
+        "delta_K": 1.4608699743234865e-06,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_OUTPUT_SHAFT",
+        "metric": "maximum",
+        "reference_C": 25.672571016599846,
+        "reduced_C": 25.6725699435384,
+        "delta_K": 1.0730614476983646e-06,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_OUTPUT_SHAFT",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 25.20069646985578,
+        "reduced_C": 25.200695174354426,
+        "delta_K": 1.2955013559690087e-06,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_PAD_FAR",
+        "metric": "maximum",
+        "reference_C": 400.4128702976219,
+        "reduced_C": 400.41287029762196,
+        "delta_K": 5.684341886080802e-14,
+        "limit_K": 11.26238610892866,
+        "passed": true
+      },
+      {
+        "part": "M4_PAD_FAR",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 91.65017797048093,
+        "reduced_C": 91.65017797048644,
+        "delta_K": 5.5138116294983774e-12,
+        "limit_K": 0.6665017797048643,
+        "passed": true
+      },
+      {
+        "part": "M4_PAD_NEAR",
+        "metric": "maximum",
+        "reference_C": 400.41287029760474,
+        "reduced_C": 400.41287029760684,
+        "delta_K": 2.1032064978498966e-12,
+        "limit_K": 11.262386108928204,
+        "passed": true
+      },
+      {
+        "part": "M4_PAD_NEAR",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 91.65017837753663,
+        "reduced_C": 91.65017837758242,
+        "delta_K": 4.5787373892380856e-11,
+        "limit_K": 0.6665017837758243,
+        "passed": true
+      },
+      {
+        "part": "M4_STAGE1_GEAR",
+        "metric": "maximum",
+        "reference_C": 28.56349791248972,
+        "reduced_C": 28.563497912489723,
+        "delta_K": 3.552713678800501e-15,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_STAGE1_GEAR",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 28.505963152919126,
+        "reduced_C": 28.505963152919133,
+        "delta_K": 7.105427357601002e-15,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "part": "M4_STAGE2_GEAR",
+        "metric": "maximum",
+        "reference_C": 26.950343913177615,
+        "reduced_C": 26.95034391317763,
+        "delta_K": 1.4210854715202004e-14,
+        "limit_K": 0.5,
+        "passed": true
+      },
+      {
+        "part": "M4_STAGE2_GEAR",
+        "metric": "capacity_weighted_mean",
+        "reference_C": 26.92430473230803,
+        "reduced_C": 26.92430473231553,
+        "delta_K": 7.499778575947857e-12,
+        "limit_K": 0.25,
+        "passed": true
+      },
+      {
+        "metric": "final_net_radiation_J",
+        "reference_J": 58.68653057667136,
+        "reduced_J": 58.08432554453981,
+        "delta_J": 0.6022050321315504,
+        "limit_J": 2.934326528833568,
+        "passed": true
+      }
+    ],
+    "common_end_s": 48.877185034168,
+    "definition": "Common time window. Temperature policy plus net-radiation energy difference <= max(0.1 J, 5% reference). Includes changed heat convergence tolerance where applicable. Engineering screen, not calibrated error."
+  }
+}

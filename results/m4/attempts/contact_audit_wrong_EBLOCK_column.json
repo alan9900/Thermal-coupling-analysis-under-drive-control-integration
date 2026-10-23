@@ -1,0 +1,183 @@
+{
+  "status": "BLOCKED_INCOMPLETE_CONTACT_RECORDS",
+  "coverage": {
+    "S3_brake_disc_hat_to_disc_hub": {
+      "expected": 583,
+      "reported": 0
+    },
+    "S3_disc_hub_to_hub_removable_sleeve": {
+      "expected": 304,
+      "reported": 0
+    },
+    "S3_hub_removable_sleeve_to_output_shaft": {
+      "expected": 632,
+      "reported": 132
+    },
+    "S3_gear_case_front_to_gear_case_rear": {
+      "expected": 736,
+      "reported": 0
+    },
+    "S3_gear_case_front_to_motor_gear_adapter": {
+      "expected": 5390,
+      "reported": 0
+    },
+    "S3_motor_gear_adapter_to_motor_case": {
+      "expected": 3793,
+      "reported": 3142
+    },
+    "S3_motor_case_to_motor_stator": {
+      "expected": 2550,
+      "reported": 0
+    },
+    "S3_motor_stator_to_motor_winding": {
+      "expected": 8982,
+      "reported": 0
+    },
+    "S3_motor_rotor_other_to_motor_stator": {
+      "expected": 918,
+      "reported": 0
+    },
+    "S3_motor_rotor_shaft_to_motor_rotor_other": {
+      "expected": 314,
+      "reported": 0
+    },
+    "S3_motor_rotor_shaft_to_motor_input_coupling": {
+      "expected": 263,
+      "reported": 0
+    },
+    "S3_motor_input_coupling_to_input_shaft": {
+      "expected": 200,
+      "reported": 0
+    },
+    "S3_intermediate_shaft_to_stage1_gear": {
+      "expected": 536,
+      "reported": 238
+    },
+    "S3_output_shaft_to_stage2_gear": {
+      "expected": 825,
+      "reported": 264
+    },
+    "S3_gear_case_rear_to_caliper_reaction_bracket": {
+      "expected": 2587,
+      "reported": 0
+    },
+    "S3_caliper_reaction_bracket_to_caliper": {
+      "expected": 174,
+      "reported": 50
+    },
+    "S3_caliper_to_pad_near": {
+      "expected": 82,
+      "reported": 0
+    },
+    "S3_caliper_to_pad_far": {
+      "expected": 82,
+      "reported": 0
+    },
+    "S3_oil_inventory_to_gear_case_rear": {
+      "expected": 562,
+      "reported": 0
+    },
+    "S3_oil_inventory_to_stage2_gear": {
+      "expected": 5294,
+      "reported": 0
+    },
+    "S3_input_shaft_to_input_bearing_1": {
+      "expected": 160,
+      "reported": 105
+    },
+    "S3_input_bearing_1_to_gear_case_front": {
+      "expected": 213,
+      "reported": 0
+    },
+    "S3_input_shaft_to_input_bearing_2": {
+      "expected": 165,
+      "reported": 92
+    },
+    "S3_input_bearing_2_to_gear_case_rear": {
+      "expected": 124,
+      "reported": 40
+    },
+    "S3_intermediate_shaft_to_intermediate_bearing_1": {
+      "expected": 205,
+      "reported": 132
+    },
+    "S3_intermediate_bearing_1_to_gear_case_front": {
+      "expected": 267,
+      "reported": 0
+    },
+    "S3_intermediate_shaft_to_intermediate_bearing_2": {
+      "expected": 222,
+      "reported": 125
+    },
+    "S3_intermediate_bearing_2_to_gear_case_rear": {
+      "expected": 162,
+      "reported": 54
+    },
+    "S3_output_shaft_to_output_bearing_1": {
+      "expected": 202,
+      "reported": 117
+    },
+    "S3_output_bearing_1_to_gear_case_front": {
+      "expected": 307,
+      "reported": 0
+    },
+    "S3_output_shaft_to_output_bearing_2": {
+      "expected": 620,
+      "reported": 0
+    },
+    "S3_output_bearing_2_to_gear_case_rear": {
+      "expected": 180,
+      "reported": 60
+    }
+  },
+  "native_quantity": "CONTA174 CNFH NMISC98 W; sign reversed for source-to-target",
+  "generic_metadata_units": [
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2",
+    "m^2"
+  ],
+  "missing_policy": "null, not zero; inactive/missing records require further audit"
+}

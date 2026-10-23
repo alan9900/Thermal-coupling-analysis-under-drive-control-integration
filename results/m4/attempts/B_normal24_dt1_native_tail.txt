@@ -1,0 +1,340 @@
+1   0.000039
+       11        70  SOLID278      0.000   0.000000
+       12        70  SOLID278      0.000   0.000000
+       13        94  SOLID278      0.000   0.000000
+       14        94  SOLID278      0.000   0.000000
+       15       106  SOLID278      0.000   0.000000
+       16       106  SOLID278      0.016   0.000147
+       17      1399  SOLID278      0.094   0.000067
+       18      9588  SOLID278      0.281   0.000029
+       19      1164  SOLID278      0.016   0.000013
+       20       548  SOLID278      0.000   0.000000
+       21     15983  SOLID278      0.875   0.000055
+       22     20026  SOLID278      0.953   0.000048
+       23      4090  SOLID278      0.156   0.000038
+       24       949  SOLID278      0.125   0.000132
+       25       484  SOLID278      0.000   0.000000
+       26     13754  SOLID278      0.484   0.000035
+       27     15632  SOLID278      0.656   0.000042
+       28      2939  SOLID278      0.125   0.000043
+       29     12046  SOLID278      0.500   0.000042
+       30      2919  SOLID278      0.266   0.000091
+       31       583  CONTA174      0.000   0.000000
+       33       304  CONTA174      0.000   0.000000
+       35       632  CONTA174      0.000   0.000000
+       37       736  CONTA174      0.000   0.000000
+       39      5390  CONTA174      0.000   0.000000
+       41      3793  CONTA174      0.031   0.000008
+       43      2550  CONTA174      0.062   0.000025
+       45      8982  CONTA174      0.125   0.000014
+       47       918  CONTA174      0.000   0.000000
+       49       314  CONTA174      0.000   0.000000
+       51       263  CONTA174      0.031   0.000119
+       53       200  CONTA174      0.000   0.000000
+       55       536  CONTA174      0.047   0.000087
+       57       825  CONTA174      0.000   0.000000
+       59      2587  CONTA174      0.031   0.000012
+       61       174  CONTA174      0.000   0.000000
+       63       270  CONTA174      0.000   0.000000
+       65       270  CONTA174      0.000   0.000000
+       67       562  CONTA174      0.031   0.000056
+       69      5294  CONTA174      0.000   0.000000
+       71       160  CONTA174      0.000   0.000000
+       73       213  CONTA174      0.000   0.000000
+       75       165  CONTA174      0.000   0.000000
+       77       124  CONTA174      0.000   0.000000
+       79       205  CONTA174      0.000   0.000000
+       81       267  CONTA174      0.000   0.000000
+       83       222  CONTA174      0.000   0.000000
+       85       162  CONTA174      0.000   0.000000
+       87       202  CONTA174      0.000   0.000000
+       89       307  CONTA174      0.000   0.000000
+       91       620  CONTA174      0.000   0.000000
+       93       180  CONTA174      0.000   0.000000
+       95     75429  SURF152       0.547   0.000007
+       96     81299  SURF152       0.703   0.000009
+       97       208  SURF152       0.000   0.000000
+       98       208  SURF152       0.000   0.000000
+       99    171784  SURF152       1.594   0.000009
+      100      3410  SURF152       0.031   0.000009
+      101     75429  SURF252       0.875   0.000012
+      102      2497  SURF252       0.078   0.000031
+ *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      2
+ *** TIME =  0.235965         TIME INC =  0.235965    
+ *** RESPONSE EIGENVALUE = 0.1595E-02   OSCILLATION LIMIT = 0.3765E-03
+
+
+ *** MAPDL BINARY FILE STATISTICS
+  BUFFER SIZE USED= 16384
+      294.062 MB WRITTEN ON ELEMENT SAVED DATA FILE: study.esav
+       43.188 MB WRITTEN ON ASSEMBLED MATRIX FILE: study.full
+      407.625 MB WRITTEN ON RESULTS FILE: study.rth
+
+ USE INITIAL TIME STEP SIZE OF 0.2359648     FOR ALL  DEGREES OF FREEDOM
+ FOR AUTOMATIC TIME STEPPING:
+   USE 0.2359648     AS THE MINIMUM TIME STEP SIZE
+   USE 0.2359648     AS THE MAXIMUM TIME STEP SIZE
+
+ TIME= 0.47193    
+
+ *****  MAPDL SOLVE    COMMAND  *****
+
+ *** WARNING ***                         CP =    2103.109   TIME= 18:45:09
+ Material number 95 (used by element 1159361) should normally have at    
+ least one MP or one TB type command associated with it.  Output of      
+ energy by material may not be available.                                
+
+ *** NOTE ***                            CP =    2105.531   TIME= 18:45:10
+ The step data was checked and warning messages were found.              
+  Please review output or errors file (                                  
+ E:\ansys_runs\m4_case0_20261021\studies\B_normal24_dt1\study.err ) for  
+ these warning messages.                                                 
+
+ *** NOTE ***                            CP =    2105.531   TIME= 18:45:10
+ This nonlinear analysis defaults to using the full Newton-Raphson       
+ solution procedure.  This can be modified using the NROPT command.      
+
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2024 R1          24.1     ***
+ Ansys Mechanical Enterprise                       
+ 20230322  VERSION=WINDOWS x64   18:45:11  OCT 21, 2026 CP=   2106.031
+
+ Case0_mesh_normal_verification--M4_Case0_B_face_scoped_CONCEPT_NOT_CALIBRATED 
+
+
+
+                      L O A D   S T E P   O P T I O N S
+
+   LOAD STEP NUMBER. . . . . . . . . . . . . . . .     2
+   TIME AT END OF THE LOAD STEP. . . . . . . . . . 0.47193    
+   TIME STEP SIZE. . . . . . . . . . . . . . . . . 0.23596    
+   MAXIMUM NUMBER OF EQUILIBRIUM ITERATIONS. . . .    15
+   STEP CHANGE BOUNDARY CONDITIONS . . . . . . . .   YES
+   TRANSIENT (INERTIA) EFFECTS
+      THERMAL DOFS . . . . . . . . . . . . . . . .    ON
+   TRANSIENT INTEGRATION PARAMETERS
+      THETA. . . . . . . . . . . . . . . . . . . .  1.0000    
+      OSCILLATION LIMIT CRITERION. . . . . . . . . 0.50000    
+      TOLERANCE. . . . . . . . . . . . . . . . . .  0.0000    
+   TERMINATE ANALYSIS IF NOT CONVERGED . . . . . .YES (EXIT)  
+   CONVERGENCE CONTROLS
+      LABEL   REFERENCE    TOLERANCE  NORM     MINREF
+       HEAT    0.000       0.1000E-03   2     0.1000E-05
+   PRINT OUTPUT CONTROLS . . . . . . . . . . . . .NO PRINTOUT
+   DATABASE OUTPUT CONTROLS
+      ITEM     FREQUENCY   COMPONENT
+       ALL       NONE               
+      NSOL        ALL               
+      RSOL        ALL               
+      VENG        ALL               
+      FFLU        ALL               
+      CONT        ALL               
+      MISC        ALL       M4_BC_RECORDS
+
+
+ SOLUTION MONITORING INFO IS WRITTEN TO FILE= study.mntr                                                                                                                                                                                                                                                          
+ MAXIMUM NUMBER OF EQUILIBRIUM ITERATIONS HAS BEEN MODIFIED              
+  TO BE, NEQIT = 1000, BY SOLUTION CONTROL LOGIC.                        
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   3.85938    
+ RAD FLUX CONVERGENCE VALUE=  0.829910E-04 CRITERION=  0.100000E-03
+
+ RADIOSITY FLUX CONVERGED AFTER ITERATION=    1 SUBSTEP=    1
+
+
+     HT FLOW CONVERGENCE VALUE=   150.3      CRITERION=  0.1635E-01
+    EQUIL ITER   1 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=   90.34    
+     HT FLOW CONVERGENCE VALUE=  0.1085E-11  CRITERION=  0.2368E-01 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER   37 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   146.797    
+ RAD FLUX CONVERGENCE VALUE=  0.578035E-01 CRITERION=  0.100000E-03
+
+     HT FLOW CONVERGENCE VALUE=  0.2529E-01  CRITERION=  0.2359E-01
+    EQUIL ITER   2 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.3138E-03
+     HT FLOW CONVERGENCE VALUE=  0.8669E-12  CRITERION=  0.2359E-01 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   2
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   3.51562    
+ RAD FLUX CONVERGENCE VALUE=  0.133358E-03 CRITERION=  0.100000E-03
+
+     HT FLOW CONVERGENCE VALUE=  0.1467E-04  CRITERION=  0.2359E-01 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   2
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   3.79688    
+ RAD FLUX CONVERGENCE VALUE=  0.120776E-03 CRITERION=  0.100000E-03
+
+     HT FLOW CONVERGENCE VALUE=  0.3075E-04  CRITERION=  0.2359E-01 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   2
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   3.82812    
+ RAD FLUX CONVERGENCE VALUE=  0.109398E-03 CRITERION=  0.100000E-03
+
+     HT FLOW CONVERGENCE VALUE=  0.4670E-04  CRITERION=  0.2359E-01 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   2
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   4.39062    
+ RAD FLUX CONVERGENCE VALUE=  0.991072E-04 CRITERION=  0.100000E-03
+
+ RADIOSITY FLUX CONVERGED AFTER ITERATION=    6 SUBSTEP=    1
+
+     HT FLOW CONVERGENCE VALUE=  0.6242E-04  CRITERION=  0.2359E-01 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   2
+ *** LOAD STEP     2   SUBSTEP     1  COMPLETED.    CUM ITER =      4
+ *** TIME =  0.471930         TIME INC =  0.235965    
+ *** RESPONSE EIGENVALUE = 0.7069E-03   OSCILLATION LIMIT = 0.1668E-03
+
+ USE INITIAL TIME STEP SIZE OF 0.2359648     FOR ALL  DEGREES OF FREEDOM
+ FOR AUTOMATIC TIME STEPPING:
+   USE 0.2359648     AS THE MINIMUM TIME STEP SIZE
+   USE 0.2359648     AS THE MAXIMUM TIME STEP SIZE
+
+ TIME= 0.70789    
+
+ *****  MAPDL SOLVE    COMMAND  *****
+
+ *** WARNING ***                         CP =    2578.109   TIME= 18:47:56
+ Material number 95 (used by element 1159361) should normally have at    
+ least one MP or one TB type command associated with it.  Output of      
+ energy by material may not be available.                                
+
+ *** NOTE ***                            CP =    2580.344   TIME= 18:47:58
+ The step data was checked and warning messages were found.              
+  Please review output or errors file (                                  
+ E:\ansys_runs\m4_case0_20261021\studies\B_normal24_dt1\study.err ) for  
+ these warning messages.                                                 
+
+ *** NOTE ***                            CP =    2580.344   TIME= 18:47:58
+ This nonlinear analysis defaults to using the full Newton-Raphson       
+ solution procedure.  This can be modified using the NROPT command.      
+
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2024 R1          24.1     ***
+ Ansys Mechanical Enterprise                       
+ 20230322  VERSION=WINDOWS x64   18:47:58  OCT 21, 2026 CP=   2580.891
+
+ Case0_mesh_normal_verification--M4_Case0_B_face_scoped_CONCEPT_NOT_CALIBRATED 
+
+
+
+                      L O A D   S T E P   O P T I O N S
+
+   LOAD STEP NUMBER. . . . . . . . . . . . . . . .     3
+   TIME AT END OF THE LOAD STEP. . . . . . . . . . 0.70789    
+   TIME STEP SIZE. . . . . . . . . . . . . . . . . 0.23596    
+   MAXIMUM NUMBER OF EQUILIBRIUM ITERATIONS. . . .    15
+   STEP CHANGE BOUNDARY CONDITIONS . . . . . . . .   YES
+   TRANSIENT (INERTIA) EFFECTS
+      THERMAL DOFS . . . . . . . . . . . . . . . .    ON
+   TRANSIENT INTEGRATION PARAMETERS
+      THETA. . . . . . . . . . . . . . . . . . . .  1.0000    
+      OSCILLATION LIMIT CRITERION. . . . . . . . . 0.50000    
+      TOLERANCE. . . . . . . . . . . . . . . . . .  0.0000    
+   TERMINATE ANALYSIS IF NOT CONVERGED . . . . . .YES (EXIT)  
+   CONVERGENCE CONTROLS
+      LABEL   REFERENCE    TOLERANCE  NORM     MINREF
+       HEAT    0.000       0.1000E-03   2     0.1000E-05
+   PRINT OUTPUT CONTROLS . . . . . . . . . . . . .NO PRINTOUT
+   DATABASE OUTPUT CONTROLS
+      ITEM     FREQUENCY   COMPONENT
+       ALL       NONE               
+      NSOL        ALL               
+      RSOL        ALL               
+      VENG        ALL               
+      FFLU        ALL               
+      CONT        ALL               
+      MISC        ALL       M4_BC_RECORDS
+
+
+ SOLUTION MONITORING INFO IS WRITTEN TO FILE= study.mntr                                                                                                                                                                                                                                                          
+ MAXIMUM NUMBER OF EQUILIBRIUM ITERATIONS HAS BEEN MODIFIED              
+  TO BE, NEQIT = 1000, BY SOLUTION CONTROL LOGIC.                        
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   4.09375    
+ RAD FLUX CONVERGENCE VALUE=  0.897979E-04 CRITERION=  0.100000E-03
+
+ RADIOSITY FLUX CONVERGED AFTER ITERATION=    1 SUBSTEP=    1
+
+
+     HT FLOW CONVERGENCE VALUE=   192.3      CRITERION=  0.1453E-01
+    EQUIL ITER   1 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=   54.57    
+     HT FLOW CONVERGENCE VALUE=  0.1116E-11  CRITERION=  0.2509E-01 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER   32 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   120.031    
+ RAD FLUX CONVERGENCE VALUE=  0.343016E-01 CRITERION=  0.100000E-03
+
+     HT FLOW CONVERGENCE VALUE=  0.1549E-01  CRITERION=  0.2509E-01 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   4.01562    
+ RAD FLUX CONVERGENCE VALUE=  0.132285E-03 CRITERION=  0.100000E-03
+
+     HT FLOW CONVERGENCE VALUE=  0.1549E-01  CRITERION=  0.2509E-01 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   3.68750    
+ RAD FLUX CONVERGENCE VALUE=  0.119712E-03 CRITERION=  0.100000E-03
+
+     HT FLOW CONVERGENCE VALUE=  0.1548E-01  CRITERION=  0.2509E-01 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   3.90625    
+ RAD FLUX CONVERGENCE VALUE=  0.108353E-03 CRITERION=  0.100000E-03
+
+     HT FLOW CONVERGENCE VALUE=  0.1548E-01  CRITERION=  0.2509E-01 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   3.79688    
+ RAD FLUX CONVERGENCE VALUE=  0.980868E-04 CRITERION=  0.100000E-03
+
+ RADIOSITY FLUX CONVERGED AFTER ITERATION=    6 SUBSTEP=    1
+
+     HT FLOW CONVERGENCE VALUE=  0.1547E-01  CRITERION=  0.2509E-01 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+ *** LOAD STEP     3   SUBSTEP     1  COMPLETED.    CUM ITER =      5
+ *** TIME =  0.707894         TIME INC =  0.235965    
+ *** RESPONSE EIGENVALUE = 0.5454E-03   OSCILLATION LIMIT = 0.1287E-03
+
+ USE INITIAL TIME STEP SIZE OF 0.2359648     FOR ALL  DEGREES OF FREEDOM
+ FOR AUTOMATIC TIME STEPPING:
+   USE 0.2359648     AS THE MINIMUM TIME STEP SIZE
+   USE 0.2359648     AS THE MAXIMUM TIME STEP SIZE
+
+ TIME= 0.94386    
+
+ *****  MAPDL SOLVE    COMMAND  *****

@@ -1,0 +1,225 @@
+-04
+    EQUIL ITER   1 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.3896    
+     HT FLOW CONVERGENCE VALUE=  0.2184E-11  CRITERION=  0.3441E-04 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.579214E-04 CRITERION=  0.100000E-03
+
+ RADIOSITY FLUX CONVERGED AFTER ITERATION=    2 SUBSTEP=    1
+
+     HT FLOW CONVERGENCE VALUE=  0.1712E-03  CRITERION=  0.3408E-04
+    EQUIL ITER   2 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.2983E-04
+     HT FLOW CONVERGENCE VALUE=  0.2077E-11  CRITERION=  0.3408E-04 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   2
+ *** LOAD STEP    34   SUBSTEP     1  COMPLETED.    CUM ITER =     37
+ *** TIME =   28.8772         TIME INC =   5.00000    
+ *** RESPONSE EIGENVALUE = 0.2937E-04   OSCILLATION LIMIT = 0.1469E-03
+
+ SELECT      COMPONENT M4_MOTOR_WINDING                                                                                                                                                                                                                                                
+
+ SPECIFIED BODY FORCE HGEN FOR ALL SELECTED ELEMENTS AT STARTING LOCATION      1
+    0.00000000      0.00000000      0.00000000      0.00000000    
+
+ SELECT      COMPONENT M4_MOTOR_STATOR                                                                                                                                                                                                                                                 
+
+ SPECIFIED BODY FORCE HGEN FOR ALL SELECTED ELEMENTS AT STARTING LOCATION      1
+    0.00000000      0.00000000      0.00000000      0.00000000    
+
+ SELECT      COMPONENT M4_MOTOR_ROTOR_OTHER                                                                                                                                                                                                                                            
+
+ SPECIFIED BODY FORCE HGEN FOR ALL SELECTED ELEMENTS AT STARTING LOCATION      1
+    0.00000000      0.00000000      0.00000000      0.00000000    
+
+ SELECT      COMPONENT M4_STAGE1_GEAR                                                                                                                                                                                                                                                  
+
+ SPECIFIED BODY FORCE HGEN FOR ALL SELECTED ELEMENTS AT STARTING LOCATION      1
+    0.00000000      0.00000000      0.00000000      0.00000000    
+
+ SELECT      COMPONENT M4_STAGE2_GEAR                                                                                                                                                                                                                                                  
+
+ SPECIFIED BODY FORCE HGEN FOR ALL SELECTED ELEMENTS AT STARTING LOCATION      1
+    0.00000000      0.00000000      0.00000000      0.00000000    
+
+ SELECT      COMPONENT M4_OIL_INVENTORY                                                                                                                                                                                                                                                
+
+ SPECIFIED BODY FORCE HGEN FOR ALL SELECTED ELEMENTS AT STARTING LOCATION      1
+    0.00000000      0.00000000      0.00000000      0.00000000    
+
+ SELECT      COMPONENT M4_INPUT_BEARING_1                                                                                                                                                                                                                                              
+
+ SPECIFIED BODY FORCE HGEN FOR ALL SELECTED ELEMENTS AT STARTING LOCATION      1
+    0.00000000      0.00000000      0.00000000      0.00000000    
+
+ SELECT      COMPONENT M4_INPUT_BEARING_2                                                                                                                                                                                                                                              
+
+ SPECIFIED BODY FORCE HGEN FOR ALL SELECTED ELEMENTS AT STARTING LOCATION      1
+    0.00000000      0.00000000      0.00000000      0.00000000    
+
+ SELECT      COMPONENT M4_INTERMEDIATE_BEARING_1                                                                                                                                                                                                                                       
+
+ SPECIFIED BODY FORCE HGEN FOR ALL SELECTED ELEMENTS AT STARTING LOCATION      1
+    0.00000000      0.00000000      0.00000000      0.00000000    
+
+ SELECT      COMPONENT M4_INTERMEDIATE_BEARING_2                                                                                                                                                                                                                                       
+
+ SPECIFIED BODY FORCE HGEN FOR ALL SELECTED ELEMENTS AT STARTING LOCATION      1
+    0.00000000      0.00000000      0.00000000      0.00000000    
+
+ SELECT      COMPONENT M4_OUTPUT_BEARING_1                                                                                                                                                                                                                                             
+
+ SPECIFIED BODY FORCE HGEN FOR ALL SELECTED ELEMENTS AT STARTING LOCATION      1
+    0.00000000      0.00000000      0.00000000      0.00000000    
+
+ SELECT      COMPONENT M4_OUTPUT_BEARING_2                                                                                                                                                                                                                                             
+
+ SPECIFIED BODY FORCE HGEN FOR ALL SELECTED ELEMENTS AT STARTING LOCATION      1
+    0.00000000      0.00000000      0.00000000      0.00000000    
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+ SELECT       FOR ITEM=TYPE COMPONENT=    
+  IN RANGE        95 TO         95 STEP          1
+
+      19891  ELEMENTS (OF     614312  DEFINED) SELECTED BY  ESEL  COMMAND.
+
+ SELECT      ALL NODES HAVING ANY ELEMENT IN ELEMENT SET.
+
+      10304 NODES (OF     124447  DEFINED) SELECTED FROM
+    19891 SELECTED ELEMENTS BY NSLE COMMAND.
+
+ GENERATE SURFACE LOAD HFLU ON SURFACE DEFINED BY ALL SELECTED NODES
+ VALUE =   0.00000000    
+
+ NUMBER OF HFLU ELEMENT FACE LOADS STORED =      19891
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+ SELECT       FOR ITEM=TYPE COMPONENT=    
+  IN RANGE        96 TO         96 STEP          1
+
+      20164  ELEMENTS (OF     614312  DEFINED) SELECTED BY  ESEL  COMMAND.
+
+ SELECT      ALL NODES HAVING ANY ELEMENT IN ELEMENT SET.
+
+      10436 NODES (OF     124447  DEFINED) SELECTED FROM
+    20164 SELECTED ELEMENTS BY NSLE COMMAND.
+
+ GENERATE SURFACE LOAD HFLU ON SURFACE DEFINED BY ALL SELECTED NODES
+ VALUE =   0.00000000    
+
+ NUMBER OF HFLU ELEMENT FACE LOADS STORED =      20164
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+ SELECT       FOR ITEM=TYPE COMPONENT=    
+  IN RANGE        97 TO         97 STEP          1
+
+        208  ELEMENTS (OF     614312  DEFINED) SELECTED BY  ESEL  COMMAND.
+
+ SELECT      ALL NODES HAVING ANY ELEMENT IN ELEMENT SET.
+
+        238 NODES (OF     124447  DEFINED) SELECTED FROM
+      208 SELECTED ELEMENTS BY NSLE COMMAND.
+
+ GENERATE SURFACE LOAD HFLU ON SURFACE DEFINED BY ALL SELECTED NODES
+ VALUE =   0.00000000    
+
+ NUMBER OF HFLU ELEMENT FACE LOADS STORED =        208
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+ SELECT       FOR ITEM=TYPE COMPONENT=    
+  IN RANGE        98 TO         98 STEP          1
+
+        208  ELEMENTS (OF     614312  DEFINED) SELECTED BY  ESEL  COMMAND.
+
+ SELECT      ALL NODES HAVING ANY ELEMENT IN ELEMENT SET.
+
+        238 NODES (OF     124447  DEFINED) SELECTED FROM
+      208 SELECTED ELEMENTS BY NSLE COMMAND.
+
+ GENERATE SURFACE LOAD HFLU ON SURFACE DEFINED BY ALL SELECTED NODES
+ VALUE =   0.00000000    
+
+ NUMBER OF HFLU ELEMENT FACE LOADS STORED =        208
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+ USE INITIAL TIME STEP SIZE OF  5.000000     FOR ALL  DEGREES OF FREEDOM
+ FOR AUTOMATIC TIME STEPPING:
+   USE  5.000000     AS THE MINIMUM TIME STEP SIZE
+   USE  5.000000     AS THE MAXIMUM TIME STEP SIZE
+
+ TIME=  33.877    
+
+ *****  MAPDL SOLVE    COMMAND  *****
+
+ *** WARNING ***                         CP =    2880.719   TIME= 20:39:34
+ Material number 95 (used by element 658899) should normally have at     
+ least one MP or one TB type command associated with it.  Output of      
+ energy by material may not be available.                                
+
+ *** NOTE ***                            CP =    2882.031   TIME= 20:39:34
+ The step data was checked and warning messages were found.              
+  Please review output or errors file (                                  
+ E:\ansys_runs\m4_case0_20261021\studies\A_normal12_rd95_dt1\study.err   
+ ) for these warning messages.                                           
+
+ *** NOTE ***                            CP =    2882.031   TIME= 20:39:34
+ This nonlinear analysis defaults to using the full Newton-Raphson       
+ solution procedure.  This can be modified using the NROPT command.      
+
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2024 R1          24.1     ***
+ Ansys Mechanical Enterprise                       
+ 20230322  VERSION=WINDOWS x64   20:39:36  OCT 21, 2026 CP=   2889.578
+
+ Case0_mesh_normal_verification--M4_Case0_B_face_scoped_CONCEPT_NOT_CALIBRATED 
+
+
+
+                      L O A D   S T E P   O P T I O N S
+
+   LOAD STEP NUMBER. . . . . . . . . . . . . . . .    35
+   TIME AT END OF THE LOAD STEP. . . . . . . . . .  33.877    
+   TIME STEP SIZE. . . . . . . . . . . . . . . . .  5.0000    
+   MAXIMUM NUMBER OF EQUILIBRIUM ITERATIONS. . . .    15
+   STEP CHANGE BOUNDARY CONDITIONS . . . . . . . .   YES
+   TRANSIENT (INERTIA) EFFECTS
+      THERMAL DOFS . . . . . . . . . . . . . . . .    ON
+   TRANSIENT INTEGRATION PARAMETERS
+      THETA. . . . . . . . . . . . . . . . . . . .  1.0000    
+      OSCILLATION LIMIT CRITERION. . . . . . . . . 0.50000    
+      TOLERANCE. . . . . . . . . . . . . . . . . .  0.0000    
+   TERMINATE ANALYSIS IF NOT CONVERGED . . . . . .YES (EXIT)  
+   CONVERGENCE CONTROLS
+      LABEL   REFERENCE    TOLERANCE  NORM     MINREF
+       HEAT    0.000       0.1000E-05   2      0.000    
+   PRINT OUTPUT CONTROLS . . . . . . . . . . . . .NO PRINTOUT
+   DATABASE OUTPUT CONTROLS
+      ITEM     FREQUENCY   COMPONENT
+       ALL       NONE               
+      NSOL        ALL               
+      RSOL        ALL               
+      VENG        ALL               
+      FFLU        ALL               
+      CONT        ALL               
+      MISC        ALL       M4_BC_RECORDS
+
+
+ SOLUTION MONITORING INFO IS WRITTEN TO FILE= study.mntr                                                                                                                                                                                                                                                          
+ MAXIMUM NUMBER OF EQUILIBRIUM ITERATIONS HAS BEEN MODIFIED              
+  TO BE, NEQIT = 1000, BY SOLUTION CONTROL LOGIC.                        
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   0.00000    
+ RAD FLUX CONVERGENCE VALUE=  0.521678E-04 CRITERION=  0.100000E-03
+
+ RADIOSITY FLUX CONVERGED AFTER ITERATION=    1 SUBSTEP=    1
+
+

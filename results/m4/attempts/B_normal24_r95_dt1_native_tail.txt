@@ -1,0 +1,400 @@
+d, le*le/alpha, Body 21: 0.384524
+  Estimated Increment Needed, le*le/alpha, Body 22: 0.47757
+  Estimated Increment Needed, le*le/alpha, Body 23: 2.15457
+  Estimated Increment Needed, le*le/alpha, Body 24: 0.731683
+  Estimated Increment Needed, le*le/alpha, Body 25: 3.4755
+  Estimated Increment Needed, le*le/alpha, Body 26: 0.360616
+  Estimated Increment Needed, le*le/alpha, Body 27: 0.340942
+  Estimated Increment Needed, le*le/alpha, Body 28: 9.68708
+  Estimated Increment Needed, le*le/alpha, Body 29: 218.355
+  Estimated Increment Needed, le*le/alpha, Body 30: 9.66542
+ ****************************************************
+ ******************* SOLVE FOR LS 1 OF 17 ****************
+
+ SELECT       FOR ITEM=TYPE COMPONENT=    
+  IN RANGE        95 TO         95 STEP          1
+
+      75429  ELEMENTS (OF    1226564  DEFINED) SELECTED BY  ESEL  COMMAND.
+
+ SELECT      ALL NODES HAVING ANY ELEMENT IN ELEMENT SET.
+
+      38431 NODES (OF     223000  DEFINED) SELECTED FROM
+    75429 SELECTED ELEMENTS BY NSLE COMMAND.
+
+ GENERATE SURFACE LOAD HFLU ON SURFACE DEFINED BY ALL SELECTED NODES
+ ACCORDING TO TABLE PARAMETER = _LOADVARI571
+
+ NUMBER OF HFLU ELEMENT FACE LOADS STORED =      75429
+
+ SELECT       FOR ITEM=TYPE COMPONENT=    
+  IN RANGE        96 TO         96 STEP          1
+
+      81299  ELEMENTS (OF    1226564  DEFINED) SELECTED BY  ESEL  COMMAND.
+
+ SELECT      ALL NODES HAVING ANY ELEMENT IN ELEMENT SET.
+
+      41357 NODES (OF     223000  DEFINED) SELECTED FROM
+    81299 SELECTED ELEMENTS BY NSLE COMMAND.
+
+ GENERATE SURFACE LOAD HFLU ON SURFACE DEFINED BY ALL SELECTED NODES
+ ACCORDING TO TABLE PARAMETER = _LOADVARI573
+
+ NUMBER OF HFLU ELEMENT FACE LOADS STORED =      81299
+
+ SELECT       FOR ITEM=TYPE COMPONENT=    
+  IN RANGE        97 TO         97 STEP          1
+
+        208  ELEMENTS (OF    1226564  DEFINED) SELECTED BY  ESEL  COMMAND.
+
+ SELECT      ALL NODES HAVING ANY ELEMENT IN ELEMENT SET.
+
+        238 NODES (OF     223000  DEFINED) SELECTED FROM
+      208 SELECTED ELEMENTS BY NSLE COMMAND.
+
+ GENERATE SURFACE LOAD HFLU ON SURFACE DEFINED BY ALL SELECTED NODES
+ ACCORDING TO TABLE PARAMETER = _LOADVARI575
+
+ NUMBER OF HFLU ELEMENT FACE LOADS STORED =        208
+
+ SELECT       FOR ITEM=TYPE COMPONENT=    
+  IN RANGE        98 TO         98 STEP          1
+
+        208  ELEMENTS (OF    1226564  DEFINED) SELECTED BY  ESEL  COMMAND.
+
+ SELECT      ALL NODES HAVING ANY ELEMENT IN ELEMENT SET.
+
+        238 NODES (OF     223000  DEFINED) SELECTED FROM
+      208 SELECTED ELEMENTS BY NSLE COMMAND.
+
+ GENERATE SURFACE LOAD HFLU ON SURFACE DEFINED BY ALL SELECTED NODES
+ ACCORDING TO TABLE PARAMETER = _LOADVARI577
+
+ NUMBER OF HFLU ELEMENT FACE LOADS STORED =        208
+
+ ALL SELECT   FOR ITEM=NODE COMPONENT=    
+  IN RANGE         1 TO     223000 STEP          1
+
+     223000  NODES (OF     223000  DEFINED) SELECTED BY NSEL  COMMAND.
+
+ ALL SELECT   FOR ITEM=ELEM COMPONENT=    
+  IN RANGE         1 TO    1491698 STEP          1
+
+    1226564  ELEMENTS (OF    1226564  DEFINED) SELECTED BY  ESEL  COMMAND.
+
+ SELECT       FOR ITEM=TYPE COMPONENT=    
+  IN RANGE        99 TO         99 STEP          1
+
+     171784  ELEMENTS (OF    1226564  DEFINED) SELECTED BY  ESEL  COMMAND.
+
+ SELECT      ALL NODES HAVING ANY ELEMENT IN ELEMENT SET.
+
+      86326 NODES (OF     223000  DEFINED) SELECTED FROM
+   171784 SELECTED ELEMENTS BY NSLE COMMAND.
+
+ GENERATE SURFACE LOAD CONV ON SURFACE DEFINED BY ALL SELECTED NODES
+ VALUES=  15.0000000      25.0000000    
+
+ NUMBER OF CONV ELEMENT FACE LOADS STORED =     171784
+
+ SELECT       FOR ITEM=TYPE COMPONENT=    
+  IN RANGE       100 TO        100 STEP          1
+
+       3410  ELEMENTS (OF    1226564  DEFINED) SELECTED BY  ESEL  COMMAND.
+
+ SELECT      ALL NODES HAVING ANY ELEMENT IN ELEMENT SET.
+
+       1882 NODES (OF     223000  DEFINED) SELECTED FROM
+     3410 SELECTED ELEMENTS BY NSLE COMMAND.
+
+ GENERATE SURFACE LOAD CONV ON SURFACE DEFINED BY ALL SELECTED NODES
+ VALUES=  300.000000      25.0000000    
+
+ NUMBER OF CONV ELEMENT FACE LOADS STORED =       3410
+
+ ALL SELECT   FOR ITEM=NODE COMPONENT=    
+  IN RANGE         1 TO     223000 STEP          1
+
+     223000  NODES (OF     223000  DEFINED) SELECTED BY NSEL  COMMAND.
+
+ ALL SELECT   FOR ITEM=ELEM COMPONENT=    
+  IN RANGE         1 TO    1491698 STEP          1
+
+    1226564  ELEMENTS (OF    1226564  DEFINED) SELECTED BY  ESEL  COMMAND.
+
+ SPECIFIED SURFACE LOAD RDSF FOR ALL PICKED ELEMENTS  LKEY = 1   KVAL = 1
+     VALUES =    0.80000        0.80000        0.80000        0.80000    
+
+ SPECIFIED SURFACE LOAD RDSF FOR ALL PICKED ELEMENTS  LKEY = 1   KVAL = 2
+     VALUES =     1.0000         1.0000         1.0000         1.0000    
+
+ SPECIFIED SURFACE LOAD RDSF FOR ALL PICKED ELEMENTS  LKEY = 2   KVAL = 1
+     VALUES =    0.80000        0.80000        0.80000        0.80000    
+
+ SPECIFIED SURFACE LOAD RDSF FOR ALL PICKED ELEMENTS  LKEY = 2   KVAL = 2
+     VALUES =     1.0000         1.0000         1.0000         1.0000    
+
+ SPECIFIED SURFACE LOAD RDSF FOR ALL PICKED ELEMENTS  LKEY = 5   KVAL = 1
+     VALUES =    0.80000        0.80000        0.80000        0.80000    
+
+ SPECIFIED SURFACE LOAD RDSF FOR ALL PICKED ELEMENTS  LKEY = 5   KVAL = 2
+     VALUES =     1.0000         1.0000         1.0000         1.0000    
+
+ ALL SELECT   FOR ITEM=NODE COMPONENT=    
+  IN RANGE         1 TO     223000 STEP          1
+
+     223000  NODES (OF     223000  DEFINED) SELECTED BY NSEL  COMMAND.
+
+ ALL SELECT   FOR ITEM=ELEM COMPONENT=    
+  IN RANGE         1 TO    1491698 STEP          1
+
+    1226564  ELEMENTS (OF    1226564  DEFINED) SELECTED BY  ESEL  COMMAND.
+
+ SPECIFIED CONSTRAINT TEMP FOR PICKED NODES 
+ REAL=  25.0000000       IMAG=  0.00000000    
+
+ SPECIFIED SURFACE LOAD RDSF FOR ALL PICKED ELEMENTS  LKEY = 1   KVAL = 1
+     VALUES =    0.70000        0.70000        0.70000        0.70000    
+
+ SPECIFIED SURFACE LOAD RDSF FOR ALL PICKED ELEMENTS  LKEY = 1   KVAL = 2
+     VALUES =     1.0000         1.0000         1.0000         1.0000    
+
+ SPECIFIED SURFACE LOAD RDSF FOR ALL PICKED ELEMENTS  LKEY = 2   KVAL = 1
+     VALUES =    0.70000        0.70000        0.70000        0.70000    
+
+ SPECIFIED SURFACE LOAD RDSF FOR ALL PICKED ELEMENTS  LKEY = 2   KVAL = 2
+     VALUES =     1.0000         1.0000         1.0000         1.0000    
+
+ SPECIFIED SURFACE LOAD RDSF FOR ALL PICKED ELEMENTS  LKEY = 3   KVAL = 1
+     VALUES =    0.70000        0.70000        0.70000        0.70000    
+
+ SPECIFIED SURFACE LOAD RDSF FOR ALL PICKED ELEMENTS  LKEY = 3   KVAL = 2
+     VALUES =     1.0000         1.0000         1.0000         1.0000    
+
+ SPECIFIED SURFACE LOAD RDSF FOR ALL PICKED ELEMENTS  LKEY = 5   KVAL = 1
+     VALUES =    0.70000        0.70000        0.70000        0.70000    
+
+ SPECIFIED SURFACE LOAD RDSF FOR ALL PICKED ELEMENTS  LKEY = 5   KVAL = 2
+     VALUES =     1.0000         1.0000         1.0000         1.0000    
+
+ ALL SELECT   FOR ITEM=NODE COMPONENT=    
+  IN RANGE         1 TO     223000 STEP          1
+
+     223000  NODES (OF     223000  DEFINED) SELECTED BY NSEL  COMMAND.
+
+ ALL SELECT   FOR ITEM=ELEM COMPONENT=    
+  IN RANGE         1 TO    1491698 STEP          1
+
+    1226564  ELEMENTS (OF    1226564  DEFINED) SELECTED BY  ESEL  COMMAND.
+
+ ALL SELECT   FOR ITEM=NODE COMPONENT=    
+  IN RANGE         1 TO     223000 STEP          1
+
+     223000  NODES (OF     223000  DEFINED) SELECTED BY NSEL  COMMAND.
+
+ ALL SELECT   FOR ITEM=ELEM COMPONENT=    
+  IN RANGE         1 TO    1491698 STEP          1
+
+    1226564  ELEMENTS (OF    1226564  DEFINED) SELECTED BY  ESEL  COMMAND.
+
+ PRINTOUT RESUMED BY /GOP
+
+ DO NOT USE AUTOMATIC TIME STEPPING THIS LOAD STEP
+
+ USE INITIAL TIME STEP SIZE OF 0.2359648     FOR ALL  DEGREES OF FREEDOM
+ FOR AUTOMATIC TIME STEPPING:
+   USE 0.2359648     AS THE MINIMUM TIME STEP SIZE
+   USE 0.2359648     AS THE MAXIMUM TIME STEP SIZE
+
+ TIME= 0.23596    
+
+ INCLUDE TRANSIENT EFFECTS FOR  ALL DEGREES OF FREEDOM THIS LOAD STEP
+
+ ERASE THE CURRENT DATABASE OUTPUT CONTROL TABLE.
+
+
+ WRITE ALL  ITEMS TO THE DATABASE WITH A FREQUENCY OF NONE
+   FOR ALL APPLICABLE ENTITIES
+
+ WRITE NSOL ITEMS TO THE DATABASE WITH A FREQUENCY OF ALL 
+   FOR ALL APPLICABLE ENTITIES
+
+ WRITE RSOL ITEMS TO THE DATABASE WITH A FREQUENCY OF ALL 
+   FOR ALL APPLICABLE ENTITIES
+
+ WRITE EANG ITEMS TO THE DATABASE WITH A FREQUENCY OF ALL 
+   FOR ALL APPLICABLE ENTITIES
+
+ WRITE VENG ITEMS TO THE DATABASE WITH A FREQUENCY OF ALL 
+   FOR ALL APPLICABLE ENTITIES
+
+ WRITE FFLU ITEMS TO THE DATABASE WITH A FREQUENCY OF ALL 
+   FOR ALL APPLICABLE ENTITIES
+
+ WRITE CONT ITEMS TO THE DATABASE WITH A FREQUENCY OF ALL 
+   FOR ALL APPLICABLE ENTITIES
+
+ PRINTOUT RESUMED BY /GOP
+
+ WRITE MISC ITEMS TO THE DATABASE WITH A FREQUENCY OF ALL 
+   FOR THE ENTITIES DEFINED BY COMPONENT _ELMISC 
+
+ WRITE MISC ITEMS TO THE DATABASE WITH A FREQUENCY OF ALL 
+   FOR ALL APPLICABLE ENTITIES
+
+ CONVERGENCE ON HEAT BASED ON THE NORM OF THE N-R LOAD
+   WITH A TOLERANCE OF 0.1000E-03 AND A MINIMUM REFERENCE VALUE OF 0.1000E-05
+   USING THE L2 NORM (CHECK THE SRSS VALUE)
+
+ UNDER RELAXATION FOR RADIATION FLUX=   0.10000
+
+ TOLERENCE FOR RADIOSITY FLUX=   0.00010
+
+ USING JACOBI ITERATIVE SOLVER FOR RADIOSITY SOLUTION
+ FOR 3D ENCLOSURES.
+ USING GSEIDEL ITERATIVE SOLVER FOR RADIOSITY SOLUTION
+ FOR 2D ENCLOSURES.
+
+ MAXIMUM NUMBER OF ITERATIONS=  1000
+ TOLERENCE FOR ITERATIVE SOLVER=   0.10000
+ RELAXATION FOR ITERATIVE SOLVER=   0.10000
+
+ HEMICUBE RESOLUTION=   10
+
+ MIN NORMALIZED DIST BEFORE AUTO SUBDIVIDE= 1.000000000E-06
+
+ SELECT      COMPONENT _CM583                                                                                                                                                                                                                                                          
+
+ SELECT      ALL ELEMENTS HAVING ANY NODE IN NODAL SET.
+
+     314369 ELEMENTS (OF    1226564  DEFINED) SELECTED FROM
+    38431 SELECTED NODES BY  ESLN COMMAND.
+
+ CURRENT DEGREE OF DECIMATION =    0.950
+
+PLACEMENT POLICY FOR RADIATION NODES IS SET TO OPTIMAL
+Degree of decimation (nodes):  0.947855    
+
+BEFORE SYMMETRIZATION:
+
+NUMBER OF RADIATION NODES CREATED =       2004
+
+NUMBER OF RADIOSITY SURFACE ELEMENTS CREATED =       3771
+
+AFTER SYMMETRIZATION:
+
+FULL NUMBER OF RADIATION NODES CREATED =       2004
+
+FULL NUMBER OF RADIOSITY SURFACE ELEMENTS CREATED =      3771
+
+ ALL SELECT   FOR ITEM=NODE COMPONENT=    
+  IN RANGE         1 TO     225004 STEP          1
+
+     225004  NODES (OF     225004  DEFINED) SELECTED BY NSEL  COMMAND.
+
+ ALL SELECT   FOR ITEM=ELEM COMPONENT=    
+  IN RANGE         1 TO    1495469 STEP          1
+
+    1230335  ELEMENTS (OF    1230335  DEFINED) SELECTED BY  ESEL  COMMAND.
+
+ SELECT      COMPONENT _CM585                                                                                                                                                                                                                                                          
+
+ SELECT      ALL ELEMENTS HAVING ANY NODE IN NODAL SET.
+
+      12761 ELEMENTS (OF    1230335  DEFINED) SELECTED FROM
+     1417 SELECTED NODES BY  ESLN COMMAND.
+
+ CURRENT DEGREE OF DECIMATION =    0.950
+
+PLACEMENT POLICY FOR RADIATION NODES IS SET TO OPTIMAL
+
+ *** ERROR ***                           CP =      29.047   TIME= 18:51:31
+ Critical topology breaking.  Decimation is stopped.                     
+Degree of decimation (nodes):  0.218772E-01
+
+BEFORE SYMMETRIZATION:
+
+NUMBER OF RADIATION NODES CREATED =       1386
+
+NUMBER OF RADIOSITY SURFACE ELEMENTS CREATED =       2462
+
+AFTER SYMMETRIZATION:
+
+FULL NUMBER OF RADIATION NODES CREATED =       1386
+
+FULL NUMBER OF RADIOSITY SURFACE ELEMENTS CREATED =      2462
+
+
+ NUMBER OF WARNING MESSAGES ENCOUNTERED=          0
+ NUMBER OF ERROR   MESSAGES ENCOUNTERED=          1
+
+
+
+ ***** PROBLEM TERMINATED BY INDICATED ERROR(S) OR BY END OF INPUT DATA *****
+
++--------------------- M A P D L   S T A T I S T I C S ------------------------+
+
+Release: 2024 R1            Build: 24.1       Update: UP20231106   Platform: WINDOWS x64 
+Date Run: 10/21/2026   Time: 18:51     Process ID: 53428
+Operating System: Windows 11  (Build: 26300)
+
+Processor Model: AMD Ryzen 7 5800H with Radeon Graphics
+
+Compiler: Intel(R) Fortran Compiler Classic Version 2021.9  (Build: 20230302)
+          Intel(R) C/C++ Compiler Classic Version 2021.9  (Build: 20230302)
+          Intel(R) Math Kernel Library Version 2020.0.0 Product Build 20191125
+          BLAS Library supplied by AMD BLIS
+
+Number of machines requested            :    1
+Total number of cores available         :   16
+Number of physical cores available      :    8
+Number of processes requested           :    1
+Number of threads per process requested :    0
+Total number of cores requested         :    0 (Shared Memory Parallel)                    
+
+GPU Acceleration: Not Requested
+
+Job Name: study
+Input File: E:\ansys_runs\m4_case0_20261021\studies\B_normal24_r95_dt1\study.dat
+Working Directory: E:\ChatGPT��Ŀ\�����ں�������Ϸ���
+
+Total CPU time for main thread                    :       13.5 seconds
+Total CPU time summed for all threads             :       29.9 seconds
+
+Elapsed time spent obtaining a license            :        1.6 seconds
+Elapsed time spent pre-processing model (/PREP7)  :        3.6 seconds
+Elapsed time spent solution - preprocessing       :        0.0 seconds
+Elapsed time spent computing solution             :        0.0 seconds
+Elapsed time spent solution - postprocessing      :        0.0 seconds
+Elapsed time spent post-processing model (/POST1) :        0.0 seconds
+ 
+
+Sum of disk space used on all processes           :        0.0 MB
+
+Sum of memory used on all processes               :     1422.0 MB
+Sum of memory allocated on all processes          :     2112.0 MB
+Physical memory available                         :         16 GB
+Total amount of I/O written to disk               :        0.0 GB
+Total amount of I/O read from disk                :        0.0 GB
+
++------------------ E N D   M A P D L   S T A T I S T I C S -------------------+
+
+
+ *-----------------------------------------------------------------------------*
+ |                                                                             |
+ |                               RUN COMPLETED                                 |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |  Ansys MAPDL 2024 R1         Build 24.1         UP20231106    WINDOWS x64   |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |  Database Requested(-db)  1024 MB     Scratch Memory Requested      1024 MB |
+ |  Maximum Database Used     791 MB     Maximum Scratch Memory Used    631 MB |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |        CP Time      (sec) =         29.859       Time  =  18:51:32          |
+ |        Elapsed Time (sec) =         17.000       Date  =  10/21/2026        |
+ |                                                                             |
+ *-----------------------------------------------------------------------------*

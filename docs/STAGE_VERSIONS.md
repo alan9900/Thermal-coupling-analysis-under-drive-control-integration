@@ -7,13 +7,15 @@
 | M0 参数审查 | APPROVED（参数与资料准备范围） | [M0-v1.0](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/releases/tag/M0-v1.0)，附注Tag已推送验证 | 验收main `b13f265b1ff0add1f9e8b166d2c1bfa4ac8a8d16`；Tag对象 `d50d3896b71480bc3793a82d274f862afac1f8ec` | [PR #1](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/1)，MERGED | V0.4 | [关卡记录](../reports/M0_GATE_ACCEPTANCE_2026-10-19.md)；Python 3项／MATLAB既有12组检查及18组制动积分通过；批准日期2026-10-19，用户授权简验后进入M1 |
 | M1 热源建模 | APPROVED（概念数值模型）；真实标定PARTIAL | [M1-v1.0](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/releases/tag/M1-v1.0)，附注Tag已推送核验 | 验收main `9d545ab39a3efcce857573af74f7e325b74a2b15`；Tag对象 `9b3c7f97c63b56b50eb7c0477a72ad03060cae39` | [PR #2](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/2)，MERGED | V0.4 | [报告](../reports/M1_report.md) / [Word](../reports/M1_report.docx) / [PDF](../reports/M1_report.pdf) / [验收表](../reports/M1_ACCEPTANCE_CHECKLIST.md)；R2025a原18+新11测试组、23整车轨迹、46单侧接口及322敏感性运行通过；Python独立复核通过；严格模式拒绝、工程模式S3；M2 NOT EXECUTED |
 | M2 热网络 | APPROVED（概念瞬态网络限定范围）；实物标定未完成 | M2-v1.0，附注Tag已推送核验 | 验收main `1d51c22d94577ff8f52be785300b5f6b4aadee37`；Tag对象 `4ad89c4a220174de741b4ba48706279d3b7cb2d1` | [PR #3](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/3)，MERGED | V0.4 | [报告](../reports/M2_report.md) / [Word](../reports/M2_report.docx) / [PDF](../reports/M2_report.pdf) / [验收表](../reports/M2_ACCEPTANCE_CHECKLIST.md)；11组测试、4+3+18场景及Python/SciPy复核PASS；2026-10-20批准，真实几何/热阻/换热/温度未标定 |
-| M3 几何设计 | IN_PROGRESS（概念几何交付，验收PENDING） | NOT CREATED | CAD生成源 `3ea9c6bd2af2cde56d17c1ce5f56ba446813477b`；基线M2-v1.0 `1d51c22d94577ff8f52be785300b5f6b4aadee37` | [PR #4](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/4)，DRAFT | V0.4 | [报告](../reports/M3_report.md) / [Word](../reports/M3_report.docx) / [PDF](../reports/M3_report.pdf) / [验收表](../reports/M3_ACCEPTANCE_CHECKLIST.md)；实际CAD、56 STEP回读、283对干涉/18相位/8测试组；2187解析筛查中729拒绝；制造、寿命、实装未验证；不合并/Tag/进入M4 |
-| M4 ANSYS | NOT_STARTED | NOT CREATED | — | — | V0.4 | — |
-| M5 Fluent | NOT_STARTED | NOT CREATED | — | — | V0.4 | — |
-| M6 优化 | NOT_STARTED | NOT CREATED | — | — | V0.4 | — |
-| M7 验证 | NOT_STARTED | NOT CREATED | — | — | V0.4 | — |
+| M3 几何设计 | APPROVED（参数化概念几何及传热准备）；机械认证未完成 | [M3-v1.0](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/releases/tag/M3-v1.0)，附注Tag已推送核验 | 验收main `7a6b9b1512495283fa12dd4a2a7ffdf698554d3e`；Tag对象 `c958ec76330c016e0dc3f8ca141f2b139f6c53f3` | [PR #4](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/4)，MERGED | V0.4 | [斜齿修订报告](../reports/M3_helical_revision.md) / [Word](../reports/M3_helical_revision.docx) / [PDF](../reports/M3_helical_revision.pdf) / [验收表](../reports/M3_HELICAL_CHECKLIST.md)；[批准范围](../reports/M3_APPROVED_SCOPE_2026-10-21.md)；2026-10-21批准，18 STEP及66个Git blob核验；轴向承载、连接、实际接触与冷却等限制保留 |
+| M4 ANSYS | PARTIAL（暂停求解；后续零再生计划待执行） | NOT CREATED，未经批准不创建 | 既有云图交付登记 `602e72e34301bd2ae27c0c7abde84e27c06ea863`；本轮计划更新另见最新登记 | [PR #5](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/5)，DRAFT | V0.4 | [历史报告](../reports/M4_report.md) / [验收表](../reports/M4_ACCEPTANCE_CHECKLIST.md) / [当前零再生计划](NO_REGEN_WORK_PLAN.md)；原含再生证据保留，未生成新零再生结果，数值与敏感性验证待后续授权 |
+| M5 Fluent | NOT_STARTED | NOT CREATED | — | — | V0.4 | 后续采用零再生热负荷，需前序归档及独立授权 |
+| M6 优化 | NOT_STARTED | NOT CREATED | — | — | V0.4 | 零再生条件下隔热导流比较；未经批准不开展 |
+| M7 验证 | NOT_STARTED | NOT CREATED | — | — | V0.4 | 零再生单次/重复制动与预热组合；未经批准不开展 |
 
 正式完成时需将Git Tag、PR URL、Git commit SHA、配置版本、批准日期、测试通过/失败/未运行项目写入此表。禁止将本次增加管理制度的Git commit SHA冒充M0正式版本。
+
+下文按时间顺序保留历史送审与开发状态；当前阶段状态以本表和最新登记为准。2026-10-22再次核对远端M0–M3 Tag对象及目标均未改动，main仍为M3验收合并提交；无M4-v1.0。
 
 M0本次使用`stage/M0-parameter-audit`分支补齐历史成果送审。`PARTIAL`表示正式审批流程尚未完成，不表示已重新验收失败；技术完整性与未验证数据见验收摘要。原M0结果、配置及报告不被此次复核覆盖。候选版本名不代表Git Tag已经存在，尚未尝试创建正式Tag。
 
@@ -118,3 +120,87 @@ CAD启动源`225c1a217c1983fa3b654bf26c6d1365906382e7`；主体模型/报告证�
 ## M3正式批准（2026-10-21）
 
 研究者已批准限定概念模型验收并授权合并PR #4、创建M3-v1.0。最终复核见reports/M3_APPROVED_SCOPE_2026-10-21.md：66个Git blob重新SHA256通过；18 STEP及源码、参数、报告、图、测试证据齐备。验收不包括机械安全、疲劳/制造认证或真实温度标定；轴向承载、连接套、接触与冷却等限制继续保留。Tag将在实际合并提交上创建，准确合并SHA在归档成功后追加，不移动旧版本。
+
+## M3-v1.0远程归档成功（2026-10-21）
+
+PR #4已按研究者授权合并；main合并SHA `7a6b9b1512495283fa12dd4a2a7ffdf698554d3e`。正式附注Tag `M3-v1.0` 对象 `c958ec76330c016e0dc3f8ca141f2b139f6c53f3`，远程剥离目标经git ls-remote核验为上述合并提交。此前M0/M1/M2标签未改动。验收范围和限制见reports/M3_APPROVED_SCOPE_2026-10-21.md，历史PARTIAL/BLOCKED记录不抹除。本段为归档后的登记，Tag保持指向实际验收合并提交。
+
+M4已获开发授权，从上述最新main创建stage/M4-ansys，仅先开展Case0。M4未经批准不合并、不创建M4-v1.0、不进入M5。
+
+## M4开发记录（2026-10-21，未验收）
+
+分支`stage/M4-ansys`，草稿[PR #5](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/5)，状态PARTIAL / IN PROGRESS，无M4正式Tag。输入与网格启动证据`72332cd`、热边界复核`e4e281d`、接触面及储热积分`1492340`、首次完整原生热平衡证据`5da3d22`均已推送。后续细化提交以PR记录为准，不覆盖原阶段版本。
+
+实际运行ANSYS2024R1：导入129部件/131实体；保留28组/30实体；粗网格332431实体单元/88049实体节点。后续明确面接触版本Mechanical实际报告Solved；初次整零件接触版本发生结果转移失败，保留SolveFailed记录并独立恢复原生46时刻RTH。首次诊断热平衡最大相对残差约9.81e-6（0.000981%），但这不代表网格/时间步独立性通过。摩擦片初始自动扫掠仅一层，已拒绝将面内加密当作厚度收敛，正在执行明确6/12/24层的细化。
+
+成果入口`docs/M4_RUNBOOK.md`，源码`scripts/m4`，配置`configs/m4_case0.json`及`configs/M4_materials.xml`，证据`results/m4`。原生模型压缩输入位于`results/m4/model_input`，大体积RTH及Workbench项目留在文档登记的本地运行目录并记录校验和。全部温度为S3概念预测；真实接触、冷却、材料温变及温度标定未完成。不得用前处理12组PASS或单元基准算例代替M4整体数值验证。
+
+### M4细化验证进展（2026-10-21，未验收）
+
+已推送证据提交 `099e84a57b63c6bca9750206e0b47a5daa8e93b8`：三套35.2/43.9/81.8万实体单元实际网格，原生默认形状检查0错误限值单元、493/494/500警告；全部28区域中/细网格温差通过工程阈值；三个独立辐射面简化检查通过。时间步及剩余敏感性仍在运行，不提前判为阶段通过。
+
+报告 `reports/M4_report.md`，验收表 `reports/M4_ACCEPTANCE_CHECKLIST.md`，状态自动证据 `results/m4/acceptance_checks.json`。一层摩擦片峰值已拒绝；局部低于初值的数值欠冲原样保留；安装链TCC扫描不覆盖全部电机内部/油膜与材料不确定性。真实标定仍PARTIAL；无M4正式Tag，PR #5保持草稿，不进入M5。后续追加准确完整交付SHA，不把本登记当成正式验收版本。
+
+### M4暂停总结交付（2026-10-22，PARTIAL，未验收）
+
+成果提交 `d3945de9c7963b0794095f6a8e1c9dd09b0f9faf`；分支 `stage/M4-ansys`，草稿 [PR #5](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/5)。按研究者要求暂停进一步研究，队列及剩余两个原生求解已停止，未完成结果不计通过。没有合并M4、创建M4正式Tag或进入M5；M0–M3归档版本未覆盖。
+
+已完成A中网格重试、C/D多热源场与热流、B两档时间步及局部网格细化；C/D整体热平衡最大相对残差约0.001957%/0.000507%。同网格C−A电驱储热增量55.344 J，增量收支最大残差0.019954%；不是完整热空气耦合或温度标定。空间细化主要覆盖制动盘/片，不能宣称内部热源全部空间误差已验证。
+
+Word/PDF报告均来自Markdown；实际Word渲染9页，10个可编辑公式、7幅图，逐页视觉检查通过并登记文件哈希。报告：[Markdown](../reports/M4_report.md)、[Word](../reports/M4_report.docx)、[PDF](../reports/M4_report.pdf)；验收表：[M4_ACCEPTANCE_CHECKLIST.md](../reports/M4_ACCEPTANCE_CHECKLIST.md)。尚缺三档时间步闭合、完整接触/冷却敏感性及内部发热工况全面空间验证；详见 `results/m4/acceptance_checks.json` 和 `results/m4/attempts/user_requested_pause_20261022.json`。大容量原生结果仅本地保留并登记SHA256，未宣称全部上传。
+
+### M4云图逐图讲解补充交付（2026-10-22）
+
+成果提交 `bcf0e6377a84eef96ef7d82d49485bed40be1f5b`，继续使用 `stage/M4-ansys` 和草稿PR #5。将已有D预热后制动结果导出为29幅原生云图（整体1幅、部件28幅），不新增求解。保存截图、输出时刻、温度范围、来源哈希及导出宏至 `results/m4/contour_captures/`。
+
+图册为 [M4_contour_explained.docx](../reports/M4_contour_explained.docx)，保留Markdown源稿与PDF。Pandoc生成Word后，通过实际Word渲染检查30页、29幅图，逐页视觉检查通过；证据 `results/m4/contour_captures/document_checks.json`。整体图采用76.7535 s同步状态，各部件采用各自记录峰值时刻，分别注明独立色标及S3假设。M4仍为PARTIAL且暂停新增研究，未合并、未创建正式Tag、未进入M5。
+
+### 后续无再生制动工作计划调整（2026-10-22）
+
+研究者明确决定后续仿真等工作暂不考虑再生制动，以电机内部热源、摩擦制动热及各部件热耦合为主线。计划版本 `no-regen-plan-1.0`，见 [NO_REGEN_WORK_PLAN.md](NO_REGEN_WORK_PLAN.md)。本轮仅授权调整计划与更新GitHub，继续使用 `stage/M4-ansys` 和草稿PR #5；未授权恢复模型实施、生成新热源或运行MATLAB/ANSYS/Fluent/优化。
+
+后续顺序为：独立零再生M1派生时序与整车能量检查→相同工况M2对照→Case0单次及驱动预热后零再生制动→网格、时间步及热源/接触/冷却不确定性→匹配热源归因与重复零再生制动→M4验收。重点为盘、轴承、油液、壳体、定子和绕组的最高/平均温度、峰值时刻及制动附加温升。M5—M7后续亦使用零再生边界并等待各阶段授权。
+
+旧B时间步重试和C接触/冷却队列不再作为默认续算任务；旧30kW再生限制下的53.25°C盘峰值和云图继续保留其历史含义，不改名为零再生结果。模型源码、运行配置、CAD、原始数据、结果及三格式报告未改动；M0—M3标签保持不变，无M4正式Tag。本轮验证限于Markdown链接、计划入口/授权一致性、Git差异及历史文件保护，不把文档检查称为模型测试通过。计划提交SHA在后续登记中追加。
+
+本地准备提交为 `f55509692bb1781a67eabb0f60739188b9e5b0e0`，共8份Markdown文档；Git传输中断后改用GitHub连接器发布相同计划，远程证据SHA在随后登记追加。95个本地链接存在性检查及文档限定范围检查通过，`configs/scripts/cad/data/results/reports`与本轮开始时一致。本登记只追加证据SHA，不修改任何阶段Tag或正式验收状态；PR仍为#5草稿。
+
+GitHub连接器发布的计划证据提交为 `b82976de96d98d493097cdbf60bb5ed6437743fa`，父提交为原远端 `602e72e34301bd2ae27c0c7abde84e27c06ea863`；只包含上述文档变更，原本地准备提交另保留备份引用。此处登记不构成M4验收或恢复仿真授权。
+
+### 项目总结与创新评估报告（2026-10-22）
+
+按研究者要求交付 [项目总结Word](../reports/PROJECT_REVIEW_AND_NEXT_PLAN.docx)，保留[Markdown](../reports/PROJECT_REVIEW_AND_NEXT_PLAN.md)及PDF归档。总结M0—M4已完成工作、测试及限定验收，区分旧含再生结果与未来零再生计划；有限核对5项相关原始研究，明确潜在贡献尚未充分验证，不作全球首创、性能提升或实物标定声明。
+
+报告实际Word渲染10页，3个可编辑公式、2幅既有图、8张表，逐页视觉检查通过。源文件哈希和审阅记录在 `reports/project_review_evidence/`；格式化工具 `scripts/reporting/format_project_review.py`仅用于文档。本轮没有启动仿真或修改模型/既有阶段成果，M4仍PARTIAL且暂停，PR #5保持草稿，无正式M4 Tag。准确交付提交SHA在随后登记追加。
+
+总结报告交付证据提交为 `1bec72d63a3e39b238979758ccded62ddbea34e1`，已推送至同一M4分支；Word/PDF/Markdown及当前哈希检查记录齐备。本登记追加提交SHA，不修改报告证据快照、阶段标签或暂停状态。
+
+### M4存储清理：先保留核心结果，再删除原生模型（2026-10-23）
+
+研究者明确授权保存现有核心结果后删除占空间的ANSYS模型文件。归档前核验29张原生云图、9份三格式报告文件及4个精确执行输入包；独立ZIP逐成员回读SHA256/大小通过，共1934个成员。归档准备及删除清单证据提交为`863e78a`；[完整记录](M4_STORAGE_CLEANUP.md)、[归档凭证](../results/m4/storage_cleanup_20261023/archive_verification.json)、[实际删除回执](../results/m4/storage_cleanup_20261023/deletion_receipt.json)。最终清理证据提交在PR及Git日志中登记。
+
+本地归档`E:/ansys_runs_archives/M4_core_results_20261023.zip`，391,664,998字节，SHA256 `444e0f781eb2b5f8fd13935e6b254f4923e65ec905b233390d8eb43acffbf067`；未声称上传该ZIP。删除五个已核对的本项目原生工程/完整场/缓存目录，共1028个文件、逻辑大小156.27 GiB，E盘实测空闲增加约106.07 GiB。原有Git受控文件、报告、29张云图、温度与热流时序、选定场子集、CAD、可复算输入、代码和M0—M3标签均保留。
+
+删除的完整RTH与Workbench工程不在ZIP内，后续任意时刻完整三维场浏览需重新求解。旧清单中的原生路径和哈希继续作为历史记录，不代表文件仍存在。历史结果保留30kW再生限制的工况含义，未改名为零再生；本次不运行仿真、不改变模型及验收状态。M4仍PARTIAL且暂停，分支`stage/M4-ansys`、草稿PR #5，不合并、不打M4正式Tag、不进入M5。
+
+最终清理成果提交为`76f928af63000c4ac89eecc65367adea685bfac9`，已推送原M4开发分支；包含实际删除回执、140行既有场景/部件峰值索引、最终保护/链接检查和当前存储状态说明。此次Git版本仅登记维护证据，不表示M4正式验收，未创建或移动任何阶段Tag。
+
+### M4 P1-A 零再生单次制动热源（2026-10-23，专项交付待审）
+
+研究者明确授权仅实施P1-A。基线`9eb27e074ce218da9843e241ea7e4cf21f49819b`，分支`stage/M4-ansys`、草稿[PR #5](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/5)；本节与本轮成果在同一个聚焦提交中，准确交付SHA由该提交Git记录及PR登记。本项不是M4正式验收版本，没有创建、移动或删除任何Tag。
+
+独立配置`configs/m4_no_regen_brake_baseline.json`，场景`M4_P1A_NR_SINGLE_80KMH_06G_CASE0`。复用原M1接口，实际MATLAB R2025a单次运行生成80→0 km/h、0.6g、左右零再生、含风阻滚阻的190点制动时序；配置步长0.02 s，实际端点对齐步长0.0199758571790134 s，总时长3.77543700683354 s。数据保存在`results/m4/no_regen_baseline/`，报告[M4_NO_REGEN_BASELINE.md](../reports/M4_NO_REGEN_BASELINE.md)。
+
+独立Python14组审计及5项故障拒绝通过；最大点功率残差9.3132e-10 W，最大累计能量残差1.9791e-9 J/4.4529e-15；解析路阻功与梯形积分另差0.110292 J/初始动能2.4816e-7，均满足运行前登记标准。每侧接触摩擦能92.937867 kJ，盘/片名义83.644080/9.293787 kJ，前轴245.739973 kJ，路阻12.828738 kJ。1404个既有受控文件及阶段标签引用保护检查通过，M0—M3与旧M4 studies未覆盖。
+
+校准绕组NaN/null保留，电机和减速器零损耗预算仅为未知拖曳/空载项省略近似，不称实测零损耗。未运行run_m1/run_m1_sources、ANSYS、Fluent、M2温度、预热、冷却、重复制动或优化。M4仍PARTIAL，PR保持草稿；P1-A完成后停止，等待研究者审查和下一条执行命令。
+
+### M4 P2-A 单侧M2源项输入适配与独立预检（2026-10-23，专项交付待审）
+
+研究者仅授权输入适配和预检。父基线为P1-A交付`1db75d9f7cf58560b8ee01d444e2160a72d3545e`，分支`stage/M4-ansys`、草稿[PR #5](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/5)；本节与P2-A成果同一聚焦提交，准确交付SHA由该Git提交和PR登记，不构成M4正式版本。
+
+配置`configs/m4_no_regen_m2_baseline.json`，场景`M4_P2A_NR_SINGLE_80KMH_06G_M2_INPUT`，报告[M4_NO_REGEN_M2_PREFLIGHT.md](../reports/M4_NO_REGEN_M2_PREFLIGHT.md)。只加载P1-A左侧热量，右侧核对对称；原M2最大步长0.25 s，原积分核端点对齐后16区间/实际0.235964812927096 s，总3.77543700683354 s。输出`results/m4/no_regen_m2_baseline/`，含CSV/JSON、f输入MAT、13节点及映射快照、逐项积分审计和日志。
+
+实际MATLAB R2025a输入准备、MAT回读及Python12组独立预检通过，11项故障拒绝通过；最大源项积分差1.4552e-11 J，相对1.7397e-16，最大分项功率闭合残差2.2919e-10 W，运行前阈值分别1e-6 J/1e-6相对/1e-7 W。1424个既有文件及阶段标签引用未变，P1-A及M0—M3/旧M4 studies未覆盖。
+
+预期源项掩码`[0,0,1]`，逆变器在热域外，校准绕组NaN/null保留，空载损耗仍未知；M2原护罩节点未修改，不声称已成为Case0无护罩网络。调用记录证明未运行run_m2/m2_simulate/m2_flux/m2_export，没有温度、预热、冷却、重复循环、ANSYS/Fluent或优化结果。P2-A完成后停止；M4仍PARTIAL，不合并、不创建M4-v1.0、不进入M5。

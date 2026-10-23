@@ -1,0 +1,326 @@
+ CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          86
+
+ *** NOTE ***                            CP =      77.141   TIME= 19:13:01
+ Contact pair is inactive.                                               
+  
+ *************************************************
+  SUMMARY FOR CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          87
+ Max.  Penetration of -6.995283482E-18 has been detected between contact 
+ element 656459 and target element 656677.                               
+  
+ Max.  Geometrical gap of 9.935801339E-04 has been detected between      
+ contact element 656466 and target element 656681.                       
+  
+ Max.  Geometrical penetration of -4.020437194E-04 has been detected     
+ between contact element 656466 and target element 656681.               
+ Contacting area 3.951156611E-03.                                        
+ Max.  Pinball distance 2.E-03.                                          
+ One of the contact searching regions contains at least 13 target        
+ elements.                                                               
+ *************************************************
+  
+ *************************************************
+  SUMMARY FOR CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          88
+
+ *** NOTE ***                            CP =      77.141   TIME= 19:13:01
+ Contact pair is inactive.                                               
+  
+ *************************************************
+  SUMMARY FOR CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          89
+
+ *** NOTE ***                            CP =      77.141   TIME= 19:13:01
+ Contact pair is inactive.                                               
+  
+ *************************************************
+  SUMMARY FOR CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          90
+ Max.  Penetration of -1.189016205E-17 has been detected between contact 
+ element 656982 and target element 656689.                               
+  
+ Max.  Geometrical gap of 2.188209711E-04 has been detected between      
+ contact element 657012 and target element 656714.                       
+  
+ Max.  Geometrical penetration of -5.321489753E-04 has been detected     
+ between contact element 657012 and target element 656714.               
+ Contacting area 6.487635618E-03.                                        
+ Max.  Pinball distance 2.E-03.                                          
+ One of the contact searching regions contains at least 11 target        
+ elements.                                                               
+ *************************************************
+  
+ *************************************************
+  SUMMARY FOR CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          91
+
+ *** NOTE ***                            CP =      77.141   TIME= 19:13:01
+ Contact pair is inactive.                                               
+  
+ *************************************************
+  SUMMARY FOR CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          92
+ Max.  Penetration of -2.775557562E-17 has been detected between contact 
+ element 658409 and target element 657801.                               
+  
+ Max.  Geometrical gap of 4.818567307E-04 has been detected between      
+ contact element 658422 and target element 657358.                       
+  
+ Max.  Geometrical penetration of -2.954077559E-04 has been detected     
+ between contact element 658422 and target element 657358.               
+ Contacting area 3.780611346E-03.                                        
+ Max.  Pinball distance 2.E-03.                                          
+ One of the contact searching regions contains at least 14 target        
+ elements.                                                               
+ *************************************************
+  
+ *************************************************
+  SUMMARY FOR CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          93
+ Max.  Penetration of -1.267799001E-17 has been detected between contact 
+ element 658617 and target element 658833.                               
+  
+ Max.  Geometrical gap of 1.599625478E-04 has been detected between      
+ contact element 658648 and target element 658889.                       
+  
+ Max.  Geometrical penetration of -8.205072612E-04 has been detected     
+ between contact element 658648 and target element 658889.               
+ Contacting area 5.644537016E-03.                                        
+ Max.  Pinball distance 2.E-03.                                          
+ One of the contact searching regions contains at least 17 target        
+ elements.                                                               
+ *************************************************
+  
+ *************************************************
+  SUMMARY FOR CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          94
+
+ *** NOTE ***                            CP =      77.172   TIME= 19:13:01
+ Contact pair is inactive.                                               
+
+
+
+            **** CENTER OF MASS, MASS, AND MASS MOMENTS OF INERTIA ****
+
+  CALCULATIONS ASSUME ELEMENT MASS AT ELEMENT CENTROID
+
+  TOTAL MASS =   79.858    
+
+                           MOM. OF INERTIA         MOM. OF INERTIA
+  CENTER OF MASS            ABOUT ORIGIN        ABOUT CENTER OF MASS
+
+  XC = -0.76338E-02      IXX =    2.287          IXX =    1.410    
+  YC =  0.82955E-01      IYY =    2.305          IYY =    1.972    
+  ZC =  0.64059E-01      IZZ =    2.680          IZZ =    2.125    
+                         IXY =   0.5134          IXY =   0.4628    
+                         IYZ =  -0.5938          IYZ =  -0.1694    
+                         IZX =   0.4225          IZX =   0.3835    
+
+
+  *** MASS SUMMARY BY ELEMENT TYPE ***
+
+  TYPE      MASS
+     1   8.46034    
+     2   10.4610    
+     3   4.75741    
+     4   7.10544    
+     5   4.74003    
+     6  0.377400E-01
+     7  0.377400E-01
+     8   1.56559    
+     9  0.327137    
+    10   10.1916    
+    11  0.199670    
+    12  0.199670    
+    13  0.370305    
+    14  0.370305    
+    15  0.442369    
+    16  0.442369    
+    17   3.00978    
+    18   5.49879    
+    19  0.910013    
+    20  0.309801    
+    21   1.32032    
+    22   2.28973    
+    23   4.48124    
+    24  0.936646    
+    25   1.08644    
+    26   4.69702    
+    27   4.90751    
+    28  0.159276E-02
+    29  0.698630    
+    30  0.157662E-02
+
+ Range of element maximum matrix coefficients in global coordinates
+ Maximum = 18.9304477 at element 26845.                                  
+ Minimum = 3.081811701E-07 at element 649177.                            
+
+   *** ELEMENT MATRIX FORMULATION TIMES
+     TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
+
+        1     18133  SOLID278      0.844   0.000047
+        2      3018  SOLID278      0.156   0.000052
+        3      5948  SOLID278      0.203   0.000034
+        4      1368  SOLID278      0.047   0.000034
+        5    110527  SOLID278      5.797   0.000052
+        6      2496  SOLID278      0.031   0.000013
+        7      2496  SOLID278      0.109   0.000044
+        8      1242  SOLID278      0.047   0.000038
+        9       404  SOLID278      0.016   0.000039
+       10    191507  SOLID278      8.438   0.000044
+       11        70  SOLID278      0.000   0.000000
+       12        70  SOLID278      0.000   0.000000
+       13        94  SOLID278      0.000   0.000000
+       14        94  SOLID278      0.000   0.000000
+       15       106  SOLID278      0.000   0.000000
+       16       106  SOLID278      0.000   0.000000
+       17      1399  SOLID278      0.047   0.000034
+       18      9588  SOLID278      0.516   0.000054
+       19      1164  SOLID278      0.031   0.000027
+       20       548  SOLID278      0.016   0.000029
+       21     15983  SOLID278      0.594   0.000037
+       22     20026  SOLID278      1.047   0.000052
+       23      4090  SOLID278      0.125   0.000031
+       24       949  SOLID278      0.016   0.000016
+       25       484  SOLID278      0.016   0.000032
+       26     13754  SOLID278      0.766   0.000056
+       27     15632  SOLID278      0.859   0.000055
+       28      2939  SOLID278      0.109   0.000037
+       29     12046  SOLID278      0.469   0.000039
+       30      2919  SOLID278      0.062   0.000021
+       31       583  CONTA174      0.031   0.000054
+       32       583  TARGE170      0.016   0.000027
+       33       304  CONTA174      0.094   0.000308
+       34       304  TARGE170      0.000   0.000000
+       35       632  CONTA174      0.031   0.000049
+       36       632  TARGE170      0.000   0.000000
+       37       736  CONTA174      0.062   0.000085
+       38       736  TARGE170      0.000   0.000000
+       39      5390  CONTA174      0.500   0.000093
+       40      5390  TARGE170      0.031   0.000006
+       41      3793  CONTA174      0.672   0.000177
+       42      3793  TARGE170      0.016   0.000004
+       43      2550  CONTA174      0.156   0.000061
+       44      2550  TARGE170      0.031   0.000012
+       45      8982  CONTA174      1.078   0.000120
+       46      8982  TARGE170      0.000   0.000000
+       47       918  CONTA174      0.078   0.000085
+       48       918  TARGE170      0.000   0.000000
+       49       314  CONTA174      0.016   0.000050
+       50       314  TARGE170      0.000   0.000000
+       51       263  CONTA174      0.000   0.000000
+       52       263  TARGE170      0.000   0.000000
+       53       200  CONTA174      0.047   0.000234
+       54       200  TARGE170      0.000   0.000000
+       55       536  CONTA174      0.078   0.000146
+       56       536  TARGE170      0.000   0.000000
+       57       825  CONTA174      0.062   0.000076
+       58       825  TARGE170      0.000   0.000000
+       59      2587  CONTA174      0.141   0.000054
+       60      2587  TARGE170      0.000   0.000000
+       61       174  CONTA174      0.016   0.000090
+       62       174  TARGE170      0.000   0.000000
+       63       270  CONTA174      0.078   0.000289
+       64       270  TARGE170      0.000   0.000000
+       65       270  CONTA174      0.016   0.000058
+       66       270  TARGE170      0.000   0.000000
+       67       562  CONTA174      0.094   0.000167
+       68       562  TARGE170      0.016   0.000028
+       69      5294  CONTA174      2.906   0.000549
+       70      5294  TARGE170      0.016   0.000003
+       71       160  CONTA174      0.016   0.000098
+       72       160  TARGE170      0.000   0.000000
+       73       213  CONTA174      0.000   0.000000
+       74       213  TARGE170      0.000   0.000000
+       75       165  CONTA174      0.047   0.000284
+       76       165  TARGE170      0.000   0.000000
+       77       124  CONTA174      0.047   0.000378
+       78       124  TARGE170      0.000   0.000000
+       79       205  CONTA174      0.016   0.000076
+       80       205  TARGE170      0.000   0.000000
+       81       267  CONTA174      0.047   0.000176
+       82       267  TARGE170      0.000   0.000000
+       83       222  CONTA174      0.016   0.000070
+       84       222  TARGE170      0.000   0.000000
+       85       162  CONTA174      0.000   0.000000
+       86       162  TARGE170      0.000   0.000000
+       87       202  CONTA174      0.031   0.000155
+       88       202  TARGE170      0.000   0.000000
+       89       307  CONTA174      0.016   0.000051
+       90       307  TARGE170      0.000   0.000000
+       91       620  CONTA174      0.016   0.000025
+       92       620  TARGE170      0.016   0.000025
+       93       180  CONTA174      0.031   0.000174
+       94       180  TARGE170      0.000   0.000000
+       95     19891  SURF152       0.719   0.000036
+       96     20164  SURF152       0.734   0.000036
+       97       208  SURF152       0.016   0.000075
+       98       208  SURF152       0.016   0.000075
+       99     51720  SURF152       1.828   0.000035
+      100      3410  SURF152       0.094   0.000027
+      101     19891  SURF252       0.406   0.000020
+      102      2497  SURF252       0.031   0.000013
+ Time at end of element matrix formulation CP = 77.171875.               
+     HT FLOW CONVERGENCE VALUE=   244.3      CRITERION=  0.2489E-01
+
+ *** WARNING ***                         CP =     141.703   TIME= 19:13:35
+ The PCG solver detects that the stiffness matrix is ill-conditioned.    
+ The solution has not converged.  Please check for rigid body motions    
+ in your model.                                                          
+                                                                         
+
+ *** NOTE ***                            CP =     141.953   TIME= 19:13:35
+ The preconditioned conjugate gradient solver failed to converge, and    
+ therefore no solution was obtained.  The equation solver is now being   
+ automatically switched to the sparse solver (EQSLV,SPARSE) to allow     
+ this analysis to continue.                                              
+
+ SPARSE MATRIX DIRECT SOLVER.
+  Number of equations =      122472,    Maximum wavefront =    151
+  Memory allocated for solver              =   226.338 MB
+  Memory required for in-core solution     =   217.062 MB
+  Memory required for out-of-core solution =    84.681 MB
+
+ *** NOTE ***                            CP =     143.641   TIME= 19:13:37
+ The Sparse Matrix Solver is currently running in the in-core memory     
+ mode.  This memory mode uses the most amount of memory in order to      
+ avoid using the hard drive as much as possible, which most often        
+ results in the fastest solution time.  This mode is recommended if      
+ enough physical memory is present to accommodate all of the solver      
+ data.                                                                   
+ Sparse solver maximum pivot= 140.930823 at node 93922 TEMP.             
+ Sparse solver minimum pivot= 2.057458059E-04 at node 117164 TEMP.       
+ Sparse solver minimum pivot in absolute value= 2.057458059E-04 at node  
+ 117164 TEMP.                                                            
+    EQUIL ITER   1 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=   168.3    
+     HT FLOW CONVERGENCE VALUE=  0.1046E-11  CRITERION=  0.2436E-01 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER   44 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=   17.8125    
+ RAD FLUX CONVERGENCE VALUE=  0.117821     CRITERION=  0.100000E-03
+
+     HT FLOW CONVERGENCE VALUE=  0.5169E-01  CRITERION=  0.2418E-01
+    EQUIL ITER   2 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.2998E-02
+     HT FLOW CONVERGENCE VALUE=  0.8473E-12  CRITERION=  0.2418E-01 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   2
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=  0.375000    
+ RAD FLUX CONVERGENCE VALUE=  0.135624E-03 CRITERION=  0.100000E-03
+
+     HT FLOW CONVERGENCE VALUE=  0.2969E-04  CRITERION=  0.2433E-01 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   2
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=  0.468750    
+ RAD FLUX CONVERGENCE VALUE=  0.122989E-03 CRITERION=  0.100000E-03
+
+     HT FLOW CONVERGENCE VALUE=  0.6071E-04  CRITERION=  0.2429E-01 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   2
+
+ RADIOSITY SOLVER CALCULATION
+ ENCLOSURE NUMBER=   1
+ RADIOSITY SOLVER CONVERGED AFTER    1 ITERATIONS
+ TIME OF RADIOSITY SOLVER FOR ENCLOSURE=  0.437500    
+ RAD FLUX CONVERGENCE VALUE=  0.111547E-03 CRITERION=  0.100000E-03
+

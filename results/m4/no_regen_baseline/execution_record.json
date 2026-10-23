@@ -1,0 +1,30 @@
+{
+  "status": "PASS_P1A_DELIVERY_CHECKS_ONLY",
+  "commands_actually_run": [
+    {
+      "command": "& 'C:/Users/90521/AppData/Local/Programs/Python/Python313/python.exe' scripts/m4/check_no_regen_brake.py --preflight",
+      "exit_code": 0,
+      "evidence": "results/m4/no_regen_p1a_preflight.json"
+    },
+    {
+      "command": "& 'F:/Program Files/MATLAB/R2025a/bin/matlab.exe' -batch \"addpath('scripts/m4'); prepare_no_regen_brake\" -logfile 'tmp/m4_p1a_matlab.log'",
+      "exit_code": 0,
+      "evidence": "results/m4/no_regen_baseline/matlab_generation.log"
+    },
+    {
+      "command": "& 'C:/Users/90521/AppData/Local/Programs/Python/Python313/python.exe' scripts/m4/check_no_regen_brake.py",
+      "exit_code": 0,
+      "evidence": "results/m4/no_regen_baseline/independent_checks.json"
+    }
+  ],
+  "report_local_links_checked": 55,
+  "protected_file_count": 1404,
+  "protected_files_unchanged": true,
+  "input_and_generated_output_SHA256": "PASS",
+  "maximum_component_sum_residual_W": 9.458744898438454e-11,
+  "thresholds_changed_after_run": false,
+  "original_M1_M2_M4_studies_overwritten": false,
+  "executed_scope": "One MATLAB M1-derived brake source; one independent Python audit plus preflight",
+  "ANSYS_Fluent_M2_temperature_or_optimization_executed": false,
+  "next_action": "STOP_PENDING_RESEARCHER_REVIEW"
+}

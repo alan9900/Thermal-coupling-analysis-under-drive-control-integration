@@ -1,0 +1,318 @@
+{
+  "status": "PASS_ACTUAL_INPUT_BYTES_RECORDED",
+  "inputs": [
+    {
+      "study": "A_internal_only_dt1",
+      "sha256": "c286cdad437d8f5dc3ed114225734bc51e502d1e98d09b7da9407e5e4803693d",
+      "legacy_records_retained": false,
+      "bytes": 71405472
+    },
+    {
+      "study": "B_brake_dt1",
+      "sha256": "7b42538e866e7081c0035fbb035f95708ba2318234ed46af5c06145b8e6456b6",
+      "legacy_records_retained": false,
+      "bytes": 71370024
+    },
+    {
+      "study": "B_face_scoped_full",
+      "sha256": "d377f0821e5eaf584be126e5f1dbf423557688223e67da1a4f691f65072d6e55",
+      "legacy_records_retained": false,
+      "bytes": 71383350
+    },
+    {
+      "study": "B_mesh1_dt1",
+      "sha256": "9cd0a5534d0de1b67686e76ccb67591c2f2d834e4bfab8627178961850323958",
+      "legacy_records_retained": false,
+      "bytes": 204244062
+    },
+    {
+      "study": "B_mesh1_dt2",
+      "sha256": "c9c64164328f1ff1475b452ef456d0a2833c7b54f595e5c7cecb60d92ba4bc11",
+      "legacy_records_retained": false,
+      "bytes": 204244110
+    },
+    {
+      "study": "B_mesh1_dt4",
+      "sha256": "ffddfbddfd42f96a43791e258a83fe7253d3e0b04416d1463e67f071006b851a",
+      "legacy_records_retained": false,
+      "bytes": 204244158
+    },
+    {
+      "study": "B_mesh2_dt1",
+      "sha256": "aab70a91e177255b5e833281b5dff7b13abf7abfe043db4d20761731ccf58b3f",
+      "legacy_records_retained": false,
+      "bytes": 101584620
+    },
+    {
+      "study": "B_mesh4_dt1",
+      "sha256": "b5af7a2844a665103b9dfd5328655e2380e342d702de213aeb2e8a712ad4a002",
+      "legacy_records_retained": false,
+      "bytes": 77258276
+    },
+    {
+      "study": "B_normal12_dt1",
+      "sha256": "28e78491de0ba49e2bab0a19c2fcf62a05794b7773527e0e5ce5cc5f17767605",
+      "legacy_records_retained": false,
+      "bytes": 99348934
+    },
+    {
+      "study": "B_normal12_dt1_retry1",
+      "sha256": "28e78491de0ba49e2bab0a19c2fcf62a05794b7773527e0e5ce5cc5f17767605",
+      "legacy_records_retained": false,
+      "bytes": 99348934
+    },
+    {
+      "study": "B_normal12_PCG_verify",
+      "sha256": "ed45f2a93a8496937c694e865db1819cacff5cccc5b98adce9f46d9cd8822537",
+      "legacy_records_retained": true,
+      "bytes": 99349182
+    },
+    {
+      "study": "B_normal12_r95_dt1",
+      "sha256": "4e15690f834d425992d7db38fa68b6115e04c80f693453784b2c2240286f1b41",
+      "legacy_records_retained": true,
+      "bytes": 99348989
+    },
+    {
+      "study": "B_normal12_rd95_dt1",
+      "sha256": "a20da7031496822e5947ace6402995068341f5d2ddd60db544188f2c539567fd",
+      "legacy_records_retained": true,
+      "bytes": 99349104
+    },
+    {
+      "study": "B_normal12_rd95h_dt1",
+      "sha256": "77b444e1529822a14d09c8a01100905ebd34ea9bf39bdd2bff4959ed8bc875d2",
+      "legacy_records_retained": true,
+      "bytes": 99349672
+    },
+    {
+      "study": "B_normal12_rd95h_dt2",
+      "sha256": "aaa559850211bec0d2ced1a0c275a447068cd77854cdbe7a2fe2a65f71029c5d",
+      "legacy_records_retained": true,
+      "bytes": 99350266
+    },
+    {
+      "study": "B_normal12_rd95h_dt4",
+      "sha256": "82ac77e37476fae7ed86677dd09e90a00449541ff02dc0b2368256f50e744c74",
+      "legacy_records_retained": true,
+      "bytes": 99351070
+    },
+    {
+      "study": "B_normal12_time_base_dt2",
+      "sha256": "019b1b79ade6fdb9b6c47f2f5d162ec4afc9d2fa6821794757cbcbd56dbd07cc",
+      "legacy_records_retained": false,
+      "bytes": 99349001
+    },
+    {
+      "study": "B_normal12_time_base_dt4",
+      "sha256": "f651df574334ac5b88caf10636c1786841c7f9a97905e70b77c6856766c37e44",
+      "legacy_records_retained": false,
+      "bytes": 99349049
+    },
+    {
+      "study": "B_normal24_dt1",
+      "sha256": "98da9848f8731162c27771c20c2f6ca0c50d99555d75f57e38e046573215baac",
+      "legacy_records_retained": false,
+      "bytes": 192561024
+    },
+    {
+      "study": "B_normal24_dt2",
+      "sha256": "5892023d4901be83c5487310befc2ba564394c2462069108d655582048574586",
+      "legacy_records_retained": false,
+      "bytes": 192561253
+    },
+    {
+      "study": "B_normal24_dt4",
+      "sha256": "d200bc63cc7eb12359c473955538c47eb0369e3579ad629fc3ff5cee39ebd11d",
+      "legacy_records_retained": false,
+      "bytes": 192561301
+    },
+    {
+      "study": "B_normal24_r90_dt1",
+      "sha256": "4635a2e34dc3847660827bd0dbed4a6b1e71979a2360c7dc31c22228f660508d",
+      "legacy_records_retained": true,
+      "bytes": 192561077
+    },
+    {
+      "study": "B_normal24_r95_dt1",
+      "sha256": "df6c13f26eef708538603e3b9982aba1aa9de9e402969741a5e810c10c49957d",
+      "legacy_records_retained": true,
+      "bytes": 192561079
+    },
+    {
+      "study": "B_normal24_r95_dt2",
+      "sha256": "7d0ff7ae5b0f79fc98f9fb102b124ef6018bd1f7a9f6fd6c327443e4bb23b69e",
+      "legacy_records_retained": true,
+      "bytes": 192561375
+    },
+    {
+      "study": "B_normal24_r95_dt4",
+      "sha256": "0454be6b1b749c142d5ef927d510594710c69b352d89c913dac7c8d08cabe9f8",
+      "legacy_records_retained": true,
+      "bytes": 192561423
+    },
+    {
+      "study": "B_normal24_rd90_dt1",
+      "sha256": "beb63309335907c25812ffaa87ff87174f4780e8a2f95de7dea7e41ab3910236",
+      "legacy_records_retained": true,
+      "bytes": 192561193
+    },
+    {
+      "study": "B_normal24_rd90h_dt1",
+      "sha256": "809e99cf88e9374fbd298be7a4293fe18de3ab4dd2dda417bd88aebd7604bdc1",
+      "legacy_records_retained": true,
+      "bytes": 192561190
+    },
+    {
+      "study": "B_normal24_rd95_dt1",
+      "sha256": "1669a5c0e85272bef32c09c5ebc37482bc67726a9d034940167e6fe2e74e47ae",
+      "legacy_records_retained": true,
+      "bytes": 192561194
+    },
+    {
+      "study": "B_normal24_rd95_dt2",
+      "sha256": "238a57306bf2e57dafdc14e73e81df01f0515afc49faed5993e5fd7309c2cdf6",
+      "legacy_records_retained": true,
+      "bytes": 192561491
+    },
+    {
+      "study": "B_normal24_rd95_dt4",
+      "sha256": "56459cd7e73472413f06240e85f5ac9216825dbbd9cb44d6104c203e4a3735d1",
+      "legacy_records_retained": true,
+      "bytes": 192561539
+    },
+    {
+      "study": "B_normal24_rd95h_dt1",
+      "sha256": "828e5201b253f375c37de66ed709ccc2ce67100ac99e4f713238b1d05949cf23",
+      "legacy_records_retained": true,
+      "bytes": 192561191
+    },
+    {
+      "study": "B_normal6_dt1",
+      "sha256": "27b1505a753b502e79b041c0b5fc9bb2f8c0740dc6a032cc02293b62c5519b6a",
+      "legacy_records_retained": false,
+      "bytes": 77111408
+    },
+    {
+      "study": "C_combined_dt1",
+      "sha256": "a08fe260f04a18f44642df8ea6fc202ec970b730b7815b2d75a31c1081506513",
+      "legacy_records_retained": false,
+      "bytes": 71406396
+    },
+    {
+      "study": "C_combined_dt1_retry1",
+      "sha256": "a08fe260f04a18f44642df8ea6fc202ec970b730b7815b2d75a31c1081506513",
+      "legacy_records_retained": false,
+      "bytes": 71406396
+    },
+    {
+      "study": "C_normal12_contact_high",
+      "sha256": "de4ddb5f925e33e0abc05c5ff8930cac3961357fc2009bd2759e1efedeaadde0",
+      "legacy_records_retained": true,
+      "bytes": 99386609
+    },
+    {
+      "study": "C_normal12_contact_low",
+      "sha256": "a8bebab67626e1d56cf767b687621900ff99a5f7c787cf06dd540e3af6da1da4",
+      "legacy_records_retained": true,
+      "bytes": 99386505
+    },
+    {
+      "study": "C_normal12_cooling_high",
+      "sha256": "a34f1431118375ca1f770e3274c6d87c270c6d029f8e14b19e20c3f79b5eaf29",
+      "legacy_records_retained": true,
+      "bytes": 99385671
+    },
+    {
+      "study": "C_normal12_cooling_low",
+      "sha256": "deae950ad0f88599be27c6e370c9f2649e07a6565905c3d147d88a48267df851",
+      "legacy_records_retained": true,
+      "bytes": 99385670
+    },
+    {
+      "study": "C_normal12_dt1",
+      "sha256": "ebeaf0d0d09033a4d76aa451b7e8bc4cc8e25cba23beb5902ab825c98b20782f",
+      "legacy_records_retained": false,
+      "bytes": 99385493
+    },
+    {
+      "study": "C_normal12_r95_contact_high",
+      "sha256": "58a7c94371be89caf61d40f23e22a45dcf4a020e6694fa3d0771d862f10f8c82",
+      "legacy_records_retained": true,
+      "bytes": 99386724
+    },
+    {
+      "study": "C_normal12_r95_contact_low",
+      "sha256": "92a8782e93882dacb03acb464185371adf630f341df27e282600b73f6ea2e8e1",
+      "legacy_records_retained": true,
+      "bytes": 99386620
+    },
+    {
+      "study": "C_normal12_r95_cooling_high",
+      "sha256": "3773642b304cae8debc6ee5c40920b85a2a1186aaf41643199029cc05011e4ce",
+      "legacy_records_retained": true,
+      "bytes": 99385786
+    },
+    {
+      "study": "C_normal12_r95_cooling_low",
+      "sha256": "47c9a6ca32255b3c1da3542d8a8886f4285c49457c71806618084a1e125251af",
+      "legacy_records_retained": true,
+      "bytes": 99385785
+    },
+    {
+      "study": "C_normal12_r95_dt1",
+      "sha256": "ed95121aeaac76ba970e57e8af7f389d9f0667cc914c522a11c1e0209b4c7949",
+      "legacy_records_retained": true,
+      "bytes": 99385444
+    },
+    {
+      "study": "C_normal12_rd95_contact_high",
+      "sha256": "60e1cce6b801e36c35d44feda68c8574cdcb6215fe5916586fc12c3cbf0d9b0a",
+      "legacy_records_retained": true,
+      "bytes": 99386840
+    },
+    {
+      "study": "C_normal12_rd95_contact_low",
+      "sha256": "ec35c8688f9c7d5d63d1b465cd938211a056c242edb0fd2feb7c3d88aa634070",
+      "legacy_records_retained": true,
+      "bytes": 99386736
+    },
+    {
+      "study": "C_normal12_rd95_cooling_high",
+      "sha256": "1ec5c3c217b1164bdd85fc2006dbbbd4942d2362d75eeb10fb94008fd8e7242f",
+      "legacy_records_retained": true,
+      "bytes": 99385902
+    },
+    {
+      "study": "C_normal12_rd95_cooling_low",
+      "sha256": "bfddd3d0b310e8d2c0e44ea6d4f05194b73b8baa3a874e134b8e00e3ee661776",
+      "legacy_records_retained": true,
+      "bytes": 99385901
+    },
+    {
+      "study": "C_normal12_rd95_dt1",
+      "sha256": "7dc05613ca12a8a598abdfe68d0d004b428666852790280f6063ac0eee26ede7",
+      "legacy_records_retained": true,
+      "bytes": 99385559
+    },
+    {
+      "study": "D_normal12_base",
+      "sha256": "057a8cd98e32531f10d42a0ee5bebb4e18dab766c2e13b07bb233392b18f692c",
+      "legacy_records_retained": false,
+      "bytes": 99399765
+    },
+    {
+      "study": "D_normal12_rd95_dt1",
+      "sha256": "660b38e1c2d6056d8288e31e20888767c02a61ca7efd29a25c818e6175dc22f0",
+      "legacy_records_retained": true,
+      "bytes": 99400081
+    },
+    {
+      "study": "D_preheat_braking_dt1",
+      "sha256": "e5d69a8f6fccfc0ded2860ef46c24358b3f6036d3ea86456883773c44ce7546e",
+      "legacy_records_retained": false,
+      "bytes": 71420833
+    }
+  ],
+  "note": "No native input or solver result changed; old digests retained as historical metadata. Native archive manifests independently used actual-byte hashes."
+}

@@ -1,0 +1,47 @@
+{
+  "case": "C_combined",
+  "classification": "S3_CONCEPT_NOT_CALIBRATED",
+  "duration_s": 48.877185034167695,
+  "expected_sets": 38,
+  "step_divisor": 1,
+  "original_input": "E:\\ansys_runs\\m4_case0_20261021\\mesh_variants\\mesh_normal12\\mechanical_ds.dat",
+  "original_sha256": "27821beb3ff7b173e6c37db862d32e055a20fdb62e4a51c3c6647f45edf76d5b",
+  "archived_forcing": "E:\\ChatGPT\u9879\u76ee\\\u9a71\u5236\u878d\u5408\u4e0b\u70ed\u8026\u5408\u5206\u6790\\results\\m2\\cases\\C_combined_forcing.csv",
+  "forcing_sha256": "135f2289905a431fbe8613c38353c34e20593e2ad8ab3eb36c784a9e6188281e",
+  "applied_energy_J": 71191.29519463409,
+  "inverter_external_J": 8625.099242110766,
+  "spatial_loss_allocation": "S3: copper to winding, iron to stator, rotor/other to equivalent rotor; gear mesh 50/50 driven wheels, bearings 1/6 each, other to oil. No calibrated tooth/pinion distribution.",
+  "status": "ACTUAL_NATIVE_COMPLETED_NOT_MECHANICAL_TREE_SOLVED",
+  "cooling": "Finite h, prescribed 25C bulk; no coolant-flow/capacity calibration or hot-air feedback",
+  "comparison_scope": "First drive/optional 60s hold/first brake/30s cooling; not full six-cycle M2 peaks",
+  "capacity_weights": "E:\\ChatGPT\u9879\u76ee\\\u9a71\u5236\u878d\u5408\u4e0b\u70ed\u8026\u5408\u5206\u6790\\results\\m4\\studies\\C_normal12_rd95_dt1\\FE_capacity_weights.npz",
+  "viewfactor_sha256": "d0a9250431b355603b959f304d28171ac8ff3f5b51336406a137e187d70e0680",
+  "radiation_reduction": 0.95,
+  "case_radiation_reduction": 0.0,
+  "nonlinear_heat_tolerance": 1e-06,
+  "radiosity_flux_tolerance": 0.0001,
+  "derived_from": "E:\\ansys_runs\\m4_case0_20261021\\studies\\C_normal12_dt1",
+  "derived_input_sha256": "7dc05613ca12a8a598abdfe68d0d004b428666852790280f6063ac0eee26ede7",
+  "radiation_change": "Native RDEC applied to disc RSURF101 only; case RSURF102 un-decimated. Solid mesh, heat sources, TCC and cooling unchanged. Requires independent facet-reduction error check.",
+  "legacy_input_hash_records": [
+    {
+      "values": {
+        "derived_input_sha256": "46a65d542c457bb711c6f31bb70d51868fd6e6395f75942defd7b4930524be13"
+      },
+      "reason": "Earlier generator used normalized text or retained a pre-edit digest; corrected to immutable current native input bytes."
+    }
+  ],
+  "actual_native_input_sha256": "7dc05613ca12a8a598abdfe68d0d004b428666852790280f6063ac0eee26ede7",
+  "input_hash_basis": "SHA256 of actual native study.dat bytes, including real line endings",
+  "execution_status": "NATIVE_RUN_COMPLETED_ZERO_ERRORS",
+  "metadata_encoding_repairs": [
+    {
+      "field": "archived_forcing",
+      "previous": "E:\\ChatGPT\u6924\u572d\u6d30\\\u6939\u535e\u57d7\u94fb\u5d85\u608e\u6d93\u5b2c\u5139\u9470\ufe40\u608e\u9352\u55d8\u703d\\results\\m2\\cases\\C_combined_forcing.csv",
+      "verified_file": "E:\\ChatGPT\u9879\u76ee\\\u9a71\u5236\u878d\u5408\u4e0b\u70ed\u8026\u5408\u5206\u6790\\results\\m2\\cases\\C_combined_forcing.csv",
+      "verified_sha256": "135f2289905a431fbe8613c38353c34e20593e2ad8ab3eb36c784a9e6188281e",
+      "reason": "Windows PowerShell UTF-8 JSON read as ANSI; source bytes verified unchanged."
+    }
+  ],
+  "generation_status": "GENERATED_NOT_EXECUTED"
+}

@@ -1,0 +1,16 @@
+column,raw_piecewise_linear_integral,resampled_integral,difference,integral_unit
+copper_engineering_W,0.0,0.0,0.0,J
+iron_engineering_W,0.0,0.0,0.0,J
+rotor_other_engineering_W,0.0,0.0,0.0,J
+inverter_external_engineering_W,0.0,0.0,0.0,J
+gear_mesh_engineering_W,0.0,0.0,0.0,J
+gear_bearing_engineering_W,0.0,0.0,0.0,J
+gear_other_engineering_W,0.0,0.0,0.0,J
+disc_engineering_W,83644.08003953523,83644.08003953524,1.4551915228366852e-11,J
+pad_engineering_W,9293.786671059475,9293.786671059475,0.0,J
+speed_m_s,41.94930007592823,41.949300075928214,-1.4210854715202004e-14,m
+motor_rpm,10925.081126720508,10925.08112672051,1.8189894035458565e-12,rpm*s
+motor_torque_Nm,0.0,0.0,0.0,N*m*s
+emot_reference_W,0.0,0.0,0.0,J
+gear_reference_W,0.0,0.0,0.0,J
+disc_contact_W,92937.86671059478,92937.86671059477,-1.4551915228366852e-11,J

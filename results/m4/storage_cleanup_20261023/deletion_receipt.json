@@ -1,0 +1,32 @@
+{
+  "status": "COMPLETED",
+  "completed_at": "2026-10-23T12:35:50.0324808+08:00",
+  "authorization": "Researcher request on 2026-10-23: preserve core results, then delete current ANSYS model files",
+  "archive": "E:\\ansys_runs_archives\\M4_core_results_20261023.zip",
+  "archive_sha256": "444e0f781eb2b5f8fd13935e6b254f4923e65ec905b233390d8eb43acffbf067",
+  "removed_roots": [
+    "E:\\ansys_runs\\m4_case0_20261021",
+    "E:\\ansys_runs\\m4_viewer_20261022",
+    "E:\\ansys_runs\\M4_Case0_reproduction_prepared_20261021",
+    "E:\\ansys_runs\\M4_D_reproduction_prepared_20261021",
+    "E:\\ansys_runs\\m4_native_benchmark"
+  ],
+  "removed_file_count": 1028,
+  "removed_logical_bytes": 167796230090,
+  "drive_free_bytes_before_deletion": 29462589440,
+  "drive_free_bytes_after_deletion": 143358042112,
+  "drive_free_bytes_increase": 113895452672,
+  "drive_measurement_note": "Volume free-space delta; logical size differs because of compression, hard links and other activity",
+  "tags_unchanged": true,
+  "no_simulation_executed": true,
+  "preserved": [
+    "All tracked source/config/CAD/data/results/reports",
+    "M0-M3 tags and Git history",
+    "29 native contour captures and Word/PDF explanations",
+    "Compressed exact native inputs",
+    "ANSYS installation, license service, Python/CAD runtimes",
+    "Unrelated f510s_d280_20260928 project"
+  ],
+  "limitation": "Native full fields and Workbench models removed. Arbitrary-time 3D result browsing requires recomputation.",
+  "error": null
+}

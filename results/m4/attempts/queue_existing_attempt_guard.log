@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "E:\ChatGPT项目\驱制融合下热耦合分析\scripts\m4\finish_source_queue.py", line 48, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "E:\ChatGPT项目\驱制融合下热耦合分析\scripts\m4\finish_source_queue.py", line 24, in main
+    assert all(not (RUN/'studies'/n/'study.out').exists() for n in PENDING),'Never relaunch an existing attempt'
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Never relaunch an existing attempt

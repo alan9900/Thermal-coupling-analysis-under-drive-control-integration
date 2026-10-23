@@ -1,0 +1,46 @@
+{
+  "hash_definition": "raw bytes SHA256",
+  "scenario_id": "M4_P1A_NR_SINGLE_80KMH_06G_CASE0",
+  "files": [
+    {
+      "path": "results/m4/no_regen_baseline/left_sources.csv",
+      "bytes": 60914,
+      "sha256": "7991e8b6e116858f23add546d604e7a80bbd032aba025c4ce0698551363789cd"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/left_sources.json",
+      "bytes": 8988,
+      "sha256": "2d81740bfbfd0e59752543b31820c7e77e9187b560b33008f146653fdefccb95"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/matlab_generation.log",
+      "bytes": 318,
+      "sha256": "ec997a73d55c369f26eb475122dd29de35d5b5ca4064adf456037ce1173bf9d8"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/matlab_summary.json",
+      "bytes": 1290,
+      "sha256": "205753f4745618143a2783fe37a965ca9f2bc4ff8254c041f455e1e7f8ef7ce8"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/right_sources.csv",
+      "bytes": 60914,
+      "sha256": "7991e8b6e116858f23add546d604e7a80bbd032aba025c4ce0698551363789cd"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/right_sources.json",
+      "bytes": 8990,
+      "sha256": "ea52673b50bc8452ccd8124067e4b18d960cdb908d931d594a16d1bdd7bdc84c"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/run_metadata.json",
+      "bytes": 19167,
+      "sha256": "4bcc433dae53d57bf823bee84c3d1c7ad74cae430a342211c99f91233cc612fc"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/vehicle_trace.csv",
+      "bytes": 137812,
+      "sha256": "4a03e2a5dce9040aee91529c91522c4346544a588bb706fdd4110bbcd1e67326"
+    }
+  ]
+}

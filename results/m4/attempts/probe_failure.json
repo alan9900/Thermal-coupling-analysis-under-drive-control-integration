@@ -1,0 +1,4 @@
+{
+  "status": "FAILED", 
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\ansys_runs\\m4_case0_20261021\\mechanical_probe.py\", line 22, in <module>\n    ExtAPI.DataModel.Project.Save(os.path.join(RUN,'case0_import.mechdat'))\nException: Mechanical is not opened independently.\n"
+}

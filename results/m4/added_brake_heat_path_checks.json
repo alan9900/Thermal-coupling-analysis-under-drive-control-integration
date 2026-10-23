@@ -1,0 +1,19 @@
+{
+  "status": "PASS_INCREMENTAL_BALANCE",
+  "relative_residual": 0.00019954300043913427,
+  "tolerance": 0.005,
+  "final": {
+    "time_s": 48.877185034168,
+    "delta_drive_stored_J": 55.34393634839216,
+    "delta_solid_cut_into_drive_W": 0.06683249039224393,
+    "delta_solid_cut_into_drive_net_J": -0.6159767753484191,
+    "delta_radiation_net_into_case_W": 1.5074473571012912,
+    "delta_radiation_net_into_case_net_J": 56.11827314865897,
+    "delta_ambient_drive_out_W": 0.009487562407393568,
+    "delta_ambient_drive_out_net_J": 0.16962205865810276,
+    "delta_coolant_out_W": 7.239577826112509e-09,
+    "delta_coolant_out_net_J": 5.070432962384075e-08,
+    "incremental_balance_residual_J": -0.01126208444404142
+  },
+  "scope": "C minus A at identical clock/internal powers. Net case radiation still includes changed exchange with ambient; not pure pairwise disc/case radiation. Small temperature differences remain uncalibrated."
+}

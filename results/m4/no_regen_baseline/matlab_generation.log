@@ -1,0 +1,4 @@
+P1-A generation only. MATLAB 25.1.0.2943329 (R2025a), release 2025a
+Scenario: M4_P1A_NR_SINGLE_80KMH_06G_CASE0; configured dt 0.02 s
+Generated 190 samples, 3.77543700683354 s; E:\ChatGPT项目\驱制融合下热耦合分析\results\m4\no_regen_baseline
+Generation finished; independent Python audit is still required.

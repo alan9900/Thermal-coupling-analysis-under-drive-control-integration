@@ -1,0 +1,14 @@
+# encoding: utf-8
+import os,traceback
+run=r'E:\ansys_runs\m4_case0_20261021'
+try:
+    SetScriptVersion(Version='24.1.0')
+    Open(FilePath=os.path.join(run,'Case0_mesh.wbpj'))
+    model=GetAllSystems()[0].GetContainer(ComponentName='Model')
+    model.Edit(Hidden=True)
+    model.SendCommand(Language='Python',Command="execfile(r'E:\\ansys_runs\\m4_case0_20261021\\mechanical_mesh_repair.py')")
+    model.Exit()
+    Save(FilePath=os.path.join(run,'Case0_mesh_repair.wbpj'),Overwrite=True)
+except:
+    with open(os.path.join(run,'repair_workbench_failure.txt'),'w') as f:f.write(traceback.format_exc())
+    raise

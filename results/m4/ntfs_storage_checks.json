@@ -1,0 +1,16 @@
+{
+  "B_normal24_rd90h_dt1": {
+    "status": "PASS_IDENTICAL_LOGICAL_RESULT_BYTES",
+    "bytes": 3815636992,
+    "sha256": "07bf4816c5e8b7af0c683a225bd1f35f53a515ccca4c7c76f3e1a2d51d9f287e",
+    "method": "NTFS XPRESS4K storage flag only; no solver input or logical result byte changed.",
+    "native_output": "\r\n Compressing files in E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal24_rd90h_dt1\\\r\n\r\nstudy.rth           3815636992 : 1378021376 = 2.8 to 1 [OK]\r\n\r\n1 files within 1 directories were compressed.\r\n3,815,636,992 total bytes of data are stored in 1,378,021,376 bytes.\r\nThe compression ratio is 2.8 to 1.\r\n"
+  },
+  "B_normal24_rd95h_dt1": {
+    "status": "PASS_IDENTICAL_LOGICAL_RESULT_BYTES",
+    "bytes": 3805347840,
+    "sha256": "ef65b9b0e6ba7dfdcbed60bc770c848300320c209eb3fae9671ee5502058023d",
+    "method": "NTFS XPRESS4K storage flag only; no solver input or logical result byte changed.",
+    "native_output": "\r\n Compressing files in E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal24_rd95h_dt1\\\r\n\r\nstudy.rth           3805347840 : 1372119040 = 2.8 to 1 [OK]\r\n\r\n1 files within 1 directories were compressed.\r\n3,805,347,840 total bytes of data are stored in 1,372,119,040 bytes.\r\nThe compression ratio is 2.8 to 1.\r\n"
+  }
+}

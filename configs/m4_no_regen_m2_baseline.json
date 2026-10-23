@@ -1,0 +1,50 @@
+{
+  "schema_version": "m4-p2a-no-regen-m2-input-1.0",
+  "scenario_id": "M4_P2A_NR_SINGLE_80KMH_06G_M2_INPUT",
+  "configuration_version": "v0.4",
+  "required_branch": "stage/M4-ansys",
+  "p1a_commit": "1db75d9f7cf58560b8ee01d444e2160a72d3545e",
+  "p1a_scenario_id": "M4_P1A_NR_SINGLE_80KMH_06G_CASE0",
+  "input_directory": "results/m4/no_regen_baseline",
+  "output_directory": "results/m4/no_regen_m2_baseline",
+  "preflight_file": "results/m4/no_regen_m2_preflight.json",
+  "m2_configuration": "configs/m2_thermal_network.yaml",
+  "m2_prepared_inputs": "results/m2/inputs.json",
+  "m2_model_version": "m2-lptn-concept-1.0",
+  "side": "left",
+  "expected_mask_motor_gear_brake": [0, 0, 1],
+  "expected_maximum_step_s": 0.25,
+  "step_source": "configs/m2_thermal_network.yaml:numerics.maximum_step_s",
+  "sampling_policy": "Unmodified m2_forcing analytic primitive of each original piecewise-linear interval; linspace endpoint alignment; one braking segment only",
+  "single_segment_adapter": {
+    "method": "Call original m2_forcing with cycles=0 and the sole terminal block carrying P1-A brake samples at unit time scale; relabel that block as single_brake, not final_cool",
+    "carrier_cycles": 0,
+    "carrier_time_scale": 1,
+    "physical_cooling_segment_added": false,
+    "official_M2_configuration_modified": false
+  },
+  "part_keys": ["copper", "iron", "rotor_other", "inverter_external", "gear_mesh", "gear_bearing", "gear_other", "disc", "pad"],
+  "source_destination_node_ids": ["winding", "stator", "rotor_other", "EXTERNAL", "gears", "output_bearing", "oil", "disc", "pad_caliper"],
+  "thresholds_registered_before_execution": {
+    "source_resampling_absolute_tolerance_J": 0.000001,
+    "source_resampling_relative_tolerance": 0.000001,
+    "partition_tolerance_W": 0.0000001,
+    "independent_interval_tolerance_W": 0.0000001,
+    "kinematics_tolerance": 0.00000001,
+    "time_absolute_tolerance_s": 0.0000000001,
+    "network_relative_tolerance": 0.000000000001,
+    "network_absolute_tolerance": 0.000000000001,
+    "network_radiation_absolute_tolerance_W_K4": 0.00000000000000000001,
+    "basis": "m2_forcing: source heat residual <1e-6 J, partition <1e-7 W, maximum-step allowance 1e-10 s; M2 YAML energy relative tolerance 1e-6. Independent interval comparison uses partition tolerance; network tolerances are serialization checks, not physical calibration."
+  },
+  "unknowns": {
+    "calibrated_winding_heat_W": null,
+    "actual_unpowered_motor_drag_W": null,
+    "actual_inverter_standby_W": null,
+    "actual_no_load_gear_churning_W": null,
+    "actual_thermal_resistance_matrix": null
+  },
+  "omission_policy": "P1-A inactive motor and zero-transmitted-power gearbox budgets omit unknown drag, standby and churning; zero budget is not measured zero loss.",
+  "topology_limit": "The immutable M2 13-node network includes an active shield node. This input adaptation is not proof of an unshielded Case0 network. Any topology change needs separate authorization.",
+  "execution_scope": "INPUT_ADAPTATION_AND_PREFLIGHT_ONLY_NO_TEMPERATURE_INTEGRATION"
+}

@@ -1,0 +1,40 @@
+{
+  "case": "D_preheat_braking",
+  "classification": "S3_CONCEPT_NOT_CALIBRATED",
+  "duration_s": 108.8771850341677,
+  "expected_sets": 53,
+  "step_divisor": 1,
+  "original_input": "E:\\ansys_runs\\m4_case0_20261021\\mesh_variants\\mesh_normal12\\mechanical_ds.dat",
+  "original_sha256": "27821beb3ff7b173e6c37db862d32e055a20fdb62e4a51c3c6647f45edf76d5b",
+  "archived_forcing": "E:\\ChatGPT\u9879\u76ee\\\u9a71\u5236\u878d\u5408\u4e0b\u70ed\u8026\u5408\u5206\u6790\\results\\m2\\cases\\D_preheat_braking_forcing.csv",
+  "forcing_sha256": "93f60170c50c6b188483b009b0c5c0df2a116834e7a59298d03229bac306c64f",
+  "applied_energy_J": 275778.8428379191,
+  "inverter_external_J": 35430.40327851522,
+  "spatial_loss_allocation": "S3: copper to winding, iron to stator, rotor/other to equivalent rotor; gear mesh 50/50 driven wheels, bearings 1/6 each, other to oil. No calibrated tooth/pinion distribution.",
+  "status": "ACTUAL_NATIVE_COMPLETED_NOT_MECHANICAL_TREE_SOLVED",
+  "cooling": "Finite h, prescribed 25C bulk; no coolant-flow/capacity calibration or hot-air feedback",
+  "comparison_scope": "First drive/optional 60s hold/first brake/30s cooling; not full six-cycle M2 peaks",
+  "capacity_weights": "E:\\ChatGPT\u9879\u76ee\\\u9a71\u5236\u878d\u5408\u4e0b\u70ed\u8026\u5408\u5206\u6790\\results\\m4\\studies\\D_normal12_rd95_dt1\\FE_capacity_weights.npz",
+  "radiation_reduction": 0.95,
+  "case_radiation_reduction": 0.0,
+  "nonlinear_heat_tolerance": 1e-06,
+  "radiosity_flux_tolerance": 0.0001,
+  "derived_from": "E:\\ansys_runs\\m4_case0_20261021\\studies\\D_normal12_base",
+  "derived_input_sha256": "660b38e1c2d6056d8288e31e20888767c02a61ca7efd29a25c818e6175dc22f0",
+  "radiation_change": "Native RDEC applied to disc RSURF101 only; case RSURF102 un-decimated. Solid mesh, heat sources, TCC and cooling unchanged. Requires independent facet-reduction error check.",
+  "viewfactor_reuse_from": "E:\\ansys_runs\\m4_case0_20261021\\studies\\C_normal12_rd95_dt1",
+  "viewfactor_reuse_condition": "Same original Mechanical input SHA; native complete zero-error source required before execution",
+  "legacy_input_hash_records": [
+    {
+      "values": {
+        "derived_input_sha256": "9b54dd98408e21455b498b38adacefc063d68846687546f84c0b443c7e671a90"
+      },
+      "reason": "Earlier generator used normalized text or retained a pre-edit digest; corrected to immutable current native input bytes."
+    }
+  ],
+  "actual_native_input_sha256": "660b38e1c2d6056d8288e31e20888767c02a61ca7efd29a25c818e6175dc22f0",
+  "input_hash_basis": "SHA256 of actual native study.dat bytes, including real line endings",
+  "viewfactor_sha256": "ba593883774f20970e1ed5b670b9bc67a76967e2fb032fc05dfa53b9126cf06c",
+  "execution_status": "NATIVE_RUN_COMPLETED_ZERO_ERRORS",
+  "generation_status": "GENERATED_NOT_EXECUTED"
+}

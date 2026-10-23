@@ -1,0 +1,17 @@
+{
+  "study.dat": {
+    "local_path": "E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal12_rd95h_dt2\\study.dat",
+    "bytes": 99350266,
+    "sha256": "aaa559850211bec0d2ced1a0c275a447068cd77854cdbe7a2fe2a65f71029c5d"
+  },
+  "study.rth": {
+    "local_path": "E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal12_rd95h_dt2\\study.rth",
+    "bytes": 2934702080,
+    "sha256": "0e5c2cfbd830a69f97673276b3d201fd3c9b2fc046ba6099790b0d46cceadf92"
+  },
+  "study.out": {
+    "local_path": "E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal12_rd95h_dt2\\study.out",
+    "bytes": 9773794,
+    "sha256": "15440da7533734395ba8deac4c10a36c51274fac2ce38c9a80b9802084d036a7"
+  }
+}

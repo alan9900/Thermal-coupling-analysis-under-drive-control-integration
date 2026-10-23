@@ -1,0 +1,20 @@
+{
+  "case": "B_BRAKE_ONLY_CONCEPT",
+  "classification": "S3_NOT_CALIBRATED",
+  "source_model": "Mechanical Case0 face-scoped",
+  "original_input": "E:\\ansys_runs\\m4_case0_20261021\\mesh_variants\\mesh_normal6\\mechanical_ds.dat",
+  "original_sha256": "e607951ee51b9d385c7634c3e3723aa1a124fe023b473d82f6dd341078bf7557",
+  "duration_s": 3.7754370068334993,
+  "expected_sets": 16,
+  "step_divisor": 1,
+  "source_energy_J": [
+    36226.72059035861,
+    4025.191176706512
+  ],
+  "physics_change": "None: output selection only; no whole-body contact fallback",
+  "run_command": "ANSYS241.exe -b -smp -np 2 -p ansys -j study -dir \"E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal6_dt1\" -i \"E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal6_dt1\\study.dat\" -o \"E:\\ansys_runs\\m4_case0_20261021\\studies\\B_normal6_dt1\\study.out\"",
+  "capacity_weights": "E:\\ChatGPT\u9879\u76ee\\\u9a71\u5236\u878d\u5408\u4e0b\u70ed\u8026\u5408\u5206\u6790\\results\\m4\\studies\\B_normal6_dt1\\FE_capacity_weights.npz",
+  "execution_status": "NATIVE_RUN_COMPLETED_ZERO_ERRORS",
+  "actual_native_input_sha256": "27b1505a753b502e79b041c0b5fc9bb2f8c0740dc6a032cc02293b62c5519b6a",
+  "input_hash_basis": "SHA256 of actual native study.dat bytes, including real line endings"
+}

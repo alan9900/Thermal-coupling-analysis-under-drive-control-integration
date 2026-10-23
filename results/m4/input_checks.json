@@ -1,0 +1,42 @@
+{
+  "status": "PASS_SOURCE_BUDGETS_ONLY",
+  "cases": [
+    {
+      "case": "A_internal_only",
+      "rows": 3342,
+      "budget_residual_W": 8.185452315956354e-11,
+      "sha256": "135f2289905a431fbe8613c38353c34e20593e2ad8ab3eb36c784a9e6188281e",
+      "origin": "Archived M2 interval averages of accepted M1 sources; not newly measured nor regenerated M1",
+      "inverter_loaded": false,
+      "raw_calibrated_winding_still_NaN": true
+    },
+    {
+      "case": "B_brake_only",
+      "rows": 3342,
+      "budget_residual_W": 8.185452315956354e-11,
+      "sha256": "135f2289905a431fbe8613c38353c34e20593e2ad8ab3eb36c784a9e6188281e",
+      "origin": "Archived M2 interval averages of accepted M1 sources; not newly measured nor regenerated M1",
+      "inverter_loaded": false,
+      "raw_calibrated_winding_still_NaN": true
+    },
+    {
+      "case": "C_combined",
+      "rows": 3342,
+      "budget_residual_W": 8.185452315956354e-11,
+      "sha256": "135f2289905a431fbe8613c38353c34e20593e2ad8ab3eb36c784a9e6188281e",
+      "origin": "Archived M2 interval averages of accepted M1 sources; not newly measured nor regenerated M1",
+      "inverter_loaded": false,
+      "raw_calibrated_winding_still_NaN": true
+    },
+    {
+      "case": "D_preheat_braking",
+      "rows": 3582,
+      "budget_residual_W": 8.594724931754172e-11,
+      "sha256": "93f60170c50c6b188483b009b0c5c0df2a116834e7a59298d03229bac306c64f",
+      "origin": "Archived M2 interval averages of accepted M1 sources; not newly measured nor regenerated M1",
+      "inverter_loaded": false,
+      "raw_calibrated_winding_still_NaN": true
+    }
+  ],
+  "temperature_solve": "NOT EXECUTED"
+}

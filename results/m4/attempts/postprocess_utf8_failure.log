@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "E:\ChatGPT项目\驱制融合下热耦合分析\scripts\m4\watch_completed.py", line 16, in <module>
+    process(name);remaining.remove(name)
+    ~~~~~~~^^^^^^
+  File "E:\ChatGPT项目\驱制融合下热耦合分析\scripts\m4\post_completed_studies.py", line 20, in process
+    metadata = json.loads((folder / 'study_settings.json').read_text())
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\90521\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\90521\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 633, in read_text
+    return f.read()
+           ~~~~~~^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xac in position 465: illegal multibyte sequence

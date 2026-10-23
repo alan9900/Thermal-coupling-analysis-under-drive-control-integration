@@ -1,0 +1,163 @@
+{
+  "case": "C_combined_contact_low",
+  "classification": "S3_UNCERTAINTY_NOT_CALIBRATED",
+  "duration_s": 48.877185034167695,
+  "expected_sets": 38,
+  "step_divisor": 1,
+  "original_input": "E:\\ansys_runs\\m4_case0_20261021\\mesh_variants\\mesh_normal12\\mechanical_ds.dat",
+  "original_sha256": "27821beb3ff7b173e6c37db862d32e055a20fdb62e4a51c3c6647f45edf76d5b",
+  "archived_forcing": "E:\\ChatGPT\u9879\u76ee\\\u9a71\u5236\u878d\u5408\u4e0b\u70ed\u8026\u5408\u5206\u6790\\results\\m2\\cases\\C_combined_forcing.csv",
+  "forcing_sha256": "135f2289905a431fbe8613c38353c34e20593e2ad8ab3eb36c784a9e6188281e",
+  "applied_energy_J": 71191.29519463409,
+  "inverter_external_J": 8625.099242110766,
+  "spatial_loss_allocation": "S3: copper to winding, iron to stator, rotor/other to equivalent rotor; gear mesh 50/50 driven wheels, bearings 1/6 each, other to oil. No calibrated tooth/pinion distribution.",
+  "status": "ACTUAL_NATIVE_COMPLETED_NOT_MECHANICAL_TREE_SOLVED",
+  "cooling": "Finite h, prescribed 25C bulk; no coolant-flow/capacity calibration or hot-air feedback",
+  "comparison_scope": "First drive/optional 60s hold/first brake/30s cooling; not full six-cycle M2 peaks",
+  "capacity_weights": "E:\\ChatGPT\u9879\u76ee\\\u9a71\u5236\u878d\u5408\u4e0b\u70ed\u8026\u5408\u5206\u6790\\results\\m4\\studies\\C_normal12_rd95_contact_low\\FE_capacity_weights.npz",
+  "radiation_reduction": 0.95,
+  "case_radiation_reduction": 0.0,
+  "nonlinear_heat_tolerance": 1e-06,
+  "radiosity_flux_tolerance": 0.0001,
+  "derived_from": "E:\\ansys_runs\\m4_case0_20261021\\studies\\C_normal12_dt1",
+  "derived_input_sha256": "ec35c8688f9c7d5d63d1b465cd938211a056c242edb0fd2feb7c3d88aa634070",
+  "radiation_change": "Native RDEC applied to disc RSURF101 only; case RSURF102 un-decimated. Solid mesh, heat sources, TCC and cooling unchanged. Requires independent facet-reduction error check.",
+  "sensitivity_base": "C_normal12_rd95_dt1",
+  "variation": {
+    "solid_mounting_TCC_W_m2K": 100,
+    "external_h_W_m2K": null,
+    "jacket_h_W_m2K": null
+  },
+  "varied_contact_pairs": {
+    "S3_brake_disc_hat_to_disc_hub": [
+      32,
+      31
+    ],
+    "S3_disc_hub_to_hub_removable_sleeve": [
+      34,
+      33
+    ],
+    "S3_hub_removable_sleeve_to_output_shaft": [
+      36,
+      35
+    ],
+    "S3_gear_case_front_to_gear_case_rear": [
+      38,
+      37
+    ],
+    "S3_gear_case_front_to_motor_gear_adapter": [
+      40,
+      39
+    ],
+    "S3_motor_gear_adapter_to_motor_case": [
+      42,
+      41
+    ],
+    "S3_motor_rotor_shaft_to_motor_input_coupling": [
+      52,
+      51
+    ],
+    "S3_motor_input_coupling_to_input_shaft": [
+      54,
+      53
+    ],
+    "S3_intermediate_shaft_to_stage1_gear": [
+      56,
+      55
+    ],
+    "S3_output_shaft_to_stage2_gear": [
+      58,
+      57
+    ],
+    "S3_gear_case_rear_to_caliper_reaction_bracket": [
+      60,
+      59
+    ],
+    "S3_caliper_reaction_bracket_to_caliper": [
+      62,
+      61
+    ],
+    "S3_caliper_to_pad_near": [
+      64,
+      63
+    ],
+    "S3_caliper_to_pad_far": [
+      66,
+      65
+    ],
+    "S3_input_shaft_to_input_bearing_1": [
+      72,
+      71
+    ],
+    "S3_input_bearing_1_to_gear_case_front": [
+      74,
+      73
+    ],
+    "S3_input_shaft_to_input_bearing_2": [
+      76,
+      75
+    ],
+    "S3_input_bearing_2_to_gear_case_rear": [
+      78,
+      77
+    ],
+    "S3_intermediate_shaft_to_intermediate_bearing_1": [
+      80,
+      79
+    ],
+    "S3_intermediate_bearing_1_to_gear_case_front": [
+      82,
+      81
+    ],
+    "S3_intermediate_shaft_to_intermediate_bearing_2": [
+      84,
+      83
+    ],
+    "S3_intermediate_bearing_2_to_gear_case_rear": [
+      86,
+      85
+    ],
+    "S3_output_shaft_to_output_bearing_1": [
+      88,
+      87
+    ],
+    "S3_output_bearing_1_to_gear_case_front": [
+      90,
+      89
+    ],
+    "S3_output_shaft_to_output_bearing_2": [
+      92,
+      91
+    ],
+    "S3_output_bearing_2_to_gear_case_rear": [
+      94,
+      93
+    ]
+  },
+  "input_sha256": "ec35c8688f9c7d5d63d1b465cd938211a056c242edb0fd2feb7c3d88aa634070",
+  "viewfactor_reuse_from": "E:\\ansys_runs\\m4_case0_20261021\\studies\\C_normal12_rd95_dt1",
+  "viewfactor_reuse_condition": "Same original Mechanical input SHA; native complete zero-error source required before execution",
+  "legacy_input_hash_records": [
+    {
+      "values": {
+        "input_sha256": "88efff67c5058b2e44bf3abc223704d079b13fae018dbc15fed11ad79a9fb072",
+        "derived_input_sha256": "74fe34d993fe856789754de1fa52de2cc6791e1d57d52a53472e5440c78c1390"
+      },
+      "reason": "Earlier generator used normalized text or retained a pre-edit digest; corrected to immutable current native input bytes."
+    }
+  ],
+  "actual_native_input_sha256": "ec35c8688f9c7d5d63d1b465cd938211a056c242edb0fd2feb7c3d88aa634070",
+  "input_hash_basis": "SHA256 of actual native study.dat bytes, including real line endings",
+  "viewfactor_sha256": "ba593883774f20970e1ed5b670b9bc67a76967e2fb032fc05dfa53b9126cf06c",
+  "metadata_encoding_repairs": [
+    {
+      "field": "archived_forcing",
+      "previous": "E:\\ChatGPT\u6924\u572d\u6d30\\\u6939\u535e\u57d7\u94fb\u5d85\u608e\u6d93\u5b2c\u5139\u9470\ufe40\u608e\u9352\u55d8\u703d\\results\\m2\\cases\\C_combined_forcing.csv",
+      "verified_file": "E:\\ChatGPT\u9879\u76ee\\\u9a71\u5236\u878d\u5408\u4e0b\u70ed\u8026\u5408\u5206\u6790\\results\\m2\\cases\\C_combined_forcing.csv",
+      "verified_sha256": "135f2289905a431fbe8613c38353c34e20593e2ad8ab3eb36c784a9e6188281e",
+      "reason": "Windows PowerShell UTF-8 JSON read as ANSI; source bytes verified unchanged."
+    }
+  ],
+  "execution_status": "NATIVE_RUN_COMPLETED_ZERO_ERRORS",
+  "generation_status": "GENERATED_NOT_EXECUTED"
+}

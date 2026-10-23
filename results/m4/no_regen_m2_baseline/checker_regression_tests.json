@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "tests": [
+    {
+      "test": "missing_source_field",
+      "status": "PASS_EXPECTED_REJECTION",
+      "reason": "left missing source field"
+    },
+    {
+      "test": "invalid_input_unit",
+      "status": "PASS_EXPECTED_REJECTION",
+      "reason": "left invalid input unit: disc_engineering_W"
+    },
+    {
+      "test": "invalid_output_unit",
+      "status": "PASS_EXPECTED_REJECTION",
+      "reason": "invalid output unit: disc_engineering_W"
+    },
+    {
+      "test": "double_sided_energy",
+      "status": "PASS_EXPECTED_REJECTION",
+      "reason": "independent clipped-interval integral mismatch"
+    },
+    {
+      "test": "point_sampling_instead_of_integral",
+      "status": "PASS_EXPECTED_REJECTION",
+      "reason": "independent clipped-interval integral mismatch"
+    },
+    {
+      "test": "filled_calibrated_winding",
+      "status": "PASS_EXPECTED_REJECTION",
+      "reason": "calibrated winding not NaN/null"
+    },
+    {
+      "test": "wrong_source_mask",
+      "status": "PASS_EXPECTED_REJECTION",
+      "reason": "wrong expected source mask"
+    },
+    {
+      "test": "inverter_to_winding",
+      "status": "PASS_EXPECTED_REJECTION",
+      "reason": "wrong source node mapping"
+    },
+    {
+      "test": "wrong_time_coverage",
+      "status": "PASS_EXPECTED_REJECTION",
+      "reason": "coverage/time step"
+    },
+    {
+      "test": "missing_network_node",
+      "status": "PASS_EXPECTED_REJECTION",
+      "reason": "13-node identity mismatch"
+    },
+    {
+      "test": "changed_input_SHA256",
+      "status": "PASS_EXPECTED_REJECTION",
+      "reason": "input/output SHA256 changed: configs/m2_thermal_network.yaml"
+    }
+  ],
+  "mutation_scope": "in-memory copies only; original files never edited"
+}

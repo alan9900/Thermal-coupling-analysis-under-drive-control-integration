@@ -1,0 +1,8 @@
+reference,material,parameter,published_value,model_candidate,temperature,note
+hydro6061,6061 T6/T6511 extrusion,rho_kg_m3,2712.6306615996,2710,density as listed,"Converted 0.098 lb/in3, published rounded density; not casting grade certification"
+hydro6061,6061 T6/T6511 extrusion,k_W_mK,167,170,25 degC,Actual housing alloy unknown
+kme2021,"C11000 Cu-ETP, PDF p12",rho_kg_m3,8920,8960,20 degC annealed,"Published reference, not winding fill / porosity"
+kme2021,"C11000 Cu-ETP, PDF p12",cp_J_kgK,394,385,20 degC annealed,Record brochure value as published; do not silently change to another copper value
+kme2021,"C11000 Cu-ETP, PDF p12",k_W_mK,394,390,20 degC annealed,Bulk copper does not establish effective transverse winding conductivity
+kme2021,"C10300 Cu-HCP, PDF p14",cp_J_kgK,385,385,20 degC annealed,"Different copper grade, no actual MG2 winding grade identification"
+nist_copper,pure Cu solid,cp_J_kgK,385.08323006046777,385,298.15 K,CAL Shomate converted by 4.184 J/cal and 0.063546 kg/mol; not composite winding data

@@ -1,0 +1,11 @@
+{
+  "status": "PASS_MATCHED_SOURCE_MASK_INPUTS",
+  "studies": {
+    "A": "A_normal12_rd95_dt1_retry1",
+    "B": "B_normal12_rd95h_dt1",
+    "C": "C_normal12_rd95_dt1",
+    "D": "D_normal12_rd95_dt1"
+  },
+  "mesh_sha256": "27821beb3ff7b173e6c37db862d32e055a20fdb62e4a51c3c6647f45edf76d5b",
+  "interpretation": "C-A compares identical clocks/internal powers. Regional maxima differences are not pointwise temperature differences. Small K signals do not establish physical accuracy."
+}

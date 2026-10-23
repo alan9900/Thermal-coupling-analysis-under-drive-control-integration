@@ -1,0 +1,4 @@
+{
+  "status": "FAILED", 
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\ansys_runs\\m4_case0_20261021\\mechanical_pilot.py\", line 81, in <module>\n    assert str(analysis.Solution.ObjectState)=='Solved','BLOCKED: solver did not report Solved'\nAssertionError: BLOCKED: solver did not report Solved\n"
+}

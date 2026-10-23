@@ -1,0 +1,20 @@
+{
+  "evidence_head": "d4c06106c96ce07f7ff691a6b7b9ce8b58dd2f2d",
+  "files": {
+    "docs/STAGE_VERSIONS.md": "35fdb5b84ec73062390be190c9a5acddf6bbaa6da3316dfc8ceb3044b8dc6209",
+    "docs/NO_REGEN_WORK_PLAN.md": "8dda2e5657c3fe1ec62bddaa6ec48ca04620c2d2d8156cee77101d787c6d48aa",
+    "docs/REAR_DRIVE_V04_SOURCED_BASELINE.md": "5a916e406a6cc38555e7d9f5420b07339b210bf4d821fd649f783815bca1d016",
+    "reports/M0_report.md": "311e6657709cedde457301b85437baa09c9a781daaa4cacc12ecb72753a05f32",
+    "reports/M1_report.md": "df0d2d414b3a84fb33fa5f9d4adba9a1d719f977f7006e2d5d96e772518316b5",
+    "reports/M2_report.md": "d7b921ed3c1ee6499de9550d705fb627c334975dba0e5c6a504fede1b90d7a22",
+    "reports/M3_helical_revision.md": "522d9b011b03de1de28cba2877aeff22cce5357490cf879946b2a6685b4ca109",
+    "reports/M3_APPROVED_SCOPE_2026-10-21.md": "0643b5ecd1f55b3422c0610476a008f4570d15b6b96b0880cc680daf51f610a2",
+    "reports/M4_report.md": "769e5b1d898b5f72b27aa8dcb149a67ba57fc60751251b5cd19b914d0e53aa62",
+    "results/m4/acceptance_checks.json": "d8d3be87aeb57d85c3453442b40823659ead09f95ae3291bfb127a5d8f2b37ae",
+    "results/m4/studies/D_normal12_rd95_dt1/study_settings.json": "e70880046df83f79527e98c8ad59ab27fc55cadfcfab35e11e503927ad4876e0",
+    "results/m4/studies/D_normal12_rd95_dt1/source_intervals.csv": "5e0e34452a34641e9c38e6a3093aefcf2dd362719c87fec6799217fcad8026c4",
+    "results/m3_helical/assembly_helical.png": "bea0448eb9ecf4e7793ca0372a72a7e13f4e9df6760e5f60178f10efd6ee8f10",
+    "results/m4/refined_source_scenarios.png": "b94668edbed35c17f1d52745355e4db63e6b3370ccc2b63b4cc5da74eb9f5db1"
+  },
+  "scope": "Existing evidence review and limited literature verification; no thermal model executed."
+}

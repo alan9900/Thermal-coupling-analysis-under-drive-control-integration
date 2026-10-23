@@ -1,0 +1,18 @@
+{
+  "verified_date": "2026-10-22",
+  "native_solver": "ANSYS MAPDL / Mechanical 2024 R1, v241",
+  "native_solver_build": "24.1 UP20231106, WINDOWS x64",
+  "dpf_server": "7.1 from the v241 installation",
+  "postprocessing": {
+    "python": "3.13.12 64-bit",
+    "ansys-dpf-core": "0.16.3",
+    "numpy": "2.5.4"
+  },
+  "figures": {
+    "python": "3.13.12 64-bit",
+    "numpy": "2.5.4",
+    "matplotlib": "3.11.2",
+    "cadquery": "2.8.0"
+  },
+  "scope": "Actual local versions. Native license and binaries are not distributed. M1/M2 MATLAB R2025a source histories are archived inputs, not a rerun in this ANSYS stage."
+}

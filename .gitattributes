@@ -8,6 +8,9 @@ data/raw/** -text -whitespace
 *.png binary
 *.xlsx binary
 *.step binary
+*.gz binary
+*.npz binary
+*.rth binary
 # MATLAB's generated vector serialization contains intentional whitespace.
 results/m0/*.svg -whitespace
 results/m0_acceptance/*.svg -whitespace
@@ -30,3 +33,4 @@ configs/M3_to_M4_mapping.json -text whitespace=cr-at-eol
 results/m3_helical/** -text -whitespace
 reports/M3_helical_revision.md -text whitespace=cr-at-eol
 configs/M3_helical_to_M4_mapping.json -text whitespace=cr-at-eol
+results/m4/** -text -whitespace

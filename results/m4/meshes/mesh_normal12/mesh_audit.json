@@ -1,0 +1,203 @@
+{
+  "pad_normal_size_mm": 0.70833333333333337, 
+  "quality_min": "0.050038942009813493", 
+  "quality_mean": "0.70220092318584737", 
+  "elements": 439200, 
+  "state": "Solved", 
+  "pad_tangential_face_mm": 3, 
+  "pad_axial_edge_ids": [
+    4053, 
+    4054, 
+    4055, 
+    4056, 
+    4080, 
+    4081, 
+    4082, 
+    4083
+  ], 
+  "body_counts": [
+    {
+      "state": "Meshed", 
+      "elements": 18133, 
+      "name": "motor_case|motor_case", 
+      "nodes": 5612
+    }, 
+    {
+      "state": "Meshed", 
+      "elements": 3018, 
+      "name": "motor_stator|motor_stator", 
+      "nodes": 5495
+    }, 
+    {
+      "state": "Meshed", 
+      "elements": 5948, 
+      "name": "motor_winding|motor_winding", 
+      "nodes": 2615
+    }, 
+    {
+      "state": "Meshed", 
+      "elements": 1368, 
+      "name": "motor_rotor_other|motor_rotor_other", 
+      "nodes": 1827
+    }, 
+    {
+      "state": "Meshed", 
+      "elements": 110527, 
+      "name": "brake_disc_hat|brake_disc_hat", 
+      "nodes": 31426
+    }, 
+    {
+      "state": "Meshed", 
+      "elements": 2496, 
+      "name": "pad_near|pad_near", 
+      "nodes": 3094
+    }, 
+    {
+      "state": "Meshed", 
+      "elements": 2496, 
+      "name": "pad_far|pad_far", 
+      "nodes": 3094
+    }, 
+    {
+      "state": "Meshed", 
+      "elements": 1242, 
+      "name": "motor_rotor_shaft|motor_rotor_shaft", 
+      "nodes": 402
+    }, 
+    {
+      "state": "Meshed", 
+      "elements": 404, 
+      "name": "motor_input_coupling|motor_input_coupling", 
+      "nodes": 156
+    }, 
+    {
+      "state": "Meshed", 
+      "elements": 191507, 
+      "name": "motor_gear_adapter|motor_gear_adapter", 
+      "nodes": 36397
+    }, 
+    {
+      "state": "Meshed", 
+      "elements": 70, 
+      "name": "input_bearing_1|input_bearing_1", 
+      "nodes": 141
+    }, 
+    {
+      "state": "Meshed", 
+      "elements": 70, 
+      "name": "input_bearing_2|input_bearing_2", 
+      "nodes": 141
+    }, 
+    {
+      "state": "Meshed", 
+      "elements": 94, 
+      "name": "intermediate_bearing_1|intermediate_bearing_1", 
+      "nodes": 198
+    }, 
+    {
+      "state": "Meshed", 
+      "elements": 94, 
+      "name": "intermediate_bearing_2|intermediate_bearing_2", 
+      "nodes": 198
+    }, 
+    {
+      "state": "Meshed", 
+      "elements": 106, 
+      "name": "output_bearing_1|output_bearing_1", 
+      "nodes": 219
+    }, 
+    {
+      "state": "Meshed", 
+      "elements": 106, 
+      "name": "output_bearing_2|output_bearing_2", 
+      "nodes": 219
+    }, 
+    {
+      "state": "Meshed", 
+      "elements": 1399, 
+      "name": "stage1_gear|stage1_gear", 
+      "nodes": 483
+    }, 
+    {
+      "state": "Meshed", 
+      "elements": 9588, 
+      "name": "stage2_gear|stage2_gear", 
+      "nodes": 2837
+    }, 
+    {
+      "state": "Meshed", 
+      "elements": 1164, 
+      "name": "disc_hub|disc_hub", 
+      "nodes": 463
+    }, 
+    {
+      "state": "Meshed", 
+      "elements": 548, 
+      "name": "hub_removable_sleeve|hub_removable_sleeve", 
+      "nodes": 218
+    }, 
+    {
+      "state": "Meshed", 
+      "elements": 15983, 
+      "name": "input_shaft|input_shaft", 
+      "nodes": 4799
+    }, 
+    {
+      "state": "Meshed", 
+      "elements": 20026, 
+      "name": "intermediate_shaft|intermediate_shaft", 
+      "nodes": 5990
+    }, 
+    {
+      "state": "Meshed", 
+      "elements": 4090, 
+      "name": "output_shaft|output_shaft", 
+      "nodes": 1214
+    }, 
+    {
+      "state": "Meshed", 
+      "elements": 949, 
+      "name": "caliper|caliper", 
+      "nodes": 344
+    }, 
+    {
+      "state": "Meshed", 
+      "elements": 484, 
+      "name": "caliper_reaction_bracket|caliper_reaction_bracket", 
+      "nodes": 193
+    }, 
+    {
+      "state": "Meshed", 
+      "elements": 13754, 
+      "name": "gear_case_front|gear_case_front", 
+      "nodes": 4339
+    }, 
+    {
+      "state": "Meshed", 
+      "elements": 15632, 
+      "name": "gear_case_rear|gear_case_rear", 
+      "nodes": 4967
+    }, 
+    {
+      "state": "Meshed", 
+      "elements": 2939, 
+      "name": "oil_inventory|oil_inventory", 
+      "nodes": 1050
+    }, 
+    {
+      "state": "Meshed", 
+      "elements": 12046, 
+      "name": "oil_inventory|oil_inventory[2]", 
+      "nodes": 3295
+    }, 
+    {
+      "state": "Meshed", 
+      "elements": 2919, 
+      "name": "oil_inventory|oil_inventory[3]", 
+      "nodes": 1046
+    }
+  ], 
+  "pad_normal_layers": 12, 
+  "nodes": 122472, 
+  "disc_face_mm": 2
+}

@@ -1,0 +1,100 @@
+{
+  "hash_definition": "raw bytes SHA256; excludes this self-index, Git identifies its own blob",
+  "files": [
+    {
+      "path": "configs/m4_no_regen_brake_baseline.json",
+      "bytes": 2965,
+      "sha256": "9ebb69870f2e4cdb8e05924bbae49620415b1e4e551196b9b1b55b4468bd3c48"
+    },
+    {
+      "path": "reports/M4_NO_REGEN_BASELINE.md",
+      "bytes": 10019,
+      "sha256": "ad0eebcbb6741a09da8d248407c24e3503bbf239b704e25115f8c10ccf8dbcf0"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/audit_files.json",
+      "bytes": 2300,
+      "sha256": "15ecc366a518011bc200891d6cb118a54317f0d07d6273fed7665ce715f849f8"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/checker_regression_tests.json",
+      "bytes": 806,
+      "sha256": "dfb19053e40535e971dcaf654607387a3d3d96299a188b3cac47214cd2dfcdc1"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/execution_record.json",
+      "bytes": 1364,
+      "sha256": "90ffb7178ea2b1cef68d3d3016856081ea848653c079294d8ca3a4fdc8ddb54b"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/generated_files.json",
+      "bytes": 1572,
+      "sha256": "683849aadf2d87f9bed223d473da6e680a6f7d99206e59a424e06a8c42e37751"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/independent_checks.json",
+      "bytes": 4069,
+      "sha256": "ae1ce75d5ee8fe70b7fa1a7adb7206655d9a89f9a9f8b688856da0b329ac953f"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/independent_energy_history.csv",
+      "bytes": 43753,
+      "sha256": "6646a42b0efb45db4342be99d8a4603a128aa1994e006a2f06f31870fb6dd476"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/left_sources.csv",
+      "bytes": 60914,
+      "sha256": "7991e8b6e116858f23add546d604e7a80bbd032aba025c4ce0698551363789cd"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/left_sources.json",
+      "bytes": 8988,
+      "sha256": "2d81740bfbfd0e59752543b31820c7e77e9187b560b33008f146653fdefccb95"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/matlab_generation.log",
+      "bytes": 318,
+      "sha256": "ec997a73d55c369f26eb475122dd29de35d5b5ca4064adf456037ce1173bf9d8"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/matlab_summary.json",
+      "bytes": 1290,
+      "sha256": "205753f4745618143a2783fe37a965ca9f2bc4ff8254c041f455e1e7f8ef7ce8"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/right_sources.csv",
+      "bytes": 60914,
+      "sha256": "7991e8b6e116858f23add546d604e7a80bbd032aba025c4ce0698551363789cd"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/right_sources.json",
+      "bytes": 8990,
+      "sha256": "ea52673b50bc8452ccd8124067e4b18d960cdb908d931d594a16d1bdd7bdc84c"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/run_metadata.json",
+      "bytes": 19167,
+      "sha256": "4bcc433dae53d57bf823bee84c3d1c7ad74cae430a342211c99f91233cc612fc"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/vehicle_trace.csv",
+      "bytes": 137812,
+      "sha256": "4a03e2a5dce9040aee91529c91522c4346544a588bb706fdd4110bbcd1e67326"
+    },
+    {
+      "path": "results/m4/no_regen_p1a_preflight.json",
+      "bytes": 236647,
+      "sha256": "882347b975c42e144a3fcbee1410a262352f3afbb32069b09bd3a4ff5c6a4950"
+    },
+    {
+      "path": "scripts/m4/check_no_regen_brake.py",
+      "bytes": 25795,
+      "sha256": "2159bb5bc4fa7575674455f9098b3aaeef6c4811c3d33b3a79d846828cd06750"
+    },
+    {
+      "path": "scripts/m4/prepare_no_regen_brake.m",
+      "bytes": 6920,
+      "sha256": "979d6c258a8cf1cf2e0e7e42ce181eb0d9b11976f49901b85e9a470447809dfb"
+    }
+  ]
+}

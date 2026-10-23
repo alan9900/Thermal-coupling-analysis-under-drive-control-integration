@@ -1,0 +1,9 @@
+import os
+run=r'E:\ansys_runs\m4_case0_20261021'
+SetScriptVersion(Version='24.1.0')
+Open(FilePath=os.path.join(run,'Case0_B_face_scoped.wbpj'))
+model=GetAllSystems()[0].GetContainer(ComponentName='Model')
+model.Edit(Hidden=True)
+model.SendCommand(Language='Python',Command="execfile(r'E:\\ansys_runs\\m4_case0_20261021\\mechanical_post_only.py')")
+model.Exit()
+Save(FilePath=os.path.join(run,'Case0_B_face_scoped.wbpj'),Overwrite=True)

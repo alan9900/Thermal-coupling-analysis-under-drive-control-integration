@@ -1,0 +1,4 @@
+{
+  "status": "FAILED", 
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\ansys_runs\\m4_case0_20261021\\mechanical_mesh.py\", line 18, in <module>\n    if name in keep:b.Material='Structural Steel'\nEnvironmentError: System.Runtime.InteropServices.COMException (0x80004005): Error HRESULT E_FAIL has been returned from a call to a COM component.\r\n   at Ansys.Common.Interop.WBPropertyBrowsing.IAnsProperty.set_Value(Object value)\r\n   at Ansys.ACT.Automation.Mechanical.Body.set_Material(String value)\r\n   at CallSite.Target(Closure , CallSite , Object , Object )\r\n   at System.Dynamic.UpdateDelegates.UpdateAndExecute2[T0,T1,TRet](CallSite site, T0 arg0, T1 arg1)\r\n   at Microsoft.Scripting.Interpreter.DynamicInstruction`3.Run(InterpretedFrame frame)\r\n   at Microsoft.Scripting.Interpreter.Interpreter.Run(InterpretedFrame frame)\n"
+}

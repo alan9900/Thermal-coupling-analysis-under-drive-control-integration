@@ -1,0 +1,34 @@
+{
+  "B_normal24_rd95h_dt1": {
+    "file": "B_normal24_rd95h_dt1.dat.gz",
+    "raw_sha256": "828e5201b253f375c37de66ed709ccc2ce67100ac99e4f713238b1d05949cf23",
+    "raw_bytes": 192561191,
+    "gzip_bytes": 20491035,
+    "gzip_sha256": "7b9bc54115438d652188a016f311250f55bf77a70426bbb354660cd3c0699f43",
+    "qualification": "Exact executed native input; numerical acceptance is separate"
+  },
+  "C_normal12_rd95_dt1": {
+    "file": "C_normal12_rd95_dt1.dat.gz",
+    "raw_sha256": "7dc05613ca12a8a598abdfe68d0d004b428666852790280f6063ac0eee26ede7",
+    "raw_bytes": 99385559,
+    "gzip_bytes": 10095543,
+    "gzip_sha256": "bea014f5ffd3262493129992acdee1444f61c865788b6f82b5004039f4794e41",
+    "qualification": "Exact executed native input; numerical acceptance is separate"
+  },
+  "D_normal12_rd95_dt1": {
+    "file": "D_normal12_rd95_dt1.dat.gz",
+    "raw_sha256": "660b38e1c2d6056d8288e31e20888767c02a61ca7efd29a25c818e6175dc22f0",
+    "raw_bytes": 99400081,
+    "gzip_bytes": 10095939,
+    "gzip_sha256": "04c010fc1b778dce33401652841fd84807b0d0ca11ceb28d54e9232d4501094c",
+    "qualification": "Exact executed native input; numerical acceptance is separate"
+  },
+  "A_normal12_rd95_dt1_retry1": {
+    "file": "A_normal12_rd95_dt1_retry1.dat.gz",
+    "raw_sha256": "76580a287a902c1c08ec8a7a8c5b13b6ee7e680369c9aa5ec30ddeb9f650c1e2",
+    "raw_bytes": 99384714,
+    "gzip_bytes": 10094938,
+    "gzip_sha256": "9efe94f3ae7ecec0cfabe434657c6b531ef1993461e661da3b91a659b5b92d3f",
+    "qualification": "Exact executed native input; numerical acceptance is separate"
+  }
+}

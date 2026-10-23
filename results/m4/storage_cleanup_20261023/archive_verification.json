@@ -1,0 +1,12 @@
+{
+  "status": "PASS_ALL_MEMBERS_READ_BACK_SHA256_AND_SIZE",
+  "archive": "E:\\ansys_runs_archives\\M4_core_results_20261023.zip",
+  "archive_bytes": 391664998,
+  "archive_sha256": "444e0f781eb2b5f8fd13935e6b254f4923e65ec905b233390d8eb43acffbf067",
+  "members_verified": 1934,
+  "native_documentary_files": 532,
+  "raw_native_models_and_full_fields_included": false,
+  "native_file_count_selected": 1028,
+  "native_logical_bytes_selected": 167796230090,
+  "free_bytes_after_archive": 29462646784
+}

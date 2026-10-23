@@ -1,0 +1,6 @@
+{
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\ansys_runs\\m4_case0_20261021\\mechanical_face_scoped.py\", line 44, in <module>\n    t=analysis.Solution.GetChildren(DataModelObjectCategory.Temperature,True)[0];t.Activate()\nValueError: Index was out of range. Must be non-negative and less than the size of the collection.\r\nParameter name: index\n", 
+  "messages": [
+    "\u8be5\u89e3\u662f\u4f7f\u7528\u4e0d\u52304\u4e2a\u6838\u6c42\u89e3\u7684\u3002\u8be5\u6c42\u89e3\u65b9\u6848\u6700\u591a\u53ef\u4ee5\u4f7f\u75284\u4e2a\u6838\uff0c\u65e0\u9700\u5176\u5b83\u9ad8\u6027\u80fd\u8ba1\u7b97\uff08HPC\uff09\u6388\u6743\u3002\u6c42\u89e3\u6838\u6570\u53ef\u901a\u8fc7-> Solve -> Solve Process Settings\u6765\u8bbe\u7f6e\u3002\n\n\n  \u6ce8:\u4ee5\u4e0a\u53ef\u80fd\u4e0d\u9002\u7528\u4e8e\u67d0\u4e9b\u9057\u7559\u6388\u6743\u3002"
+  ]
+}

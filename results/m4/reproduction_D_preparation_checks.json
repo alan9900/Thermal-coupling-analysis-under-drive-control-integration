@@ -1,0 +1,9 @@
+{
+  "status": "PASS_PREPARATION_ONLY_NOT_EXECUTED",
+  "study": "D_normal12_rd95_dt1",
+  "output": "E:\\ansys_runs\\M4_D_reproduction_prepared_20261021",
+  "removed_external_cache_reads": 1,
+  "executed_original_sha256": "660b38e1c2d6056d8288e31e20888767c02a61ca7efd29a25c818e6175dc22f0",
+  "prepared_input_sha256": "163d43a17294c5f172ef178ae151b8fcdf756e8dfe63c6da1f3e0fc783e54618",
+  "note": "Run ANSYS and recheck expected time sets, energy and convergence. A prepared file is not a completed solution."
+}

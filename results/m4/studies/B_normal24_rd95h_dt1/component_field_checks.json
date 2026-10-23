@@ -1,0 +1,71 @@
+{
+  "status": "ACTUAL_FE_SURFACES_EXPORTED",
+  "components": [
+    {
+      "part": "M4_BRAKE_DISC_HAT",
+      "time_s": 1.6517536904896999,
+      "volume_nodal_max_C": 53.06164541659909,
+      "surface_max_C": 53.06164541659909,
+      "coordinates": "m",
+      "temperature": "degC",
+      "result_set": 7,
+      "file": "BRAKE_DISC_HAT_peak_field.npz",
+      "classification": "ACTUAL_RTH_FE_FIELD_S3; numerical qualification separate, not measured temperature"
+    },
+    {
+      "part": "M4_OUTPUT_BEARING_2",
+      "time_s": 3.7754370068335,
+      "volume_nodal_max_C": 25.000456783504085,
+      "surface_max_C": 25.000456783504085,
+      "coordinates": "m",
+      "temperature": "degC",
+      "result_set": 16,
+      "file": "OUTPUT_BEARING_2_peak_field.npz",
+      "classification": "ACTUAL_RTH_FE_FIELD_S3; numerical qualification separate, not measured temperature"
+    },
+    {
+      "part": "M4_GEAR_CASE_REAR",
+      "time_s": 3.7754370068335,
+      "volume_nodal_max_C": 25.010457482875108,
+      "surface_max_C": 25.010457482875108,
+      "coordinates": "m",
+      "temperature": "degC",
+      "result_set": 16,
+      "file": "GEAR_CASE_REAR_peak_field.npz",
+      "classification": "ACTUAL_RTH_FE_FIELD_S3; numerical qualification separate, not measured temperature"
+    },
+    {
+      "part": "M4_OIL_INVENTORY",
+      "time_s": 3.7754370068335,
+      "volume_nodal_max_C": 25.000033247709762,
+      "surface_max_C": 25.000033247709762,
+      "coordinates": "m",
+      "temperature": "degC",
+      "result_set": 16,
+      "file": "OIL_INVENTORY_peak_field.npz",
+      "classification": "ACTUAL_RTH_FE_FIELD_S3; numerical qualification separate, not measured temperature"
+    },
+    {
+      "part": "M4_MOTOR_WINDING",
+      "time_s": 0.23596481292710003,
+      "volume_nodal_max_C": 25.000000000000004,
+      "surface_max_C": 25.000000000000004,
+      "coordinates": "m",
+      "temperature": "degC",
+      "result_set": 1,
+      "file": "MOTOR_WINDING_peak_field.npz",
+      "classification": "ACTUAL_RTH_FE_FIELD_S3; numerical qualification separate, not measured temperature"
+    },
+    {
+      "part": "M4_PAD_NEAR",
+      "time_s": 1.4157888775625997,
+      "volume_nodal_max_C": 401.6957005477803,
+      "surface_max_C": 401.6957005477803,
+      "coordinates": "m",
+      "temperature": "degC",
+      "result_set": 6,
+      "file": "PAD_NEAR_peak_field.npz",
+      "classification": "ACTUAL_RTH_FE_FIELD_S3; numerical qualification separate, not measured temperature"
+    }
+  ]
+}
