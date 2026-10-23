@@ -1,5 +1,14 @@
 # M4 Case0 reproducibility (development / PARTIAL)
 
+**2026-10-23 P2-A input-only delivery:** P1-A single-side sources were adapted
+with the original M2 interval-integral kernel and independently checked, without
+temperature integration. See [P2-A report](../reports/M4_NO_REGEN_M2_PREFLIGHT.md).
+Inputs are isolated in `results/m4/no_regen_m2_baseline/`, with a saved `f` MAT
+structure, expected mask `[0,0,1]`, mapping and 13-node parameter snapshot.
+The unchanged M2 network includes a shield and is not automatically Case0 without
+a shield. No `run_m2`/`m2_simulate`/ANSYS/Fluent or later task was executed.
+P2-A is delivered for review; further calculations require separate authorization.
+
 **2026-10-23 P1-A only:** explicit researcher authorization allowed one new
 80-to-0 km/h, 0.6g, no-regeneration M1 source trace and independent Python audit.
 See [P1-A report](../reports/M4_NO_REGEN_BASELINE.md) for actual commands, inputs,

@@ -1,0 +1,25 @@
+{
+  "status": "PASS_P2A_DELIVERY_ONLY",
+  "commands_actually_executed": [
+    {
+      "command": "& 'C:/Users/90521/AppData/Local/Programs/Python/Python313/python.exe' scripts/m4/check_no_regen_m2_forcing.py --preflight",
+      "exit_code": 0
+    },
+    {
+      "command": "& 'F:/Program Files/MATLAB/R2025a/bin/matlab.exe' -batch \"addpath('scripts/m4'); prepare_no_regen_m2_forcing\" -logfile 'tmp/m4_p2a_matlab.log'",
+      "exit_code": 0
+    },
+    {
+      "command": "& 'C:/Users/90521/AppData/Local/Programs/Python/Python313/python.exe' scripts/m4/check_no_regen_m2_forcing.py",
+      "exit_code": 0
+    }
+  ],
+  "report_local_links_checked": 59,
+  "protected_files_unchanged": 1424,
+  "input_and_output_hashes": "PASS",
+  "thresholds_changed_after_run": false,
+  "M2_network_and_source_mapping_loaded": true,
+  "MAT_input_readback": "PASS",
+  "M2_temperature_ANSYS_Fluent_or_optimization_executed": false,
+  "next_action": "STOP_PENDING_RESEARCHER_REVIEW"
+}

@@ -1,0 +1,55 @@
+{
+  "part_keys": [
+    "copper",
+    "iron",
+    "rotor_other",
+    "inverter_external",
+    "gear_mesh",
+    "gear_bearing",
+    "gear_other",
+    "disc",
+    "pad"
+  ],
+  "destination_index_MATLAB": [
+    10,
+    9,
+    11,
+    0,
+    5,
+    4,
+    6,
+    1,
+    2
+  ],
+  "destination_node_ids": [
+    "winding",
+    "stator",
+    "rotor_other",
+    "EXTERNAL",
+    "gears",
+    "output_bearing",
+    "oil",
+    "disc",
+    "pad_caliper"
+  ],
+  "mask_motor_gear_brake": [
+    0,
+    0,
+    1
+  ],
+  "inverter_loaded_in_thermal_domain": false,
+  "values": {
+    "heat_capacity_scale": 1,
+    "contact_resistance_scale": 1,
+    "convection_scale": 1,
+    "coolant_conductance_scale": 1,
+    "radiation_exchange_scale": 1,
+    "motor_total_loss_scale": 1,
+    "gear_total_loss_scale": 1,
+    "coolant_temperature_K": 298.15
+  },
+  "mapping_source": "scripts/m2/m2_simulate.m: textual dest vector, not executed",
+  "node_input_unit": "W",
+  "schema": "m2-lptn-concept-1.0",
+  "temperature_integration_executed": false
+}

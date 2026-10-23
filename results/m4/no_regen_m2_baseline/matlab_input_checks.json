@@ -1,0 +1,17 @@
+{
+  "status": "PASS_INPUT_PREPARATION_ONLY",
+  "network_node_count": 13,
+  "mapping_read_without_execution": true,
+  "mat_file_readback": "PASS",
+  "profiled_m2_functions": [
+    "m2_load",
+    "m2_network",
+    "m2_network>append",
+    "m2_forcing",
+    "m2_forcing>primitive"
+  ],
+  "forbidden_temperature_functions_called": false,
+  "interval_count": 16,
+  "duration_s": 3.77543700683354,
+  "temperature_results_created": false
+}

@@ -1,0 +1,225 @@
+{
+  "scenario_id": "M4_P2A_NR_SINGLE_80KMH_06G_M2_INPUT",
+  "p1a_scenario_id": "M4_P1A_NR_SINGLE_80KMH_06G_CASE0",
+  "p1a_commit": "1db75d9f7cf58560b8ee01d444e2160a72d3545e",
+  "configuration_version": "v0.4",
+  "model_version": "m2-lptn-concept-1.0",
+  "schema": "m2-lptn-concept-1.0",
+  "classification": "S3_CONCEPT_INPUT_NOT_CALIBRATED",
+  "mode": "engineering",
+  "side": "left",
+  "source_csv": "results/m4/no_regen_baseline/left_sources.csv",
+  "source_metadata": "results/m4/no_regen_baseline/left_sources.json",
+  "source_sampling": "Unmodified m2_forcing analytic primitive of each original piecewise-linear interval; linspace endpoint alignment; one braking segment only",
+  "single_segment_adapter": {
+    "method": "Call original m2_forcing with cycles=0 and the sole terminal block carrying P1-A brake samples at unit time scale; relabel that block as single_brake, not final_cool",
+    "carrier_cycles": 0,
+    "carrier_time_scale": 1,
+    "physical_cooling_segment_added": false,
+    "official_M2_configuration_modified": false
+  },
+  "input_files": [
+    {
+      "path": "configs/m2_thermal_network.yaml",
+      "sha256": "d2e1aa4362e89646ce214505e4af599d35b2395f875a66ee187329a8d48039ea"
+    },
+    {
+      "path": "configs/m4_no_regen_brake_baseline.json",
+      "sha256": "9ebb69870f2e4cdb8e05924bbae49620415b1e4e551196b9b1b55b4468bd3c48"
+    },
+    {
+      "path": "configs/m4_no_regen_m2_baseline.json",
+      "sha256": "c3c9993f7dcc042b6b64b2d6888f92fa9f347a1688e5686132a23d698bd83bf1"
+    },
+    {
+      "path": "results/m2/compiled_network.json",
+      "sha256": "808dfbeb7488ad628291813530f55a41eca76f7cd10704711927d7703560a414"
+    },
+    {
+      "path": "results/m2/inputs.json",
+      "sha256": "c5750513675ab37fb4ae628ea2a1ac4831a6493557f4aad61463276e192b9e7b"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/audit_files.json",
+      "sha256": "15ecc366a518011bc200891d6cb118a54317f0d07d6273fed7665ce715f849f8"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/checker_regression_tests.json",
+      "sha256": "dfb19053e40535e971dcaf654607387a3d3d96299a188b3cac47214cd2dfcdc1"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/delivery_manifest.json",
+      "sha256": "6293361e8679c9e0d9c069819d0239dc56f7769bfbf352f7d57aa2559e722e95"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/execution_record.json",
+      "sha256": "90ffb7178ea2b1cef68d3d3016856081ea848653c079294d8ca3a4fdc8ddb54b"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/generated_files.json",
+      "sha256": "683849aadf2d87f9bed223d473da6e680a6f7d99206e59a424e06a8c42e37751"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/independent_checks.json",
+      "sha256": "ae1ce75d5ee8fe70b7fa1a7adb7206655d9a89f9a9f8b688856da0b329ac953f"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/independent_energy_history.csv",
+      "sha256": "6646a42b0efb45db4342be99d8a4603a128aa1994e006a2f06f31870fb6dd476"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/left_sources.csv",
+      "sha256": "7991e8b6e116858f23add546d604e7a80bbd032aba025c4ce0698551363789cd"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/left_sources.json",
+      "sha256": "2d81740bfbfd0e59752543b31820c7e77e9187b560b33008f146653fdefccb95"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/matlab_generation.log",
+      "sha256": "ec997a73d55c369f26eb475122dd29de35d5b5ca4064adf456037ce1173bf9d8"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/matlab_summary.json",
+      "sha256": "205753f4745618143a2783fe37a965ca9f2bc4ff8254c041f455e1e7f8ef7ce8"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/right_sources.csv",
+      "sha256": "7991e8b6e116858f23add546d604e7a80bbd032aba025c4ce0698551363789cd"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/right_sources.json",
+      "sha256": "ea52673b50bc8452ccd8124067e4b18d960cdb908d931d594a16d1bdd7bdc84c"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/run_metadata.json",
+      "sha256": "4bcc433dae53d57bf823bee84c3d1c7ad74cae430a342211c99f91233cc612fc"
+    },
+    {
+      "path": "results/m4/no_regen_baseline/vehicle_trace.csv",
+      "sha256": "4a03e2a5dce9040aee91529c91522c4346544a588bb706fdd4110bbcd1e67326"
+    },
+    {
+      "path": "scripts/m2/m2_export.m",
+      "sha256": "0edd68b140e379174e072a38430b90b89ed09f3d783996af49f78efef498b4df"
+    },
+    {
+      "path": "scripts/m2/m2_flux.m",
+      "sha256": "c0739e57b0b1fa2ff117a8d4787b000279624c226aba09d8e39b32b07dcfbadf"
+    },
+    {
+      "path": "scripts/m2/m2_forcing.m",
+      "sha256": "d333931525df63e2665d1e49d591bd780d7c9299e9019562df1a22e849dba3e8"
+    },
+    {
+      "path": "scripts/m2/m2_load.m",
+      "sha256": "0d4bed3b612c91f325e8cc5a35d61b27047ad269243c706230ec106b3ad81a4c"
+    },
+    {
+      "path": "scripts/m2/m2_network.m",
+      "sha256": "71cf36453ea29a0bc853055bb8f6a61b4176a908d1971768aaf0a05fae8566b9"
+    },
+    {
+      "path": "scripts/m2/m2_plots.m",
+      "sha256": "b216a7c86aa762d5e94bfa44ff7fd9a71f0be0d658e0632dfe466dba4511aeb4"
+    },
+    {
+      "path": "scripts/m2/m2_segments.m",
+      "sha256": "4c0e21c4e84c58ff426dceff4ccfc718a36bd662e03d576c29dab0e69ba6bf36"
+    },
+    {
+      "path": "scripts/m2/m2_simulate.m",
+      "sha256": "ba98e6f21d09a3e23f46662ae30cbfbf4531cb494d466194d4d6745836570713"
+    },
+    {
+      "path": "scripts/m2/m2_tests.m",
+      "sha256": "07e407c7e32a8aa6c09e4f65ff0ed06b65914e6b0cea4f5ed4e89b1f8928b880"
+    },
+    {
+      "path": "scripts/m2/render_saved_plots.m",
+      "sha256": "05ecd70532c8b0ce377933a7b14e635922fcad3ff54dadb33a85613b4630af0c"
+    },
+    {
+      "path": "scripts/m2/run_m2.m",
+      "sha256": "c23263a3b4e2248feba8f288039c2f845f0542c43e4d626a835266d630e78165"
+    },
+    {
+      "path": "scripts/m4/check_no_regen_m2_forcing.py",
+      "sha256": "554208def7ddc1f7fcbbb0f3f1e4f1808252e99945cbe80786f4bd0290d9c4d5"
+    },
+    {
+      "path": "scripts/m4/prepare_no_regen_m2_forcing.m",
+      "sha256": "df28d3d8b1dda037c327b55689152865e0c630b2009857b717254eb09e042b23"
+    }
+  ],
+  "workspace_head_before_run": "1db75d9f7cf58560b8ee01d444e2160a72d3545e",
+  "m2_code_commit": "229939cb588a8cb52c6c43b62b28ae9255799cc9",
+  "preflight_sha256": "4c7ba8b2018facf104be8db80100e4272566a9e3502589aaf348927349bdd77c",
+  "matlab_release": "2025a",
+  "configured_maximum_step_s": 0.25,
+  "actual_interval_s": 0.23596481292709626,
+  "interval_count": 16,
+  "segment_labels": [
+    "single_brake"
+  ],
+  "segment_boundaries_s": [
+    0,
+    3.77543700683354
+  ],
+  "mask_motor_gear_brake": [
+    0,
+    0,
+    1
+  ],
+  "units": {
+    "start_s": "s",
+    "end_s": "s",
+    "speed_m_s": "m/s",
+    "motor_rpm": "rpm",
+    "motor_torque_Nm": "N*m",
+    "copper_engineering_W": "W",
+    "iron_engineering_W": "W",
+    "rotor_other_engineering_W": "W",
+    "inverter_external_engineering_W": "W",
+    "gear_mesh_engineering_W": "W",
+    "gear_bearing_engineering_W": "W",
+    "gear_other_engineering_W": "W",
+    "disc_engineering_W": "W",
+    "pad_engineering_W": "W",
+    "emot_reference_W": "W",
+    "gear_reference_W": "W",
+    "disc_contact_W": "W",
+    "segment_id": "1",
+    "calibrated_winding_heat_W": "W"
+  },
+  "single_side_multiplier": 1,
+  "disc_face_multiplier": 1,
+  "inverter_loaded_in_thermal_domain": false,
+  "calibrated_winding_heat_W": null,
+  "raw_integral_J": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    83644.080039535314,
+    9293.7866710594735
+  ],
+  "resampling_energy_residual_J": 7.2759576141834259E-11,
+  "unknowns": {
+    "calibrated_winding_heat_W": null,
+    "actual_unpowered_motor_drag_W": null,
+    "actual_inverter_standby_W": null,
+    "actual_no_load_gear_churning_W": null,
+    "actual_thermal_resistance_matrix": null
+  },
+  "omission_policy": "P1-A inactive motor and zero-transmitted-power gearbox budgets omit unknown drag, standby and churning; zero budget is not measured zero loss.",
+  "topology_limit": "The immutable M2 13-node network includes an active shield node. This input adaptation is not proof of an unshielded Case0 network. Any topology change needs separate authorization.",
+  "temperature_integration_executed": false,
+  "cooldown_added": false,
+  "preheat_added": false,
+  "repeated_cycles_added": false,
+  "forcing_csv_sha256": "8af37933378f5b3e4b744553efbe0d2505b2f345b58078800d40c6547639226c"
+}

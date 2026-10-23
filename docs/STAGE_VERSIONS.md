@@ -194,3 +194,13 @@ GitHub连接器发布的计划证据提交为 `b82976de96d98d493097cdbf60bb5ed64
 独立Python14组审计及5项故障拒绝通过；最大点功率残差9.3132e-10 W，最大累计能量残差1.9791e-9 J/4.4529e-15；解析路阻功与梯形积分另差0.110292 J/初始动能2.4816e-7，均满足运行前登记标准。每侧接触摩擦能92.937867 kJ，盘/片名义83.644080/9.293787 kJ，前轴245.739973 kJ，路阻12.828738 kJ。1404个既有受控文件及阶段标签引用保护检查通过，M0—M3与旧M4 studies未覆盖。
 
 校准绕组NaN/null保留，电机和减速器零损耗预算仅为未知拖曳/空载项省略近似，不称实测零损耗。未运行run_m1/run_m1_sources、ANSYS、Fluent、M2温度、预热、冷却、重复制动或优化。M4仍PARTIAL，PR保持草稿；P1-A完成后停止，等待研究者审查和下一条执行命令。
+
+### M4 P2-A 单侧M2源项输入适配与独立预检（2026-10-23，专项交付待审）
+
+研究者仅授权输入适配和预检。父基线为P1-A交付`1db75d9f7cf58560b8ee01d444e2160a72d3545e`，分支`stage/M4-ansys`、草稿[PR #5](https://github.com/alan9900/Thermal-coupling-analysis-under-drive-control-integration/pull/5)；本节与P2-A成果同一聚焦提交，准确交付SHA由该Git提交和PR登记，不构成M4正式版本。
+
+配置`configs/m4_no_regen_m2_baseline.json`，场景`M4_P2A_NR_SINGLE_80KMH_06G_M2_INPUT`，报告[M4_NO_REGEN_M2_PREFLIGHT.md](../reports/M4_NO_REGEN_M2_PREFLIGHT.md)。只加载P1-A左侧热量，右侧核对对称；原M2最大步长0.25 s，原积分核端点对齐后16区间/实际0.235964812927096 s，总3.77543700683354 s。输出`results/m4/no_regen_m2_baseline/`，含CSV/JSON、f输入MAT、13节点及映射快照、逐项积分审计和日志。
+
+实际MATLAB R2025a输入准备、MAT回读及Python12组独立预检通过，11项故障拒绝通过；最大源项积分差1.4552e-11 J，相对1.7397e-16，最大分项功率闭合残差2.2919e-10 W，运行前阈值分别1e-6 J/1e-6相对/1e-7 W。1424个既有文件及阶段标签引用未变，P1-A及M0—M3/旧M4 studies未覆盖。
+
+预期源项掩码`[0,0,1]`，逆变器在热域外，校准绕组NaN/null保留，空载损耗仍未知；M2原护罩节点未修改，不声称已成为Case0无护罩网络。调用记录证明未运行run_m2/m2_simulate/m2_flux/m2_export，没有温度、预热、冷却、重复循环、ANSYS/Fluent或优化结果。P2-A完成后停止；M4仍PARTIAL，不合并、不创建M4-v1.0、不进入M5。
