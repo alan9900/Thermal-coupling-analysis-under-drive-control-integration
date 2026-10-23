@@ -1,0 +1,18 @@
+{
+  "status": "PASS_PRE_ARCHIVE",
+  "workspace_head": "330f0e1f67907306a204912805af5cd6c54abbd1",
+  "contour_sha256_checks": 29,
+  "report_sha256_checks": 9,
+  "report_visual_checks": "Existing Word-render receipts verified; no new report render claimed",
+  "exact_input_gzip_and_decompressed_sha256_checks": 4,
+  "temperature_source_histories_present": [
+    "A_normal12_rd95_dt1_retry1",
+    "B_normal12_rd95h_dt2",
+    "B_normal24_rd95h_dt1",
+    "C_normal12_rd95_dt1",
+    "D_normal12_rd95_dt1"
+  ],
+  "simulation_executed_this_task": false,
+  "tags_before": "d50d3896b71480bc3793a82d274f862afac1f8ec refs/tags/M0-v1.0\n9b3c7f97c63b56b50eb7c0477a72ad03060cae39 refs/tags/M1-v1.0\n4ad89c4a220174de741b4ba48706279d3b7cb2d1 refs/tags/M2-v1.0\nc958ec76330c016e0dc3f8ca141f2b139f6c53f3 refs/tags/M3-v1.0\n",
+  "drive_free_bytes_before_archive": 29854400512
+}
